@@ -1,0 +1,9 @@
+# Install into an isolated Python 3.11 environment with torch already installed.
+torch==2.6.0
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.6.1
+recbole==1.2.1
+PyYAML==6.0.2
+pytest==8.4.2

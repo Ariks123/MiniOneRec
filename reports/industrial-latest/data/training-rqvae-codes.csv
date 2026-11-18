@@ -1,0 +1,9 @@
+assignment,scope,items,unique_sids,excess_items,mse
+nearest_codes,fit,3280,2752,528,0.1598770356742756
+nearest_codes,warm_holdout,367,349,18,0.3631185735296712
+nearest_codes,cold_catalog,39,39,0,0.4119343621035417
+nearest_codes,all,3686,3065,621,0.18277987889827765
+prefix_matching,fit,3280,3280,0,0.1653737651354565
+prefix_matching,warm_holdout,367,367,0,0.36755568937243693
+prefix_matching,cold_catalog,39,39,0,0.4126049801707268
+prefix_matching,all,3686,3686,0,0.18812004391498646

@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "key": "metadata",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item.json",
+      "expected": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7",
+      "actual": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7",
+      "passed": true
+    },
+    {
+      "key": "sid_index",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+      "expected": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+      "actual": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+      "passed": true
+    },
+    {
+      "key": "train_interactions",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+      "expected": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+      "actual": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+      "passed": true
+    },
+    {
+      "key": "test_interactions",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+      "expected": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+      "actual": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+      "passed": true
+    },
+    {
+      "key": "run_config",
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/run_config.json",
+      "expected": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8",
+      "actual": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8",
+      "passed": true
+    },
+    {
+      "key": "accepted_evaluation",
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/metrics.json",
+      "expected": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e",
+      "actual": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e",
+      "passed": true
+    },
+    {
+      "key": "previous_recognition_summary",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_summary.json",
+      "expected": "cb22c9a40eb65c5812968cf68324bcd169d7e163c6683717d0cb119b91a9a701",
+      "actual": "cb22c9a40eb65c5812968cf68324bcd169d7e163c6683717d0cb119b91a9a701",
+      "passed": true
+    },
+    {
+      "key": "checkpoint_weights",
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/model.safetensors",
+      "expected": "b823c2cb400f83209a0801e64ca2c65b0729bfc52b64196936ee8fbdaed4f1b3",
+      "actual": "b823c2cb400f83209a0801e64ca2c65b0729bfc52b64196936ee8fbdaed4f1b3",
+      "passed": true
+    },
+    {
+      "key": "checkpoint_config",
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/config.json",
+      "expected": "a617fc4a26f3b0f0b8c28cf018cf49ab9dde80fa5f8be204a727a4654cfd97a8",
+      "actual": "a617fc4a26f3b0f0b8c28cf018cf49ab9dde80fa5f8be204a727a4654cfd97a8",
+      "passed": true
+    },
+    {
+      "key": "checkpoint_tokenizer",
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer.json",
+      "expected": "c00708d331f0a3efee070f4bc11a9ce699eea0a1cd69c7669070093436953c83",
+      "actual": "c00708d331f0a3efee070f4bc11a9ce699eea0a1cd69c7669070093436953c83",
+      "passed": true
+    },
+    {
+      "key": "dataset_implementation",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data.py",
+      "expected": "fffd7e7e5bb5555693be0332795717bec1eaf037a01d8291af6335a14baa579d",
+      "actual": "fffd7e7e5bb5555693be0332795717bec1eaf037a01d8291af6335a14baa579d",
+      "passed": true
+    },
+    {
+      "key": "constraint_implementation",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/LogitProcessor.py",
+      "expected": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "actual": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "passed": true
+    },
+    {
+      "key": "diagnostic_script",
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/tmp/cold_diagnostics_20261116/recognition_hot_full.py",
+      "expected": "6491a44632a604514a2d84d77379578afd431cd4e702b4a5eca4066156da25de",
+      "actual": "6491a44632a604514a2d84d77379578afd431cd4e702b4a5eca4066156da25de",
+      "passed": true
+    }
+  ],
+  "unique_source_files": 13,
+  "prediction_counts_recomputed": true,
+  "prediction_rows": 522
+}

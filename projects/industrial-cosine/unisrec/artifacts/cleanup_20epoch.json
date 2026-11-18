@@ -1,0 +1,249 @@
+{
+  "status": "completed",
+  "created_at": "2026-11-17T18:38:45.668160+08:00",
+  "user_instruction": "保留20轮组的结果",
+  "selected_run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242",
+  "selected_checkpoint": {
+    "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints/QwenUniSRec-Nov-17-2026_10-13-24.pth",
+    "bytes": 124741085,
+    "sha256": "50f8bd01b5bdb5251ee1019ba0a3a003a6fd8ecfc987179cd3f16d13c36a64cb"
+  },
+  "protected_files": [
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints/QwenUniSRec-Nov-17-2026_10-13-24.pth",
+      "bytes": 124741085,
+      "sha256": "50f8bd01b5bdb5251ee1019ba0a3a003a6fd8ecfc987179cd3f16d13c36a64cb"
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "sha256": "3469146cec8e3b2569fa966ae98eade3dd2f944dddf446d788dac6c15f3aa507"
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "sha256": "6ebdf86261fd74be4ce159e29ae9444b5f8e4a1c6810942cae39a71c457694f3"
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/test_vector_quality/report.json",
+      "bytes": 10455,
+      "sha256": "0f385dccc0d079d53a688ac7a9ddf8808f0330b86e724d14ed943d002c903b97"
+    }
+  ],
+  "loser_run_dirs": [
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712",
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_20261117_180305",
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455",
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158",
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943"
+  ],
+  "files_to_delete": [
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/checkpoints/QwenUniSRec-Nov-17-2026_09-38-31.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794908421000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794908509000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794908509000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/checkpoints/QwenUniSRec-Nov-17-2026_10-05-39.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794910029000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794910107000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794910108000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/checkpoints/QwenUniSRec-Nov-17-2026_10-22-43.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794911052000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911051000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911051000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/checkpoints/QwenUniSRec-Nov-17-2026_10-30-37.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794911569000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911614000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911614000000000
+    }
+  ],
+  "containers_to_remove": [
+    "unisrec-industrial-qwen4-20261117-173712",
+    "unisrec-industrial-qwen4-20261117-173712-vector-test",
+    "unisrec-industrial-qwen4-ep50-20261117-180305",
+    "unisrec-industrial-qwen4-ep50-r1-20261117-180455",
+    "unisrec-industrial-qwen4-ep50-r1-20261117-180455-vector-test",
+    "unisrec-industrial-qwen4-ep15-20261117-182158",
+    "unisrec-industrial-qwen4-ep15-20261117-182158-vector-test",
+    "unisrec-industrial-qwen4-ep25-20261117-182943",
+    "unisrec-industrial-qwen4-ep25-20261117-182943-vector-test"
+  ],
+  "host_bytes_to_delete": 542482164,
+  "deleted_files": [
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/checkpoints/QwenUniSRec-Nov-17-2026_09-38-31.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794908421000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794908509000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794908509000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/checkpoints/QwenUniSRec-Nov-17-2026_10-05-39.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794910029000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794910107000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794910108000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/checkpoints/QwenUniSRec-Nov-17-2026_10-22-43.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794911052000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911051000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911051000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/checkpoints/QwenUniSRec-Nov-17-2026_10-30-37.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794911569000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911614000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911614000000000
+    }
+  ],
+  "removed_containers": [
+    "unisrec-industrial-qwen4-20261117-173712",
+    "unisrec-industrial-qwen4-20261117-173712-vector-test",
+    "unisrec-industrial-qwen4-ep50-20261117-180305",
+    "unisrec-industrial-qwen4-ep50-r1-20261117-180455",
+    "unisrec-industrial-qwen4-ep50-r1-20261117-180455-vector-test",
+    "unisrec-industrial-qwen4-ep15-20261117-182158",
+    "unisrec-industrial-qwen4-ep15-20261117-182158-vector-test",
+    "unisrec-industrial-qwen4-ep25-20261117-182943",
+    "unisrec-industrial-qwen4-ep25-20261117-182943-vector-test"
+  ],
+  "retained_audit_metadata": true,
+  "source_data_and_snapshots_retained": true,
+  "container_snapshot": [
+    {
+      "name": "unisrec-industrial-qwen4-20261117-173712",
+      "id": "025a30dbcb2b6021b6aa1b99de18fd2fc2edffc5ea1a66708d49ace4018b46ea",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-20261117-173712-vector-test",
+      "id": "ac6f355cc992b4910ab27f2a47c741dfaf765eae8d421fa385e60a97434f991e",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep50-20261117-180305",
+      "id": "64cd533a109ab5ca3f7f34f01ee860c6485c4bd58c1be18e91b35f1fe1750ca3",
+      "status": "exited",
+      "exit_code": 1
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep50-r1-20261117-180455",
+      "id": "4a2c4170e61efa36093ac7f306853edf3186e7f96ce7aeb1a31dcfddac5d2ec7",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep50-r1-20261117-180455-vector-test",
+      "id": "807812b98448eb46c807a3526daac54fab7b8e8ceb362dfeae1e4ae1dc74c7a3",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep15-20261117-182158",
+      "id": "18fd76c8b774e920f0ada7444e413e4c72a39dc21137f63dda2a618ad0a11e5e",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep15-20261117-182158-vector-test",
+      "id": "2f4776d7c09a49ff41ef6662725ea83a8aac997629787e60934f3b7179de7a66",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep25-20261117-182943",
+      "id": "4c60a90c3ebec6536c67a3d25588ab4701c4add64e21da046f67e8b2c4931cab",
+      "status": "exited",
+      "exit_code": 0
+    },
+    {
+      "name": "unisrec-industrial-qwen4-ep25-20261117-182943-vector-test",
+      "id": "d6013980f7683c9f8aebb9c742319dc128a32df096b972531a80a26be3089544",
+      "status": "exited",
+      "exit_code": 0
+    }
+  ],
+  "started_at": "2026-11-17T18:39:15.342095+08:00",
+  "completed_at": "2026-11-17T18:39:17.624464+08:00",
+  "host_bytes_deleted": 542482164,
+  "selected_files_sha256_verified_after_cleanup": true
+}

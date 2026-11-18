@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>联合投机推理验证报告 · Amazon Reviews 2018 · Industrial and Scientific</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="top" aria-label="报告导航"><div class="frame"><a href="index.html">报告总览</a><a href="algorithm.html">算法报告</a><a href="training.html">训练报告</a><a href="validation.html" aria-current="page">验证报告</a></div></nav>
+<header class="hero" id="top"><div class="frame"><p class="dataset">Amazon Reviews 2018 · <span>Industrial and Scientific</span></p><h1>联合投机推理验证报告</h1><p class="summary">对照两套商品编码，比较直接生成、检索与联合方案的推荐质量，并用 H20 实测时延和吞吐。</p></div>
+</header>
+<main class="frame">
+  <nav class="toc" aria-label="章节目录">
+    <p class="toc-title">目录</p>
+    <ol>
+      <li><a href="#evaluation">评估对象与指标口径</a></li>
+      <li><a href="#sid">RQ-VAE 与 RQ-KMeans 的目录编码</a></li>
+      <li><a href="#generation">SFT 与 GRPO 的直接生成评估</a></li>
+      <li><a href="#quality">商品级推荐质量与冷暖分组</a></li>
+      <li><a href="#runtime">在线时延、吞吐与批次复核</a></li>
+      <li><a href="#selected">所选方案在各 K 下的质量与在线性能</a></li>
+    </ol>
+  </nav>
+  <section aria-labelledby="evaluation">
+    <h2 id="evaluation">评估对象与指标口径</h2>
+    <p>验证集含 4,532 条请求，测试集含 4,533 条。测试请求中，4,386 条的目标商品在训练交互中作为历史或目标出现过，归入暖组。其余 147 条归入冷组。</p>
+    <p>每条请求对应一件目标商品，按商品 ID 判断命中。设 <var>N</var> 为当前分组的请求数，<var>r</var><sub><var>i</var></sub> 为第 <var>i</var> 条请求中目标商品的名次。若目标未进入前 K 件，该请求的得分为零。在这一单目标设定下，HR@K 与 Recall@K 相等。NDCG@K 还考虑目标所在的位置，名次越靠前，得分越高。</p>
+    <p>推荐质量和服务性能按相同 K 对比，深红粗体标出每项指标的最优实测值。整体、暖组和冷组分别比较。</p>
+    <div class="formula"><math display="block" aria-label="HR 等于前 K 件找到正确商品的请求数除以总请求数"><msub><mi mathvariant="normal">HR</mi><mi>K</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mrow><mi>i</mi><mo>:</mo><msub><mi>r</mi><mi>i</mi></msub><mo>≤</mo><mi>K</mi></mrow></munder><mn>1</mn></math></div>
+    <div class="formula"><math display="block" aria-label="NDCG 是所有请求的名次折扣得分的平均"><msub><mi mathvariant="normal">NDCG</mi><mi>K</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munder><mo>∑</mo><mrow><mi>i</mi><mo>:</mo><msub><mi>r</mi><mi>i</mi></msub><mo>≤</mo><mi>K</mi></mrow></munder><mfrac><mn>1</mn><mrow><msub><mi mathvariant="normal">log</mi><mn>2</mn></msub><mo>(</mo><msub><mi>r</mi><mi>i</mi></msub><mo>+</mo><mn>1</mn><mo>)</mo></mrow></mfrac></math></div>
+  </section>
+  <section aria-labelledby="sid">
+    <h2 id="sid">RQ-VAE 与 RQ-KMeans 的目录编码</h2>
+    <p>同一目录包含 3,686 件商品。RQ-KMeans 发布索引给出了 3,670 个不同的完整 SID，其中 15 组 SID 由多件商品共享。本轮 RQ-VAE 导出后，每件商品都有唯一的三位 SID，按完整 SID 命中与按商品 ID 命中的结果一致。</p>
+    <figure>
+      <picture>
+        <source media="screen and (max-width: 680px)" srcset="figures/validation-sid-mobile.png" width="710" height="925">
+        <img src="figures/validation-sid.png" width="1689" height="591" alt="两种编码方法的各位置用码数和不同前缀长度下的最大桶大小">
+      </picture>
+      <figcaption>图 1 · 同一目录下的用码分布。一个前缀桶包含所有以该前缀开头的商品，桶大小反映候选验证时可共享前缀的商品数。</figcaption>
+    </figure>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-1">
+      <table class="metrics-table">
+        <caption id="table-caption-1">对比两套编码索引。超额重复编码数等于目录商品数减去唯一完整 SID 数。</caption>
+        <thead><tr><th scope="col">目录审计</th><th scope="col">原 RQ-KMeans</th><th scope="col">本轮 RQ-VAE</th></tr></thead>
+        <tbody>
+          <tr><td>目录商品</td><td>3,686</td><td>3,686</td></tr>
+          <tr><td>唯一完整 SID</td><td>3,670</td><td>3,686</td></tr>
+          <tr><td>完整 SID 碰撞组</td><td>15</td><td><strong class="best-result">0</strong></td></tr>
+          <tr><td>碰撞组内商品</td><td>31</td><td>0</td></tr>
+          <tr><td>超额重复编码</td><td>16</td><td>0</td></tr>
+          <tr><td>各位置的实际用码数</td><td>48 / 256 / 256</td><td>64 / 227 / 256</td></tr>
+          <tr><td>不同前缀数（长度 1 / 2 / 3）</td><td>48 / 2295 / 3670</td><td>64 / 1788 / 3686</td></tr>
+          <tr><td>最大前缀桶（长度 1 / 2 / 3）</td><td>247 / 47 / 3</td><td>150 / 22 / 1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>RQ-VAE 对训练商品向量中心化后，按最近码分配得到 3,065 个不同的完整 SID。固定前两位并按残差距离分配第三位后，唯一 SID 增至 3,686 个，暖商品留出集的重建均方误差（MSE）从 0.363119 变为 0.367556。原 RQ-KMeans 的归档仅含发布索引，缺少可供对照的重建误差及训练中间量。</p>
+    <p class="data-links"><a href="data/validation-sid-audit.json">SID 目录与编码校验数据（JSON）</a></p>
+  </section>
+  <section aria-labelledby="generation">
+    <h2 id="generation">SFT 与 GRPO 的直接生成评估</h2>
+    <p>使用相同的 RQ-VAE 目录和 4,533 条测试请求，以宽度为 50 的受约束 beam 搜索比较 SFT 和 GRPO 的检查点。经 GRPO 训练后，HR@10 从 11.074% 升至 12.574%，NDCG@10 从 7.247% 升至 8.744%。</p>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-2">
+      <table class="metrics-table by-k">
+        <caption id="table-caption-2">直接生成在六个推荐列表长度下的测试结果。</caption>
+        <thead><tr><th scope="col">K</th><th scope="col">SFT HR</th><th scope="col">SFT NDCG</th><th scope="col">GRPO HR</th><th scope="col">GRPO NDCG</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>3.816%</td><td>3.816%</td><td><strong class="best-result">5.603%</strong></td><td><strong class="best-result">5.603%</strong></td></tr>
+          <tr><td>3</td><td>7.324%</td><td>5.940%</td><td><strong class="best-result">8.405%</strong></td><td><strong class="best-result">7.273%</strong></td></tr>
+          <tr><td>5</td><td>8.471%</td><td>6.410%</td><td><strong class="best-result">9.795%</strong></td><td><strong class="best-result">7.846%</strong></td></tr>
+          <tr><td>10</td><td>11.074%</td><td>7.247%</td><td><strong class="best-result">12.574%</strong></td><td><strong class="best-result">8.744%</strong></td></tr>
+          <tr><td>20</td><td>14.494%</td><td>8.107%</td><td><strong class="best-result">16.060%</strong></td><td><strong class="best-result">9.624%</strong></td></tr>
+          <tr><td>50</td><td>20.979%</td><td>9.389%</td><td><strong class="best-result">21.487%</strong></td><td><strong class="best-result">10.697%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-links"><a href="data/validation-generation.csv">SFT 与 GRPO 生成评估数据（CSV）</a></p>
+  </section>
+  <section aria-labelledby="quality">
+    <h2 id="quality">商品级推荐质量与冷暖分组</h2>
+    <p>三条路线使用同一批测试请求。直接生成取 GRPO 的 beam 搜索结果，UniSRec 原排取内积得分最高的商品，联合投机推理用 GRPO 为 UniSRec 草拟的候选打分。每条路线最终返回前 K 件商品。</p>
+    <figure class="chart-wide">
+      <picture>
+        <source media="screen and (max-width: 800px)" srcset="figures/validation-quality-mobile.png" width="710" height="1253">
+        <img src="figures/validation-quality.png" width="1968" height="591" alt="直接生成、UniSRec 原排与联合投机推理在五个 K 下的整体 HR、NDCG 和冷目标命中数">
+      </picture>
+      <figcaption>图 2 · 三条路线随推荐列表长度变化的表现。整体指标取自全部 4,533 条测试请求，冷目标命中数取自其中 147 条冷组请求。</figcaption>
+    </figure>
+    <p>只推荐 1 件商品时，直接生成的整体 HR 最高。推荐 5 件和 10 件时，联合方案的整体 HR 和 NDCG 均最高。列表扩展到 50 件时，联合方案的 NDCG 为 11.496%，高于 UniSRec 原排的 11.029%，但整体 HR 从原排的 25.965% 降至 25.039%，冷目标命中也从 15 条降至 2 条。</p>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-3">
+      <table class="metrics-table with-method by-k">
+        <caption id="table-caption-3">各组 HR 和 NDCG 分别以本组请求数为分母，冷命中列给出命中请求数与冷组请求总数。</caption>
+        <thead><tr><th scope="col">K</th><th scope="col">方案</th><th scope="col">整体 HR</th><th scope="col">整体 NDCG</th><th scope="col">暖 HR</th><th scope="col">暖 NDCG</th><th scope="col">冷命中</th><th scope="col">冷 HR</th><th scope="col">冷 NDCG</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>直接生成（beam 50）</td><td><strong class="best-result">5.603%</strong></td><td><strong class="best-result">5.603%</strong></td><td><strong class="best-result">5.791%</strong></td><td><strong class="best-result">5.791%</strong></td><td>0/147</td><td>0.000%</td><td>0.000%</td></tr>
+          <tr><td>1</td><td>UniSRec 原排</td><td>3.728%</td><td>3.728%</td><td>3.830%</td><td>3.830%</td><td><strong class="best-result">1/147</strong></td><td><strong class="best-result">0.680%</strong></td><td><strong class="best-result">0.680%</strong></td></tr>
+          <tr><td>1</td><td>联合投机推理</td><td>5.118%</td><td>5.118%</td><td>5.290%</td><td>5.290%</td><td>0/147</td><td>0.000%</td><td>0.000%</td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>5</td><td>直接生成（beam 50）</td><td>9.795%</td><td>7.846%</td><td>10.123%</td><td>8.109%</td><td>0/147</td><td>0.000%</td><td>0.000%</td></tr>
+          <tr><td>5</td><td>UniSRec 原排</td><td>10.038%</td><td>7.129%</td><td>10.237%</td><td>7.273%</td><td><strong class="best-result">6/147</strong></td><td><strong class="best-result">4.082%</strong></td><td><strong class="best-result">2.826%</strong></td></tr>
+          <tr><td>5</td><td>联合投机推理</td><td><strong class="best-result">11.118%</strong></td><td><strong class="best-result">8.416%</strong></td><td><strong class="best-result">11.446%</strong></td><td><strong class="best-result">8.679%</strong></td><td>2/147</td><td>1.361%</td><td>0.556%</td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>10</td><td>直接生成（beam 50）</td><td>12.574%</td><td>8.744%</td><td>12.996%</td><td>9.037%</td><td>0/147</td><td>0.000%</td><td>0.000%</td></tr>
+          <tr><td>10</td><td>UniSRec 原排</td><td>14.075%</td><td>8.430%</td><td>14.341%</td><td>8.597%</td><td><strong class="best-result">9/147</strong></td><td><strong class="best-result">6.122%</strong></td><td><strong class="best-result">3.454%</strong></td></tr>
+          <tr><td>10</td><td>联合投机推理</td><td><strong class="best-result">14.339%</strong></td><td><strong class="best-result">9.450%</strong></td><td><strong class="best-result">14.774%</strong></td><td><strong class="best-result">9.753%</strong></td><td>2/147</td><td>1.361%</td><td>0.419%</td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>20</td><td>直接生成（beam 50）</td><td>16.060%</td><td>9.624%</td><td>16.598%</td><td>9.947%</td><td>0/147</td><td>0.000%</td><td>0.000%</td></tr>
+          <tr><td>20</td><td>UniSRec 原排</td><td><strong class="best-result">18.818%</strong></td><td>9.630%</td><td><strong class="best-result">19.220%</strong></td><td>9.832%</td><td><strong class="best-result">10/147</strong></td><td><strong class="best-result">6.803%</strong></td><td><strong class="best-result">3.621%</strong></td></tr>
+          <tr><td>20</td><td>联合投机推理</td><td>17.957%</td><td><strong class="best-result">10.150%</strong></td><td>18.513%</td><td><strong class="best-result">10.478%</strong></td><td>2/147</td><td>1.361%</td><td>0.353%</td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>50</td><td>直接生成（beam 50）</td><td>21.487%</td><td>10.697%</td><td>22.161%</td><td>11.047%</td><td>2/147</td><td>1.361%</td><td>0.254%</td></tr>
+          <tr><td>50</td><td>UniSRec 原排</td><td><strong class="best-result">25.965%</strong></td><td>11.029%</td><td><strong class="best-result">26.493%</strong></td><td>11.256%</td><td><strong class="best-result">15/147</strong></td><td><strong class="best-result">10.204%</strong></td><td><strong class="best-result">4.261%</strong></td></tr>
+          <tr><td>50</td><td>联合投机推理</td><td>25.039%</td><td><strong class="best-result">11.496%</strong></td><td>25.832%</td><td><strong class="best-result">11.871%</strong></td><td>2/147</td><td>1.361%</td><td>0.295%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-links"><a href="data/validation-quality.csv">整体、暖组与冷组质量指标（CSV）</a></p>
+  </section>
+  <section aria-labelledby="runtime">
+    <h2 id="runtime">在线时延、吞吐与批次复核</h2>
+    <p>在 NVIDIA H20 上，用 256 条固定请求比较直接生成与联合投机推理。每种配置预热后重复三遍。端到端时延取单卡每批 1 条请求的测量结果，吞吐取每卡每批 4 条请求的测量结果。一次请求完成一份推荐列表，列表中每件商品对应三个输出 SID token。</p>
+    <figure>
+      <picture>
+        <source media="screen and (max-width: 680px)" srcset="figures/validation-latency-mobile.png" width="710" height="852">
+        <img src="figures/validation-latency.png" width="1689" height="518" alt="直接生成与联合投机推理在五个 K 下的分位数时延和四卡吞吐">
+      </picture>
+      <figcaption>图 3 · 直接生成和联合方案的 P50、P99 时延与四卡请求吞吐。返回 10 件商品时，两条路线的 P99 分别为 118.39 ms 和 37.08 ms，四卡吞吐分别为 56.35 和 467.43 请求/s。</figcaption>
+    </figure>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-4">
+      <table class="metrics-table with-method by-k">
+        <caption id="table-caption-4">每个 K 分别标出 P50、P95、P99 的最低时延和各项吞吐的最高值。UniSRec 原排仅参与推荐质量对照。</caption>
+        <thead><tr><th scope="col">K</th><th scope="col">路线</th><th scope="col"><span class="th-line">P50</span><span class="th-line">（ms）</span></th><th scope="col"><span class="th-line">P95</span><span class="th-line">（ms）</span></th><th scope="col"><span class="th-line">P99</span><span class="th-line">（ms）</span></th><th scope="col"><span class="th-line">单卡</span><span class="th-line">请求/s</span></th><th scope="col"><span class="th-line">四卡</span><span class="th-line">请求/s</span></th><th scope="col"><span class="th-line">四卡</span><span class="th-line">商品/s</span></th><th scope="col"><span class="th-line">四卡输出</span><span class="th-line">token/s</span></th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>直接生成（beam 50）</td><td>93.78</td><td>104.72</td><td>123.70</td><td>14.28</td><td>56.32</td><td>56.32</td><td>168.95</td></tr>
+          <tr><td>1</td><td>联合投机推理</td><td><strong class="best-result">26.67</strong></td><td><strong class="best-result">28.69</strong></td><td><strong class="best-result">42.49</strong></td><td><strong class="best-result">112.50</strong></td><td><strong class="best-result">419.18</strong></td><td><strong class="best-result">419.18</strong></td><td><strong class="best-result">1,257.55</strong></td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>5</td><td>直接生成（beam 50）</td><td>93.11</td><td>103.83</td><td>121.11</td><td>14.28</td><td>56.30</td><td>281.51</td><td>844.54</td></tr>
+          <tr><td>5</td><td>联合投机推理</td><td><strong class="best-result">26.80</strong></td><td><strong class="best-result">28.31</strong></td><td><strong class="best-result">35.53</strong></td><td><strong class="best-result">115.28</strong></td><td><strong class="best-result">468.91</strong></td><td><strong class="best-result">2,344.56</strong></td><td><strong class="best-result">7,033.68</strong></td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>10</td><td>直接生成（beam 50）</td><td>93.88</td><td>105.17</td><td>118.39</td><td>14.29</td><td>56.35</td><td>563.53</td><td>1,690.58</td></tr>
+          <tr><td>10</td><td>联合投机推理</td><td><strong class="best-result">27.32</strong></td><td><strong class="best-result">29.26</strong></td><td><strong class="best-result">37.08</strong></td><td><strong class="best-result">115.98</strong></td><td><strong class="best-result">467.43</strong></td><td><strong class="best-result">4,674.31</strong></td><td><strong class="best-result">14,022.94</strong></td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>20</td><td>直接生成（beam 50）</td><td>93.54</td><td>104.05</td><td>122.93</td><td>14.22</td><td>56.07</td><td>1,121.44</td><td>3,364.32</td></tr>
+          <tr><td>20</td><td>联合投机推理</td><td><strong class="best-result">27.19</strong></td><td><strong class="best-result">28.95</strong></td><td><strong class="best-result">35.24</strong></td><td><strong class="best-result">81.51</strong></td><td><strong class="best-result">322.90</strong></td><td><strong class="best-result">6,457.96</strong></td><td><strong class="best-result">19,373.88</strong></td></tr>
+          </tbody>
+        <tbody>
+          <tr><td>50</td><td>直接生成（beam 50）</td><td>93.80</td><td>104.30</td><td>120.11</td><td>14.29</td><td>56.16</td><td>2,807.95</td><td>8,423.84</td></tr>
+          <tr><td>50</td><td>联合投机推理</td><td><strong class="best-result">29.62</strong></td><td><strong class="best-result">45.84</strong></td><td><strong class="best-result">52.12</strong></td><td><strong class="best-result">45.52</strong></td><td><strong class="best-result">170.70</strong></td><td><strong class="best-result">8,534.88</strong></td><td><strong class="best-result">25,604.63</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>逐 token 计时与整批响应</h3>
+    <p>直接生成在各 K 下均使用宽度为 50 的 beam，因此共用一组内部 token 计时。TTFT 从请求准备开始计至首个 SID token 选定。TPOT 取首个和第三个 SID token 选定时刻之间的平均步长，排除换行和 EOS。抽检的 24 次完整 beam 排序在添加计时前后逐位一致。</p>
+    <div class="formula"><math display="block" aria-label="TPOT 等于第三个 SID token 选定时刻减去第一个选定时刻，再除以二"><mi mathvariant="normal">TPOT</mi><mo>=</mo><mfrac><mrow><msub><mi>t</mi><mn>3</mn></msub><mo>−</mo><msub><mi>t</mi><mn>1</mn></msub></mrow><mn>2</mn></mfrac></math></div>
+    <div class="table-wrap">
+      <table class="metrics-table">
+        <caption>直接生成的内部 SID token 时延，单位为毫秒。</caption>
+        <thead><tr><th scope="col">纯 beam50 指标<wbr><span class="table-unit">（ms）</span></th><th scope="col">均值</th><th scope="col">P50</th><th scope="col">P95</th><th scope="col">P99</th></tr></thead>
+        <tbody>
+          <tr><td>内部首 SID token 时延（TTFT）</td><td>48.410</td><td>46.802</td><td>56.860</td><td>60.915</td></tr>
+          <tr><td>后续 SID token 时延（TPOT）</td><td>13.062</td><td>12.812</td><td>13.739</td><td>16.945</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>联合方案一次交付整个列表。其单位输出摊销时延用单卡单请求的端到端总用时除以实际交付的 SID token 总数，各 K 的实测值见<a href="#selected-runtime">所选方案的在线性能</a>。</p>
+    <h3>批大小对排序的影响</h3>
+    <p>在相同的 256 条请求上，按原批大小 4 复跑，各 K 的完整排序均与归档一致。改为每批 1 条后，返回 50 件商品时有 153 条请求的商品集合相同，完整顺序相同的请求为 0 条。</p>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-5">
+      <table class="metrics-table by-k">
+        <caption id="table-caption-5">B1 和 B4 分别指每批 1 条和 4 条请求。集合一致要求返回相同商品，全序一致还要求各商品名次相同。</caption>
+        <thead><tr><th scope="col">K</th><th scope="col">B1 与 B4 集合一致</th><th scope="col">B1 与 B4 全序一致</th><th scope="col">B4 与归档全序一致</th><th scope="col">B1 减 B4 NDCG<wbr><span class="table-unit">（百分点）</span></th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>254/256</td><td>254/256</td><td>256/256</td><td>+0.000</td></tr>
+          <tr><td>5</td><td>246/256</td><td>224/256</td><td>256/256</td><td>+0.000</td></tr>
+          <tr><td>10</td><td>241/256</td><td>146/256</td><td>256/256</td><td>+0.000</td></tr>
+          <tr><td>20</td><td>224/256</td><td>31/256</td><td>256/256</td><td>-0.004</td></tr>
+          <tr><td>50</td><td>153/256</td><td>0/256</td><td>256/256</td><td>+0.068</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="data-links"><a href="data/validation-performance.csv">时延与吞吐（CSV）</a><a href="data/validation-performance-details.json">阶段耗时与显存（JSON）</a><a href="data/validation-beam-token-latency.json">逐请求 TTFT 与 TPOT（JSON）</a><a href="data/validation-batch-audit.json">批量复核结果（JSON）</a></p>
+  </section>
+  <section aria-labelledby="selected">
+    <h2 id="selected">所选方案在各 K 下的质量与在线性能</h2>
+    <p>联合方案在测试前固定配置。下列结果对应同一配置在五种推荐列表长度下的表现。</p>
+    <h3>推荐质量</h3>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-6">
+      <table class="metrics-table by-k">
+        <caption id="table-caption-6">验证 NDCG 取自 4,532 条验证请求，其余指标取自 4,533 条测试请求及其冷暖分组。</caption>
+        <thead><tr><th scope="col">K</th><th scope="col">验证 NDCG</th><th scope="col">测试 HR</th><th scope="col">测试 NDCG</th><th scope="col">暖 HR</th><th scope="col">暖 NDCG</th><th scope="col">冷命中</th><th scope="col">冷 HR</th><th scope="col">冷 NDCG</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>5.958%</td><td>5.118%</td><td>5.118%</td><td>5.290%</td><td>5.290%</td><td>0/147</td><td>0.000%</td><td>0.000%</td></tr>
+          <tr><td>5</td><td>9.073%</td><td>11.118%</td><td>8.416%</td><td>11.446%</td><td>8.679%</td><td>2/147</td><td>1.361%</td><td>0.556%</td></tr>
+          <tr><td>10</td><td>9.954%</td><td>14.339%</td><td>9.450%</td><td>14.774%</td><td>9.753%</td><td>2/147</td><td>1.361%</td><td>0.419%</td></tr>
+          <tr><td>20</td><td>10.865%</td><td>17.957%</td><td>10.150%</td><td>18.513%</td><td>10.478%</td><td>2/147</td><td>1.361%</td><td>0.353%</td></tr>
+          <tr><td>50</td><td>11.927%</td><td>25.039%</td><td>11.496%</td><td>25.832%</td><td>11.871%</td><td>2/147</td><td>1.361%</td><td>0.295%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 id="selected-runtime">在线性能</h3>
+    <div class="table-wrap" role="region" tabindex="0" aria-labelledby="table-caption-7">
+      <table class="metrics-table by-k">
+        <caption id="table-caption-7">时延和单位输出摊销按单卡每批 1 条请求测量，吞吐和峰值显存按每卡每批 4 条请求测量。</caption>
+        <thead><tr><th scope="col">K</th><th scope="col"><span class="th-line">P50</span><span class="th-line">（ms）</span></th><th scope="col"><span class="th-line">P95</span><span class="th-line">（ms）</span></th><th scope="col"><span class="th-line">P99</span><span class="th-line">（ms）</span></th><th scope="col"><span class="th-line">单卡</span><span class="th-line">请求/s</span></th><th scope="col"><span class="th-line">四卡</span><span class="th-line">请求/s</span></th><th scope="col"><span class="th-line">四卡</span><span class="th-line">商品/s</span></th><th scope="col"><span class="th-line">四卡输出</span><span class="th-line">token/s</span></th><th scope="col"><span class="th-line">单位输出摊销</span><span class="th-line">（ms/token）</span></th><th scope="col"><span class="th-line">B4 峰值显存</span><span class="th-line">（GiB）</span></th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>26.67</td><td>28.69</td><td>42.49</td><td>112.50</td><td>419.18</td><td>419.18</td><td>1,257.55</td><td>9.202</td><td>1.257</td></tr>
+          <tr><td>5</td><td>26.80</td><td>28.31</td><td>35.53</td><td>115.28</td><td>468.91</td><td>2,344.56</td><td>7,033.68</td><td>1.811</td><td>1.158</td></tr>
+          <tr><td>10</td><td>27.32</td><td>29.26</td><td>37.08</td><td>115.98</td><td>467.43</td><td>4,674.31</td><td>14,022.94</td><td>0.925</td><td>1.193</td></tr>
+          <tr><td>20</td><td>27.19</td><td>28.95</td><td>35.24</td><td>81.51</td><td>322.90</td><td>6,457.96</td><td>19,373.88</td><td>0.462</td><td>1.193</td></tr>
+          <tr><td>50</td><td>29.62</td><td>45.84</td><td>52.12</td><td>45.52</td><td>170.70</td><td>8,534.88</td><td>25,604.63</td><td>0.238</td><td>1.193</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>返回 50 件商品时，测试 NDCG 为 11.496%，单请求时延中位数为 29.62 ms，P99 为 52.12 ms。此时每条请求首轮草拟 100 件候选。在相同的 256 条计时请求中，不同两位 SID 前缀数的中位数为 62.5，有 115 条请求超过 64 个。验证器复用相同前缀的状态，每块最多处理 64 个分支，超过这个数量就需要分块进行多次前向计算。</p>
+    <p class="data-links"><a href="data/validation-prefix-sample.csv">逐请求前缀数（CSV）</a><a href="data/validation-selected-metrics.csv">所选方案完整指标（CSV）</a></p>
+  </section>
+  <footer><a href="#top">返回页首</a> · <a href="index.html">报告总览</a></footer>
+</main>
+</body>
+</html>

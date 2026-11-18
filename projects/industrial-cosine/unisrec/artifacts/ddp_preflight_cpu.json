@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "training_started": false,
+  "optimizer_created": false,
+  "backward_called": false,
+  "parameters_unchanged": true,
+  "world_size": 4,
+  "backend": "gloo",
+  "gpu_allocated": false,
+  "global_batch_size": 512,
+  "per_rank_batch_size": 128,
+  "train_rows": 36259,
+  "training_sampler_padding_rows": 1,
+  "validation_rows_exact": 4532,
+  "test_rows_exact": 4533,
+  "evaluation_sharded": false,
+  "query_dimension": 300,
+  "rank_parameter_digests_equal": true,
+  "rank_provenance_equal": true,
+  "rank0_broadcast_passed": true,
+  "rank0_error_broadcast_passed": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "device": "cpu",
+      "local_batch_size": 128,
+      "parameter_sha256": "963d4ac30d4baac683fc47727eaf64e9286484b6bce7f3260eae4e20cb012f16",
+      "valid_rows": 4532,
+      "test_rows": 4533
+    },
+    {
+      "rank": 1,
+      "device": "cpu",
+      "local_batch_size": 128,
+      "parameter_sha256": "963d4ac30d4baac683fc47727eaf64e9286484b6bce7f3260eae4e20cb012f16",
+      "valid_rows": 4532,
+      "test_rows": 4533
+    },
+    {
+      "rank": 2,
+      "device": "cpu",
+      "local_batch_size": 128,
+      "parameter_sha256": "963d4ac30d4baac683fc47727eaf64e9286484b6bce7f3260eae4e20cb012f16",
+      "valid_rows": 4532,
+      "test_rows": 4533
+    },
+    {
+      "rank": 3,
+      "device": "cpu",
+      "local_batch_size": 128,
+      "parameter_sha256": "963d4ac30d4baac683fc47727eaf64e9286484b6bce7f3260eae4e20cb012f16",
+      "valid_rows": 4532,
+      "test_rows": 4533
+    }
+  ],
+  "qwen_provenance": {
+    "dataset": "Industrial_and_Scientific",
+    "embedding_sha256": "91a1c875e4b009f3a07b5febf00c2ef62a3813a55cfe873b825e18e32df1dd0b",
+    "embedding_ids_sha256": "b1527009791b626b05067a5c9ce0f610459993d1ee5cf6e0ebe55a29bbf0e53e",
+    "catalog_sha256": "73f184a5fede5ea0a0e8d19ff52e9d850405587f97dae3280e5bb6932bafb24b",
+    "manifest_sha256": "924913ef6ce7f2f7627d9e4b53845143f0b2ebee2e247122528373a6da555d46",
+    "internal_item_tokens_sha256": "a2d6b81f8d5aafe27dcacca5015a66eb4151c19b690003a712468e9f9bea68e5",
+    "train_catalog_only": true,
+    "max_history_length": 10,
+    "architecture": {
+      "train_stage": "inductive_ft",
+      "loss_type": "CE",
+      "plm_size": 2560,
+      "adaptor_layers": [
+        2560,
+        300
+      ],
+      "n_exps": 8,
+      "n_layers": 2,
+      "n_heads": 2,
+      "hidden_size": 300,
+      "inner_size": 256,
+      "hidden_act": "gelu",
+      "layer_norm_eps": 1e-12,
+      "temperature": 0.07,
+      "hidden_dropout_prob": 0.5,
+      "attn_dropout_prob": 0.5,
+      "adaptor_dropout_prob": 0.2
+    }
+  }
+}

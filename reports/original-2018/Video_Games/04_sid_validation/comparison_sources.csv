@@ -1,0 +1,10 @@
+﻿run,artifact,path,sha256
+baseline,sid_validation,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\2026-11-14T15-04-02-357Z\sid_validation.json,621dba6926047b7329d5958a4c781fcb12883d7eb87014ec5d4d18ac85d200fb
+baseline,export_stats,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\2026-11-14T15-04-02-357Z\export_stats.json,14ec7aad8a08c5077490d056eba37f62d4bb98540cb7956588884f1c7afa8396
+baseline,training_summary,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\2026-11-14T15-04-02-357Z\training_summary.json,47df880034dcb9d35bdd5c70febf697b25098a468bf2ea92b1b06515616dd0f1
+baseline,evaluation_history,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\2026-11-14T15-04-02-357Z\evaluation_history.json,de516b191b9113b64febdfa3e10e8c03487c8cb6e690cf136da7bcd7b13a01b4
+endpoint,sid_validation,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\compare_10000_2026-11-14T15-37-03-631Z\endpoint_10000\sid_validation.json,b0c64fc51752dc00ddbd2b7ab6c55804f0566b4165d3a7ce09a119f318550b69
+endpoint,export_stats,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\compare_10000_2026-11-14T15-37-03-631Z\endpoint_10000\export_stats.json,1720c555974adf4fc0f5f5f8db155a3d42113933c51b53875909e80e7ea5f17c
+endpoint,training_summary,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\compare_10000_2026-11-14T15-37-03-631Z\training_summary.json,2cd56d8ac3c36489198aa39e2651c96f9c4b76e367d150d94141214f79a32c44
+endpoint,evaluation_history,C:\Users\Administrator\Desktop\MiniOneRec\output\rqvae\Video_Games\compare_10000_2026-11-14T15-37-03-631Z\evaluation_history.json,3a870f20366172efbacf0b7b156f3e22535de263bfaf9fcc4b38bff297e7df8b
+comparison,comparison,C:\Users\Administrator\Desktop\MiniOneRec\output\reports\Video_Games\05_rqvae_10000_comparison\comparison.json,76d3dc13aadd2f51f4de2efdda3ea9f0acec9ce38706222cb32a195f870f5d79

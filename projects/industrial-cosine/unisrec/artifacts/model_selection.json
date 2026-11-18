@@ -1,0 +1,112 @@
+{
+  "status": "selected_and_cleaned",
+  "selected_at": "2026-11-17T18:40:09.023674+08:00",
+  "user_instruction": "保留20轮组的结果",
+  "selection_basis": "explicit_user_choice_after_reviewing_all_metrics",
+  "selected_run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242",
+  "max_epochs": 20,
+  "best_epoch": 20,
+  "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints/QwenUniSRec-Nov-17-2026_10-13-24.pth",
+  "checkpoint_sha256": "50f8bd01b5bdb5251ee1019ba0a3a003a6fd8ecfc987179cd3f16d13c36a64cb",
+  "config_file": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/config.yaml",
+  "vector_quality_report": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/test_vector_quality/report.json",
+  "training_summary_file": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/training_summary.json",
+  "configuration": {
+    "dataset": "Industrial_and_Scientific",
+    "data_path": "prepared",
+    "benchmark_filename": [
+      "train",
+      "valid",
+      "test"
+    ],
+    "alias_of_item_id": [
+      "item_id_list"
+    ],
+    "load_col": {
+      "inter": [
+        "user_id",
+        "item_id_list",
+        "item_id"
+      ],
+      "item": [
+        "item_id"
+      ]
+    },
+    "MAX_ITEM_LIST_LENGTH": 10,
+    "train_stage": "inductive_ft",
+    "plm_size": 2560,
+    "adaptor_layers": [
+      2560,
+      300
+    ],
+    "hidden_size": 300,
+    "loss_type": "CE",
+    "train_catalog_only": true,
+    "exclude_seen": false,
+    "train_neg_sample_args": null,
+    "eval_args": {
+      "group_by": "user",
+      "order": "TO",
+      "mode": "full"
+    },
+    "metrics": [
+      "Recall",
+      "NDCG",
+      "Hit"
+    ],
+    "topk": [
+      10,
+      20,
+      50
+    ],
+    "vector_quality_eval": true,
+    "valid_metric": "vector_nll",
+    "valid_metric_bigger": false,
+    "seed": 42,
+    "reproducibility": true,
+    "use_gpu": true,
+    "gpu_id": "0,1,2,3",
+    "nproc": 4,
+    "epochs": 20,
+    "train_batch_size": 512,
+    "eval_batch_size": 128,
+    "learner": "adam",
+    "learning_rate": 0.002,
+    "lr_schedule": "warmup_cosine",
+    "warmup_epochs": 5,
+    "min_learning_rate": 0.0002,
+    "weight_decay": 0.0,
+    "eval_step": 1,
+    "stopping_step": 10,
+    "clip_grad_norm": {
+      "max_norm": 1.0,
+      "norm_type": 2
+    },
+    "checkpoint_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints",
+    "save_dataset": false,
+    "save_dataloaders": false,
+    "log_wandb": false,
+    "show_progress": false,
+    "worker": 0
+  },
+  "within_run_checkpoint_selection": "minimum validation full-catalog CE loss (=vector_nll)",
+  "test_metrics": {
+    "nll": 7.28475703671894,
+    "recall10": 0.14041473637767482,
+    "recall20": 0.18817560114714318,
+    "recall50": 0.2596514449591882,
+    "cold_nll": 7.746416548477905,
+    "cold_recall10": 0.061224489795918366,
+    "cold_recall20": 0.06802721088435375,
+    "cold_recall50": 0.10204081632653061
+  },
+  "comparison_report": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/comparison.html",
+  "comparison_csv": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/metrics_comparison.csv",
+  "all_metrics_json": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/overall_metrics_comparison.json",
+  "cleanup_record": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/cleanup_20epoch.json",
+  "cleanup_executed": true,
+  "deleted_file_count": 12,
+  "removed_container_count": 9,
+  "host_bytes_deleted": 542482164,
+  "historical_metrics_logs_configs_retained": true
+}

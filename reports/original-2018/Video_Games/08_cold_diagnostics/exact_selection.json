@@ -1,0 +1,429 @@
+{
+  "seed": 20261116,
+  "cases": [
+    {
+      "row_id": 12693,
+      "cohort": "cold_seen_abc_control",
+      "target_item": "14471",
+      "history_items": [
+        "4484",
+        "6873",
+        "7603",
+        "14470"
+      ]
+    },
+    {
+      "row_id": 470,
+      "cohort": "cold_seen_abc_control",
+      "target_item": "14504",
+      "history_items": [
+        "5777",
+        "308",
+        "3289",
+        "3420",
+        "8638"
+      ]
+    },
+    {
+      "row_id": 23353,
+      "cohort": "cold_seen_abc_control",
+      "target_item": "16343",
+      "history_items": [
+        "3400",
+        "1469",
+        "3423",
+        "1135",
+        "9260"
+      ]
+    },
+    {
+      "row_id": 15769,
+      "cohort": "cold_rank47_control",
+      "target_item": "16556",
+      "history_items": [
+        "15721",
+        "13207",
+        "14911"
+      ]
+    },
+    {
+      "row_id": 397,
+      "cohort": "cold_random",
+      "target_item": "14987",
+      "history_items": [
+        "12917",
+        "2686",
+        "15186",
+        "8350",
+        "706",
+        "10323",
+        "1097",
+        "2940",
+        "962",
+        "1096",
+        "15896",
+        "466",
+        "14942",
+        "1875",
+        "310"
+      ]
+    },
+    {
+      "row_id": 778,
+      "cohort": "cold_random",
+      "target_item": "8619",
+      "history_items": [
+        "1478"
+      ]
+    },
+    {
+      "row_id": 11398,
+      "cohort": "cold_random",
+      "target_item": "529",
+      "history_items": [
+        "6519",
+        "4002",
+        "7783"
+      ]
+    },
+    {
+      "row_id": 12506,
+      "cohort": "cold_random",
+      "target_item": "15860",
+      "history_items": [
+        "3220",
+        "16090",
+        "11291",
+        "16519",
+        "15602",
+        "13873"
+      ]
+    },
+    {
+      "row_id": 12666,
+      "cohort": "cold_random",
+      "target_item": "549",
+      "history_items": [
+        "10456",
+        "11389",
+        "1840",
+        "315",
+        "9277"
+      ]
+    },
+    {
+      "row_id": 19050,
+      "cohort": "cold_random",
+      "target_item": "9303",
+      "history_items": [
+        "13034",
+        "7892",
+        "12000",
+        "792",
+        "4163"
+      ]
+    },
+    {
+      "row_id": 20154,
+      "cohort": "cold_random",
+      "target_item": "7121",
+      "history_items": [
+        "6",
+        "4477",
+        "1352",
+        "7219",
+        "10802",
+        "7154",
+        "7154",
+        "7258",
+        "3146",
+        "9907",
+        "4847",
+        "8720",
+        "5548",
+        "1697",
+        "1059",
+        "264",
+        "1909",
+        "780",
+        "4913"
+      ]
+    },
+    {
+      "row_id": 24954,
+      "cohort": "cold_random",
+      "target_item": "315",
+      "history_items": [
+        "8721",
+        "3908",
+        "2159",
+        "8721",
+        "3908",
+        "2159",
+        "2160",
+        "10314",
+        "10315",
+        "2334",
+        "1788",
+        "4213",
+        "3732",
+        "7729",
+        "2784",
+        "4272",
+        "2783",
+        "10316",
+        "3604",
+        "2639"
+      ]
+    },
+    {
+      "row_id": 32290,
+      "cohort": "cold_random",
+      "target_item": "10376",
+      "history_items": [
+        "814",
+        "713",
+        "507",
+        "7891",
+        "2056",
+        "5373",
+        "10128",
+        "8461",
+        "1572",
+        "2879",
+        "4161",
+        "2057",
+        "13141",
+        "6486",
+        "8667",
+        "307",
+        "464",
+        "6346",
+        "829",
+        "1996"
+      ]
+    },
+    {
+      "row_id": 32445,
+      "cohort": "cold_random",
+      "target_item": "13755",
+      "history_items": [
+        "11644",
+        "12315",
+        "2168",
+        "15338"
+      ]
+    },
+    {
+      "row_id": 38223,
+      "cohort": "cold_random",
+      "target_item": "2958",
+      "history_items": [
+        "5769",
+        "1127",
+        "5372",
+        "514",
+        "8040"
+      ]
+    },
+    {
+      "row_id": 41699,
+      "cohort": "cold_random",
+      "target_item": "11500",
+      "history_items": [
+        "169",
+        "97",
+        "97",
+        "14167"
+      ]
+    },
+    {
+      "row_id": 2507,
+      "cohort": "warm_top10_control",
+      "target_item": "452",
+      "history_items": [
+        "3149",
+        "6532",
+        "4564",
+        "1163",
+        "1542",
+        "5458",
+        "788",
+        "1090",
+        "980"
+      ]
+    },
+    {
+      "row_id": 18507,
+      "cohort": "warm_top10_control",
+      "target_item": "207",
+      "history_items": [
+        "933",
+        "16306",
+        "5557",
+        "6981",
+        "10243",
+        "9529"
+      ]
+    },
+    {
+      "row_id": 19396,
+      "cohort": "warm_top10_control",
+      "target_item": "9441",
+      "history_items": [
+        "12013",
+        "12013",
+        "1043",
+        "1118",
+        "6273",
+        "9440"
+      ]
+    },
+    {
+      "row_id": 27491,
+      "cohort": "warm_top10_control",
+      "target_item": "12626",
+      "history_items": [
+        "4333",
+        "10705",
+        "12625"
+      ]
+    },
+    {
+      "row_id": 28236,
+      "cohort": "warm_top10_control",
+      "target_item": "1766",
+      "history_items": [
+        "10587"
+      ]
+    },
+    {
+      "row_id": 34387,
+      "cohort": "warm_top10_control",
+      "target_item": "1321",
+      "history_items": [
+        "6",
+        "6347",
+        "11298",
+        "1018"
+      ]
+    },
+    {
+      "row_id": 41445,
+      "cohort": "warm_top10_control",
+      "target_item": "14910",
+      "history_items": [
+        "8169"
+      ]
+    },
+    {
+      "row_id": 41446,
+      "cohort": "warm_top10_control",
+      "target_item": "8783",
+      "history_items": [
+        "8169",
+        "14910"
+      ]
+    },
+    {
+      "row_id": 5479,
+      "cohort": "warm_random",
+      "target_item": "9710",
+      "history_items": [
+        "3257",
+        "14286",
+        "908",
+        "910",
+        "4913"
+      ]
+    },
+    {
+      "row_id": 9995,
+      "cohort": "warm_random",
+      "target_item": "7564",
+      "history_items": [
+        "2640",
+        "283",
+        "361",
+        "1890",
+        "4330",
+        "6522",
+        "605",
+        "418",
+        "252",
+        "5993",
+        "14645",
+        "12942",
+        "664",
+        "11186",
+        "8442",
+        "1906",
+        "8376",
+        "890",
+        "891",
+        "8441"
+      ]
+    },
+    {
+      "row_id": 18256,
+      "cohort": "warm_random",
+      "target_item": "12001",
+      "history_items": [
+        "1996",
+        "10244",
+        "6183"
+      ]
+    },
+    {
+      "row_id": 19660,
+      "cohort": "warm_random",
+      "target_item": "330",
+      "history_items": [
+        "550",
+        "267"
+      ]
+    },
+    {
+      "row_id": 20643,
+      "cohort": "warm_random",
+      "target_item": "1729",
+      "history_items": [
+        "2783",
+        "748"
+      ]
+    },
+    {
+      "row_id": 25532,
+      "cohort": "warm_random",
+      "target_item": "1175",
+      "history_items": [
+        "1473",
+        "1273"
+      ]
+    },
+    {
+      "row_id": 28457,
+      "cohort": "warm_random",
+      "target_item": "13791",
+      "history_items": [
+        "856",
+        "856",
+        "2484",
+        "4038",
+        "4976"
+      ]
+    },
+    {
+      "row_id": 34288,
+      "cohort": "warm_random",
+      "target_item": "13942",
+      "history_items": [
+        "4979",
+        "15849",
+        "11682",
+        "2871"
+      ]
+    }
+  ],
+  "scope": "Diagnostic sample with explicit positive controls; not population metric estimation."
+}

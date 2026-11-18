@@ -1,0 +1,313 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-16T08:43:21.416086+00:00",
+  "source_paths": {
+    "trainer_state": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/trainer_state.json",
+    "run_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/run_config.json",
+    "training_summary": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/training_summary.json",
+    "monitor_summary": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/monitor/summary.json",
+    "monitor_events": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/monitor/events.jsonl",
+    "training_implementation": "/mnt/ossdata/ziweizhao/MiniOneRec/sft.py"
+  },
+  "source_sha256": {
+    "trainer_state": "5bb99587fda4bd50a5a03c46a765482cd1804cf26e48e7730307acaca35edf6e",
+    "run_config": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8",
+    "training_summary": "86ce25582826802c00a83d02a69b6666a3a2c379ffc1ef72354754847680ad91",
+    "monitor_summary": "083f958b1414cc44f98f42ff670b019cd486071f97691c58ad138d2d2b568141",
+    "monitor_events": "faf34b072332007d4a964c7a9f23080dd00327fe2b62fbe9d10991b8a26b708c",
+    "training_implementation": "579e3d6efa9bc6888ac7cc637b2e16de767e68d995a47eae1fa7c7339d10b227"
+  },
+  "epoch3_identity": {
+    "exact_epoch3_step": 2061,
+    "nearest_original_saved_step": 2064,
+    "nearest_original_saved_epoch": 3.004366812227074,
+    "expected_checkpoint_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2064",
+    "checkpoint_exists_in_host_run_directory": false,
+    "host_scope": "This script checks the accepted host run directory; Docker/backup searches are separate.",
+    "historical_validation_loss": 2.117537498474121,
+    "historical_train_loss_mean_last100": 1.417464,
+    "historical_learning_rate_logged": 0.00021052554744525548,
+    "historical_elapsed_seconds_at_evaluation": 15659.359911393996
+  },
+  "accepted_best_identity": {
+    "step": 6536,
+    "epoch": 9.513828238719068,
+    "validation_loss": 1.768393635749817,
+    "final_checkpoint_contains_best_model": true,
+    "final_training_state_epoch_is_not_final_weight_epoch": true
+  },
+  "loss_comparison": {
+    "epoch3_to_best_validation_loss_absolute_change": -0.3491438627243042,
+    "epoch3_to_best_validation_loss_relative_decrease": 0.16488202120429707,
+    "periodic_validation_losses_monotonically_decrease": true,
+    "training_loss_scope": "Mixed recommendation and catalog/title tasks; not directly comparable in absolute magnitude with SID-only validation loss.",
+    "overfitting_interpretation": "No aggregate SID validation-loss rebound observed after epoch 3; cold-specific overfitting or forgetting remains untested without historical cold ranking/recognition evaluation."
+  },
+  "reconstruction_requirements": {
+    "planned_num_epochs": 10,
+    "planned_max_steps": 6870,
+    "stop_and_save_after_step": 2064,
+    "exact_epoch3_alternative_step": 2061,
+    "scheduler": "linear",
+    "learning_rate": 0.0003,
+    "warmup_steps": 20,
+    "world_size": 4,
+    "micro_batch_size": 16,
+    "gradient_accumulation_steps": 16,
+    "global_batch_size": 1024,
+    "seed": 42,
+    "do_not_shorten_num_epochs_to_3": "That changes the planned scheduler duration from 6870 to 2061 steps and changes evaluation/save intervals; a fresh 3-epoch run is a different experiment.",
+    "stop_mechanism": "Keep the original 10-epoch scheduler and data setup; stop with a callback after optimizer step 2064 and preserve that exact checkpoint in a separate run directory.",
+    "reconstruction_label": "A rerun is a reconstruction experiment, not the missing historical checkpoint; bitwise identity is not guaranteed.",
+    "reproducibility_controls": [
+      "Same base checkpoint and SID/tokenizer mapping",
+      "Same training files and task concatenation/shuffle",
+      "Same world size, sampler, microbatch and accumulation",
+      "Same optimizer, warmup and full scheduler plan",
+      "Same framework versions and attention implementation",
+      "Same prompt and cold-test definition at evaluation"
+    ]
+  },
+  "host_available_checkpoints": [
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+      "epoch": 9.513828238719068,
+      "global_step": 6536,
+      "weight_files": [
+        "model.safetensors"
+      ]
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6870",
+      "epoch": 10.0,
+      "global_step": 6870,
+      "weight_files": [
+        "model.safetensors"
+      ]
+    }
+  ],
+  "loss_curve": [
+    {
+      "step": 344,
+      "epoch": 0.5007278020378457,
+      "validation_sid_answer_token_loss": 2.661903142929077,
+      "mixed_train_step_loss": 2.2052,
+      "mixed_train_loss_mean_last_100_steps": 2.324664,
+      "learning_rate_logged": 0.00028585401459854014,
+      "elapsed_seconds": 2595.1566521700006,
+      "timestamp_utc": "2026-11-15T14:22:00.398737+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 688,
+      "epoch": 1.0014556040756915,
+      "validation_sid_answer_token_loss": 2.618082284927368,
+      "mixed_train_step_loss": 2.0911,
+      "mixed_train_loss_mean_last_100_steps": 2.0601760000000002,
+      "learning_rate_logged": 0.0002707883211678832,
+      "elapsed_seconds": 5209.9753618959985,
+      "timestamp_utc": "2026-11-15T15:05:35.217446+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 1032,
+      "epoch": 1.502183406113537,
+      "validation_sid_answer_token_loss": 2.4704084396362305,
+      "mixed_train_step_loss": 1.7964,
+      "mixed_train_loss_mean_last_100_steps": 1.841882,
+      "learning_rate_logged": 0.0002557226277372263,
+      "elapsed_seconds": 7820.402898402001,
+      "timestamp_utc": "2026-11-15T15:49:05.644983+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 1376,
+      "epoch": 2.002911208151383,
+      "validation_sid_answer_token_loss": 2.2824432849884033,
+      "mixed_train_step_loss": 1.6063,
+      "mixed_train_loss_mean_last_100_steps": 1.639412,
+      "learning_rate_logged": 0.00024065693430656935,
+      "elapsed_seconds": 10432.641841524997,
+      "timestamp_utc": "2026-11-15T16:32:37.883926+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 1720,
+      "epoch": 2.5036390101892287,
+      "validation_sid_answer_token_loss": 2.1970913410186768,
+      "mixed_train_step_loss": 1.5415,
+      "mixed_train_loss_mean_last_100_steps": 1.50386,
+      "learning_rate_logged": 0.0002255912408759124,
+      "elapsed_seconds": 13047.592479194998,
+      "timestamp_utc": "2026-11-15T17:16:12.834564+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 2064,
+      "epoch": 3.004366812227074,
+      "validation_sid_answer_token_loss": 2.117537498474121,
+      "mixed_train_step_loss": 1.4074,
+      "mixed_train_loss_mean_last_100_steps": 1.417464,
+      "learning_rate_logged": 0.00021052554744525548,
+      "elapsed_seconds": 15659.359911393996,
+      "timestamp_utc": "2026-11-15T17:59:44.601996+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 2408,
+      "epoch": 3.50509461426492,
+      "validation_sid_answer_token_loss": 2.0859150886535645,
+      "mixed_train_step_loss": 1.3455,
+      "mixed_train_loss_mean_last_100_steps": 1.338936,
+      "learning_rate_logged": 0.00019545985401459853,
+      "elapsed_seconds": 18272.853760099,
+      "timestamp_utc": "2026-11-15T18:43:18.095845+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 2752,
+      "epoch": 4.005822416302766,
+      "validation_sid_answer_token_loss": 2.0285849571228027,
+      "mixed_train_step_loss": 1.255,
+      "mixed_train_loss_mean_last_100_steps": 1.268504,
+      "learning_rate_logged": 0.0001803941605839416,
+      "elapsed_seconds": 20878.847708928002,
+      "timestamp_utc": "2026-11-15T19:26:44.089793+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 3096,
+      "epoch": 4.506550218340611,
+      "validation_sid_answer_token_loss": 1.9854230880737305,
+      "mixed_train_step_loss": 1.218,
+      "mixed_train_loss_mean_last_100_steps": 1.211251,
+      "learning_rate_logged": 0.00016532846715328468,
+      "elapsed_seconds": 23531.143029739,
+      "timestamp_utc": "2026-11-15T20:10:56.385115+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 3440,
+      "epoch": 5.0072780203784575,
+      "validation_sid_answer_token_loss": 1.9691883325576782,
+      "mixed_train_step_loss": 1.1819,
+      "mixed_train_loss_mean_last_100_steps": 1.17406,
+      "learning_rate_logged": 0.00015026277372262773,
+      "elapsed_seconds": 26180.567386619,
+      "timestamp_utc": "2026-11-15T20:55:05.809470+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 3784,
+      "epoch": 5.508005822416303,
+      "validation_sid_answer_token_loss": 1.9298949241638184,
+      "mixed_train_step_loss": 1.1151,
+      "mixed_train_loss_mean_last_100_steps": 1.128929,
+      "learning_rate_logged": 0.00013519708029197079,
+      "elapsed_seconds": 28799.703814614997,
+      "timestamp_utc": "2026-11-15T21:38:44.945899+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 4128,
+      "epoch": 6.008733624454148,
+      "validation_sid_answer_token_loss": 1.9061506986618042,
+      "mixed_train_step_loss": 1.0532,
+      "mixed_train_loss_mean_last_100_steps": 1.097265,
+      "learning_rate_logged": 0.00012013138686131385,
+      "elapsed_seconds": 31409.427600382,
+      "timestamp_utc": "2026-11-15T22:22:14.669685+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 4472,
+      "epoch": 6.5094614264919946,
+      "validation_sid_answer_token_loss": 1.8698042631149292,
+      "mixed_train_step_loss": 1.0641,
+      "mixed_train_loss_mean_last_100_steps": 1.049133,
+      "learning_rate_logged": 0.00010506569343065693,
+      "elapsed_seconds": 34019.74698339999,
+      "timestamp_utc": "2026-11-15T23:05:44.989068+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 4816,
+      "epoch": 7.01018922852984,
+      "validation_sid_answer_token_loss": 1.839874267578125,
+      "mixed_train_step_loss": 1.0013,
+      "mixed_train_loss_mean_last_100_steps": 1.025741,
+      "learning_rate_logged": 8.999999999999999e-05,
+      "elapsed_seconds": 36632.78258696399,
+      "timestamp_utc": "2026-11-15T23:49:18.024672+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 5160,
+      "epoch": 7.510917030567685,
+      "validation_sid_answer_token_loss": 1.8281991481781006,
+      "mixed_train_step_loss": 1.0039,
+      "mixed_train_loss_mean_last_100_steps": 0.990541,
+      "learning_rate_logged": 7.493430656934306e-05,
+      "elapsed_seconds": 39243.81632381999,
+      "timestamp_utc": "2026-11-16T00:32:49.058408+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 5504,
+      "epoch": 8.011644832605532,
+      "validation_sid_answer_token_loss": 1.8241322040557861,
+      "mixed_train_step_loss": 0.9259,
+      "mixed_train_loss_mean_last_100_steps": 0.963645,
+      "learning_rate_logged": 5.986861313868612e-05,
+      "elapsed_seconds": 41857.694346947,
+      "timestamp_utc": "2026-11-16T01:16:22.936432+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 5848,
+      "epoch": 8.512372634643377,
+      "validation_sid_answer_token_loss": 1.806064486503601,
+      "mixed_train_step_loss": 0.9269,
+      "mixed_train_loss_mean_last_100_steps": 0.928664,
+      "learning_rate_logged": 4.480291970802919e-05,
+      "elapsed_seconds": 44466.478905241995,
+      "timestamp_utc": "2026-11-16T01:59:51.720990+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 6192,
+      "epoch": 9.013100436681222,
+      "validation_sid_answer_token_loss": 1.7795073986053467,
+      "mixed_train_step_loss": 0.8617,
+      "mixed_train_loss_mean_last_100_steps": 0.913272,
+      "learning_rate_logged": 2.973722627737226e-05,
+      "elapsed_seconds": 47079.25345407199,
+      "timestamp_utc": "2026-11-16T02:43:24.495538+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 6536,
+      "epoch": 9.513828238719068,
+      "validation_sid_answer_token_loss": 1.768393635749817,
+      "mixed_train_step_loss": 0.8536,
+      "mixed_train_loss_mean_last_100_steps": 0.878448,
+      "learning_rate_logged": 1.4671532846715326e-05,
+      "elapsed_seconds": 49688.278174941996,
+      "timestamp_utc": "2026-11-16T03:26:53.520259+00:00",
+      "evaluation_role": "periodic_evaluation_of_current_weights"
+    },
+    {
+      "step": 6870,
+      "epoch": 10.0,
+      "validation_sid_answer_token_loss": 1.768393635749817,
+      "mixed_train_step_loss": 0.8718,
+      "mixed_train_loss_mean_last_100_steps": 0.865954,
+      "learning_rate_logged": 4.3795620437956203e-08,
+      "elapsed_seconds": 52245.676061283,
+      "timestamp_utc": "2026-11-16T04:09:30.918146+00:00",
+      "evaluation_role": "final_evaluation_after_best_model_reload"
+    }
+  ],
+  "epoch3_cold_ranking_metrics": null,
+  "epoch3_cold_ranking_status": "not_computed_from_logs; requires actual epoch-3 weights"
+}

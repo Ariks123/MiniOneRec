@@ -1,0 +1,574 @@
+{
+  "kind": "industrial_rl_beta_comparison",
+  "format_version": 1,
+  "status": "passed",
+  "errors": [],
+  "generated_at_utc": "2026-11-17T19:32:24.694587+00:00",
+  "dataset": "Industrial_and_Scientific",
+  "report_generator_sha256": "97cd9c4b4298139f25417cf56abcb24ccd6ef930d88d56fcb530f9ad6d518487",
+  "contract": {
+    "status": "passed",
+    "only_changed_training_hyperparameter": "beta",
+    "runtime_image": "sha256:0da0b47810fbd4027b860446cabe30a5cb31b48dca96a76c2ac0002143957eac",
+    "parent_model_sha256": "e688140bbfe9aac2981324471dd79ff9da1ad0b329acfa9c18c63f4dca4f597c",
+    "task_manifest_sha256": "071646c2e23e0f45a71c9f6ae07e1a690bd165ad407ad5441a759f8016bf1aaa",
+    "training_sources": {
+      "rl.py": "ad453d4b606159425f01338c56bc9eaf1fb992a0a771836fc598b3067f4a790f",
+      "minionerec_trainer.py": "1b35fb204ce8f8186a4736ec5412d672f6d9384483a355c98089cc9198451936",
+      "scripts/industrial_rl_data.py": "25276e5cc9aaea4af94f71d38a010094ed32a13a2d36d90f7a2fc51d7d41eb24",
+      "scripts/industrial_rl_validation.py": "464dd4b8ee310a9b60ddc935ef19f0ab68f84aca4b103d41881b13493017b6c7",
+      "scripts/deepspeed_zero2_compat.py": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+      "sft_monitor.py": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "data.py": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "LogitProcessor.py": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "npu_support.py": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "scripts/industrial_generative_validation.py": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+      "scripts/evaluate_sft.py": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+      "scripts/sft_eval_utils.py": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "config/h20_zero2.json": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "expected_test_strata": {
+      "overall": 4533,
+      "behavior_warm": 4386,
+      "behavior_cold": 147
+    },
+    "num_generations": 16,
+    "test_input_sha256": {
+      "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+      "eval_file": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+      "test_file": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+      "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "item_meta_path": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+    }
+  },
+  "baseline": {
+    "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl",
+    "beta": 0.001,
+    "selected_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/checkpoint-828",
+    "selected_validation_ndcg10": 0.09316929779634507,
+    "completed_steps": 1449,
+    "completed_epoch": 1.7567075943610733,
+    "stop_reason": "early_stopping",
+    "training_runtime_seconds": 5722.555,
+    "input_sha256": {
+      "run_config.json": "3cd7ddc10d55cf4569f84040d149050c47f3ab2f15d30620086fa3e1ba75902a",
+      "run_status.json": "a113381a8831357fed41b387682e44546f1384841b4b82698aa5018b3be13685",
+      "supervisor_config.json": "c865f884061e3e677bdedda6fb0af33dd634c5be3bf8985cacf3dfa501e7867e",
+      "training_summary.json": "6a13c1548c2084877cdcbee474e2c7f294c04dd9e33c1e6879ad7cb7624d7fbc",
+      "baseline_validation.json": "81b1c241b61d8f169525d93e7533e7398b51e7e57624901bc72e6daf10c11aa8",
+      "monitor/summary.json": "bc6ae63364d7addeb5580761df4091462030b9463a975fa5e79acaca58ac1e83",
+      "monitor/metrics.jsonl": "d9f54ff310af102d2347c3a8acca985e3a71d197792250cb9f7db3ae4dcc36cd",
+      "evaluation/metrics.json": "830c006a76547b6c4e4240c13e95f51798603b57d05a4c321c126857b9d861af",
+      "evaluation/predictions.jsonl": "9e8e53ba51269f97f0adecc71e1534d93660476909703cd599146c4434e8a20f",
+      "rl_task_manifest.jsonl": "071646c2e23e0f45a71c9f6ae07e1a690bd165ad407ad5441a759f8016bf1aaa",
+      "parent_sft_run_config.json": "744fb5a4a1325fc29b23149079693645f04f6816d34841414cdb47c857e1f7e5",
+      "parent_sft_training_summary.json": "ec8e86960528edf0006ff0792c6411343ae8a39739dbf167d2eef8457decf925",
+      "parent_sft_evaluation_metrics.json": "b4cdba6d0322675bdba82544bab3eb0ab91567a2bf4e1e8aa08726e527726242",
+      "parent_sft_predictions.jsonl": "e5ce1b6f4d0dbfe6429b8d475ffad5445b18b4a55d96c51eee78c4142520920f"
+    },
+    "all_training_statistics": {
+      "rewards/rule_reward": {
+        "count": 1449,
+        "mean": 0.02107919254658385,
+        "median": 0.021484375,
+        "max": 0.0341796875
+      },
+      "reward": {
+        "count": 1449,
+        "mean": 0.0024232664925447653,
+        "median": 0.002394642884610221,
+        "max": 0.00423084307112731
+      },
+      "kl": {
+        "count": 1449,
+        "mean": 4.7773574727143275,
+        "median": 4.35650634765625,
+        "max": 42.30462646484375
+      },
+      "grad_norm": {
+        "count": 1449,
+        "mean": 0.868198857996857,
+        "median": 0.7126085162162781,
+        "max": 15.602426528930664,
+        "clip_exceedance_rate": 0.9979296066252588
+      },
+      "hit_group_rate": {
+        "count": 1449,
+        "mean": 0.3372670807453416,
+        "median": 0.34375,
+        "max": 0.546875
+      }
+    },
+    "last100_statistics": {
+      "rewards/rule_reward": {
+        "count": 100,
+        "mean": 0.021337890625,
+        "median": 0.021484375,
+        "max": 0.0302734375
+      },
+      "reward": {
+        "count": 100,
+        "mean": 0.002603810897853691,
+        "median": 0.0025897910381900147,
+        "max": 0.0038529048033524305
+      },
+      "kl": {
+        "count": 100,
+        "mean": 6.50191665649414,
+        "median": 6.273956298828125,
+        "max": 17.401824951171875
+      },
+      "grad_norm": {
+        "count": 100,
+        "mean": 1.1799614822864533,
+        "median": 1.0247655510902405,
+        "max": 11.81400203704834,
+        "clip_exceedance_rate": 1.0
+      },
+      "hit_group_rate": {
+        "count": 100,
+        "mean": 0.34140625,
+        "median": 0.34375,
+        "max": 0.484375
+      }
+    },
+    "matched_step_statistics": {
+      "rewards/rule_reward": {
+        "count": 1449,
+        "mean": 0.02107919254658385,
+        "median": 0.021484375,
+        "max": 0.0341796875
+      },
+      "reward": {
+        "count": 1449,
+        "mean": 0.0024232664925447653,
+        "median": 0.002394642884610221,
+        "max": 0.00423084307112731
+      },
+      "kl": {
+        "count": 1449,
+        "mean": 4.7773574727143275,
+        "median": 4.35650634765625,
+        "max": 42.30462646484375
+      },
+      "grad_norm": {
+        "count": 1449,
+        "mean": 0.868198857996857,
+        "median": 0.7126085162162781,
+        "max": 15.602426528930664,
+        "clip_exceedance_rate": 0.9979296066252588
+      },
+      "hit_group_rate": {
+        "count": 1449,
+        "mean": 0.3372670807453416,
+        "median": 0.34375,
+        "max": 0.546875
+      }
+    }
+  },
+  "candidate": {
+    "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl",
+    "beta": 0.01,
+    "selected_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/checkpoint-1449",
+    "selected_validation_ndcg10": 0.09432758435090574,
+    "completed_steps": 1650,
+    "completed_epoch": 2.0,
+    "stop_reason": "max_epochs",
+    "training_runtime_seconds": 6516.8952,
+    "input_sha256": {
+      "run_config.json": "51ee0411d14c46bc2e8bab837e88814862ecb3f546871d3adcc492d0aacc904b",
+      "run_status.json": "2c99b13be2076679cc77d646dacbec49e56fc0c832ac1a997336104d9cfd02d5",
+      "supervisor_config.json": "00e32e75fe0d9d408ef8c1ca2f0a09ef203a43e1b79f93833215396d37e41d96",
+      "training_summary.json": "f35e4f7fe5ff92f517eff0fbc87a32dbbe0b7794784a471d194cce86a5ba1a39",
+      "baseline_validation.json": "f6ac27a25beca18f7e1c9ebd7928ab2d1394373a269963f87d656b914f3e9746",
+      "monitor/summary.json": "c00f488601c8021b37c4764301f91440d56da6beb93b79d2e72d7601f6ec902a",
+      "monitor/metrics.jsonl": "98efffd370103448aad21a77ddaba10b56ca105b81e2dbdbe645993731f956c1",
+      "evaluation/metrics.json": "8e0df56272efbf095a7293f389b5d6ed655b056fe4f1b804d790c7412cd8b37a",
+      "evaluation/predictions.jsonl": "583d86e8acd23b5bcc42fae6e4da6b0a1de113a458ce0d4412b4a4890f5f5548",
+      "rl_task_manifest.jsonl": "071646c2e23e0f45a71c9f6ae07e1a690bd165ad407ad5441a759f8016bf1aaa",
+      "parent_sft_run_config.json": "744fb5a4a1325fc29b23149079693645f04f6816d34841414cdb47c857e1f7e5",
+      "parent_sft_training_summary.json": "ec8e86960528edf0006ff0792c6411343ae8a39739dbf167d2eef8457decf925",
+      "parent_sft_evaluation_metrics.json": "b4cdba6d0322675bdba82544bab3eb0ab91567a2bf4e1e8aa08726e527726242",
+      "parent_sft_predictions.jsonl": "e5ce1b6f4d0dbfe6429b8d475ffad5445b18b4a55d96c51eee78c4142520920f"
+    },
+    "all_training_statistics": {
+      "rewards/rule_reward": {
+        "count": 1650,
+        "mean": 0.021715435606060606,
+        "median": 0.021484375,
+        "max": 0.03515625
+      },
+      "reward": {
+        "count": 1650,
+        "mean": 0.0025155889773212205,
+        "median": 0.002471272586262785,
+        "max": 0.004544435447314754
+      },
+      "kl": {
+        "count": 1650,
+        "mean": 0.4260035070487947,
+        "median": 0.41086578369140625,
+        "max": 3.7113494873046875
+      },
+      "grad_norm": {
+        "count": 1650,
+        "mean": 0.6233766282327248,
+        "median": 0.5291266143321991,
+        "max": 35.362152099609375,
+        "clip_exceedance_rate": 0.9963636363636363
+      },
+      "hit_group_rate": {
+        "count": 1650,
+        "mean": 0.3474469696969697,
+        "median": 0.34375,
+        "max": 0.5625
+      }
+    },
+    "last100_statistics": {
+      "rewards/rule_reward": {
+        "count": 100,
+        "mean": 0.022263671875,
+        "median": 0.0224609375,
+        "max": 0.03125
+      },
+      "reward": {
+        "count": 100,
+        "mean": 0.002715626409626566,
+        "median": 0.002762686461210251,
+        "max": 0.003967867494793609
+      },
+      "kl": {
+        "count": 100,
+        "mean": 0.08310162734985352,
+        "median": 0.08300971984863281,
+        "max": 0.13311004638671875
+      },
+      "grad_norm": {
+        "count": 100,
+        "mean": 0.7281408733129502,
+        "median": 0.7254123985767365,
+        "max": 0.994257926940918,
+        "clip_exceedance_rate": 1.0
+      },
+      "hit_group_rate": {
+        "count": 100,
+        "mean": 0.35621875,
+        "median": 0.359375,
+        "max": 0.5
+      }
+    },
+    "matched_step_statistics": {
+      "rewards/rule_reward": {
+        "count": 1449,
+        "mean": 0.021616874784334023,
+        "median": 0.021484375,
+        "max": 0.0341796875
+      },
+      "reward": {
+        "count": 1449,
+        "mean": 0.002484416234825357,
+        "median": 0.0024511305091436952,
+        "max": 0.004433532594703138
+      },
+      "kl": {
+        "count": 1449,
+        "mean": 0.44207127159879156,
+        "median": 0.420318603515625,
+        "max": 3.7113494873046875
+      },
+      "grad_norm": {
+        "count": 1449,
+        "mean": 0.6034205010259784,
+        "median": 0.506591796875,
+        "max": 35.362152099609375,
+        "clip_exceedance_rate": 0.9958592132505176
+      },
+      "hit_group_rate": {
+        "count": 1449,
+        "mean": 0.34586999654934436,
+        "median": 0.34375,
+        "max": 0.546875
+      }
+    }
+  },
+  "recommendation": {
+    "basis": "complete_validation_ndcg10",
+    "recommended_arm": "candidate",
+    "recommended_beta": 0.01,
+    "difference_percentage_points": 0.11582865545606696,
+    "test_used_for_selection": false,
+    "tie_rule": "retain beta=0.001"
+  },
+  "common_training_steps": {
+    "count": 1449,
+    "first": 1,
+    "last": 1449
+  },
+  "expectation_assessment": {
+    "matched_step_kl_decreased": true,
+    "validation_and_test10_non_decreasing": false,
+    "status": "mixed",
+    "test_hr50_change_pp": -0.28678579307302166
+  },
+  "protocol": {
+    "test_rows": 4533,
+    "validation_rows": 4532,
+    "num_beams": 50,
+    "prompt_style": "original-eval",
+    "test_used_for_selection": false
+  },
+  "rows": [
+    {
+      "stratum": "overall",
+      "rows": 4533,
+      "k": 1,
+      "baseline_recall": 0.057136554158394,
+      "baseline_ndcg": 0.057136554158394,
+      "baseline_hits": 259,
+      "candidate_recall": 0.05647474078976395,
+      "candidate_ndcg": 0.05647474078976395,
+      "candidate_hits": 256,
+      "delta_recall_pp": -0.06618133686300473,
+      "delta_ndcg_pp": -0.06618133686300473
+    },
+    {
+      "stratum": "overall",
+      "rows": 4533,
+      "k": 3,
+      "baseline_recall": 0.08537392455327597,
+      "baseline_ndcg": 0.07333486482619574,
+      "baseline_hits": 387,
+      "candidate_recall": 0.08691815574674608,
+      "candidate_ndcg": 0.07386272479988079,
+      "candidate_hits": 394,
+      "delta_recall_pp": 0.1544231193470108,
+      "delta_ndcg_pp": 0.05278599736850548
+    },
+    {
+      "stratum": "overall",
+      "rows": 4533,
+      "k": 5,
+      "baseline_recall": 0.10809618354290756,
+      "baseline_ndcg": 0.08271476510114133,
+      "baseline_hits": 490,
+      "candidate_recall": 0.10853739245532759,
+      "candidate_ndcg": 0.0827289083764539,
+      "candidate_hits": 492,
+      "delta_recall_pp": 0.04412089124200269,
+      "delta_ndcg_pp": 0.0014143275312572534
+    },
+    {
+      "stratum": "overall",
+      "rows": 4533,
+      "k": 10,
+      "baseline_recall": 0.13787778513125964,
+      "baseline_ndcg": 0.09233785610799271,
+      "baseline_hits": 625,
+      "candidate_recall": 0.13765718067504965,
+      "candidate_ndcg": 0.09212693156631906,
+      "candidate_hits": 624,
+      "delta_recall_pp": -0.022060445620999958,
+      "delta_ndcg_pp": -0.02109245416736516
+    },
+    {
+      "stratum": "overall",
+      "rows": 4533,
+      "k": 20,
+      "baseline_recall": 0.17229208030002205,
+      "baseline_ndcg": 0.10105856342259203,
+      "baseline_hits": 781,
+      "candidate_recall": 0.16898301345687183,
+      "candidate_ndcg": 0.10002915045369846,
+      "candidate_hits": 766,
+      "delta_recall_pp": -0.33090668431502157,
+      "delta_ndcg_pp": -0.10294129688935699
+    },
+    {
+      "stratum": "overall",
+      "rows": 4533,
+      "k": 50,
+      "baseline_recall": 0.21950143392896537,
+      "baseline_ndcg": 0.11039168921645502,
+      "baseline_hits": 995,
+      "candidate_recall": 0.21663357599823516,
+      "candidate_ndcg": 0.10948913347804246,
+      "candidate_hits": 982,
+      "delta_recall_pp": -0.28678579307302166,
+      "delta_ndcg_pp": -0.09025557384125665
+    },
+    {
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "k": 1,
+      "baseline_recall": 0.0590515275877793,
+      "baseline_ndcg": 0.0590515275877793,
+      "baseline_hits": 259,
+      "candidate_recall": 0.05836753305973552,
+      "candidate_ndcg": 0.05836753305973552,
+      "candidate_hits": 256,
+      "delta_recall_pp": -0.06839945280437756,
+      "delta_ndcg_pp": -0.06839945280437756
+    },
+    {
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "k": 3,
+      "baseline_recall": 0.08823529411764706,
+      "baseline_ndcg": 0.07579273649273717,
+      "baseline_hits": 387,
+      "candidate_recall": 0.0898312813497492,
+      "candidate_ndcg": 0.07633828807976735,
+      "candidate_hits": 394,
+      "delta_recall_pp": 0.15959872321021362,
+      "delta_ndcg_pp": 0.05455515870301797
+    },
+    {
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "k": 5,
+      "baseline_recall": 0.11171910624715002,
+      "baseline_ndcg": 0.08548701099030406,
+      "baseline_hits": 490,
+      "candidate_recall": 0.1121751025991792,
+      "candidate_ndcg": 0.08550162828783985,
+      "candidate_hits": 492,
+      "delta_recall_pp": 0.045599635202918376,
+      "delta_ndcg_pp": 0.0014617297535782225
+    },
+    {
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "k": 10,
+      "baseline_recall": 0.14227086183310533,
+      "baseline_ndcg": 0.09536672068199113,
+      "baseline_hits": 624,
+      "candidate_recall": 0.14204286365709073,
+      "candidate_ndcg": 0.09514872684993306,
+      "candidate_hits": 623,
+      "delta_recall_pp": -0.022799817601459882,
+      "delta_ndcg_pp": -0.021799383205807488
+    },
+    {
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "k": 20,
+      "baseline_recall": 0.17783857729138167,
+      "baseline_ndcg": 0.10437970888469945,
+      "baseline_hits": 780,
+      "candidate_recall": 0.1744186046511628,
+      "candidate_ndcg": 0.10331579438675269,
+      "candidate_hits": 765,
+      "delta_recall_pp": -0.3419972640218871,
+      "delta_ndcg_pp": -0.10639144979467663
+    },
+    {
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "k": 50,
+      "baseline_recall": 0.22617419060647515,
+      "baseline_ndcg": 0.11393827932990404,
+      "baseline_hits": 992,
+      "candidate_recall": 0.22321021431828544,
+      "candidate_ndcg": 0.11299610884756749,
+      "candidate_hits": 979,
+      "delta_recall_pp": -0.29639762881897014,
+      "delta_ndcg_pp": -0.09421704823365518
+    },
+    {
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "k": 1,
+      "baseline_recall": 0.0,
+      "baseline_ndcg": 0.0,
+      "baseline_hits": 0,
+      "candidate_recall": 0.0,
+      "candidate_ndcg": 0.0,
+      "candidate_hits": 0,
+      "delta_recall_pp": 0.0,
+      "delta_ndcg_pp": 0.0
+    },
+    {
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "k": 3,
+      "baseline_recall": 0.0,
+      "baseline_ndcg": 0.0,
+      "baseline_hits": 0,
+      "candidate_recall": 0.0,
+      "candidate_ndcg": 0.0,
+      "candidate_hits": 0,
+      "delta_recall_pp": 0.0,
+      "delta_ndcg_pp": 0.0
+    },
+    {
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "k": 5,
+      "baseline_recall": 0.0,
+      "baseline_ndcg": 0.0,
+      "baseline_hits": 0,
+      "candidate_recall": 0.0,
+      "candidate_ndcg": 0.0,
+      "candidate_hits": 0,
+      "delta_recall_pp": 0.0,
+      "delta_ndcg_pp": 0.0
+    },
+    {
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "k": 10,
+      "baseline_recall": 0.006802721088435374,
+      "baseline_ndcg": 0.0019664273899176045,
+      "baseline_hits": 1,
+      "candidate_recall": 0.006802721088435374,
+      "candidate_ndcg": 0.0019664273899176045,
+      "candidate_hits": 1,
+      "delta_recall_pp": 0.0,
+      "delta_ndcg_pp": 0.0
+    },
+    {
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "k": 20,
+      "baseline_recall": 0.006802721088435374,
+      "baseline_ndcg": 0.0019664273899176045,
+      "baseline_hits": 1,
+      "candidate_recall": 0.006802721088435374,
+      "candidate_ndcg": 0.0019664273899176045,
+      "candidate_hits": 1,
+      "delta_recall_pp": 0.0,
+      "delta_ndcg_pp": 0.0
+    },
+    {
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "k": 50,
+      "baseline_recall": 0.02040816326530612,
+      "baseline_ndcg": 0.004573020933547766,
+      "baseline_hits": 3,
+      "candidate_recall": 0.02040816326530612,
+      "candidate_ndcg": 0.004852439799560975,
+      "candidate_hits": 3,
+      "delta_recall_pp": 0.0,
+      "delta_ndcg_pp": 0.02794188660132091
+    }
+  ],
+  "interpretation": [
+    "仅 beta 改为0.01；同一SFT起点、G=16、训练数据、优化参数、运行镜像和DeepSpeed修复均已核对。",
+    "预期：更强KL约束可降低概率漂移；召回和排序效果是否提高需由验证与测试数据判断。",
+    "KL比较使用双方共同优化器步数；各自末100步所处参考模型同步阶段可能不同。",
+    "Rule Reward为候选精确命中均值；Combined reward还包含排名惩罚，两者分别绘图。",
+    "Grad Norm为裁剪前的全模型L2范数，超过0.3不代表实际更新幅度等于日志数值。",
+    "测试集只作结果报告；推荐仅按完整验证集NDCG@10，平分时保留beta=0.001。",
+    "行为冷商品按训练历史与目标中未出现的商品ID判定；SID别名仍可能共享。",
+    "冷样本只有147条，一次命中使HR改变约0.6803个百分点；少数命中变化不证明稳定提升。",
+    "每组只训练一个随机种子；此对照描述观测结果，不提供显著性或跨种子稳定性结论。"
+  ],
+  "rendered_plots": [
+    "rule_reward.png",
+    "reward.png",
+    "kl.png",
+    "grad_norm.png",
+    "validation_ndcg.png"
+  ]
+}

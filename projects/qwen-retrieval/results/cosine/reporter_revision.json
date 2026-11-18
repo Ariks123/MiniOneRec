@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-11-16T07:45:54.259925+00:00",
+  "scope": "Final reporting scripts updated after supervisor launch; separate provenance record leaves initial launch source hashes unchanged.",
+  "sources": {
+    "scripts/report_industrial_sft.py": {
+      "host_path": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/report_industrial_sft.py",
+      "sha256": "125a64351683f7748f542343d089065cbdf046d1957fefb64b26bdab4b710d72"
+    },
+    "tests/test_industrial_reports.py": {
+      "host_path": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_industrial_reports.py",
+      "sha256": "4dc14237b05ae841541e1e6e08f63b4624faedec4ca8e525fd2be82d1d9deeca"
+    }
+  },
+  "verification": {
+    "container": "minionerec-h20-sft",
+    "workdir": "/tmp/industrial_preflight",
+    "command": "python -m unittest discover -s tests -p test_industrial_reports.py -q",
+    "tests_run": 7,
+    "result": "passed",
+    "skipped": 0,
+    "rendering": "PNG and PDF outputs tested"
+  },
+  "acceptance_guards": {
+    "num_beams": 50,
+    "prompt_style": "original-eval",
+    "validation_prompt_style": "training"
+  },
+  "reference": {
+    "repository": "Enddonkey/MiniOneRec-Reproduction",
+    "readme_blob_sha": "369fa5824ca3bef5e2cf3d7c8ca233bd34a4d5a8",
+    "reported_run": "SFT Only, Qwen2.5-0.5B, README section 6.2",
+    "evidence_status": "Self-reported; not independently verified"
+  }
+}

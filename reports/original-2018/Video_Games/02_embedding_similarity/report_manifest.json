@@ -1,0 +1,17 @@
+{
+  "pdf": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\reports\\Video_Games\\02_embedding_similarity\\video-games-embedding-similarity-report.pdf",
+  "pages": 6,
+  "page_images": [
+    "video-games-embedding-similarity-report-1.png",
+    "video-games-embedding-similarity-report-2.png",
+    "video-games-embedding-similarity-report-3.png",
+    "video-games-embedding-similarity-report-4.png",
+    "video-games-embedding-similarity-report-5.png",
+    "video-games-embedding-similarity-report-6.png"
+  ],
+  "source": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\reports\\Video_Games\\02_embedding_similarity\\analysis.json",
+  "created_at_utc": "2026-11-14T14:37:55.571064+00:00",
+  "model_id": "Qwen/Qwen3-Embedding-4B",
+  "macro_cosine_win_rate": 0.8711036746238622,
+  "top5_same_label_macro": 0.9503870618111481
+}

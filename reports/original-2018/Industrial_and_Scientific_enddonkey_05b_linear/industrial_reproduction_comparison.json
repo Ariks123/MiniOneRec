@@ -1,0 +1,1397 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-16T09:33:47.569442+00:00",
+  "dataset": "Industrial_and_Scientific",
+  "cohort": {
+    "test_rows": 4533,
+    "train_rows": 36259,
+    "train_behavior_items": 3647,
+    "warm_rows": 4386,
+    "cold_rows": 147,
+    "cold_items": 37,
+    "cold_sid_warm_alias_rows": 0,
+    "cold_sid_collision_rows": 0,
+    "catalog_items": 3686,
+    "unique_sids": 3670,
+    "collision_groups": 15,
+    "collision_items": 31
+  },
+  "K": [
+    1,
+    3,
+    5,
+    10,
+    20,
+    50
+  ],
+  "source_sha256": {
+    "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+    "eval_file": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+    "test_file": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+    "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+    "item_meta_path": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+  },
+  "results": [
+    {
+      "key": "archive_sft",
+      "label": "Archive 0.5B SFT",
+      "stage": "SFT",
+      "model": "Qwen2.5-0.5B (repository report)",
+      "hardware": "1 A800 (repository report)",
+      "scheduler": "Archive configuration unverified; checked-in SFT code defaults to linear; README states cosine",
+      "evidence": "Archived predictions reaggregated; training and model identity not independently verified",
+      "prediction_file": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_sft_result.json",
+      "prediction_sha256": "ea08c534aafd6a9173c61b9e170c0d08b6f3b71d52d6693e371ec46f199d8da5",
+      "history_and_target_alignment": "passed",
+      "coverage": {
+        "expected_rows": 4533,
+        "completed_rows": 4533,
+        "missing_rows": 0,
+        "duplicate_rows": 0
+      },
+      "strata": {
+        "overall": {
+          "rows": 4533,
+          "hits_by_k": {
+            "1": 241,
+            "3": 345,
+            "5": 405,
+            "10": 511,
+            "20": 674,
+            "50": 941
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 57,
+            "3": 94,
+            "5": 123,
+            "10": 174,
+            "20": 234,
+            "50": 326
+          },
+          "metrics": {
+            "HR@1": 0.05316567394661372,
+            "NDCG@1": 0.05316567394661372,
+            "HR@3": 0.07610853739245532,
+            "NDCG@3": 0.06625459214648177,
+            "HR@5": 0.08934480476505625,
+            "NDCG@5": 0.07164577534912037,
+            "HR@10": 0.11272887712331789,
+            "NDCG@10": 0.07915918039424699,
+            "HR@20": 0.1486874034855504,
+            "NDCG@20": 0.0881201925936131,
+            "HR@50": 0.20758879329362454,
+            "NDCG@50": 0.09970621387741467
+          }
+        },
+        "warm": {
+          "rows": 4386,
+          "hits_by_k": {
+            "1": 241,
+            "3": 345,
+            "5": 405,
+            "10": 510,
+            "20": 673,
+            "50": 938
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 57,
+            "3": 94,
+            "5": 123,
+            "10": 173,
+            "20": 233,
+            "50": 324
+          },
+          "metrics": {
+            "HR@1": 0.05494756041951664,
+            "NDCG@1": 0.05494756041951664,
+            "HR@3": 0.0786593707250342,
+            "NDCG@3": 0.06847516329229408,
+            "HR@5": 0.09233926128590972,
+            "NDCG@5": 0.07404703594563672,
+            "HR@10": 0.11627906976744186,
+            "NDCG@10": 0.08174033284321383,
+            "HR@20": 0.15344277245782034,
+            "NDCG@20": 0.09100167992477486,
+            "HR@50": 0.2138622891016872,
+            "NDCG@50": 0.10289562694043712
+          }
+        },
+        "cold": {
+          "rows": 147,
+          "hits_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 1,
+            "20": 1,
+            "50": 3
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 1,
+            "20": 1,
+            "50": 2
+          },
+          "metrics": {
+            "HR@1": 0.0,
+            "NDCG@1": 0.0,
+            "HR@3": 0.0,
+            "NDCG@3": 0.0,
+            "HR@5": 0.0,
+            "NDCG@5": 0.0,
+            "HR@10": 0.006802721088435374,
+            "NDCG@10": 0.002146019569970944,
+            "HR@20": 0.006802721088435374,
+            "NDCG@20": 0.002146019569970944,
+            "HR@50": 0.02040816326530612,
+            "NDCG@50": 0.004544542486826483
+          }
+        }
+      }
+    },
+    {
+      "key": "archive_rl",
+      "label": "Archive 0.5B SFT + RL",
+      "stage": "SFT + RL",
+      "model": "Qwen2.5-0.5B (repository report)",
+      "hardware": "1 A800 (repository report)",
+      "scheduler": "Archive configuration unverified; checked-in SFT code defaults to linear; README states cosine",
+      "evidence": "Archived predictions reaggregated; training and model identity not independently verified",
+      "prediction_file": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_rl_result.json",
+      "prediction_sha256": "20a3117011ba9b37f66bba03455b46ef2113c6315e1b8213cdc776886416d33c",
+      "history_and_target_alignment": "passed",
+      "coverage": {
+        "expected_rows": 4533,
+        "completed_rows": 4533,
+        "missing_rows": 0,
+        "duplicate_rows": 0
+      },
+      "strata": {
+        "overall": {
+          "rows": 4533,
+          "hits_by_k": {
+            "1": 252,
+            "3": 380,
+            "5": 436,
+            "10": 536,
+            "20": 727,
+            "50": 959
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 52,
+            "3": 93,
+            "5": 114,
+            "10": 158,
+            "20": 232,
+            "50": 334
+          },
+          "metrics": {
+            "HR@1": 0.05559232296492389,
+            "NDCG@1": 0.05559232296492389,
+            "HR@3": 0.08382969335980586,
+            "NDCG@3": 0.0720505868165207,
+            "HR@5": 0.09618354290756673,
+            "NDCG@5": 0.07713907506535764,
+            "HR@10": 0.11824398852856828,
+            "NDCG@10": 0.08420895496516194,
+            "HR@20": 0.16037943966468124,
+            "NDCG@20": 0.09490856811556575,
+            "HR@50": 0.2115596735054048,
+            "NDCG@50": 0.105076428377179
+          }
+        },
+        "warm": {
+          "rows": 4386,
+          "hits_by_k": {
+            "1": 252,
+            "3": 380,
+            "5": 436,
+            "10": 535,
+            "20": 726,
+            "50": 956
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 52,
+            "3": 93,
+            "5": 114,
+            "10": 157,
+            "20": 231,
+            "50": 332
+          },
+          "metrics": {
+            "HR@1": 0.057455540355677154,
+            "NDCG@1": 0.057455540355677154,
+            "HR@3": 0.08663930688554491,
+            "NDCG@3": 0.07446541496563801,
+            "HR@5": 0.09940720474236206,
+            "NDCG@5": 0.07972444762226771,
+            "HR@10": 0.12197902416780666,
+            "NDCG@10": 0.08695935430467244,
+            "HR@20": 0.16552667578659372,
+            "NDCG@20": 0.09801757282058227,
+            "HR@50": 0.21796625626994984,
+            "NDCG@50": 0.1084298908503371
+          }
+        },
+        "cold": {
+          "rows": 147,
+          "hits_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 1,
+            "20": 1,
+            "50": 3
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 1,
+            "20": 1,
+            "50": 2
+          },
+          "metrics": {
+            "HR@1": 0.0,
+            "NDCG@1": 0.0,
+            "HR@3": 0.0,
+            "NDCG@3": 0.0,
+            "HR@5": 0.0,
+            "NDCG@5": 0.0,
+            "HR@10": 0.006802721088435374,
+            "NDCG@10": 0.002146019569970944,
+            "HR@20": 0.006802721088435374,
+            "NDCG@20": 0.002146019569970944,
+            "HR@50": 0.02040816326530612,
+            "NDCG@50": 0.005020058259686155
+          }
+        }
+      }
+    },
+    {
+      "key": "previous_sft",
+      "label": "Qwen2.5-1.5B SFT / cosine / 4 GPUs",
+      "stage": "SFT",
+      "model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "scheduler": "cosine",
+      "world_size": 4,
+      "epochs": 3,
+      "global_batch_size": 64,
+      "evidence": "Independently executed SFT; accepted complete evaluation reaggregated from predictions",
+      "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft",
+      "source_sha256": {
+        "config": "f547fec5ac09be85a9bc62fa4c6ca3cd6c3e8d6f0240e6965e0d4c50f1071959",
+        "metrics": "b05f0f65f1ece5f617401d906120e8977e2df6cce8bafd9080bc3595027e0072",
+        "predictions": "d86cf701e2ad048acd144bfccd1a4ca9c629502c4c24de1bb3a99aa310072a65"
+      },
+      "coverage": {
+        "expected_rows": 4533,
+        "completed_rows": 4533,
+        "missing_rows": 0,
+        "duplicate_rows": 0
+      },
+      "strata": {
+        "overall": {
+          "rows": 4533,
+          "hits_by_k": {
+            "1": 245,
+            "3": 370,
+            "5": 429,
+            "10": 572,
+            "20": 751,
+            "50": 995
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 47,
+            "3": 85,
+            "5": 108,
+            "10": 169,
+            "20": 223,
+            "50": 298
+          },
+          "metrics": {
+            "HR@1": 0.05404809177145378,
+            "NDCG@1": 0.05404809177145378,
+            "HR@3": 0.08162364879770571,
+            "NDCG@3": 0.06982884469367544,
+            "HR@5": 0.09463931171409662,
+            "NDCG@5": 0.0752216958756467,
+            "HR@10": 0.12618574895212883,
+            "NDCG@10": 0.08536859997506724,
+            "HR@20": 0.1656739466137216,
+            "NDCG@20": 0.09534342342914562,
+            "HR@50": 0.21950143392896537,
+            "NDCG@50": 0.10597144041917358
+          }
+        },
+        "warm": {
+          "rows": 4386,
+          "hits_by_k": {
+            "1": 245,
+            "3": 370,
+            "5": 429,
+            "10": 572,
+            "20": 749,
+            "50": 992
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 47,
+            "3": 85,
+            "5": 108,
+            "10": 169,
+            "20": 222,
+            "50": 297
+          },
+          "metrics": {
+            "HR@1": 0.05585955312357501,
+            "NDCG@1": 0.05585955312357501,
+            "HR@3": 0.084359325125399,
+            "NDCG@3": 0.07216920952950998,
+            "HR@5": 0.09781121751025992,
+            "NDCG@5": 0.07774280606573335,
+            "HR@10": 0.13041495668034656,
+            "NDCG@10": 0.08822979108230274,
+            "HR@20": 0.17077063383492933,
+            "NDCG@20": 0.09843334684045908,
+            "HR@50": 0.22617419060647515,
+            "NDCG@50": 0.1093723712710624
+          }
+        },
+        "cold": {
+          "rows": 147,
+          "hits_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 0,
+            "20": 2,
+            "50": 3
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 0,
+            "20": 1,
+            "50": 1
+          },
+          "metrics": {
+            "HR@1": 0.0,
+            "NDCG@1": 0.0,
+            "HR@3": 0.0,
+            "NDCG@3": 0.0,
+            "HR@5": 0.0,
+            "NDCG@5": 0.0,
+            "HR@10": 0.0,
+            "NDCG@10": 0.0,
+            "HR@20": 0.013605442176870748,
+            "NDCG@20": 0.0031501983813849743,
+            "HR@50": 0.02040816326530612,
+            "NDCG@50": 0.00449876887914389
+          }
+        }
+      }
+    },
+    {
+      "key": "current_sft",
+      "label": "Qwen2.5-0.5B SFT / linear / 4 GPUs",
+      "stage": "SFT",
+      "model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B",
+      "scheduler": "linear",
+      "world_size": 4,
+      "epochs": 3,
+      "global_batch_size": 64,
+      "evidence": "Independently executed SFT; accepted complete evaluation reaggregated from predictions",
+      "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft",
+      "source_sha256": {
+        "config": "3da3aad6c67bfa6bbaf158cc7fd9806e82e9fa40d5f96a4e415ce97324949eb7",
+        "metrics": "e8f8d886af6e3ae26abef45dff438b87d9edc4d4d3a28829ba606983128fcfb1",
+        "predictions": "cc7152e95a58f7c6926ec08b4beac2154542d65f221a5553e6085720842e3a7b"
+      },
+      "coverage": {
+        "expected_rows": 4533,
+        "completed_rows": 4533,
+        "missing_rows": 0,
+        "duplicate_rows": 0
+      },
+      "strata": {
+        "overall": {
+          "rows": 4533,
+          "hits_by_k": {
+            "1": 198,
+            "3": 299,
+            "5": 360,
+            "10": 458,
+            "20": 598,
+            "50": 852
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 44,
+            "3": 80,
+            "5": 102,
+            "10": 137,
+            "20": 198,
+            "50": 315
+          },
+          "metrics": {
+            "HR@1": 0.04367968232958306,
+            "NDCG@1": 0.04367968232958306,
+            "HR@3": 0.06596073240679462,
+            "NDCG@3": 0.056524344906400986,
+            "HR@5": 0.07941760423560557,
+            "NDCG@5": 0.06207821127999597,
+            "HR@10": 0.10103684094418708,
+            "NDCG@10": 0.06903766678496798,
+            "HR@20": 0.13192146481358924,
+            "NDCG@20": 0.07687356845763844,
+            "HR@50": 0.18795499669093316,
+            "NDCG@50": 0.08783335351970706
+          }
+        },
+        "warm": {
+          "rows": 4386,
+          "hits_by_k": {
+            "1": 198,
+            "3": 299,
+            "5": 360,
+            "10": 458,
+            "20": 598,
+            "50": 852
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 44,
+            "3": 80,
+            "5": 102,
+            "10": 137,
+            "20": 198,
+            "50": 315
+          },
+          "metrics": {
+            "HR@1": 0.04514363885088919,
+            "NDCG@1": 0.04514363885088919,
+            "HR@3": 0.06817145462836298,
+            "NDCG@3": 0.05841879969464562,
+            "HR@5": 0.08207934336525308,
+            "NDCG@5": 0.06415880796448284,
+            "HR@10": 0.10442316461468308,
+            "NDCG@10": 0.07135151471414954,
+            "HR@20": 0.13634290925672596,
+            "NDCG@20": 0.07945004236627339,
+            "HR@50": 0.19425444596443228,
+            "NDCG@50": 0.09077715264588056
+          }
+        },
+        "cold": {
+          "rows": 147,
+          "hits_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 0,
+            "20": 0,
+            "50": 0
+          },
+          "hit_target_item_ids_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 0,
+            "20": 0,
+            "50": 0
+          },
+          "metrics": {
+            "HR@1": 0.0,
+            "NDCG@1": 0.0,
+            "HR@3": 0.0,
+            "NDCG@3": 0.0,
+            "HR@5": 0.0,
+            "NDCG@5": 0.0,
+            "HR@10": 0.0,
+            "NDCG@10": 0.0,
+            "HR@20": 0.0,
+            "NDCG@20": 0.0,
+            "HR@50": 0.0,
+            "NDCG@50": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "current_minus_reference": [
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": -0.9485991617030662
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.9485991617030662
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": -1.0147804985660702
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.9730247240080786
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": -0.9927200529450688
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.9567564069124395
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -1.1692036179130811
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.0121513609279016
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -1.6765938671961162
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.1246624135974659
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -1.9633796602691378
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "overall",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.1872860357707613
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": -0.9803921568627451
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.9803921568627451
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": -1.0487916096671226
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.0056363597648463
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": -1.025991792065664
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.988822798115388
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -1.1855905152758779
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.0388818129064294
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -1.7099863201094383
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.155163755850147
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -1.9607843137254917
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "warm",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.2118474294556565
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -0.6802721088435374
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.2146019569970944
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -0.6802721088435374
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.2146019569970944
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -2.0408163265306123
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_sft",
+      "stratum": "cold",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.45445424868264833
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": -1.191264063534083
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.191264063534083
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": -1.7868960953011244
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.5526241910119711
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": -1.6765938671961162
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.5060863785361664
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -1.7207147584381202
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.5171288180193963
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -2.8457974851092
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.8034999657927306
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -2.360467681447165
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "overall",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.7243074857471938
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": -1.231190150478796
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.231190150478796
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": -1.8467852257181936
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.6046615270992388
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": -1.7327861377108982
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.5565639657784875
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -1.755585955312358
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.5607839590522907
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -2.918376652986776
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.856753045430888
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -2.3711810305517558
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "warm",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.7652738204456537
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -0.6802721088435374
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.2146019569970944
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -0.6802721088435374
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.2146019569970944
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -2.0408163265306123
+    },
+    {
+      "current": "current_sft",
+      "reference": "archive_rl",
+      "stratum": "cold",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.5020058259686155
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": -1.0368409441870723
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.0368409441870723
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": -1.5662916390911095
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.330449978727445
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": -1.5221707478491053
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.3143484595650727
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -2.5148908007941757
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.6330933190099262
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -3.375248180013235
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.8469854971507174
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -3.1546437238032214
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "overall",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.8138086899466526
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": -1.0715914272685818
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.0715914272685818
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": -1.6187870497036017
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.3750409834864357
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": -1.5731874145006848
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.3583998101250507
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": -2.5991792065663475
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.68782763681532
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -3.442772457820337
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.8983304474185698
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -3.191974464204286
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "warm",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -1.8595218625181849
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 1,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 1,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 3,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 3,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 5,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 5,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 10,
+      "metric": "HR",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 10,
+      "metric": "NDCG",
+      "difference_percentage_points": 0.0
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 20,
+      "metric": "HR",
+      "difference_percentage_points": -1.3605442176870748
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 20,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.31501983813849743
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 50,
+      "metric": "HR",
+      "difference_percentage_points": -2.0408163265306123
+    },
+    {
+      "current": "current_sft",
+      "reference": "previous_sft",
+      "stratum": "cold",
+      "K": 50,
+      "metric": "NDCG",
+      "difference_percentage_points": -0.44987688791438896
+    }
+  ],
+  "protocol": "Original SID-level matching, full catalog, beam=50, every test row equally weighted; HR equals Recall for one relevant target.",
+  "cold_definition": "Original target item ID absent from the union of every training history and target ID; full-catalog auxiliary SID/text exposure is retained.",
+  "limitations": [
+    "Archive model/hardware are repository claims; original training was not independently verified.",
+    "SFT + RL differs in training stage and is labeled separately.",
+    "Model size, scheduler, hardware and other configuration differences do not identify a causal effect.",
+    "Original colliding SIDs remain indistinguishable; no candidates or test rows are dropped."
+  ],
+  "rendered_plot": true
+}

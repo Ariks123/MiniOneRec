@@ -1,0 +1,60 @@
+{
+  "rq_kmeans": {
+    "items": 3686,
+    "unique_sids": 3670,
+    "collision_groups": 15,
+    "collision_items": 31,
+    "excess_items": 16,
+    "slot_occupancy": [
+      48,
+      256,
+      256
+    ],
+    "prefix_counts": [
+      48,
+      2295,
+      3670
+    ],
+    "max_prefix_buckets": [
+      247,
+      47,
+      3
+    ]
+  },
+  "rq_vae": {
+    "items": 3686,
+    "unique_sids": 3686,
+    "collision_groups": 0,
+    "collision_items": 0,
+    "excess_items": 0,
+    "slot_occupancy": [
+      64,
+      227,
+      256
+    ],
+    "prefix_counts": [
+      64,
+      1788,
+      3686
+    ],
+    "max_prefix_buckets": [
+      150,
+      22,
+      1
+    ]
+  },
+  "rq_vae_decoding": {
+    "raw": {
+      "unique_sids": 3065,
+      "warm_holdout_mse": 0.3631185735296712
+    },
+    "sinkhorn": {
+      "unique_sids": 3670,
+      "warm_holdout_mse": 0.44477734836554333
+    },
+    "prefix_matching": {
+      "unique_sids": 3686,
+      "warm_holdout_mse": 0.36755568937243693
+    }
+  }
+}

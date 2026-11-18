@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "training_started": false,
+  "gpu_training_tested": false,
+  "nccl_tested": false,
+  "tests": {
+    "tests": 56,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_command": "python -m pytest -q tests --junitxml=artifacts/tests_4gpu.xml",
+  "distributed_preflight": {
+    "report": "ddp_preflight_cpu.json",
+    "world_size": 4,
+    "backend": "gloo",
+    "global_batch_size": 512,
+    "per_rank_batch_size": 128,
+    "rank0_broadcast_passed": true,
+    "rank0_error_broadcast_passed": true,
+    "parameters_unchanged": true,
+    "optimizer_created": false,
+    "backward_called": false
+  },
+  "configuration": {
+    "learner": "adam",
+    "epochs": 100,
+    "train_batch_size": 512,
+    "nproc": 4,
+    "learning_rate": 0.002,
+    "lr_schedule": "warmup_cosine",
+    "warmup_epochs": 5,
+    "min_learning_rate": 0.0002,
+    "stopping_step": 10
+  },
+  "learning_rate_by_epoch": {
+    "1": 0.0004,
+    "2": 0.0008,
+    "5": 0.002,
+    "6": 0.002,
+    "20": 0.0019032669522738932,
+    "50": 0.0011900861224616887,
+    "100": 0.0002
+  },
+  "source_sha256": {
+    "qwen_runtime.py": "9af929dba004c25d4138d1172864f3ce7e06e6212f178aa612da336d2a03c106",
+    "qwen_train.py": "2ea60be9d465460510cd1c60aaab0815b9d4ad7494bfe9dcef81c64f1973ae15",
+    "qwen_schedule.py": "46335159037237e0d8603293da846e5d796e8d0306778f1e1266b16339771c16",
+    "qwen_ddp_preflight.py": "aac92cc72db496e126949fcf4f45c8ccf4e1e2307eca7dab2150278eb7e45d22",
+    "scripts/run_4gpu.sh": "b53047f4f077a5860f70290af776edac8abb99ef29c74f6584914ef988806a98",
+    "props/qwen_industrial_4gpu.yaml": "0110d6c97dd2f019f04cbb679f6aee3a1d28e876876f0730d6d0075ae13f9308"
+  },
+  "limitations": [
+    "CPU Gloo four-process communication and forward only; no GPU, NCCL, gradient synchronization or speed/memory measurement.",
+    "The learning rate and batch size are initial experiment settings, not tuned results."
+  ]
+}

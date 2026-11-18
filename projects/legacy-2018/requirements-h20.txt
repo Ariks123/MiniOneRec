@@ -1,0 +1,40 @@
+# Linux x86_64 / Python 3.11 / CUDA 12.4 post-training subset of requirements.txt.
+# Keep the original training-stack versions. Install torch==2.6.0 from the
+# https://download.pytorch.org/whl/cu124 index before installing this file.
+# The explicit torch pin below also prevents transitive dependencies upgrading it.
+#
+# DeepSpeed 0.18.0 is an sdist and its setup.py inspects the installed torch.
+# Preinstall setuptools, wheel, packaging and ninja; then use
+# DS_BUILD_OPS=0 DS_ACCELERATOR=cuda python -m pip install --no-build-isolation -r requirements-h20.txt
+# during a GPU-less CUDA-devel Docker build. CUDA toolkit/g++/ninja remain needed
+# for any DeepSpeed ops compiled at runtime.
+#
+# Do not also install the original cu118 torchrec/fbgemm_gpu or the mixed cu11/cu12
+# NVIDIA wheel pins. Let the selected torch CUDA wheel resolve its CUDA libraries.
+# Text-only SFT does not need torchvision, torchaudio or librosa; incompatible
+# preinstalled optional media packages can break transformers.Trainer imports.
+torch==2.6.0
+transformers==4.57.1
+accelerate==1.10.1
+deepspeed==0.18.0
+trl==0.24.0
+datasets==4.2.0
+# Preserve the original Hugging Face tokenizer/storage/data stack as well.
+huggingface-hub==0.35.3
+tokenizers==0.22.1
+safetensors==0.6.2
+pyarrow==21.0.0
+dill==0.4.0
+multiprocess==0.70.16
+fsspec==2024.2.0
+bitsandbytes==0.48.1
+fire==0.7.1
+numpy==1.26.3
+pandas==2.2.2
+scipy==1.14.0
+scikit-learn==1.8.0
+wandb==0.22.2
+PyYAML==6.0.1
+# 1.11.1.1 has malformed wheel tags rejected by pip check; patch release fixes it.
+ninja==1.11.1.3
+tqdm==4.67.1

@@ -1,0 +1,238 @@
+{
+  "status": "symbolic_checks_passed_hf_encode_pending",
+  "generated_at_utc": "2026-11-16T08:02:12.376058+00:00",
+  "backend": "json",
+  "source_paths": {
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "metadata": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item.json",
+    "train_inter": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "test_inter": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+    "train_csv": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/train.csv",
+    "test_csv": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/test.csv",
+    "preparation_manifest": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/preparation_manifest.json",
+    "accepted_evaluation": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/metrics.json",
+    "accepted_predictions": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/predictions.jsonl",
+    "accepted_behavior_shift": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/behavior_shift_analysis.json",
+    "model_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/config.json",
+    "tokenizer_json": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer.json",
+    "tokenizer_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer_config.json",
+    "checkpoint_provenance": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/posttraining_provenance.json"
+  },
+  "source_sha256": {
+    "sid_index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+    "metadata": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7",
+    "train_inter": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "test_inter": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+    "train_csv": "298ab91e2e8b98a7f816b1f27c23166b2c28916ad67b93e8347c2c710e1da6ab",
+    "test_csv": "51c5b6d13486e4dfb353a2a628d759271624d1c80f1775748ca2f0668781f277",
+    "preparation_manifest": "bf1f7eb925850ae2b23051b85d1e01edc6628db5e730c9ef8d8c1ebd70909116",
+    "accepted_evaluation": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e",
+    "accepted_predictions": "d7b5849b691d4717f576235ddbe013cf71c56bf33a406035b659a964810724bd",
+    "accepted_behavior_shift": "20452e40274f58aba9963ec43daf8dc92dd6342a9fc1a27a2e5f244132090e6c",
+    "model_config": "a617fc4a26f3b0f0b8c28cf018cf49ab9dde80fa5f8be204a727a4654cfd97a8",
+    "tokenizer_json": "c00708d331f0a3efee070f4bc11a9ce699eea0a1cd69c7669070093436953c83",
+    "tokenizer_config": "47a94f0cc850c34fafc9a5092d9030a76f5d4ffb407cfc5d68ba6caf561b0d4e",
+    "checkpoint_provenance": "abe91813e68c0a16c64efbc0baec0cc4c1954fc1ee95b73c74d31bea48e7d60c"
+  },
+  "model_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint",
+  "counts": {
+    "catalog": 16572,
+    "train_rows": 335388,
+    "test_rows": 41924,
+    "training_behavior_items": 15893,
+    "training_target_items": 15885,
+    "cold_catalog_items": 679,
+    "cold_test_unique_items": 666
+  },
+  "structural_checks": {
+    "complete_sids_unique": true,
+    "catalog_metadata_item_ids_equal": true,
+    "atomic_sid_tokens": 657,
+    "token_ids_within_model_vocab": true,
+    "all_catalog_sid_paths_valid": 16572,
+    "all_cold_catalog_sid_paths_valid": 679,
+    "all_cold_test_sid_paths_valid": 666,
+    "answer_lengths_including_newline_eos": {
+      "6": 16572
+    },
+    "newline_token_id": 198,
+    "eos_token_id": 151643,
+    "hf_encode_equals_symbolic_for_all_answers": false
+  },
+  "groups": {
+    "cold": {
+      "test_rows": 10602,
+      "test_unique_items": 666,
+      "levels": [
+        {
+          "level": 1,
+          "prefix_seen_in_recommendation_target_unique_items": 666,
+          "prefix_seen_in_recommendation_target_test_rows": 10602,
+          "prefix_seen_in_recommendation_target_test_row_rate": 1.0,
+          "individual_token_seen_in_recommendation_target_unique_items": 666,
+          "individual_token_seen_in_recommendation_target_test_rows": 10602,
+          "target_prefix_present_in_final_top1_rows": 880,
+          "target_prefix_present_in_final_top10_rows": 3131,
+          "target_prefix_present_in_final_top50_rows": 6062
+        },
+        {
+          "level": 2,
+          "prefix_seen_in_recommendation_target_unique_items": 419,
+          "prefix_seen_in_recommendation_target_test_rows": 6112,
+          "prefix_seen_in_recommendation_target_test_row_rate": 0.5764950009432183,
+          "individual_token_seen_in_recommendation_target_unique_items": 666,
+          "individual_token_seen_in_recommendation_target_test_rows": 10602,
+          "target_prefix_present_in_final_top1_rows": 120,
+          "target_prefix_present_in_final_top10_rows": 399,
+          "target_prefix_present_in_final_top50_rows": 979
+        },
+        {
+          "level": 3,
+          "prefix_seen_in_recommendation_target_unique_items": 3,
+          "prefix_seen_in_recommendation_target_test_rows": 17,
+          "prefix_seen_in_recommendation_target_test_row_rate": 0.0016034710431993963,
+          "individual_token_seen_in_recommendation_target_unique_items": 666,
+          "individual_token_seen_in_recommendation_target_test_rows": 10602,
+          "target_prefix_present_in_final_top1_rows": 0,
+          "target_prefix_present_in_final_top10_rows": 0,
+          "target_prefix_present_in_final_top50_rows": 1
+        },
+        {
+          "level": 4,
+          "prefix_seen_in_recommendation_target_unique_items": 0,
+          "prefix_seen_in_recommendation_target_test_rows": 0,
+          "prefix_seen_in_recommendation_target_test_row_rate": 0.0,
+          "individual_token_seen_in_recommendation_target_unique_items": 666,
+          "individual_token_seen_in_recommendation_target_test_rows": 10602,
+          "target_prefix_present_in_final_top1_rows": 0,
+          "target_prefix_present_in_final_top10_rows": 0,
+          "target_prefix_present_in_final_top50_rows": 1
+        }
+      ]
+    },
+    "warm": {
+      "test_rows": 31322,
+      "test_unique_items": 8508,
+      "levels": [
+        {
+          "level": 1,
+          "prefix_seen_in_recommendation_target_unique_items": 8508,
+          "prefix_seen_in_recommendation_target_test_rows": 31322,
+          "prefix_seen_in_recommendation_target_test_row_rate": 1.0,
+          "individual_token_seen_in_recommendation_target_unique_items": 8508,
+          "individual_token_seen_in_recommendation_target_test_rows": 31322,
+          "target_prefix_present_in_final_top1_rows": 3260,
+          "target_prefix_present_in_final_top10_rows": 9630,
+          "target_prefix_present_in_final_top50_rows": 17480
+        },
+        {
+          "level": 2,
+          "prefix_seen_in_recommendation_target_unique_items": 8505,
+          "prefix_seen_in_recommendation_target_test_rows": 31304,
+          "prefix_seen_in_recommendation_target_test_row_rate": 0.999425324053381,
+          "individual_token_seen_in_recommendation_target_unique_items": 8508,
+          "individual_token_seen_in_recommendation_target_test_rows": 31322,
+          "target_prefix_present_in_final_top1_rows": 909,
+          "target_prefix_present_in_final_top10_rows": 2929,
+          "target_prefix_present_in_final_top50_rows": 6625
+        },
+        {
+          "level": 3,
+          "prefix_seen_in_recommendation_target_unique_items": 8500,
+          "prefix_seen_in_recommendation_target_test_rows": 31292,
+          "prefix_seen_in_recommendation_target_test_row_rate": 0.999042206755635,
+          "individual_token_seen_in_recommendation_target_unique_items": 8508,
+          "individual_token_seen_in_recommendation_target_test_rows": 31322,
+          "target_prefix_present_in_final_top1_rows": 649,
+          "target_prefix_present_in_final_top10_rows": 2072,
+          "target_prefix_present_in_final_top50_rows": 4777
+        },
+        {
+          "level": 4,
+          "prefix_seen_in_recommendation_target_unique_items": 8500,
+          "prefix_seen_in_recommendation_target_test_rows": 31292,
+          "prefix_seen_in_recommendation_target_test_row_rate": 0.999042206755635,
+          "individual_token_seen_in_recommendation_target_unique_items": 8508,
+          "individual_token_seen_in_recommendation_target_test_rows": 31322,
+          "target_prefix_present_in_final_top1_rows": 645,
+          "target_prefix_present_in_final_top10_rows": 2066,
+          "target_prefix_present_in_final_top50_rows": 4748
+        }
+      ]
+    }
+  },
+  "cold_items_with_training_target_abc_prefix": [
+    {
+      "item_id": "14471",
+      "sid": "<a_17><b_62><c_4><d_1>",
+      "behavior_cold": true,
+      "train_target_occurrences": 0,
+      "test_target_occurrences": 7,
+      "complete_answer_token_ids": "[151713, 152021, 152263, 152320, 198, 151643]",
+      "constraint_path_valid": true,
+      "level_1_individual_token_target_occurrences": 4487,
+      "prefix_1_target_occurrences": 4487,
+      "prefix_1_history_position_occurrences": 20676,
+      "level_2_individual_token_target_occurrences": 649,
+      "prefix_2_target_occurrences": 119,
+      "prefix_2_history_position_occurrences": 536,
+      "level_3_individual_token_target_occurrences": 4529,
+      "prefix_3_target_occurrences": 35,
+      "prefix_3_history_position_occurrences": 149,
+      "level_4_individual_token_target_occurrences": 1813,
+      "prefix_4_target_occurrences": 0,
+      "prefix_4_history_position_occurrences": 0
+    },
+    {
+      "item_id": "14504",
+      "sid": "<a_158><b_83><c_0><d_2>",
+      "behavior_cold": true,
+      "train_target_occurrences": 0,
+      "test_target_occurrences": 6,
+      "complete_answer_token_ids": "[151701, 152044, 152063, 152321, 198, 151643]",
+      "constraint_path_valid": true,
+      "level_1_individual_token_target_occurrences": 4473,
+      "prefix_1_target_occurrences": 4473,
+      "prefix_1_history_position_occurrences": 32826,
+      "level_2_individual_token_target_occurrences": 3229,
+      "prefix_2_target_occurrences": 175,
+      "prefix_2_history_position_occurrences": 1235,
+      "level_3_individual_token_target_occurrences": 15656,
+      "prefix_3_target_occurrences": 45,
+      "prefix_3_history_position_occurrences": 253,
+      "level_4_individual_token_target_occurrences": 64,
+      "prefix_4_target_occurrences": 0,
+      "prefix_4_history_position_occurrences": 0
+    },
+    {
+      "item_id": "16343",
+      "sid": "<a_158><b_83><c_0><d_1>",
+      "behavior_cold": true,
+      "train_target_occurrences": 0,
+      "test_target_occurrences": 4,
+      "complete_answer_token_ids": "[151701, 152044, 152063, 152320, 198, 151643]",
+      "constraint_path_valid": true,
+      "level_1_individual_token_target_occurrences": 4473,
+      "prefix_1_target_occurrences": 4473,
+      "prefix_1_history_position_occurrences": 32826,
+      "level_2_individual_token_target_occurrences": 3229,
+      "prefix_2_target_occurrences": 175,
+      "prefix_2_history_position_occurrences": 1235,
+      "level_3_individual_token_target_occurrences": 15656,
+      "prefix_3_target_occurrences": 45,
+      "prefix_3_history_position_occurrences": 253,
+      "level_4_individual_token_target_occurrences": 1813,
+      "prefix_4_target_occurrences": 0,
+      "prefix_4_history_position_occurrences": 0
+    }
+  ],
+  "methodology": {
+    "cold": "Absent from every training interaction history and target; metadata known.",
+    "prefix_training_support": "Count in original recommendation target rows; excludes catalog alignment tasks.",
+    "history_support": "Count across repeated positions in rolling training histories; not independent events.",
+    "final_prefix_match": "Prefix is present in saved final top-k list; does not measure internal beam survival.",
+    "json_backend_scope": "Independent strict derivation from atomic added-token JSON and newline BPE ID; HF backend required for actual encode verification.",
+    "training_performed": false,
+    "source_mutation": false
+  }
+}

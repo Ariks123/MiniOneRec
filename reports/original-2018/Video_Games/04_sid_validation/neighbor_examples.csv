@@ -1,0 +1,91 @@
+﻿anchor_id,stage,rank,neighbor_id,title,original_cosine,raw_lcp,semantic_lcp
+3,original,1,9712,SQDeal USB Dual Shock Joystick Gamepad Gaming Controller [Double Vibration Feedback Motors] for PC Computer Laptop Window (Black),0.9117236137390137,1,1
+3,original,2,15917,SQDeal 2 Pack USB GamePad Joypad Double Dual Shock Gaming Controller Joystick for PC Computer Laptop Windows [Video Game],0.9047267436981201,1,1
+3,original,3,9989,Logitech Precision Gamepad,0.8849399089813232,0,0
+3,original,4,13690,Donop&reg; USB Pc Computer Vibration Shock Wired Gamepad Game Controller Joystick Game Pad Includes Donop Black Wrist Band,0.8825262784957886,1,1
+3,original,5,13484,SlickBlue Wireless Bluetooth Game Pad Controller For Sony Playstation 3 - Black-Orange,0.8817926049232483,1,1
+3,raw_reconstruction,1,15917,SQDeal 2 Pack USB GamePad Joypad Double Dual Shock Gaming Controller Joystick for PC Computer Laptop Windows [Video Game],0.9047267436981201,1,1
+3,raw_reconstruction,2,13690,Donop&reg; USB Pc Computer Vibration Shock Wired Gamepad Game Controller Joystick Game Pad Includes Donop Black Wrist Band,0.8825262784957886,1,1
+3,raw_reconstruction,3,9712,SQDeal USB Dual Shock Joystick Gamepad Gaming Controller [Double Vibration Feedback Motors] for PC Computer Laptop Window (Black),0.9117236137390137,1,1
+3,raw_reconstruction,4,12981,Cyber Snipa Game Pad V2 Black,0.8646694421768188,1,1
+3,raw_reconstruction,5,13293,Third Party Made Red Wired USB Pad Joypad Game Controller For MICROSOFT Xbox 360 PC Windows,0.8763713836669922,1,1
+3,semantic_reconstruction,1,15917,SQDeal 2 Pack USB GamePad Joypad Double Dual Shock Gaming Controller Joystick for PC Computer Laptop Windows [Video Game],0.9047267436981201,1,1
+3,semantic_reconstruction,2,13690,Donop&reg; USB Pc Computer Vibration Shock Wired Gamepad Game Controller Joystick Game Pad Includes Donop Black Wrist Band,0.8825262784957886,1,1
+3,semantic_reconstruction,3,9712,SQDeal USB Dual Shock Joystick Gamepad Gaming Controller [Double Vibration Feedback Motors] for PC Computer Laptop Window (Black),0.9117236137390137,1,1
+3,semantic_reconstruction,4,12981,Cyber Snipa Game Pad V2 Black,0.8646694421768188,1,1
+3,semantic_reconstruction,5,11748,Tronsmart Mars G01 2.4G Wireless Game Controller Gamepad for Android Cell Phone/PS3/Android Tablet PC/MINI PC/Android TV BOX,0.8186463713645935,1,1
+217,original,1,12075,Turtle Beach Call of Duty: Ghosts Ear Force Spectre Limited Edition Gaming Headset -Microsoft Xbox 360,0.977582573890686,1,1
+217,original,2,3498,Turtle Beach Call of Duty: MW3 Ear Force Foxtrot Limited Edition Universal Amplified Stereo Gaming Headset,0.9396970272064209,1,1
+217,original,3,8116,Turtle Beach Call of Duty Advanced Warfare Ear Force Sentinel Task Force Gaming Headset for Xbox One (Discontinued by Manufacturer),0.9371651411056519,1,1
+217,original,4,12069,Turtle Beach Call of Duty: MW3 Ear Force Bravo Limited Edition Programmable Wireless Universal Gaming Headset,0.929164469242096,1,1
+217,original,5,7591,Xbox 360 Call of Duty: Modern Warfare 3 Wireless Headset with Bluetooth,0.9254944920539856,1,1
+217,raw_reconstruction,1,8116,Turtle Beach Call of Duty Advanced Warfare Ear Force Sentinel Task Force Gaming Headset for Xbox One (Discontinued by Manufacturer),0.9371651411056519,1,1
+217,raw_reconstruction,2,12075,Turtle Beach Call of Duty: Ghosts Ear Force Spectre Limited Edition Gaming Headset -Microsoft Xbox 360,0.977582573890686,1,1
+217,raw_reconstruction,3,3498,Turtle Beach Call of Duty: MW3 Ear Force Foxtrot Limited Edition Universal Amplified Stereo Gaming Headset,0.9396970272064209,1,1
+217,raw_reconstruction,4,11426,Turtle Beach - Ear Force Disney Infinity: Marvel Super Heroes Stereo Gaming Headset - Xbox 360,0.9103513956069946,1,1
+217,raw_reconstruction,5,11848,Turtle Beach Call of Duty Advanced Warfare Ear Force Sentinel Task Force Gaming Headset for PlayStation 4,0.9237328767776489,1,1
+217,semantic_reconstruction,1,8116,Turtle Beach Call of Duty Advanced Warfare Ear Force Sentinel Task Force Gaming Headset for Xbox One (Discontinued by Manufacturer),0.9371651411056519,1,1
+217,semantic_reconstruction,2,11426,Turtle Beach - Ear Force Disney Infinity: Marvel Super Heroes Stereo Gaming Headset - Xbox 360,0.9103513956069946,1,1
+217,semantic_reconstruction,3,11848,Turtle Beach Call of Duty Advanced Warfare Ear Force Sentinel Task Force Gaming Headset for PlayStation 4,0.9237328767776489,1,1
+217,semantic_reconstruction,4,3498,Turtle Beach Call of Duty: MW3 Ear Force Foxtrot Limited Edition Universal Amplified Stereo Gaming Headset,0.9396970272064209,1,1
+217,semantic_reconstruction,5,8788,Turtle BeachEar Force XL1 Officially Licensed Amplified Stereo Gaming Headset for Xbox 360 (Discontinued by Manufacturer),0.9121925830841064,1,1
+271,original,1,9919,"Logitech G600 MMO Gaming Mouse, RGB Backlit, 20 Programmable Buttons",0.9357814192771912,0,0
+271,original,2,1576,"Havit Gaming Mouse, 2800DPI 6 Buttons LED Optical Wired Mouse, Black",0.935043454170227,3,2
+271,original,3,10847,Logitech G302 Daedalus Prime MOBA Gaming Mouse,0.9332219362258911,0,0
+271,original,4,14232,Logitech G100s Optical Gaming Mouse Black (Bulk Package),0.928745687007904,1,1
+271,original,5,9757,Logitech G303 Daedalus Apex Performance Edition Gaming Mouse,0.9234530925750732,0,0
+271,raw_reconstruction,1,1576,"Havit Gaming Mouse, 2800DPI 6 Buttons LED Optical Wired Mouse, Black",0.935043454170227,3,2
+271,raw_reconstruction,2,15351,Razer Lachesis 4000 dpi Gaming Mouse (Wraith Red),0.9059579968452454,1,1
+271,raw_reconstruction,3,15379,Tonsee 6 buttons Wireless Optical Silent Gaming Mouse For PC Laptop Gamer Red,0.8793989419937134,1,1
+271,raw_reconstruction,4,7808,SteelSeries Sensei Laser Gaming Mouse [RAW] Heat Orange Edition,0.8899320363998413,1,1
+271,raw_reconstruction,5,16006,Black Fashion Cobra Optical 1600 DPI USB Wired Gaming Game Mouse for Games Pc Laptop,0.8814054131507874,1,1
+271,semantic_reconstruction,1,8036,SteelSeries Rival Optical Gaming Mouse,0.8581422567367554,1,1
+271,semantic_reconstruction,2,11422,SteelSeries Kana Optical Gaming Mouse - Black and Orange,0.883987545967102,1,1
+271,semantic_reconstruction,3,10088,"ROCCAT KOVA [+] Max Performance Gaming Mouse,  Black",0.8512998223304749,1,1
+271,semantic_reconstruction,4,7808,SteelSeries Sensei Laser Gaming Mouse [RAW] Heat Orange Edition,0.8899320363998413,1,1
+271,semantic_reconstruction,5,11425,SteelSeries Sensei Wireless Laser Gaming Mouse,0.8712351322174072,2,2
+72,original,1,15063,Razer Arctosa Gaming Keyboard- Black,0.8925697207450867,0,0
+72,original,2,12665,Razer BlackWidow Expert Mechanical Gaming Keyboard with 10 Key Rollover,0.8836540579795837,1,1
+72,original,3,15375,"ROCCAT RYOS MK Pro Mechanical Gaming Keyboard with Per-Key Illumination, Blue CHERRY MX Key Switch",0.8827296495437622,0,0
+72,original,4,895,Razer BlackWidow Chroma: Clicky RGB Mechanical Gaming Keyboard - 5 Macro Keys - Razer Green Mechanical Switches (Tactile and Clicky),0.8821443319320679,1,1
+72,original,5,15614,Razer BlackWidow Tournament Edition Stealth - Essential Mechanical Gaming Keyboard - Compact Layout - Tactile & Silent Razer Orange Switches,0.8795793652534485,1,1
+72,raw_reconstruction,1,11825,Razer BlackWidow Tournament Edition - Essential Mechanical Gaming Keyboard - Compact Layout - Tactile & Clicky Razer Green Switches,0.8783082962036133,0,0
+72,raw_reconstruction,2,16475,Razer BlackWidow Ultimate Stealth - Backlit Mechanical Gaming Keyboard - Fully Programmable - Tactile & Silent Razer Orange Switches,0.8758211135864258,1,1
+72,raw_reconstruction,3,12665,Razer BlackWidow Expert Mechanical Gaming Keyboard with 10 Key Rollover,0.8836540579795837,1,1
+72,raw_reconstruction,4,9434,Razer Blackwidow Ultimate 2016 - Backlit Mechanical Gaming Keyboard - Fully Programmable - Tactile & Clicky Green Switches,0.8761334419250488,1,1
+72,raw_reconstruction,5,895,Razer BlackWidow Chroma: Clicky RGB Mechanical Gaming Keyboard - 5 Macro Keys - Razer Green Mechanical Switches (Tactile and Clicky),0.8821443319320679,1,1
+72,semantic_reconstruction,1,11825,Razer BlackWidow Tournament Edition - Essential Mechanical Gaming Keyboard - Compact Layout - Tactile & Clicky Razer Green Switches,0.8783082962036133,0,0
+72,semantic_reconstruction,2,9434,Razer Blackwidow Ultimate 2016 - Backlit Mechanical Gaming Keyboard - Fully Programmable - Tactile & Clicky Green Switches,0.8761334419250488,1,1
+72,semantic_reconstruction,3,3722,"G810 Orion Spectrum RGB Mechanical Gaming Keyboard &ndash; Easy-Access Media Control, Backlit Multicolor LED, Romer-G Mechanical Key Switches",0.8508446216583252,1,1
+72,semantic_reconstruction,4,8035,Corsair Vengeance K70 Black Cherry MX Brown (CH-9000067-NA),0.821835458278656,1,1
+72,semantic_reconstruction,5,12448,G710 Mechanical Gaming Keyboard,0.8392000198364258,2,2
+7,original,1,4161,Nintendo Selects: Super Mario Galaxy 2,0.9590839147567749,3,2
+7,original,2,940,Super Mario Galaxy (Nintendo Selects),0.9565116763114929,2,2
+7,original,3,1332,Super Paper Mario,0.9244697093963623,1,1
+7,original,4,1817,Super Paper Mario (Nintendo Selects),0.9196150302886963,1,1
+7,original,5,1192,Super Mario Bros.,0.9172616600990295,1,1
+7,raw_reconstruction,1,4161,Nintendo Selects: Super Mario Galaxy 2,0.9590839147567749,3,2
+7,raw_reconstruction,2,1268,Super Princess Peach,0.8898270130157471,2,2
+7,raw_reconstruction,3,1817,Super Paper Mario (Nintendo Selects),0.9196150302886963,1,1
+7,raw_reconstruction,4,1332,Super Paper Mario,0.9244697093963623,1,1
+7,raw_reconstruction,5,7086,Mario Pinball Land,0.8896951079368591,1,1
+7,semantic_reconstruction,1,4161,Nintendo Selects: Super Mario Galaxy 2,0.9590839147567749,3,2
+7,semantic_reconstruction,2,1268,Super Princess Peach,0.8898270130157471,2,2
+7,semantic_reconstruction,3,7086,Mario Pinball Land,0.8896951079368591,1,1
+7,semantic_reconstruction,4,5404,Wario Land: Super Mario Land 3,0.8733969926834106,1,1
+7,semantic_reconstruction,5,940,Super Mario Galaxy (Nintendo Selects),0.9565116763114929,2,2
+89,original,1,2145,Call of Duty: Ghosts Hardened Edition - Xbox One,0.9707515239715576,1,1
+89,original,2,14065,Call of Duty: Ghosts Prestige Edition - Xbox One,0.9698030352592468,3,2
+89,original,3,2940,Call of Duty: Ghosts - PlayStation 4,0.9675179719924927,2,2
+89,original,4,9458,Call of Duty: Ghosts Prestige Edition - Xbox 360,0.9597237706184387,1,1
+89,original,5,364,Call of Duty: Ghosts Hardened Edition - Xbox 360,0.9594733715057373,1,1
+89,raw_reconstruction,1,5367,Call of Duty: Ghosts - Nintendo Wii U,0.944374144077301,3,2
+89,raw_reconstruction,2,14065,Call of Duty: Ghosts Prestige Edition - Xbox One,0.9698030352592468,3,2
+89,raw_reconstruction,3,6076,Call of Duty: Ghosts Hardened Edition - PlayStation 4,0.9513217210769653,2,2
+89,raw_reconstruction,4,9458,Call of Duty: Ghosts Prestige Edition - Xbox 360,0.9597237706184387,1,1
+89,raw_reconstruction,5,2145,Call of Duty: Ghosts Hardened Edition - Xbox One,0.9707515239715576,1,1
+89,semantic_reconstruction,1,2145,Call of Duty: Ghosts Hardened Edition - Xbox One,0.9707515239715576,1,1
+89,semantic_reconstruction,2,2870,Call of Duty: Ghosts Hardened Edition - PlayStation 3,0.9213011264801025,1,1
+89,semantic_reconstruction,3,14065,Call of Duty: Ghosts Prestige Edition - Xbox One,0.9698030352592468,3,2
+89,semantic_reconstruction,4,2940,Call of Duty: Ghosts - PlayStation 4,0.9675179719924927,2,2
+89,semantic_reconstruction,5,6076,Call of Duty: Ghosts Hardened Edition - PlayStation 4,0.9513217210769653,2,2

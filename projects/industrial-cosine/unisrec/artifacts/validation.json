@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "training_started": false,
+  "test_command": "python -m pytest -q tests",
+  "tests_passed": 33,
+  "tests_skipped": 0,
+  "preflight_command": "python qwen_preflight.py --report artifacts/preflight.json",
+  "default_training_entry": "prints instructions and exits without --start-training",
+  "python": "3.11.11",
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.14.1",
+    "scikit-learn": "1.6.1",
+    "recbole": "1.2.1",
+    "pytest": "8.4.2",
+    "PyYAML": "6.0.2"
+  },
+  "actual_catalog_read_check": {
+    "items": 3686,
+    "distinct_sids": 3670,
+    "missing_asins": 3686
+  },
+  "device": "cpu",
+  "container": "unisrec-qwen-preflight-20261117",
+  "gpu_allocated": false,
+  "upstream_commit": "05aa5cba2809112c32808f70d16abc61c05c6538"
+}

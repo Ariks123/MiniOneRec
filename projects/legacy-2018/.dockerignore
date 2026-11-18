@@ -1,0 +1,16 @@
+# Image contains code only. Bind-mount datasets, weights and outputs at runtime.
+**
+!*.py
+!LICENSE
+!requirements-h20.txt
+!requirements-report.txt
+!config/
+!config/h20_4gpu.yaml
+!config/h20_zero2.json
+!scripts/
+!scripts/*.py
+!docker/
+!docker/*.py
+!docker/*.sh
+!tests/
+!tests/*.py

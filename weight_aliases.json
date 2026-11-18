@@ -1,0 +1,12 @@
+[
+  {
+    "published_target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/model.safetensors",
+    "sha256": "f12cf46f21684b77bc2402af986565e4965f30dfb28f3f6902f1371baa985973",
+    "same_weights_at_local_relative_paths": [
+      "best_ndcg_checkpoint/model.safetensors",
+      "best_recall_checkpoint/model.safetensors"
+    ],
+    "local_parent": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft",
+    "reason": "三个模型文件SHA256完全一致，仅发布final以避免重复"
+  }
+]

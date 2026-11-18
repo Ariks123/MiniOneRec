@@ -1,0 +1,5 @@
+stage,budget,checkpoint,validation_metric,value
+RQ-VAE,"3,000 轮","第 1,100 轮",暖商品重建 MSE,0.36312
+SFT,"5,445 步",checkpoint-5187,答案 token 交叉熵,1.5413
+GRPO,"1,242 步",checkpoint-621,SID NDCG@10,9.071%
+UniSRec,20 轮,第 20 轮,全目录 NLL,7.236538

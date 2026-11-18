@@ -1,0 +1,226 @@
+{
+  "status": "available",
+  "paper": {
+    "schema_version": 1,
+    "source": {
+      "title": "MiniOneRec: An Open-Source Framework for Scaling Generative Recommendation",
+      "url": "https://arxiv.org/html/2510.24431v1",
+      "version": "arXiv:2510.24431v1 (2025-10-28)",
+      "locators": [
+        "Table 1",
+        "Section 4",
+        "Section 5.1",
+        "Appendix B / Table 4"
+      ],
+      "checked_at_utc": "2026-11-15T16:06:17+00:00"
+    },
+    "sources": [
+      {
+        "label": "Paper main results and experimental setup",
+        "url": "https://arxiv.org/html/2510.24431v1",
+        "locator": "Table 1; Section 4; Appendix B"
+      },
+      {
+        "label": "Original SFT launcher",
+        "url": "https://github.com/AkaliKong/MiniOneRec/blob/0cbd94de9ea58c59a6b05d4d1dbda7edf8d5b3b1/sft.sh",
+        "locator": "8 workers; global batch 1024; micro batch 16; seed 42"
+      },
+      {
+        "label": "Original evaluation launcher",
+        "url": "https://github.com/AkaliKong/MiniOneRec/blob/0cbd94de9ea58c59a6b05d4d1dbda7edf8d5b3b1/evaluate.sh",
+        "locator": "num_beams=50; length_penalty=0"
+      }
+    ],
+    "method": "MiniOneRec (Table 1 main results)",
+    "stage": "SFT + GRPO RL (2 epochs)",
+    "backbone": "Qwen2.5-Instruct",
+    "backbone_size_note": "Section 4 specifies the backbone family; Table 1 does not identify a unique parameter count. Do not assume it is matched to this run's 1.5B Base model.",
+    "reported_k": [
+      3,
+      5,
+      10
+    ],
+    "results": [
+      {
+        "dataset": "Industrial",
+        "HR": {
+          "3": 0.1143,
+          "5": 0.1321,
+          "10": 0.1586
+        },
+        "NDCG": {
+          "3": 0.1011,
+          "5": 0.1084,
+          "10": 0.1167
+        },
+        "catalog_items": 3685,
+        "test_rows": 4533
+      },
+      {
+        "dataset": "Office",
+        "HR": {
+          "3": 0.1217,
+          "5": 0.142,
+          "10": 0.1634
+        },
+        "NDCG": {
+          "3": 0.1088,
+          "5": 0.1172,
+          "10": 0.1242
+        },
+        "catalog_items": 3459,
+        "test_rows": 4866
+      }
+    ],
+    "settings": {
+      "history_max": 10,
+      "rqvae_epochs": 10000,
+      "learning_rate": 0.0003,
+      "max_epochs": 10,
+      "lr_scheduler_type": "cosine",
+      "sft_gpus": "8 H100",
+      "stage": "SFT + GRPO RL (2 epochs)"
+    },
+    "limitations": [
+      "No Video Games results are reported in the original Table 1 or repository result image. Cross-domain values are context, not a matched reproduction target.",
+      "Only K=3,5,10 are published in Table 1. No values at K=1,20,50 are inferred or interpolated.",
+      "This run is Qwen2.5-1.5B Base SFT only; the original main result uses the paper's complete post-training recipe.",
+      "Use Table 1 consistently: the Industrial row in Table 3 has different values and is a separate experiment.",
+      "The paper and current launcher differ in some setup details; the current run_config.json is authoritative for this experiment.",
+      "Differences in domain, catalog size, sequence length, SID selection, alignment tasks and training stage prevent attribution of a score gap to a single cause.",
+      "Paper loss curves are not a matched numeric target across tokenizers, task mixtures and label masking. Before/after loss in this run must use the same token-weighted answer-only evaluation protocol."
+    ]
+  },
+  "actual": {
+    "dataset": "Video_Games",
+    "stage": "SFT only; RL not started",
+    "backbone": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+    "history_max": 20,
+    "sid_selected_epoch": 2900,
+    "catalog_items": 16572,
+    "train_rows": 335388,
+    "test_rows": 41924,
+    "sft_task_examples": 703463,
+    "learning_rate": 0.0003,
+    "max_epochs": 10,
+    "lr_scheduler_type": "linear",
+    "gpus": 4
+  },
+  "comparability": [
+    {
+      "key": "dataset",
+      "setting": "数据集",
+      "actual": "Video_Games",
+      "paper": "Industrial, Office",
+      "assessment": "different",
+      "note": ""
+    },
+    {
+      "key": "backbone",
+      "setting": "生成底模",
+      "actual": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "paper": "Qwen2.5-Instruct",
+      "assessment": "different",
+      "note": ""
+    },
+    {
+      "key": "stage",
+      "setting": "训练阶段",
+      "actual": "SFT only; RL not started",
+      "paper": "SFT + GRPO RL (2 epochs)",
+      "assessment": "different",
+      "note": ""
+    },
+    {
+      "key": "history_max",
+      "setting": "最大历史长度",
+      "actual": 20,
+      "paper": 10,
+      "assessment": "different",
+      "note": ""
+    },
+    {
+      "key": "sid_selection",
+      "setting": "SID checkpoint / 训练预算",
+      "actual": 2900,
+      "paper": 10000,
+      "assessment": "different",
+      "note": "selected quantizer epoch vs paper quantizer training budget"
+    },
+    {
+      "key": "lr_scheduler_type",
+      "setting": "SFT 学习率调度",
+      "actual": "linear",
+      "paper": "cosine",
+      "assessment": "different",
+      "note": ""
+    },
+    {
+      "key": "max_epochs",
+      "setting": "SFT 最大 epoch",
+      "actual": 10,
+      "paper": 10,
+      "assessment": "matched",
+      "note": ""
+    },
+    {
+      "key": "learning_rate",
+      "setting": "SFT 学习率",
+      "actual": 0.0003,
+      "paper": 0.0003,
+      "assessment": "matched",
+      "note": ""
+    }
+  ],
+  "directly_comparable": false,
+  "limitation": "原论文没有 Video Games 结果；不同数据域、Base/Instruct、SFT/RL 阶段及 SID 等设置只可作背景参照，不能据此计算复现提升或判定复现成功。",
+  "same_dataset_baselines": {
+    "status": "available",
+    "primary_k": 10,
+    "reasons": [],
+    "identity_checks": {
+      "train_file": true,
+      "sid_index_path": true,
+      "test_file": true
+    },
+    "dataset": "Video_Games",
+    "source_sha256": {
+      "train_file": "298ab91e2e8b98a7f816b1f27c23166b2c28916ad67b93e8347c2c710e1da6ab",
+      "test_file": "51c5b6d13486e4dfb353a2a628d759271624d1c80f1775748ca2f0668781f277",
+      "sid_index_path": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f"
+    },
+    "catalog_items": 16572,
+    "train_rows": 335388,
+    "test_rows": 41924,
+    "metrics": {
+      "popularity": {
+        "HR@1": 0.0004532010304360271,
+        "NDCG@1": 0.0004532010304360271,
+        "HR@3": 0.0011926342906211239,
+        "NDCG@3": 0.0008791321334864573,
+        "HR@5": 0.0018128041217441084,
+        "NDCG@5": 0.0011315903435371276,
+        "HR@10": 0.0034586394428012595,
+        "NDCG@10": 0.001662795810494312,
+        "HR@20": 0.012451101994084534,
+        "NDCG@20": 0.003924930910371033,
+        "HR@50": 0.027096651082911937,
+        "NDCG@50": 0.0067489176934706395
+      },
+      "uniform_random": {
+        "HR@1": 6.034274680183442e-05,
+        "NDCG@1": 6.034274680183442e-05,
+        "HR@3": 0.00018102824040550325,
+        "NDCG@3": 0.00012858615457225788,
+        "HR@5": 0.0003017137340091721,
+        "NDCG@5": 0.00017791812206609898,
+        "HR@10": 0.0006034274680183442,
+        "NDCG@10": 0.00027417085071737546,
+        "HR@20": 0.0012068549360366883,
+        "NDCG@20": 0.000424829132387371,
+        "HR@50": 0.003017137340091721,
+        "NDCG@50": 0.0007782846187465274
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+# Four processes, one GPU each. train_batch_size is GLOBAL in RecBole 1.2.1.
+dataset: Industrial_and_Scientific
+data_path: prepared
+benchmark_filename: [train, valid, test]
+alias_of_item_id: [item_id_list]
+load_col:
+  inter: [user_id, item_id_list, item_id]
+  item: [item_id]
+MAX_ITEM_LIST_LENGTH: 10
+train_stage: inductive_ft
+plm_size: 2560
+adaptor_layers: [2560, 300]
+hidden_size: 300
+loss_type: CE
+train_catalog_only: true
+exclude_seen: false
+train_neg_sample_args: null
+eval_args:
+  group_by: user
+  order: TO
+  mode: full
+metrics: [Recall, NDCG, Hit]
+topk: [10, 20, 50]
+vector_quality_eval: true
+# Deterministic validation cross-entropy loss over the full non-PAD catalog.
+valid_metric: vector_nll
+valid_metric_bigger: false
+seed: 42
+reproducibility: true
+use_gpu: true
+gpu_id: '0,1,2,3'
+nproc: 4
+epochs: 20
+train_batch_size: 512   # 128 samples per GPU; accumulation=1
+eval_batch_size: 128    # rank 0 evaluates the complete, unsharded split
+learner: adam
+# Initial experiment setting: 0.001 * sqrt(512/128), not an optimized result.
+learning_rate: 0.002
+lr_schedule: warmup_cosine
+warmup_epochs: 5
+min_learning_rate: 0.0002
+weight_decay: 0.0
+eval_step: 1
+stopping_step: 10
+clip_grad_norm: {max_norm: 1.0, norm_type: 2}
+checkpoint_dir: /mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3
+save_dataset: false
+save_dataloaders: false
+log_wandb: false
+show_progress: true
+worker: 0

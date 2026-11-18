@@ -1,0 +1,57 @@
+{
+  "status": "evaluation_code_validated",
+  "training_started": false,
+  "trained_vector_quality_measured": false,
+  "tests": {
+    "tests": 89,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_command": "python -m pytest -q tests --junitxml=artifacts/tests_vector_quality.xml",
+  "model_selection": {
+    "valid_metric": "vector_nll",
+    "valid_metric_bigger": false,
+    "recall_ndcg_role": "auxiliary"
+  },
+  "metric_definitions": {
+    "reference_space": "shared learned normalized 300-D query/item space",
+    "primary": "all-catalog next-item negative log likelihood",
+    "temperature": 0.07,
+    "catalog_items": 3686,
+    "uniform_reference_nll": 8.212297138229768,
+    "other_checks": [
+      "positive cosine",
+      "margin vs hardest and mean alternative",
+      "tie-aware pairwise accuracy",
+      "alignment squared L2",
+      "geometry collapse diagnostics",
+      "train-seen and train-unseen target groups"
+    ]
+  },
+  "held_out_group_audit": {
+    "valid": {
+      "rows": 4532,
+      "train_unseen_target_rows": 125,
+      "train_unseen_target_items": 28
+    },
+    "test": {
+      "rows": 4533,
+      "train_unseen_target_rows": 147,
+      "train_unseen_target_items": 37
+    }
+  },
+  "limitations": [
+    "No trained UniSRec checkpoint exists; no real model quality result has been measured.",
+    "Metric tests use synthetic vectors and models. Engineering preflight is not learned-vector accuracy.",
+    "Original Industrial embedding model identity and row order provenance remain unverified."
+  ],
+  "source_sha256": {
+    "qwen_vector_metrics.py": "5af62384312c439e50a0342b1e09a9c8935f65af5ac01dacb9d688a4482fd931",
+    "qwen_vector_eval.py": "90ed428d5783067cb6d6456e0e71b1a7ffef10da2597941c168fd7c0053dfb8f",
+    "qwen_train.py": "fde6ced1d00bf0a20bb16355b91fb6c19cf1cb4ba043d866fe35bf204785c459",
+    "qwen_runtime.py": "9978de6787ac65bd807180b3b5e3df04625de3d3cb6caf4455265a3667fbe48f",
+    "props/qwen_industrial.yaml": "c29e6285614eb37b6138f32f630d76f9ef15157a6d685a6cd8a2d8dc3ce808de",
+    "props/qwen_industrial_4gpu.yaml": "0c6a45a2de1ccee15e7dc9aecef472dc8d4c0c9f4e6dc04e5dca681e28bf9119"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "generated_at_utc": "2026-11-16T09:35:53.120182+00:00",
+  "comparison_scope": "Raw accepted evaluations and archived predictions; metric values are preserved.",
+  "raw_metric_integrity": "passed",
+  "original_evaluator_parity": "passed_cold_metrics",
+  "note": "Unmodified original evaluator on the same new checkpoint independently reproduces zero cold hits through Top50. Same metrics do not imply bitwise-identical candidates or isolate a causal training factor.",
+  "row_1012": {
+    "item_id": "2076",
+    "target_sid": "<a_14><b_175><c_121>",
+    "rank_scope": "First50 candidates; null means absent from Top50."
+  },
+  "candidate_support": {
+    "archive_sft": {
+      "row_1012_rank_in_top50": 8,
+      "target_2076_candidate_rows_anywhere": 5,
+      "target_2076_best_rank_anywhere": 8,
+      "distinct_cold_test_target_sids_proposed_anywhere": 7,
+      "cold_candidate_slots": 19,
+      "total_candidate_slots": 226650
+    },
+    "archive_rl": {
+      "row_1012_rank_in_top50": 8,
+      "target_2076_candidate_rows_anywhere": 8,
+      "target_2076_best_rank_anywhere": 8,
+      "distinct_cold_test_target_sids_proposed_anywhere": 17,
+      "cold_candidate_slots": 209,
+      "total_candidate_slots": 226650
+    },
+    "previous_sft": {
+      "row_1012_rank_in_top50": 18,
+      "target_2076_candidate_rows_anywhere": 4,
+      "target_2076_best_rank_anywhere": 18,
+      "distinct_cold_test_target_sids_proposed_anywhere": 5,
+      "cold_candidate_slots": 10,
+      "total_candidate_slots": 226650
+    },
+    "current_sft": {
+      "row_1012_rank_in_top50": null,
+      "target_2076_candidate_rows_anywhere": 0,
+      "target_2076_best_rank_anywhere": null,
+      "distinct_cold_test_target_sids_proposed_anywhere": 6,
+      "cold_candidate_slots": 15,
+      "total_candidate_slots": 226650
+    }
+  },
+  "sources": {
+    "archive_sft": {
+      "prediction_file": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_sft_result.json",
+      "sha256": "ea08c534aafd6a9173c61b9e170c0d08b6f3b71d52d6693e371ec46f199d8da5"
+    },
+    "archive_rl": {
+      "prediction_file": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_rl_result.json",
+      "sha256": "20a3117011ba9b37f66bba03455b46ef2113c6315e1b8213cdc776886416d33c"
+    },
+    "previous_sft": {
+      "prediction_file": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/evaluation/predictions.jsonl",
+      "sha256": "d86cf701e2ad048acd144bfccd1a4ca9c629502c4c24de1bb3a99aa310072a65"
+    },
+    "current_sft": {
+      "prediction_file": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/evaluation/predictions.jsonl",
+      "sha256": "cc7152e95a58f7c6926ec08b4beac2154542d65f221a5553e6085720842e3a7b"
+    }
+  },
+  "original_evaluator_parity_status": "passed_cold_metrics",
+  "original_evaluator_parity_report": "original_evaluator_cold_parity.json"
+}

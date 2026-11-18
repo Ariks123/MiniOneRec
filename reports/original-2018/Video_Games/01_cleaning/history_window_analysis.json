@@ -1,0 +1,147 @@
+{
+  "dataset": "Amazon18 Video_Games",
+  "validation": {
+    "row_history_and_target_mismatches": 0,
+    "users": 51862,
+    "complete_user_sequence_counts_match": true
+  },
+  "user_interactions": {
+    "count": 51862,
+    "mean": 9.083664339979176,
+    "median": 7,
+    "p75": 9,
+    "p90": 15,
+    "p95": 21,
+    "p99": 44,
+    "max": 809
+  },
+  "splits": {
+    "train": {
+      "count": 335388,
+      "mean": 12.22043424332415,
+      "median": 4,
+      "p75": 9,
+      "p90": 21,
+      "p95": 38,
+      "p99": 151,
+      "max": 808,
+      "windows": [
+        {
+          "max_history": 5,
+          "truncated_examples": 136436,
+          "truncated_percent": 40.68004818299999,
+          "mean_history": 3.6860054623301965
+        },
+        {
+          "max_history": 10,
+          "truncated_examples": 72369,
+          "truncated_percent": 21.57769508748077,
+          "mean_history": 5.250453206435531
+        },
+        {
+          "max_history": 20,
+          "truncated_examples": 34761,
+          "truncated_percent": 10.364413753622669,
+          "mean_history": 6.784855152837907
+        },
+        {
+          "max_history": 30,
+          "truncated_examples": 21854,
+          "truncated_percent": 6.516035159278209,
+          "mean_history": 7.62241046191277
+        },
+        {
+          "max_history": 50,
+          "truncated_examples": 11740,
+          "truncated_percent": 3.5004233902226676,
+          "mean_history": 8.585766336303028
+        }
+      ]
+    },
+    "valid": {
+      "count": 41923,
+      "mean": 10.947737518784438,
+      "median": 5,
+      "p75": 10,
+      "p90": 22,
+      "p95": 35,
+      "p99": 98,
+      "max": 462,
+      "windows": [
+        {
+          "max_history": 5,
+          "truncated_examples": 19267,
+          "truncated_percent": 45.95806597810271,
+          "mean_history": 3.9976862342866686
+        },
+        {
+          "max_history": 10,
+          "truncated_examples": 9742,
+          "truncated_percent": 23.237840803377622,
+          "mean_history": 5.7320086825847385
+        },
+        {
+          "max_history": 20,
+          "truncated_examples": 4538,
+          "truncated_percent": 10.824607017627555,
+          "mean_history": 7.364143787419794
+        },
+        {
+          "max_history": 30,
+          "truncated_examples": 2593,
+          "truncated_percent": 6.18514896357608,
+          "mean_history": 8.20437468692603
+        },
+        {
+          "max_history": 50,
+          "truncated_examples": 1224,
+          "truncated_percent": 2.9196383846575866,
+          "mean_history": 9.067480857763043
+        }
+      ]
+    },
+    "test": {
+      "count": 41924,
+      "mean": 10.146503196259898,
+      "median": 5,
+      "p75": 10,
+      "p90": 21,
+      "p95": 33,
+      "p99": 73,
+      "max": 516,
+      "windows": [
+        {
+          "max_history": 5,
+          "truncated_examples": 20320,
+          "truncated_percent": 48.468657570842474,
+          "mean_history": 4.143640873962408
+        },
+        {
+          "max_history": 10,
+          "truncated_examples": 9928,
+          "truncated_percent": 23.680946474573037,
+          "mean_history": 5.9505056769392235
+        },
+        {
+          "max_history": 20,
+          "truncated_examples": 4357,
+          "truncated_percent": 10.392615208472474,
+          "mean_history": 7.568266386795153
+        },
+        {
+          "max_history": 30,
+          "truncated_examples": 2356,
+          "truncated_percent": 5.619692777406736,
+          "mean_history": 8.377182520751836
+        },
+        {
+          "max_history": 50,
+          "truncated_examples": 947,
+          "truncated_percent": 2.2588493464364086,
+          "mean_history": 9.121982635244729
+        }
+      ]
+    }
+  },
+  "method": "Reconstruct the full history length from chronological sample positions per user across train/valid/test; verify every existing target and capped history against Video_Games.inter.json. Truncation means full available history length exceeds the candidate window. Counts include retained repeat interactions."
+}

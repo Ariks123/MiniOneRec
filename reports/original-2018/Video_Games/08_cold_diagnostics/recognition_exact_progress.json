@@ -1,0 +1,90 @@
+{
+  "completed": 16,
+  "total": 16,
+  "elapsed_seconds": 181.9611167999974,
+  "last": {
+    "item_id": "11110",
+    "cohort": "warm",
+    "title": "Razer Wildcat eSports Customizable Premium Controller for Xbox One  W/ 4 Programmable Buttons",
+    "beam10_rank": null,
+    "exact_rank": 459,
+    "gold_sequence_score": -8.85760498046875,
+    "direct_uncached_score": -8.828804016113281,
+    "cached_direct_score_difference": 0.02880096435546875,
+    "exact_10th_score": -4.697044372558594,
+    "beam_10th_exact_score": -5.104340553283691,
+    "near_ties_within_0_02": 8,
+    "conditional_cold_catalog_probability_mass": 0.002099459059536457,
+    "exact_top10_item_ids": [
+      312,
+      12580,
+      598,
+      104,
+      10916,
+      15035,
+      1758,
+      12241,
+      9536,
+      11102
+    ],
+    "beam_top10_item_ids": [
+      12580,
+      598,
+      312,
+      104,
+      10916,
+      15035,
+      1758,
+      12241,
+      9536,
+      3272
+    ],
+    "exact_beam_top10_overlap": 9,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_73>",
+        "log_probability": -1.807709813117981,
+        "rank_legal_successors": 3,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_128>",
+        "log_probability": -3.3778467178344727,
+        "rank_legal_successors": 8,
+        "legal_successors": 104
+      },
+      {
+        "depth": 2,
+        "token": "<c_29>",
+        "log_probability": -3.6720409393310547,
+        "rank_legal_successors": 4,
+        "legal_successors": 5
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -4.6491513785440475e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -3.3378546504536644e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.52611033199355
+  }
+}

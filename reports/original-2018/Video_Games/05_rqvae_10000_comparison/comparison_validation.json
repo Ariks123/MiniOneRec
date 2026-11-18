@@ -1,0 +1,28 @@
+{
+  "validation": "passed",
+  "epochs_completed": 10000,
+  "epoch_rows_contiguous": 10000,
+  "evaluation_points_contiguous": 201,
+  "fairness_checks": {
+    "identical_embeddings_sha256": true,
+    "identical_item_metadata_sha256": true,
+    "identical_split_sha256": true,
+    "identical_initial_checkpoint_sha256": true,
+    "different_checkpoint_sha256_for_different_epochs": true,
+    "identical_split_counts": true,
+    "identical_query_ids": true,
+    "identical_knn_candidate_scope": true,
+    "identical_repair_configuration": true,
+    "endpoint_epoch_matches_request": true,
+    "training_reached_endpoint": true,
+    "identity_suffix_excluded": true,
+    "identical_model_and_optimizer_configuration": true,
+    "inherited_evaluation_history_matches": true
+  },
+  "production_catalog_unchanged": true,
+  "prior_report_files_unchanged": 54,
+  "pdf_pages_rendered_and_visually_checked": 6,
+  "pdf_layout": "passed",
+  "render_directory": "C:/Users/Administrator/Desktop/MiniOneRec/tmp/pdfs/rqvae-10000-final",
+  "reviewed_at_utc": "2026-11-14T15:48:26.075Z"
+}

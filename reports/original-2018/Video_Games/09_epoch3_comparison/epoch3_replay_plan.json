@@ -1,0 +1,127 @@
+{
+  "status": "cancelled_by_user",
+  "reason": "Original checkpoint-2064 was rotated out; absent from workspace backups and original Docker container.",
+  "original_run": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft",
+  "original_checkpoint_step": 2064,
+  "original_checkpoint_epoch": 3.004366812227074,
+  "original_epoch3_validation_loss": 2.117537498474121,
+  "replay_output_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft_epoch3_replay",
+  "comparison_scope": "New replay experiment; not recovered historical checkpoint; do not claim bit-identical reproduction.",
+  "base_model": {
+    "source": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+    "train_from_scratch": false,
+    "original_vocab_size": 151665,
+    "tokenizer_vocab_size": 152322,
+    "added_sid_tokens": 657,
+    "identity": {
+      "format_version": 1,
+      "source_directory": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "train_from_scratch": false,
+      "files": {
+        "config.json": {
+          "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+          "size_bytes": 684
+        },
+        "generation_config.json": {
+          "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+          "size_bytes": 138
+        },
+        "merges.txt": {
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "size_bytes": 1671839
+        },
+        "model.safetensors": {
+          "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+          "size_bytes": 3087467144
+        },
+        "tokenizer.json": {
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+          "size_bytes": 7031645
+        },
+        "tokenizer_config.json": {
+          "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+          "size_bytes": 7228
+        },
+        "vocab.json": {
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "size_bytes": 2776833
+        }
+      },
+      "sha256": "f4da6a998630e344cbf1877dd65907ba35a9b01c20bbf314bdc47d542a61168b"
+    }
+  },
+  "data": {
+    "train_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/train.csv",
+    "eval_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/valid.csv",
+    "sid_index_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "item_meta_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item.json",
+    "category": "Video_Games",
+    "sample": -1,
+    "train_samples": 703463,
+    "validation_samples": 41923,
+    "sha256": {
+      "train_file": "298ab91e2e8b98a7f816b1f27c23166b2c28916ad67b93e8347c2c710e1da6ab",
+      "eval_file": "bbe4174774c0994deaa5bae6ab40c2f349c79e83f977ab03f8ffc9be92064d29",
+      "sid_index_path": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+      "item_meta_path": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7"
+    }
+  },
+  "task_counts": {
+    "sid_sequence_recommendation": 335388,
+    "history_to_title": 335388,
+    "sid2title": 16572,
+    "title2sid": 16115
+  },
+  "hyperparameters": {
+    "world_size": 4,
+    "micro_batch_size": 16,
+    "gradient_accumulation_steps": 16,
+    "global_batch_size": 1024,
+    "max_epochs": 10,
+    "learning_rate": 0.0003,
+    "warmup_steps": 20,
+    "lr_scheduler_type": "linear",
+    "cutoff_len": 512,
+    "max_grad_norm": 1.0,
+    "bf16": true,
+    "gradient_checkpointing": true,
+    "attn_implementation": "sdpa",
+    "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+    "seed": 42,
+    "early_stopping_patience": 3,
+    "eval_save_fraction": 0.05,
+    "monitor_window": 100,
+    "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+  },
+  "stop_policy": {
+    "planned_epochs": 10,
+    "planned_total_optimizer_steps": 6870,
+    "stop_and_save_at_optimizer_step": 2064,
+    "keep_original_linear_lr_schedule": true,
+    "warmup_steps": 20,
+    "save_epoch3_model_independently": true
+  },
+  "evaluation": {
+    "recommendation_rows": "All 10602 original behavior-cold test rows, retaining original row IDs.",
+    "catalog_items": 16572,
+    "num_beams": 50,
+    "cutoff_len": 512,
+    "prompt": "Original training-style SidSFTDataset prompt.",
+    "metrics": [
+      "HR@1",
+      "HR@10",
+      "NDCG@10",
+      "HR@50",
+      "NDCG@50"
+    ],
+    "cold_identification": "Same 666 unique cold titles, original title2sid prompt, beam10.",
+    "baseline": "Original final_checkpoint contains best epoch9.5138 model; compare to saved accepted results."
+  },
+  "estimated_training": {
+    "reference_hardware": "4 NVIDIA H20",
+    "historical_hours_to_epoch3_evaluation": 4.35,
+    "evaluation_time_additional": true
+  },
+  "cancelled_at_utc": "2026-11-16T09:16:01.473851+00:00",
+  "cancellation_reason": "User declined epoch-3 replay and requested training optimization advice only."
+}

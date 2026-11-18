@@ -1,0 +1,32 @@
+@import url("base.css");
+
+.hero { background: #183442; }
+.hero .dataset { letter-spacing: .02em; }
+.frame { width: min(1240px, 100%); }
+strong.best {
+  color: #8d1227;
+  font-weight: 800;
+}
+.formula, .equation {
+  margin: .75rem 0 1rem;
+  padding: .8rem 1.05rem;
+  overflow-x: auto;
+  background: #f1f6fa;
+  border: 1px solid #d1e0e8;
+  border-radius: .45rem;
+  color: #173344;
+}
+math {
+  font-family: "STIX Two Math", "Cambria Math", "Latin Modern Math", math;
+  color: #173344;
+}
+math[display="block"] { font-size: clamp(1rem, 2.5vw, 1.35rem); margin: .35rem 0; overflow-x: auto; }
+.formula math[display="block"], .equation math[display="block"] { margin: 0; }
+.metrics { font-variant-numeric: tabular-nums; }
+.report-list article { background: #f8fbfa; }
+figcaption { line-height: 1.55; }
+svg { max-width: 100%; }
+@media print {
+  .formula, .equation { break-inside: avoid; }
+  strong.best { print-color-adjust: exact; }
+}

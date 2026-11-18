@@ -1,0 +1,2997 @@
+{
+  "format_version": 1,
+  "created_at_utc": "2026-11-18T13:22:02.133192+00:00",
+  "description": "Industrial cosine and Qwen retrieval source and small-report staging; originals unchanged",
+  "repositories": [
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine",
+      "target": "projects/industrial-cosine",
+      "branch": "amazon2018industrialandscientific-cosine",
+      "commit": "de1658f3810bb0e211a90ef4c8151a123ab32fff",
+      "worktree_status_before": " M README.md\n?? unisrec/\n",
+      "worktree_status_after": " M README.md\n?? unisrec/\n"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval",
+      "target": "projects/qwen-retrieval",
+      "branch": "amazon2018industrialandscientific-qwen-retrieval",
+      "commit": "8b073685affe6094d5120c963965d0aef9e4f8cc",
+      "worktree_status_before": "",
+      "worktree_status_after": ""
+    }
+  ],
+  "files": [
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/.gitignore",
+      "target": "projects/industrial-cosine/.gitignore",
+      "size": 98,
+      "sha256": "04de1804172f8ddf56cdb3c0e6038cd38ca6e1dbc312cc3daa465eaf24986b86",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/LICENSE",
+      "target": "projects/industrial-cosine/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/LogitProcessor.py",
+      "target": "projects/industrial-cosine/LogitProcessor.py",
+      "size": 4435,
+      "sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/README.md",
+      "target": "projects/industrial-cosine/README.md",
+      "size": 7988,
+      "sha256": "befcbf005acc4377bbf6fd5f9f15655c1a02f17e943d5c976a9f933e1266c51e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/config/h20_zero2.json",
+      "target": "projects/industrial-cosine/config/h20_zero2.json",
+      "size": 493,
+      "sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/config/selected_run.json",
+      "target": "projects/industrial-cosine/config/selected_run.json",
+      "size": 9735,
+      "sha256": "c2d22b6ea706233bce28595c088d5e4cf5ae5138c1ce1d6d5461a29c86898c28",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/data.py",
+      "target": "projects/industrial-cosine/data.py",
+      "size": 75157,
+      "sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/__init__.py",
+      "target": "projects/industrial-cosine/docker/__init__.py",
+      "size": 63,
+      "sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/industrial_experiment.py",
+      "target": "projects/industrial-cosine/docker/industrial_experiment.py",
+      "size": 27367,
+      "sha256": "35c926f0d9937dc53da051f3f9f24cd3e8017193b802bad38f6ebd8fb86d52ff",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/industrial_linear_epoch_experiment.py",
+      "target": "projects/industrial-cosine/docker/industrial_linear_epoch_experiment.py",
+      "size": 4717,
+      "sha256": "575dd6be8cfef5afe558c931fc7a93c02946b32a136c5fd7032a7f13dc3f2f7b",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/industrial_rl_experiment.py",
+      "target": "projects/industrial-cosine/docker/industrial_rl_experiment.py",
+      "size": 28108,
+      "sha256": "8d5b1959059c47ec3849addedfc46d8d49d2666f6558b4ff092e3f85e019158f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/industrial_title_history_experiment.py",
+      "target": "projects/industrial-cosine/docker/industrial_title_history_experiment.py",
+      "size": 7475,
+      "sha256": "762f33eb664e1ed3ce47b3921b5c2a7d7eb93a83ddd4a28f5d52a6f12ccc1e17",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/queue_industrial_rl_beta.py",
+      "target": "projects/industrial-cosine/docker/queue_industrial_rl_beta.py",
+      "size": 17790,
+      "sha256": "30413764b5d852f01fa416955daad69d7a6d415f2f84ac340152a67f4ddd44a9",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/smoke_industrial_linear_snapshot.py",
+      "target": "projects/industrial-cosine/docker/smoke_industrial_linear_snapshot.py",
+      "size": 11876,
+      "sha256": "177a5434c1d5eb5b484feb3384ec6f8e197dbf983dcaa66f9d117d832099981f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/smoke_industrial_rank_selection.py",
+      "target": "projects/industrial-cosine/docker/smoke_industrial_rank_selection.py",
+      "size": 13281,
+      "sha256": "a1e895b69c4d734526eb791f09040cedca67f81aa31adf8fd2c030d3fe3bbc3f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/smoke_industrial_rl.py",
+      "target": "projects/industrial-cosine/docker/smoke_industrial_rl.py",
+      "size": 11728,
+      "sha256": "829448ce67a6ca0884fce3f826a6043bb488068ac4a102f13c4006cf9f46ae24",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docker/smoke_industrial_rl_accumulation.py",
+      "target": "projects/industrial-cosine/docker/smoke_industrial_rl_accumulation.py",
+      "size": 6606,
+      "sha256": "87cb68e6eb039ab0bbe7f33584e91fd61ef2eea524d7b937549603bb225e5a0f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/docs/INDUSTRIAL_RL.md",
+      "target": "projects/industrial-cosine/docs/INDUSTRIAL_RL.md",
+      "size": 6193,
+      "sha256": "fb978430031adee42dc97f021d263df265071a9acd33c1b6b8125506fb4eb48c",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/minionerec_trainer.py",
+      "target": "projects/industrial-cosine/minionerec_trainer.py",
+      "size": 16161,
+      "sha256": "1b35fb204ce8f8186a4736ec5412d672f6d9384483a355c98089cc9198451936",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/npu_support.py",
+      "target": "projects/industrial-cosine/npu_support.py",
+      "size": 1497,
+      "sha256": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/comparison_values.csv",
+      "target": "projects/industrial-cosine/reports/comparison_values.csv",
+      "size": 663,
+      "sha256": "a0e2e9f1afba1c416b632d177880fd8514fea2178c050aa0e7ecfb202f040ab3",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/comparison_vs_reference.png",
+      "target": "projects/industrial-cosine/reports/comparison_vs_reference.png",
+      "size": 220260,
+      "sha256": "bd06b186ede69ae1b276e2c170d150d9c87ddbe3fbcf9343b6d701647a754944",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/reports/conditional_metrics.csv",
+      "size": 4112,
+      "sha256": "5647f82fc09a5e5f5a9423bb43876accf63ac236b0423d92267b5c7bf99963f9",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/data_diagnostics.json",
+      "target": "projects/industrial-cosine/reports/data_diagnostics.json",
+      "size": 14128,
+      "sha256": "047e44efe4c437363f565320475072dc50ca60bb1bc02e1e015f017921cb30c2",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/grad_norm.png",
+      "target": "projects/industrial-cosine/reports/grad_norm.png",
+      "size": 59491,
+      "sha256": "2f215d92d478e5d72a1b6e89811b191d05734dc222ecd575a3ffe702c9a9c944",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/index.html",
+      "target": "projects/industrial-cosine/reports/index.html",
+      "size": 8428,
+      "sha256": "eff763980491fbc6e75ca51e97a880e29f313ca907e8490f0f38ecaad72667a5",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/learning_rate.png",
+      "target": "projects/industrial-cosine/reports/learning_rate.png",
+      "size": 68319,
+      "sha256": "d09da32016e3af14aba1ebbb039e635002bb6f23a942e1906f864c487fa585d5",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/loss.png",
+      "target": "projects/industrial-cosine/reports/loss.png",
+      "size": 82953,
+      "sha256": "01c9a47a55f286396ace6b7c697fba14b0c1dd743e8eac7979ceec936fde1bf2",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/original_repository_cold_recomputed.csv",
+      "target": "projects/industrial-cosine/reports/original_repository_cold_recomputed.csv",
+      "size": 2258,
+      "sha256": "6e1330cae149f6f5edd85b2a1d5d15ce4a962455e3f6201f96ba3975ab4d7c30",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/original_repository_cold_recomputed.json",
+      "target": "projects/industrial-cosine/reports/original_repository_cold_recomputed.json",
+      "size": 14125,
+      "sha256": "9df7acae380c6bdb3dee68ad80545d0be5a58ceff30e76ef32560d069b744652",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/original_training_schedule_audit.json",
+      "target": "projects/industrial-cosine/reports/original_training_schedule_audit.json",
+      "size": 1666,
+      "sha256": "4eecc4b819337d39e62f269ea8df9591eb4c19baf5c17d11770a2991654a3859",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/ranking.png",
+      "target": "projects/industrial-cosine/reports/ranking.png",
+      "size": 112550,
+      "sha256": "a520688675240dc1de41a3ffefaf8858dcc78b35b900f84aa8c1fae86ca1df11",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/result_analysis.json",
+      "target": "projects/industrial-cosine/reports/result_analysis.json",
+      "size": 1742,
+      "sha256": "aec013784034191b7ae2b525a18cd97c58dfd17500eed7447097ad762d947af3",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/training-report.pdf",
+      "target": "projects/industrial-cosine/reports/training-report.pdf",
+      "size": 98122,
+      "sha256": "e0844475498c7ac3cd8c5ead08c367201e68bb7b3bb812366b55e20485106638",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/training_report.json",
+      "target": "projects/industrial-cosine/reports/training_report.json",
+      "size": 46073,
+      "sha256": "48a3f9e50824a333a42f239e9896e236404252292f3ce8dc06922e4199e30e4d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/validation-report.pdf",
+      "target": "projects/industrial-cosine/reports/validation-report.pdf",
+      "size": 40614,
+      "sha256": "965e2aaf604402acbcded91052c6989fee3eead4e931a7a0eb0451093870d732",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/reports/validation_report.json",
+      "target": "projects/industrial-cosine/reports/validation_report.json",
+      "size": 46094,
+      "sha256": "bec2b8ced9d532583c9e601abc8235627006d728942489edaf6b5a8189507b67",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/requirements-h20.txt",
+      "target": "projects/industrial-cosine/requirements-h20.txt",
+      "size": 1555,
+      "sha256": "e1c00c252e8ee865018e887c3715e44e82c966b65a15129c9496902e95007339",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/requirements-report.txt",
+      "target": "projects/industrial-cosine/requirements-report.txt",
+      "size": 90,
+      "sha256": "c899536b0afac63d3da6535de49f4f4bf922ae4713730be8449a69243cebebcc",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/data_preparation_manifest.json",
+      "target": "projects/industrial-cosine/results/cosine/data_preparation_manifest.json",
+      "size": 16412,
+      "sha256": "406ee387be4daa6e93a71abcfaa6116b0ac3a4dd32e25ef377ede26a98a6a8ca",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/evaluation_metrics.json",
+      "target": "projects/industrial-cosine/results/cosine/evaluation_metrics.json",
+      "size": 22420,
+      "sha256": "b05f0f65f1ece5f617401d906120e8977e2df6cce8bafd9080bc3595027e0072",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/monitor_metrics.jsonl",
+      "target": "projects/industrial-cosine/results/cosine/monitor_metrics.jsonl",
+      "size": 2160025,
+      "sha256": "9a730ac951dbb76db14a7025978ba940e18f804cd0ce6044aa79d28de47e6433",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/reporter_revision.json",
+      "target": "projects/industrial-cosine/results/cosine/reporter_revision.json",
+      "size": 1377,
+      "sha256": "975722dd49990e73f09e9ed3b9523385f49f3c2e879fd15b969058722d6f6c08",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/run_config.json",
+      "target": "projects/industrial-cosine/results/cosine/run_config.json",
+      "size": 3558,
+      "sha256": "f547fec5ac09be85a9bc62fa4c6ca3cd6c3e8d6f0240e6965e0d4c50f1071959",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/run_status.json",
+      "target": "projects/industrial-cosine/results/cosine/run_status.json",
+      "size": 12450,
+      "sha256": "1e05eb93fda469cfe67937b4c45c02ffee1953cbe08529efd016b513d64a3d69",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/supervisor_config.json",
+      "target": "projects/industrial-cosine/results/cosine/supervisor_config.json",
+      "size": 1723,
+      "sha256": "491d1669690a3532592a4a7a6e51447480d8208cf19fb8e159ff6101f6c0df6d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/results/cosine/training_summary.json",
+      "target": "projects/industrial-cosine/results/cosine/training_summary.json",
+      "size": 975,
+      "sha256": "c477d83e8cfb2767dfb6824923937f8547c91ce82ac1a440b4f3736ef0a57de4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/rl.py",
+      "target": "projects/industrial-cosine/rl.py",
+      "size": 13881,
+      "sha256": "ad453d4b606159425f01338c56bc9eaf1fb992a0a771836fc598b3067f4a790f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/compare_industrial_linear_epochs.py",
+      "target": "projects/industrial-cosine/scripts/compare_industrial_linear_epochs.py",
+      "size": 19638,
+      "sha256": "11382fab266c553d5c73f10d98a9fcb2cb535e78ac1c1ddc4ee0a3bdac73b388",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/compare_industrial_rl_beta.py",
+      "target": "projects/industrial-cosine/scripts/compare_industrial_rl_beta.py",
+      "size": 24038,
+      "sha256": "97cd9c4b4298139f25417cf56abcb24ccd6ef930d88d56fcb530f9ad6d518487",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/compare_industrial_title_history.py",
+      "target": "projects/industrial-cosine/scripts/compare_industrial_title_history.py",
+      "size": 15896,
+      "sha256": "ae195d808738614376f7e1910fb3e54270d70005fcb2e0b4031e61e4a1118bd6",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/deepspeed_zero2_compat.py",
+      "target": "projects/industrial-cosine/scripts/deepspeed_zero2_compat.py",
+      "size": 3341,
+      "sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/evaluate_sft.py",
+      "target": "projects/industrial-cosine/scripts/evaluate_sft.py",
+      "size": 17285,
+      "sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/industrial_generative_validation.py",
+      "target": "projects/industrial-cosine/scripts/industrial_generative_validation.py",
+      "size": 17719,
+      "sha256": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/industrial_rl_data.py",
+      "target": "projects/industrial-cosine/scripts/industrial_rl_data.py",
+      "size": 11541,
+      "sha256": "25276e5cc9aaea4af94f71d38a010094ed32a13a2d36d90f7a2fc51d7d41eb24",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/industrial_rl_validation.py",
+      "target": "projects/industrial-cosine/scripts/industrial_rl_validation.py",
+      "size": 8446,
+      "sha256": "464dd4b8ee310a9b60ddc935ef19f0ab68f84aca4b103d41881b13493017b6c7",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/prepare_original_industrial.py",
+      "target": "projects/industrial-cosine/scripts/prepare_original_industrial.py",
+      "size": 16353,
+      "sha256": "466c118a53d1064a4c8fea9b2eff337624d9e4cea077e6d632ecfaf5bb4fc5dc",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/report_industrial_rl.py",
+      "target": "projects/industrial-cosine/scripts/report_industrial_rl.py",
+      "size": 41114,
+      "sha256": "7b951eb39076bbee6ccf644c8584ad044cb5d7e7340a380736e7b92373ab6a8d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/report_industrial_sft.py",
+      "target": "projects/industrial-cosine/scripts/report_industrial_sft.py",
+      "size": 33782,
+      "sha256": "329396d8e5698571569bd22c35d0e7ea4afe2581858ba0e0000a3e8f03d2cb18",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/sft_eval_utils.py",
+      "target": "projects/industrial-cosine/scripts/sft_eval_utils.py",
+      "size": 14835,
+      "sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/sft.py",
+      "target": "projects/industrial-cosine/sft.py",
+      "size": 42614,
+      "sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/sft_monitor.py",
+      "target": "projects/industrial-cosine/sft_monitor.py",
+      "size": 23877,
+      "sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_deepspeed_zero2_compat.py",
+      "target": "projects/industrial-cosine/tests/test_deepspeed_zero2_compat.py",
+      "size": 3966,
+      "sha256": "8b57d1721c32d84993449e354f56643cc4d81351c4951c3ee43515b19462eff0",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_experiment.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_experiment.py",
+      "size": 7253,
+      "sha256": "a7977883bdb1bd8968b1ba23d0e8635733fb12d41299e93245392c249dccd025",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_generative_validation.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_generative_validation.py",
+      "size": 8982,
+      "sha256": "3c3b68f7fdb518f746a54b70ac4f7a281f3b36e80a16d7668e62dcdc2527cc4a",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_reports.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_reports.py",
+      "size": 9040,
+      "sha256": "36f2329423df15a07621a05f653ce760627b5df76c00206491d3e81637d78157",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_rl_beta_comparison.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_rl_beta_comparison.py",
+      "size": 10059,
+      "sha256": "a11f0f30f0cb82774e6dc89fde108672add3df4ba10656a74cf52456e7969078",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_rl_beta_queue.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_rl_beta_queue.py",
+      "size": 6366,
+      "sha256": "c8b5afc898a587ead276737213461cf62402ee412e40e87a542425597b246b59",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_rl_core.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_rl_core.py",
+      "size": 9864,
+      "sha256": "79f32b374b13972a2b77d9c5f25c87c127d8544e786c89d9de2a08187b64c7b8",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_rl_experiment.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_rl_experiment.py",
+      "size": 17013,
+      "sha256": "4ed57118dd11b483ac4e7110f1329c1c055c92afb6bb2f811b95e75e75459015",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_rl_reports.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_rl_reports.py",
+      "size": 26953,
+      "sha256": "69e71de107358ef0f3b4587a3ad09e3db2ffbafda0ea0d790d425d319566ebf3",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_industrial_rl_validation.py",
+      "target": "projects/industrial-cosine/tests/test_industrial_rl_validation.py",
+      "size": 5860,
+      "sha256": "94331fbdc181a908c8dda94f68db8694bfc38fb27dcb35e4fcce6b36b17ed334",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_linear_epoch_comparison.py",
+      "target": "projects/industrial-cosine/tests/test_linear_epoch_comparison.py",
+      "size": 12488,
+      "sha256": "0b2f63a191c0a9c6eedafce56ae2b0801d3e4a90d090fb5c5fef5110e6e80566",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_loss_only_reports.py",
+      "target": "projects/industrial-cosine/tests/test_loss_only_reports.py",
+      "size": 5925,
+      "sha256": "5f8748289851f66b090b9c3fafd38c0bcaef94911dc7836423219b876bda44bc",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_prepare_original_industrial.py",
+      "target": "projects/industrial-cosine/tests/test_prepare_original_industrial.py",
+      "size": 5722,
+      "sha256": "d786e1fd4b3aa1acbe57145fbbc1078e63c611856d7807bb87b5f568861e3a6b",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_selected_run.py",
+      "target": "projects/industrial-cosine/tests/test_selected_run.py",
+      "size": 4253,
+      "sha256": "5cd267bac4b539a67163ef5904f8bfdc95731d54d2d36b25cf92be341159cd3e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_sft_epoch_snapshot.py",
+      "target": "projects/industrial-cosine/tests/test_sft_epoch_snapshot.py",
+      "size": 9116,
+      "sha256": "ecb9f5ec9427e44e09037542ee05919068173d15b4944c105ec6b098947748ec",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_sft_linear_loss.py",
+      "target": "projects/industrial-cosine/tests/test_sft_linear_loss.py",
+      "size": 5390,
+      "sha256": "740ea373724aad33dfe30d0310cf28a9595b539e9774724ddd09d74edb5842b4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_sft_rank_selection.py",
+      "target": "projects/industrial-cosine/tests/test_sft_rank_selection.py",
+      "size": 7015,
+      "sha256": "cc64335df46bd3086076bfd0975ac84514e5a83544414075372bc7acd354bba4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_title_history_comparison.py",
+      "target": "projects/industrial-cosine/tests/test_title_history_comparison.py",
+      "size": 10975,
+      "sha256": "eb83f92054e5a577ecd8e1ad5b06855b7459487b9ac12401ce8f6e33e345c13e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_title_history_supervisor.py",
+      "target": "projects/industrial-cosine/tests/test_title_history_supervisor.py",
+      "size": 7727,
+      "sha256": "ffc81d14728b562b3c3181ae9cf791108aa1512b5fac1ee612e403b50f4407ed",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/tests/test_title_history_task.py",
+      "target": "projects/industrial-cosine/tests/test_title_history_task.py",
+      "size": 9207,
+      "sha256": "f3b0a6663bede6dcad16f05195fbf32c454f5e0fb4590d3828753654d9321860",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/.dockerignore",
+      "target": "projects/industrial-cosine/unisrec/.dockerignore",
+      "size": 85,
+      "sha256": "42d217778a56b11baaf4ed2ddeef2f0923a6102caf4f3745b835f64954e6b5ab",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/.gitignore",
+      "target": "projects/industrial-cosine/unisrec/.gitignore",
+      "size": 66,
+      "sha256": "4079ef30717e1c5b389c2a59a7a3911afd9df9d41d0bbd7849e135f7cef505f6",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/Dockerfile.qwen",
+      "target": "projects/industrial-cosine/unisrec/Dockerfile.qwen",
+      "size": 292,
+      "sha256": "f528928f6b885d4fc62ee7051f64a4921438dcca555a43006ceb0d23feb05638",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/LICENSE",
+      "target": "projects/industrial-cosine/unisrec/LICENSE",
+      "size": 1065,
+      "sha256": "8381241a5b9d2ed0933f35d7542aaa1892e087bdafdfda9acf6e53a62e569333",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/README.md",
+      "target": "projects/industrial-cosine/unisrec/README.md",
+      "size": 18666,
+      "sha256": "c7bd95a432b6c06a30b2089d67168bd1aa1f974d4acb3fdb32afa344617480ea",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/README.upstream.md",
+      "target": "projects/industrial-cosine/unisrec/README.upstream.md",
+      "size": 4674,
+      "sha256": "e358a80c7eb1545d34ae3147174749c6e2a752278e8e2f1d0cc3b5e50eca8f16",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/UPSTREAM.json",
+      "target": "projects/industrial-cosine/unisrec/UPSTREAM.json",
+      "size": 433,
+      "sha256": "94b70b407e7ee1db632d2cf729b2f778411edff2530f3b1fffc6967507164ef3",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/active_run.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/active_run.json",
+      "size": 3326,
+      "sha256": "a33a74caed93e6a6192d8ce3fb42d0797bebab1ea34ff26b56b1f3eb155b28f2",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/cleanup_20epoch.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/cleanup_20epoch.json",
+      "size": 12047,
+      "sha256": "821da5a358f5b9c75c4497beaab013a4cfe984e0bb20e69ae3b642d577308ea4",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/ddp_preflight_cpu.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/ddp_preflight_cpu.json",
+      "size": 2600,
+      "sha256": "ae22a6095654a995bffd078c80318a3fc3fc6d66fd0ed0d3e6e1f13766156970",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/model_selection.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/model_selection.json",
+      "size": 4156,
+      "sha256": "1862584dc78fdc25b0269bad9166a3cdd828a5abf812aa8c17b228e543882a0a",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/model_selection_pending.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/model_selection_pending.json",
+      "size": 6590,
+      "sha256": "dbd27eef20697efa45d7a3c6159bca902e3b098ab98bd3e3144bb34b3acba442",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/preflight.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/preflight.json",
+      "size": 1545,
+      "sha256": "fe7a59fd29798036c8d6f859e492aed844a7603b701b11ff5e6b02063bd1bfa9",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/preflight_4gpu_config_cpu.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/preflight_4gpu_config_cpu.json",
+      "size": 1545,
+      "sha256": "fe7a59fd29798036c8d6f859e492aed844a7603b701b11ff5e6b02063bd1bfa9",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/run_history.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/run_history.json",
+      "size": 14057,
+      "sha256": "6a81007e12fd2838cb28b047eb9304c484341554f2a5f90be1ac851b036de9bf",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/tests_4gpu.xml",
+      "target": "projects/industrial-cosine/unisrec/artifacts/tests_4gpu.xml",
+      "size": 7482,
+      "sha256": "160e55fe11d08c70f674da742795284e1a0ada276d95543e50118e2c4137c80e",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/tests_vector_quality.xml",
+      "target": "projects/industrial-cosine/unisrec/artifacts/tests_vector_quality.xml",
+      "size": 12402,
+      "sha256": "266db50741f1cecb2c85f1b5cad11607c7228f6a811bda56b3b38f1ffce70146",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/validation.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/validation.json",
+      "size": 825,
+      "sha256": "90588173721ca3d5c0489f3d1cb249e77d0ebaee630e97c8c6bfe87d17e1178a",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/validation_4gpu.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/validation_4gpu.json",
+      "size": 1917,
+      "sha256": "8c423d4a023f2121b059ad263d68b32888aac5f5985c199e887ffeae07e4594f",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/validation_vector_quality.json",
+      "target": "projects/industrial-cosine/unisrec/artifacts/validation_vector_quality.json",
+      "size": 2153,
+      "sha256": "4fa6794f445de9e3305a1da44eb87f40cb2586c8852126841a18a379d37e122f",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/asset/model.png",
+      "target": "projects/industrial-cosine/unisrec/asset/model.png",
+      "size": 403806,
+      "sha256": "3a20d57db72b61841ad9658f60f99b05795687c50b086a7e7b2f8b429c03622e",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/baselines/fdsa.py",
+      "target": "projects/industrial-cosine/unisrec/baselines/fdsa.py",
+      "size": 7953,
+      "sha256": "cfc0c36658615e291d1f9e9b217414d0c3c411c21db89ba8eee39178ec1d0cfb",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/baselines/s3rec.py",
+      "target": "projects/industrial-cosine/unisrec/baselines/s3rec.py",
+      "size": 18268,
+      "sha256": "16e828bbf115535045fc13dabfdedb377dddcadb60831061dd5bfc9fda401c3a",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/config.py",
+      "target": "projects/industrial-cosine/unisrec/config.py",
+      "size": 483,
+      "sha256": "04b6f19383b11d5550958c590d784a4a508b738254ee178d20137e38627a8a41",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/dataloader.py",
+      "target": "projects/industrial-cosine/unisrec/data/dataloader.py",
+      "size": 991,
+      "sha256": "ef5377f81dc106355dda8491729ce9bb08365968509901c3f7a50f19e3f13a46",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/dataset.py",
+      "target": "projects/industrial-cosine/unisrec/data/dataset.py",
+      "size": 2744,
+      "sha256": "cace95ca44f166168c68ccf37fda8bf2dc27dce09e400cf6a4955a063025769b",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/transform.py",
+      "target": "projects/industrial-cosine/unisrec/data/transform.py",
+      "size": 2616,
+      "sha256": "ec81e9da873bc973fb893c52d731840d48ed82eb7d2a6a023ada5062dd392cb0",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/README.md",
+      "target": "projects/industrial-cosine/unisrec/dataset/README.md",
+      "size": 3069,
+      "sha256": "7d80c7d033386ff1bfebc1ee357bb7a2b6b0e4103bc5bf817989d6ffaec8d0e5",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/process_amazon.py",
+      "target": "projects/industrial-cosine/unisrec/dataset/preprocessing/process_amazon.py",
+      "size": 15291,
+      "sha256": "9245735fb19a5dc6e2391027562fed9f51f32df20b3259c0bba051c46604beb2",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/process_or.py",
+      "target": "projects/industrial-cosine/unisrec/dataset/preprocessing/process_or.py",
+      "size": 5110,
+      "sha256": "d24e0f70b95af4652410cf909d21d32c3a10114bd1858b8a0648ea3688e216c7",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/to_pretrain_atomic_files.py",
+      "target": "projects/industrial-cosine/unisrec/dataset/preprocessing/to_pretrain_atomic_files.py",
+      "size": 2619,
+      "sha256": "dd0496e1ec6d2b00716e5da1e54fa108e8b9bbd49058baf67c6fbb03a1a5952e",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/utils.py",
+      "target": "projects/industrial-cosine/unisrec/dataset/preprocessing/utils.py",
+      "size": 1549,
+      "sha256": "c73afbb8477cbc3709a4840a1a72f20a2b1511c4f2745ec3c1bf0a2c36e6d5d2",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/ddp_pretrain.py",
+      "target": "projects/industrial-cosine/unisrec/ddp_pretrain.py",
+      "size": 2275,
+      "sha256": "d88c330da48893e3a5488996366d88577f7de95a9c14be1193ad205743da6675",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/finetune.py",
+      "target": "projects/industrial-cosine/unisrec/finetune.py",
+      "size": 2876,
+      "sha256": "4d703ec8457156f36f72e39886b546ad9aa1cbf9db2ac3286e9ab9e5e2cf3f40",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepare_qwen_data.py",
+      "target": "projects/industrial-cosine/unisrec/prepare_qwen_data.py",
+      "size": 20090,
+      "sha256": "575929a399b1b8feb022e2f64cca07dbd89f3c99ea4ef71017e79f5d80aa3221",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/pretrain.py",
+      "target": "projects/industrial-cosine/unisrec/pretrain.py",
+      "size": 1578,
+      "sha256": "bd7a1af7325469920cfa9b1fb74c26e6b57446e862d36518299c06d048e5b809",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/FDSA.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/FDSA.yaml",
+      "size": 298,
+      "sha256": "c14318e9a2f20d7ec979d9ad84415222d6ffac17118a46c6cf5b92998a76df5c",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/S3Rec.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/S3Rec.yaml",
+      "size": 453,
+      "sha256": "2f69f9accfb5dc2b7721f03174d06d56715dfa34a02f9ca77b13a11cc35da02b",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/UniSRec.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/UniSRec.yaml",
+      "size": 462,
+      "sha256": "543fed9f45ef133ada18efd5659052055ceb284add23a4ebf2adc001691a4cf5",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/finetune.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/finetune.yaml",
+      "size": 304,
+      "sha256": "bc2e60fcae1046ec481e44aa5f047446e7764b060a9467b2ae363849c6683bbb",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/pretrain.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/pretrain.yaml",
+      "size": 277,
+      "sha256": "a43eb190a8bbcfa5420fe8ed8e904864976105bb50e243ebfb9adff826ee8932",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/qwen_industrial.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/qwen_industrial.yaml",
+      "size": 1157,
+      "sha256": "5842d35e2484af8f384071896d9968e9fee84efcad9eec8fbf00cbbe9703ab5a",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/props/qwen_industrial_4gpu.yaml",
+      "target": "projects/industrial-cosine/unisrec/props/qwen_industrial_4gpu.yaml",
+      "size": 1433,
+      "sha256": "aa8c90d651450eb2d10d3a72aae30d0dbeca5e5a1519815a3667ed94027a506b",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_dataset.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_dataset.py",
+      "size": 4414,
+      "sha256": "3891a64849edf7eaa0fcd0eef56225211108d9f0537b3e499faf29291e093182",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_ddp_preflight.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_ddp_preflight.py",
+      "size": 6193,
+      "sha256": "aac92cc72db496e126949fcf4f45c8ccf4e1e2307eca7dab2150278eb7e45d22",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_model.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_model.py",
+      "size": 5935,
+      "sha256": "5a2678ffd56f03547cb5a61910f4a3f7a8e8b1b23cabb4aa102cbf3aacb84f13",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_preflight.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_preflight.py",
+      "size": 3430,
+      "sha256": "861bb9133d7ee176331c13561d0c848b0b6d802894393f0306012ade78ee1027",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_retrieval.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_retrieval.py",
+      "size": 16437,
+      "sha256": "e950001c733156e721bf67e6e796c1a3e56926783b9d606520f7430f219e6de8",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_runtime.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_runtime.py",
+      "size": 12830,
+      "sha256": "9978de6787ac65bd807180b3b5e3df04625de3d3cb6caf4455265a3667fbe48f",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_schedule.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_schedule.py",
+      "size": 1922,
+      "sha256": "46335159037237e0d8603293da846e5d796e8d0306778f1e1266b16339771c16",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_train.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_train.py",
+      "size": 12272,
+      "sha256": "1200a60c2ef3c89cfb8c9026500e46da96975724ce001cd434f3c3d403aea10e",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_vector_eval.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_vector_eval.py",
+      "size": 11281,
+      "sha256": "90ed428d5783067cb6d6456e0e71b1a7ffef10da2597941c168fd7c0053dfb8f",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/qwen_vector_metrics.py",
+      "target": "projects/industrial-cosine/unisrec/qwen_vector_metrics.py",
+      "size": 9778,
+      "sha256": "5af62384312c439e50a0342b1e09a9c8935f65af5ac01dacb9d688a4482fd931",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/requirements-qwen.txt",
+      "target": "projects/industrial-cosine/unisrec/requirements-qwen.txt",
+      "size": 199,
+      "sha256": "ab4e861733a98fb625373f902628a3e0ebcb9f53b4dcd89e0fd0cda095e28982",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/run_baseline.py",
+      "target": "projects/industrial-cosine/unisrec/run_baseline.py",
+      "size": 3008,
+      "sha256": "15c0fafa4523bd864e71b176556be5bff0a5f96b0757a34f7a0a3331458820d0",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/saved/README.md",
+      "target": "projects/industrial-cosine/unisrec/saved/README.md",
+      "size": 263,
+      "sha256": "98f9b08d7c48c33d45ce2a4ed8c5274af3744a879e9489e1c663d452f715e1ea",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/analyze_training_run.py",
+      "target": "projects/industrial-cosine/unisrec/scripts/analyze_training_run.py",
+      "size": 19243,
+      "sha256": "b6ea2d699e46755daf212e336abc7c0dc5168ad01f8f0fe72a05d821900434de",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/monitor_run.py",
+      "target": "projects/industrial-cosine/unisrec/scripts/monitor_run.py",
+      "size": 10429,
+      "sha256": "ea6eb62e5c3bcc439b3afca574e06b9bcf3a7c54d1c1ef6fbcdb76f07b0c23ed",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/plot_training_analysis.py",
+      "target": "projects/industrial-cosine/unisrec/scripts/plot_training_analysis.py",
+      "size": 4790,
+      "sha256": "cec9635e7fa5b192da75b2b35b4c5f510487a97ab4d82a5febc52a95df665470",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/run_4gpu.sh",
+      "target": "projects/industrial-cosine/unisrec/scripts/run_4gpu.sh",
+      "size": 1123,
+      "sha256": "b53047f4f077a5860f70290af776edac8abb99ef29c74f6584914ef988806a98",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/summarize_run.py",
+      "target": "projects/industrial-cosine/unisrec/scripts/summarize_run.py",
+      "size": 12829,
+      "sha256": "f9aedebf8cbca3a310cf1ebc998faf26335d0da153e77482762a6ede0c1cff69",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_prepare_qwen_data.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_prepare_qwen_data.py",
+      "size": 8350,
+      "sha256": "7a1abb84606ae71b2917e7415c93531377b0b844c8328b7a829f8136af3b99a4",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_ddp_runtime.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_ddp_runtime.py",
+      "size": 4787,
+      "sha256": "724c9d225006bd45bca2aadc9c5ff2032c6156b41cab7832e435a2e0ece73b7d",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_ddp_trainer.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_ddp_trainer.py",
+      "size": 8069,
+      "sha256": "fe6009f05cd8bba67c855e01a206596a40098d7aeaaa3dac740edee48c32730e",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_model.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_model.py",
+      "size": 5895,
+      "sha256": "4e0814113e9947601b46185a2156193f1f2e61df357fd89acfc288fd82da4326",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_retrieval.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_retrieval.py",
+      "size": 8578,
+      "sha256": "a2a9eb02d11687a87807776550e9c3afd6a468c03e678eb76ed7bf91829dc7f3",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_runtime.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_runtime.py",
+      "size": 2110,
+      "sha256": "85774a78831415156afe55a2ffdc4fc5ad0e52f14318cfd77b52c74f5703f3d3",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_vector_eval.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_vector_eval.py",
+      "size": 8902,
+      "sha256": "bbd65388c0aeafa25837f2aff37d24c4711a1ab8e236dbaef5b7498700a939df",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_vector_metrics.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_vector_metrics.py",
+      "size": 5888,
+      "sha256": "84732f464920765f4037084ec2787e12c88000b17e76f530fde790efd1f67183",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_qwen_vector_training.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_qwen_vector_training.py",
+      "size": 3689,
+      "sha256": "ee362bff867897d4df2cfd51ebb0ad60cd841f1440be436d88fa0a015a0c874d",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/test_training_analysis.py",
+      "target": "projects/industrial-cosine/unisrec/tests/test_training_analysis.py",
+      "size": 2446,
+      "sha256": "5e8a87ab03df98dda212a48d5a1e18e6a5ffdb56d1cf485697c3536ac0548248",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/trainer.py",
+      "target": "projects/industrial-cosine/unisrec/trainer.py",
+      "size": 5736,
+      "sha256": "8f64f2ce94880603f411c880fb377795fb406eff72a0d837ed2b6b017f12425b",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/unisrec.py",
+      "target": "projects/industrial-cosine/unisrec/unisrec.py",
+      "size": 8095,
+      "sha256": "9a8d83a5031164daa3bd53f5951aee8016b6410e24663f25da20066c9afac211",
+      "selection": "UniSRec source and small artifacts"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/conditional_metrics.csv",
+      "size": 4009,
+      "sha256": "b8bc024d99d7af20c6c47f4f823f1a596574152927b8bb4c9934878f2903faa4",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/grad_norm.png",
+      "size": 44231,
+      "sha256": "f43f8f9b516639a22078d1bda21a3b12d09fff026b2f09a890be759dc02dade6",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/index.html",
+      "size": 4788,
+      "sha256": "5ea209009b4507ec33fce92d5fdd5c656c498fae4f224825bc795ac9785e7320",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/learning_rate.png",
+      "size": 67475,
+      "sha256": "cf4dcb62462379a9996a14d9b0a8b76e12ad8a9889083c1aa2acecf6dd17bcea",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/loss.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/loss.png",
+      "size": 69250,
+      "sha256": "23fcd2e2f0b0e137ff161dea441d65673b6f1f904b05829d955ff4488f76d0aa",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/ranking.png",
+      "size": 107232,
+      "sha256": "3a013ab8c1e78d064320e65ac013a7ac301419a5c686032a3ae315720346e30d",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/training-report.pdf",
+      "size": 132000,
+      "sha256": "12e67f1b8756edf748ad2031b499346c7870b2dec13ce98a1b95b074f932b2b8",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/training_report.json",
+      "size": 43273,
+      "sha256": "d9ffa8b33feea249bc1d9314984fa0b77d026d18ac2fc8200aa15cfb72f9bc37",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/validation-report.pdf",
+      "size": 40406,
+      "sha256": "69ace406129558611c483c9ee503bd959a232270ef901ba55e468784dd6383bb",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/baseline/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/baseline/validation_report.json",
+      "size": 45178,
+      "sha256": "d2151cf577d1e1b77f36e8fd795758f74a4b8c6ddbd79fc82f2bcdcc5623f46e",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/comparison/comparison.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/comparison/comparison.csv",
+      "size": 4726,
+      "sha256": "630f9f3fb88715e69bef8c5726cba454c05a4319be64ee0416d8bd3e45f6a633",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/comparison/comparison.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/comparison/comparison.json",
+      "size": 18391,
+      "sha256": "ed588698500ca0cad83eea6891fe3b8de33d162e4b8e5163748eb5a0301ba2c7",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/comparison/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/comparison/index.html",
+      "size": 8526,
+      "sha256": "dd1c56dadf81be253b43f3adde6eb564991d4405f23766b5a220fe55c4efc186",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/conditional_metrics.csv",
+      "size": 3987,
+      "sha256": "2a28087212b86ff8763c2ff3d8f4a6ad0011a7399a90a009ab3b6e2382dfe470",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/grad_norm.png",
+      "size": 49835,
+      "sha256": "bf91b4cdda94c3cb15aa5ae676f27616d1329a38be746babd83e6f7259816ac5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/index.html",
+      "size": 4800,
+      "sha256": "080f934f7d5b0d6547dc7258c5b95220ed52c74147db07bef456a91e061f311b",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/learning_rate.png",
+      "size": 68579,
+      "sha256": "5447189de71d6f3b6f870afa65bc8a60743ad753a02ddffdf69a8ea52811aeeb",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/loss.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/loss.png",
+      "size": 68236,
+      "sha256": "e21461d53e5d0d9e5f2dce4f9cb3ee2b34465f26d3f331bd64e2c34e1f7d3751",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/ranking.png",
+      "size": 109095,
+      "sha256": "010fdc19d9f5b10250cb5c92d3b0c7b9982b914ab8562559fcac4b925d931335",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/training-report.pdf",
+      "size": 208630,
+      "sha256": "81d2f3e0036b2d8220c52b65be965ae1f50dabf5ec2f073593bbd442002393b9",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/training_report.json",
+      "size": 43956,
+      "sha256": "1d20af74ceef7947982c8bcc9975ee6c4aad1e1de0d109ceb7a0d3fc9d561a38",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/validation-report.pdf",
+      "size": 40626,
+      "sha256": "27a8bfe3140bb8dd215ca5904941c5c1ae845dea286af25eba34607db7ffd343",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep10/title_history/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep10/title_history/validation_report.json",
+      "size": 45452,
+      "sha256": "d4c9481ef6d2a8243aaf238199a15a8981b53a8812ad2401906f5bdb6b7f43a9",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/conditional_metrics.csv",
+      "size": 3993,
+      "sha256": "8ecfd020c129f0bf9f99bf9b52eedb9b370f87bc4702fc0ad95fb2b3ef41c97e",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/grad_norm.png",
+      "size": 58413,
+      "sha256": "ddc8bd79d0efd419c797eb556bdb13d5cfb0854224cacfe057513d5f71182477",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/index.html",
+      "size": 7134,
+      "sha256": "6153cbafec17c4c1bc84f7672bb62bddf2dd16571889186c0d8f06872db8a71f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/learning_rate.png",
+      "size": 69495,
+      "sha256": "295c52ccc73d0d6fcef7d10628b366ac1003a2569e65baafaa1a98e30b1f6add",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/loss.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/loss.png",
+      "size": 72656,
+      "sha256": "d64da2961e7429a4cbc463c6dbf6204351b1df3fe5685f72e242e053ebaa1636",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/ranking.png",
+      "size": 109589,
+      "sha256": "c9051d4cfb44a5036250c22f769f9acbeca677e610b0ba81b256c10b0fc2deea",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/training-report.pdf",
+      "size": 153964,
+      "sha256": "0563f559f6d389e932d6d06d818bc3a5e7fd4530ca087658cfcdd88b0bfad9dd",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/training_report.json",
+      "size": 78429,
+      "sha256": "4a4d91c1fe773cee48f8ca0f35993f05ba4ba94126c6f5767d87dd0199eec34f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/validation-report.pdf",
+      "size": 40633,
+      "sha256": "102d1ba4b806552ffb5efa13131f1c8b55a8b2828b1ef35ad2a3a230612444f6",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/validation_ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/validation_ranking.png",
+      "size": 72709,
+      "sha256": "98851b82ffd256bcca295e38d9aea531b2151794aae175360f72b709b5e2de96",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_cosine_ep5_title_history_rank50/validation_report.json",
+      "size": 49484,
+      "sha256": "59a04eec518a93f45750669fefd0757c7461077c0999409b8f2bb06b42a378af",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/conditional_metrics.csv",
+      "size": 35,
+      "sha256": "81af65c2f0117a93ceed0c46008e6e22e092c365c9c59ab815da3a1b5658e282",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/grad_norm.png",
+      "size": 75693,
+      "sha256": "f5b9d370f0d36c2af67ec7916ca4a58fe6c5f5e775886ed9ea70bdc2d4ed4127",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/index.html",
+      "size": 3535,
+      "sha256": "9e09e3721414dee8dc0efb15b3849255c9893bc2c46cc660fe0f206918dd7044",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/learning_rate.png",
+      "size": 47203,
+      "sha256": "7a4b97185ab555a61d13f090410aa21b6a474577db188b08a67f75e81b69b1b6",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/loss.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/loss.png",
+      "size": 105477,
+      "sha256": "534aa2ac4fd8e85f39e64b2abd01b4090fc8d0d55c5a4f03becf38b38a1ab350",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/ranking.png",
+      "size": 44770,
+      "sha256": "0a898b6d6b17be693a90af01cbcd1d485fb6b681f450ee1416752def4609543f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/training-report.pdf",
+      "size": 42463,
+      "sha256": "68aad30dad7c2b916ee680dca952610cef39fed948ec33c48f29bdead947429a",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/training_report.json",
+      "size": 31859,
+      "sha256": "98a2b791e2c5ba4e2aa51048872507ce1e95cd9e98e0f32ed174f7498f039b1f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/validation-report.pdf",
+      "size": 33634,
+      "sha256": "d22cc6c9af8b9605195a283c4583da339e3aee8ad2cc5719ab38ed14d53dbcd1",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history/epochs3/validation_report.json",
+      "size": 8846,
+      "sha256": "0bbff99ffccee76a886e1950340f34458fe57f1a319ffe5bcb16a14133e15578",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/comparison.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/comparison.csv",
+      "size": 12383,
+      "sha256": "f53ef8a32e65b356bfb54a4db71cb42591062647e933f44b733f16e8fc723cd9",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/comparison.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/comparison.json",
+      "size": 48391,
+      "sha256": "85c2544564c4dc6810f2fcb743ca8647a2cbfd3cac54fc70607d42667b2171b5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/index.html",
+      "size": 22577,
+      "sha256": "db87d7a9fc6e39662abfb8003d3b26577c7daadb3a3f7bd6812840a59adfcb3a",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/conditional_metrics.csv",
+      "size": 4051,
+      "sha256": "1bd03dea02542e9ede990869ee18eb4ce55bf2290285804b6df13c53383e2d92",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/grad_norm.png",
+      "size": 57175,
+      "sha256": "28d8bd970f27b65d3b40fdba4dce16f4a8cda230ae20db6906ad9ffd3ea734b9",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/index.html",
+      "size": 4817,
+      "sha256": "c77e5f1d52b1a6c3cc93a51209f34ca52f38a1358123f4dbdf9417cf2c24de84",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/learning_rate.png",
+      "size": 70982,
+      "sha256": "50d10f98ce4bf90461260f9b0b9e85e04ac20161b2a8646b2b39062b84ab959f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/loss.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/loss.png",
+      "size": 75118,
+      "sha256": "8fe657a5629ed20e387a4f573abc1a48bd90229bbbc124fb15c239735fade5ed",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/ranking.png",
+      "size": 110856,
+      "sha256": "55da84c716cb3b3a97e4ec60a5a07e029573bcd717f8eab8a2292b13d856d48b",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/training-report.pdf",
+      "size": 117519,
+      "sha256": "c52e90f0656cebbbf6a0a9a14171fd0b930a457c38d8f17ac8ccc8fd9772c30a",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/training_report.json",
+      "size": 48838,
+      "sha256": "49b6988f98b2d9d85cb1944313480fb82c7d25e8f96367e8e7c38f4f22b9d31c",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/validation-report.pdf",
+      "size": 40430,
+      "sha256": "cbb2838b2bc1a496a8d4ef751f06ea0c81c4b1e7ad6ec431c38b79b7d5f1dfdc",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs3/validation_report.json",
+      "size": 47928,
+      "sha256": "b811ae1bb97dbe585ae4652044045b81d6950da5be7fa448b2b7598364331281",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/conditional_metrics.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/conditional_metrics.csv",
+      "size": 4062,
+      "sha256": "3ef5df3b696e8d119b32ca6e8cb52b491f017997f53a909946706ecb045c25b0",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/grad_norm.png",
+      "size": 57652,
+      "sha256": "20d0898e6984e8722502b0229d8d8a5188a466ae35ef4aed2681bfad6f3eb82e",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/index.html",
+      "size": 4817,
+      "sha256": "2320508a195e13d9edb78ad198f6a43a7389f799e0956d49a6ce896d0a4f5d43",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/learning_rate.png",
+      "size": 72103,
+      "sha256": "14814823d7093382d5bca99915a20d45f4be9d5d72e3f7fa9a577da5aa09c2cc",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/loss.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/loss.png",
+      "size": 70812,
+      "sha256": "7fb30e10b578bac04ed32f10d6df96978721e80cea61bb91d637620980a5ef0d",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/ranking.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/ranking.png",
+      "size": 110040,
+      "sha256": "2ca5d9541bdfcc17d1e269591005e160d852e4e56ddea5fb2f8a26ed87d2216b",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/training-report.pdf",
+      "size": 163331,
+      "sha256": "c3df6bc3c10b8206107074a8ccb8c61201d28b708aaf429ddb375a3cb9e2ec97",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/training_report.json",
+      "size": 49645,
+      "sha256": "05ab8f8ee85e2f0c4e174b5231208e3cb6f2b3a51d02d491eed838f25d5ae469",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/validation-report.pdf",
+      "size": 40717,
+      "sha256": "1197b7c4f9985b8495b8bfbeb283976ece85f33c380e1b0938fb76330d6af3a8",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5/validation_report.json",
+      "size": 48141,
+      "sha256": "a21fdc458e2758a4f0efab06bd737208464131d1cccf9e8271e24289948bddee",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/comparison.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/comparison.csv",
+      "size": 6771,
+      "sha256": "b8c81673ee1742ecc3d5bdc0e6031c12763cc3767f3f5a3c9497ed8a2bafb3a2",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/comparison.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/comparison.html",
+      "size": 14489,
+      "sha256": "a9e5b2416e8fefed6b9095a1af9e213a34fb62201756bb175b5251107ffe263e",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/comparison.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/comparison.json",
+      "size": 65548,
+      "sha256": "355a2ad4a652fffa8c28e45834098a44035c1bb31c09ac642d32a671472bab96",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/grad_norm.png",
+      "size": 61199,
+      "sha256": "0c9e2c6eaf6d8af5868cf2b1cd1d24875b6698b296052445515ff059e25bfaed",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/index.html",
+      "size": 17322,
+      "sha256": "c9d537d2274e6e4091e9164f1c058c3f10a242b4234e7c03aa97e2a0248f7755",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/kl.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/kl.png",
+      "size": 84780,
+      "sha256": "b1f6f4061449c3313ec6082a2fe259e2fff524713b614b12b91f77c393e98b12",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/learning_rate.png",
+      "size": 55132,
+      "sha256": "65fe9a43b42920ea5538f342e349a912c460384769af48d1ec8114d4a5c52cbf",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/reward.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/reward.png",
+      "size": 149627,
+      "sha256": "a12b8121f4fb0bbc938942fc301ac1910cfa3423b9f05eae2e7b17eae8c9c3c3",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/training-report.pdf",
+      "size": 125944,
+      "sha256": "3795452832d92dc34eb9adf145a034857e84a5390b4b19eb5ef6488bf62dfd5c",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/training_report.json",
+      "size": 51784,
+      "sha256": "4494afc378ccb1297dee17c3c033785556235114c7fd7d4ec5a5f6acfcf36448",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/validation-report.pdf",
+      "size": 37702,
+      "sha256": "269777294229b6d97791adf51c173f9f34d24662c95b1b021ef6052667d3c5e8",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/validation_ndcg.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/validation_ndcg.png",
+      "size": 55808,
+      "sha256": "31c6ee61bb690d31a6be64a5a3faae8dcf06f925d59ad71a6ac3289e9d7d2fc5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/validation_report.json",
+      "size": 36291,
+      "sha256": "5937362eec637e1e9b068936d6add99a63782818fbe6c10ec9bef9e434eab373",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/zero_reward_group_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta0p01_20261118/zero_reward_group_rate.png",
+      "size": 211332,
+      "sha256": "072dba1ed034908e8e56b982ad8d5901b3d97ab076d471ebb31df827ed71ecec",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/comparison.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/comparison.csv",
+      "size": 2438,
+      "sha256": "bcbf7354ba48aa87e0cb1ab0791c6961f3e792792ec569ef59707fd594fb2dcd",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/comparison.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/comparison.html",
+      "size": 7366,
+      "sha256": "cd699ca7fa0f97a2a23a03f8bd0a3bb87144903cbeabb8dc6985b38128e0d416",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/comparison.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/comparison.json",
+      "size": 20652,
+      "sha256": "92cde433f5a77e9fbec29f887a51c683b0b5a2620bccf2732e8dabb4aaf3e99a",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/grad_norm.png",
+      "size": 84660,
+      "sha256": "a244116a73c948e13487c9290a29397ad1fa9ba1be3fc7f2695d59934ba72771",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/index.html",
+      "size": 7366,
+      "sha256": "cd699ca7fa0f97a2a23a03f8bd0a3bb87144903cbeabb8dc6985b38128e0d416",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/kl.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/kl.png",
+      "size": 134162,
+      "sha256": "199cea8811d0aa44de53ac0649b4d21ec6efde9760e39a6c4f61e502fe4e30c5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/reward.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/reward.png",
+      "size": 273637,
+      "sha256": "f73d437864da64ef6c8ed59a7400686a0de7021ac3703b49d6385227e4197e50",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/rule_reward.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/rule_reward.png",
+      "size": 266096,
+      "sha256": "9b0b66a3733d84498e08ad618eaae9bbc632a71ba9c26b616e6586c0ae57a5f2",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/validation_ndcg.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_beta_comparison_20261118/validation_ndcg.png",
+      "size": 89682,
+      "sha256": "c8d0d7e6c38b892d3c73d2d4057c825e73ff6d9991e2acc282e0213ab20fdb6d",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/comparison.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/comparison.csv",
+      "size": 3517,
+      "sha256": "4e4a2b405c01e54393cb0bc3ff463bfa47a8bb7873ca33dfeca3fea33dd616bb",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/comparison.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/comparison.html",
+      "size": 10169,
+      "sha256": "0f72fc0bc649b6adfb4c425e04a71897865b6d85781803da3b8e69c63cc8d104",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/comparison.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/comparison.json",
+      "size": 58036,
+      "sha256": "596ec34f5e18bd2cc4c65712cde35f8c92b2caf14c8b957060c3bdc18c5d8ed2",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/grad_norm.png",
+      "size": 148731,
+      "sha256": "1ffa6b7682787c2dec4a59ef88421f79cb5932cf5c178e1c8ebad06a6661a38e",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/index.html",
+      "size": 12983,
+      "sha256": "f08a2521c3401a494c70a409d3b3df80675bbd6b56b84af2e5a01324e5ab0c69",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/kl.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/kl.png",
+      "size": 59139,
+      "sha256": "6d116176b429733076c52fea12bc6a1bce4433a20a2f150d1975bfb2e44c9b17",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/learning_rate.png",
+      "size": 41534,
+      "sha256": "d7f571ea974362a1358167af0d35d00cd390482b8216fa578623bd590c24249f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/reward.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/reward.png",
+      "size": 104845,
+      "sha256": "7fda967d2adeca7e2198d563aa92d66d1980f36f9f1ba88693fc615984320eb5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/training-report.pdf",
+      "size": 47339,
+      "sha256": "9aa7bed456bdc35b4ff75f6ed2dfe81c7b5e032d5e4f2543232bafa1f914a72e",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/training_report.json",
+      "size": 25901,
+      "sha256": "dfd8eb65f93a2c18d94fb08530da7a946a0212852a4e9a18e194c9fd546bc6d2",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/validation-report.pdf",
+      "size": 32360,
+      "sha256": "896ce104104604059bb89dcfa628d1486b684353e7e036c8103924bab500e611",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/validation_ndcg.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/validation_ndcg.png",
+      "size": 32996,
+      "sha256": "4cbcb166c0ae3470541f3dfb6e5698f55bc85a102c8e865410aeb6786fa10bd5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/validation_report.json",
+      "size": 820,
+      "sha256": "2b14c4c1b85c95fca7ffbbcf53618434fd95984d19f2df315094a39a807e0240",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3/zero_reward_group_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3/zero_reward_group_rate.png",
+      "size": 139038,
+      "sha256": "d5407cd53db38d7757350e755b9ad2fa786a96c399c181ef5664e18711531613",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/comparison.csv",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/comparison.csv",
+      "size": 6776,
+      "sha256": "2797780319538bbb1411d0577feadab7fa4891c8bb2430b2239251fea4ea876b",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/comparison.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/comparison.html",
+      "size": 14480,
+      "sha256": "7431b1a0d83daa438eccdc73c046a0c9c2888f60325ebcb3d4169a3a3e183782",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/comparison.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/comparison.json",
+      "size": 65593,
+      "sha256": "6df0aa357cb13a5e5179cef5b9772c9a9c9f4ce02ff2ee710b8ef4c9a6d43941",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/grad_norm.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/grad_norm.png",
+      "size": 82765,
+      "sha256": "2cb409dc624e493ac52e939003bd80cfae29d287eb7f51c2387b13ca1d3688db",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/index.html",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/index.html",
+      "size": 17325,
+      "sha256": "fba5d535067e7105284fa0b18a3de17de0dfe860fd41817c1061e1f5b2a664a7",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/kl.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/kl.png",
+      "size": 90346,
+      "sha256": "3e3b51c881f535b08b83cbff3f99d3114bc0ba2c7d9f91ebdbf1fc8c9032fa4d",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/learning_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/learning_rate.png",
+      "size": 54678,
+      "sha256": "d41f4cfc6eb5b5757237ad6e4638a0c3fcb279188d826d6f0c61b0ac1ddb035b",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/reward.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/reward.png",
+      "size": 155618,
+      "sha256": "c0936e31e704e7c037caf5f91d545e34ad09359d31cd56a97bb239c5acc6b9cc",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/training-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/training-report.pdf",
+      "size": 106843,
+      "sha256": "3699c580eea2f4922c6693de80fbc4d43adf9fddc9cfbe252262a731a2318a3d",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/training_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/training_report.json",
+      "size": 50153,
+      "sha256": "b64ae11d0ee0ac19b148d05af0e13d4fb7c69a9ffdb6ab08020badf2e40d8f27",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/validation-report.pdf",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/validation-report.pdf",
+      "size": 37719,
+      "sha256": "bb9cc114c487947efb8e56661a0c32f946a2effb12f0ba49894284a6a0ad0d07",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/validation_ndcg.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/validation_ndcg.png",
+      "size": 56354,
+      "sha256": "4c898727932ec9f861a5e8a027d9e0f93f15d7be04b253caaace3e86d8f43e18",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/validation_report.json",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/validation_report.json",
+      "size": 36313,
+      "sha256": "887454666600f32a38ec603bf1c39d497026f5244d09991619bfd154b50c94a5",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/zero_reward_group_rate.png",
+      "target": "projects/industrial-cosine/output/reports/industrial_05b_rl_from_linear_ep3_retry1/zero_reward_group_rate.png",
+      "size": 220095,
+      "sha256": "523ae3743e61f17223fad7e835ba891fca170a2f4ef9e6ca723c92f310b79a72",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/.gitignore",
+      "target": "projects/qwen-retrieval/.gitignore",
+      "size": 98,
+      "sha256": "04de1804172f8ddf56cdb3c0e6038cd38ca6e1dbc312cc3daa465eaf24986b86",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/LICENSE",
+      "target": "projects/qwen-retrieval/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/LogitProcessor.py",
+      "target": "projects/qwen-retrieval/LogitProcessor.py",
+      "size": 4435,
+      "sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/README.md",
+      "target": "projects/qwen-retrieval/README.md",
+      "size": 7270,
+      "sha256": "5ead1b0670a192d6e71efa87a995666fd2fed6aab78c7acecd31ca4744de117a",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/config/h20_zero2.json",
+      "target": "projects/qwen-retrieval/config/h20_zero2.json",
+      "size": 493,
+      "sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/config/selected_run.json",
+      "target": "projects/qwen-retrieval/config/selected_run.json",
+      "size": 9735,
+      "sha256": "c2d22b6ea706233bce28595c088d5e4cf5ae5138c1ce1d6d5461a29c86898c28",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/data.py",
+      "target": "projects/qwen-retrieval/data.py",
+      "size": 75157,
+      "sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/__init__.py",
+      "target": "projects/qwen-retrieval/docker/__init__.py",
+      "size": 63,
+      "sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/industrial_experiment.py",
+      "target": "projects/qwen-retrieval/docker/industrial_experiment.py",
+      "size": 27367,
+      "sha256": "35c926f0d9937dc53da051f3f9f24cd3e8017193b802bad38f6ebd8fb86d52ff",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/industrial_linear_epoch_experiment.py",
+      "target": "projects/qwen-retrieval/docker/industrial_linear_epoch_experiment.py",
+      "size": 4717,
+      "sha256": "575dd6be8cfef5afe558c931fc7a93c02946b32a136c5fd7032a7f13dc3f2f7b",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/industrial_retrieval_experiment.py",
+      "target": "projects/qwen-retrieval/docker/industrial_retrieval_experiment.py",
+      "size": 22848,
+      "sha256": "536d4d1a6a8941d4fd4aed0d8a65e70da2430e8874c8a57f4df201b32031ea02",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/industrial_rl_experiment.py",
+      "target": "projects/qwen-retrieval/docker/industrial_rl_experiment.py",
+      "size": 27819,
+      "sha256": "f00eaf79f59367f03a5584d79f33fcea5b53c77dee562302b90223afc42428c0",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/industrial_title_history_experiment.py",
+      "target": "projects/qwen-retrieval/docker/industrial_title_history_experiment.py",
+      "size": 7475,
+      "sha256": "762f33eb664e1ed3ce47b3921b5c2a7d7eb93a83ddd4a28f5d52a6f12ccc1e17",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/smoke_industrial_linear_snapshot.py",
+      "target": "projects/qwen-retrieval/docker/smoke_industrial_linear_snapshot.py",
+      "size": 11876,
+      "sha256": "177a5434c1d5eb5b484feb3384ec6f8e197dbf983dcaa66f9d117d832099981f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/smoke_industrial_rank_selection.py",
+      "target": "projects/qwen-retrieval/docker/smoke_industrial_rank_selection.py",
+      "size": 13281,
+      "sha256": "a1e895b69c4d734526eb791f09040cedca67f81aa31adf8fd2c030d3fe3bbc3f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/smoke_industrial_rl.py",
+      "target": "projects/qwen-retrieval/docker/smoke_industrial_rl.py",
+      "size": 11728,
+      "sha256": "829448ce67a6ca0884fce3f826a6043bb488068ac4a102f13c4006cf9f46ae24",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docker/smoke_industrial_rl_accumulation.py",
+      "target": "projects/qwen-retrieval/docker/smoke_industrial_rl_accumulation.py",
+      "size": 6606,
+      "sha256": "87cb68e6eb039ab0bbe7f33584e91fd61ef2eea524d7b937549603bb225e5a0f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/docs/INDUSTRIAL_RL.md",
+      "target": "projects/qwen-retrieval/docs/INDUSTRIAL_RL.md",
+      "size": 6193,
+      "sha256": "fb978430031adee42dc97f021d263df265071a9acd33c1b6b8125506fb4eb48c",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/minionerec_trainer.py",
+      "target": "projects/qwen-retrieval/minionerec_trainer.py",
+      "size": 16161,
+      "sha256": "1b35fb204ce8f8186a4736ec5412d672f6d9384483a355c98089cc9198451936",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/npu_support.py",
+      "target": "projects/qwen-retrieval/npu_support.py",
+      "size": 1497,
+      "sha256": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/README.md",
+      "target": "projects/qwen-retrieval/qwen_retrieval/README.md",
+      "size": 4451,
+      "sha256": "96497d33fc8363d08fd79dd8a577e68702993490b36010763da7191bfe5b17c6",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/__init__.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/__init__.py",
+      "size": 76,
+      "sha256": "e604106127b32a7b4d2fff9eec7d6d51035149f89d75c25bdb43012eb0ec97b0",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/audit_data.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/audit_data.py",
+      "size": 2497,
+      "sha256": "22dcd93a6db874daba860cbef966b52f42321eb418c98e1947eb03e3135f5ed5",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/config.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/config.py",
+      "size": 3461,
+      "sha256": "40e9bcc8340d084123178a3a74f21e6ce28439526d3607937bfa3351700a992f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/encode_items.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/encode_items.py",
+      "size": 9562,
+      "sha256": "9255ba92f4243c5ada58bfe33f6100f48cddfbf1a0ff4f223110db7aedd4f8cf",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/evaluate.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/evaluate.py",
+      "size": 22975,
+      "sha256": "8de5743d6b168849a1af05228fda117eae816f061074e24d5ddce02a4bcd0da8",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/model.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/model.py",
+      "size": 9163,
+      "sha256": "0a08aee8ea0c68e9966bb1845143c58787aad51cd29c09abfb6a2d7ebe2e0ce8",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/report.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/report.py",
+      "size": 11357,
+      "sha256": "ebdd7d87428ef108a319ad7d6adf459d4e663ce579b4d0f08cf3bbbc97de455f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/smoke.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/smoke.py",
+      "size": 17378,
+      "sha256": "cf792d8c58b0d652111cb66f97b63c579cca07af084747ba5efb326461caddc7",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/train.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/train.py",
+      "size": 15680,
+      "sha256": "745ca9b53002e2d895b3d30141e8926c103795f24e92deefd170bd7c87ed1ca8",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/qwen_retrieval/training_data.py",
+      "target": "projects/qwen-retrieval/qwen_retrieval/training_data.py",
+      "size": 4423,
+      "sha256": "480a597554fdd8040bbbd9649d8ebb53403fcc0bdb773f29a31a15c3767f42c6",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/comparison_values.csv",
+      "target": "projects/qwen-retrieval/reports/comparison_values.csv",
+      "size": 663,
+      "sha256": "a0e2e9f1afba1c416b632d177880fd8514fea2178c050aa0e7ecfb202f040ab3",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/comparison_vs_reference.png",
+      "target": "projects/qwen-retrieval/reports/comparison_vs_reference.png",
+      "size": 220260,
+      "sha256": "bd06b186ede69ae1b276e2c170d150d9c87ddbe3fbcf9343b6d701647a754944",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/conditional_metrics.csv",
+      "target": "projects/qwen-retrieval/reports/conditional_metrics.csv",
+      "size": 4112,
+      "sha256": "5647f82fc09a5e5f5a9423bb43876accf63ac236b0423d92267b5c7bf99963f9",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/data_diagnostics.json",
+      "target": "projects/qwen-retrieval/reports/data_diagnostics.json",
+      "size": 14128,
+      "sha256": "047e44efe4c437363f565320475072dc50ca60bb1bc02e1e015f017921cb30c2",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/grad_norm.png",
+      "target": "projects/qwen-retrieval/reports/grad_norm.png",
+      "size": 59491,
+      "sha256": "2f215d92d478e5d72a1b6e89811b191d05734dc222ecd575a3ffe702c9a9c944",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/index.html",
+      "target": "projects/qwen-retrieval/reports/index.html",
+      "size": 8428,
+      "sha256": "eff763980491fbc6e75ca51e97a880e29f313ca907e8490f0f38ecaad72667a5",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/learning_rate.png",
+      "target": "projects/qwen-retrieval/reports/learning_rate.png",
+      "size": 68319,
+      "sha256": "d09da32016e3af14aba1ebbb039e635002bb6f23a942e1906f864c487fa585d5",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/loss.png",
+      "target": "projects/qwen-retrieval/reports/loss.png",
+      "size": 82953,
+      "sha256": "01c9a47a55f286396ace6b7c697fba14b0c1dd743e8eac7979ceec936fde1bf2",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/original_repository_cold_recomputed.csv",
+      "target": "projects/qwen-retrieval/reports/original_repository_cold_recomputed.csv",
+      "size": 2258,
+      "sha256": "6e1330cae149f6f5edd85b2a1d5d15ce4a962455e3f6201f96ba3975ab4d7c30",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/original_repository_cold_recomputed.json",
+      "target": "projects/qwen-retrieval/reports/original_repository_cold_recomputed.json",
+      "size": 14125,
+      "sha256": "9df7acae380c6bdb3dee68ad80545d0be5a58ceff30e76ef32560d069b744652",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/original_training_schedule_audit.json",
+      "target": "projects/qwen-retrieval/reports/original_training_schedule_audit.json",
+      "size": 1666,
+      "sha256": "4eecc4b819337d39e62f269ea8df9591eb4c19baf5c17d11770a2991654a3859",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/ranking.png",
+      "target": "projects/qwen-retrieval/reports/ranking.png",
+      "size": 112550,
+      "sha256": "a520688675240dc1de41a3ffefaf8858dcc78b35b900f84aa8c1fae86ca1df11",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/result_analysis.json",
+      "target": "projects/qwen-retrieval/reports/result_analysis.json",
+      "size": 1742,
+      "sha256": "aec013784034191b7ae2b525a18cd97c58dfd17500eed7447097ad762d947af3",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/training-report.pdf",
+      "target": "projects/qwen-retrieval/reports/training-report.pdf",
+      "size": 98122,
+      "sha256": "e0844475498c7ac3cd8c5ead08c367201e68bb7b3bb812366b55e20485106638",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/training_report.json",
+      "target": "projects/qwen-retrieval/reports/training_report.json",
+      "size": 46073,
+      "sha256": "48a3f9e50824a333a42f239e9896e236404252292f3ce8dc06922e4199e30e4d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/validation-report.pdf",
+      "target": "projects/qwen-retrieval/reports/validation-report.pdf",
+      "size": 40614,
+      "sha256": "965e2aaf604402acbcded91052c6989fee3eead4e931a7a0eb0451093870d732",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/reports/validation_report.json",
+      "target": "projects/qwen-retrieval/reports/validation_report.json",
+      "size": 46094,
+      "sha256": "bec2b8ced9d532583c9e601abc8235627006d728942489edaf6b5a8189507b67",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/requirements-h20.txt",
+      "target": "projects/qwen-retrieval/requirements-h20.txt",
+      "size": 1555,
+      "sha256": "e1c00c252e8ee865018e887c3715e44e82c966b65a15129c9496902e95007339",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/requirements-report.txt",
+      "target": "projects/qwen-retrieval/requirements-report.txt",
+      "size": 90,
+      "sha256": "c899536b0afac63d3da6535de49f4f4bf922ae4713730be8449a69243cebebcc",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/data_preparation_manifest.json",
+      "target": "projects/qwen-retrieval/results/cosine/data_preparation_manifest.json",
+      "size": 16412,
+      "sha256": "406ee387be4daa6e93a71abcfaa6116b0ac3a4dd32e25ef377ede26a98a6a8ca",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/evaluation_metrics.json",
+      "target": "projects/qwen-retrieval/results/cosine/evaluation_metrics.json",
+      "size": 22420,
+      "sha256": "b05f0f65f1ece5f617401d906120e8977e2df6cce8bafd9080bc3595027e0072",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/monitor_metrics.jsonl",
+      "target": "projects/qwen-retrieval/results/cosine/monitor_metrics.jsonl",
+      "size": 2160025,
+      "sha256": "9a730ac951dbb76db14a7025978ba940e18f804cd0ce6044aa79d28de47e6433",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/reporter_revision.json",
+      "target": "projects/qwen-retrieval/results/cosine/reporter_revision.json",
+      "size": 1377,
+      "sha256": "975722dd49990e73f09e9ed3b9523385f49f3c2e879fd15b969058722d6f6c08",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/run_config.json",
+      "target": "projects/qwen-retrieval/results/cosine/run_config.json",
+      "size": 3558,
+      "sha256": "f547fec5ac09be85a9bc62fa4c6ca3cd6c3e8d6f0240e6965e0d4c50f1071959",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/run_status.json",
+      "target": "projects/qwen-retrieval/results/cosine/run_status.json",
+      "size": 12450,
+      "sha256": "1e05eb93fda469cfe67937b4c45c02ffee1953cbe08529efd016b513d64a3d69",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/supervisor_config.json",
+      "target": "projects/qwen-retrieval/results/cosine/supervisor_config.json",
+      "size": 1723,
+      "sha256": "491d1669690a3532592a4a7a6e51447480d8208cf19fb8e159ff6101f6c0df6d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/results/cosine/training_summary.json",
+      "target": "projects/qwen-retrieval/results/cosine/training_summary.json",
+      "size": 975,
+      "sha256": "c477d83e8cfb2767dfb6824923937f8547c91ce82ac1a440b4f3736ef0a57de4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/rl.py",
+      "target": "projects/qwen-retrieval/rl.py",
+      "size": 13881,
+      "sha256": "ad453d4b606159425f01338c56bc9eaf1fb992a0a771836fc598b3067f4a790f",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/compare_industrial_linear_epochs.py",
+      "target": "projects/qwen-retrieval/scripts/compare_industrial_linear_epochs.py",
+      "size": 19638,
+      "sha256": "11382fab266c553d5c73f10d98a9fcb2cb535e78ac1c1ddc4ee0a3bdac73b388",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/compare_industrial_title_history.py",
+      "target": "projects/qwen-retrieval/scripts/compare_industrial_title_history.py",
+      "size": 15896,
+      "sha256": "ae195d808738614376f7e1910fb3e54270d70005fcb2e0b4031e61e4a1118bd6",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/deepspeed_zero2_compat.py",
+      "target": "projects/qwen-retrieval/scripts/deepspeed_zero2_compat.py",
+      "size": 3341,
+      "sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/evaluate_sft.py",
+      "target": "projects/qwen-retrieval/scripts/evaluate_sft.py",
+      "size": 17285,
+      "sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/industrial_generative_validation.py",
+      "target": "projects/qwen-retrieval/scripts/industrial_generative_validation.py",
+      "size": 17719,
+      "sha256": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/industrial_rl_data.py",
+      "target": "projects/qwen-retrieval/scripts/industrial_rl_data.py",
+      "size": 11541,
+      "sha256": "25276e5cc9aaea4af94f71d38a010094ed32a13a2d36d90f7a2fc51d7d41eb24",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/industrial_rl_validation.py",
+      "target": "projects/qwen-retrieval/scripts/industrial_rl_validation.py",
+      "size": 8446,
+      "sha256": "464dd4b8ee310a9b60ddc935ef19f0ab68f84aca4b103d41881b13493017b6c7",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/prepare_original_industrial.py",
+      "target": "projects/qwen-retrieval/scripts/prepare_original_industrial.py",
+      "size": 16353,
+      "sha256": "466c118a53d1064a4c8fea9b2eff337624d9e4cea077e6d632ecfaf5bb4fc5dc",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/report_industrial_rl.py",
+      "target": "projects/qwen-retrieval/scripts/report_industrial_rl.py",
+      "size": 41114,
+      "sha256": "7b951eb39076bbee6ccf644c8584ad044cb5d7e7340a380736e7b92373ab6a8d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/report_industrial_sft.py",
+      "target": "projects/qwen-retrieval/scripts/report_industrial_sft.py",
+      "size": 33782,
+      "sha256": "329396d8e5698571569bd22c35d0e7ea4afe2581858ba0e0000a3e8f03d2cb18",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/scripts/sft_eval_utils.py",
+      "target": "projects/qwen-retrieval/scripts/sft_eval_utils.py",
+      "size": 14835,
+      "sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/sft.py",
+      "target": "projects/qwen-retrieval/sft.py",
+      "size": 42614,
+      "sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/sft_monitor.py",
+      "target": "projects/qwen-retrieval/sft_monitor.py",
+      "size": 23877,
+      "sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_deepspeed_zero2_compat.py",
+      "target": "projects/qwen-retrieval/tests/test_deepspeed_zero2_compat.py",
+      "size": 3966,
+      "sha256": "8b57d1721c32d84993449e354f56643cc4d81351c4951c3ee43515b19462eff0",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_experiment.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_experiment.py",
+      "size": 7253,
+      "sha256": "a7977883bdb1bd8968b1ba23d0e8635733fb12d41299e93245392c249dccd025",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_generative_validation.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_generative_validation.py",
+      "size": 8982,
+      "sha256": "3c3b68f7fdb518f746a54b70ac4f7a281f3b36e80a16d7668e62dcdc2527cc4a",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_reports.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_reports.py",
+      "size": 9040,
+      "sha256": "36f2329423df15a07621a05f653ce760627b5df76c00206491d3e81637d78157",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_rl_core.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_rl_core.py",
+      "size": 9864,
+      "sha256": "79f32b374b13972a2b77d9c5f25c87c127d8544e786c89d9de2a08187b64c7b8",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_rl_experiment.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_rl_experiment.py",
+      "size": 13986,
+      "sha256": "c1e68be1347a45c493e1f8812c46abffba391c5e7bcd32799a75d676ead68dc4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_rl_reports.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_rl_reports.py",
+      "size": 26953,
+      "sha256": "69e71de107358ef0f3b4587a3ad09e3db2ffbafda0ea0d790d425d319566ebf3",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_industrial_rl_validation.py",
+      "target": "projects/qwen-retrieval/tests/test_industrial_rl_validation.py",
+      "size": 5860,
+      "sha256": "94331fbdc181a908c8dda94f68db8694bfc38fb27dcb35e4fcce6b36b17ed334",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_linear_epoch_comparison.py",
+      "target": "projects/qwen-retrieval/tests/test_linear_epoch_comparison.py",
+      "size": 12488,
+      "sha256": "0b2f63a191c0a9c6eedafce56ae2b0801d3e4a90d090fb5c5fef5110e6e80566",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_loss_only_reports.py",
+      "target": "projects/qwen-retrieval/tests/test_loss_only_reports.py",
+      "size": 5925,
+      "sha256": "5f8748289851f66b090b9c3fafd38c0bcaef94911dc7836423219b876bda44bc",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_prepare_original_industrial.py",
+      "target": "projects/qwen-retrieval/tests/test_prepare_original_industrial.py",
+      "size": 5722,
+      "sha256": "d786e1fd4b3aa1acbe57145fbbc1078e63c611856d7807bb87b5f568861e3a6b",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_qwen_retrieval_config.py",
+      "target": "projects/qwen-retrieval/tests/test_qwen_retrieval_config.py",
+      "size": 2209,
+      "sha256": "7876cc59af2ac32111417174dcd4b0ec17b1e70fecd798a293e9e7204df66686",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_qwen_retrieval_evaluation.py",
+      "target": "projects/qwen-retrieval/tests/test_qwen_retrieval_evaluation.py",
+      "size": 10582,
+      "sha256": "9adffb441cf74c36206bdb15834e991442dd0cb318dab5663dc0fcb59a80e67b",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_qwen_retrieval_report.py",
+      "target": "projects/qwen-retrieval/tests/test_qwen_retrieval_report.py",
+      "size": 4199,
+      "sha256": "f1cd4fc6273f2acfa41614ceee60e78125552c28240236a6791d922396fecd0d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_qwen_retrieval_supervisor.py",
+      "target": "projects/qwen-retrieval/tests/test_qwen_retrieval_supervisor.py",
+      "size": 11716,
+      "sha256": "5bb41329362483b98ecda25f11543bb27b8fcc76a2fd858870954360a245dfa5",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_qwen_retrieval_training.py",
+      "target": "projects/qwen-retrieval/tests/test_qwen_retrieval_training.py",
+      "size": 724,
+      "sha256": "edd9a40a6cf59445cc7fb1bf6c8fc8e1c17221cbb1b4efc18673a256a48e0f2d",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_selected_run.py",
+      "target": "projects/qwen-retrieval/tests/test_selected_run.py",
+      "size": 4253,
+      "sha256": "5cd267bac4b539a67163ef5904f8bfdc95731d54d2d36b25cf92be341159cd3e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_sft_epoch_snapshot.py",
+      "target": "projects/qwen-retrieval/tests/test_sft_epoch_snapshot.py",
+      "size": 9116,
+      "sha256": "ecb9f5ec9427e44e09037542ee05919068173d15b4944c105ec6b098947748ec",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_sft_linear_loss.py",
+      "target": "projects/qwen-retrieval/tests/test_sft_linear_loss.py",
+      "size": 5390,
+      "sha256": "740ea373724aad33dfe30d0310cf28a9595b539e9774724ddd09d74edb5842b4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_sft_rank_selection.py",
+      "target": "projects/qwen-retrieval/tests/test_sft_rank_selection.py",
+      "size": 7015,
+      "sha256": "cc64335df46bd3086076bfd0975ac84514e5a83544414075372bc7acd354bba4",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_title_history_comparison.py",
+      "target": "projects/qwen-retrieval/tests/test_title_history_comparison.py",
+      "size": 10975,
+      "sha256": "eb83f92054e5a577ecd8e1ad5b06855b7459487b9ac12401ce8f6e33e345c13e",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_title_history_supervisor.py",
+      "target": "projects/qwen-retrieval/tests/test_title_history_supervisor.py",
+      "size": 7727,
+      "sha256": "ffc81d14728b562b3c3181ae9cf791108aa1512b5fac1ee612e403b50f4407ed",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/tests/test_title_history_task.py",
+      "target": "projects/qwen-retrieval/tests/test_title_history_task.py",
+      "size": 9207,
+      "sha256": "f3b0a6663bede6dcad16f05195fbf32c454f5e0fb4590d3828753654d9321860",
+      "selection": "tracked current worktree"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/comparison.csv",
+      "target": "projects/qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/comparison.csv",
+      "size": 1962,
+      "sha256": "edf472a1cee809351e9eb19c927f2a400b915669ba39ee154c6c81ed1d00381f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/comparison.json",
+      "target": "projects/qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/comparison.json",
+      "size": 103100,
+      "sha256": "ba19b35314cc545d66002a22020b4940321a1c6e9efee5894e561e52f3f4dc0f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/index.html",
+      "target": "projects/qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/index.html",
+      "size": 11456,
+      "sha256": "b8ad4953476c3dd04b393cb3d21a01e0d6d3ab9c5cb7e29a17cc98b4f8e753d4",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/results_summary.html",
+      "target": "projects/qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/results_summary.html",
+      "size": 2603,
+      "sha256": "debc232b5f70feb853d9384a9b7cfab275208b72e4b82ee0a4fd891814ede15d",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/results_summary.json",
+      "target": "projects/qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/results_summary.json",
+      "size": 9589,
+      "sha256": "f3469809b7d4d1f04605860fee9270a102ffa24e7b18a836921a665fa409c081",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/supplemental_isolation_review.json",
+      "target": "projects/qwen-retrieval/output/reports/qwen_retrieval_20261118_004220/supplemental_isolation_review.json",
+      "size": 33010,
+      "sha256": "ac5fe42b96f54657a220f08087e178b3c61f02c8179d11c8a4e2e1b5992abf92",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/preflight/qwen_retrieval_20261118/data_audit.json",
+      "target": "projects/qwen-retrieval/output/preflight/qwen_retrieval_20261118/data_audit.json",
+      "size": 408,
+      "sha256": "313ba7bd60743e4476a9bdb95861abc3bf5edadd78f99d57db53030f75e1b47f",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/preflight/qwen_retrieval_20261118/smoke_result.json",
+      "target": "projects/qwen-retrieval/output/preflight/qwen_retrieval_20261118/smoke_result.json",
+      "size": 1627,
+      "sha256": "4e5edbf404669410d82dd492752a804e2112214dcd4657e125c201b9e0b47450",
+      "selection": "ignored report or preflight artifact"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-qwen-retrieval/output/qwen_retrieval_active_run.json",
+      "target": "projects/qwen-retrieval/output/qwen_retrieval_active_run.json",
+      "size": 402,
+      "sha256": "96ea916ee3f11ff06f7467b3885b8609ebb7d4f09d05e486e59f50f8c8778966",
+      "selection": "active run result"
+    }
+  ],
+  "missing": [],
+  "excluded": [
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/config.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/config.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/ddp_pretrain.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/ddp_pretrain.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/finetune.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/finetune.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/prepare_qwen_data.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/prepare_qwen_data.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/pretrain.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/pretrain.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_dataset.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_dataset.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_ddp_preflight.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_ddp_preflight.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_model.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_model.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_preflight.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_preflight.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_retrieval.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_retrieval.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_runtime.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_runtime.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_schedule.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_schedule.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_train.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_train.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_vector_eval.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/qwen_vector_metrics.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/run_baseline.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/run_baseline.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/trainer.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/trainer.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/unisrec.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/__pycache__/unisrec.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/baselines/__pycache__/fdsa.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/baselines/__pycache__/fdsa.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/baselines/__pycache__/s3rec.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/baselines/__pycache__/s3rec.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/__pycache__/dataloader.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/__pycache__/dataloader.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/__pycache__/dataset.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/__pycache__/dataset.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/__pycache__/transform.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/data/__pycache__/transform.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/process_amazon.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/process_amazon.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/process_or.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/process_or.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/to_pretrain_atomic_files.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/to_pretrain_atomic_files.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/utils.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/dataset/preprocessing/__pycache__/utils.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/Industrial_and_Scientific.emb-qwen-td.npy",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/Industrial_and_Scientific.emb-qwen-td.npy.ids.json",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/Industrial_and_Scientific.item",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/Industrial_and_Scientific.test.inter",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/Industrial_and_Scientific.train.inter",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/Industrial_and_Scientific.valid.inter",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/catalog.json",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/manifest.json",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/prepared/Industrial_and_Scientific/train_item_ids.json",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/__pycache__/analyze_training_run.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/__pycache__/monitor_run.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/__pycache__/plot_training_analysis.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/scripts/__pycache__/summarize_run.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_prepare_qwen_data.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_prepare_qwen_data.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_ddp_runtime.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_ddp_runtime.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_ddp_trainer.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_ddp_trainer.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_model.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_model.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_retrieval.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_retrieval.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_runtime.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_runtime.cpython-314.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_vector_eval.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_vector_metrics.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_qwen_vector_training.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/tests/__pycache__/test_training_analysis.cpython-312.pyc",
+      "reason": "UniSRec prepared data, cache, or runtime log excluded"
+    }
+  ],
+  "summary": {
+    "files": 377,
+    "bytes": 15836738,
+    "missing": 0,
+    "excluded": 81
+  }
+}

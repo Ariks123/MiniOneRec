@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>可视化训练报告 · Amazon Reviews 2018 · Industrial and Scientific</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="top" aria-label="报告导航">
+<div class="frame">
+<a href="index.html">报告总览</a>
+<a href="algorithm.html">算法报告</a>
+<a href="training.html" aria-current="page">训练报告</a>
+<a href="validation.html">验证报告</a>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="frame">
+<p class="dataset">Amazon Reviews 2018 · <span>Industrial and Scientific</span></p>
+<h1>可视化训练报告</h1>
+<p class="summary">从 RQ-VAE 编码到 Qwen 和 UniSRec 训练，用损失曲线与验证指标说明各阶段的检查点选择。</p>
+</div>
+</header>
+<main class="frame">
+<nav class="toc" aria-label="章节目录">
+  <p class="toc-title">目录</p>
+  <ol>
+    <li><a href="#training-data">数据准备与训练样本</a></li>
+    <li><a href="#training-rqvae">RQ-VAE 训练与语义 ID 导出</a></li>
+    <li><a href="#training-sft">Qwen 监督微调</a></li>
+    <li><a href="#training-grpo">GRPO 强化学习</a></li>
+    <li><a href="#training-unisrec">UniSRec 训练与向量导出</a></li>
+    <li><a href="#training-checkpoints">检查点与推理产物</a></li>
+  </ol>
+</nav>
+<section>
+<h2 id="training-data">数据准备与训练样本</h2>
+<p>工业品数据覆盖 7,694 位用户、3,686 件商品和 45,324 条交互请求。每条请求以最近 1–10 件历史商品预测下一件商品。重训沿用原切分、请求顺序和商品 ID，并根据 RQ-VAE 目录更新历史与目标的 SID。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th scope="col">用途</th><th scope="col">条数</th></tr></thead>
+<tbody>
+<tr><td>训练交互</td><td>36,259</td></tr>
+<tr><td>验证请求</td><td>4,532</td></tr>
+<tr><td>测试请求</td><td>4,533</td></tr>
+<tr><td>其中，目标为冷商品的测试请求</td><td>147</td></tr>
+</tbody>
+</table></div>
+<figure class="chart-compact">
+      <picture>
+        <source media="screen and (max-width: 680px)" srcset="figures/training-history-mobile.png" width="710" height="499">
+        <img src="figures/training-history.png" width="1305" height="591" alt="训练集以单件历史的请求最多，验证集与测试集都以四件历史的请求最多。">
+      </picture>
+  <figcaption>图 1 · 各切分的历史长度分布。横轴为历史商品件数，纵轴为该长度在各自切分中的请求占比。</figcaption>
+</figure>
+<p>只有一件历史商品的请求占训练集的 19.4%。验证集与测试集均以四件历史商品为峰值，分别占各自请求数的 20.9% 和 24.4%。</p>
+<p class="data-links">
+  <a href="data/training-history.csv">历史长度分布（CSV）</a>
+</p>
+<h3>从交互请求到训练任务</h3>
+<p>同一条交互可按不同输入和目标构成多条训练样本。SFT 使用标题与 SID 互译和下一商品预测任务。GRPO 以真实 SID 计算奖励，历史标题任务抽取 10,000 条，历史 SID 任务使用全部 36,259 条训练交互。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th scope="col">训练任务</th><th scope="col">SFT 训练样本</th><th scope="col">GRPO 训练样本</th></tr></thead>
+<tbody>
+<tr><td>历史 SID → 下一商品 SID</td><td>36,259</td><td>36,259</td></tr>
+<tr><td>历史 SID → 下一商品标题</td><td>36,259</td><td>—</td></tr>
+<tr><td>商品 SID → 商品标题</td><td>3,686</td><td>—</td></tr>
+<tr><td>商品标题 → 商品 SID</td><td>3,646</td><td>3,646</td></tr>
+<tr><td>历史标题 → 下一商品 SID</td><td>36,259</td><td>10,000</td></tr>
+<tr><td>商品描述 → 商品 SID</td><td>—</td><td>2,870</td></tr>
+<tr><td>合计</td><td>116,109</td><td>52,775</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section>
+<h2 id="training-rqvae">RQ-VAE 训练与语义 ID 导出</h2>
+<p>3,280 件暖商品用于拟合中心化均值和三级量化器，另用 367 件暖商品的重建误差选择检查点。每个码本含 256 个 32 维向量。训练使用 AdamW，预热 50 轮后学习率为 0.001。39 件冷商品在量化器冻结后编码。</p>
+<h3>重建损失与量化损失</h3>
+<p>总损失将商品向量的重建 MSE 与三级量化损失的均值相加，量化项权重 λ 取 1。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="RQ-VAE 的重建与量化损失"><mrow>
+        <msub><mi>ℒ</mi><mtext>RQ</mtext></msub><mo>=</mo>
+        <mi mathvariant="normal">MSE</mi><mo>(</mo><mi>x</mi><mo>,</mo><mover><mi>x</mi><mo>^</mo></mover><mo>)</mo>
+        <mo>+</mo><mfrac><mi>λ</mi><mn>3</mn></mfrac>
+        <munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover>
+        <msub><mi>ℓ</mi><mi>l</mi></msub></mrow></math></div>
+<p>每一级用输入残差 <var>r</var> 和选中码向量 <var>c</var> 计算两项误差。第一项更新码本，第二项使编码器残差靠近选中的码，权重 β 取 0.25。sg 表示停止梯度，<var>x</var> 表示中心化商品向量。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="各级码本与承诺损失"><mrow>
+        <msub><mi>ℓ</mi><mi>l</mi></msub><mo>=</mo>
+        <mi mathvariant="normal">MSE</mi><mo>(</mo><mi mathvariant="normal">sg</mi><mo>(</mo>
+        <msub><mi>r</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>)</mo><mo>,</mo>
+        <msub><mi>c</mi><mi>l</mi></msub><mo>)</mo><mo>+</mo><mi>β</mi>
+        <mi mathvariant="normal">MSE</mi><mo>(</mo><msub><mi>r</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub>
+        <mo>,</mo><mi mathvariant="normal">sg</mi><mo>(</mo><msub><mi>c</mi><mi>l</mi></msub><mo>)</mo><mo>)</mo></mrow></math></div>
+<h3>验证选点与全目录编码</h3>
+<figure>
+      <picture>
+        <source media="screen and (max-width: 680px)" srcset="figures/training-rqvae-mobile.png" width="710" height="852">
+        <img src="figures/training-rqvae.png" width="1689" height="518" alt="训练损失继续下降，暖商品验证 MSE 在第 1,100 轮最低。">
+      </picture>
+  <figcaption>图 2 · RQ-VAE 损失分项与暖商品验证误差。训练曲线给出逐轮读数与每 25 轮的分块均值。暖商品每 50 轮验证一次，本页各验证曲线用空心圆标出选中的检查点。</figcaption>
+</figure>
+<p>暖商品验证 MSE 在第 1,100 轮降到最低的 <strong class="best-result">0.36312</strong>。第 3,000 轮触发早停时，训练重建 MSE 已降至 0.06809，暖商品验证 MSE 却回升到 0.37720，因此采用第 1,100 轮权重。训练耗时 51.41 秒。</p>
+<p>直接选择最近的码时，3,686 件商品只得到 3,065 个不同 SID。保留前两位并重新匹配冲突商品的第三位后，所有商品都有唯一 SID。暖商品验证 MSE 随之升至 0.36756，比匹配前高 1.22%。</p>
+<p class="data-links">
+  <a href="data/training-rqvae-epochs.csv">逐轮训练损失（CSV）</a>
+  <a href="data/training-rqvae-validation.csv">量化验证曲线（CSV）</a>
+  <a href="data/training-rqvae-codes.csv">SID 编码统计（CSV）</a>
+</p>
+</section>
+
+<section>
+<h2 id="training-sft">Qwen 监督微调</h2>
+<p>从 Qwen2.5-0.5B 初始化，并在词表中加入 547 个原子 SID token。训练 3 轮，全局批量为 64，最大序列长度为 512 token。学习率在前 20 步预热至 0.0003，随后线性衰减。</p>
+<h3>答案 token 交叉熵</h3>
+<p>模型根据提示 <var>h</var> 和真实答案前缀预测下一个答案 token。掩码 <var>m</var> 在有效答案位置取 1，在提示与填充位置取 0。训练损失取所有有效答案 token 的负对数概率均值。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="只在答案 token 上计算的自回归交叉熵"><mrow>
+        <msub><mi>ℒ</mi><mtext>SFT</mtext></msub><mo>=</mo>
+        <mo>−</mo><mfrac>
+          <mrow><munder><mo>∑</mo><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></munder>
+            <msub><mi>m</mi><mrow><mi>b</mi><mi>t</mi></mrow></msub>
+            <mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>θ</mi></msub><mo>(</mo>
+            <msub><mi>y</mi><mrow><mi>b</mi><mi>t</mi></mrow></msub><mo>∣</mo>
+            <msub><mi>h</mi><mi>b</mi></msub><mo>,</mo>
+            <msub><mi>y</mi><mrow><mi>b</mi><mo>,</mo><mo>&lt;</mo><mi>t</mi></mrow></msub><mo>)</mo></mrow>
+          <mrow><munder><mo>∑</mo><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></munder>
+            <msub><mi>m</mi><mrow><mi>b</mi><mi>t</mi></mrow></msub></mrow>
+        </mfrac></mrow></math></div>
+<figure class="chart-wide">
+      <picture>
+        <source media="screen and (max-width: 800px)" srcset="figures/training-sft-mobile.png" width="710" height="1180">
+        <img src="figures/training-sft.png" width="1968" height="518" alt="训练与验证交叉熵随更新下降，验证损失在第 5,187 步达到 1.5413。">
+      </picture>
+  <figcaption>图 3 · SFT 训练交叉熵、验证交叉熵和学习率。训练交叉熵同时给出逐步读数和每 100 步的分块均值。验证曲线从第 273 步开始。</figcaption>
+</figure>
+<p>微调前的验证交叉熵为 14.0991。第 5,187 步的验证损失最低，为 <strong class="best-result">1.5413</strong>。训练在第 5,445 步完成三轮，耗时 32.59 分钟。GRPO 使用第 5,187 步的权重初始化。</p>
+<p class="data-links">
+  <a href="data/training-sft.csv">SFT 曲线与验证点（CSV）</a>
+</p>
+</section>
+
+<section>
+<h2 id="training-grpo">GRPO 强化学习</h2>
+<p>策略模型与参考模型都从选中的 SFT 权重开始。每个提示用受约束的 beam search 生成 16 个合法 SID，完整命中得 1 分。只要组内有命中，错误候选就按名次获得归一化的负折扣。全组未命中时，组内奖励均为零。每 512 步按 0.6 的系数将策略权重混入参考模型。</p>
+<h3>组内优势与 KL 惩罚</h3>
+<p>用同一提示下的奖励均值和样本标准差计算候选优势 <var>A</var>。记参考模型与策略模型的 token 对数概率之差为 δ，由此估计每个有效生成 token 的 KL 惩罚。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="组标准化优势和逐 token KL 估计"><mrow>
+        <msub><mi>A</mi><mi>i</mi></msub><mo>=</mo>
+        <mfrac><mrow><msub><mi>R</mi><mi>i</mi></msub><mo>−</mo><mover><mi>R</mi><mo>¯</mo></mover></mrow>
+        <mrow><msub><mi>σ</mi><mi>R</mi></msub><mo>+</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></mfrac>
+        <mspace width="1.4em"/>
+        <msub><mi>κ</mi><mrow><mi>i</mi><mi>t</mi></mrow></msub><mo>=</mo>
+        <msup><mi>e</mi><msub><mi>δ</mi><mrow><mi>i</mi><mi>t</mi></mrow></msub></msup><mo>−</mo>
+        <msub><mi>δ</mi><mrow><mi>i</mi><mi>t</mi></mrow></msub><mo>−</mo><mn>1</mn></mrow></math></div>
+<p>记策略模型的 token 对数概率为 <var>z</var>，sg 表示停止梯度。损失先在每个候选的有效生成位置上求均值，再对 <var>N</var> 个候选求均值，KL 项权重 β 取 0.001。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="GRPO 策略损失与参考模型正则项"><mrow>
+        <msub><mi>ℒ</mi><mtext>GRPO</mtext></msub><mo>=</mo>
+        <mfrac><mn>1</mn><mi>N</mi></mfrac>
+        <munder><mo>∑</mo><mi>i</mi></munder>
+        <mfrac><mn>1</mn><msub><mi>T</mi><mi>i</mi></msub></mfrac>
+        <munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>T</mi><mi>i</mi></msub></munderover>
+        <mrow><mo>[</mo><mo>−</mo><msub><mi>A</mi><mi>i</mi></msub>
+        <msup><mi>e</mi><mrow><msub><mi>z</mi><mrow><mi>i</mi><mi>t</mi></mrow></msub><mo>−</mo>
+        <mi mathvariant="normal">sg</mi><mo>(</mo><msub><mi>z</mi><mrow><mi>i</mi><mi>t</mi></mrow></msub><mo>)</mo></mrow></msup>
+        <mo>+</mo><mi>β</mi><msub><mi>κ</mi><mrow><mi>i</mi><mi>t</mi></mrow></msub><mo>]</mo></mrow></mrow></math></div>
+<h3>训练诊断与验证排名</h3>
+<figure class="chart-wide">
+      <picture>
+        <source media="screen and (max-width: 800px)" srcset="figures/training-grpo-mobile.png" width="710" height="2361">
+        <img src="figures/training-grpo.png" width="1968" height="933" alt="六个面板展示 GRPO 损失、命中奖励、KL、梯度、零奖励组比例和验证 NDCG@10。">
+      </picture>
+  <figcaption>图 4 · GRPO 的训练诊断与验证排名。训练曲线给出逐步值和每 50 步均值。损失、KL 和裁剪前梯度范数使用对称对数纵轴。</figcaption>
+</figure>
+<p>验证 SID NDCG@10 从训练前的 7.362% 提高至第 621 步的 <strong class="best-result">9.071%</strong>。随后连续三次验证均未超过该值，训练在第 1,242 步早停，耗时 80.74 分钟。</p>
+<p>第 391 步的 KL 达到峰值 8,199.87，同时裁剪前梯度范数升至 3,194.85。末 100 步的平均 KL 为 10.428，零奖励候选组占 66.688%。这些组的策略优势为零，KL 项仍参与更新。</p>
+<p class="data-links">
+  <a href="data/training-grpo-steps.csv">GRPO 逐步训练记录（CSV）</a>
+  <a href="data/training-grpo-validation.csv">GRPO 验证排名（CSV）</a>
+</p>
+</section>
+
+<section>
+<h2 id="training-unisrec">UniSRec 训练与向量导出</h2>
+<p>历史序列编码器输出归一化的 300 维查询向量，商品适配器输出同维度的归一化商品向量。训练批量为 512，学习率预热 5 轮后按余弦曲线调度。</p>
+<h3>训练目录交叉熵与全目录验证</h3>
+<p>对批量 <var>B</var> 中的每条请求，将历史向量 <var>q</var> 与各训练商品向量 <var>v</var> 的内积除以温度 0.07，以真实下一商品 <var>y</var>(<var>b</var>) 作为正类计算交叉熵。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="训练目录上的下一商品交叉熵"><mrow>
+        <msub><mi>ℒ</mi><mtext>UniSRec</mtext></msub><mo>=</mo>
+        <mo>−</mo><mfrac><mn>1</mn><mi>B</mi></mfrac><munder><mo>∑</mo><mi>b</mi></munder>
+        <mi mathvariant="normal">log</mi><mfrac>
+          <mrow><mi mathvariant="normal">exp</mi><mo>(</mo><msubsup><mi>q</mi><mi>b</mi><mo>⊤</mo></msubsup>
+                <msub><mi>v</mi><mrow><mi>y</mi><mo>(</mo><mi>b</mi><mo>)</mo></mrow></msub>
+                <mo>/</mo><mi>τ</mi><mo>)</mo></mrow>
+          <mrow><munder><mo>∑</mo><mrow><mi>j</mi><mo>∈</mo><msub><mi>𝒞</mi><mtext>train</mtext></msub></mrow></munder>
+                <mi mathvariant="normal">exp</mi><mo>(</mo>
+                <msubsup><mi>q</mi><mi>b</mi><mo>⊤</mo></msubsup><msub><mi>v</mi><mi>j</mi></msub>
+                <mo>/</mo><mi>τ</mi><mo>)</mo></mrow>
+        </mfrac></mrow></math></div>
+<figure>
+      <picture>
+        <source media="screen and (max-width: 680px)" srcset="figures/training-unisrec-mobile.png" width="710" height="852">
+        <img src="figures/training-unisrec.png" width="1689" height="518" alt="训练批损失总和整体下降，全目录验证 NLL 在第 20 轮达到最低值。">
+      </picture>
+  <figcaption>图 5 · UniSRec 每轮的训练批交叉熵之和，以及全目录上的验证负对数似然（NLL）。两项指标各用独立纵轴。</figcaption>
+</figure>
+<p>从第 1 轮到第 20 轮，全目录验证 NLL 从 7.523539 降至最低的 <strong class="best-result">7.236538</strong>。推理导出第 20 轮的历史编码器和 3,686 个商品向量，用于在线草拟候选。</p>
+<p class="data-links">
+  <a href="data/training-unisrec.csv">UniSRec 训练与验证曲线（CSV）</a>
+</p>
+</section>
+
+<section>
+<h2 id="training-checkpoints">检查点与推理产物</h2>
+<p>各阶段依据各自的验证目标选择检查点。RQ-VAE 提供商品与 SID 的映射，SFT 权重作为 GRPO 的起点。联合投机推理同时加载 GRPO 策略和独立训练的 UniSRec 检索模型。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th scope="col">阶段</th><th scope="col">训练轮数或步数</th><th scope="col">选中权重</th><th scope="col">验证指标</th><th scope="col">选中时的值</th></tr></thead>
+<tbody>
+<tr><td>RQ-VAE</td><td>3,000 轮</td><td>第 1,100 轮</td><td>暖商品重建 MSE</td><td>0.36312</td></tr>
+<tr><td>SFT</td><td>5,445 步</td><td>checkpoint-5187</td><td>答案 token 交叉熵</td><td>1.5413</td></tr>
+<tr><td>GRPO</td><td>1,242 步</td><td>checkpoint-621</td><td>SID NDCG@10</td><td>9.071%</td></tr>
+<tr><td>UniSRec</td><td>20 轮</td><td>第 20 轮</td><td>全目录 NLL</td><td>7.236538</td></tr>
+</tbody>
+</table></div>
+<p class="data-links">
+  <a href="data/training-checkpoints.csv">训练检查点摘要（CSV）</a>
+</p>
+<p><a href="validation.html">查看验证报告中的排序质量、冷商品命中与服务性能</a></p>
+</section>
+<footer><a href="#top">返回页首</a> · <a href="index.html">报告总览</a></footer>
+</main>
+</body>
+</html>

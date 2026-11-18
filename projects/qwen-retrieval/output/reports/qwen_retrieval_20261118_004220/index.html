@@ -1,0 +1,190 @@
+<!doctype html><html lang='zh-CN'><meta charset='utf-8'><title>Industrial Qwen joint retrieval</title><style>body{font:15px system-ui;margin:32px;line-height:1.6;color:#173047}table{border-collapse:collapse;display:block;overflow:auto}th,td{padding:9px;border:1px solid #ccd5dc;text-align:left}th{background:#eef4f8}li{margin:8px 0}code{white-space:pre-wrap}</style><h1>Amazon 2018 Industrial &amp; Scientific · Qwen 0.5B</h1><p>Report: incomplete; stage: failed</p><table><thead><tr><th>method</th><th>split</th><th>status</th><th>rows</th><th>Recall@10</th><th>NDCG@10</th><th>Recall@50</th><th>Recall@200</th><th>inference_seconds</th><th>stage_wall_seconds</th></tr></thead><tbody><tr><td>historical_best_record</td><td>test</td><td>historical_record</td><td>—</td><td>0.129495</td><td>0.083001</td><td>0.221046</td><td>—</td><td>—</td><td>—</td></tr><tr><td>historical_best_beam50_retimed</td><td>test</td><td>passed</td><td>4533</td><td>0.129495</td><td>0.083001</td><td>0.221046</td><td>—</td><td>80.920596</td><td>104.127405</td></tr><tr><td>joint_model_beam50</td><td>test</td><td>passed</td><td>4533</td><td>0.118465</td><td>0.079597</td><td>0.216413</td><td>—</td><td>81.228387</td><td>106.961322</td></tr><tr><td>joint_vector_retrieval</td><td>valid</td><td>passed</td><td>4532</td><td>0.123345</td><td>0.088617</td><td>0.208076</td><td>0.359003</td><td>4.249414</td><td>171.034011</td></tr><tr><td>joint_vector_retrieval</td><td>test</td><td>passed</td><td>4533</td><td>0.115597</td><td>0.079918</td><td>0.212221</td><td>0.349879</td><td>4.306638</td><td>176.749767</td></tr><tr><td>joint_retrieval_gr_rerank</td><td>valid</td><td>passed</td><td>4532</td><td>0.124228</td><td>0.087299</td><td>0.215137</td><td>—</td><td>148.421107</td><td>171.034011</td></tr><tr><td>joint_retrieval_gr_rerank</td><td>test</td><td>passed</td><td>4533</td><td>0.120450</td><td>0.082501</td><td>0.204721</td><td>—</td><td>147.458861</td><td>176.749767</td></tr></tbody></table><h2>Interpretation</h2><ul><li>This is one new joint-training run. No fresh generation-only control was trained.</li><li>The new run corrects DeepSpeed ZeRO-2 gradient accumulation. Historical SFT did not use this correction, so historical differences cannot isolate the retrieval objective alone.</li><li>Historical best test Recall@10=0.12949481579527908 and NDCG@10=0.08300085599636473; these are comparison records, not checkpoint-selection criteria.</li><li>Checkpoint selection uses validation generation loss; retrieval evaluation uses validation first and the complete test split only after training.</li><li>Cold groups describe interaction cold start. Catalog-wide SID/title auxiliary supervision is retained.</li><li>All candidates use the original three-token Industrial SID. Teacher-forcing reranking scores SID tokens only.</li><li>Stage wall time includes process launch, loading and file work. Beam prediction time and retrieval inference time exclude model loading but include their own prediction pipelines; consult detailed component times before claiming speedups.</li></ul><h2>Interaction cold/warm groups</h2><pre>{
+  &quot;overall&quot;: {
+    &quot;rows&quot;: 4533,
+    &quot;retrieval_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.11559673505404809,
+      &quot;HR@10&quot;: 0.11559673505404809,
+      &quot;NDCG@10&quot;: 0.07991795621518193,
+      &quot;Recall@20&quot;: 0.15574674608427092,
+      &quot;HR@20&quot;: 0.15574674608427092,
+      &quot;NDCG@20&quot;: 0.08994386217659169,
+      &quot;Recall@50&quot;: 0.21222148687403486,
+      &quot;HR@50&quot;: 0.21222148687403486,
+      &quot;NDCG@50&quot;: 0.10110957724837982,
+      &quot;Recall@200&quot;: 0.3498786675490845,
+      &quot;HR@200&quot;: 0.3498786675490845,
+      &quot;NDCG@200&quot;: 0.1214191581056534
+    },
+    &quot;rerank_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.12045003309066843,
+      &quot;HR@10&quot;: 0.12045003309066843,
+      &quot;NDCG@10&quot;: 0.08250075767701191,
+      &quot;Recall@20&quot;: 0.1528788881535407,
+      &quot;HR@20&quot;: 0.1528788881535407,
+      &quot;NDCG@20&quot;: 0.09071577479170502,
+      &quot;Recall@50&quot;: 0.20472093536289432,
+      &quot;HR@50&quot;: 0.20472093536289432,
+      &quot;NDCG@50&quot;: 0.10102388628101806
+    }
+  },
+  &quot;behavior_warm&quot;: {
+    &quot;rows&quot;: 4386,
+    &quot;retrieval_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.11650706794345646,
+      &quot;HR@10&quot;: 0.11650706794345646,
+      &quot;NDCG@10&quot;: 0.08117572714960658,
+      &quot;Recall@20&quot;: 0.1570907432740538,
+      &quot;HR@20&quot;: 0.1570907432740538,
+      &quot;NDCG@20&quot;: 0.09130660397786307,
+      &quot;Recall@50&quot;: 0.2131782945736434,
+      &quot;HR@50&quot;: 0.2131782945736434,
+      &quot;NDCG@50&quot;: 0.10239663105142902,
+      &quot;Recall@200&quot;: 0.3506611947104423,
+      &quot;HR@200&quot;: 0.3506611947104423,
+      &quot;NDCG@200&quot;: 0.12268893445841182
+    },
+    &quot;rerank_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.12448700410396717,
+      &quot;HR@10&quot;: 0.12448700410396717,
+      &quot;NDCG@10&quot;: 0.08526583095072846,
+      &quot;Recall@20&quot;: 0.15800273597811218,
+      &quot;HR@20&quot;: 0.15800273597811218,
+      &quot;NDCG@20&quot;: 0.09375618037637913,
+      &quot;Recall@50&quot;: 0.21158230734154126,
+      &quot;HR@50&quot;: 0.21158230734154126,
+      &quot;NDCG@50&quot;: 0.10440977576649678
+    }
+  },
+  &quot;behavior_cold&quot;: {
+    &quot;rows&quot;: 147,
+    &quot;retrieval_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.08843537414965986,
+      &quot;HR@10&quot;: 0.08843537414965986,
+      &quot;NDCG@10&quot;: 0.04239017853908343,
+      &quot;Recall@20&quot;: 0.11564625850340136,
+      &quot;HR@20&quot;: 0.11564625850340136,
+      &quot;NDCG@20&quot;: 0.049284096595801026,
+      &quot;Recall@50&quot;: 0.1836734693877551,
+      &quot;HR@50&quot;: 0.1836734693877551,
+      &quot;NDCG@50&quot;: 0.06270809439005497,
+      &quot;Recall@200&quot;: 0.32653061224489793,
+      &quot;HR@200&quot;: 0.32653061224489793,
+      &quot;NDCG@200&quot;: 0.08353317794784154
+    },
+    &quot;rerank_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.0,
+      &quot;HR@10&quot;: 0.0,
+      &quot;NDCG@10&quot;: 0.0,
+      &quot;Recall@20&quot;: 0.0,
+      &quot;HR@20&quot;: 0.0,
+      &quot;NDCG@20&quot;: 0.0,
+      &quot;Recall@50&quot;: 0.0,
+      &quot;HR@50&quot;: 0.0,
+      &quot;NDCG@50&quot;: 0.0
+    }
+  },
+  &quot;collision_free&quot;: {
+    &quot;rows&quot;: 4216,
+    &quot;retrieval_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.08135673624288425,
+      &quot;HR@10&quot;: 0.08135673624288425,
+      &quot;NDCG@10&quot;: 0.04681065001357763,
+      &quot;Recall@20&quot;: 0.12286527514231499,
+      &quot;HR@20&quot;: 0.12286527514231499,
+      &quot;NDCG@20&quot;: 0.05716694990633847,
+      &quot;Recall@50&quot;: 0.18287476280834913,
+      &quot;HR@50&quot;: 0.18287476280834913,
+      &quot;NDCG@50&quot;: 0.06903071387486188,
+      &quot;Recall@200&quot;: 0.3280360531309298,
+      &quot;HR@200&quot;: 0.3280360531309298,
+      &quot;NDCG@200&quot;: 0.09045445496588622
+    },
+    &quot;rerank_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.08657495256166983,
+      &quot;HR@10&quot;: 0.08657495256166983,
+      &quot;NDCG@10&quot;: 0.05034597854580902,
+      &quot;Recall@20&quot;: 0.11907020872865275,
+      &quot;HR@20&quot;: 0.11907020872865275,
+      &quot;NDCG@20&quot;: 0.05855700471935883,
+      &quot;Recall@50&quot;: 0.17386148007590133,
+      &quot;HR@50&quot;: 0.17386148007590133,
+      &quot;NDCG@50&quot;: 0.06944806828207364
+    }
+  },
+  &quot;collision_affected&quot;: {
+    &quot;rows&quot;: 317,
+    &quot;retrieval_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.5709779179810726,
+      &quot;HR@10&quot;: 0.5709779179810726,
+      &quot;NDCG@10&quot;: 0.5202346847513463,
+      &quot;Recall@20&quot;: 0.5930599369085173,
+      &quot;HR@20&quot;: 0.5930599369085173,
+      &quot;NDCG@20&quot;: 0.525866455651001,
+      &quot;Recall@50&quot;: 0.6025236593059937,
+      &quot;HR@50&quot;: 0.6025236593059937,
+      &quot;NDCG@50&quot;: 0.5277483406009108,
+      &quot;Recall@200&quot;: 0.6403785488958991,
+      &quot;HR@200&quot;: 0.6403785488958991,
+      &quot;NDCG@200&quot;: 0.5332399418194059
+    },
+    &quot;rerank_metrics&quot;: {
+      &quot;Recall@10&quot;: 0.5709779179810726,
+      &quot;HR@10&quot;: 0.5709779179810726,
+      &quot;NDCG@10&quot;: 0.5101491766585594,
+      &quot;Recall@20&quot;: 0.6025236593059937,
+      &quot;HR@20&quot;: 0.6025236593059937,
+      &quot;NDCG@20&quot;: 0.5184172720314855,
+      &quot;Recall@50&quot;: 0.6151419558359621,
+      &quot;HR@50&quot;: 0.6151419558359621,
+      &quot;NDCG@50&quot;: 0.5209723048411099
+    }
+  }
+}</pre><h2>Training summary</h2><pre>{
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;stage&quot;: &quot;sft&quot;,
+  &quot;finished_at_utc&quot;: &quot;2026-11-17T17:25:22.081557+00:00&quot;,
+  &quot;train_metrics&quot;: {
+    &quot;train_runtime&quot;: 2461.8334,
+    &quot;train_samples_per_second&quot;: 141.471,
+    &quot;train_steps_per_second&quot;: 2.211,
+    &quot;total_flos&quot;: 1.948406520123228e+17,
+    &quot;train_loss&quot;: 0.9153876849030887
+  },
+  &quot;final_eval_metrics&quot;: {
+    &quot;eval_loss&quot;: 1.5192137956619263,
+    &quot;eval_runtime&quot;: 3.5607,
+    &quot;eval_samples_per_second&quot;: 1272.778,
+    &quot;eval_steps_per_second&quot;: 39.88,
+    &quot;epoch&quot;: 3.0
+  },
+  &quot;best_checkpoint&quot;: &quot;/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/checkpoint-5187&quot;,
+  &quot;best_metric&quot;: 1.5192137956619263,
+  &quot;selection_metric&quot;: &quot;eval_loss&quot;,
+  &quot;final_checkpoint_contains_best_model&quot;: true,
+  &quot;final_checkpoint&quot;: &quot;/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint&quot;,
+  &quot;epoch&quot;: 3.0,
+  &quot;global_step&quot;: 5442,
+  &quot;planned_max_steps&quot;: 5442,
+  &quot;stop_reason&quot;: &quot;max_epochs&quot;
+}</pre><h2>Retrieval training diagnostics</h2><pre>{
+  &quot;records&quot;: 5443,
+  &quot;first&quot;: {
+    &quot;step&quot;: 1,
+    &quot;epoch&quot;: 0.0005512679162072767,
+    &quot;scope&quot;: &quot;last_microbatch; retrieval globally averaged; generation rank0 token mean&quot;,
+    &quot;retrieval/gen_token_mean_last_micro&quot;: 14.522000312805176,
+    &quot;retrieval/loss_global_mean_last_micro&quot;: 2.5665910243988037,
+    &quot;retrieval/global_queries_last_micro&quot;: 13,
+    &quot;retrieval/global_unique_items_last_micro&quot;: 13
+  },
+  &quot;latest&quot;: {
+    &quot;step&quot;: 5442,
+    &quot;epoch&quot;: 3.0,
+    &quot;scope&quot;: &quot;last_microbatch; retrieval globally averaged; generation rank0 token mean&quot;,
+    &quot;retrieval/gen_token_mean_last_micro&quot;: 0.3161892890930176,
+    &quot;retrieval/loss_global_mean_last_micro&quot;: 1.713027834892273,
+    &quot;retrieval/global_queries_last_micro&quot;: 13,
+    &quot;retrieval/global_unique_items_last_micro&quot;: 12
+  },
+  &quot;scope&quot;: &quot;Retrieval loss is globally reduced for the last microbatch; generation token mean is rank-zero&#x27;s last microbatch. These are diagnostics, not full optimizer-step averages.&quot;
+}</pre><p><a href='comparison.json'>Detailed JSON</a> · <a href='comparison.csv'>Comparison CSV</a></p></html>

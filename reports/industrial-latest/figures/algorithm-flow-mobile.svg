@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="344" height="584" viewBox="0 0 344 584" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">联合投机推理流程</title>
+  <desc id="flow-desc">UniSRec 检索商品，Qwen 缓存历史并验证候选 SID。检索席位已满时直接排序。席位不足时，可推进前缀并回到检索。若停止草拟，则由受约束 beam 补位后排序。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 7 7" refX="6.3" refY="3.5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M0 0 L7 3.5 L0 7 Z" fill="#60727a"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#60727a" stroke-width="1.45" stroke-linejoin="round">
+    <path d="M172 50 V65 H96 V79" marker-end="url(#arrow)"/>
+    <path d="M172 65 H249 V79" marker-end="url(#arrow)"/>
+    <path d="M96 135 V150 H249 V135"/>
+    <path d="M172 150 V165" marker-end="url(#arrow)"/>
+    <path d="M172 220 V246" marker-end="url(#arrow)"/>
+    <path d="M262 271 H333 V548 H277" marker-end="url(#arrow)"/>
+    <path d="M172 295 V335" marker-end="url(#arrow)"/>
+    <path d="M172 386 V402 H96 V428" marker-end="url(#arrow)"/>
+    <path d="M172 402 H249 V428" marker-end="url(#arrow)"/>
+    <path d="M29 458 H11 V107 H27" marker-end="url(#arrow)"/>
+    <path d="M249 486 V504 H172 V520" marker-end="url(#arrow)"/>
+  </g>
+  <g fill="#f7f9f9" stroke="#8b9ba1" stroke-width="1.25">
+    <rect x="72" y="6" width="200" height="44" rx="6"/>
+    <rect x="29" y="81" width="134" height="54" rx="6"/>
+    <rect x="182" y="81" width="134" height="54" rx="6"/>
+    <rect x="68" y="167" width="208" height="53" rx="6"/>
+    <rect x="82" y="248" width="180" height="47" rx="6"/>
+    <rect x="63" y="337" width="218" height="49" rx="6"/>
+    <rect x="29" y="430" width="134" height="56" rx="6"/>
+    <rect x="182" y="430" width="134" height="56" rx="6"/>
+    <rect x="68" y="522" width="208" height="53" rx="6"/>
+  </g>
+  <g text-anchor="middle" font-family="system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <g fill="#25343c" font-size="16" font-weight="600">
+      <text x="172" y="34">用户的商品历史</text>
+      <text x="96" y="104">UniSRec 检索</text>
+      <text x="249" y="104">Qwen 预填充</text>
+      <text x="172" y="190">批量验证候选 SID</text>
+      <text x="172" y="277">检索席位是否已满？</text>
+      <text x="172" y="366">还能继续草拟吗？</text>
+      <text x="96" y="454">推进 SID 前缀</text>
+      <text x="249" y="454">受约束生成补位</text>
+      <text x="172" y="545">合并入选商品并排序</text>
+    </g>
+    <g fill="#465961" font-size="14">
+      <text x="96" y="124">首轮检索全库</text>
+      <text x="249" y="124">缓存历史 KV</text>
+      <text x="172" y="209">计算三位 SID 的验证分数</text>
+      <text x="298" y="262">已满</text>
+      <text x="196" y="321">未满</text>
+      <text x="122" y="421">可以</text>
+      <text x="215" y="419">停止草拟</text>
+      <text x="42" y="246">下一轮</text>
+      <text x="96" y="474">缩小范围并去重</text>
+      <text x="249" y="474">按 beam 顺序去重</text>
+      <text x="172" y="565">输出至多 K 件商品</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+source,dataset,stage,k,HR,NDCG
+Current experiment,Video_Games,SFT only; RL not started,1,0.0153849823490125,0.0153849823490125
+Current experiment,Video_Games,SFT only; RL not started,3,0.025379257704417516,0.02109417001751477
+Current experiment,Video_Games,SFT only; RL not started,5,0.03339376013739147,0.02436917024699887
+Current experiment,Video_Games,SFT only; RL not started,10,0.04927964888846484,0.02946377847672887
+Current experiment,Video_Games,SFT only; RL not started,20,0.07196355309607862,0.035162649341569235
+Current experiment,Video_Games,SFT only; RL not started,50,0.11327640492319435,0.04331764753498194
+Paper Table 1; reference only,Industrial,SFT + GRPO RL (2 epochs),3,0.1143,0.1011
+Paper Table 1; reference only,Industrial,SFT + GRPO RL (2 epochs),5,0.1321,0.1084
+Paper Table 1; reference only,Industrial,SFT + GRPO RL (2 epochs),10,0.1586,0.1167
+Paper Table 1; reference only,Office,SFT + GRPO RL (2 epochs),3,0.1217,0.1088
+Paper Table 1; reference only,Office,SFT + GRPO RL (2 epochs),5,0.142,0.1172
+Paper Table 1; reference only,Office,SFT + GRPO RL (2 epochs),10,0.1634,0.1242

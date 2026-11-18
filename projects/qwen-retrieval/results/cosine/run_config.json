@@ -1,0 +1,91 @@
+{
+  "stage": "sft",
+  "created_at_utc": "2026-11-16T07:43:45.356854+00:00",
+  "model": {
+    "source": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+    "train_from_scratch": false,
+    "original_vocab_size": 151665,
+    "tokenizer_vocab_size": 152225,
+    "added_sid_tokens": 560,
+    "identity": {
+      "format_version": 1,
+      "source_directory": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "train_from_scratch": false,
+      "files": {
+        "config.json": {
+          "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+          "size_bytes": 684
+        },
+        "generation_config.json": {
+          "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+          "size_bytes": 138
+        },
+        "merges.txt": {
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "size_bytes": 1671839
+        },
+        "model.safetensors": {
+          "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+          "size_bytes": 3087467144
+        },
+        "tokenizer.json": {
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+          "size_bytes": 7031645
+        },
+        "tokenizer_config.json": {
+          "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+          "size_bytes": 7228
+        },
+        "vocab.json": {
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "size_bytes": 2776833
+        }
+      },
+      "sha256": "f4da6a998630e344cbf1877dd65907ba35a9b01c20bbf314bdc47d542a61168b"
+    }
+  },
+  "data": {
+    "train_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+    "eval_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/valid.csv",
+    "sid_index_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+    "item_meta_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.item.json",
+    "category": "Industrial_and_Scientific",
+    "sample": -1,
+    "train_samples": 79834,
+    "validation_samples": 4532,
+    "sha256": {
+      "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+      "eval_file": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+      "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "item_meta_path": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+    }
+  },
+  "task_counts": {
+    "sid_sequence_recommendation": 36259,
+    "history_to_title": 36259,
+    "sid2title": 3670,
+    "title2sid": 3646
+  },
+  "hyperparameters": {
+    "world_size": 4,
+    "micro_batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "global_batch_size": 64,
+    "max_epochs": 3,
+    "learning_rate": 0.0003,
+    "warmup_steps": 20,
+    "lr_scheduler_type": "cosine",
+    "cutoff_len": 512,
+    "max_grad_norm": 1.0,
+    "bf16": true,
+    "gradient_checkpointing": true,
+    "attn_implementation": "sdpa",
+    "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+    "seed": 42,
+    "early_stopping_patience": 3,
+    "eval_save_fraction": 0.05,
+    "monitor_window": 100,
+    "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+  },
+  "resume_from_checkpoint": null
+}

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+  "original_log_sha256": "1ebd634314bf0ebd9a39b8ec89a97e11c755136bcf639b6b4e7ecb4cb2d4efe0",
+  "original_lr_records": 3744,
+  "original_scheduler_inferred_from_full_log": "linear",
+  "linear_max_absolute_error": 0.0,
+  "cosine_max_absolute_error": 3.157704927579297e-05,
+  "samples": [
+    {
+      "scheduler_step": 0,
+      "original_observed_lr": 0.0,
+      "linear_expected": 0.0,
+      "cosine_expected": 0.0
+    },
+    {
+      "scheduler_step": 20,
+      "original_observed_lr": 0.0003,
+      "linear_expected": 0.0003,
+      "cosine_expected": 0.0003
+    },
+    {
+      "scheduler_step": 1000,
+      "original_observed_lr": 0.00022105263157894733,
+      "linear_expected": 0.00022105263157894733,
+      "cosine_expected": 0.00025159223574386114
+    },
+    {
+      "scheduler_step": 1872,
+      "original_observed_lr": 0.00015080558539205154,
+      "linear_expected": 0.00015080558539205154,
+      "cosine_expected": 0.0001512653955655017
+    },
+    {
+      "scheduler_step": 3000,
+      "original_observed_lr": 5.993555316863587e-05,
+      "linear_expected": 5.993555316863587e-05,
+      "cosine_expected": 2.858797531061981e-05
+    },
+    {
+      "scheduler_step": 3743,
+      "original_observed_lr": 8.055853920515574e-08,
+      "linear_expected": 8.055853920515574e-08,
+      "cosine_expected": 5.337546091777056e-11
+    }
+  ],
+  "our_scheduler": "cosine",
+  "interpretation": "README states cosine, while all 3744 archived learning-rate records match warmup20 + linear decay. This run followed README cosine and therefore differs from original observed schedule."
+}

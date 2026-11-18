@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "generated_at_utc": "2026-11-16T09:38:20.908576+00:00",
+  "method": "CPU-only actual checkpoint AutoTokenizer audit: reconstruct the original evaluator header-prefixed trie with prefix_index3 and compare every allowed-token set with the current raw-SID/newline trie.",
+  "model_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint",
+  "catalog_rows": 3686,
+  "unique_complete_sids": 3670,
+  "trie_prefixes": 9684,
+  "old_new_allowed_token_sets_identical": true,
+  "actual_header_text": "### Response:\n",
+  "actual_header_token_ids": [
+    14374,
+    5949,
+    510
+  ],
+  "generated_answer_lengths_including_eos": {
+    "5": 3686
+  },
+  "matching_generation_settings": {
+    "do_sample": false,
+    "early_stopping": false,
+    "num_beams": 50,
+    "num_return_sequences": 50,
+    "length_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "renormalize_logits": false,
+    "temperature": 1.0,
+    "top_k": null,
+    "top_p": null,
+    "use_cache": true,
+    "eos_token_id": 151643,
+    "pad_token_id": 151643
+  },
+  "different_generation_setting": {
+    "max_new_tokens": {
+      "original": 256,
+      "current": 5
+    }
+  },
+  "source_sha256": {
+    "reference_evaluator": "ffb7736811dd60a7e2405f2c2baf7d3e30b06cc9d12bef574229649d53927757",
+    "reference_processor": "13ab33ff0ed3f769370478a86624499ccc0f8813de9d63e3dc4e2fa25ec59eb8",
+    "current_evaluator": "5d50d9da245b43df71ba9f45b24d5fb2c1bdbd818cc93d2a8f746f2a41f8ba83",
+    "current_processor": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+    "checkpoint_tokenizer": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+    "checkpoint_tokenizer_config": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+    "checkpoint_generation_config": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+    "sid_index": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8"
+  },
+  "source_paths": {
+    "reference_evaluator": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/evaluate.py",
+    "reference_processor": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/LogitProcessor.py",
+    "current_evaluator": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/evaluate_sft.py",
+    "current_processor": "/mnt/ossdata/ziweizhao/MiniOneRec/LogitProcessor.py",
+    "checkpoint_tokenizer": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/tokenizer.json",
+    "checkpoint_tokenizer_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/tokenizer_config.json",
+    "checkpoint_generation_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/generation_config.json",
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json"
+  },
+  "limitations": [
+    "This audit establishes the fixed catalog continuation sets and effective generation defaults, not bitwise equivalence of model logits or final beam ordering.",
+    "The current evaluator shards batches across4GPUs and sets SDPA explicitly; the original evaluator uses contiguous batches and automatic attention selection. BF16 padding/kernel grouping can affect close ranks.",
+    "All catalog answers complete within5generated tokens including newline andEOS; a longer original limit allows no additional valid catalog identity.",
+    "Direct original-code inference on the same checkpoint is a separate authoritative audit; see original_evaluator_cold_parity.json."
+  ]
+}

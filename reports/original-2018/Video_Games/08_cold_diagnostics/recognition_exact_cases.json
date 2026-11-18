@@ -1,0 +1,1362 @@
+[
+  {
+    "item_id": "9787",
+    "cohort": "cold",
+    "title": "Smatree P100 Carrying Case for PS Vita, PS Vita Slim(Without Cover) (Console and Accessories NOT Included)",
+    "beam10_rank": null,
+    "exact_rank": 12513,
+    "gold_sequence_score": -18.15606689453125,
+    "direct_uncached_score": -18.1573486328125,
+    "cached_direct_score_difference": -0.00128173828125,
+    "exact_10th_score": -4.4972639083862305,
+    "beam_10th_exact_score": -4.691746711730957,
+    "near_ties_within_0_02": 62,
+    "conditional_cold_catalog_probability_mass": 0.0012717770878225565,
+    "exact_top10_item_ids": [
+      2249,
+      10323,
+      1053,
+      2863,
+      928,
+      11403,
+      924,
+      8073,
+      697,
+      15994
+    ],
+    "beam_top10_item_ids": [
+      2249,
+      10323,
+      2863,
+      1053,
+      928,
+      11403,
+      697,
+      14736,
+      13650,
+      4238
+    ],
+    "exact_beam_top10_overlap": 7,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_29>",
+        "log_probability": -0.3672912120819092,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_32>",
+        "log_probability": -4.177889347076416,
+        "rank_legal_successors": 20,
+        "legal_successors": 76
+      },
+      {
+        "depth": 2,
+        "token": "<c_76>",
+        "log_probability": -13.610857963562012,
+        "rank_legal_successors": 2,
+        "legal_successors": 2
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -1.2993727978027891e-05,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.585470999998506e-05,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 12.090453722994425
+  },
+  {
+    "item_id": "9868",
+    "cohort": "cold",
+    "title": "Xbox Kinect Adapter for Xbox One S and Windows 10 PC",
+    "beam10_rank": null,
+    "exact_rank": 386,
+    "gold_sequence_score": -8.931565284729004,
+    "direct_uncached_score": -8.968289375305176,
+    "cached_direct_score_difference": -0.036724090576171875,
+    "exact_10th_score": -4.42580509185791,
+    "beam_10th_exact_score": -4.742824077606201,
+    "near_ties_within_0_02": 12,
+    "conditional_cold_catalog_probability_mass": 0.0014955609804019332,
+    "exact_top10_item_ids": [
+      1119,
+      8038,
+      2066,
+      10160,
+      2064,
+      14854,
+      9423,
+      2026,
+      6704,
+      13115
+    ],
+    "beam_top10_item_ids": [
+      1119,
+      8038,
+      2066,
+      10160,
+      2064,
+      14854,
+      9423,
+      2026,
+      6704,
+      11560
+    ],
+    "exact_beam_top10_overlap": 9,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_246>",
+        "log_probability": -1.1568536758422852,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_153>",
+        "log_probability": -1.5392335653305054,
+        "rank_legal_successors": 1,
+        "legal_successors": 48
+      },
+      {
+        "depth": 2,
+        "token": "<c_7>",
+        "log_probability": -6.214893817901611,
+        "rank_legal_successors": 7,
+        "legal_successors": 7
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -0.020583942532539368,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.1920928244535389e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.34844356800022
+  },
+  {
+    "item_id": "16521",
+    "cohort": "cold",
+    "title": "NHL 17 Deluxe Edition - PlayStation 4",
+    "beam10_rank": null,
+    "exact_rank": 53,
+    "gold_sequence_score": -7.062800884246826,
+    "direct_uncached_score": -7.096329212188721,
+    "cached_direct_score_difference": -0.03352832794189453,
+    "exact_10th_score": -4.469078063964844,
+    "beam_10th_exact_score": -4.9801812171936035,
+    "near_ties_within_0_02": 1,
+    "conditional_cold_catalog_probability_mass": 0.010288472287356853,
+    "exact_top10_item_ids": [
+      11290,
+      15751,
+      9231,
+      8068,
+      2926,
+      16534,
+      13489,
+      14041,
+      13281,
+      5013
+    ],
+    "beam_top10_item_ids": [
+      11290,
+      15751,
+      9231,
+      8068,
+      16534,
+      2926,
+      13489,
+      14041,
+      13281,
+      8037
+    ],
+    "exact_beam_top10_overlap": 9,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_94>",
+        "log_probability": -0.34006044268608093,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_142>",
+        "log_probability": -0.18603956699371338,
+        "rank_legal_successors": 1,
+        "legal_successors": 92
+      },
+      {
+        "depth": 2,
+        "token": "<c_6>",
+        "log_probability": -6.536669731140137,
+        "rank_legal_successors": 12,
+        "legal_successors": 13
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -3.123234637314454e-05,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.282310417009285
+  },
+  {
+    "item_id": "13552",
+    "cohort": "cold",
+    "title": "eBoot T8 and T6 Screwdriver with Electronics Prying Tool for Xbox One Xbox 360 Controller and PS3",
+    "beam10_rank": null,
+    "exact_rank": 4520,
+    "gold_sequence_score": -16.077648162841797,
+    "direct_uncached_score": -16.049774169921875,
+    "cached_direct_score_difference": 0.027873992919921875,
+    "exact_10th_score": -4.597822189331055,
+    "beam_10th_exact_score": -4.875971794128418,
+    "near_ties_within_0_02": 57,
+    "conditional_cold_catalog_probability_mass": 0.002256765030324459,
+    "exact_top10_item_ids": [
+      9418,
+      1986,
+      7137,
+      9423,
+      13613,
+      3103,
+      2003,
+      2064,
+      2044,
+      14892
+    ],
+    "beam_top10_item_ids": [
+      7137,
+      9418,
+      1986,
+      9423,
+      3103,
+      2064,
+      14334,
+      90,
+      12041,
+      2955
+    ],
+    "exact_beam_top10_overlap": 6,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_155>",
+        "log_probability": -3.023974895477295,
+        "rank_legal_successors": 3,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_45>",
+        "log_probability": -6.498886585235596,
+        "rank_legal_successors": 53,
+        "legal_successors": 71
+      },
+      {
+        "depth": 2,
+        "token": "<c_200>",
+        "log_probability": -6.554783821105957,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -3.6954811548639555e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.208287714005564
+  },
+  {
+    "item_id": "12640",
+    "cohort": "cold",
+    "title": "Stranger of Sword City - PlayStation Vita",
+    "beam10_rank": null,
+    "exact_rank": 8734,
+    "gold_sequence_score": -15.793792724609375,
+    "direct_uncached_score": -15.73913288116455,
+    "cached_direct_score_difference": 0.05465984344482422,
+    "exact_10th_score": -5.377185344696045,
+    "beam_10th_exact_score": -5.593895435333252,
+    "near_ties_within_0_02": 70,
+    "conditional_cold_catalog_probability_mass": 0.0062460871413350105,
+    "exact_top10_item_ids": [
+      886,
+      9979,
+      10275,
+      4018,
+      7944,
+      4904,
+      3193,
+      334,
+      4718,
+      12303
+    ],
+    "beam_top10_item_ids": [
+      886,
+      9979,
+      10275,
+      4018,
+      4904,
+      334,
+      12340,
+      12303,
+      4718,
+      5456
+    ],
+    "exact_beam_top10_overlap": 8,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_160>",
+        "log_probability": -1.2079261541366577,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_43>",
+        "log_probability": -4.453932762145996,
+        "rank_legal_successors": 16,
+        "legal_successors": 99
+      },
+      {
+        "depth": 2,
+        "token": "<c_239>",
+        "log_probability": -10.131917953491211,
+        "rank_legal_successors": 4,
+        "legal_successors": 4
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -1.6689160474925302e-05,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.207825228993897
+  },
+  {
+    "item_id": "15224",
+    "cohort": "cold",
+    "title": "Super Mario Bros. - 3DS [Digital Code]",
+    "beam10_rank": null,
+    "exact_rank": 530,
+    "gold_sequence_score": -10.877700805664062,
+    "direct_uncached_score": -10.863990783691406,
+    "cached_direct_score_difference": 0.01371002197265625,
+    "exact_10th_score": -4.292967319488525,
+    "beam_10th_exact_score": -4.93898344039917,
+    "near_ties_within_0_02": 10,
+    "conditional_cold_catalog_probability_mass": 0.00012498005526140332,
+    "exact_top10_item_ids": [
+      45,
+      3371,
+      2,
+      3110,
+      4369,
+      1193,
+      2946,
+      1192,
+      2206,
+      1197
+    ],
+    "beam_top10_item_ids": [
+      45,
+      3371,
+      2,
+      3110,
+      1193,
+      2946,
+      1192,
+      1461,
+      1268,
+      7
+    ],
+    "exact_beam_top10_overlap": 7,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_117>",
+        "log_probability": -0.3006945550441742,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_119>",
+        "log_probability": -3.4892704486846924,
+        "rank_legal_successors": 4,
+        "legal_successors": 68
+      },
+      {
+        "depth": 2,
+        "token": "<c_38>",
+        "log_probability": -7.087732791900635,
+        "rank_legal_successors": 2,
+        "legal_successors": 2
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -2.0265558760002023e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.311301275563892e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.327544415005832
+  },
+  {
+    "item_id": "16556",
+    "cohort": "cold",
+    "title": "Skylanders SuperChargers: Vehicle Sun Runner Character Pack",
+    "beam10_rank": null,
+    "exact_rank": 143,
+    "gold_sequence_score": -8.015707969665527,
+    "direct_uncached_score": -8.00474739074707,
+    "cached_direct_score_difference": 0.010960578918457031,
+    "exact_10th_score": -4.045133113861084,
+    "beam_10th_exact_score": -4.045133113861084,
+    "near_ties_within_0_02": 5,
+    "conditional_cold_catalog_probability_mass": 0.0008036260842345655,
+    "exact_top10_item_ids": [
+      12125,
+      14910,
+      8783,
+      13091,
+      12514,
+      14802,
+      15191,
+      13286,
+      16196,
+      12244
+    ],
+    "beam_top10_item_ids": [
+      12125,
+      14910,
+      13091,
+      8783,
+      12514,
+      14802,
+      13286,
+      15191,
+      16196,
+      12244
+    ],
+    "exact_beam_top10_overlap": 10,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_207>",
+        "log_probability": -0.46268224716186523,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_165>",
+        "log_probability": -0.11368508636951447,
+        "rank_legal_successors": 1,
+        "legal_successors": 70
+      },
+      {
+        "depth": 2,
+        "token": "<c_7>",
+        "log_probability": -7.4375,
+        "rank_legal_successors": 30,
+        "legal_successors": 33
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -0.001834853901527822,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -6.079655122448457e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.344392644998152
+  },
+  {
+    "item_id": "12490",
+    "cohort": "cold",
+    "title": "Gam3Gear Brook Xbox One to PS4 Super Converter Gaming Adapter with Gam3Gear Keychain",
+    "beam10_rank": null,
+    "exact_rank": 2528,
+    "gold_sequence_score": -14.502992630004883,
+    "direct_uncached_score": -14.519248962402344,
+    "cached_direct_score_difference": -0.016256332397460938,
+    "exact_10th_score": -5.7025604248046875,
+    "beam_10th_exact_score": -6.429619789123535,
+    "near_ties_within_0_02": 31,
+    "conditional_cold_catalog_probability_mass": 0.004521159455180168,
+    "exact_top10_item_ids": [
+      6333,
+      6169,
+      13331,
+      2572,
+      14892,
+      14272,
+      610,
+      2003,
+      8186,
+      1116
+    ],
+    "beam_top10_item_ids": [
+      6333,
+      6169,
+      14892,
+      2572,
+      8186,
+      14926,
+      9423,
+      769,
+      3991,
+      611
+    ],
+    "exact_beam_top10_overlap": 5,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_73>",
+        "log_probability": -1.4232814311981201,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_188>",
+        "log_probability": -6.5277228355407715,
+        "rank_legal_successors": 66,
+        "legal_successors": 104
+      },
+      {
+        "depth": 2,
+        "token": "<c_64>",
+        "log_probability": -6.551967144012451,
+        "rank_legal_successors": 3,
+        "legal_successors": 3
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -3.933898824470816e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.7881233361549675e-05,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.091825968993362
+  },
+  {
+    "item_id": "12348",
+    "cohort": "warm",
+    "title": "Wii Motion Plus Gun for Nintendo Wii Controller , Wii Shooting Games (Black, Set of 2)",
+    "beam10_rank": null,
+    "exact_rank": 154,
+    "gold_sequence_score": -7.281559467315674,
+    "direct_uncached_score": -7.272598743438721,
+    "cached_direct_score_difference": 0.008960723876953125,
+    "exact_10th_score": -4.656057834625244,
+    "beam_10th_exact_score": -5.02158260345459,
+    "near_ties_within_0_02": 5,
+    "conditional_cold_catalog_probability_mass": 0.0014378763735294342,
+    "exact_top10_item_ids": [
+      906,
+      4477,
+      2938,
+      1109,
+      1926,
+      1652,
+      1058,
+      1752,
+      4912,
+      956
+    ],
+    "beam_top10_item_ids": [
+      906,
+      4477,
+      2938,
+      1926,
+      1058,
+      8641,
+      9398,
+      13402,
+      1818,
+      804
+    ],
+    "exact_beam_top10_overlap": 5,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_72>",
+        "log_probability": -1.0015493631362915,
+        "rank_legal_successors": 2,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_25>",
+        "log_probability": -4.377041339874268,
+        "rank_legal_successors": 14,
+        "legal_successors": 69
+      },
+      {
+        "depth": 2,
+        "token": "<c_242>",
+        "log_probability": -1.902968406677246,
+        "rank_legal_successors": 2,
+        "legal_successors": 4
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -4.768370445162873e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.1920928244535389e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.46901005700056
+  },
+  {
+    "item_id": "10492",
+    "cohort": "warm",
+    "title": "uDraw Game tablet with uDraw Studio: Instant Artist - Xbox 360",
+    "beam10_rank": null,
+    "exact_rank": 18,
+    "gold_sequence_score": -5.087876319885254,
+    "direct_uncached_score": -5.029106140136719,
+    "cached_direct_score_difference": 0.058770179748535156,
+    "exact_10th_score": -4.63285493850708,
+    "beam_10th_exact_score": -4.935016632080078,
+    "near_ties_within_0_02": 2,
+    "conditional_cold_catalog_probability_mass": 0.004874229431152344,
+    "exact_top10_item_ids": [
+      16123,
+      2689,
+      7598,
+      2691,
+      3177,
+      12766,
+      8748,
+      13593,
+      7316,
+      1728
+    ],
+    "beam_top10_item_ids": [
+      16123,
+      2689,
+      7598,
+      2691,
+      3177,
+      12766,
+      8748,
+      13593,
+      13492,
+      1698
+    ],
+    "exact_beam_top10_overlap": 8,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_71>",
+        "log_probability": -0.6224153637886047,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_33>",
+        "log_probability": -3.7336549758911133,
+        "rank_legal_successors": 11,
+        "legal_successors": 65
+      },
+      {
+        "depth": 2,
+        "token": "<c_0>",
+        "log_probability": -0.7280765175819397,
+        "rank_legal_successors": 1,
+        "legal_successors": 2
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -0.003729176241904497,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.1920928244535389e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.47950477800623
+  },
+  {
+    "item_id": "12165",
+    "cohort": "warm",
+    "title": "Lowpricenice Xbox 360 Controller Battery Cover, White",
+    "beam10_rank": null,
+    "exact_rank": 15,
+    "gold_sequence_score": -5.093824863433838,
+    "direct_uncached_score": -5.087461948394775,
+    "cached_direct_score_difference": 0.0063629150390625,
+    "exact_10th_score": -4.518120288848877,
+    "beam_10th_exact_score": -5.266380310058594,
+    "near_ties_within_0_02": 1,
+    "conditional_cold_catalog_probability_mass": 0.0022541231010109186,
+    "exact_top10_item_ids": [
+      15549,
+      14600,
+      10920,
+      899,
+      14334,
+      15376,
+      9418,
+      1633,
+      12302,
+      1484
+    ],
+    "beam_top10_item_ids": [
+      15549,
+      14600,
+      10920,
+      899,
+      14334,
+      9418,
+      1633,
+      12302,
+      9847,
+      14719
+    ],
+    "exact_beam_top10_overlap": 8,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_155>",
+        "log_probability": -0.3317644000053406,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_117>",
+        "log_probability": -4.282963752746582,
+        "rank_legal_successors": 15,
+        "legal_successors": 71
+      },
+      {
+        "depth": 2,
+        "token": "<c_73>",
+        "log_probability": -0.4790910482406616,
+        "rank_legal_successors": 1,
+        "legal_successors": 3
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -7.152555099310121e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -5.245195097813848e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.409450159000698
+  },
+  {
+    "item_id": "5021",
+    "cohort": "warm",
+    "title": "Nyko Modular Charge Station - Dual Port Controller Charging Station with Patented Charging Dongles for PlayStation 4",
+    "beam10_rank": null,
+    "exact_rank": 44,
+    "gold_sequence_score": -5.625972747802734,
+    "direct_uncached_score": -5.62069845199585,
+    "cached_direct_score_difference": 0.005274295806884766,
+    "exact_10th_score": -4.125298500061035,
+    "beam_10th_exact_score": -4.294774055480957,
+    "near_ties_within_0_02": 2,
+    "conditional_cold_catalog_probability_mass": 0.007409239653497934,
+    "exact_top10_item_ids": [
+      8186,
+      7816,
+      8145,
+      2939,
+      12824,
+      14926,
+      90,
+      1606,
+      12167,
+      12405
+    ],
+    "beam_top10_item_ids": [
+      8186,
+      7816,
+      8145,
+      2939,
+      1606,
+      14926,
+      12167,
+      90,
+      12405,
+      8179
+    ],
+    "exact_beam_top10_overlap": 9,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_17>",
+        "log_probability": -0.05520171299576759,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_192>",
+        "log_probability": -2.39212703704834,
+        "rank_legal_successors": 2,
+        "legal_successors": 68
+      },
+      {
+        "depth": 2,
+        "token": "<c_0>",
+        "log_probability": -3.177968978881836,
+        "rank_legal_successors": 6,
+        "legal_successors": 11
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -0.000674616196192801,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -1.1920928244535389e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.007820651007933
+  },
+  {
+    "item_id": "11985",
+    "cohort": "warm",
+    "title": "Starter Kit - Aqua Blue for 3DS",
+    "beam10_rank": null,
+    "exact_rank": 28,
+    "gold_sequence_score": -5.258270263671875,
+    "direct_uncached_score": -5.214757919311523,
+    "cached_direct_score_difference": 0.04351234436035156,
+    "exact_10th_score": -4.658633708953857,
+    "beam_10th_exact_score": -5.139294624328613,
+    "near_ties_within_0_02": 3,
+    "conditional_cold_catalog_probability_mass": 0.008470379747450352,
+    "exact_top10_item_ids": [
+      17,
+      16281,
+      10341,
+      900,
+      4987,
+      14033,
+      7340,
+      3063,
+      791,
+      835
+    ],
+    "beam_top10_item_ids": [
+      17,
+      900,
+      14033,
+      4987,
+      7340,
+      791,
+      835,
+      7203,
+      3257,
+      9725
+    ],
+    "exact_beam_top10_overlap": 7,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_92>",
+        "log_probability": -0.4480980634689331,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_107>",
+        "log_probability": -4.795795440673828,
+        "rank_legal_successors": 31,
+        "legal_successors": 75
+      },
+      {
+        "depth": 2,
+        "token": "<c_208>",
+        "log_probability": -0.014315525069832802,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -5.8410845667822286e-05,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -2.861018856492592e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 10.657374713002355
+  },
+  {
+    "item_id": "15316",
+    "cohort": "warm",
+    "title": "Amazing Adventures: The Caribbean Secret - PC",
+    "beam10_rank": null,
+    "exact_rank": 196,
+    "gold_sequence_score": -7.723204135894775,
+    "direct_uncached_score": -7.717905044555664,
+    "cached_direct_score_difference": 0.005299091339111328,
+    "exact_10th_score": -5.046832084655762,
+    "beam_10th_exact_score": -5.046832084655762,
+    "near_ties_within_0_02": 4,
+    "conditional_cold_catalog_probability_mass": 2.6613539375830442e-05,
+    "exact_top10_item_ids": [
+      15315,
+      2212,
+      14781,
+      2214,
+      9341,
+      12106,
+      10871,
+      15330,
+      12103,
+      14844
+    ],
+    "beam_top10_item_ids": [
+      15315,
+      2212,
+      14781,
+      2214,
+      9341,
+      12106,
+      10871,
+      15330,
+      12103,
+      14844
+    ],
+    "exact_beam_top10_overlap": 10,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_162>",
+        "log_probability": -1.2980927228927612,
+        "rank_legal_successors": 2,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_189>",
+        "log_probability": -5.023828983306885,
+        "rank_legal_successors": 47,
+        "legal_successors": 115
+      },
+      {
+        "depth": 2,
+        "token": "<c_220>",
+        "log_probability": -1.4012820720672607,
+        "rank_legal_successors": 2,
+        "legal_successors": 3
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -2.3841855067985307e-07,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 9.29210577000049
+  },
+  {
+    "item_id": "8426",
+    "cohort": "warm",
+    "title": "Devil's Third - Wii U Standard Edition",
+    "beam10_rank": 2,
+    "exact_rank": 2,
+    "gold_sequence_score": -2.1205811500549316,
+    "direct_uncached_score": -2.0394465923309326,
+    "cached_direct_score_difference": 0.08113455772399902,
+    "exact_10th_score": -4.647320747375488,
+    "beam_10th_exact_score": -4.647320747375488,
+    "near_ties_within_0_02": 1,
+    "conditional_cold_catalog_probability_mass": 0.0012521904427558184,
+    "exact_top10_item_ids": [
+      942,
+      8426,
+      9520,
+      1922,
+      711,
+      7891,
+      334,
+      1262,
+      4089,
+      511
+    ],
+    "beam_top10_item_ids": [
+      942,
+      8426,
+      9520,
+      1922,
+      711,
+      7891,
+      334,
+      1262,
+      4089,
+      511
+    ],
+    "exact_beam_top10_overlap": 10,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_226>",
+        "log_probability": -0.3832096755504608,
+        "rank_legal_successors": 1,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_61>",
+        "log_probability": -1.3517718315124512,
+        "rank_legal_successors": 1,
+        "legal_successors": 83
+      },
+      {
+        "depth": 2,
+        "token": "<c_170>",
+        "log_probability": -0.38559484481811523,
+        "rank_legal_successors": 1,
+        "legal_successors": 2
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -4.768360213347478e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 7.793655037006829
+  },
+  {
+    "item_id": "11110",
+    "cohort": "warm",
+    "title": "Razer Wildcat eSports Customizable Premium Controller for Xbox One  W/ 4 Programmable Buttons",
+    "beam10_rank": null,
+    "exact_rank": 459,
+    "gold_sequence_score": -8.85760498046875,
+    "direct_uncached_score": -8.828804016113281,
+    "cached_direct_score_difference": 0.02880096435546875,
+    "exact_10th_score": -4.697044372558594,
+    "beam_10th_exact_score": -5.104340553283691,
+    "near_ties_within_0_02": 8,
+    "conditional_cold_catalog_probability_mass": 0.002099459059536457,
+    "exact_top10_item_ids": [
+      312,
+      12580,
+      598,
+      104,
+      10916,
+      15035,
+      1758,
+      12241,
+      9536,
+      11102
+    ],
+    "beam_top10_item_ids": [
+      12580,
+      598,
+      312,
+      104,
+      10916,
+      15035,
+      1758,
+      12241,
+      9536,
+      3272
+    ],
+    "exact_beam_top10_overlap": 9,
+    "target_was_canonical_title_to_sid": true,
+    "gold_token_diagnostics": [
+      {
+        "depth": 0,
+        "token": "<a_73>",
+        "log_probability": -1.807709813117981,
+        "rank_legal_successors": 3,
+        "legal_successors": 142
+      },
+      {
+        "depth": 1,
+        "token": "<b_128>",
+        "log_probability": -3.3778467178344727,
+        "rank_legal_successors": 8,
+        "legal_successors": 104
+      },
+      {
+        "depth": 2,
+        "token": "<c_29>",
+        "log_probability": -3.6720409393310547,
+        "rank_legal_successors": 4,
+        "legal_successors": 5
+      },
+      {
+        "depth": 3,
+        "token": "<d_0>",
+        "log_probability": -4.6491513785440475e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 4,
+        "token": "Ċ",
+        "log_probability": -3.3378546504536644e-06,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      },
+      {
+        "depth": 5,
+        "token": "<|endoftext|>",
+        "log_probability": 0.0,
+        "rank_legal_successors": 1,
+        "legal_successors": 1
+      }
+    ],
+    "elapsed_seconds": 11.52611033199355
+  }
+]

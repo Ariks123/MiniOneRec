@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "host_vs_container_source_sha256": {
+    "sid_index": true,
+    "metadata": true,
+    "train_interactions": true,
+    "test_interactions": true,
+    "prepared_test": true,
+    "run_config": true,
+    "accepted_evaluation": true,
+    "checkpoint_config": true,
+    "checkpoint_weights": true,
+    "checkpoint_tokenizer": true,
+    "embedding": true,
+    "dataset_implementation": true,
+    "constraint_implementation": true,
+    "diagnostic_script": true
+  }
+}

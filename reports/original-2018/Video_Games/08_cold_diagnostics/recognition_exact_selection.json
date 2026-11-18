@@ -1,0 +1,23 @@
+{
+  "seed": 20261116,
+  "per_group": 8,
+  "items": [
+    "9787",
+    "9868",
+    "16521",
+    "13552",
+    "12640",
+    "15224",
+    "16556",
+    "12490",
+    "12348",
+    "10492",
+    "12165",
+    "5021",
+    "11985",
+    "15316",
+    "8426",
+    "11110"
+  ],
+  "method": "Seeded random sample from all 666 cold items, independent of generated answers; warm reference is the corresponding title-word-count-matched item from the original identification cohort."
+}

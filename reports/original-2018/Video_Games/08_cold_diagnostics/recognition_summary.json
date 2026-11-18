@@ -1,0 +1,4269 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-16T08:07:17.247063+00:00",
+  "schema_version": 1,
+  "source_paths": {
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "metadata": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item.json",
+    "train_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "test_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+    "prepared_test": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/test.csv",
+    "run_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/run_config.json",
+    "accepted_evaluation": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/metrics.json",
+    "checkpoint_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/config.json",
+    "checkpoint_weights": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/model.safetensors",
+    "checkpoint_tokenizer": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer.json",
+    "embedding": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.emb-qwen-td.npy",
+    "dataset_implementation": "/mnt/ossdata/ziweizhao/MiniOneRec/data.py",
+    "constraint_implementation": "/mnt/ossdata/ziweizhao/MiniOneRec/LogitProcessor.py",
+    "diagnostic_script": "/mnt/ossdata/ziweizhao/MiniOneRec/tmp/cold_diagnostics_20261116/recognition_diagnostics.py"
+  },
+  "source_sha256": {
+    "sid_index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+    "metadata": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7",
+    "train_interactions": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "test_interactions": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+    "prepared_test": "51c5b6d13486e4dfb353a2a628d759271624d1c80f1775748ca2f0668781f277",
+    "run_config": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8",
+    "accepted_evaluation": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e",
+    "checkpoint_config": "a617fc4a26f3b0f0b8c28cf018cf49ab9dde80fa5f8be204a727a4654cfd97a8",
+    "checkpoint_weights": "b823c2cb400f83209a0801e64ca2c65b0729bfc52b64196936ee8fbdaed4f1b3",
+    "checkpoint_tokenizer": "c00708d331f0a3efee070f4bc11a9ce699eea0a1cd69c7669070093436953c83",
+    "embedding": "5db0987422bb66f5d8c4aca8a0014a8294feaeb1d4574b272e401995a070374a",
+    "dataset_implementation": "fffd7e7e5bb5555693be0332795717bec1eaf037a01d8291af6335a14baa579d",
+    "constraint_implementation": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+    "diagnostic_script": "2eb903d7fcb040fd22dc9bfde1566f97982c2a12c29274f7b67ba85c5a3bdb60"
+  },
+  "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint",
+  "tokenizer_dimensions": {
+    "atomic_sid_tokens": 657,
+    "tokenizer_size": 152322,
+    "model_vocabulary_size": 152322
+  },
+  "seed": 20261116,
+  "methodology": {
+    "training_performed": false,
+    "same_training_prompt_implementations": true,
+    "identification_prompt_max_tokens": 118,
+    "history_prompt_max_tokens": 199,
+    "history_prompt_truncations": 0,
+    "identification_prompt": "SidItemFeatDataset.pre(test=True), title2sid",
+    "identification_items": "All 666 distinct cold test targets; 666 distinct warm test targets greedily matched on title word count with seeded tie order.",
+    "identification_decoding": {
+      "num_beams": 10,
+      "catalog_constrained": true,
+      "length_penalty": 0.0,
+      "max_new_tokens": 6,
+      "full_vocabulary_logsoftmax_before_mask": true
+    },
+    "history_prompt": "FusionSeqRecDataset.pre(test=True), original history SIDs -> title",
+    "history_rows": "Seeded random rows within cold/warm test strata; no target-dependent generation.",
+    "history_decoding": {
+      "num_beams": 1,
+      "max_new_tokens": 64,
+      "catalog_constrained": false
+    },
+    "history_title_mapping": "Raw and casefold/whitespace title exact match; TF-IDF is lexical catalog lookup, not a semantic encoder.",
+    "content_cosine": "Computed only when generated title exactly matches a catalog title after case/whitespace normalization; ambiguous-title maximum cosine is marked conditional, not zero-filled.",
+    "scope": "Descriptive post-hoc diagnosis; direct title->SID is known-metadata recognition, not recommendation accuracy."
+  },
+  "direct_title_to_sid": {
+    "cold": {
+      "items": 666,
+      "ambiguous_title_items": 12,
+      "noncanonical_training_title_items": 3,
+      "exact_top1_count": 4,
+      "exact_top10_count": 35,
+      "semantic_prefix3_top1_count": 4,
+      "semantic_prefix3_top10_count": 38,
+      "title_compatible_top1_count": 4,
+      "title_compatible_top10_count": 35,
+      "canonical_top1_count": 4,
+      "canonical_top10_count": 35,
+      "exact_top1": 0.006006006006006006,
+      "exact_top10": 0.052552552552552555,
+      "semantic_prefix3_top1": 0.006006006006006006,
+      "semantic_prefix3_top10": 0.057057057057057055,
+      "title_compatible_top1": 0.006006006006006006,
+      "title_compatible_top10": 0.052552552552552555,
+      "canonical_top1": 0.006006006006006006,
+      "canonical_top10": 0.052552552552552555
+    },
+    "warm": {
+      "items": 666,
+      "ambiguous_title_items": 23,
+      "noncanonical_training_title_items": 17,
+      "exact_top1_count": 63,
+      "exact_top10_count": 172,
+      "semantic_prefix3_top1_count": 63,
+      "semantic_prefix3_top10_count": 173,
+      "title_compatible_top1_count": 64,
+      "title_compatible_top10_count": 174,
+      "canonical_top1_count": 63,
+      "canonical_top10_count": 169,
+      "exact_top1": 0.0945945945945946,
+      "exact_top10": 0.25825825825825827,
+      "semantic_prefix3_top1": 0.0945945945945946,
+      "semantic_prefix3_top10": 0.25975975975975973,
+      "title_compatible_top1": 0.0960960960960961,
+      "title_compatible_top10": 0.26126126126126126,
+      "canonical_top1": 0.0945945945945946,
+      "canonical_top10": 0.25375375375375375
+    }
+  },
+  "history_to_title": {
+    "cold": {
+      "rows": 64,
+      "exact_target_title": 0.0,
+      "normalized_target_title": 0.0,
+      "exact_catalog_title_found": 1.0,
+      "word_token_f1": 0.17334790722585808,
+      "generated_title_tfidf_catalog_HR10": 0.0,
+      "exact_catalog_title_content_cosine_count": 64,
+      "exact_catalog_title_content_cosine_mean": 0.7266421699896455
+    },
+    "warm": {
+      "rows": 64,
+      "exact_target_title": 0.015625,
+      "normalized_target_title": 0.015625,
+      "exact_catalog_title_found": 1.0,
+      "word_token_f1": 0.13849014690538408,
+      "generated_title_tfidf_catalog_HR10": 0.03125,
+      "exact_catalog_title_content_cosine_count": 64,
+      "exact_catalog_title_content_cosine_mean": 0.722753576003015
+    }
+  },
+  "warm_matching_pairs": [
+    {
+      "cold_item": "252",
+      "warm_item": "4982",
+      "cold_title_words": 3,
+      "warm_title_words": 3
+    },
+    {
+      "cold_item": "295",
+      "warm_item": "6788",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "313",
+      "warm_item": "13408",
+      "cold_title_words": 2,
+      "warm_title_words": 2
+    },
+    {
+      "cold_item": "314",
+      "warm_item": "6485",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "315",
+      "warm_item": "11004",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "336",
+      "warm_item": "6895",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "337",
+      "warm_item": "7711",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "529",
+      "warm_item": "8261",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "538",
+      "warm_item": "9581",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "539",
+      "warm_item": "748",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "540",
+      "warm_item": "10147",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "541",
+      "warm_item": "11233",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "542",
+      "warm_item": "13574",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "543",
+      "warm_item": "16031",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "544",
+      "warm_item": "12551",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "545",
+      "warm_item": "8341",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "547",
+      "warm_item": "9248",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "548",
+      "warm_item": "14774",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "549",
+      "warm_item": "11510",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "551",
+      "warm_item": "5144",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "552",
+      "warm_item": "12289",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "714",
+      "warm_item": "6178",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "715",
+      "warm_item": "1073",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "827",
+      "warm_item": "8509",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "829",
+      "warm_item": "1951",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "830",
+      "warm_item": "13160",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "831",
+      "warm_item": "3936",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "844",
+      "warm_item": "12887",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "846",
+      "warm_item": "9848",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "952",
+      "warm_item": "2260",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "1030",
+      "warm_item": "5740",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "1160",
+      "warm_item": "5763",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "1474",
+      "warm_item": "13081",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "1477",
+      "warm_item": "2837",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "1479",
+      "warm_item": "7598",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "1480",
+      "warm_item": "16379",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "1481",
+      "warm_item": "11996",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "1588",
+      "warm_item": "823",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "1646",
+      "warm_item": "12449",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "1647",
+      "warm_item": "9559",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "1682",
+      "warm_item": "3219",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "1760",
+      "warm_item": "114",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "1823",
+      "warm_item": "6258",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "1840",
+      "warm_item": "2081",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "1901",
+      "warm_item": "14230",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "1904",
+      "warm_item": "4357",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "1939",
+      "warm_item": "553",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "1943",
+      "warm_item": "2399",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "2036",
+      "warm_item": "1993",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "2037",
+      "warm_item": "7188",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "2089",
+      "warm_item": "10717",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "2090",
+      "warm_item": "6354",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "2091",
+      "warm_item": "4005",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "2094",
+      "warm_item": "14652",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "2095",
+      "warm_item": "9334",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "2156",
+      "warm_item": "2314",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "2157",
+      "warm_item": "16475",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "2391",
+      "warm_item": "2741",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "2393",
+      "warm_item": "15246",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "2394",
+      "warm_item": "13337",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "2448",
+      "warm_item": "6867",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "2648",
+      "warm_item": "4273",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "2649",
+      "warm_item": "6605",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "2650",
+      "warm_item": "11729",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "2813",
+      "warm_item": "10943",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "2900",
+      "warm_item": "13678",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "2924",
+      "warm_item": "2084",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "2925",
+      "warm_item": "14390",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "2927",
+      "warm_item": "1056",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "2958",
+      "warm_item": "8944",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "2977",
+      "warm_item": "13040",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "3298",
+      "warm_item": "12380",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "3437",
+      "warm_item": "1063",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "3441",
+      "warm_item": "3691",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "3723",
+      "warm_item": "995",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "4002",
+      "warm_item": "3026",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "4003",
+      "warm_item": "6538",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "4008",
+      "warm_item": "8933",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "4015",
+      "warm_item": "8120",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "4240",
+      "warm_item": "9056",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "4243",
+      "warm_item": "12619",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "4244",
+      "warm_item": "11197",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "4245",
+      "warm_item": "10173",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "4246",
+      "warm_item": "12946",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "4475",
+      "warm_item": "480",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "4913",
+      "warm_item": "12125",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "5086",
+      "warm_item": "266",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "5087",
+      "warm_item": "10900",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "5266",
+      "warm_item": "6998",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "5355",
+      "warm_item": "10382",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "5374",
+      "warm_item": "464",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "5485",
+      "warm_item": "5743",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "5735",
+      "warm_item": "14028",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "5737",
+      "warm_item": "10612",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "5751",
+      "warm_item": "1626",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "5752",
+      "warm_item": "1198",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "5861",
+      "warm_item": "766",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "6069",
+      "warm_item": "5553",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6078",
+      "warm_item": "3783",
+      "cold_title_words": 3,
+      "warm_title_words": 3
+    },
+    {
+      "cold_item": "6109",
+      "warm_item": "1186",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "6112",
+      "warm_item": "6174",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "6126",
+      "warm_item": "13836",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6135",
+      "warm_item": "8788",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "6184",
+      "warm_item": "1223",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6195",
+      "warm_item": "5085",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "6196",
+      "warm_item": "776",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "6197",
+      "warm_item": "6121",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "6200",
+      "warm_item": "6221",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "6215",
+      "warm_item": "2173",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "6225",
+      "warm_item": "13494",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "6231",
+      "warm_item": "14507",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6252",
+      "warm_item": "9840",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "6261",
+      "warm_item": "12290",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "6337",
+      "warm_item": "7642",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6345",
+      "warm_item": "11417",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6346",
+      "warm_item": "10275",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "6466",
+      "warm_item": "4592",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "6488",
+      "warm_item": "9777",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "6498",
+      "warm_item": "13652",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "6517",
+      "warm_item": "9409",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "6580",
+      "warm_item": "10466",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "6651",
+      "warm_item": "16388",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "6652",
+      "warm_item": "8754",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "6654",
+      "warm_item": "2326",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "6745",
+      "warm_item": "13285",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "6754",
+      "warm_item": "9423",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "6755",
+      "warm_item": "13475",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "6805",
+      "warm_item": "821",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "6982",
+      "warm_item": "723",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "6983",
+      "warm_item": "4157",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "6985",
+      "warm_item": "9990",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "7121",
+      "warm_item": "15098",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "7123",
+      "warm_item": "6892",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "7124",
+      "warm_item": "14186",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "7125",
+      "warm_item": "110",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "7126",
+      "warm_item": "7927",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "7373",
+      "warm_item": "15623",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "7374",
+      "warm_item": "1740",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "7375",
+      "warm_item": "9395",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "7404",
+      "warm_item": "16559",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "7533",
+      "warm_item": "13299",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "7645",
+      "warm_item": "12595",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "7646",
+      "warm_item": "1043",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "7726",
+      "warm_item": "12466",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "7767",
+      "warm_item": "1587",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "7777",
+      "warm_item": "16378",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "7778",
+      "warm_item": "8612",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "7782",
+      "warm_item": "505",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "7783",
+      "warm_item": "6884",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "7825",
+      "warm_item": "3473",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "7829",
+      "warm_item": "11219",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "7830",
+      "warm_item": "9008",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "7851",
+      "warm_item": "8065",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "7894",
+      "warm_item": "16395",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "7983",
+      "warm_item": "2424",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "7985",
+      "warm_item": "14660",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "8040",
+      "warm_item": "7833",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "8136",
+      "warm_item": "3269",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "8137",
+      "warm_item": "3451",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "8374",
+      "warm_item": "1433",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "8376",
+      "warm_item": "7510",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "8403",
+      "warm_item": "16330",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "8406",
+      "warm_item": "16053",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "8457",
+      "warm_item": "4156",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "8460",
+      "warm_item": "8957",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "8464",
+      "warm_item": "12276",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "8466",
+      "warm_item": "9789",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "8468",
+      "warm_item": "12474",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "8473",
+      "warm_item": "10511",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "8479",
+      "warm_item": "15022",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "8494",
+      "warm_item": "12259",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "8599",
+      "warm_item": "11302",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "8619",
+      "warm_item": "4415",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "8675",
+      "warm_item": "14242",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "8778",
+      "warm_item": "8665",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "8781",
+      "warm_item": "15931",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "8792",
+      "warm_item": "14990",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "8793",
+      "warm_item": "3054",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "8861",
+      "warm_item": "11979",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9103",
+      "warm_item": "3479",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9245",
+      "warm_item": "797",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "9246",
+      "warm_item": "274",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9251",
+      "warm_item": "5497",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "9277",
+      "warm_item": "466",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9278",
+      "warm_item": "24",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "9303",
+      "warm_item": "15141",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "9304",
+      "warm_item": "6984",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "9306",
+      "warm_item": "11064",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "9311",
+      "warm_item": "1973",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9332",
+      "warm_item": "1369",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "9335",
+      "warm_item": "712",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "9366",
+      "warm_item": "11569",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9430",
+      "warm_item": "10328",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "9442",
+      "warm_item": "401",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "9449",
+      "warm_item": "14973",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "9474",
+      "warm_item": "14888",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9526",
+      "warm_item": "11947",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "9528",
+      "warm_item": "5281",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "9529",
+      "warm_item": "5600",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "9531",
+      "warm_item": "2638",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "9535",
+      "warm_item": "15133",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "9558",
+      "warm_item": "7695",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "9636",
+      "warm_item": "1628",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9637",
+      "warm_item": "3763",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "9649",
+      "warm_item": "12536",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "9712",
+      "warm_item": "15798",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "9745",
+      "warm_item": "14833",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "9747",
+      "warm_item": "11958",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9754",
+      "warm_item": "5536",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9756",
+      "warm_item": "11480",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "9762",
+      "warm_item": "4024",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9769",
+      "warm_item": "13203",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9781",
+      "warm_item": "5197",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "9783",
+      "warm_item": "13242",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "9786",
+      "warm_item": "15037",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9787",
+      "warm_item": "12348",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "9812",
+      "warm_item": "12657",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "9824",
+      "warm_item": "2265",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "9825",
+      "warm_item": "1750",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9868",
+      "warm_item": "10492",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "9887",
+      "warm_item": "965",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "9960",
+      "warm_item": "1475",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "9961",
+      "warm_item": "12668",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "9977",
+      "warm_item": "4383",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "10016",
+      "warm_item": "3709",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "10123",
+      "warm_item": "9116",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "10240",
+      "warm_item": "4009",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "10243",
+      "warm_item": "7309",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "10360",
+      "warm_item": "10537",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "10361",
+      "warm_item": "5726",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "10365",
+      "warm_item": "13223",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "10376",
+      "warm_item": "6703",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "10411",
+      "warm_item": "73",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "10558",
+      "warm_item": "15410",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "10626",
+      "warm_item": "4645",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "10627",
+      "warm_item": "8634",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "10659",
+      "warm_item": "13776",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "10669",
+      "warm_item": "2688",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "10679",
+      "warm_item": "8260",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "10732",
+      "warm_item": "4655",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "10741",
+      "warm_item": "12552",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "10742",
+      "warm_item": "5138",
+      "cold_title_words": 2,
+      "warm_title_words": 2
+    },
+    {
+      "cold_item": "10774",
+      "warm_item": "4189",
+      "cold_title_words": 2,
+      "warm_title_words": 2
+    },
+    {
+      "cold_item": "10795",
+      "warm_item": "914",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "10953",
+      "warm_item": "6910",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "10954",
+      "warm_item": "2508",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "10987",
+      "warm_item": "5228",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "11044",
+      "warm_item": "14576",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11065",
+      "warm_item": "3741",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11066",
+      "warm_item": "7483",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11096",
+      "warm_item": "3830",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "11097",
+      "warm_item": "3079",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11098",
+      "warm_item": "14600",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "11109",
+      "warm_item": "10692",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "11125",
+      "warm_item": "8262",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "11130",
+      "warm_item": "9757",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11143",
+      "warm_item": "3754",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11169",
+      "warm_item": "13658",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "11170",
+      "warm_item": "418",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "11171",
+      "warm_item": "5055",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11172",
+      "warm_item": "8733",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11204",
+      "warm_item": "982",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "11229",
+      "warm_item": "11010",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "11258",
+      "warm_item": "12685",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11276",
+      "warm_item": "233",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11315",
+      "warm_item": "6897",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11316",
+      "warm_item": "4098",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11369",
+      "warm_item": "621",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "11372",
+      "warm_item": "13367",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "11373",
+      "warm_item": "16305",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "11431",
+      "warm_item": "13649",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "11433",
+      "warm_item": "4823",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "11464",
+      "warm_item": "14962",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "11469",
+      "warm_item": "10620",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11498",
+      "warm_item": "15371",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11500",
+      "warm_item": "16456",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "11507",
+      "warm_item": "12658",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "11508",
+      "warm_item": "3518",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11518",
+      "warm_item": "4083",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "11554",
+      "warm_item": "931",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "11555",
+      "warm_item": "1718",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11556",
+      "warm_item": "3010",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11557",
+      "warm_item": "9736",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "11558",
+      "warm_item": "5934",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "11577",
+      "warm_item": "10932",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "11584",
+      "warm_item": "16260",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11585",
+      "warm_item": "4778",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11631",
+      "warm_item": "15258",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "11671",
+      "warm_item": "6702",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "11727",
+      "warm_item": "1213",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11742",
+      "warm_item": "11105",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "11745",
+      "warm_item": "8750",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "11775",
+      "warm_item": "2226",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "11784",
+      "warm_item": "906",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "11823",
+      "warm_item": "2825",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "11863",
+      "warm_item": "11706",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "11894",
+      "warm_item": "6674",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11895",
+      "warm_item": "1661",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "11907",
+      "warm_item": "2909",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "11918",
+      "warm_item": "14430",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "11927",
+      "warm_item": "1564",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "11990",
+      "warm_item": "6010",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "11991",
+      "warm_item": "14069",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "12007",
+      "warm_item": "6424",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12009",
+      "warm_item": "16499",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12037",
+      "warm_item": "2291",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12058",
+      "warm_item": "15006",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "12127",
+      "warm_item": "2540",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12130",
+      "warm_item": "12469",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12131",
+      "warm_item": "3399",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12132",
+      "warm_item": "338",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12137",
+      "warm_item": "13985",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "12168",
+      "warm_item": "11825",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "12169",
+      "warm_item": "7594",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "12175",
+      "warm_item": "7708",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12176",
+      "warm_item": "2355",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12177",
+      "warm_item": "1855",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "12185",
+      "warm_item": "6004",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "12223",
+      "warm_item": "11970",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12231",
+      "warm_item": "10392",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12297",
+      "warm_item": "1678",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "12345",
+      "warm_item": "865",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "12346",
+      "warm_item": "2632",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "12350",
+      "warm_item": "3999",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "12372",
+      "warm_item": "1562",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "12394",
+      "warm_item": "8413",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12398",
+      "warm_item": "3655",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12442",
+      "warm_item": "1586",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12447",
+      "warm_item": "12362",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12490",
+      "warm_item": "11110",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "12491",
+      "warm_item": "8639",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12493",
+      "warm_item": "2295",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12494",
+      "warm_item": "13621",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "12496",
+      "warm_item": "5056",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "12506",
+      "warm_item": "14333",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12515",
+      "warm_item": "5927",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12522",
+      "warm_item": "14622",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12523",
+      "warm_item": "15707",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "12524",
+      "warm_item": "3722",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "12532",
+      "warm_item": "1327",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "12533",
+      "warm_item": "5348",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12538",
+      "warm_item": "1538",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "12541",
+      "warm_item": "11828",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12612",
+      "warm_item": "3297",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "12634",
+      "warm_item": "4599",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "12640",
+      "warm_item": "11985",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12644",
+      "warm_item": "6725",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12647",
+      "warm_item": "5388",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "12653",
+      "warm_item": "8177",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "12660",
+      "warm_item": "1028",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12661",
+      "warm_item": "12770",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12699",
+      "warm_item": "6108",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12724",
+      "warm_item": "7780",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12725",
+      "warm_item": "2928",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12726",
+      "warm_item": "1653",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12727",
+      "warm_item": "7110",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12728",
+      "warm_item": "1773",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12729",
+      "warm_item": "3051",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "12757",
+      "warm_item": "8445",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12759",
+      "warm_item": "16118",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "12762",
+      "warm_item": "2871",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "12784",
+      "warm_item": "11142",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "12800",
+      "warm_item": "3703",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "12804",
+      "warm_item": "1066",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "12805",
+      "warm_item": "6582",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12812",
+      "warm_item": "5717",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "12813",
+      "warm_item": "9171",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12814",
+      "warm_item": "8367",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "12817",
+      "warm_item": "14394",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12818",
+      "warm_item": "11446",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12864",
+      "warm_item": "3456",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "12909",
+      "warm_item": "15636",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12916",
+      "warm_item": "11974",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "12920",
+      "warm_item": "7792",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12948",
+      "warm_item": "1970",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12957",
+      "warm_item": "12735",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12961",
+      "warm_item": "11239",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "12990",
+      "warm_item": "12648",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "12991",
+      "warm_item": "9534",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "13000",
+      "warm_item": "14376",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13003",
+      "warm_item": "16420",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13013",
+      "warm_item": "10182",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13023",
+      "warm_item": "5823",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13047",
+      "warm_item": "2077",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13051",
+      "warm_item": "791",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13057",
+      "warm_item": "8560",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13078",
+      "warm_item": "16454",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "13090",
+      "warm_item": "960",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "13110",
+      "warm_item": "11669",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "13111",
+      "warm_item": "13169",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13149",
+      "warm_item": "3552",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "13152",
+      "warm_item": "2587",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13171",
+      "warm_item": "14752",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "13201",
+      "warm_item": "12751",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "13215",
+      "warm_item": "13705",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13256",
+      "warm_item": "15500",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "13283",
+      "warm_item": "1589",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13288",
+      "warm_item": "1602",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "13298",
+      "warm_item": "4193",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13311",
+      "warm_item": "11637",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13316",
+      "warm_item": "10329",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13340",
+      "warm_item": "11063",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13371",
+      "warm_item": "10999",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13391",
+      "warm_item": "8998",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "13409",
+      "warm_item": "15832",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13410",
+      "warm_item": "5551",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13413",
+      "warm_item": "15596",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "13450",
+      "warm_item": "6562",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "13455",
+      "warm_item": "16167",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "13457",
+      "warm_item": "13491",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13467",
+      "warm_item": "5730",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13487",
+      "warm_item": "14840",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "13504",
+      "warm_item": "2719",
+      "cold_title_words": 2,
+      "warm_title_words": 2
+    },
+    {
+      "cold_item": "13515",
+      "warm_item": "15583",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13552",
+      "warm_item": "5021",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "13606",
+      "warm_item": "4314",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13607",
+      "warm_item": "12410",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13608",
+      "warm_item": "8200",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "13610",
+      "warm_item": "12721",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13611",
+      "warm_item": "12962",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13625",
+      "warm_item": "4038",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "13635",
+      "warm_item": "3009",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "13673",
+      "warm_item": "3091",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "13677",
+      "warm_item": "6059",
+      "cold_title_words": 3,
+      "warm_title_words": 3
+    },
+    {
+      "cold_item": "13683",
+      "warm_item": "14170",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "13692",
+      "warm_item": "1644",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "13693",
+      "warm_item": "1579",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13696",
+      "warm_item": "7347",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13748",
+      "warm_item": "10592",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "13751",
+      "warm_item": "6099",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "13752",
+      "warm_item": "11780",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13755",
+      "warm_item": "12626",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13762",
+      "warm_item": "13237",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13763",
+      "warm_item": "11956",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13770",
+      "warm_item": "10163",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "13771",
+      "warm_item": "2068",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "13873",
+      "warm_item": "16414",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13876",
+      "warm_item": "535",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "13890",
+      "warm_item": "14863",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "13902",
+      "warm_item": "3180",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13908",
+      "warm_item": "11071",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "13929",
+      "warm_item": "3237",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "13941",
+      "warm_item": "13068",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "13951",
+      "warm_item": "7079",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "13966",
+      "warm_item": "12743",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "14001",
+      "warm_item": "14754",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "14025",
+      "warm_item": "10747",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "14040",
+      "warm_item": "6006",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "14042",
+      "warm_item": "3875",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "14044",
+      "warm_item": "10907",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14077",
+      "warm_item": "14894",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14131",
+      "warm_item": "1815",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14140",
+      "warm_item": "5373",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14142",
+      "warm_item": "260",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14147",
+      "warm_item": "6672",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14239",
+      "warm_item": "7305",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14245",
+      "warm_item": "11163",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "14265",
+      "warm_item": "13217",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14266",
+      "warm_item": "8043",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "14284",
+      "warm_item": "11683",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "14314",
+      "warm_item": "13732",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "14322",
+      "warm_item": "13064",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14325",
+      "warm_item": "8253",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14327",
+      "warm_item": "6694",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "14332",
+      "warm_item": "1783",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "14352",
+      "warm_item": "11579",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14374",
+      "warm_item": "2062",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "14386",
+      "warm_item": "1080",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "14408",
+      "warm_item": "2366",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14413",
+      "warm_item": "13500",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "14416",
+      "warm_item": "6619",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14433",
+      "warm_item": "11317",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "14441",
+      "warm_item": "2172",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "14465",
+      "warm_item": "15861",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14471",
+      "warm_item": "13009",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "14474",
+      "warm_item": "15454",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "14504",
+      "warm_item": "3436",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "14514",
+      "warm_item": "3149",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "14521",
+      "warm_item": "4277",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "14522",
+      "warm_item": "2865",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14527",
+      "warm_item": "3381",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14540",
+      "warm_item": "6687",
+      "cold_title_words": 3,
+      "warm_title_words": 3
+    },
+    {
+      "cold_item": "14591",
+      "warm_item": "13310",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14609",
+      "warm_item": "7837",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "14611",
+      "warm_item": "457",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14644",
+      "warm_item": "15187",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14699",
+      "warm_item": "11153",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14706",
+      "warm_item": "16084",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14732",
+      "warm_item": "4129",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14799",
+      "warm_item": "11252",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "14841",
+      "warm_item": "857",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "14867",
+      "warm_item": "10087",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14883",
+      "warm_item": "12385",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14884",
+      "warm_item": "14631",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "14886",
+      "warm_item": "2867",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "14940",
+      "warm_item": "2728",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "14943",
+      "warm_item": "8127",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14963",
+      "warm_item": "1165",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "14984",
+      "warm_item": "15266",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "14987",
+      "warm_item": "4096",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "14999",
+      "warm_item": "4195",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15003",
+      "warm_item": "7763",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15009",
+      "warm_item": "10508",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "15020",
+      "warm_item": "1368",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15027",
+      "warm_item": "777",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15034",
+      "warm_item": "13685",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "15047",
+      "warm_item": "8777",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15055",
+      "warm_item": "8561",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15058",
+      "warm_item": "4369",
+      "cold_title_words": 3,
+      "warm_title_words": 3
+    },
+    {
+      "cold_item": "15067",
+      "warm_item": "16554",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15095",
+      "warm_item": "910",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15116",
+      "warm_item": "7991",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "15159",
+      "warm_item": "4491",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15190",
+      "warm_item": "5613",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15193",
+      "warm_item": "8372",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15220",
+      "warm_item": "13098",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15224",
+      "warm_item": "15316",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15229",
+      "warm_item": "14460",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15233",
+      "warm_item": "8036",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15237",
+      "warm_item": "11430",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15247",
+      "warm_item": "15062",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15250",
+      "warm_item": "812",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "15267",
+      "warm_item": "10703",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15276",
+      "warm_item": "11866",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15278",
+      "warm_item": "10733",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "15288",
+      "warm_item": "7781",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15300",
+      "warm_item": "7814",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "15301",
+      "warm_item": "11627",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15302",
+      "warm_item": "530",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15331",
+      "warm_item": "1206",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15333",
+      "warm_item": "3048",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15334",
+      "warm_item": "11997",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15336",
+      "warm_item": "2643",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15360",
+      "warm_item": "13788",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15362",
+      "warm_item": "1822",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15363",
+      "warm_item": "9784",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "15381",
+      "warm_item": "15716",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15387",
+      "warm_item": "10372",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15411",
+      "warm_item": "3200",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "15445",
+      "warm_item": "2003",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "15446",
+      "warm_item": "5068",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "15472",
+      "warm_item": "15942",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "15484",
+      "warm_item": "16226",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "15504",
+      "warm_item": "1909",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "15512",
+      "warm_item": "12035",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "15514",
+      "warm_item": "11401",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "15520",
+      "warm_item": "11529",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "15548",
+      "warm_item": "11564",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15573",
+      "warm_item": "515",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "15591",
+      "warm_item": "16381",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15602",
+      "warm_item": "9584",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15603",
+      "warm_item": "4304",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "15647",
+      "warm_item": "9098",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15648",
+      "warm_item": "9372",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "15658",
+      "warm_item": "3367",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "15693",
+      "warm_item": "4145",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "15694",
+      "warm_item": "1555",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "15698",
+      "warm_item": "4746",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15717",
+      "warm_item": "15652",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15725",
+      "warm_item": "8576",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15730",
+      "warm_item": "13952",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "15732",
+      "warm_item": "15734",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15753",
+      "warm_item": "7343",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15760",
+      "warm_item": "10091",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15761",
+      "warm_item": "13612",
+      "cold_title_words": 15,
+      "warm_title_words": 15
+    },
+    {
+      "cold_item": "15764",
+      "warm_item": "1595",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15770",
+      "warm_item": "4331",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "15772",
+      "warm_item": "11371",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "15778",
+      "warm_item": "7913",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15794",
+      "warm_item": "9435",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "15797",
+      "warm_item": "12543",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "15799",
+      "warm_item": "235",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15828",
+      "warm_item": "7312",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15829",
+      "warm_item": "9186",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "15845",
+      "warm_item": "11951",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "15850",
+      "warm_item": "13103",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15858",
+      "warm_item": "12095",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "15859",
+      "warm_item": "6444",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "15860",
+      "warm_item": "730",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15899",
+      "warm_item": "4921",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15915",
+      "warm_item": "6294",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15941",
+      "warm_item": "3407",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15943",
+      "warm_item": "2073",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "15951",
+      "warm_item": "3887",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "15956",
+      "warm_item": "11545",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "15964",
+      "warm_item": "16493",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "15967",
+      "warm_item": "11005",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15972",
+      "warm_item": "7691",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "15990",
+      "warm_item": "3062",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15992",
+      "warm_item": "2292",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "15997",
+      "warm_item": "2251",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "15998",
+      "warm_item": "15534",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "16002",
+      "warm_item": "9",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "16005",
+      "warm_item": "13206",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "16017",
+      "warm_item": "11673",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16020",
+      "warm_item": "9676",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "16033",
+      "warm_item": "14583",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16058",
+      "warm_item": "11862",
+      "cold_title_words": 18,
+      "warm_title_words": 18
+    },
+    {
+      "cold_item": "16060",
+      "warm_item": "11591",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16065",
+      "warm_item": "15856",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "16101",
+      "warm_item": "9667",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16107",
+      "warm_item": "6162",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16109",
+      "warm_item": "2473",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "16119",
+      "warm_item": "6405",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "16129",
+      "warm_item": "11573",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "16142",
+      "warm_item": "1558",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16144",
+      "warm_item": "11963",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16146",
+      "warm_item": "9707",
+      "cold_title_words": 14,
+      "warm_title_words": 14
+    },
+    {
+      "cold_item": "16149",
+      "warm_item": "2055",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16164",
+      "warm_item": "3000",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16185",
+      "warm_item": "13405",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "16186",
+      "warm_item": "11753",
+      "cold_title_words": 3,
+      "warm_title_words": 3
+    },
+    {
+      "cold_item": "16238",
+      "warm_item": "554",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16242",
+      "warm_item": "14741",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "16250",
+      "warm_item": "7887",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16258",
+      "warm_item": "7831",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16263",
+      "warm_item": "16174",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16271",
+      "warm_item": "12748",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16272",
+      "warm_item": "2431",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16275",
+      "warm_item": "2430",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16279",
+      "warm_item": "10379",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "16280",
+      "warm_item": "2134",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16282",
+      "warm_item": "9633",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "16301",
+      "warm_item": "13339",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "16302",
+      "warm_item": "15666",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16303",
+      "warm_item": "1506",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16309",
+      "warm_item": "1153",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16316",
+      "warm_item": "12999",
+      "cold_title_words": 17,
+      "warm_title_words": 17
+    },
+    {
+      "cold_item": "16319",
+      "warm_item": "15138",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16320",
+      "warm_item": "2413",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16321",
+      "warm_item": "1959",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "16343",
+      "warm_item": "8346",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16346",
+      "warm_item": "13453",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "16355",
+      "warm_item": "6478",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "16392",
+      "warm_item": "12017",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "16394",
+      "warm_item": "2604",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16407",
+      "warm_item": "11525",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "16413",
+      "warm_item": "11813",
+      "cold_title_words": 12,
+      "warm_title_words": 12
+    },
+    {
+      "cold_item": "16417",
+      "warm_item": "9804",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16424",
+      "warm_item": "506",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16427",
+      "warm_item": "1371",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16443",
+      "warm_item": "2523",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16452",
+      "warm_item": "1154",
+      "cold_title_words": 4,
+      "warm_title_words": 4
+    },
+    {
+      "cold_item": "16462",
+      "warm_item": "16092",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "16478",
+      "warm_item": "2275",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "16481",
+      "warm_item": "10945",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "16484",
+      "warm_item": "8297",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16486",
+      "warm_item": "3995",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16494",
+      "warm_item": "13442",
+      "cold_title_words": 13,
+      "warm_title_words": 13
+    },
+    {
+      "cold_item": "16520",
+      "warm_item": "3300",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16521",
+      "warm_item": "12165",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16522",
+      "warm_item": "13637",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16524",
+      "warm_item": "16239",
+      "cold_title_words": 19,
+      "warm_title_words": 19
+    },
+    {
+      "cold_item": "16528",
+      "warm_item": "2762",
+      "cold_title_words": 9,
+      "warm_title_words": 9
+    },
+    {
+      "cold_item": "16536",
+      "warm_item": "7105",
+      "cold_title_words": 8,
+      "warm_title_words": 8
+    },
+    {
+      "cold_item": "16540",
+      "warm_item": "1252",
+      "cold_title_words": 5,
+      "warm_title_words": 5
+    },
+    {
+      "cold_item": "16543",
+      "warm_item": "7117",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16544",
+      "warm_item": "12031",
+      "cold_title_words": 11,
+      "warm_title_words": 11
+    },
+    {
+      "cold_item": "16545",
+      "warm_item": "5996",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16546",
+      "warm_item": "2339",
+      "cold_title_words": 20,
+      "warm_title_words": 20
+    },
+    {
+      "cold_item": "16550",
+      "warm_item": "10975",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    },
+    {
+      "cold_item": "16553",
+      "warm_item": "15568",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "16556",
+      "warm_item": "8426",
+      "cold_title_words": 7,
+      "warm_title_words": 7
+    },
+    {
+      "cold_item": "16562",
+      "warm_item": "2524",
+      "cold_title_words": 16,
+      "warm_title_words": 16
+    },
+    {
+      "cold_item": "16568",
+      "warm_item": "16098",
+      "cold_title_words": 10,
+      "warm_title_words": 10
+    },
+    {
+      "cold_item": "16569",
+      "warm_item": "5242",
+      "cold_title_words": 6,
+      "warm_title_words": 6
+    }
+  ],
+  "selected_history_row_ids": [
+    218,
+    225,
+    245,
+    382,
+    1164,
+    1337,
+    2256,
+    4629,
+    4686,
+    6018,
+    7413,
+    7642,
+    8696,
+    9476,
+    9647,
+    10244,
+    10680,
+    12256,
+    12688,
+    12830,
+    13591,
+    13728,
+    13871,
+    14296,
+    14419,
+    17509,
+    18355,
+    18382,
+    18935,
+    19563,
+    20274,
+    20398,
+    22788,
+    23117,
+    23175,
+    23438,
+    23645,
+    24463,
+    24837,
+    24927,
+    25260,
+    25273,
+    27859,
+    29749,
+    29815,
+    30393,
+    30562,
+    30826,
+    31164,
+    31546,
+    31897,
+    32191,
+    32230,
+    33155,
+    34029,
+    36047,
+    37032,
+    38373,
+    38863,
+    40705,
+    40838,
+    40929,
+    40982,
+    41237,
+    858,
+    1466,
+    3477,
+    3757,
+    4064,
+    4701,
+    4901,
+    4975,
+    5826,
+    5964,
+    6015,
+    6954,
+    7038,
+    7047,
+    7435,
+    9100,
+    10615,
+    12192,
+    12326,
+    12346,
+    13375,
+    13399,
+    14036,
+    14764,
+    17077,
+    17089,
+    17649,
+    17903,
+    18961,
+    19797,
+    20826,
+    21831,
+    23205,
+    24812,
+    24869,
+    25253,
+    26950,
+    27032,
+    27438,
+    27679,
+    27817,
+    27858,
+    28235,
+    28435,
+    29026,
+    29298,
+    29582,
+    30899,
+    32951,
+    33060,
+    33175,
+    33369,
+    33779,
+    34432,
+    35496,
+    36916,
+    37740,
+    39060,
+    39173,
+    39226,
+    39674,
+    39739,
+    40466,
+    41760
+  ],
+  "elapsed_seconds": 173.48344152800564,
+  "versions": {
+    "torch": "2.6.0+cu124",
+    "device": "cuda:1"
+  }
+}

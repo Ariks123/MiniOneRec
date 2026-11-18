@@ -1,0 +1,950 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "generated_at_utc": "2026-11-16T09:33:31.327881+00:00",
+  "generated_at_shanghai": "2026-11-16T17:33:31.327881+08:00",
+  "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft",
+  "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+  "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+  "scope": "Read-only forensic comparison of the original archived 0.5B SFT run against the isolated four-GPU 0.5B linear run. No training or source was changed by this audit.",
+  "source_hashes": [
+    {
+      "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/sft.py",
+      "sha256": "205979dcf7e18ed0f93b6cda28548c58068d8bebeb9209f39f1b2ca5b976fc43",
+      "bytes": 11256
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data.py",
+      "sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "bytes": 75157
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/README.md",
+      "sha256": "97ce7d1d8a664c590772b964f45fd0b6f4b60f3baec43f9cfff7dc70489eca02",
+      "bytes": 12469
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/requirements.txt",
+      "sha256": "7390bc1ca7a1a6d7f01484e2adf200a5cd3fc328e63c2c4607a29b4e0cbea75f",
+      "bytes": 2782
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/sft_train.log",
+      "sha256": "1ebd634314bf0ebd9a39b8ec89a97e11c755136bcf639b6b4e7ecb4cb2d4efe0",
+      "bytes": 1236195
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/sft.py",
+      "sha256": "ed6349b3570d1c4ea200914a9c8c1353a79f50c0c41874282bd40cbb3297a12d",
+      "bytes": 21669
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/sft_monitor.py",
+      "sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "bytes": 23877
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/evaluate_sft.py",
+      "sha256": "5d50d9da245b43df71ba9f45b24d5fb2c1bdbd818cc93d2a8f746f2a41f8ba83",
+      "bytes": 17373
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/sft_eval_utils.py",
+      "sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "bytes": 14835
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/run_config.json",
+      "sha256": "3da3aad6c67bfa6bbaf158cc7fd9806e82e9fa40d5f96a4e415ce97324949eb7",
+      "bytes": 3517
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/supervisor_config.json",
+      "sha256": "b73cdcced57262e69086bf1695c2a223bf7e46622b3fedb8e044461fa5ac8c7e",
+      "bytes": 2132
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/training_summary.json",
+      "sha256": "5e523fc2eadf482ee9278d2be00bf7004d575c26e66b649f9551c3a9a346ca02",
+      "bytes": 1000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/monitor/metrics.jsonl",
+      "sha256": "644f7508a7251f171948d9928bdea1333d046d15d6bca1477f6d5b5b675ce8a5",
+      "bytes": 1972750
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/base_model_model_identity_manifest.json",
+      "sha256": "45798347bd1209e6db83bd04b09fd5c6df0b9fb074d9f06a16c5d61c0b98a6d2",
+      "bytes": 3130
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/base_model_official_repository_metadata.json",
+      "sha256": "5b7d655a930aca76bd275ef0b237e6b9cff8c9bacf8d2bd3a1bf2f846cb19622",
+      "bytes": 9162
+    }
+  ],
+  "runtime_sft_source_identity": {
+    "recorded_sha256": "ed6349b3570d1c4ea200914a9c8c1353a79f50c0c41874282bd40cbb3297a12d",
+    "current_sha256": "ed6349b3570d1c4ea200914a9c8c1353a79f50c0c41874282bd40cbb3297a12d",
+    "matches": true
+  },
+  "training_status": "completed",
+  "finished_at_utc": "2026-11-16T09:30:33.811282+00:00",
+  "original_archived_training_summary": {
+    "train_runtime": 2755.2901,
+    "train_samples_per_second": 86.924,
+    "train_steps_per_second": 1.359,
+    "train_loss": 0.6514501788406672,
+    "epoch": 3.0
+  },
+  "new_training_summary": {
+    "status": "completed",
+    "stage": "sft",
+    "finished_at_utc": "2026-11-16T09:30:33.811282+00:00",
+    "train_metrics": {
+      "train_runtime": 718.4825,
+      "train_samples_per_second": 333.344,
+      "train_steps_per_second": 5.211,
+      "total_flos": 7.59154460673966e+16,
+      "train_loss": 0.6721328800926224,
+      "epoch": 3.0
+    },
+    "final_eval_metrics": {
+      "eval_loss": 1.5265060663223267,
+      "eval_runtime": 3.6401,
+      "eval_samples_per_second": 1245.004,
+      "eval_steps_per_second": 39.009,
+      "epoch": 3.0
+    },
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/checkpoint-3572",
+    "best_metric": 1.5265060663223267,
+    "final_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint",
+    "global_step": 3744,
+    "epoch": 3.0,
+    "planned_max_steps": 3744,
+    "stop_reason": "max_epochs",
+    "final_checkpoint_contains_best_model": true
+  },
+  "full_learning_rate_fit": {
+    "status": "verified",
+    "planned_optimizer_steps": 3744,
+    "original_records": 3744,
+    "new_records": 3744,
+    "new_step_coverage_complete": true,
+    "scheduler": "linear",
+    "peak_learning_rate": 0.0003,
+    "warmup_steps": 20,
+    "logging_convention": "The logged learning rate at optimizer step s corresponds to scheduler index t=s-1; step 1 is 0, step 21 is the 3e-4 peak.",
+    "linear_formula": "lr(t)=3e-4*t/20 for t<20; otherwise lr(t)=3e-4*(3744-t)/(3744-20).",
+    "original_linear_fit": {
+      "points": 3744,
+      "max_absolute_error": 5.421010862427522e-20,
+      "rmse": 1.3465234293455365e-20
+    },
+    "new_linear_fit": {
+      "points": 3744,
+      "max_absolute_error": 5.421010862427522e-20,
+      "rmse": 1.3465234293455365e-20
+    },
+    "original_cosine_alternative_fit": {
+      "points": 3744,
+      "max_absolute_error": 3.157704927579297e-05,
+      "rmse": 2.2571019095504208e-05
+    },
+    "new_cosine_alternative_fit": {
+      "points": 3744,
+      "max_absolute_error": 3.157704927579297e-05,
+      "rmse": 2.2571019095504208e-05
+    },
+    "direct_new_minus_original": {
+      "max_absolute_error": 0.0,
+      "rmse": 0.0
+    },
+    "observations": [
+      {
+        "step": 1,
+        "original_lr": 0.0,
+        "new_lr": 0.0,
+        "linear_expected": 0.0
+      },
+      {
+        "step": 2,
+        "original_lr": 1.4999999999999999e-05,
+        "new_lr": 1.4999999999999999e-05,
+        "linear_expected": 1.4999999999999999e-05
+      },
+      {
+        "step": 3,
+        "original_lr": 2.9999999999999997e-05,
+        "new_lr": 2.9999999999999997e-05,
+        "linear_expected": 2.9999999999999997e-05
+      },
+      {
+        "step": 4,
+        "original_lr": 4.4999999999999996e-05,
+        "new_lr": 4.4999999999999996e-05,
+        "linear_expected": 4.4999999999999996e-05
+      },
+      {
+        "step": 5,
+        "original_lr": 5.9999999999999995e-05,
+        "new_lr": 5.9999999999999995e-05,
+        "linear_expected": 5.9999999999999995e-05
+      },
+      {
+        "step": 21,
+        "original_lr": 0.0003,
+        "new_lr": 0.0003,
+        "linear_expected": 0.0003
+      },
+      {
+        "step": 22,
+        "original_lr": 0.00029991944146079484,
+        "new_lr": 0.00029991944146079484,
+        "linear_expected": 0.00029991944146079484
+      },
+      {
+        "step": 1000,
+        "original_lr": 0.00022113319011815252,
+        "new_lr": 0.00022113319011815252,
+        "linear_expected": 0.00022113319011815252
+      },
+      {
+        "step": 1872,
+        "original_lr": 0.0001508861439312567,
+        "new_lr": 0.0001508861439312567,
+        "linear_expected": 0.0001508861439312567
+      },
+      {
+        "step": 2496,
+        "original_lr": 0.00010061761546723953,
+        "new_lr": 0.00010061761546723953,
+        "linear_expected": 0.00010061761546723953
+      },
+      {
+        "step": 3000,
+        "original_lr": 6.001611170784102e-05,
+        "new_lr": 6.001611170784102e-05,
+        "linear_expected": 6.001611170784103e-05
+      },
+      {
+        "step": 3500,
+        "original_lr": 1.9736842105263155e-05,
+        "new_lr": 1.9736842105263155e-05,
+        "linear_expected": 1.973684210526315e-05
+      },
+      {
+        "step": 3744,
+        "original_lr": 8.055853920515574e-08,
+        "new_lr": 8.055853920515574e-08,
+        "linear_expected": 8.055853920514444e-08
+      }
+    ]
+  },
+  "first5_training_observations": [
+    {
+      "step": 1,
+      "original_loss": 6.3166,
+      "new_loss": 6.3172,
+      "loss_difference": 0.0005999999999994898,
+      "original_grad_norm": 82.0,
+      "new_grad_norm": 81.5,
+      "original_lr": 0.0,
+      "new_lr": 0.0
+    },
+    {
+      "step": 2,
+      "original_loss": 5.6014,
+      "new_loss": 5.5988,
+      "loss_difference": -0.0026000000000001577,
+      "original_grad_norm": 67.5,
+      "new_grad_norm": 67.5,
+      "original_lr": 1.4999999999999999e-05,
+      "new_lr": 1.4999999999999999e-05
+    },
+    {
+      "step": 3,
+      "original_loss": 5.0641,
+      "new_loss": 5.0632,
+      "loss_difference": -0.0008999999999996788,
+      "original_grad_norm": 45.75,
+      "new_grad_norm": 45.75,
+      "original_lr": 2.9999999999999997e-05,
+      "new_lr": 2.9999999999999997e-05
+    },
+    {
+      "step": 4,
+      "original_loss": 4.653,
+      "new_loss": 4.654,
+      "loss_difference": 0.001000000000000334,
+      "original_grad_norm": 53.25,
+      "new_grad_norm": 53.5,
+      "original_lr": 4.4999999999999996e-05,
+      "new_lr": 4.4999999999999996e-05
+    },
+    {
+      "step": 5,
+      "original_loss": 4.4575,
+      "new_loss": 4.4565,
+      "loss_difference": -0.0009999999999994458,
+      "original_grad_norm": 48.5,
+      "new_grad_norm": 48.5,
+      "original_lr": 5.9999999999999995e-05,
+      "new_lr": 5.9999999999999995e-05
+    }
+  ],
+  "data_and_sid_equivalence": {
+    "train": {
+      "rows": 36259,
+      "prompt_behavior_mismatches": 0,
+      "original_source": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/train/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "bytes": 19277597
+      },
+      "new_source": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+        "sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "bytes": 19277597
+      }
+    },
+    "valid": {
+      "rows": 4532,
+      "prompt_behavior_mismatches": 0,
+      "original_source": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/valid/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "bytes": 2915875
+      },
+      "new_source": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/valid.csv",
+        "sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "bytes": 2915875
+      }
+    },
+    "test": {
+      "rows": 4533,
+      "prompt_behavior_mismatches": 0,
+      "original_source": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/test/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+        "bytes": 3105687
+      },
+      "new_source": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/test.csv",
+        "sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+        "bytes": 3105687
+      }
+    },
+    "sid_index_path": {
+      "byte_identical": true,
+      "original_source": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.index.json",
+        "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+        "bytes": 152189
+      },
+      "new_source": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+        "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+        "bytes": 152189
+      }
+    },
+    "item_meta_path": {
+      "byte_identical": true,
+      "original_source": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.item.json",
+        "sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+        "bytes": 3008778
+      },
+      "new_source": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.item.json",
+        "sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+        "bytes": 3008778
+      }
+    }
+  },
+  "shared_training_settings": {
+    "global_batch_size": 64,
+    "micro_batch_size": 8,
+    "num_train_epochs": 3,
+    "planned_optimizer_steps": 3744,
+    "learning_rate": 0.0003,
+    "lr_scheduler_type": "linear",
+    "warmup_steps": 20,
+    "cutoff_len": 512,
+    "seed": 42,
+    "optimizer": "adamw_torch",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "bf16": true,
+    "gradient_checkpointing": false,
+    "deepspeed": null,
+    "baseline_eval": false,
+    "save_total_limit": 1,
+    "early_stopping_patience": 3,
+    "eval_strategy": "steps",
+    "save_strategy": "steps",
+    "eval_save_fraction": 0.05,
+    "resolved_periodic_eval_save_steps": 188,
+    "load_best_model_at_end": true,
+    "metric_for_best_model": "eval_loss",
+    "greater_is_better": false,
+    "freeze_LLM": false,
+    "train_from_scratch": false,
+    "group_by_length": false,
+    "dataloader_drop_last": false,
+    "data_seed": null,
+    "label_smoothing_factor": 0.0,
+    "average_tokens_across_devices": true,
+    "train_samples": 79834,
+    "validation_samples": 4532,
+    "added_sid_tokens": 560,
+    "initialize_added_sid_rows_on_cpu": true
+  },
+  "source_vs_new_flags": [
+    {
+      "setting": "global_batch_size",
+      "original": 64,
+      "new": 64,
+      "matches": true,
+      "evidence": "Original README batch 64; archived 79834 samples, 3744 steps and 3 epochs independently support 1248 steps per epoch. New runtime config records 64."
+    },
+    {
+      "setting": "micro_batch_size",
+      "original": 8,
+      "new": 8,
+      "matches": true,
+      "evidence": "Original README reports microbatch 8; original full command line and TrainingArguments were not archived. New runtime TrainingArguments independently read as 8."
+    },
+    {
+      "setting": "num_train_epochs",
+      "original": 3,
+      "new": 3,
+      "matches": true,
+      "evidence": "Both archived original train summary and new completed train summary report epoch 3.0."
+    },
+    {
+      "setting": "planned_optimizer_steps",
+      "original": 3744,
+      "new": 3744,
+      "matches": true,
+      "evidence": "All 3744 original logged LR records and all 3744 step-numbered new monitor records are present."
+    },
+    {
+      "setting": "learning_rate",
+      "original": 0.0003,
+      "new": 0.0003,
+      "matches": true,
+      "evidence": "All original and new logged LR records peak at 3e-4 and match the stated schedule."
+    },
+    {
+      "setting": "lr_scheduler_type",
+      "original": "linear",
+      "new": "linear",
+      "matches": true,
+      "evidence": "Every archived original LR and new LR fits linear warmup/decay; the README cosine label is contradicted by actual values."
+    },
+    {
+      "setting": "warmup_steps",
+      "original": 20,
+      "new": 20,
+      "matches": true,
+      "evidence": "Original source specifies 20; all original and new LR values fit warmup 20 exactly."
+    },
+    {
+      "setting": "cutoff_len",
+      "original": 512,
+      "new": 512,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "seed",
+      "original": 42,
+      "new": 42,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "optimizer",
+      "original": "adamw_torch",
+      "new": "adamw_torch",
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "adam_beta1",
+      "original": 0.9,
+      "new": 0.9,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "adam_beta2",
+      "original": 0.999,
+      "new": 0.999,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "adam_epsilon",
+      "original": 1e-08,
+      "new": 1e-08,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "weight_decay",
+      "original": 0.0,
+      "new": 0.0,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "max_grad_norm",
+      "original": 1.0,
+      "new": 1.0,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "bf16",
+      "original": true,
+      "new": true,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "gradient_checkpointing",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "deepspeed",
+      "original": null,
+      "new": null,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "baseline_eval",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "save_total_limit",
+      "original": 1,
+      "new": 1,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "early_stopping_patience",
+      "original": 3,
+      "new": 3,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "eval_strategy",
+      "original": "steps",
+      "new": "steps",
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "save_strategy",
+      "original": "steps",
+      "new": "steps",
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "eval_save_fraction",
+      "original": 0.05,
+      "new": 0.05,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "resolved_periodic_eval_save_steps",
+      "original": 188,
+      "new": 188,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "load_best_model_at_end",
+      "original": true,
+      "new": true,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "metric_for_best_model",
+      "original": "eval_loss",
+      "new": "eval_loss",
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "greater_is_better",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "freeze_LLM",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "train_from_scratch",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "group_by_length",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "dataloader_drop_last",
+      "original": false,
+      "new": false,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "data_seed",
+      "original": null,
+      "new": null,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "label_smoothing_factor",
+      "original": 0.0,
+      "new": 0.0,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "average_tokens_across_devices",
+      "original": true,
+      "new": true,
+      "matches": true,
+      "evidence": "Original pinned source plus Transformers 4.57.1 defaults and README profile; new recorded run config or root-verified checkpoint TrainingArguments where applicable.",
+      "evidence_scope": "Original full runtime arguments were not archived; source/default-derived values are not independent measurements of the original process."
+    },
+    {
+      "setting": "train_samples",
+      "original": 79834,
+      "new": 79834,
+      "matches": true,
+      "evidence": "Original archived dataset printout and new run provenance report 79834 examples."
+    },
+    {
+      "setting": "validation_samples",
+      "original": 4532,
+      "new": 4532,
+      "matches": true,
+      "evidence": "Original archived dataset printout and new run provenance report 4532 examples."
+    },
+    {
+      "setting": "added_sid_tokens",
+      "original": 560,
+      "new": 560,
+      "matches": true,
+      "evidence": "Original archived tokenizer log and new model initialization both report 560 added SID tokens."
+    },
+    {
+      "setting": "initialize_added_sid_rows_on_cpu",
+      "original": true,
+      "new": true,
+      "matches": true,
+      "evidence": "Original source loads pretrained model without device_map and resizes before Trainer. New recorded initialize_on_cpu=True preserves that ordering."
+    },
+    {
+      "setting": "world_size",
+      "original": 1,
+      "new": 4,
+      "matches": false,
+      "intentional": true,
+      "explanation": "User-authorized four-GPU DDP hardware adaptation."
+    },
+    {
+      "setting": "gradient_accumulation_steps",
+      "original": 8,
+      "new": 2,
+      "matches": false,
+      "intentional": true,
+      "explanation": "8 * 8 * 1 = 8 * 2 * 4 = global batch 64."
+    },
+    {
+      "setting": "model_initialization_placement",
+      "original": "CPU load and SID embedding resize before Trainer placement",
+      "new": "CPU load and SID embedding resize before rank-local Trainer placement",
+      "matches": true
+    },
+    {
+      "setting": "attention_implementation",
+      "original": "Auto; Transformers 4.57.1 defaults to SDPA for supported Qwen2 + Torch 2.8",
+      "new": "sdpa",
+      "matches": true,
+      "evidence_scope": "Original actual kernel was not logged; source/framework dispatch behavior matches."
+    },
+    {
+      "setting": "report_to",
+      "original": null,
+      "new": "none",
+      "matches": false,
+      "explanation": "Wandb is disabled; logging integration only, not optimizer behavior."
+    },
+    {
+      "setting": "logging_nan_inf_filter",
+      "original": true,
+      "new": false,
+      "matches": false,
+      "explanation": "Monitoring retains nonfinite evidence and aborts invalid updates; finite-path learning unchanged."
+    }
+  ],
+  "software_and_hardware": {
+    "original_reported": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.1",
+      "trl": "0.24.0",
+      "deepspeed": "0.18.0 (not enabled for SFT)",
+      "python": "3.12.3",
+      "gpu": "NVIDIA A800 80GB PCIe",
+      "gpu_count": 1,
+      "cuda_readme_value": "13.0; README does not distinguish driver maximum from wheel runtime; Torch cu128 indicates CUDA 12.8 build"
+    },
+    "new_measured": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.1",
+      "datasets": "4.2.0",
+      "accelerate": "1.10.1",
+      "cuda": "12.8",
+      "python": "3.11.11",
+      "devices": [
+        "NVIDIA H20",
+        "NVIDIA H20",
+        "NVIDIA H20",
+        "NVIDIA H20"
+      ]
+    },
+    "original_version_evidence": "Pinned reproduction README environment table; original library package state was not archived independently.",
+    "intentional_differences": [
+      "Python 3.11.11 rather than reported 3.12.3.",
+      "Four NVIDIA H20 GPUs rather than one A800; accumulation 2 rather than 8 preserves global batch 64."
+    ],
+    "numeric_reproducibility_limit": "DDP reductions, microbatch distribution/tail handling and hardware kernels can produce numerical differences; identical learning parameters and LR do not prove bitwise-identical weights or identical recall."
+  },
+  "task_construction": {
+    "original_and_new": [
+      "36259 history-SID to next SID",
+      "36259 history-SID to next title",
+      "3670 unique SID to title",
+      "3646 unique title to SID"
+    ],
+    "total_examples": 79834,
+    "runtime_data_source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data.py",
+    "extra_description_task": false,
+    "history_title_to_sid_task": false,
+    "train_shuffle": "HF dataset shuffle seed 42; all examples retained; Trainer sampling seed 42",
+    "validation_shuffle": "shuffle(seed=42) followed by another shuffle(seed=42), matching the pinned source",
+    "labeling": "Training prompt and padding labels are masked; answer plus newline/EOS is supervised; left padding with EOS; final 512 token budget."
+  },
+  "normalization": {
+    "model_accepts_loss_kwargs": true,
+    "average_tokens_across_devices": true,
+    "trainer_accumulation_steps": 2,
+    "accelerator_internal_accumulation_steps_expected": 1,
+    "objective": "Summed causal CE over unmasked answer labels divided by all tokens in the global accumulation group. Trainer world-size compensation cancels DDP gradient averaging.",
+    "evidence": "Transformers 4.57.1 Trainer/Qwen2/ForCausalLMLoss implementation and root read of checkpoint-1692 training_args.bin.",
+    "runtime_checkpoint_args_inspection_scope": "Root independently read trusted training_args.bin in the container; this audit does not claim a SHA for that file because it was not copied here."
+  },
+  "validation_trajectory_comparison": {
+    "matched_points": [
+      {
+        "step": 188,
+        "original_eval_loss": 2.766474962234497,
+        "new_eval_loss": 2.85421085357666,
+        "difference": 0.08773589134216309
+      },
+      {
+        "step": 376,
+        "original_eval_loss": 2.3728272914886475,
+        "new_eval_loss": 2.5587666034698486,
+        "difference": 0.18593931198120117
+      },
+      {
+        "step": 564,
+        "original_eval_loss": 2.180784225463867,
+        "new_eval_loss": 2.43141770362854,
+        "difference": 0.25063347816467285
+      },
+      {
+        "step": 752,
+        "original_eval_loss": 2.050306797027588,
+        "new_eval_loss": 2.2925050258636475,
+        "difference": 0.24219822883605957
+      },
+      {
+        "step": 940,
+        "original_eval_loss": 1.9687379598617554,
+        "new_eval_loss": 2.1488873958587646,
+        "difference": 0.18014943599700928
+      },
+      {
+        "step": 1128,
+        "original_eval_loss": 1.881598949432373,
+        "new_eval_loss": 2.0356881618499756,
+        "difference": 0.15408921241760254
+      },
+      {
+        "step": 1316,
+        "original_eval_loss": 1.8053556680679321,
+        "new_eval_loss": 1.9396731853485107,
+        "difference": 0.1343175172805786
+      },
+      {
+        "step": 1504,
+        "original_eval_loss": 1.762878656387329,
+        "new_eval_loss": 1.8670978546142578,
+        "difference": 0.10421919822692871
+      },
+      {
+        "step": 1692,
+        "original_eval_loss": 1.726378321647644,
+        "new_eval_loss": 1.7995021343231201,
+        "difference": 0.07312381267547607
+      },
+      {
+        "step": 1880,
+        "original_eval_loss": 1.6575273275375366,
+        "new_eval_loss": 1.7109661102294922,
+        "difference": 0.053438782691955566
+      },
+      {
+        "step": 2068,
+        "original_eval_loss": 1.627785325050354,
+        "new_eval_loss": 1.6786826848983765,
+        "difference": 0.05089735984802246
+      },
+      {
+        "step": 2256,
+        "original_eval_loss": 1.585096001625061,
+        "new_eval_loss": 1.624072790145874,
+        "difference": 0.03897678852081299
+      },
+      {
+        "step": 2444,
+        "original_eval_loss": 1.544079303741455,
+        "new_eval_loss": 1.5785101652145386,
+        "difference": 0.034430861473083496
+      },
+      {
+        "step": 2632,
+        "original_eval_loss": 1.556823968887329,
+        "new_eval_loss": 1.5807050466537476,
+        "difference": 0.023881077766418457
+      },
+      {
+        "step": 2820,
+        "original_eval_loss": 1.5519647598266602,
+        "new_eval_loss": 1.5680229663848877,
+        "difference": 0.01605820655822754
+      },
+      {
+        "step": 3008,
+        "original_eval_loss": 1.532999038696289,
+        "new_eval_loss": 1.5506978034973145,
+        "difference": 0.01769876480102539
+      },
+      {
+        "step": 3196,
+        "original_eval_loss": 1.523639440536499,
+        "new_eval_loss": 1.5344700813293457,
+        "difference": 0.01083064079284668
+      },
+      {
+        "step": 3384,
+        "original_eval_loss": 1.5173014402389526,
+        "new_eval_loss": 1.529779076576233,
+        "difference": 0.012477636337280273
+      },
+      {
+        "step": 3572,
+        "original_eval_loss": 1.5147231817245483,
+        "new_eval_loss": 1.5265060663223267,
+        "difference": 0.01178288459777832
+      }
+    ],
+    "original_best_archived": {
+      "step": 3572,
+      "eval_loss": 1.5147231817245483,
+      "eval_runtime": 16.9763,
+      "eval_samples_per_second": 266.96,
+      "eval_steps_per_second": 33.4,
+      "epoch": 2.86
+    },
+    "new_best": {
+      "step": 3572,
+      "eval_loss": 1.5265060663223267
+    },
+    "interpretation": "Training trajectory differences are observed even with matched recipe and LR. They are not assigned to hardware, DDP, Python version or any single cause by this audit."
+  },
+  "limitations": [
+    "The original README labels its schedule cosine, but every archived LR point proves actual linear; this new run follows the archived executable behavior.",
+    "Original exact base-model revision and resolved CUDA attention kernel were not archived; no bitwise reproduction claim is made.",
+    "The original run used one GPU; four GPUs were explicitly requested. Same global batch and token normalization do not guarantee identical reduction ordering or tail examples.",
+    "The source-defined custom cosine helper is unused; neither its 0.1 LR floor nor the earlier 1.5B cosine run is treated as the original schedule.",
+    "Overall original SID-level evaluation includes collisions: 3686 item IDs map to 3670 SID strings. Cold/collision-free subgroup metrics are separate downstream diagnostics.",
+    "This is a process audit, not proof of matching recommendation quality or statistical significance.",
+    "Some original settings (including microbatch 8 and one GPU) are reported by the pinned README; the full original command line and serialized TrainingArguments were not archived. Flag equality distinguishes source/default/report evidence from directly observed LR, steps, samples and losses."
+  ]
+}

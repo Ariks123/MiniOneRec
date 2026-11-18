@@ -1,0 +1,96 @@
+{
+  "status": "completed",
+  "conclusion": "This 0.5B Base, linear, four-H20 run did not reproduce the archived original cold hits; all cold HR/NDCG through50 are zero. Pooled ranking metrics are also lower than the archived original.",
+  "overall": {
+    "key": "overall",
+    "rows": 4533,
+    "share": 1.0,
+    "hits_by_k": {
+      "1": 198,
+      "3": 299,
+      "5": 360,
+      "10": 458,
+      "20": 598,
+      "50": 852
+    },
+    "metrics": {
+      "HR@1": 0.04367968232958306,
+      "HR@3": 0.06596073240679462,
+      "HR@5": 0.07941760423560557,
+      "HR@10": 0.10103684094418708,
+      "HR@20": 0.13192146481358924,
+      "HR@50": 0.18795499669093316,
+      "NDCG@1": 0.04367968232958306,
+      "NDCG@3": 0.056524344906400986,
+      "NDCG@5": 0.06207821127999597,
+      "NDCG@10": 0.06903766678496798,
+      "NDCG@20": 0.07687356845763844,
+      "NDCG@50": 0.08783335351970706
+    }
+  },
+  "warm": {
+    "key": "behavior_warm",
+    "rows": 4386,
+    "share": 0.9675711449371277,
+    "hits_by_k": {
+      "1": 198,
+      "3": 299,
+      "5": 360,
+      "10": 458,
+      "20": 598,
+      "50": 852
+    },
+    "metrics": {
+      "HR@1": 0.04514363885088919,
+      "HR@3": 0.06817145462836298,
+      "HR@5": 0.08207934336525308,
+      "HR@10": 0.10442316461468308,
+      "HR@20": 0.13634290925672596,
+      "HR@50": 0.19425444596443228,
+      "NDCG@1": 0.04514363885088919,
+      "NDCG@3": 0.05841879969464562,
+      "NDCG@5": 0.06415880796448284,
+      "NDCG@10": 0.07135151471414954,
+      "NDCG@20": 0.07945004236627339,
+      "NDCG@50": 0.09077715264588056
+    }
+  },
+  "cold": {
+    "key": "behavior_cold",
+    "rows": 147,
+    "share": 0.03242885506287227,
+    "hits_by_k": {
+      "1": 0,
+      "3": 0,
+      "5": 0,
+      "10": 0,
+      "20": 0,
+      "50": 0
+    },
+    "metrics": {
+      "HR@1": 0.0,
+      "HR@3": 0.0,
+      "HR@5": 0.0,
+      "HR@10": 0.0,
+      "HR@20": 0.0,
+      "HR@50": 0.0,
+      "NDCG@1": 0.0,
+      "NDCG@3": 0.0,
+      "NDCG@5": 0.0,
+      "NDCG@10": 0.0,
+      "NDCG@20": 0.0,
+      "NDCG@50": 0.0
+    }
+  },
+  "native_original_evaluator_parity": "original_evaluator_cold_parity.json",
+  "training_process_audit": "training_process_audit.json",
+  "reference_overall_hr10": 0.11272887712331789,
+  "reference_overall_ndcg10": 0.07915918039424699,
+  "hr10_delta_pp": -1.1692036179130811,
+  "ndcg10_delta_pp": -1.0121513609279016,
+  "limits": [
+    "Archived original coldTop10 has1hit and coldTop50 has3hits; this cohort has147rows/37items.",
+    "Model size, actuallinear schedule, active tasks and data are now aligned; fourGPUs vsoneGPU, GPUhardware and some environment details remain different, so the unique cause of ranking differences is not isolated.",
+    "OriginalSID-level matching is retained, including15SIDcollisiongroups; coldtesttargets have noSIDalias orcollision contamination."
+  ]
+}

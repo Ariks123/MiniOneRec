@@ -1,0 +1,575 @@
+{
+  "format_version": 1,
+  "timestamp_utc": "2026-11-18T01:22:44.327811+00:00",
+  "timestamp_asia_shanghai": "2026-11-18T09:22:44.327943+08:00",
+  "disposition": "completed_with_external_revision_notice",
+  "strict_head_check_passed": false,
+  "experiment_artifacts_intact": true,
+  "original_supervisor_status": "failed",
+  "original_failed_stage": "exporting",
+  "original_isolation_status": "failed",
+  "original_isolation_errors": [
+    "Old worktree HEAD changed"
+  ],
+  "original_records_preserved_sha256": {
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/run_status.json": "4ee1426f34e22f57b5cac8297fb34170e908d27e90c619bed47b5b5d0d825068",
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/isolation_verification.json": "b1a4a6809377eb11a044071b4bfb965dca90308a0be6d5d4f49df211a37ff5c6",
+    "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/retrieval_isolation_20261118.json": "a5053ab8f8bf3ec87eca2fe855349367d93da396a5c73bb5291a671ef002dc8c"
+  },
+  "old_worktree": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine",
+  "old_branch": "amazon2018industrialandscientific-cosine",
+  "source_commit_at_branch_creation": "798908f9260395cf9a699f0346754312e6f564bc",
+  "implementation_commit": "c523db012794d72ac3122ef565cf893a38597d3f",
+  "old_head_before": "798908f9260395cf9a699f0346754312e6f564bc",
+  "old_head_after": "de1658f3810bb0e211a90ef4c8151a123ab32fff",
+  "head_change_commit_time_utc": "2026-11-17T16:59:57+00:00",
+  "head_change_commit_time_asia_shanghai": "2026-11-18T00:59:57+08:00",
+  "head_change_commit_subject": "Queue beta-only Industrial RL training and comparison",
+  "head_change_parent": "798908f9260395cf9a699f0346754312e6f564bc",
+  "head_reflog_evidence": "de1658f HEAD@{2026-11-17T16:59:57+00:00}: commit: Queue beta-only Industrial RL training and comparison\n798908f HEAD@{2026-11-17T13:02:56+00:00}: commit: Separate selected-model revalidation from RL training curves\n1749682 HEAD@{2026-11-17T11:16:42+00:00}: commit: Explain RL outcomes and runtime correction in comparison reports\n",
+  "changed_files": [
+    {
+      "path": "docker/industrial_rl_experiment.py",
+      "insertions": 11,
+      "deletions": 2
+    },
+    {
+      "path": "docker/queue_industrial_rl_beta.py",
+      "insertions": 342,
+      "deletions": 0
+    },
+    {
+      "path": "scripts/compare_industrial_rl_beta.py",
+      "insertions": 349,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_industrial_rl_beta_comparison.py",
+      "insertions": 163,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_industrial_rl_beta_queue.py",
+      "insertions": 115,
+      "deletions": 0
+    },
+    {
+      "path": "tests/test_industrial_rl_experiment.py",
+      "insertions": 46,
+      "deletions": 1
+    }
+  ],
+  "old_git_status_expected": " M README.md\n?? unisrec/\n",
+  "old_git_status_observed": " M README.md\n?? unisrec/\n",
+  "old_git_status_matches": true,
+  "hash_counts": {
+    "protected_old_files": {
+      "checked": 8,
+      "matching": 8
+    },
+    "frozen_implementation_sources": {
+      "checked": 24,
+      "matching": 24
+    },
+    "shared_data_files": {
+      "checked": 6,
+      "matching": 6
+    },
+    "base_model_files": {
+      "checked": 9,
+      "matching": 9
+    },
+    "historical_checkpoint_files_vs_container_reference": {
+      "checked": 12,
+      "matching": 12
+    },
+    "new_checkpoint_files_vs_index_identity": {
+      "checked": 8,
+      "matching": 8
+    },
+    "exported_index_files": {
+      "checked": 2,
+      "matching": 2
+    }
+  },
+  "hash_evidence": {
+    "protected_old_files": {
+      "README.md": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/README.md",
+        "expected_sha256": "befcbf005acc4377bbf6fd5f9f15655c1a02f17e943d5c976a9f933e1266c51e",
+        "observed_sha256": "befcbf005acc4377bbf6fd5f9f15655c1a02f17e943d5c976a9f933e1266c51e",
+        "match": true
+      },
+      "sft.py": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/sft.py",
+        "expected_sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+        "observed_sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+        "match": true
+      },
+      "data.py": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/data.py",
+        "expected_sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+        "observed_sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+        "match": true
+      },
+      "sft_monitor.py": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/sft_monitor.py",
+        "expected_sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+        "observed_sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+        "match": true
+      },
+      "scripts/evaluate_sft.py": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/evaluate_sft.py",
+        "expected_sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+        "observed_sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+        "match": true
+      },
+      "scripts/deepspeed_zero2_compat.py": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/scripts/deepspeed_zero2_compat.py",
+        "expected_sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+        "observed_sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+        "match": true
+      },
+      "config/h20_zero2.json": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/config/h20_zero2.json",
+        "expected_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+        "observed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+        "match": true
+      },
+      "output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/comparison.json": {
+        "path": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/comparison/comparison.json",
+        "expected_sha256": "85c2544564c4dc6810f2fcb743ca8647a2cbfd3cac54fc70607d42667b2171b5",
+        "observed_sha256": "85c2544564c4dc6810f2fcb743ca8647a2cbfd3cac54fc70607d42667b2171b5",
+        "match": true
+      }
+    },
+    "frozen_implementation_sources": {
+      "data.py": {
+        "expected_sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+        "frozen_commit_blob_sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+        "match": true
+      },
+      "sft_monitor.py": {
+        "expected_sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+        "frozen_commit_blob_sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+        "match": true
+      },
+      "LogitProcessor.py": {
+        "expected_sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+        "frozen_commit_blob_sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+        "match": true
+      },
+      "npu_support.py": {
+        "expected_sha256": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+        "frozen_commit_blob_sha256": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+        "match": true
+      },
+      "sft.py": {
+        "expected_sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+        "frozen_commit_blob_sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+        "match": true
+      },
+      "docker/__init__.py": {
+        "expected_sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41",
+        "frozen_commit_blob_sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41",
+        "match": true
+      },
+      "docker/industrial_experiment.py": {
+        "expected_sha256": "35c926f0d9937dc53da051f3f9f24cd3e8017193b802bad38f6ebd8fb86d52ff",
+        "frozen_commit_blob_sha256": "35c926f0d9937dc53da051f3f9f24cd3e8017193b802bad38f6ebd8fb86d52ff",
+        "match": true
+      },
+      "docker/industrial_retrieval_experiment.py": {
+        "expected_sha256": "536d4d1a6a8941d4fd4aed0d8a65e70da2430e8874c8a57f4df201b32031ea02",
+        "frozen_commit_blob_sha256": "536d4d1a6a8941d4fd4aed0d8a65e70da2430e8874c8a57f4df201b32031ea02",
+        "match": true
+      },
+      "scripts/evaluate_sft.py": {
+        "expected_sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+        "frozen_commit_blob_sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+        "match": true
+      },
+      "scripts/sft_eval_utils.py": {
+        "expected_sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+        "frozen_commit_blob_sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+        "match": true
+      },
+      "scripts/deepspeed_zero2_compat.py": {
+        "expected_sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+        "frozen_commit_blob_sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+        "match": true
+      },
+      "scripts/industrial_generative_validation.py": {
+        "expected_sha256": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+        "frozen_commit_blob_sha256": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+        "match": true
+      },
+      "scripts/report_industrial_sft.py": {
+        "expected_sha256": "329396d8e5698571569bd22c35d0e7ea4afe2581858ba0e0000a3e8f03d2cb18",
+        "frozen_commit_blob_sha256": "329396d8e5698571569bd22c35d0e7ea4afe2581858ba0e0000a3e8f03d2cb18",
+        "match": true
+      },
+      "config/h20_zero2.json": {
+        "expected_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+        "frozen_commit_blob_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+        "match": true
+      },
+      "qwen_retrieval/__init__.py": {
+        "expected_sha256": "e604106127b32a7b4d2fff9eec7d6d51035149f89d75c25bdb43012eb0ec97b0",
+        "frozen_commit_blob_sha256": "e604106127b32a7b4d2fff9eec7d6d51035149f89d75c25bdb43012eb0ec97b0",
+        "match": true
+      },
+      "qwen_retrieval/audit_data.py": {
+        "expected_sha256": "22dcd93a6db874daba860cbef966b52f42321eb418c98e1947eb03e3135f5ed5",
+        "frozen_commit_blob_sha256": "22dcd93a6db874daba860cbef966b52f42321eb418c98e1947eb03e3135f5ed5",
+        "match": true
+      },
+      "qwen_retrieval/config.py": {
+        "expected_sha256": "40e9bcc8340d084123178a3a74f21e6ce28439526d3607937bfa3351700a992f",
+        "frozen_commit_blob_sha256": "40e9bcc8340d084123178a3a74f21e6ce28439526d3607937bfa3351700a992f",
+        "match": true
+      },
+      "qwen_retrieval/encode_items.py": {
+        "expected_sha256": "9255ba92f4243c5ada58bfe33f6100f48cddfbf1a0ff4f223110db7aedd4f8cf",
+        "frozen_commit_blob_sha256": "9255ba92f4243c5ada58bfe33f6100f48cddfbf1a0ff4f223110db7aedd4f8cf",
+        "match": true
+      },
+      "qwen_retrieval/evaluate.py": {
+        "expected_sha256": "8de5743d6b168849a1af05228fda117eae816f061074e24d5ddce02a4bcd0da8",
+        "frozen_commit_blob_sha256": "8de5743d6b168849a1af05228fda117eae816f061074e24d5ddce02a4bcd0da8",
+        "match": true
+      },
+      "qwen_retrieval/model.py": {
+        "expected_sha256": "0a08aee8ea0c68e9966bb1845143c58787aad51cd29c09abfb6a2d7ebe2e0ce8",
+        "frozen_commit_blob_sha256": "0a08aee8ea0c68e9966bb1845143c58787aad51cd29c09abfb6a2d7ebe2e0ce8",
+        "match": true
+      },
+      "qwen_retrieval/report.py": {
+        "expected_sha256": "ebdd7d87428ef108a319ad7d6adf459d4e663ce579b4d0f08cf3bbbc97de455f",
+        "frozen_commit_blob_sha256": "ebdd7d87428ef108a319ad7d6adf459d4e663ce579b4d0f08cf3bbbc97de455f",
+        "match": true
+      },
+      "qwen_retrieval/smoke.py": {
+        "expected_sha256": "cf792d8c58b0d652111cb66f97b63c579cca07af084747ba5efb326461caddc7",
+        "frozen_commit_blob_sha256": "cf792d8c58b0d652111cb66f97b63c579cca07af084747ba5efb326461caddc7",
+        "match": true
+      },
+      "qwen_retrieval/train.py": {
+        "expected_sha256": "745ca9b53002e2d895b3d30141e8926c103795f24e92deefd170bd7c87ed1ca8",
+        "frozen_commit_blob_sha256": "745ca9b53002e2d895b3d30141e8926c103795f24e92deefd170bd7c87ed1ca8",
+        "match": true
+      },
+      "qwen_retrieval/training_data.py": {
+        "expected_sha256": "480a597554fdd8040bbbd9649d8ebb53403fcc0bdb773f29a31a15c3767f42c6",
+        "frozen_commit_blob_sha256": "480a597554fdd8040bbbd9649d8ebb53403fcc0bdb773f29a31a15c3767f42c6",
+        "match": true
+      }
+    },
+    "shared_data_files": {
+      "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+        "expected_sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "observed_sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "match": true
+      },
+      "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/valid.csv": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/valid.csv",
+        "expected_sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "observed_sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "match": true
+      },
+      "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+        "expected_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+        "observed_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+        "match": true
+      },
+      "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.item.json": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.item.json",
+        "expected_sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+        "observed_sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+        "match": true
+      },
+      "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/test.csv": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/test.csv",
+        "expected_sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+        "observed_sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+        "match": true
+      },
+      "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/info.txt": {
+        "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/info.txt",
+        "expected_sha256": "bdc51fd9636e361db095c84de4e2650b3dd9606812c92e7a01f3b77c5c1a84f7",
+        "observed_sha256": "bdc51fd9636e361db095c84de4e2650b3dd9606812c92e7a01f3b77c5c1a84f7",
+        "match": true
+      }
+    },
+    "base_model_files": {
+      "LICENSE": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/LICENSE",
+        "expected_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "observed_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "match": true
+      },
+      "README.md": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/README.md",
+        "expected_sha256": "3c93cbc9f60417337fcbf093da872007586b9d886b0f0187f21aec35b869616a",
+        "observed_sha256": "3c93cbc9f60417337fcbf093da872007586b9d886b0f0187f21aec35b869616a",
+        "match": true
+      },
+      "config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/config.json",
+        "expected_sha256": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b",
+        "observed_sha256": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b",
+        "match": true
+      },
+      "generation_config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/generation_config.json",
+        "expected_sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+        "observed_sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+        "match": true
+      },
+      "merges.txt": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/merges.txt",
+        "expected_sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "observed_sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "match": true
+      },
+      "model.safetensors": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/model.safetensors",
+        "expected_sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+        "observed_sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+        "match": true
+      },
+      "tokenizer.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/tokenizer.json",
+        "expected_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "observed_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "match": true
+      },
+      "tokenizer_config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/tokenizer_config.json",
+        "expected_sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+        "observed_sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+        "match": true
+      },
+      "vocab.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/vocab.json",
+        "expected_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "observed_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "match": true
+      }
+    },
+    "historical_checkpoint_files_vs_container_reference": {
+      "added_tokens.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/added_tokens.json",
+        "expected_sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+        "observed_sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+        "match": true
+      },
+      "chat_template.jinja": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/chat_template.jinja",
+        "expected_sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+        "observed_sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+        "match": true
+      },
+      "config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/config.json",
+        "expected_sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+        "observed_sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+        "match": true
+      },
+      "generation_config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/generation_config.json",
+        "expected_sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+        "observed_sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+        "match": true
+      },
+      "merges.txt": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/merges.txt",
+        "expected_sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "observed_sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "match": true
+      },
+      "model.safetensors": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/model.safetensors",
+        "expected_sha256": "e688140bbfe9aac2981324471dd79ff9da1ad0b329acfa9c18c63f4dca4f597c",
+        "observed_sha256": "e688140bbfe9aac2981324471dd79ff9da1ad0b329acfa9c18c63f4dca4f597c",
+        "match": true
+      },
+      "posttraining_provenance.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/posttraining_provenance.json",
+        "expected_sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+        "observed_sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+        "match": true
+      },
+      "special_tokens_map.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/special_tokens_map.json",
+        "expected_sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+        "observed_sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+        "match": true
+      },
+      "tokenizer.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/tokenizer.json",
+        "expected_sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+        "observed_sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+        "match": true
+      },
+      "tokenizer_config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/tokenizer_config.json",
+        "expected_sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+        "observed_sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+        "match": true
+      },
+      "training_args.bin": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/training_args.bin",
+        "expected_sha256": "204a300f93786731c511ff49ba6383afc2c58912b14e70417d7cf58f0a75b2de",
+        "observed_sha256": "204a300f93786731c511ff49ba6383afc2c58912b14e70417d7cf58f0a75b2de",
+        "match": true
+      },
+      "vocab.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/vocab.json",
+        "expected_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "observed_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "match": true
+      }
+    },
+    "new_checkpoint_files_vs_index_identity": {
+      "added_tokens.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/added_tokens.json",
+        "expected_sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+        "observed_sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+        "match": true
+      },
+      "config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/config.json",
+        "expected_sha256": "4af4a94c40545f2f5698058af04349ddb8194c02af2866820fd1a017a142f3a7",
+        "observed_sha256": "4af4a94c40545f2f5698058af04349ddb8194c02af2866820fd1a017a142f3a7",
+        "match": true
+      },
+      "merges.txt": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/merges.txt",
+        "expected_sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "observed_sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "match": true
+      },
+      "model.safetensors": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/model.safetensors",
+        "expected_sha256": "b6c87e1105bfeb5b98439074acabfc7c2da4142316ea177aa99a63ce14af5a17",
+        "observed_sha256": "b6c87e1105bfeb5b98439074acabfc7c2da4142316ea177aa99a63ce14af5a17",
+        "match": true
+      },
+      "special_tokens_map.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/special_tokens_map.json",
+        "expected_sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+        "observed_sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+        "match": true
+      },
+      "tokenizer.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/tokenizer.json",
+        "expected_sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+        "observed_sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+        "match": true
+      },
+      "tokenizer_config.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/tokenizer_config.json",
+        "expected_sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+        "observed_sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+        "match": true
+      },
+      "vocab.json": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/vocab.json",
+        "expected_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "observed_sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "match": true
+      }
+    },
+    "exported_index_files": {
+      "matrix": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index/item_vectors.npy",
+        "expected_sha256": "8e79048dccab5c6bab07cf373dda10777d1b95fe4ec9ef77549553702682b25a",
+        "observed_sha256": "8e79048dccab5c6bab07cf373dda10777d1b95fe4ec9ef77549553702682b25a",
+        "match": true
+      },
+      "mapping": {
+        "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index/row_to_items.json",
+        "expected_sha256": "02711ab0b9b8501b65d7d72547bc4831c1d5bfa520148d52f378d9254b898b9c",
+        "observed_sha256": "02711ab0b9b8501b65d7d72547bc4831c1d5bfa520148d52f378d9254b898b9c",
+        "match": true
+      }
+    }
+  },
+  "base_model_identity": {
+    "repository": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "manifest": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B/model_identity_manifest.json"
+  },
+  "historical_model": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint",
+  "old_weight_sha256": "e688140bbfe9aac2981324471dd79ff9da1ad0b329acfa9c18c63f4dca4f597c",
+  "reference_container": "minionerec-industrial05b-retrieval-20261118_004220",
+  "reference_container_directory": "/opt/minionerec/reference_checkpoint",
+  "reference_hash_method": "Read-only docker cp of the stopped container reference directory to tar stdout, streaming SHA256 for every file; no container start, extraction, modifications or deletion.",
+  "reference_evaluation_matches": {
+    "metrics": true,
+    "metrics_by_k": true,
+    "completed_rows": true,
+    "expected_rows": true,
+    "coverage": true,
+    "source_sha256": true,
+    "provenance": true,
+    "sid_index_sha256": true,
+    "item_meta_sha256": true
+  },
+  "reference_prediction_bytes": {
+    "historical_sha256": "e5ce1b6f4d0dbfe6429b8d475ffad5445b18b4a55d96c51eee78c4142520920f",
+    "reference_retimed_sha256": "e5ce1b6f4d0dbfe6429b8d475ffad5445b18b4a55d96c51eee78c4142520920f",
+    "match": true
+  },
+  "reference_evaluation_paths": {
+    "historical": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/evaluation/metrics.json",
+    "retimed": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/evaluation_reference_beam/metrics.json"
+  },
+  "parallel_rl_queue_evidence": {
+    "config_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/queue/config.json",
+    "config_sha256": "7e9ed836a4a4b7094bcd41b8aaa15ad70e55187c365c6cfb35ef19bdbf7dfa39",
+    "created_at": "2026-11-17T17:00:06.600663+00:00",
+    "beta": 0.01,
+    "waiting_container_name": "minionerec-industrial05b-retrieval-20261118_004220",
+    "waiting_status": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/run_status.json",
+    "training_started_at": "2026-11-17T17:37:23.535182+00:00",
+    "parent_model_sha256": "e688140bbfe9aac2981324471dd79ff9da1ad0b329acfa9c18c63f4dca4f597c",
+    "matches_current_historical_weights": true
+  },
+  "evaluation_completion": {
+    "evaluation_valid": {
+      "status": "passed",
+      "expected_rows": 4532,
+      "completed_rows": 4532,
+      "metrics_file_sha256": "f01aae81e88431d5033e1437da501c7a0840bb6ea50a6195de47e948c47b2963"
+    },
+    "evaluation_test": {
+      "status": "passed",
+      "expected_rows": 4533,
+      "completed_rows": 4533,
+      "metrics_file_sha256": "d96d053f80234a6d913a5acebb506fd5f2a2b1f4892ffbefd8a101cdce707a58"
+    },
+    "evaluation_beam": {
+      "status": "passed",
+      "expected_rows": 4533,
+      "completed_rows": 4533,
+      "metrics_file_sha256": "8e732f7d09610a71825282d742e826d7fd3496fbe26db8afe2717b63f33c31b5"
+    },
+    "evaluation_reference_beam": {
+      "status": "passed",
+      "expected_rows": 4533,
+      "completed_rows": 4533,
+      "metrics_file_sha256": "691d13b373437c6db2bc7c6bf9f4fd90a622c6ecb12eb0ff96f7f1b0ef36e88d"
+    }
+  },
+  "conclusion": [
+    "The strict original HEAD-equality requirement failed and remains failed in the original records.",
+    "Old HEAD moved by one distinct commit containing only beta-RL queue/comparison changes, while the retrieval implementation is on its separate c523db commit.",
+    "The protected old code/report files, shared input data, Base files, historical checkpoint copy, new checkpoint/index identity and all completed evaluation coverage pass the independently listed checks.",
+    "The RL queue explicitly names this retrieval container as the job to wait for, corroborating an independent parallel queued RL workflow. The generic commit author does not establish which person or session made that commit.",
+    "No rollback, old-branch modification, snapshot change or rewriting of original failure records was performed by this review."
+  ]
+}

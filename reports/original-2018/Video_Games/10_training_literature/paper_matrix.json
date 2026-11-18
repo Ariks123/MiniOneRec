@@ -1,0 +1,96 @@
+{
+  "review_date": "2026-11-16",
+  "primary_sources_only": true,
+  "scope": "Literature review and proposed adaptations; no training or source-data modifications.",
+  "papers": [
+    {
+      "name": "LC-Rec",
+      "year_status": "ICDE 2024",
+      "paper_url": "https://arxiv.org/html/2311.09049v3",
+      "code_url": "https://github.com/RUCAIBox/LC-Rec",
+      "focus": "标题/描述与SID双向对齐，非对称历史任务",
+      "training_method": "显式index-language instruction tuning与推荐联合训练",
+      "inference_change": "借鉴对齐任务可保留现有SID和beam",
+      "cold_protocol_limit": "对齐与总体推荐收益，不是本项目严格行为未见cold的收益证明",
+      "project_adaptation": "已有同类任务；优先检查对齐是否学会、补充判别属性、多模板并消融任务权重；阶段化回放是工程试验"
+    },
+    {
+      "name": "Centroid Initialization / Preserving Item Semantics for Free",
+      "year_status": "2026 preprint",
+      "paper_url": "https://arxiv.org/html/2608.07816v1",
+      "code_url": "",
+      "focus": "SID embedding初始化的语义几何与热门偏置",
+      "training_method": "原始语义空间residual k-means centroids经MRL维度映射和mean-shift初始化SID token",
+      "inference_change": "保持SID生成推理",
+      "cold_protocol_limit": "cold=train-target frequency<=1，不等于训练history并target均未见",
+      "project_adaptation": "当前RQ-VAE latent32、内容向量2560且未证实MRL、LLM hidden1536，不能直接复制codebook；现有SID分组内容质心+映射属于工程适配"
+    },
+    {
+      "name": "FLASH",
+      "year_status": "2026 preprint",
+      "paper_url": "https://arxiv.org/html/2610.07402v1",
+      "code_url": "https://github.com/KevinC2015/Flash",
+      "focus": "离散SID表示的显式语义锚定与组合建模",
+      "training_method": "输入item表示与冻结文本embedding的余弦对齐，完整框架采用SimHash与并行预测",
+      "inference_change": "只借对齐loss可保持SID；完整FLASH需换SID和decoder/scoring",
+      "cold_protocol_limit": "随机留出5%目标商品，不同于绝对时间切分；TIGER加alignment常规提升不能当独立cold证明",
+      "project_adaptation": "优先固定原SID，只做语义对齐消融；注意item表示对齐与history-to-next-item对比目标不同"
+    },
+    {
+      "name": "TCA4Rec",
+      "year_status": "WWW 2026",
+      "paper_url": "https://arxiv.org/html/2601.18457v1",
+      "code_url": "https://github.com/critical88/TCA4Rec",
+      "focus": "商品级教师偏好转成生成token软监督",
+      "training_method": "prefix条件商品logits聚合为下一token分布，soft-NTP原损失为-log sum(q*p)，非标准KL或soft-CE",
+      "inference_change": "可保留生成推理",
+      "cold_protocol_limit": "原CF教师与常规推荐评估未证明严格behavior-cold收益；闭世界教师可能延续warm偏置",
+      "project_adaptation": "用具冷泛化的内容教师是工程扩展；应对比原soft-NTP与标准teacher KL/soft-CE，并确保新完整路径获得监督"
+    },
+    {
+      "name": "LIGER",
+      "year_status": "2024 preprint",
+      "paper_url": "https://arxiv.org/html/2411.18814v2",
+      "code_url": "https://github.com/facebookresearch/liger",
+      "focus": "生成概率压低cold、内容信号难以进入生成候选",
+      "training_method": "history-to-text embedding softmax对比目标与SID next-token CE联合训练",
+      "inference_change": "beam候选并入cold集合，再由dense表示排序；混合检索",
+      "cold_protocol_limit": "leave-one-out自然cold，cold还从RQ训练排除；不同于本项目",
+      "project_adaptation": "可保留现SID，需内容检索头和推理融合；不能把论文收益当只改loss仍纯beam的收益"
+    },
+    {
+      "name": "SpecGR / SpecGR++",
+      "year_status": "AAAI 2026",
+      "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/38486",
+      "arxiv_url": "https://arxiv.org/html/2410.02939",
+      "code_url": "https://github.com/Jamesding000/SpecGR",
+      "focus": "训练未见商品的归纳式推荐",
+      "training_method": "self-drafting变体联合item-sequence对比与SID CE，再做排序微调",
+      "inference_change": "inductive drafter提出候选，GR verifier验证/排序",
+      "cold_protocol_limit": "Amazon2023绝对时间切分较接近本项目；backbone与输入架构仍需适配",
+      "project_adaptation": "优先检验已有内容信号作为drafter；忽略身份d只是部分机制，本项目多数失败已在abc"
+    },
+    {
+      "name": "MiniOneRec",
+      "year_status": "2025 preprint",
+      "paper_url": "https://arxiv.org/html/2510.24431v1",
+      "code_url": "https://github.com/AkaliKong/MiniOneRec",
+      "focus": "当前框架的全流程SID-text对齐",
+      "training_method": "双向SID-text与非对称推荐任务贯穿后训练",
+      "inference_change": "原框架生成式推理",
+      "cold_protocol_limit": "原总体/OOD实验不能等同本项目严格时间cold",
+      "project_adaptation": "用于核对当前任务启用情况，不应将已存在任务当新修复"
+    },
+    {
+      "name": "Can Generative Recommendation Reach Cold Items?",
+      "year_status": "2026 preprint; diagnostic",
+      "paper_url": "https://arxiv.org/abs/2607.21101",
+      "code_url": "",
+      "focus": "时间切分下seen/unseen token与SID路径可达性",
+      "training_method": "诊断研究，非已验证训练修复配方",
+      "inference_change": "不适用",
+      "cold_protocol_limit": "需要核对token级cold taxonomy与本项目定义",
+      "project_adaptation": "作为未见组合与oracle-prefix诊断参考，不能作为修复收益证据"
+    }
+  ]
+}

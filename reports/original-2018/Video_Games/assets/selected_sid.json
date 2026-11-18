@@ -1,0 +1,76 @@
+{
+  "status": "selected",
+  "dataset": "Amazon Review Data 2018 Video Games 5-core",
+  "selected_at_utc": "2026-11-15T04:57:17.821Z",
+  "selected_epoch": 2900,
+  "training_completed_epoch": 4100,
+  "selection_authority": "user explicitly selected epoch 2900 for this project",
+  "run_directory": "C:/Users/Administrator/Desktop/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z",
+  "checkpoint": {
+    "path": "C:/Users/Administrator/Desktop/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_val_model.pth",
+    "sha256": "5962275fc0da6ac77aafc577d267f24edbeae6153a97d4ff675b4a96f5a6324d"
+  },
+  "items": 16572,
+  "final_sid_tokens": 4,
+  "final_sids_unique": true,
+  "artifacts": {
+    "raw_sid": {
+      "path": "C:/Users/Administrator/Desktop/MiniOneRec/data/Amazon18/Video_Games/Video_Games.raw.index.json",
+      "bytes": 993456,
+      "sha256": "69762266170c7aee2e48f2a8ca1e87b05966800a0b5e5b40b644bbbbf01f782a"
+    },
+    "semantic_sid": {
+      "path": "C:/Users/Administrator/Desktop/MiniOneRec/data/Amazon18/Video_Games/Video_Games.semantic.index.json",
+      "bytes": 990350,
+      "sha256": "8fc4e1ee08546ffe34fbb9ada08f688a5ba6603052f603cdbeb2b17910ead763"
+    },
+    "final_sid": {
+      "path": "C:/Users/Administrator/Desktop/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+      "bytes": 1205786,
+      "sha256": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f"
+    },
+    "training_summary": "C:/Users/Administrator/Desktop/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/training_summary.json",
+    "sid_validation": "C:/Users/Administrator/Desktop/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/sid_validation.json",
+    "training_report": "C:/Users/Administrator/Desktop/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report.pdf",
+    "validation_report": "C:/Users/Administrator/Desktop/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report.pdf",
+    "comparison_endpoint": "C:/Users/Administrator/Desktop/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000",
+    "sid_mapping": {
+      "path": "C:/Users/Administrator/Desktop/MiniOneRec/data/Amazon18/Video_Games/Video_Games.sid.mapping.csv",
+      "sha256": "683dfb7796bf7587d53ee6afcff64214661e56055fc3da6eb1057ca64222aeca"
+    }
+  },
+  "reason": "Conservative baseline using validation-selected checkpoint; downstream recommendation HR/NDCG comparison has not been run.",
+  "candidate_10000_retained": true,
+  "split_counts": {
+    "train": 14919,
+    "val": 1653
+  },
+  "provenance_checks": {
+    "checkpoint_epoch_loaded_by_independent_cpu_audit": 2900,
+    "default_sid_matches_export": true,
+    "ids_and_asins_complete_unique": true,
+    "mapping_matches_metadata_and_split": true
+  },
+  "selected_on_client_date": "2026-11-15",
+  "client_timezone": "Asia/Shanghai",
+  "reports": {
+    "training": {
+      "path": "C:/Users/Administrator/Desktop/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report.pdf",
+      "pages": 4,
+      "sha256": "0149253ae3bb41de206b73baf0717d7d06169348b22931b219a99556e35c6cf7"
+    },
+    "validation": {
+      "path": "C:/Users/Administrator/Desktop/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report.pdf",
+      "pages": 13,
+      "comparison_pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "comparison_epoch": 10000,
+      "sha256": "8ffab672ff46c20254ca8189e1326a916d17be7de9115c6b13b944b904c1e596"
+    }
+  },
+  "report_validation": "C:/Users/Administrator/Desktop/MiniOneRec/output/reports/Video_Games/04_sid_validation/selected_sid_report_validation.json"
+}

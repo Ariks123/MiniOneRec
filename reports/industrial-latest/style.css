@@ -1,0 +1,57 @@
+@import url("base.css");
+
+.formula, .equation {
+  margin: 1rem 0;
+  padding: .55rem .15rem;
+  overflow-x: auto;
+}
+math { font-family: "STIX Two Math", "Cambria Math", math; color: var(--ink); }
+.formula math, .equation math {
+  width: max-content;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+figure.chart-compact { max-width: 41rem; }
+figure.chart-wide { max-width: 61rem; }
+figure.inference-flow { max-width: 49rem; }
+.flow-scroll { max-width: 100%; overflow-x: auto; }
+.flow-scroll svg { display: block; width: 100%; min-width: 41rem; height: auto; }
+.inference-flow .flow-mobile { display: none; }
+.best-result { color: #8a2034; font-weight: 700; }
+.metrics-table :is(th, td) { text-align: right; }
+.metrics-table :is(th, td):first-child,
+.metrics-table.with-method :is(th, td):nth-child(2) { text-align: left; }
+.metrics-table td { white-space: nowrap; }
+.metrics-table th { text-wrap: balance; }
+.metrics-table.with-method tbody + tbody tr:first-child > * { border-top: 1px solid #c7d2d5; }
+.table-unit { display: inline-block; white-space: nowrap; }
+.th-line { display: block; white-space: nowrap; }
+@media (min-width: 681px) {
+  .overview-toc ol { columns: 3; }
+}
+
+@media screen and (max-width: 800px) {
+  .chart-wide { width: min(100%, 27rem); }
+}
+@media screen and (max-width: 740px) {
+  .inference-flow .flow-scroll { display: none; }
+  .inference-flow .flow-mobile { display: block; max-width: 23rem; margin-inline: auto; }
+}
+@media screen and (max-width: 680px) {
+  figure:has(picture) { width: min(100%, 27rem); }
+  .formula math, .equation math { font-size: 1.02rem; }
+  .metrics-table thead th { min-width: 4rem; }
+  .metrics-table thead th:first-child { min-width: 2.2rem; }
+  .table-wrap caption { max-width: calc(100vw - 2 * var(--inset)); }
+  .by-k tr > :first-child {
+    position: sticky; left: 0; background: white; box-shadow: 1px 0 var(--line);
+  }
+  .by-k thead th:first-child { background: #f1f4f4; }
+}
+@media print {
+  figure { max-width: 100%; }
+  .flow-scroll, .formula, .equation { overflow: visible; }
+  .flow-scroll svg { min-width: 0; }
+  .formula, .equation { break-inside: avoid; }
+  .metrics-table td { white-space: normal; }
+}

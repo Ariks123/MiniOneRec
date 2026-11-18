@@ -1,0 +1,131 @@
+{
+  "status": "resolved",
+  "latest_run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943",
+  "user_instruction": "保留20轮组的结果",
+  "deleted_files": [
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/checkpoints/QwenUniSRec-Nov-17-2026_09-38-31.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794908421000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794908509000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794908509000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/checkpoints/QwenUniSRec-Nov-17-2026_10-05-39.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794910029000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794910107000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794910108000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/checkpoints/QwenUniSRec-Nov-17-2026_10-22-43.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794911052000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911051000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911051000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/checkpoints/QwenUniSRec-Nov-17-2026_10-30-37.pth",
+      "bytes": 124741085,
+      "mtime_ns": 1794911569000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/test_vector_quality/query_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911614000000000
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/test_vector_quality/target_item_vectors.npy",
+      "bytes": 5439728,
+      "mtime_ns": 1794911614000000000
+    }
+  ],
+  "removed_containers": [
+    "unisrec-industrial-qwen4-20261117-173712",
+    "unisrec-industrial-qwen4-20261117-173712-vector-test",
+    "unisrec-industrial-qwen4-ep50-20261117-180305",
+    "unisrec-industrial-qwen4-ep50-r1-20261117-180455",
+    "unisrec-industrial-qwen4-ep50-r1-20261117-180455-vector-test",
+    "unisrec-industrial-qwen4-ep15-20261117-182158",
+    "unisrec-industrial-qwen4-ep15-20261117-182158-vector-test",
+    "unisrec-industrial-qwen4-ep25-20261117-182943",
+    "unisrec-industrial-qwen4-ep25-20261117-182943-vector-test"
+  ],
+  "selection_candidates": {
+    "validation_loss": {
+      "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712",
+      "max_epochs": 100,
+      "completed_epochs": 21,
+      "best_epoch": 10,
+      "best_validation_loss": 7.205852387817648,
+      "test_loss": 7.23597624926314,
+      "test_recall10": 0.10633134789322744,
+      "test_recall20": 0.14228987425545997,
+      "test_recall50": 0.20869181557467462,
+      "test_cold_loss": 7.632474722292842,
+      "test_cold_recall10": 0.006802721088435374,
+      "test_cold_recall20": 0.02040816326530612,
+      "test_cold_recall50": 0.07482993197278912
+    },
+    "overall_recall50": {
+      "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242",
+      "max_epochs": 20,
+      "completed_epochs": 20,
+      "best_epoch": 20,
+      "best_validation_loss": 7.236537937301556,
+      "test_loss": 7.28475703671894,
+      "test_recall10": 0.14041473637767482,
+      "test_recall20": 0.18817560114714318,
+      "test_recall50": 0.2596514449591882,
+      "test_cold_loss": 7.746416548477905,
+      "test_cold_recall10": 0.061224489795918366,
+      "test_cold_recall20": 0.06802721088435375,
+      "test_cold_recall50": 0.10204081632653061
+    },
+    "cold_recall50": {
+      "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455",
+      "max_epochs": 50,
+      "completed_epochs": 15,
+      "best_epoch": 4,
+      "best_validation_loss": 7.330348996855948,
+      "test_loss": 7.373653503372794,
+      "test_recall10": 0.12497242444297375,
+      "test_recall20": 0.16688727112287668,
+      "test_recall50": 0.23384072358261637,
+      "test_cold_loss": 7.611727970091781,
+      "test_cold_recall10": 0.05442176870748299,
+      "test_cold_recall20": 0.08163265306122448,
+      "test_cold_recall50": 0.14965986394557823
+    }
+  },
+  "all_metrics_csv": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/metrics_comparison.csv",
+  "comparison_report": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943/comparison.html",
+  "selected_run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242",
+  "selected_at": "2026-11-17T18:40:09.023674+08:00",
+  "cleanup_executed": true,
+  "selection_record": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/unisrec/artifacts/model_selection.json"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "source": {
+    "title": "MiniOneRec: An Open-Source Framework for Scaling Generative Recommendation",
+    "url": "https://arxiv.org/html/2510.24431v1",
+    "version": "arXiv:2510.24431v1 (2025-10-28)",
+    "locators": ["Table 1", "Section 4", "Section 5.1", "Appendix B / Table 4"],
+    "checked_at_utc": "2026-11-15T16:06:17+00:00"
+  },
+  "sources": [
+    {
+      "label": "Paper main results and experimental setup",
+      "url": "https://arxiv.org/html/2510.24431v1",
+      "locator": "Table 1; Section 4; Appendix B"
+    },
+    {
+      "label": "Original SFT launcher",
+      "url": "https://github.com/AkaliKong/MiniOneRec/blob/0cbd94de9ea58c59a6b05d4d1dbda7edf8d5b3b1/sft.sh",
+      "locator": "8 workers; global batch 1024; micro batch 16; seed 42"
+    },
+    {
+      "label": "Original evaluation launcher",
+      "url": "https://github.com/AkaliKong/MiniOneRec/blob/0cbd94de9ea58c59a6b05d4d1dbda7edf8d5b3b1/evaluate.sh",
+      "locator": "num_beams=50; length_penalty=0"
+    }
+  ],
+  "method": "MiniOneRec (Table 1 main results)",
+  "stage": "SFT + GRPO RL (2 epochs)",
+  "backbone": "Qwen2.5-Instruct",
+  "backbone_size_note": "Section 4 specifies the backbone family; Table 1 does not identify a unique parameter count. Do not assume it is matched to this run's 1.5B Base model.",
+  "reported_k": [3, 5, 10],
+  "results": [
+    {
+      "dataset": "Industrial",
+      "HR": {"3": 0.1143, "5": 0.1321, "10": 0.1586},
+      "NDCG": {"3": 0.1011, "5": 0.1084, "10": 0.1167},
+      "catalog_items": 3685,
+      "test_rows": 4533
+    },
+    {
+      "dataset": "Office",
+      "HR": {"3": 0.1217, "5": 0.1420, "10": 0.1634},
+      "NDCG": {"3": 0.1088, "5": 0.1172, "10": 0.1242},
+      "catalog_items": 3459,
+      "test_rows": 4866
+    }
+  ],
+  "settings": {
+    "history_max": 10,
+    "rqvae_epochs": 10000,
+    "learning_rate": 0.0003,
+    "max_epochs": 10,
+    "lr_scheduler_type": "cosine",
+    "sft_gpus": "8 H100",
+    "stage": "SFT + GRPO RL (2 epochs)"
+  },
+  "limitations": [
+    "No Video Games results are reported in the original Table 1 or repository result image. Cross-domain values are context, not a matched reproduction target.",
+    "Only K=3,5,10 are published in Table 1. No values at K=1,20,50 are inferred or interpolated.",
+    "This run is Qwen2.5-1.5B Base SFT only; the original main result uses the paper's complete post-training recipe.",
+    "Use Table 1 consistently: the Industrial row in Table 3 has different values and is a separate experiment.",
+    "The paper and current launcher differ in some setup details; the current run_config.json is authoritative for this experiment.",
+    "Differences in domain, catalog size, sequence length, SID selection, alignment tasks and training stage prevent attribution of a score gap to a single cause.",
+    "Paper loss curves are not a matched numeric target across tokenizers, task mixtures and label masking. Before/after loss in this run must use the same token-weighted answer-only evaluation protocol."
+  ]
+}

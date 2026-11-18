@@ -1,0 +1,246 @@
+{
+  "status": "passed",
+  "cohorts": {
+    "cold": {
+      "items": 666,
+      "top1_behavior_cold_predictions": 4,
+      "top1_behavior_cold_rate": 0.006006006006006006,
+      "top10_behavior_cold_candidate_slots": 87,
+      "top10_behavior_cold_candidate_slot_rate": 0.013063063063063063,
+      "top1_predicted_train_target_frequency_mean": 82.67567567567568,
+      "top1_predicted_train_target_frequency_median": 49.0,
+      "wrong_top1_count": 662,
+      "wrong_top1_behavior_warm_count": 662,
+      "wrong_top1_behavior_warm_rate": 1.0,
+      "wrong_top1_predicted_train_target_frequency_mean": 83.17522658610272,
+      "wrong_top1_predicted_train_target_frequency_median": 49.0,
+      "canonical_title_items": 663,
+      "canonical_only_exact_top1_count": 4,
+      "canonical_only_exact_top1": 0.006033182503770739,
+      "canonical_only_exact_top10_count": 35,
+      "canonical_only_exact_top10": 0.05279034690799397,
+      "most_common_top1_prediction_items": [
+        {
+          "item_id": "9979",
+          "title": "Bound by Flame - PS4 [Digital Code]",
+          "prediction_count": 15,
+          "train_target_frequency": 51,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "466",
+          "title": "The Last of Us Remastered - PlayStation 4",
+          "prediction_count": 14,
+          "train_target_frequency": 435,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "12245",
+          "title": "Azio Levetron L70 LED Backlit Gaming Keyboard - Black (KB501)",
+          "prediction_count": 13,
+          "train_target_frequency": 19,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "11142",
+          "title": "Turtle Beach - Ear Force XO Seven Pro Premium Gaming Headset - Superhuman Hearing - Xbox One (Discontinued by Manufacturer)",
+          "prediction_count": 12,
+          "train_target_frequency": 28,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "996",
+          "title": "Meta Knight amiibo - Japan Import (Super Smash Bros Series)",
+          "prediction_count": 9,
+          "train_target_frequency": 49,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "820",
+          "title": "Nintendo Mii Swordfighter Amiibo (Super Smash Bros. Series) For Wii U",
+          "prediction_count": 9,
+          "train_target_frequency": 16,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "13803",
+          "title": "Call of Duty War Chest [Download]",
+          "prediction_count": 9,
+          "train_target_frequency": 9,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "9919",
+          "title": "Logitech G600 MMO Gaming Mouse, RGB Backlit, 20 Programmable Buttons",
+          "prediction_count": 9,
+          "train_target_frequency": 124,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "1360",
+          "title": "Lego Star Wars: The Complete Saga - Xbox 360",
+          "prediction_count": 9,
+          "train_target_frequency": 69,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "1567",
+          "title": "PlayStation 4 500GB Console - Call of Duty Black Ops III Bundle [Discontinued]",
+          "prediction_count": 8,
+          "train_target_frequency": 33,
+          "behavior_cold": false
+        }
+      ]
+    },
+    "warm": {
+      "items": 666,
+      "top1_behavior_cold_predictions": 0,
+      "top1_behavior_cold_rate": 0.0,
+      "top10_behavior_cold_candidate_slots": 9,
+      "top10_behavior_cold_candidate_slot_rate": 0.0013513513513513514,
+      "top1_predicted_train_target_frequency_mean": 63.81831831831832,
+      "top1_predicted_train_target_frequency_median": 34.0,
+      "wrong_top1_count": 603,
+      "wrong_top1_behavior_warm_count": 603,
+      "wrong_top1_behavior_warm_rate": 1.0,
+      "wrong_top1_predicted_train_target_frequency_mean": 65.80597014925372,
+      "wrong_top1_predicted_train_target_frequency_median": 34,
+      "canonical_title_items": 649,
+      "canonical_only_exact_top1_count": 62,
+      "canonical_only_exact_top1": 0.09553158705701079,
+      "canonical_only_exact_top10_count": 168,
+      "canonical_only_exact_top10": 0.2588597842835131,
+      "most_common_top1_prediction_items": [
+        {
+          "item_id": "7340",
+          "title": "dreamGEAR Nintendo 3DS XL Gaming Pack",
+          "prediction_count": 9,
+          "train_target_frequency": 8,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "996",
+          "title": "Meta Knight amiibo - Japan Import (Super Smash Bros Series)",
+          "prediction_count": 8,
+          "train_target_frequency": 49,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "9919",
+          "title": "Logitech G600 MMO Gaming Mouse, RGB Backlit, 20 Programmable Buttons",
+          "prediction_count": 8,
+          "train_target_frequency": 124,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "11142",
+          "title": "Turtle Beach - Ear Force XO Seven Pro Premium Gaming Headset - Superhuman Hearing - Xbox One (Discontinued by Manufacturer)",
+          "prediction_count": 7,
+          "train_target_frequency": 28,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "893",
+          "title": "60GB Hard Disk Drive for Xbox 360 Slim",
+          "prediction_count": 7,
+          "train_target_frequency": 149,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "12245",
+          "title": "Azio Levetron L70 LED Backlit Gaming Keyboard - Black (KB501)",
+          "prediction_count": 7,
+          "train_target_frequency": 19,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "12406",
+          "title": "Zettaguard 1792718  Dual Charging Station Charger for PS4 Controller",
+          "prediction_count": 7,
+          "train_target_frequency": 19,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "4987",
+          "title": "Nintendo DSi Console - Blue",
+          "prediction_count": 6,
+          "train_target_frequency": 126,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "13803",
+          "title": "Call of Duty War Chest [Download]",
+          "prediction_count": 6,
+          "train_target_frequency": 9,
+          "behavior_cold": false
+        },
+        {
+          "item_id": "12302",
+          "title": "PlayStation Thumb Grips (for PS4 and PS3 controllers)",
+          "prediction_count": 6,
+          "train_target_frequency": 16,
+          "behavior_cold": false
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "target_item_id": "252",
+      "target_title": "Doom - PC",
+      "target_sid": "<a_147><b_20><c_197><d_0>",
+      "predicted_item_id": "5315",
+      "predicted_title": "Half-Life: Blue Shift - PC",
+      "predicted_sid": "<a_131><b_139><c_203><d_0>",
+      "prediction_behavior_cold": false,
+      "prediction_train_target_frequency": 34,
+      "title_was_unambiguous": true
+    },
+    {
+      "target_item_id": "295",
+      "target_title": "Horizon Zero Dawn - PlayStation 4",
+      "target_sid": "<a_109><b_43><c_52><d_0>",
+      "predicted_item_id": "469",
+      "predicted_title": "Destiny - Standard Edition - PlayStation 4",
+      "predicted_sid": "<a_19><b_29><c_36><d_0>",
+      "prediction_behavior_cold": false,
+      "prediction_train_target_frequency": 411,
+      "title_was_unambiguous": true
+    },
+    {
+      "target_item_id": "313",
+      "target_title": "PlayStation VR",
+      "target_sid": "<a_131><b_240><c_243><d_0>",
+      "predicted_item_id": "332",
+      "predicted_title": "Assassin's Creed Unity Limited Edition - PlayStation 4",
+      "predicted_sid": "<a_64><b_7><c_196><d_0>",
+      "prediction_behavior_cold": false,
+      "prediction_train_target_frequency": 349,
+      "title_was_unambiguous": true
+    },
+    {
+      "target_item_id": "314",
+      "target_title": "Loading Human - PlayStation VR",
+      "target_sid": "<a_254><b_32><c_210><d_0>",
+      "predicted_item_id": "11891",
+      "predicted_title": "Deus Ex Human Revolution: Director's Cut - Xbox 360",
+      "predicted_sid": "<a_254><b_247><c_137><d_0>",
+      "prediction_behavior_cold": false,
+      "prediction_train_target_frequency": 21,
+      "title_was_unambiguous": true
+    },
+    {
+      "target_item_id": "315",
+      "target_title": "Resident Evil 7: Biohazard - PS4 Digital Code",
+      "target_sid": "<a_116><b_48><c_134><d_0>",
+      "predicted_item_id": "2639",
+      "predicted_title": "Resident Evil Essentials (Resident Evil Code: Veronica X / Resident Evil Outbreak / Resident Evil 4)",
+      "predicted_sid": "<a_116><b_96><c_87><d_0>",
+      "prediction_behavior_cold": false,
+      "prediction_train_target_frequency": 12,
+      "title_was_unambiguous": true
+    }
+  ],
+  "examples_selection": "First five canonical-target cold Top1 errors in ascending cold item-ID order, without manually choosing titles.",
+  "scope": "Descriptive follow-up on fixed saved model outputs; no additional inference or parameter tuning."
+}

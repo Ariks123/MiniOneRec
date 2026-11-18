@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "dataset": "Video_Games",
+  "generated_at_utc": "2026-11-16T07:34:40.095401+00:00",
+  "source_paths": {
+    "raw_reviews": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/raw/Video_Games_5.json",
+    "user_mapping": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.user2id",
+    "item_mapping": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item2id",
+    "full_sequences": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.inter.json",
+    "cleaning_report": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/cleaning_report.json",
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "train_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "valid_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.valid.inter",
+    "test_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+    "predictions": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/predictions.jsonl"
+  },
+  "source_sha256": {
+    "raw_reviews": "ccb5f7e3001b91772e095fc2caa90b1d5056ee32e17a9ad0b4f46aaab84bda2f",
+    "user_mapping": "466565e43672c78badbbcd8564b10e09d7c4727e30233215096333af76894ad6",
+    "item_mapping": "8fd9a32ef638be7c11fc2269e68afb8a7c3f3b871782bb4b10619788dd6c5858",
+    "full_sequences": "ceb5ac31b355554bf119294b86b5235b9f925fdf62db9af82a2614ed65fec434",
+    "cleaning_report": "ebd18a7790d5f5ca98f65283a1e71ee5c07147283de022bfa072973b49ba0927",
+    "sid_index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+    "train_interactions": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "valid_interactions": "62aa153f059043fdbdc647027fc14e177d5e967e3627c6ef88cdc0fca42cb56a",
+    "test_interactions": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+    "predictions": "d7b5849b691d4717f576235ddbe013cf71c56bf33a406035b659a964810724bd"
+  },
+  "methodology": {
+    "filter": "Retain raw events whose user and item are in the accepted mappings and whose timestamp is within the cleaning report's inclusive time window.",
+    "time_window": {
+      "start": "1996-10-01T00:00:00+08:00",
+      "end_inclusive": "2018-10-01T00:00:00+08:00"
+    },
+    "ordering": "Stable timestamp sort within each user; construct length-1 through length-20 rolling histories in mapped user-ID order; stable global target-timestamp sort; preserve 80/10/10 split.",
+    "repeat_last": "Same user by construction; target item ID equals immediately previous event item ID.",
+    "same_timestamp": "Integer unixReviewTime values are equal; this dataset's review timestamps have day-level resolution.",
+    "same_text_summary_rating": "Exact Python equality of the tuple (row.get('reviewText'), row.get('summary'), row.get('overall')) against the previous event; no text normalization. Missing and explicit null are both mapped to None.",
+    "stronger_duplicate_flag": "repeat_last AND same_timestamp AND same_text_summary_rating; compares user, item, timestamp, reviewText, summary and overall only.",
+    "all_raw_json_fields_compared": false,
+    "other_raw_fields": "Fields such as verified, reviewerName, vote and style are not compared; the stronger duplicate flag must not be described as equality of every raw JSON field.",
+    "causal_scope": "Descriptive duplicate-event audit; same timestamp alone does not prove that two real-world actions are identical.",
+    "source_integrity": "SHA-256 computed before analysis; input size and nanosecond mtime checked unchanged at completion."
+  },
+  "alignment_checks": {
+    "raw_rows_read": 497577,
+    "retained_raw_events": 471097,
+    "full_user_sequences_checked": 51862,
+    "all_full_user_sequences_equal": true,
+    "reconstructed_samples": 419235,
+    "all_split_rows_equal": true,
+    "global_split_boundaries_match": true,
+    "prediction_row_ids_unique_and_complete": true,
+    "all_prediction_targets_match_test_rows": true
+  },
+  "splits": {
+    "train": {
+      "rows": 335388,
+      "repeat_last": 18009,
+      "repeat_last_same_timestamp": 17923,
+      "repeat_last_same_timestamp_text_summary_rating": 17737,
+      "raw_to_interactions_all_rows_equal": true,
+      "repeat_last_rate": 0.0536960177466099,
+      "same_timestamp_share_of_repeat_last": 0.9952246099172636,
+      "same_timestamp_text_summary_rating_share_of_repeat_last": 0.9848964406685546
+    },
+    "valid": {
+      "rows": 41923,
+      "repeat_last": 602,
+      "repeat_last_same_timestamp": 593,
+      "repeat_last_same_timestamp_text_summary_rating": 573,
+      "raw_to_interactions_all_rows_equal": true,
+      "repeat_last_rate": 0.01435965937552179,
+      "same_timestamp_share_of_repeat_last": 0.9850498338870431,
+      "same_timestamp_text_summary_rating_share_of_repeat_last": 0.9518272425249169
+    },
+    "test": {
+      "rows": 41924,
+      "repeat_last": 507,
+      "repeat_last_same_timestamp": 499,
+      "repeat_last_same_timestamp_text_summary_rating": 348,
+      "raw_to_interactions_all_rows_equal": true,
+      "repeat_last_rate": 0.012093311706898197,
+      "same_timestamp_share_of_repeat_last": 0.9842209072978304,
+      "same_timestamp_text_summary_rating_share_of_repeat_last": 0.6863905325443787
+    }
+  },
+  "test_prediction_copy_audit": {
+    "rows": 41924,
+    "top1_correct": 645,
+    "top1_copies_last": 7612,
+    "top1_correct_copy": 338,
+    "top1_wrong_copy": 7274,
+    "top1_correct_copy_same_timestamp": 337,
+    "top1_correct_copy_same_timestamp_text_summary_rating": 331,
+    "correct_copy_same_timestamp_share": 0.9970414201183432,
+    "correct_copy_same_timestamp_text_summary_rating_share": 0.9792899408284024
+  }
+}

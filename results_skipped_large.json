@@ -1,0 +1,68 @@
+[
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/predictions.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/predictions.jsonl",
+    "size_bytes": 62348776,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/evaluation_test/predictions.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/evaluation_test/predictions.jsonl",
+    "size_bytes": 50403645,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/evaluation_valid/predictions.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/evaluation_valid/predictions.jsonl",
+    "size_bytes": 50375240,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank0.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank0.jsonl",
+    "size_bytes": 42523035,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank1.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank1.jsonl",
+    "size_bytes": 42383572,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank2.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank2.jsonl",
+    "size_bytes": 42341376,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank3.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/test/rank3.jsonl",
+    "size_bytes": 42616993,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank0.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank0.jsonl",
+    "size_bytes": 42300903,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank1.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank1.jsonl",
+    "size_bytes": 42231472,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank2.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank2.jsonl",
+    "size_bytes": 42254868,
+    "reason": "file exceeds 40 MB threshold"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank3.jsonl",
+    "target": "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118/valid/rank3.jsonl",
+    "size_bytes": 42558998,
+    "reason": "file exceeds 40 MB threshold"
+  }
+]

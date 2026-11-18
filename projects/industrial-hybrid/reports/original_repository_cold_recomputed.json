@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "dataset": "Industrial_and_Scientific",
+  "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+  "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+  "generated_at_utc": "2026-11-16T08:44:21.309177+00:00",
+  "source_sha256": {
+    "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+    "test_file": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+    "sid_index": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+    "sft_predictions": "ea08c534aafd6a9173c61b9e170c0d08b6f3b71d52d6693e371ec46f199d8da5",
+    "rl_predictions": "20a3117011ba9b37f66bba03455b46ef2113c6315e1b8213cdc776886416d33c",
+    "readme": "97ce7d1d8a664c590772b964f45fd0b6f4b60f3baec43f9cfff7dc70489eca02",
+    "evaluation_code": "ffb7736811dd60a7e2405f2c2baf7d3e30b06cc9d12bef574229649d53927757",
+    "metric_code": "3e5dc6bf10c2e23f50180f520993462c7756b717dd60d646d8b540274a3fce82"
+  },
+  "source_paths": {
+    "train_file": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/train/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+    "test_file": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/test/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+    "sid_index": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.index.json",
+    "sft_predictions": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_sft_result.json",
+    "rl_predictions": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_rl_result.json",
+    "readme": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/README.md",
+    "evaluation_code": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/evaluate.py",
+    "metric_code": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/calc.py"
+  },
+  "methodology": {
+    "stage": "post-hoc recomputation of repository exported predictions; no model retraining or inference",
+    "cold_definition": "Target item ID absent from union of all training history item IDs and training target item IDs",
+    "score_identity": "Original full SID-string exact matching, identical to calc.py; original SID aliases remain indistinguishable",
+    "duplicate_rows": "Every original test row retains equal weight",
+    "top_k": [
+      1,
+      3,
+      5,
+      10,
+      20,
+      50
+    ],
+    "input_order_validation": "Every prediction input ordered SID history and target verified against the same original CSV row",
+    "published_status": "The repository reports pooled metrics only; the cold/warm splits here are newly derived diagnostics, not repository-published cold results"
+  },
+  "counts": {
+    "catalog_items": 3686,
+    "unique_sids": 3670,
+    "training_behavior_items": 3647,
+    "test_rows": 4533,
+    "cold_test_rows": 147,
+    "cold_test_unique_items": 37
+  },
+  "models": {
+    "sft": {
+      "label": "Repository Qwen2.5-0.5B Base SFT only",
+      "integrity": {
+        "prediction_rows": 4533,
+        "all_row_targets_aligned": true,
+        "all_ordered_histories_aligned": true,
+        "candidates_per_row": 50,
+        "invalid_candidates": 0,
+        "duplicate_candidate_rows": 0
+      },
+      "strata": [
+        {
+          "key": "overall",
+          "rows": 4533,
+          "share": 1.0,
+          "hits_by_k": {
+            "1": 241,
+            "3": 345,
+            "5": 405,
+            "10": 511,
+            "20": 674,
+            "50": 941
+          },
+          "metrics": {
+            "HR@1": 0.05316567394661372,
+            "NDCG@1": 0.05316567394661372,
+            "HR@3": 0.07610853739245532,
+            "NDCG@3": 0.06625459214648177,
+            "HR@5": 0.08934480476505625,
+            "NDCG@5": 0.07164577534912037,
+            "HR@10": 0.11272887712331789,
+            "NDCG@10": 0.07915918039424699,
+            "HR@20": 0.1486874034855504,
+            "NDCG@20": 0.0881201925936131,
+            "HR@50": 0.20758879329362454,
+            "NDCG@50": 0.09970621387741467
+          }
+        },
+        {
+          "key": "behavior_warm",
+          "rows": 4386,
+          "share": 0.9675711449371277,
+          "hits_by_k": {
+            "1": 241,
+            "3": 345,
+            "5": 405,
+            "10": 510,
+            "20": 673,
+            "50": 938
+          },
+          "metrics": {
+            "HR@1": 0.05494756041951664,
+            "NDCG@1": 0.05494756041951664,
+            "HR@3": 0.0786593707250342,
+            "NDCG@3": 0.06847516329229408,
+            "HR@5": 0.09233926128590972,
+            "NDCG@5": 0.07404703594563672,
+            "HR@10": 0.11627906976744186,
+            "NDCG@10": 0.08174033284321383,
+            "HR@20": 0.15344277245782034,
+            "NDCG@20": 0.09100167992477486,
+            "HR@50": 0.2138622891016872,
+            "NDCG@50": 0.10289562694043712
+          }
+        },
+        {
+          "key": "behavior_cold",
+          "rows": 147,
+          "share": 0.03242885506287227,
+          "hits_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 1,
+            "20": 1,
+            "50": 3
+          },
+          "metrics": {
+            "HR@1": 0.0,
+            "NDCG@1": 0.0,
+            "HR@3": 0.0,
+            "NDCG@3": 0.0,
+            "HR@5": 0.0,
+            "NDCG@5": 0.0,
+            "HR@10": 0.006802721088435374,
+            "NDCG@10": 0.002146019569970944,
+            "HR@20": 0.006802721088435374,
+            "NDCG@20": 0.002146019569970944,
+            "HR@50": 0.02040816326530612,
+            "NDCG@50": 0.004544542486826483
+          }
+        }
+      ],
+      "readme_rounding_checks": [
+        {
+          "metric": "HR@1",
+          "recomputed_percent": 5.316567394661372,
+          "readme_percent": 5.32,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@3",
+          "recomputed_percent": 7.610853739245532,
+          "readme_percent": 7.61,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@5",
+          "recomputed_percent": 8.934480476505625,
+          "readme_percent": 8.93,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@10",
+          "recomputed_percent": 11.272887712331789,
+          "readme_percent": 11.27,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@20",
+          "recomputed_percent": 14.86874034855504,
+          "readme_percent": 14.87,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@50",
+          "recomputed_percent": 20.758879329362454,
+          "readme_percent": 20.76,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@1",
+          "recomputed_percent": 5.316567394661372,
+          "readme_percent": 5.32,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@3",
+          "recomputed_percent": 6.625459214648178,
+          "readme_percent": 6.63,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@5",
+          "recomputed_percent": 7.164577534912037,
+          "readme_percent": 7.16,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@10",
+          "recomputed_percent": 7.9159180394246995,
+          "readme_percent": 7.92,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@20",
+          "recomputed_percent": 8.81201925936131,
+          "readme_percent": 8.81,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@50",
+          "recomputed_percent": 9.970621387741467,
+          "readme_percent": 9.97,
+          "matches_two_decimal_rounding": true
+        }
+      ],
+      "all_readme_rounding_matches": true,
+      "cold_hits_at_50": [
+        {
+          "row_id": 1012,
+          "item_id": "2076",
+          "rank": 8
+        },
+        {
+          "row_id": 1135,
+          "item_id": "2196",
+          "rank": 50
+        },
+        {
+          "row_id": 3808,
+          "item_id": "2076",
+          "rank": 50
+        }
+      ]
+    },
+    "rl": {
+      "label": "Repository Qwen2.5-0.5B Base SFT + RL",
+      "integrity": {
+        "prediction_rows": 4533,
+        "all_row_targets_aligned": true,
+        "all_ordered_histories_aligned": true,
+        "candidates_per_row": 50,
+        "invalid_candidates": 0,
+        "duplicate_candidate_rows": 0
+      },
+      "strata": [
+        {
+          "key": "overall",
+          "rows": 4533,
+          "share": 1.0,
+          "hits_by_k": {
+            "1": 252,
+            "3": 380,
+            "5": 436,
+            "10": 536,
+            "20": 727,
+            "50": 959
+          },
+          "metrics": {
+            "HR@1": 0.05559232296492389,
+            "NDCG@1": 0.05559232296492389,
+            "HR@3": 0.08382969335980586,
+            "NDCG@3": 0.0720505868165207,
+            "HR@5": 0.09618354290756673,
+            "NDCG@5": 0.07713907506535764,
+            "HR@10": 0.11824398852856828,
+            "NDCG@10": 0.08420895496516194,
+            "HR@20": 0.16037943966468124,
+            "NDCG@20": 0.09490856811556575,
+            "HR@50": 0.2115596735054048,
+            "NDCG@50": 0.105076428377179
+          }
+        },
+        {
+          "key": "behavior_warm",
+          "rows": 4386,
+          "share": 0.9675711449371277,
+          "hits_by_k": {
+            "1": 252,
+            "3": 380,
+            "5": 436,
+            "10": 535,
+            "20": 726,
+            "50": 956
+          },
+          "metrics": {
+            "HR@1": 0.057455540355677154,
+            "NDCG@1": 0.057455540355677154,
+            "HR@3": 0.08663930688554491,
+            "NDCG@3": 0.07446541496563801,
+            "HR@5": 0.09940720474236206,
+            "NDCG@5": 0.07972444762226771,
+            "HR@10": 0.12197902416780666,
+            "NDCG@10": 0.08695935430467244,
+            "HR@20": 0.16552667578659372,
+            "NDCG@20": 0.09801757282058227,
+            "HR@50": 0.21796625626994984,
+            "NDCG@50": 0.1084298908503371
+          }
+        },
+        {
+          "key": "behavior_cold",
+          "rows": 147,
+          "share": 0.03242885506287227,
+          "hits_by_k": {
+            "1": 0,
+            "3": 0,
+            "5": 0,
+            "10": 1,
+            "20": 1,
+            "50": 3
+          },
+          "metrics": {
+            "HR@1": 0.0,
+            "NDCG@1": 0.0,
+            "HR@3": 0.0,
+            "NDCG@3": 0.0,
+            "HR@5": 0.0,
+            "NDCG@5": 0.0,
+            "HR@10": 0.006802721088435374,
+            "NDCG@10": 0.002146019569970944,
+            "HR@20": 0.006802721088435374,
+            "NDCG@20": 0.002146019569970944,
+            "HR@50": 0.02040816326530612,
+            "NDCG@50": 0.005020058259686155
+          }
+        }
+      ],
+      "readme_rounding_checks": [
+        {
+          "metric": "HR@1",
+          "recomputed_percent": 5.5592322964923895,
+          "readme_percent": 5.56,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@3",
+          "recomputed_percent": 8.382969335980587,
+          "readme_percent": 8.38,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@5",
+          "recomputed_percent": 9.618354290756672,
+          "readme_percent": 9.62,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@10",
+          "recomputed_percent": 11.824398852856827,
+          "readme_percent": 11.82,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@20",
+          "recomputed_percent": 16.037943966468124,
+          "readme_percent": 16.04,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "HR@50",
+          "recomputed_percent": 21.15596735054048,
+          "readme_percent": 21.16,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@1",
+          "recomputed_percent": 5.5592322964923895,
+          "readme_percent": 5.56,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@3",
+          "recomputed_percent": 7.20505868165207,
+          "readme_percent": 7.21,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@5",
+          "recomputed_percent": 7.713907506535763,
+          "readme_percent": 7.71,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@10",
+          "recomputed_percent": 8.420895496516193,
+          "readme_percent": 8.42,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@20",
+          "recomputed_percent": 9.490856811556576,
+          "readme_percent": 9.49,
+          "matches_two_decimal_rounding": true
+        },
+        {
+          "metric": "NDCG@50",
+          "recomputed_percent": 10.5076428377179,
+          "readme_percent": 10.51,
+          "matches_two_decimal_rounding": true
+        }
+      ],
+      "all_readme_rounding_matches": true,
+      "cold_hits_at_50": [
+        {
+          "row_id": 125,
+          "item_id": "3598",
+          "rank": 32
+        },
+        {
+          "row_id": 1012,
+          "item_id": "2076",
+          "rank": 8
+        },
+        {
+          "row_id": 1389,
+          "item_id": "2076",
+          "rank": 21
+        }
+      ]
+    }
+  },
+  "interpretation": [
+    "These cold/warm results are recomputed from the original repository prediction artifacts, not independently published cold-start results.",
+    "The original model is0.5B; current in-progress experiment is1.5B. Model size and stage must be stated in comparisons.",
+    "Cold-group estimates use147 rows/37 targets and retain per-row weighting.",
+    "Behavior-cold targets have known shared catalog/text/SID auxiliary exposure; this is not metadata-unseen item evaluation."
+  ]
+}

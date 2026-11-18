@@ -1,0 +1,292 @@
+[
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint",
+    "description": "Video Games 2018 Qwen2.5-1.5B SFT；验证loss选中的 checkpoint-6536"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint",
+    "description": "工业2018历史 Qwen2.5-1.5B cosine SFT；checkpoint-3572"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint",
+    "description": "工业2018历史 Qwen2.5-0.5B linear SFT；checkpoint-3572"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint",
+    "description": "工业2018 0.5B cosine 10轮预算基线；最佳loss checkpoint-6864"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint",
+    "description": "工业2018 0.5B cosine 10轮预算标题历史任务；最佳loss checkpoint-10884"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint",
+    "description": "工业2018 0.5B cosine 5轮预算；最佳验证NDCG/Recall checkpoint-5442"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint",
+    "description": "工业2018 0.5B linear 3轮预算；最佳loss checkpoint-5187"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint",
+    "description": "工业2018 0.5B linear 5轮预算；最佳loss checkpoint-8626"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint",
+    "description": "工业2018 Qwen 生成和256维检索头联合训练；checkpoint-5187"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint",
+    "description": "工业2018原SID GRPO beta=0.001；最佳验证NDCG checkpoint-828"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint",
+    "description": "工业2018原SID GRPO beta=0.01；最佳验证NDCG checkpoint-1449"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint",
+    "description": "工业2018 RQ-VAE唯一三位SID linear三轮SFT；checkpoint-5187"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint",
+    "description": "工业2018 RQ-VAE唯一三位SID GRPO beta=0.001；checkpoint-621"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint",
+    "description": "工业2018 linear五轮预算第3轮结束、重载最佳前的独立训练权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/best_val_model.pth",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/best_val_model.pth",
+    "description": "工业2018 RQ-VAE 中心化主方案量化模型或配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes.npy",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes.npy",
+    "description": "工业2018 RQ-VAE 中心化主方案量化模型或配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/embedding_center.npy",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/embedding_center.npy",
+    "description": "工业2018 RQ-VAE 中心化主方案量化模型或配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae_reference/best_val_model.pth",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae_reference/best_val_model.pth",
+    "description": "工业2018 RQ-VAE 未中心化参考方案量化模型或配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae_reference/catalog_codes.npy",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae_reference/catalog_codes.npy",
+    "description": "工业2018 RQ-VAE 未中心化参考方案量化模型或配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes_prefix_matching.npy",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes_prefix_matching.npy",
+    "description": "工业2018 SID导出对照资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes_sinkhorn.npy",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes_sinkhorn.npy",
+    "description": "工业2018 SID导出对照资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/catalog/Industrial_and_Scientific.index.json",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/catalog/Industrial_and_Scientific.index.json",
+    "description": "新RQ-VAE三位唯一SID目录；与新SFT/RL权重配套"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/export",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/export",
+    "description": "新SID训练UniSRec推理编码器、item向量与校验资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/checkpoints/QwenUniSRec-Nov-18-2026_07-18-57.pth",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/checkpoints/QwenUniSRec-Nov-18-2026_07-18-57.pth",
+    "description": "新SID UniSRec原RecBole训练权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/config.yaml",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/config.yaml",
+    "description": "新SID UniSRec重载配置"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints/QwenUniSRec-Nov-17-2026_10-13-24.pth",
+    "target": "checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints/QwenUniSRec-Nov-17-2026_10-13-24.pth",
+    "description": "原SID UniSRec四卡20轮训练权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/config.yaml",
+    "target": "checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/config.yaml",
+    "description": "原SID UniSRec重载配置"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1",
+    "target": "checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1",
+    "description": "原SID UniSRec推理编码器、item向量、映射和校验样例"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index",
+    "description": "联合Qwen模型物品向量及SID到商品映射"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/model.ts",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/model.ts",
+    "description": "SASRec验证集选择后的TorchScript推理模型"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h300-lr0p001/weights.pt",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h300-lr0p001/weights.pt",
+    "description": "SASRec四组超参数训练权重；验证选择依据见summary与selection"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h300-lr0p002/weights.pt",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h300-lr0p002/weights.pt",
+    "description": "SASRec四组超参数训练权重；验证选择依据见summary与selection"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h64-lr0p001/weights.pt",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h64-lr0p001/weights.pt",
+    "description": "SASRec四组超参数训练权重；验证选择依据见summary与selection"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h64-lr0p002/weights.pt",
+    "target": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h64-lr0p002/weights.pt",
+    "description": "SASRec四组超参数训练权重；验证选择依据见summary与selection"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "target": "assets/Video_Games/Video_Games.index.json",
+    "description": "模型使用的商品SID或基础向量行序配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.raw.index.json",
+    "target": "assets/Video_Games/Video_Games.raw.index.json",
+    "description": "模型使用的商品SID或基础向量行序配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.semantic.index.json",
+    "target": "assets/Video_Games/Video_Games.semantic.index.json",
+    "description": "模型使用的商品SID或基础向量行序配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.emb-qwen-td.npy.ids.json",
+    "target": "assets/Video_Games/Video_Games.emb-qwen-td.npy.ids.json",
+    "description": "模型使用的商品SID或基础向量行序配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.emb-qwen-td.npy.manifest.json",
+    "target": "assets/Video_Games/Video_Games.emb-qwen-td.npy.manifest.json",
+    "description": "模型使用的商品SID或基础向量行序配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+    "target": "assets/Industrial_and_Scientific/Industrial_and_Scientific.index.json",
+    "description": "模型使用的商品SID或基础向量行序配套资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.emb-qwen-td.npy",
+    "target": "assets/Video_Games/Video_Games.emb-qwen-td.npy",
+    "description": "2018商品Qwen文本向量；RQ-VAE和ANN/UniSRec输入"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon/index/Industrial_and_Scientific.emb-qwen-td.npy",
+    "target": "assets/Industrial_and_Scientific/Industrial_and_Scientific.emb-qwen-td.npy",
+    "description": "2018商品Qwen文本向量；RQ-VAE和ANN/UniSRec输入"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_val_model.pth",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_val_model.pth",
+    "description": "Video Games 2018 RQ-VAE正式训练的验证最佳、碰撞最优或终点比较权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_collision_model.pth",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_collision_model.pth",
+    "description": "Video Games 2018 RQ-VAE正式训练的验证最佳、碰撞最优或终点比较权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/last_model.pth",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/last_model.pth",
+    "description": "Video Games 2018 RQ-VAE正式训练的验证最佳、碰撞最优或终点比较权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.index.json",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.index.json",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.raw.index.json",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.raw.index.json",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.semantic.index.json",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.semantic.index.json",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/raw_codes.npy",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/raw_codes.npy",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/2026-11-14T15-04-02-357Z/semantic_codes.npy",
+    "target": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/semantic_codes.npy",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/best_val_model.pth",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/best_val_model.pth",
+    "description": "Video Games 2018 RQ-VAE正式训练的验证最佳、碰撞最优或终点比较权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/best_collision_model.pth",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/best_collision_model.pth",
+    "description": "Video Games 2018 RQ-VAE正式训练的验证最佳、碰撞最优或终点比较权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/last_model.pth",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/last_model.pth",
+    "description": "Video Games 2018 RQ-VAE正式训练的验证最佳、碰撞最优或终点比较权重"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.index.json",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.index.json",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.raw.index.json",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.raw.index.json",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.semantic.index.json",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.semantic.index.json",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/raw_codes.npy",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/raw_codes.npy",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/semantic_codes.npy",
+    "target": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/semantic_codes.npy",
+    "description": "Video Games RQ-VAE编码及SID导出资产"
+  }
+]

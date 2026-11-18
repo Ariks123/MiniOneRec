@@ -1,0 +1,1478 @@
+[
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/.dockerignore",
+    "target": "projects/video-games/.dockerignore",
+    "size": 279,
+    "sha256": "1aa3b29a07ff6acf0e6f6da38255507bb0407e003dd90557ad1b3edd2239c570"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/.gitattributes",
+    "target": "projects/video-games/.gitattributes",
+    "size": 37,
+    "sha256": "271ce0c3ed8f15953f4f111f3cd3e77f8da21d49f4f736ca68c887c713039eb2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/.gitignore",
+    "target": "projects/video-games/.gitignore",
+    "size": 454,
+    "sha256": "d6afbc2d67da2f2405b52d2db593a4f2713be79d6e888a5517b520364657819d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/LICENSE",
+    "target": "projects/video-games/LICENSE",
+    "size": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/LogitProcessor.py",
+    "target": "projects/video-games/LogitProcessor.py",
+    "size": 4435,
+    "sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/README.md",
+    "target": "projects/video-games/README.md",
+    "size": 21757,
+    "sha256": "a796bc1065f535318cae47bdd780ac2208a18bc03e5306b345cb6459e13bc979"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/SASRecModules_ori.py",
+    "target": "projects/video-games/SASRecModules_ori.py",
+    "size": 3831,
+    "sha256": "76ef521d9ad16dcf87f85f89604749103db6f087754a3210505bc22180a11bb3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/alphalab.jpg",
+    "target": "projects/video-games/assets/alphalab.jpg",
+    "size": 15153,
+    "sha256": "a3835be0372844af99b352d9d1512584b8c11889c75a87dcd5db4ef10b181a44"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/lds.png",
+    "target": "projects/video-games/assets/lds.png",
+    "size": 33782,
+    "sha256": "5f3d461dba5cfc4fbbb111fff1b498b292205e915108face86ba1877f1ba08f3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/llmmatter_big.png",
+    "target": "projects/video-games/assets/llmmatter_big.png",
+    "size": 53923,
+    "sha256": "cb4e43f7b50cb865bef935775cb2e090737d1355ce50d45ba599bfaa432da475"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/logo.png",
+    "target": "projects/video-games/assets/logo.png",
+    "size": 43797,
+    "sha256": "f3dfeaf7e08a682d76edf02bd64bd80836dba57cf0aa0b4bf0df7c57dbc287f5"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/minionerec_framework.png",
+    "target": "projects/video-games/assets/minionerec_framework.png",
+    "size": 2328960,
+    "sha256": "b91a2695e3233eeaeaa038044fe11d6b8676df8fef7fd74d0250b70e3fb3acf6"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/minionerec_main_result.png",
+    "target": "projects/video-games/assets/minionerec_main_result.png",
+    "size": 1190389,
+    "sha256": "4b5c7fd73ea93eea55429c0e15cbc014376f0c3f629dd0772a0625de486fece7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/next.jpg",
+    "target": "projects/video-games/assets/next.jpg",
+    "size": 8593,
+    "sha256": "48a9324eeb1121335862ab4dc7805593cb2689486316000e34c3ffc5302263ea"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/assets/scaling_big.png",
+    "target": "projects/video-games/assets/scaling_big.png",
+    "size": 53682,
+    "sha256": "f381e8d9f1bc3d8cb7f2076d63215d95f925944ace18157923f2ebce0e60c3cd"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/calc.py",
+    "target": "projects/video-games/calc.py",
+    "size": 2707,
+    "sha256": "95dc049a247abed339a653de5f8df950f4a8e7205db9329d21f7838c2edf80e2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/config/h20_4gpu.yaml",
+    "target": "projects/video-games/config/h20_4gpu.yaml",
+    "size": 270,
+    "sha256": "c0236350c012a14cf6d6a31ddc1cd7c3455e405ba16f63877aa4d18e02beb72c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/config/h20_zero2.json",
+    "target": "projects/video-games/config/h20_zero2.json",
+    "size": 493,
+    "sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/config/minionerec_paper_reference.json",
+    "target": "projects/video-games/config/minionerec_paper_reference.json",
+    "size": 3026,
+    "sha256": "e5a7a83118712a17f0804bbdd2dccc1df01f4046bceacf0a509924df458f312f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/config/zero2_opt.yaml",
+    "target": "projects/video-games/config/zero2_opt.yaml",
+    "size": 483,
+    "sha256": "008b81655cebfd984ea3255e9b55cca9218cfce91789d6d45fb3f4f620d499a3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/convert_dataset.py",
+    "target": "projects/video-games/convert_dataset.py",
+    "size": 11160,
+    "sha256": "6445650f6280461e9973b0e0723d89f3854323df816369997694a08fb0e02618"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/convert_dataset.sh",
+    "target": "projects/video-games/convert_dataset.sh",
+    "size": 444,
+    "sha256": "97e1c055987301109b345a353a77aeff551fa41e0f8f9d8711bcb93b32bab194"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/convert_dataset_gpr.py",
+    "target": "projects/video-games/convert_dataset_gpr.py",
+    "size": 11456,
+    "sha256": "a7a6d70db79b25901a2fc494f096662794044a1047e8dbf92c6428a5fc644b9d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data.py",
+    "target": "projects/video-games/data.py",
+    "size": 74953,
+    "sha256": "85edcb6b1e7d1124c204bbdcb312d70903920b3cb5f00bc3fc1414f3df03b555"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/analyze_embedding_similarity.py",
+    "target": "projects/video-games/data/Amazon18/analyze_embedding_similarity.py",
+    "size": 14115,
+    "sha256": "5d64cc0afd454c3dc85c1e4661d384de4430c948573bebeb6441147392f5a5db"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/build_cleaning_report.py",
+    "target": "projects/video-games/data/Amazon18/build_cleaning_report.py",
+    "size": 14868,
+    "sha256": "37fda04b4a11e303da112ef0a146bd08db1582da930090aacf61b257fb83fa72"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/build_embedding_similarity_report.py",
+    "target": "projects/video-games/data/Amazon18/build_embedding_similarity_report.py",
+    "size": 19064,
+    "sha256": "0c4c333a418cb8b37ab6e2b8cb351a02e5fae56b39ebd92a373a55111247857f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/build_reports_index.py",
+    "target": "projects/video-games/data/Amazon18/build_reports_index.py",
+    "size": 14220,
+    "sha256": "ef88cdbf21561e61344807d57d4976943322f3162d5182a7d1023234598bda1b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/build_rqvae_comparison_report.py",
+    "target": "projects/video-games/data/Amazon18/build_rqvae_comparison_report.py",
+    "size": 29166,
+    "sha256": "80fccb85217dec2e07984984abacf1fa4064ed93a701be921f5923b3252c061e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/build_rqvae_reports.py",
+    "target": "projects/video-games/data/Amazon18/build_rqvae_reports.py",
+    "size": 63109,
+    "sha256": "d915340d3a6e3ce078870608f0709dc7a9025f879243f227fd3ed997353984dc"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/download_embedding_model.py",
+    "target": "projects/video-games/data/Amazon18/download_embedding_model.py",
+    "size": 2749,
+    "sha256": "a3184ecf7218050d90af9db684b7a0565e7ccebd545fe059c2afbf3b88c08892"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/preflight_video_games_embedding.py",
+    "target": "projects/video-games/data/Amazon18/preflight_video_games_embedding.py",
+    "size": 5747,
+    "sha256": "a2d5999abdb5038a0512bda7ced60b24e6cff8c75753df06ea38d8f7ef74e99e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/validate_video_games_sid.py",
+    "target": "projects/video-games/data/Amazon18/validate_video_games_sid.py",
+    "size": 33185,
+    "sha256": "e7458cc46710e125db1ebe304e390c485a1101fd24b71653a6f94313b733a12c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/verify_download.py",
+    "target": "projects/video-games/data/Amazon18/verify_download.py",
+    "size": 8555,
+    "sha256": "67d807bc7fbdbf3cfc259d8cb58f31c5ebb78f9e9fbbe23a5624eefccb335717"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/verify_history_window.py",
+    "target": "projects/video-games/data/Amazon18/verify_history_window.py",
+    "size": 7037,
+    "sha256": "c0b99640a3457900bd1f9edbdfd86f212816ebb0ce489624d59121dc34b64b96"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/Amazon18/verify_video_games_embeddings.py",
+    "target": "projects/video-games/data/Amazon18/verify_video_games_embeddings.py",
+    "size": 11705,
+    "sha256": "d36fa58250c5061dfc3d4854ed61daf3e173fe6be96e76601eb1dcdd6b1e45f1"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/amazon18_data_process.py",
+    "target": "projects/video-games/data/amazon18_data_process.py",
+    "size": 23043,
+    "sha256": "16a6fab5a20e88ed170756f7eba6de523b6e3e9c75c8070073c05d3f0e2d8b29"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/amazon18_data_process.sh",
+    "target": "projects/video-games/data/amazon18_data_process.sh",
+    "size": 221,
+    "sha256": "147f97c56c2ab4c16e9d2e4cc0ff9974e66858f64d596bfd6eed017fda9335b2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/amazon18_data_process_gpr.py",
+    "target": "projects/video-games/data/amazon18_data_process_gpr.py",
+    "size": 25586,
+    "sha256": "6229fc7a9758def3f7a2c5413ef03de4dfe096ed008a9c8efd77c2bc9aab6d8e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/amazon18_video_games_process.sh",
+    "target": "projects/video-games/data/amazon18_video_games_process.sh",
+    "size": 985,
+    "sha256": "733b421f4f37c3779c6ce7a4d8d12a618feb09e1c988b69923dc8829f92dda46"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data/process.py",
+    "target": "projects/video-games/data/process.py",
+    "size": 8441,
+    "sha256": "1af0ac781d25dadb44405fb706a208b7020be6f1478b50e2e29868efd8105067"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/data_test.py",
+    "target": "projects/video-games/data_test.py",
+    "size": 10256,
+    "sha256": "2b5dad8bc812b2027577a979b5eafeedc4866072846c82d8afbdd87a3e212c09"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/Dockerfile.h20",
+    "target": "projects/video-games/docker/Dockerfile.h20",
+    "size": 2351,
+    "sha256": "ffb6dfd278d7cc33958caae062d67cd6714dcbf46d4cf2679b8c89b022c87743"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/Dockerfile.original-torch28",
+    "target": "projects/video-games/docker/Dockerfile.original-torch28",
+    "size": 1085,
+    "sha256": "5b53650bddb575a682852b7ea79e2fe67ab3fe141b36ee73602ca5ebc6f3f510"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/__init__.py",
+    "target": "projects/video-games/docker/__init__.py",
+    "size": 63,
+    "sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/check_env.py",
+    "target": "projects/video-games/docker/check_env.py",
+    "size": 1242,
+    "sha256": "29a0f2001fb7696b2cd9bebdee76efb3177c9bb477f0b4c0d20c8519201acd17"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/check_original_torch28.py",
+    "target": "projects/video-games/docker/check_original_torch28.py",
+    "size": 5152,
+    "sha256": "a5f403773bae26d4bbd47297048dcc3f740fbcdfead3d3bc20b83894fe26d001"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/download_model.py",
+    "target": "projects/video-games/docker/download_model.py",
+    "size": 846,
+    "sha256": "01797a87340ed72985eaf48abd83dff42a39aa025324b8edffbdbb22fb184c3f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/entrypoint.sh",
+    "target": "projects/video-games/docker/entrypoint.sh",
+    "size": 1826,
+    "sha256": "38439b2d9e66dc457adc4b3ac0ee69e143fec3b4da321fa0b9536a2769033f12"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/industrial_experiment.py",
+    "target": "projects/video-games/docker/industrial_experiment.py",
+    "size": 21517,
+    "sha256": "b61e137e4b2bfae8389287aef387660326e7b59d9d5fe0f707d3bb6d6b6f3a7d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/run_copy.py",
+    "target": "projects/video-games/docker/run_copy.py",
+    "size": 12234,
+    "sha256": "0f6a3c9d99f380a7edea8c7679299175c799c1b1dd2a162cc8c7fe47385d0097"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/run_h20.sh",
+    "target": "projects/video-games/docker/run_h20.sh",
+    "size": 2001,
+    "sha256": "08c25597f0b433f2923441b363ffc1f6b9147ade7e2003acc966b8128e65f20a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/sft_experiment.py",
+    "target": "projects/video-games/docker/sft_experiment.py",
+    "size": 18515,
+    "sha256": "36587dff645e95d9c2434f1810bfca07b16f3d89a0d9661555b899eee87b197b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/smoke_distributed.py",
+    "target": "projects/video-games/docker/smoke_distributed.py",
+    "size": 10848,
+    "sha256": "f72b78d4bc8e853c7e7d56882d2e59fa9c1cb3507d2a8e3c88c61334e7f300c7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/smoke_sft_monitor.py",
+    "target": "projects/video-games/docker/smoke_sft_monitor.py",
+    "size": 7530,
+    "sha256": "9d89dc436b605e92a41b73bbbef542c4275783fd0f4b5e4d2813b6a8489c0d52"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docker/smoke_training.py",
+    "target": "projects/video-games/docker/smoke_training.py",
+    "size": 9738,
+    "sha256": "9e2aee78365fe38480a8e14cc4f83f723c1e53bfcf73f17b394227b797ed31d1"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/docs/H20_POSTTRAINING.md",
+    "target": "projects/video-games/docs/H20_POSTTRAINING.md",
+    "size": 16240,
+    "sha256": "0e7f8011760a2167eaf74191c1f722a89d9e9b694ae334202e360861509704b4"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/evaluate.py",
+    "target": "projects/video-games/evaluate.py",
+    "size": 7856,
+    "sha256": "285216280aea9ccd94656f5810f8cc75c3e44a5d9e8164d58d9eabed4efffa44"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/evaluate.sh",
+    "target": "projects/video-games/evaluate.sh",
+    "size": 3471,
+    "sha256": "8226fd24bde292d13ed8d318abd14a70feac4152f91184c0af2d0851ff011ae8"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/merge.py",
+    "target": "projects/video-games/merge.py",
+    "size": 470,
+    "sha256": "065463581feb7b894249dfb9ac11c8af8370fa73c8725be7d48cdfd44ae31b48"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/minionerec_trainer.py",
+    "target": "projects/video-games/minionerec_trainer.py",
+    "size": 61263,
+    "sha256": "67fdcbfb7aa6234596765f42261fd77ed05242778549f418152c36c2d081fbc1"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/npu_support.py",
+    "target": "projects/video-games/npu_support.py",
+    "size": 1467,
+    "sha256": "3202621f37b5e3c96bb147eaeddb16102009f398d47617091a313d67777328b0"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/requirements-h20.txt",
+    "target": "projects/video-games/requirements-h20.txt",
+    "size": 1555,
+    "sha256": "e1c00c252e8ee865018e887c3715e44e82c966b65a15129c9496902e95007339"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/requirements-npu.txt",
+    "target": "projects/video-games/requirements-npu.txt",
+    "size": 2655,
+    "sha256": "83eb6411a31267c53cb4cee37e0c617a3c4c5625cddf66abda5aa41a06338c02"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/requirements-report.txt",
+    "target": "projects/video-games/requirements-report.txt",
+    "size": 90,
+    "sha256": "c899536b0afac63d3da6535de49f4f4bf922ae4713730be8449a69243cebebcc"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/requirements-windows.txt",
+    "target": "projects/video-games/requirements-windows.txt",
+    "size": 2390,
+    "sha256": "ff92ec068fb1174626db6d30f2c938da392a6277d12b4e83fdabf40f2a3a228c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/requirements.txt",
+    "target": "projects/video-games/requirements.txt",
+    "size": 2793,
+    "sha256": "3f4edf93ffba358c55903f5a185d041f687e9f722017369ac70ea3e9c2014344"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rl.py",
+    "target": "projects/video-games/rl.py",
+    "size": 14128,
+    "sha256": "39a7083544c2c74c17a83d07dae46f973162f99a8f1ce39b925882a206801f93"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rl.sh",
+    "target": "projects/video-games/rl.sh",
+    "size": 168,
+    "sha256": "79c2af824677524e2ef2b550285f6528928c37d4120c10fdf548a25604a56da0"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rl_gpr.py",
+    "target": "projects/video-games/rl_gpr.py",
+    "size": 14170,
+    "sha256": "54b46a055100e468dafb77bd11ec8d8ef53cad08cf33cd5ed0d2e9b403fd8d01"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/FLASH_SID.md",
+    "target": "projects/video-games/rq/FLASH_SID.md",
+    "size": 6487,
+    "sha256": "9530146d2c8454d0ecb04c2d1f49e88ba1d491126b292765c1acc61d21829761"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/datasets.py",
+    "target": "projects/video-games/rq/datasets.py",
+    "size": 1352,
+    "sha256": "a808f07581766e8f4feabe24cc3c07d7f31ed0edfeaa52dba825e442edd60101"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/export_video_games_sid.py",
+    "target": "projects/video-games/rq/export_video_games_sid.py",
+    "size": 20544,
+    "sha256": "ce26c7392cfea974b0ba3525989cde871f1f7cbb25592d0f71b42b067d38723f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/flash_sid/__init__.py",
+    "target": "projects/video-games/rq/flash_sid/__init__.py",
+    "size": 130,
+    "sha256": "da71bb42e2697d3472510a7b05f238cd98da427af64403ae42010b511657e428"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/flash_sid/__main__.py",
+    "target": "projects/video-games/rq/flash_sid/__main__.py",
+    "size": 48,
+    "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/flash_sid/cli.py",
+    "target": "projects/video-games/rq/flash_sid/cli.py",
+    "size": 7577,
+    "sha256": "325e78e0f5d9281419488bf2812ef2000e8ccef27cb99409991461fba8b2b75a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/flash_sid/export.py",
+    "target": "projects/video-games/rq/flash_sid/export.py",
+    "size": 5047,
+    "sha256": "33ffbc7705e79f7766a89b0b844c9dfa5be6f641afa2f745c6961411289d8817"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/flash_sid/simhash.py",
+    "target": "projects/video-games/rq/flash_sid/simhash.py",
+    "size": 8861,
+    "sha256": "6adb2f67d3af4b529b15b52e46c21ee4fd7801ae5304dfec86dcd181d1b568ef"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/generate_indices.py",
+    "target": "projects/video-games/rq/generate_indices.py",
+    "size": 10334,
+    "sha256": "89586ac11d55a5f98e52910c14eaac66eddd57958cc7da7173eb7f3d7626f66c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/generate_indices_flash.py",
+    "target": "projects/video-games/rq/generate_indices_flash.py",
+    "size": 227,
+    "sha256": "a55105a3155ae789866971232ceb735379b620ee575b33f75d6553fef1a06b6f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/generate_indices_plus.py",
+    "target": "projects/video-games/rq/generate_indices_plus.py",
+    "size": 6064,
+    "sha256": "bd42e739402b43eade3ba193906d561e8fd53cc547e0a734df8d357112d5735d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/generate_indices_plus.sh",
+    "target": "projects/video-games/rq/generate_indices_plus.sh",
+    "size": 284,
+    "sha256": "b84883c84549257d04ca9c01050030b0f9984bc23a5549fcff3c2ef56bdd8679"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/models/generate_indices.py",
+    "target": "projects/video-games/rq/models/generate_indices.py",
+    "size": 4173,
+    "sha256": "47371c62492d68781f4ba80c3c5717cd4e68ce41d4fb9527ef098fa108b1c41b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/models/layers.py",
+    "target": "projects/video-games/rq/models/layers.py",
+    "size": 3476,
+    "sha256": "fc2301382fe570668adc90566e8512194107c7390039384b4dec9c65149d4976"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/models/rq.py",
+    "target": "projects/video-games/rq/models/rq.py",
+    "size": 2018,
+    "sha256": "ca4bd82b22cca7f186d64710b5f5fc938b7d8b7c309da86ca8b148d318814f65"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/models/rqvae.py",
+    "target": "projects/video-games/rq/models/rqvae.py",
+    "size": 2902,
+    "sha256": "6fd4d2d19b58e93ae10d1f6cce1b3c3eb267817fc1e78c1aa999341cae60575d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/models/vq.py",
+    "target": "projects/video-games/rq/models/vq.py",
+    "size": 3096,
+    "sha256": "aa6542d4d77763fe9e5fd8b939c9f1c342945bf7a9e045b107780b0df0cb17ed"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqkmeans_constrained.py",
+    "target": "projects/video-games/rq/rqkmeans_constrained.py",
+    "size": 9818,
+    "sha256": "41b27c7c79d3a65947653d7dab526e1815e0842437c208c82afb87964d1c4d8b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqkmeans_constrained.sh",
+    "target": "projects/video-games/rq/rqkmeans_constrained.sh",
+    "size": 742,
+    "sha256": "a831d503bc1f66f4e59feba3e285e314576864ac947f3db918ae7ea1263e9c1c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqkmeans_faiss.py",
+    "target": "projects/video-games/rq/rqkmeans_faiss.py",
+    "size": 9887,
+    "sha256": "c6e35ef11888ffbe6d17a82d358766d5876fc2606f344d85dd61c66cc25e7119"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqkmeans_plus.py",
+    "target": "projects/video-games/rq/rqkmeans_plus.py",
+    "size": 7206,
+    "sha256": "00c94ee351271a91b279c0574116388c1a4377843e026931d97c46188d4dc0ec"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqkmeans_plus.sh",
+    "target": "projects/video-games/rq/rqkmeans_plus.sh",
+    "size": 354,
+    "sha256": "5298142e3e3615112480a3971983c56cfba81706a9db996e9c1e13386ab96566"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqvae.py",
+    "target": "projects/video-games/rq/rqvae.py",
+    "size": 4361,
+    "sha256": "b008cd127d3b47670ad14a5570b835981088a00dd38d6f16b5f256d52cac7e35"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/rqvae.sh",
+    "target": "projects/video-games/rq/rqvae.sh",
+    "size": 221,
+    "sha256": "6ab4c2081e5ab6f6146776ea22907ad202835db26fe032ddc44ff3f3887a1b83"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/text2emb/amazon_text2emb.py",
+    "target": "projects/video-games/rq/text2emb/amazon_text2emb.py",
+    "size": 9148,
+    "sha256": "bc4a9ebb535b93e86cf75c3eb6bff3682f2d328a2f875330566b4ea0f79e9221"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/text2emb/amazon_text2emb.sh",
+    "target": "projects/video-games/rq/text2emb/amazon_text2emb.sh",
+    "size": 199,
+    "sha256": "278c4b74e18681172d80d8d0f01b4ba555fb8734765746d27fe474ed4d484129"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/text2emb/amazon_text2emb_gpr.py",
+    "target": "projects/video-games/rq/text2emb/amazon_text2emb_gpr.py",
+    "size": 6952,
+    "sha256": "0b5a0f951b4627b564fa54fb348d19cc071e3a45458798084eafc890ec840e90"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/text2emb/utils.py",
+    "target": "projects/video-games/rq/text2emb/utils.py",
+    "size": 15331,
+    "sha256": "ba58187335f60e53fda55230b2896fb9f582ea22e34f8920ae01e81a6209d577"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/text2emb/video_games_text2emb.sh",
+    "target": "projects/video-games/rq/text2emb/video_games_text2emb.sh",
+    "size": 988,
+    "sha256": "001760bb1b8c8a3888d3265c93035ba0b676d87d5b02dd59c79f2b5f085afb16"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/train_video_games_rqvae.py",
+    "target": "projects/video-games/rq/train_video_games_rqvae.py",
+    "size": 16640,
+    "sha256": "5c304286ec765ac4db5b92da80a01f820597c06be9accd94a1b5c27694caecfd"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/trainer.py",
+    "target": "projects/video-games/rq/trainer.py",
+    "size": 9403,
+    "sha256": "2019ec86e81c54321e2e1f4866127ea82a06cc0117cff3daa89f77f84f2b95ed"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/rq/utils.py",
+    "target": "projects/video-games/rq/utils.py",
+    "size": 811,
+    "sha256": "25636ae709f1c07a57f560a883bf85067afbf20697acf317e0d16b3293480f4f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sasrec.py",
+    "target": "projects/video-games/sasrec.py",
+    "size": 27590,
+    "sha256": "546d228fc0990a3ef305a67eda229eb97ce2a011681b5ab926a34c0052e3e11a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/analyze_sft_behavior_shift.py",
+    "target": "projects/video-games/scripts/analyze_sft_behavior_shift.py",
+    "size": 21064,
+    "sha256": "9dcbe12f3956d63025f8eabe8054d29eacdfd542cfe07a505ee2f1a4ed94f7aa"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/build_sft_baselines.py",
+    "target": "projects/video-games/scripts/build_sft_baselines.py",
+    "size": 8575,
+    "sha256": "b3cd387c7b3e08634366aae8d144619853335cd9db7aa4e3b8e854ddc254623a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/compare_industrial_reproductions.py",
+    "target": "projects/video-games/scripts/compare_industrial_reproductions.py",
+    "size": 20651,
+    "sha256": "a775da2982e59e453658d8c7e371ca2382d7c86020c72ae3f47ca10a1f50de5a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/diagnose_constraint_tokens.py",
+    "target": "projects/video-games/scripts/diagnose_constraint_tokens.py",
+    "size": 5448,
+    "sha256": "5104a9b2dbbc0ba15fb41afb5b7feea805111c6197d6be49ee0f5e6130722b97"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/evaluate_sft.py",
+    "target": "projects/video-games/scripts/evaluate_sft.py",
+    "size": 17623,
+    "sha256": "f99ed5c52c0965e007ca34de688a780e16e5b51f1ccf4077184b78018b8b222a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/evaluate_sft_content_baseline.py",
+    "target": "projects/video-games/scripts/evaluate_sft_content_baseline.py",
+    "size": 18599,
+    "sha256": "8e9a2e0f7725f30903f74c68e305172412ad0a5c5292d870ff4d74de443ef3ff"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/launch_h20.py",
+    "target": "projects/video-games/scripts/launch_h20.py",
+    "size": 16327,
+    "sha256": "e557f4988060f3204ba5ee0cb6c0976c4e6df04103fe6d317111505c8907c708"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/prepare_original_industrial.py",
+    "target": "projects/video-games/scripts/prepare_original_industrial.py",
+    "size": 16253,
+    "sha256": "9fb825d01622c45dbf3efc26db1b7daf2ff5d1b211e7c903dbe47f9dde84667f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/prepare_video_games_posttraining.py",
+    "target": "projects/video-games/scripts/prepare_video_games_posttraining.py",
+    "size": 10595,
+    "sha256": "bc810711539d53dbfeac0f7fc40c795e3fc971dc090c6213929ba0ffe3e276d7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/report_industrial_sft.py",
+    "target": "projects/video-games/scripts/report_industrial_sft.py",
+    "size": 29930,
+    "sha256": "92e1df84f2a1e22c9ae4a745339733a2f0e7f1d83022250d80777a12a6f186ab"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/report_sft.py",
+    "target": "projects/video-games/scripts/report_sft.py",
+    "size": 85281,
+    "sha256": "e1a5453add12ffbf5eb8264c8b043274a6ec64d3c4c8fe3cdf530c27ea145929"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/sft_eval_utils.py",
+    "target": "projects/video-games/scripts/sft_eval_utils.py",
+    "size": 14835,
+    "sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/sft_generative_selection.py",
+    "target": "projects/video-games/scripts/sft_generative_selection.py",
+    "size": 27750,
+    "sha256": "9b1e1e0f438a11ee78d69b5d9827f71601b5fbccffe433b49bf004b634f564b8"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/scripts/sft_wsd_schedule.py",
+    "target": "projects/video-games/scripts/sft_wsd_schedule.py",
+    "size": 6310,
+    "sha256": "417bbf57a4296989ab3920e78818cb3dcb3643881ffdfbbe8ad107cc13331603"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sft.py",
+    "target": "projects/video-games/sft.py",
+    "size": 21669,
+    "sha256": "ed6349b3570d1c4ea200914a9c8c1353a79f50c0c41874282bd40cbb3297a12d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sft.sh",
+    "target": "projects/video-games/sft.sh",
+    "size": 169,
+    "sha256": "b9217d1670b548a16685404ef1210d238ab906b06309b1dea1dfd4241f97c6b5"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sft_gpr.py",
+    "target": "projects/video-games/sft_gpr.py",
+    "size": 14429,
+    "sha256": "fd571aefa2a1ed2ecb36e730e2a10014af6872cd2852252edc383e367980840e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sft_monitor.py",
+    "target": "projects/video-games/sft_monitor.py",
+    "size": 23877,
+    "sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/README.md",
+    "target": "projects/video-games/sid_generation/README.md",
+    "size": 11865,
+    "sha256": "45086bc680452532d36108492a2d61daee1f895f88a54af2f2caed9e140adb0c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/VALIDATION.md",
+    "target": "projects/video-games/sid_generation/VALIDATION.md",
+    "size": 4544,
+    "sha256": "11309a48c31a5fb5504d4467c9b392de973a0144a074eda765bc2fd48a46c999"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/__init__.py",
+    "target": "projects/video-games/sid_generation/__init__.py",
+    "size": 163,
+    "sha256": "970e1ab89bfe23e5e288accdbac29db510b28da647f5fccf2b4b6a483fd4d56c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/prq_kmeans.py",
+    "target": "projects/video-games/sid_generation/prq_kmeans.py",
+    "size": 8391,
+    "sha256": "f43c9a711ddd2e74a758dff32c2407daad891d73d2f06f0d1ca14b0db4b7ded6"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/prq_kmeans.sh",
+    "target": "projects/video-games/sid_generation/prq_kmeans.sh",
+    "size": 166,
+    "sha256": "5dd36bb0086c68bc3a0200665f0fada42d487ce7a05ee9263de0bb89a4ef53ab"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/requirements-faiss.txt",
+    "target": "projects/video-games/sid_generation/requirements-faiss.txt",
+    "size": 38,
+    "sha256": "4daee587ddfc5387f4d92a25204d37b4ce54b4ceae09c25efcdafdcf53ab52b8"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/requirements-test.txt",
+    "target": "projects/video-games/sid_generation/requirements-test.txt",
+    "size": 41,
+    "sha256": "4ec42d01f1536306db74f346f58b2b4f506fbe99643af6460a5d86e1e150b10e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/requirements.txt",
+    "target": "projects/video-games/sid_generation/requirements.txt",
+    "size": 15,
+    "sha256": "99f43573522565d7c480efd1f954892948033915df6a4e685327e995d3396eb6"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/rq_opq.py",
+    "target": "projects/video-games/sid_generation/rq_opq.py",
+    "size": 16983,
+    "sha256": "6a81cefed8549b03c496a6f094b64527779501c71baf37a695b8c82693971bde"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/rq_opq.sh",
+    "target": "projects/video-games/sid_generation/rq_opq.sh",
+    "size": 162,
+    "sha256": "369622d3cea5ea7f1ff0dac39357003f843c8485e8e24b65d4e4ee09e1f2aa64"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/sid_cli.py",
+    "target": "projects/video-games/sid_generation/sid_cli.py",
+    "size": 10584,
+    "sha256": "b7aa65851885db35258b04be85295854e5ed5c30a55bc4c5b62c349c8e4b7a39"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/sid_common.py",
+    "target": "projects/video-games/sid_generation/sid_common.py",
+    "size": 7929,
+    "sha256": "f7d277df904452481c37ea6f20437f05abd08cd628f2e8a1dd284326a7434b73"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/sid_publish.py",
+    "target": "projects/video-games/sid_generation/sid_publish.py",
+    "size": 7669,
+    "sha256": "9f20aff405f9138f122d2ff625414211fe6fca478e764d7ff9d4dfc48bcb0861"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/tests/smoke_catalog.py",
+    "target": "projects/video-games/sid_generation/tests/smoke_catalog.py",
+    "size": 5607,
+    "sha256": "f17e7d3f938fc321246506f9a0985cf0db21b23e68ad5e03f71f4e679b980539"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/tests/test_minionerec_integration.py",
+    "target": "projects/video-games/sid_generation/tests/test_minionerec_integration.py",
+    "size": 10179,
+    "sha256": "ee5054aaf38f412a65358fcecd84f5b6b5ecec8e79a1fc82223fbbe057e6bb70"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/tests/test_prq_regressions.py",
+    "target": "projects/video-games/sid_generation/tests/test_prq_regressions.py",
+    "size": 4108,
+    "sha256": "42286be8dabde5cd48002f2933791fa1c8237a7afd64dadcb1e11c623972c40e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/tests/test_publication.py",
+    "target": "projects/video-games/sid_generation/tests/test_publication.py",
+    "size": 8333,
+    "sha256": "5b3dd821d8a0b41fd4c69295c4772d0dcc15c50ab72122b9adf91803e1632d61"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/tests/test_rq_regressions.py",
+    "target": "projects/video-games/sid_generation/tests/test_rq_regressions.py",
+    "size": 12409,
+    "sha256": "a1532cd0678156a0c2e58eed62ee9e29fdba251f71a4f1d6a229bd62d1c6ae98"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/sid_generation/tests/test_sid_generation.py",
+    "target": "projects/video-games/sid_generation/tests/test_sid_generation.py",
+    "size": 15923,
+    "sha256": "63d52724f720f6d1ba4fe21ac8e02760afd4c2ef097d426c32bbd7792f36e444"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/split.py",
+    "target": "projects/video-games/split.py",
+    "size": 639,
+    "sha256": "6d9538fa2722f733ee9ea4feff1367a2e6d373b4b323004410b0e36ec9d1bb09"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/__init__.py",
+    "target": "projects/video-games/tests/__init__.py",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_calc_metrics.py",
+    "target": "projects/video-games/tests/test_calc_metrics.py",
+    "size": 3370,
+    "sha256": "9634bc994e80da809be395ae7fa6884b8996b5d8462897518f5d86b331abd295"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_constrained_decoding.py",
+    "target": "projects/video-games/tests/test_constrained_decoding.py",
+    "size": 11216,
+    "sha256": "1b9409f631b9ad6f75792904c72bd9e2b79f11bc8b054021bec124fd96b28063"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_flash_sid_export.py",
+    "target": "projects/video-games/tests/test_flash_sid_export.py",
+    "size": 5632,
+    "sha256": "be28fb85442f6265b45faa38295ead521c096a0f741b799fd4414398de31c9c7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_flash_sid_integration.py",
+    "target": "projects/video-games/tests/test_flash_sid_integration.py",
+    "size": 2766,
+    "sha256": "ed8bbe5c109275288aad3fe1a3e3b7b160126ca288425a801bd09d6107a8a54f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_flash_sid_simhash.py",
+    "target": "projects/video-games/tests/test_flash_sid_simhash.py",
+    "size": 10503,
+    "sha256": "7d368ed751e0cd3ad36be7734ba542fc48178966d8d69049d168b4fd49f6a75c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_h20_docker.py",
+    "target": "projects/video-games/tests/test_h20_docker.py",
+    "size": 10475,
+    "sha256": "db0bd042763db505259c0817d03f06f89604a7219f0e385d0e7bb740bc124cdd"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_h20_docker_copy.py",
+    "target": "projects/video-games/tests/test_h20_docker_copy.py",
+    "size": 10243,
+    "sha256": "35a2eaaefd4de951a4173ad708ba44d87b8d2cc214daa40abe3e0e6fed6c24b1"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_h20_launch.py",
+    "target": "projects/video-games/tests/test_h20_launch.py",
+    "size": 9614,
+    "sha256": "aa3177f957d2621143344290ab2a185b02ca296343e6c337bee4bcb6356a3e69"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_industrial_experiment.py",
+    "target": "projects/video-games/tests/test_industrial_experiment.py",
+    "size": 4860,
+    "sha256": "3f0a23bb5df55e1406ab922d8b094e1a07db7eb7ccd5230754a487f2e6f65178"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_industrial_reports.py",
+    "target": "projects/video-games/tests/test_industrial_reports.py",
+    "size": 15419,
+    "sha256": "14243126d75eb555b04de1716bc7b70732040fd470e46603766b3240743c54f3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_minimax_provider.py",
+    "target": "projects/video-games/tests/test_minimax_provider.py",
+    "size": 17705,
+    "sha256": "5551d97524e07ebbf7b29055ef680bac5ddfdcfef36f12e1ad7324184d641855"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_prepare_original_industrial.py",
+    "target": "projects/video-games/tests/test_prepare_original_industrial.py",
+    "size": 5722,
+    "sha256": "d786e1fd4b3aa1acbe57145fbbc1078e63c611856d7807bb87b5f568861e3a6b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_prepare_video_games_posttraining.py",
+    "target": "projects/video-games/tests/test_prepare_video_games_posttraining.py",
+    "size": 6581,
+    "sha256": "132ea64d065be13536e775d8832a8c80b1df312b243e6a1ed64d62ddeccbf445"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_rl_distributed.py",
+    "target": "projects/video-games/tests/test_rl_distributed.py",
+    "size": 11484,
+    "sha256": "09716bbbc9713734b1c6e5f32c42b13df2c10e05666a4cd656d7786a3de9bc37"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_baselines.py",
+    "target": "projects/video-games/tests/test_sft_baselines.py",
+    "size": 4983,
+    "sha256": "190035c6e7336d6369b18c315614f06ba3d6655d236d789625175cf14b450ebd"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_behavior_shift.py",
+    "target": "projects/video-games/tests/test_sft_behavior_shift.py",
+    "size": 12295,
+    "sha256": "39149e191f2b83a01f8d854aeac9f5918e8d6f5c16c27e51536950957a5cc6f6"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_content_baseline.py",
+    "target": "projects/video-games/tests/test_sft_content_baseline.py",
+    "size": 7368,
+    "sha256": "a85882debb7d12e70fe2fb2791f5a8524e1eae465b1993dda4e000f3b6fb8f9e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_distributed.py",
+    "target": "projects/video-games/tests/test_sft_distributed.py",
+    "size": 15475,
+    "sha256": "e23c206d526a7965021e73ac09e75382e086179bb9d210cb04d9290a67f99be8"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_evaluation.py",
+    "target": "projects/video-games/tests/test_sft_evaluation.py",
+    "size": 21795,
+    "sha256": "4b68d799f1cb2e20e36a829523560fcc27f832122ac6351201a0cfb0b636013b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_generative_selection.py",
+    "target": "projects/video-games/tests/test_sft_generative_selection.py",
+    "size": 14190,
+    "sha256": "113ff65498180efc253eaaced276a10565a9b9469c7349ad5ef79c67a3fc7fe2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_monitor.py",
+    "target": "projects/video-games/tests/test_sft_monitor.py",
+    "size": 17646,
+    "sha256": "7aed921231b9e6820e122ced3b31b06ae8faf3a7b8537c24599ef2af2787009a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_reports.py",
+    "target": "projects/video-games/tests/test_sft_reports.py",
+    "size": 28803,
+    "sha256": "cb219daf359a6a53efddba50d78d29079e9dbd6c3d7cf0752f7d0b3c1abdeab8"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_supervisor.py",
+    "target": "projects/video-games/tests/test_sft_supervisor.py",
+    "size": 9156,
+    "sha256": "ca2917fb8d30c3359dcf405586b6b06a3a1b3e8d7dd6a5f64840876f3a7dea5a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/tests/test_sft_wsd_schedule.py",
+    "target": "projects/video-games/tests/test_sft_wsd_schedule.py",
+    "size": 7960,
+    "sha256": "23a60114948eac7c795bd0d64e714a80724fd3526d0bdea31d514e67b4b26a03"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/ts_rec_data.py",
+    "target": "projects/video-games/ts_rec_data.py",
+    "size": 23731,
+    "sha256": "4d61e78079968a852188350fa14d7fc6362418c033f8a55c2c4ec00146e240e6"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/ts_rec_data/Industrial_and_Scientific.description_keywords.json",
+    "target": "projects/video-games/ts_rec_data/Industrial_and_Scientific.description_keywords.json",
+    "size": 634262,
+    "sha256": "0085864e4b66834601a7fd674393c505cb01243ce046c1f94a1323ae9781ca27"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/ts_rec_sft.py",
+    "target": "projects/video-games/ts_rec_sft.py",
+    "size": 12328,
+    "sha256": "2ae7e94eabe318d087d967feeb991f2846552a43a084771db50ceddfcdb4e957"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/ts_rec_sft.sh",
+    "target": "projects/video-games/ts_rec_sft.sh",
+    "size": 1349,
+    "sha256": "015a65f9ecfa31f9b50102447cce7e59522fd34ae3ddf15a33c364c596b012df"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/amazon2018videogame/utility.py",
+    "target": "projects/video-games/utility.py",
+    "size": 6206,
+    "sha256": "380115dd1e7abbb07b2a0b4e94f24e55786fc873907de3ecd02034f5b2faa1da"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/LICENSE",
+    "target": "projects/reference-reproduction/LICENSE",
+    "size": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/LogitProcessor.py",
+    "target": "projects/reference-reproduction/LogitProcessor.py",
+    "size": 2985,
+    "sha256": "13ab33ff0ed3f769370478a86624499ccc0f8813de9d63e3dc4e2fa25ec59eb8"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/README.md",
+    "target": "projects/reference-reproduction/README.md",
+    "size": 12469,
+    "sha256": "97ce7d1d8a664c590772b964f45fd0b6f4b60f3baec43f9cfff7dc70489eca02"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/SASRecModules_ori.py",
+    "target": "projects/reference-reproduction/SASRecModules_ori.py",
+    "size": 3831,
+    "sha256": "76ef521d9ad16dcf87f85f89604749103db6f087754a3210505bc22180a11bb3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/alphalab.jpg",
+    "target": "projects/reference-reproduction/assets/alphalab.jpg",
+    "size": 15153,
+    "sha256": "a3835be0372844af99b352d9d1512584b8c11889c75a87dcd5db4ef10b181a44"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/lds.png",
+    "target": "projects/reference-reproduction/assets/lds.png",
+    "size": 33782,
+    "sha256": "5f3d461dba5cfc4fbbb111fff1b498b292205e915108face86ba1877f1ba08f3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/llmmatter_big.png",
+    "target": "projects/reference-reproduction/assets/llmmatter_big.png",
+    "size": 53923,
+    "sha256": "cb4e43f7b50cb865bef935775cb2e090737d1355ce50d45ba599bfaa432da475"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/logo.png",
+    "target": "projects/reference-reproduction/assets/logo.png",
+    "size": 43797,
+    "sha256": "f3dfeaf7e08a682d76edf02bd64bd80836dba57cf0aa0b4bf0df7c57dbc287f5"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/minionerec_framework.png",
+    "target": "projects/reference-reproduction/assets/minionerec_framework.png",
+    "size": 2328960,
+    "sha256": "b91a2695e3233eeaeaa038044fe11d6b8676df8fef7fd74d0250b70e3fb3acf6"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/minionerec_main_result.png",
+    "target": "projects/reference-reproduction/assets/minionerec_main_result.png",
+    "size": 1190389,
+    "sha256": "4b5c7fd73ea93eea55429c0e15cbc014376f0c3f629dd0772a0625de486fece7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/next.jpg",
+    "target": "projects/reference-reproduction/assets/next.jpg",
+    "size": 8593,
+    "sha256": "48a9324eeb1121335862ab4dc7805593cb2689486316000e34c3ffc5302263ea"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/assets/scaling_big.png",
+    "target": "projects/reference-reproduction/assets/scaling_big.png",
+    "size": 53682,
+    "sha256": "f381e8d9f1bc3d8cb7f2076d63215d95f925944ace18157923f2ebce0e60c3cd"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/calc.py",
+    "target": "projects/reference-reproduction/calc.py",
+    "size": 2702,
+    "sha256": "3e5dc6bf10c2e23f50180f520993462c7756b717dd60d646d8b540274a3fce82"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/config/zero2_opt.yaml",
+    "target": "projects/reference-reproduction/config/zero2_opt.yaml",
+    "size": 483,
+    "sha256": "008b81655cebfd984ea3255e9b55cca9218cfce91789d6d45fb3f4f620d499a3"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/convert_dataset.py",
+    "target": "projects/reference-reproduction/convert_dataset.py",
+    "size": 11160,
+    "sha256": "6445650f6280461e9973b0e0723d89f3854323df816369997694a08fb0e02618"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/convert_dataset.sh",
+    "target": "projects/reference-reproduction/convert_dataset.sh",
+    "size": 444,
+    "sha256": "97e1c055987301109b345a353a77aeff551fa41e0f8f9d8711bcb93b32bab194"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/convert_dataset_gpr.py",
+    "target": "projects/reference-reproduction/convert_dataset_gpr.py",
+    "size": 11456,
+    "sha256": "a7a6d70db79b25901a2fc494f096662794044a1047e8dbf92c6428a5fc644b9d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data.py",
+    "target": "projects/reference-reproduction/data.py",
+    "size": 75157,
+    "sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/amazon18_data_process.py",
+    "target": "projects/reference-reproduction/data/amazon18_data_process.py",
+    "size": 22605,
+    "sha256": "b0125b4985ce7a2ea65a3125250277551e52c8c6a40396ae0ca443cde5bbd960"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/amazon18_data_process.sh",
+    "target": "projects/reference-reproduction/data/amazon18_data_process.sh",
+    "size": 221,
+    "sha256": "147f97c56c2ab4c16e9d2e4cc0ff9974e66858f64d596bfd6eed017fda9335b2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/amazon18_data_process_gpr.py",
+    "target": "projects/reference-reproduction/data/amazon18_data_process_gpr.py",
+    "size": 25586,
+    "sha256": "6229fc7a9758def3f7a2c5413ef03de4dfe096ed008a9c8efd77c2bc9aab6d8e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/amazon23_data_process.py",
+    "target": "projects/reference-reproduction/data/amazon23_data_process.py",
+    "size": 19371,
+    "sha256": "ed4084d3946de70d7c034e87f7d4241fccdfcbd92a1760984bea0ead337c6e46"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/amazon23_data_process.sh",
+    "target": "projects/reference-reproduction/data/amazon23_data_process.sh",
+    "size": 283,
+    "sha256": "ebdf348970ffcc5699c1a263456e9cb31df4f255f378833f9abb40fa29950dcc"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/process.py",
+    "target": "projects/reference-reproduction/data/process.py",
+    "size": 8441,
+    "sha256": "1af0ac781d25dadb44405fb706a208b7020be6f1478b50e2e29868efd8105067"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data_test.py",
+    "target": "projects/reference-reproduction/data_test.py",
+    "size": 10256,
+    "sha256": "2b5dad8bc812b2027577a979b5eafeedc4866072846c82d8afbdd87a3e212c09"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/evaluate.py",
+    "target": "projects/reference-reproduction/evaluate.py",
+    "size": 8839,
+    "sha256": "ffb7736811dd60a7e2405f2c2baf7d3e30b06cc9d12bef574229649d53927757"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/evaluate.sh",
+    "target": "projects/reference-reproduction/evaluate.sh",
+    "size": 3362,
+    "sha256": "87ea1f10d082fcaad060ca83a9e346c41421a8ecc8210ddac6d5db4bb30e1eb7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/merge.py",
+    "target": "projects/reference-reproduction/merge.py",
+    "size": 470,
+    "sha256": "065463581feb7b894249dfb9ac11c8af8370fa73c8725be7d48cdfd44ae31b48"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/minionerec_trainer.py",
+    "target": "projects/reference-reproduction/minionerec_trainer.py",
+    "size": 61749,
+    "sha256": "f25423905c2ee5135372db598875b65203506cffa5a566431288d6da2522f0f5"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/requirements.txt",
+    "target": "projects/reference-reproduction/requirements.txt",
+    "size": 2782,
+    "sha256": "7390bc1ca7a1a6d7f01484e2adf200a5cd3fc328e63c2c4607a29b4e0cbea75f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_rl.log",
+    "target": "projects/reference-reproduction/results/eval_rl.log",
+    "size": 71609,
+    "sha256": "97223e6cbd128c32ecdb323a24fab4e3450005b98fd8d9c219523e5eed8b2c06"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_rl_result.json",
+    "target": "projects/reference-reproduction/results/eval_rl_result.json",
+    "size": 9552532,
+    "sha256": "20a3117011ba9b37f66bba03455b46ef2113c6315e1b8213cdc776886416d33c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_sft.log",
+    "target": "projects/reference-reproduction/results/eval_sft.log",
+    "size": 71771,
+    "sha256": "18ce04d911a8ff8817622181473c6e00da3eb036d3179c06733125385399afb7"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/eval_sft_result.json",
+    "target": "projects/reference-reproduction/results/eval_sft_result.json",
+    "size": 9558110,
+    "sha256": "ea08c534aafd6a9173c61b9e170c0d08b6f3b71d52d6693e371ec46f199d8da5"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/plot_data.json",
+    "target": "projects/reference-reproduction/results/plot_data.json",
+    "size": 162500,
+    "sha256": "501c05d783c08fd6681574879370bdeecbc0ed1bf9ba14d266b33fce8ee6bde2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/rl_train.log",
+    "target": "projects/reference-reproduction/results/rl_train.log",
+    "size": 2157394,
+    "sha256": "d4f622a4794db432f0816050b45a0a5ae6add194714a1d0bd7802fdd2c470b19"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/sft_train.log",
+    "target": "projects/reference-reproduction/results/sft_train.log",
+    "size": 1236195,
+    "sha256": "1ebd634314bf0ebd9a39b8ec89a97e11c755136bcf639b6b4e7ecb4cb2d4efe0"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/results/training_results.png",
+    "target": "projects/reference-reproduction/results/training_results.png",
+    "size": 233289,
+    "sha256": "f5acd9e6f874a87455aa97a818ae4d1c0689a2b99b4c86a38d1259813efd9eb4"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rl.py",
+    "target": "projects/reference-reproduction/rl.py",
+    "size": 12442,
+    "sha256": "6536922cf36da030ee870e565b635a6b7dc208ed3c957fa500fdc69a67b9971b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rl.sh",
+    "target": "projects/reference-reproduction/rl.sh",
+    "size": 1967,
+    "sha256": "a4b4d2b0432fd40fe7f8af595edab5ddd5594409c73e1f87b5ba1cde3eee8ab1"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rl_gpr.py",
+    "target": "projects/reference-reproduction/rl_gpr.py",
+    "size": 14151,
+    "sha256": "2dad52fd60885e779ea726c3478373a7f3ea24544b5da9615eb68d29daff456b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/datasets.py",
+    "target": "projects/reference-reproduction/rq/datasets.py",
+    "size": 1352,
+    "sha256": "a808f07581766e8f4feabe24cc3c07d7f31ed0edfeaa52dba825e442edd60101"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/generate_indices.py",
+    "target": "projects/reference-reproduction/rq/generate_indices.py",
+    "size": 4456,
+    "sha256": "fe0a4cde20a32ab8955f4d07c4f657c81c2cb7652e1ca3e467d63d82e2289b9a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/generate_indices_plus.py",
+    "target": "projects/reference-reproduction/rq/generate_indices_plus.py",
+    "size": 5924,
+    "sha256": "909ba1bf69680033faf87a7d9a61b4d50c2139bb8765b443e496b66a6d19117a"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/generate_indices_plus.sh",
+    "target": "projects/reference-reproduction/rq/generate_indices_plus.sh",
+    "size": 284,
+    "sha256": "b84883c84549257d04ca9c01050030b0f9984bc23a5549fcff3c2ef56bdd8679"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/models/generate_indices.py",
+    "target": "projects/reference-reproduction/rq/models/generate_indices.py",
+    "size": 4173,
+    "sha256": "47371c62492d68781f4ba80c3c5717cd4e68ce41d4fb9527ef098fa108b1c41b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/models/layers.py",
+    "target": "projects/reference-reproduction/rq/models/layers.py",
+    "size": 3476,
+    "sha256": "fc2301382fe570668adc90566e8512194107c7390039384b4dec9c65149d4976"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/models/rq.py",
+    "target": "projects/reference-reproduction/rq/models/rq.py",
+    "size": 2018,
+    "sha256": "ca4bd82b22cca7f186d64710b5f5fc938b7d8b7c309da86ca8b148d318814f65"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/models/rqvae.py",
+    "target": "projects/reference-reproduction/rq/models/rqvae.py",
+    "size": 2902,
+    "sha256": "6fd4d2d19b58e93ae10d1f6cce1b3c3eb267817fc1e78c1aa999341cae60575d"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/models/vq.py",
+    "target": "projects/reference-reproduction/rq/models/vq.py",
+    "size": 3096,
+    "sha256": "aa6542d4d77763fe9e5fd8b939c9f1c342945bf7a9e045b107780b0df0cb17ed"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqkmeans_constrained.py",
+    "target": "projects/reference-reproduction/rq/rqkmeans_constrained.py",
+    "size": 9818,
+    "sha256": "41b27c7c79d3a65947653d7dab526e1815e0842437c208c82afb87964d1c4d8b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqkmeans_constrained.sh",
+    "target": "projects/reference-reproduction/rq/rqkmeans_constrained.sh",
+    "size": 742,
+    "sha256": "a831d503bc1f66f4e59feba3e285e314576864ac947f3db918ae7ea1263e9c1c"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqkmeans_faiss.py",
+    "target": "projects/reference-reproduction/rq/rqkmeans_faiss.py",
+    "size": 9960,
+    "sha256": "3395e01d93d0c57033e6e9e465687550a4f41c3bf2c19eafb18af87a9181548b"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqkmeans_plus.py",
+    "target": "projects/reference-reproduction/rq/rqkmeans_plus.py",
+    "size": 7066,
+    "sha256": "c37fe050a6747671eeff83a13c30befc0667d6be954dcdc325c5543b1a3558e2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqkmeans_plus.sh",
+    "target": "projects/reference-reproduction/rq/rqkmeans_plus.sh",
+    "size": 354,
+    "sha256": "5298142e3e3615112480a3971983c56cfba81706a9db996e9c1e13386ab96566"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqvae.py",
+    "target": "projects/reference-reproduction/rq/rqvae.py",
+    "size": 4221,
+    "sha256": "0bf2196c5c8dcfa4f7b79d66c7e917643056c6568dbeb5020cf9c5c5af3d19f2"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/rqvae.sh",
+    "target": "projects/reference-reproduction/rq/rqvae.sh",
+    "size": 221,
+    "sha256": "6ab4c2081e5ab6f6146776ea22907ad202835db26fe032ddc44ff3f3887a1b83"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/text2emb/amazon_text2emb.py",
+    "target": "projects/reference-reproduction/rq/text2emb/amazon_text2emb.py",
+    "size": 6438,
+    "sha256": "266c66f2acf6bfc177712c21b523d015ef870c704e4b3711894e02821dd6b4e5"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/text2emb/amazon_text2emb.sh",
+    "target": "projects/reference-reproduction/rq/text2emb/amazon_text2emb.sh",
+    "size": 199,
+    "sha256": "278c4b74e18681172d80d8d0f01b4ba555fb8734765746d27fe474ed4d484129"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/text2emb/amazon_text2emb_gpr.py",
+    "target": "projects/reference-reproduction/rq/text2emb/amazon_text2emb_gpr.py",
+    "size": 6812,
+    "sha256": "c7e23afe43135d939d6ea7d4c02722a2a4111acf3ad880a5309718493a8f7f27"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/text2emb/utils.py",
+    "target": "projects/reference-reproduction/rq/text2emb/utils.py",
+    "size": 15264,
+    "sha256": "9ab4e605e8b93b7f7040ddd269d957c60784dba6764142dde134a64ddf9bf66e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/trainer.py",
+    "target": "projects/reference-reproduction/rq/trainer.py",
+    "size": 9403,
+    "sha256": "2019ec86e81c54321e2e1f4866127ea82a06cc0117cff3daa89f77f84f2b95ed"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/rq/utils.py",
+    "target": "projects/reference-reproduction/rq/utils.py",
+    "size": 811,
+    "sha256": "25636ae709f1c07a57f560a883bf85067afbf20697acf317e0d16b3293480f4f"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/sasrec.py",
+    "target": "projects/reference-reproduction/sasrec.py",
+    "size": 27571,
+    "sha256": "05f0c85d1854f0c1ca41fb77b256db28a00f6b6c0127c3ab69236347ffe7cb69"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/sft.py",
+    "target": "projects/reference-reproduction/sft.py",
+    "size": 11256,
+    "sha256": "205979dcf7e18ed0f93b6cda28548c58068d8bebeb9209f39f1b2ca5b976fc43"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/sft.sh",
+    "target": "projects/reference-reproduction/sft.sh",
+    "size": 1145,
+    "sha256": "5ed8a6a4dc8447c8e7599a50d91c2e6b1209027d682996003afda2590b27cfda"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/sft_gpr.py",
+    "target": "projects/reference-reproduction/sft_gpr.py",
+    "size": 14410,
+    "sha256": "f17b588e2e5a65972f7d135005f7f76f8797299305c6933f364d55c929ceea8e"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/split.py",
+    "target": "projects/reference-reproduction/split.py",
+    "size": 639,
+    "sha256": "6d9538fa2722f733ee9ea4feff1367a2e6d373b4b323004410b0e36ec9d1bb09"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/tests/__init__.py",
+    "target": "projects/reference-reproduction/tests/__init__.py",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/tests/test_minimax_provider.py",
+    "target": "projects/reference-reproduction/tests/test_minimax_provider.py",
+    "size": 17705,
+    "sha256": "5551d97524e07ebbf7b29055ef680bac5ddfdcfef36f12e1ad7324184d641855"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/ts_rec_data.py",
+    "target": "projects/reference-reproduction/ts_rec_data.py",
+    "size": 23745,
+    "sha256": "a9892d35ab7a853ed86ad220128c627231adbcca24b73c1f967a3259e70bcc22"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/ts_rec_data/Industrial_and_Scientific.description_keywords.json",
+    "target": "projects/reference-reproduction/ts_rec_data/Industrial_and_Scientific.description_keywords.json",
+    "size": 634262,
+    "sha256": "0085864e4b66834601a7fd674393c505cb01243ce046c1f94a1323ae9781ca27"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/ts_rec_sft.py",
+    "target": "projects/reference-reproduction/ts_rec_sft.py",
+    "size": 12268,
+    "sha256": "8148427238dcbc2a61cd613e198f176f2e28804dc34a486a9d1565ed91895cf0"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/ts_rec_sft.sh",
+    "target": "projects/reference-reproduction/ts_rec_sft.sh",
+    "size": 1349,
+    "sha256": "015a65f9ecfa31f9b50102447cce7e59522fd34ae3ddf15a33c364c596b012df"
+  },
+  {
+    "source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/utility.py",
+    "target": "projects/reference-reproduction/utility.py",
+    "size": 6206,
+    "sha256": "380115dd1e7abbb07b2a0b4e94f24e55786fc873907de3ecd02034f5b2faa1da"
+  }
+]

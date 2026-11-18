@@ -1,0 +1,314 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-17T08:50:04.841314+00:00",
+  "scope": "Complete original TEST split. The earlier report named validation used this test split. No strict-valid free-generation predictions are available.",
+  "definition": "Prefix coverage@K: at least one final completed candidate in TopK shares the first d consecutive SID tokens with the true target. Not internal beam survival. Cold: absent from train history union targets.",
+  "source_paths": {
+    "train": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "test": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "predictions": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/predictions.jsonl"
+  },
+  "source_sha256": {
+    "train": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "test": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+    "sid_index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+    "predictions": "d7b5849b691d4717f576235ddbe013cf71c56bf33a406035b659a964810724bd"
+  },
+  "groups": {
+    "warm": {
+      "rows": 31322,
+      "prefix_coverage": {
+        "1": {
+          "1": 3260,
+          "2": 909,
+          "3": 649,
+          "4": 645
+        },
+        "10": {
+          "1": 9630,
+          "2": 2929,
+          "3": 2072,
+          "4": 2066
+        },
+        "50": {
+          "1": 17480,
+          "2": 6625,
+          "3": 4777,
+          "4": 4748
+        }
+      },
+      "training_target_prefix_seen": {
+        "1": 31322,
+        "2": 31304,
+        "3": 31292,
+        "4": 31292
+      },
+      "prefix_coverage_rates": {
+        "1": {
+          "1": 0.10408019922099483,
+          "2": 0.029021135304258986,
+          "3": 0.020720260519762466,
+          "4": 0.020592554753847137
+        },
+        "10": {
+          "1": 0.30745163144115956,
+          "2": 0.09351254709150118,
+          "3": 0.0661515867441415,
+          "4": 0.0659600280952685
+        },
+        "50": {
+          "1": 0.5580741970499968,
+          "2": 0.2115126747972671,
+          "3": 0.15251261094438415,
+          "4": 0.15158674414149798
+        }
+      },
+      "training_target_prefix_seen_rates": {
+        "1": 1.0,
+        "2": 0.999425324053381,
+        "3": 0.999042206755635,
+        "4": 0.999042206755635
+      }
+    },
+    "cold": {
+      "rows": 10602,
+      "prefix_coverage": {
+        "1": {
+          "1": 880,
+          "2": 120,
+          "3": 0,
+          "4": 0
+        },
+        "10": {
+          "1": 3131,
+          "2": 399,
+          "3": 0,
+          "4": 0
+        },
+        "50": {
+          "1": 6062,
+          "2": 979,
+          "3": 1,
+          "4": 1
+        }
+      },
+      "training_target_prefix_seen": {
+        "1": 10602,
+        "2": 6112,
+        "3": 17,
+        "4": 0
+      },
+      "prefix_coverage_rates": {
+        "1": {
+          "1": 0.0830032069420864,
+          "2": 0.011318619128466326,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "10": {
+          "1": 0.2953216374269006,
+          "2": 0.03763440860215054,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "50": {
+          "1": 0.5717789096396906,
+          "2": 0.09234106772307112,
+          "3": 9.432182607055272e-05,
+          "4": 9.432182607055272e-05
+        }
+      },
+      "training_target_prefix_seen_rates": {
+        "1": 1.0,
+        "2": 0.5764950009432183,
+        "3": 0.0016034710431993963,
+        "4": 0.0
+      }
+    },
+    "cold_ab_seen": {
+      "rows": 6112,
+      "prefix_coverage": {
+        "1": {
+          "1": 573,
+          "2": 120,
+          "3": 0,
+          "4": 0
+        },
+        "10": {
+          "1": 1886,
+          "2": 399,
+          "3": 0,
+          "4": 0
+        },
+        "50": {
+          "1": 3518,
+          "2": 979,
+          "3": 1,
+          "4": 1
+        }
+      },
+      "training_target_prefix_seen": {
+        "1": 6112,
+        "2": 6112,
+        "3": 17,
+        "4": 0
+      },
+      "prefix_coverage_rates": {
+        "1": {
+          "1": 0.09375,
+          "2": 0.01963350785340314,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "10": {
+          "1": 0.30857329842931935,
+          "2": 0.06528141361256544,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "50": {
+          "1": 0.5755890052356021,
+          "2": 0.16017670157068062,
+          "3": 0.0001636125654450262,
+          "4": 0.0001636125654450262
+        }
+      },
+      "training_target_prefix_seen_rates": {
+        "1": 1.0,
+        "2": 1.0,
+        "3": 0.002781413612565445,
+        "4": 0.0
+      }
+    },
+    "cold_ab_unseen": {
+      "rows": 4490,
+      "prefix_coverage": {
+        "1": {
+          "1": 307,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "10": {
+          "1": 1245,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "50": {
+          "1": 2544,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        }
+      },
+      "training_target_prefix_seen": {
+        "1": 4490,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "prefix_coverage_rates": {
+        "1": {
+          "1": 0.06837416481069042,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "10": {
+          "1": 0.27728285077951004,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0
+        },
+        "50": {
+          "1": 0.5665924276169265,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0
+        }
+      },
+      "training_target_prefix_seen_rates": {
+        "1": 1.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      }
+    }
+  },
+  "cold_top10_exclusive_buckets": {
+    "no_a_match": 7471,
+    "a_but_no_ab": 2732,
+    "ab_but_no_abc": 399,
+    "abc_but_no_abcd": 0,
+    "full_match": 0
+  },
+  "examples": {
+    "62": {
+      "target_item": "6466",
+      "target_title": "Pok&eacute;mon Sun - Nintendo 3DS",
+      "target_sid": "<a_171><b_186><c_115><d_0>",
+      "top1_item": "1023",
+      "top1_title": "Pokemon White Version 2 - Nintendo DS",
+      "top1_sid": "<a_171><b_186><c_60><d_0>",
+      "first_matching_prefix_ranks": {
+        "1": 1,
+        "2": 1,
+        "3": null,
+        "4": null
+      },
+      "top10_sids": [
+        "<a_171><b_186><c_60><d_0>",
+        "<a_171><b_186><c_137><d_0>",
+        "<a_171><b_186><c_0><d_0>",
+        "<a_207><b_181><c_13><d_0>",
+        "<a_234><b_108><c_174><d_0>",
+        "<a_171><b_26><c_177><d_0>",
+        "<a_171><b_186><c_168><d_0>",
+        "<a_175><b_194><c_5><d_0>",
+        "<a_92><b_40><c_45><d_0>",
+        "<a_171><b_186><c_64><d_0>"
+      ]
+    },
+    "15769": {
+      "target_item": "16556",
+      "target_title": "Skylanders SuperChargers: Vehicle Sun Runner Character Pack",
+      "target_sid": "<a_207><b_165><c_7><d_0>",
+      "top1_item": "8783",
+      "top1_title": "Skylanders SuperChargers: Racing Sea Pack",
+      "top1_sid": "<a_207><b_165><c_1><d_0>",
+      "first_matching_prefix_ranks": {
+        "1": 1,
+        "2": 1,
+        "3": 47,
+        "4": 47
+      },
+      "top10_sids": [
+        "<a_207><b_165><c_1><d_0>",
+        "<a_207><b_165><c_27><d_0>",
+        "<a_207><b_165><c_238><d_0>",
+        "<a_207><b_165><c_144><d_0>",
+        "<a_207><b_165><c_251><d_0>",
+        "<a_207><b_165><c_170><d_0>",
+        "<a_207><b_165><c_47><d_0>",
+        "<a_207><b_165><c_28><d_0>",
+        "<a_207><b_165><c_161><d_0>",
+        "<a_207><b_165><c_153><d_0>"
+      ]
+    }
+  },
+  "checks": {
+    "row_identity_and_target_sid_verified": true,
+    "all_predictions_are_catalog_sids": true,
+    "all_rows_have_50_unique_predictions": true,
+    "no_training_or_inference_performed": true
+  },
+  "cold_top10_ab_matching_candidates": {
+    "matching_rows": 399,
+    "matching_slots": 822,
+    "warm_slots": 821,
+    "cold_slots": 1,
+    "unique_cold_targets_with_at_least_one_matching_row": 71
+  }
+}

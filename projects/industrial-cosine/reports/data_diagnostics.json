@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "dataset": "Industrial_and_Scientific",
+  "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+  "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+  "generated_at_utc": "2026-11-16T08:00:36.787222+00:00",
+  "source_sha256": {
+    "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+    "test_file": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+    "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+    "preparation_manifest": "406ee387be4daa6e93a71abcfaa6116b0ac3a4dd32e25ef377ede26a98a6a8ca",
+    "video_games_behavior_analysis": "20452e40274f58aba9963ec43daf8dc92dd6342a9fc1a27a2e5f244132090e6c"
+  },
+  "source_paths": {
+    "train_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+    "test_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/test.csv",
+    "sid_index_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+    "preparation_manifest": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/preparation_manifest.json",
+    "video_games_behavior_analysis": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/behavior_shift_analysis.json"
+  },
+  "counts": {
+    "catalog_items": 3686,
+    "unique_sids": 3670,
+    "train_rows": 36259,
+    "test_rows": 4533,
+    "train_unique_users": 7034,
+    "test_unique_users": 1987,
+    "train_target_unique_items": 3636,
+    "train_behavior_unique_items": 3647,
+    "test_target_unique_items": 1745
+  },
+  "unseen_test_users": {
+    "unique_users": 456,
+    "share_of_test_unique_users": 0.22949169602415703,
+    "rows": 1815,
+    "share_of_test_rows": 0.400397088021178,
+    "definition": "User ID absent from every original training interaction row, including its history user."
+  },
+  "history_length": {
+    "train_counts": {
+      "1": 7034,
+      "2": 6751,
+      "3": 6325,
+      "4": 5643,
+      "5": 3226,
+      "6": 1963,
+      "7": 1332,
+      "8": 903,
+      "9": 663,
+      "10": 2419
+    },
+    "test_counts": {
+      "1": 267,
+      "2": 412,
+      "3": 606,
+      "4": 1104,
+      "5": 672,
+      "6": 406,
+      "7": 265,
+      "8": 194,
+      "9": 130,
+      "10": 477
+    },
+    "test_min": 1,
+    "test_max": 10,
+    "test_median": 4,
+    "test_mean": 4.956540922126627
+  },
+  "exact_train_test_overlap": {
+    "history_target": {
+      "test_rows": 68,
+      "share_of_test_rows": 0.01500110302228105,
+      "distinct_overlapping_keys": 37,
+      "distinct_test_keys": 4485,
+      "definition": "Exact ordered history item-ID tuple plus target item ID; user ID excluded."
+    },
+    "user_history_target": {
+      "test_rows": 0,
+      "share_of_test_rows": 0.0,
+      "distinct_overlapping_keys": 0,
+      "definition": "Exact user ID, ordered history item-ID tuple and target item ID."
+    }
+  },
+  "behavior_cold": {
+    "test_rows": 147,
+    "share_of_test_rows": 0.03242885506287227,
+    "unique_target_items": 37,
+    "share_of_test_target_unique_items": 0.021203438395415473,
+    "unique_test_users": 116,
+    "top_target_concentration": {
+      "1": {
+        "rows": 11,
+        "share_of_cold_rows": 0.07482993197278912
+      },
+      "3": {
+        "rows": 27,
+        "share_of_cold_rows": 0.1836734693877551
+      },
+      "5": {
+        "rows": 40,
+        "share_of_cold_rows": 0.272108843537415
+      },
+      "10": {
+        "rows": 67,
+        "share_of_cold_rows": 0.4557823129251701
+      }
+    },
+    "frequency_hhi": 0.03567957795363043,
+    "effective_target_count_inverse_hhi": 28.027237354085607,
+    "per_target": [
+      {
+        "item_id": "2210",
+        "sid": "<a_193><b_215><c_181>",
+        "test_rows": 11,
+        "share_of_cold_rows": 0.07482993197278912
+      },
+      {
+        "item_id": "2044",
+        "sid": "<a_244><b_52><c_0>",
+        "test_rows": 9,
+        "share_of_cold_rows": 0.061224489795918366
+      },
+      {
+        "item_id": "3254",
+        "sid": "<a_229><b_105><c_188>",
+        "test_rows": 7,
+        "share_of_cold_rows": 0.047619047619047616
+      },
+      {
+        "item_id": "3598",
+        "sid": "<a_158><b_72><c_151>",
+        "test_rows": 7,
+        "share_of_cold_rows": 0.047619047619047616
+      },
+      {
+        "item_id": "1830",
+        "sid": "<a_44><b_218><c_40>",
+        "test_rows": 6,
+        "share_of_cold_rows": 0.04081632653061224
+      },
+      {
+        "item_id": "2200",
+        "sid": "<a_68><b_12><c_64>",
+        "test_rows": 6,
+        "share_of_cold_rows": 0.04081632653061224
+      },
+      {
+        "item_id": "2740",
+        "sid": "<a_158><b_206><c_184>",
+        "test_rows": 6,
+        "share_of_cold_rows": 0.04081632653061224
+      },
+      {
+        "item_id": "1374",
+        "sid": "<a_104><b_85><c_106>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2075",
+        "sid": "<a_14><b_175><c_144>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2076",
+        "sid": "<a_14><b_175><c_121>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2176",
+        "sid": "<a_107><b_68><c_141>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2196",
+        "sid": "<a_71><b_135><c_19>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2651",
+        "sid": "<a_68><b_25><c_84>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2741",
+        "sid": "<a_158><b_206><c_9>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "2797",
+        "sid": "<a_173><b_94><c_100>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "3331",
+        "sid": "<a_223><b_105><c_244>",
+        "test_rows": 5,
+        "share_of_cold_rows": 0.034013605442176874
+      },
+      {
+        "item_id": "3049",
+        "sid": "<a_223><b_96><c_193>",
+        "test_rows": 4,
+        "share_of_cold_rows": 0.027210884353741496
+      },
+      {
+        "item_id": "3123",
+        "sid": "<a_202><b_52><c_146>",
+        "test_rows": 4,
+        "share_of_cold_rows": 0.027210884353741496
+      },
+      {
+        "item_id": "3287",
+        "sid": "<a_170><b_226><c_111>",
+        "test_rows": 4,
+        "share_of_cold_rows": 0.027210884353741496
+      },
+      {
+        "item_id": "1392",
+        "sid": "<a_170><b_228><c_53>",
+        "test_rows": 3,
+        "share_of_cold_rows": 0.02040816326530612
+      },
+      {
+        "item_id": "1604",
+        "sid": "<a_236><b_252><c_214>",
+        "test_rows": 3,
+        "share_of_cold_rows": 0.02040816326530612
+      },
+      {
+        "item_id": "2496",
+        "sid": "<a_36><b_141><c_148>",
+        "test_rows": 3,
+        "share_of_cold_rows": 0.02040816326530612
+      },
+      {
+        "item_id": "3207",
+        "sid": "<a_108><b_178><c_177>",
+        "test_rows": 3,
+        "share_of_cold_rows": 0.02040816326530612
+      },
+      {
+        "item_id": "3674",
+        "sid": "<a_223><b_105><c_129>",
+        "test_rows": 3,
+        "share_of_cold_rows": 0.02040816326530612
+      },
+      {
+        "item_id": "3681",
+        "sid": "<a_223><b_80><c_216>",
+        "test_rows": 3,
+        "share_of_cold_rows": 0.02040816326530612
+      },
+      {
+        "item_id": "158",
+        "sid": "<a_224><b_222><c_73>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "455",
+        "sid": "<a_180><b_31><c_233>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "1388",
+        "sid": "<a_165><b_157><c_233>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "2144",
+        "sid": "<a_36><b_168><c_140>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "2149",
+        "sid": "<a_251><b_209><c_205>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "2312",
+        "sid": "<a_228><b_198><c_231>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "3295",
+        "sid": "<a_202><b_16><c_90>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "3668",
+        "sid": "<a_224><b_75><c_195>",
+        "test_rows": 2,
+        "share_of_cold_rows": 0.013605442176870748
+      },
+      {
+        "item_id": "307",
+        "sid": "<a_71><b_135><c_128>",
+        "test_rows": 1,
+        "share_of_cold_rows": 0.006802721088435374
+      },
+      {
+        "item_id": "2175",
+        "sid": "<a_170><b_208><c_80>",
+        "test_rows": 1,
+        "share_of_cold_rows": 0.006802721088435374
+      },
+      {
+        "item_id": "2195",
+        "sid": "<a_71><b_135><c_89>",
+        "test_rows": 1,
+        "share_of_cold_rows": 0.006802721088435374
+      },
+      {
+        "item_id": "2729",
+        "sid": "<a_79><b_208><c_153>",
+        "test_rows": 1,
+        "share_of_cold_rows": 0.006802721088435374
+      }
+    ],
+    "definition": "Target ID absent from the union of all training history item IDs and training target IDs; all catalog metadata remains known."
+  },
+  "interpretation": [
+    "Counts preserve every original row and duplicate interaction weight. Unique-user/item counts overlap across splits and must not be summed.",
+    "Exact (history,target) overlap describes repeated content, not necessarily temporal leakage or independent test observations.",
+    "Behavior-cold does not mean metadata-unseen; shared SID/text alignment exposes the full known catalog.",
+    "Cold target concentration shows dependence on a small set of target IDs; row-weighted metrics are not item-macro metrics.",
+    "Cross-dataset differences below are descriptive and do not identify a causal effect on HR or NDCG."
+  ],
+  "cross_dataset_context": {
+    "status": "available",
+    "cold_definition": "Same union of training histories and targets; ID-based rather than SID-based coldness.",
+    "industrial": {
+      "catalog_items": 3686,
+      "test_rows": 4533,
+      "test_target_unique_items": 1745,
+      "cold_test_rows": 147,
+      "cold_test_row_share": 0.03242885506287227,
+      "cold_target_unique_items": 37,
+      "cold_target_unique_share": 0.021203438395415473
+    },
+    "video_games": {
+      "catalog_items": 16572,
+      "test_rows": 41924,
+      "test_target_unique_items": 9174,
+      "cold_test_rows": 10602,
+      "cold_test_row_share": 0.2528861749833031,
+      "cold_target_unique_items": 666,
+      "cold_target_unique_share": 0.07259646827992151
+    },
+    "performance_implication": "No causal performance effect is inferred from catalog size or cold-share differences."
+  },
+  "auxiliary_exposure": {
+    "definition": "Exact Enddonkey data.py SidItemFeatDataset rules: iterate SID-index item order; concatenate the first three SID tokens when len>=3; assign sid2title[sid]=title and title2sid[title]=sid. Repeated dictionary keys retain the last value. No metadata rows are filtered by training behavior.",
+    "source_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+    "source_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+    "source_code_locator": "data.py:678–725, SidItemFeatDataset.__init__",
+    "source_sha256": {
+      "reference_data_py": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "reference_sid_index": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "reference_item_metadata": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+      "prepared_train": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+      "prepared_test": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46"
+    },
+    "source_paths": {
+      "reference_data_py": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data.py",
+      "reference_sid_index": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.index.json",
+      "reference_item_metadata": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.item.json",
+      "prepared_train": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+      "prepared_test": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/test.csv"
+    },
+    "cold_unique_item_ids": 37,
+    "cold_test_rows": 147,
+    "sid_to_title_presence_items": 37,
+    "sid_to_title_own_title_correct_items": 37,
+    "title_to_cold_sid_presence_items": 37,
+    "own_title_to_sid_correct_items": 37,
+    "title_to_cold_sid_presence_test_rows": 147,
+    "missing_reverse_item_ids": [],
+    "own_title_reverse_mismatch_item_ids": [],
+    "cold_items_with_duplicate_titles": [],
+    "all_catalog_item_ids": 3686,
+    "all_sid_to_title_tasks": 3670,
+    "all_title_to_sid_tasks": 3646,
+    "all_duplicate_title_key_excess_items": 40,
+    "interpretation": "All 37 behavior-cold test target IDs and all 147 corresponding rows have both directions of explicit metadata/SID auxiliary exposure. Behavior-cold is not catalog/text-unseen. Dictionary overwrite occurs globally but removes none of these 37 reverse mappings. Exposure alone does not establish successful user-history-conditioned recommendation."
+  },
+  "auxiliary_exposure_updated_at_utc": "2026-11-16T08:08:57.105543+00:00"
+}

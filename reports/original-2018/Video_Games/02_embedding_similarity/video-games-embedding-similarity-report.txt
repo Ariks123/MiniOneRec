@@ -1,0 +1,396 @@
+     相似商品的向量是否更近？
+     全量 16,572 件商品 / 2,560 维 |                        实际分析          |   2026-11-14 22:34 北京时间
+
+
+
+     同类 cos 更高的胜率                                            Top5 同标签份额                                             弱标签覆盖率
+
+
+     87.11%                                                  95.04%                                                 6.99%
+     四类等权宏平均                                                 候选仅四类子集；宏平均                                            1,159 / 16,572 件商品
+
+
+
+
+                  在这四类硬件上，同类商品通常更相近。
+                  这些结果衡量类别语义一致性，不代表用户推荐准确率。
+
+
+
+
+     01                 同类与异类商品对的距离分布
+
+                                                                                                           100
+                  1.0
+                                                                                       原始向量欧氏距离 L2（越低越近）
+
+
+
+
+                  0.9                                                                                       80
+余弦相似度 cos（越高越近）
+
+
+
+
+                  0.8                                                                                       60
+
+
+                  0.7
+                                                                                                            40
+
+
+                  0.6
+                                                                                                            20
+
+                  0.5
+                                同类                          异类                                                      同类                   异类
+
+     833 个锚点，各配 1 个同类和 1 个异类候选，共 1,666 个商品对。
+
+     箱线图合并抽样商品对（pooled）；与上方四类等权宏平均的口径不同。
+
+
+                                     合并抽样统计                                             同类商品对                                     异类商品对
+
+
+                                    余弦相似度均值                                                                0.8265                   0.7437
+
+
+                                  原始 L2 距离均值                                                               57.28                    70.20
+
+
+
+     箱体为第 25-75 百分位；须长为 1.5 IQR；菱形为均值，散点为离群值。
+
+     欧氏距离宏平均胜率为 86.45%；两种指标在此检验中表现接近。
+
+
+
+
+     MiniOneRec          |   Video Games   |   Qwen3-Embedding-4B                                                                             1 / 6
+分品类结果与品牌因素
+主对照按四类等权汇总；品牌分组是观察性分析
+
+
+
+02            四类硬件的配对对照
+
+                  类目              商品数            锚点数              同类 cos   异类 cos     cos 差值              cos 胜率          L2 胜率
+
+                  手柄               626             300            0.7941   0.7412      +0.0529            77.67%           73.33%
+
+                  耳机               273             273            0.8436   0.7424      +0.1012            91.58%           90.84%
+
+                  鼠标               146             146            0.8416   0.7593      +0.0822            89.73%           90.41%
+
+                  键盘               114             114            0.8517   0.7336      +0.1181            89.47%           91.23%
+
+            四类宏平均                   -               -             0.8328   0.7441      +0.0886            87.11%           86.45%
+
+
+
+胜率：同一锚点的同类 cos 高于异类，或同类 L2 低于异类；不是分类准确率。
+
+
+
+03            品牌与品类的四组观察性对照
+
+
+            1.0
+
+
+            0.9
+余弦相似度 cos
+
+
+
+
+            0.8
+
+
+            0.7
+
+
+            0.6
+
+
+
+                                同类                                 同类                 异类                            异类
+                               同品牌                                异品牌                同品牌                           异品牌
+
+
+                           观察分组                          抽样商品对              cos 均值           cos 中位数                原始 L2 均值
+
+                       同类同品牌                                2,000           0.8619               0.8705                  50.95
+
+                       同类异品牌                                2,000           0.8014               0.8042                  62.45
+
+                       异类同品牌                                2,000           0.7856               0.7951                  64.14
+
+                       异类异品牌                                2,000           0.7431               0.7492                  70.58
+
+
+
+共 8,000 对；排除空品牌与相同标题。未匹配全部混杂因素，不作因果解释。
+
+
+
+
+MiniOneRec             |   Video Games   |   Qwen3-Embedding-4B                                                                     2 / 6
+        二维结构与子集内近邻检索
+        二维投影帮助观察结构；指标在原始 2560 维空间计算
+
+
+
+        04           四类硬件的 PCA 投影
+
+
+                                                                                                                            手柄 (626)
+                                                                                                                            耳机 (273)
+                   0.2
+                                                                                                                            鼠标 (146)
+                                                                                                                            键盘 (114)
+
+                   0.1
+PC2（解释方差 9.78%）
+
+
+
+
+                   0.0
+
+
+                  -0.1
+
+
+                  -0.2
+
+
+                  -0.3
+
+
+                  -0.4
+                                                  -0.4                  -0.2                      0.0                 0.2
+                                                                       PC1（解释方差 13.10%）
+        投影仅保留 22.87% 方差；图上点距不等于 2560 维距离，不能用于判定单个近邻。
+
+
+
+        05           TopK 中同标签商品的份额
+                             余弦检索                   原始 L2 检索           随机期望
+
+
+
+                  100%       97.69%    97.69%
+                                                                       95.04%   94.85%                  94.64%   94.77%
+同标签份额（四类宏平均）
+
+
+
+
+                   80%
+
+
+                   60%
+
+
+                   40%
+                                                      24.94%                             24.94%                             24.94%
+                   20%
+
+
+                    0%
+                                           Top1                                 Top5                             Top10
+
+        检索的查询和候选都仅含 1,159 件四类商品；排除自身，按类等权宏平均。
+
+        类别标签不是人工相关性判断；这些份额不是全库召回率，也不是用户推荐效果。
+
+
+
+        MiniOneRec       |   Video Games    |     Qwen3-Embedding-4B                                                                   3 / 6
+全库近邻案例：手柄、耳机、鼠标
+预定义锚点            | 在 16,572 件商品中按 cos 精确检索，排除自身，完整展示 Top5
+
+
+
+手柄      |    商品 ID 3           |    Logitech
+Logitech Dual Action Game Pad USB
+#        商品 ID         近邻商品完整标题                                                                             cos   余弦距离     原始 L2
+
+1        9712          SQDeal USB Dual Shock Joystick Gamepad Gaming Controller [Double Vibration        0.9117   0.0883    43.31
+                       Feedback Motors] for PC Computer Laptop Window (Black)
+
+2        15917         SQDeal 2 Pack USB GamePad Joypad Double Dual Shock Gaming Controller Joystick     0.9047   0.0953    44.87
+                       for PC Computer Laptop Windows [Video Game]
+
+3        9989          Logitech Precision Gamepad                                                        0.8849   0.1151    49.11
+
+4        13690         Donop(R) USB Pc Computer Vibration Shock Wired Gamepad Game Controller Joystick   0.8825   0.1175    48.86
+                       Game Pad Includes Donop Black Wrist Band
+
+5        13484         SlickBlue Wireless Bluetooth Game Pad Controller For Sony Playstation 3 -         0.8818   0.1182    50.51
+                       Black-Orange
+
+
+
+
+耳机      |    商品 ID 217             |   Turtle Beach
+Turtle Beach Call of Duty: Ghosts Ear Force Shadow Limited Edition Gaming Headset -Microsoft Xbox 360
+#        商品 ID         近邻商品完整标题                                                                             cos   余弦距离     原始 L2
+
+1        12075         Turtle Beach Call of Duty: Ghosts Ear Force Spectre Limited Edition Gaming        0.9776   0.0224    20.33
+                       Headset -Microsoft Xbox 360
+
+2        3498          Turtle Beach Call of Duty: MW3 Ear Force Foxtrot Limited Edition Universal        0.9397   0.0603    32.97
+                       Amplified Stereo Gaming Headset
+
+3        8116          Turtle Beach Call of Duty Advanced Warfare Ear Force Sentinel Task Force Gaming   0.9372   0.0628    34.00
+                       Headset for Xbox One (Discontinued by Manufacturer)
+
+4        12069         Turtle Beach Call of Duty: MW3 Ear Force Bravo Limited Edition Programmable       0.9292   0.0708    36.33
+                       Wireless Universal Gaming Headset
+
+5        7591          Xbox 360 Call of Duty: Modern Warfare 3 Wireless Headset with Bluetooth           0.9255   0.0745    37.55
+
+
+
+
+鼠标      |    商品 ID 271             |   Logitech
+Logitech G602 Lag-Free Wireless Gaming Mouse - 11 Programmable Buttons, Up to 2500 DPI
+原描述按项目长度规则丢弃；本次向量主要由标题编码。
+#        商品 ID         近邻商品完整标题                                                                             cos   余弦距离     原始 L2
+
+1        9919          Logitech G600 MMO Gaming Mouse, RGB Backlit, 20 Programmable Buttons              0.9358   0.0642    36.00
+
+2        1576          Havit Gaming Mouse, 2800DPI 6 Buttons LED Optical Wired Mouse, Black              0.9350   0.0650    37.76
+
+3        10847         Logitech G302 Daedalus Prime MOBA Gaming Mouse                                    0.9332   0.0668    36.30
+
+4        14232         Logitech G100s Optical Gaming Mouse Black (Bulk Package)                          0.9287   0.0713    38.25
+
+5        9757          Logitech G303 Daedalus Apex Performance Edition Gaming Mouse                      0.9235   0.0765    38.80
+
+
+
+
+排名仅按 cos 降序；表中 L2 为同一组近邻的原始距离，并非 L2 排名。
+
+
+MiniOneRec   |   Video Games   |   Qwen3-Embedding-4B                                                                       4 / 6
+全库近邻案例：键盘与游戏作品
+预定义锚点            | 在 16,572 件商品中按 cos 精确检索，排除自身，完整展示 Top5
+
+
+
+键盘      |    商品 ID 72              |   Razer
+Razer Lycosa Mirror Gaming Keyboard - Special Edition
+#        商品 ID         近邻商品完整标题                                                                             cos   余弦距离     原始 L2
+
+1        15063         Razer Arctosa Gaming Keyboard- Black                                              0.8926   0.1074    44.86
+
+2        12665         Razer BlackWidow Expert Mechanical Gaming Keyboard with 10 Key Rollover           0.8837   0.1163    46.75
+
+3        15375         ROCCAT RYOS MK Pro Mechanical Gaming Keyboard with Per-Key Illumination, Blue     0.8827   0.1173    46.71
+                       CHERRY MX Key Switch
+
+4        895           Razer BlackWidow Chroma: Clicky RGB Mechanical Gaming Keyboard - 5 Macro Keys -   0.8821   0.1179    47.37
+                       Razer Green Mechanical Switches (Tactile and Clicky)
+
+5        15614         Razer BlackWidow Tournament Edition Stealth - Essential Mechanical Gaming         0.8796   0.1204    48.33
+                       Keyboard - Compact Layout - Tactile & Silent Razer Orange Switches
+
+
+
+
+游戏作品             |   商品 ID 7           |    Nintendo
+Super Mario Galaxy
+#        商品 ID         近邻商品完整标题                                                                             cos   余弦距离     原始 L2
+
+1        4161          Nintendo Selects: Super Mario Galaxy 2                                            0.9591   0.0409    29.33
+
+2        940           Super Mario Galaxy (Nintendo Selects)                                             0.9565   0.0435    30.86
+
+3        1332          Super Paper Mario                                                                 0.9245   0.0755    39.85
+
+4        1817          Super Paper Mario (Nintendo Selects)                                              0.9196   0.0804    41.07
+
+5        1192          Super Mario Bros.                                                                 0.9173   0.0827    41.33
+
+
+
+
+游戏作品             |   商品 ID 89           |    Activision
+Call of Duty: Ghosts - Xbox One
+原描述按项目长度规则丢弃；本次向量主要由标题编码。
+#        商品 ID         近邻商品完整标题                                                                             cos   余弦距离     原始 L2
+
+1        2145          Call of Duty: Ghosts Hardened Edition - Xbox One                                  0.9708   0.0292    24.10
+
+2        14065         Call of Duty: Ghosts Prestige Edition - Xbox One                                  0.9698   0.0302    24.49
+
+3        2940          Call of Duty: Ghosts - PlayStation 4                                              0.9675   0.0325    25.51
+
+4        9458          Call of Duty: Ghosts Prestige Edition - Xbox 360                                  0.9597   0.0403    28.21
+
+5        364           Call of Duty: Ghosts Hardened Edition - Xbox 360                                  0.9595   0.0405    28.28
+
+
+
+
+排名仅按 cos 降序；表中 L2 为同一组近邻的原始距离，并非 L2 排名。
+
+
+MiniOneRec   |   Video Games   |   Qwen3-Embedding-4B                                                                       5 / 6
+方法、边界与可复现文件
+全部图表由 analysis.json 驱动；输入商品向量保持原样
+
+
+
+06    距离如何定义
+
+余弦相似度 cos(x,y) = (x·y) / (||x|| ||y||)，越高表示方向越接近；余弦距离 = 1-cos，越低越近。原始欧氏距离 L2(x,
+y) = ||x-y||，同时受方向与向量长度影响。分析时仅临时对副本做 L2 归一化计算余弦和 PCA，源向量没有修改。
+
+
+07    对照如何抽样
+
+标签由元数据中明确的 Controllers / Headsets / Gaming Mice / Gaming Keyboards 类目 token 定义，先做 HTML 反转义
+。固定随机种子 20261114；每类最多抽取 300 个不同锚点，各选 1 个不同标题的同类商品和 1 个随机异类候选。主指标先
+在每类计算，再对四类等权平均。
+
+
+08    结果适用于哪里
+
+弱标签仅覆盖 1,159 件商品（6.99%），含部分适配器等类别噪声，不能推广为全类目质量保证。品牌四组只反映观察性相关
+，商品对可能共享商品，不能视为独立因果实验。游戏作品案例只作展示，不参与四类统计。未使用人工相关性标注或推荐效
+果评测。近邻检索排除自身，但保留同标题和近重复版本，可能提高同类占比；配对比较已排除同标题。
+
+
+09    文本编码口径
+使用 Qwen3-Embedding-4B 对商品标题与描述编码，沿用项目 masked mean pooling，不额外归一化。原文本规则会丢弃清洗
+后达到 2000 字符的单个字段；案例已标出受影响锚点。品牌、类目和用户行为未作为文本编码字段输入。
+
+
+10    输入文件 SHA-256
+Video_Games.emb-qwen-td.npy
+5db0987422bb66f5d8c4aca8a0014a8294feaeb1d4574b272e401995a070374a
+
+Video_Games.item.json
+e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7
+
+
+
+11    报告与表格文件
+video-games-embedding-similarity-report.pdf + 6 页 PNG
+
+analysis.json / analysis_validation.json
+
+sampled_pairs.csv / brand_controls.csv / labeled_retrieval.csv / nearest_neighbors.csv
+
+
+
+
+MiniOneRec   |   Video Games   |   Qwen3-Embedding-4B                                        6 / 6
+

@@ -1,0 +1,257 @@
+{
+  "status": "training_and_evaluations_completed_with_isolation_notice",
+  "generated_at_utc": "2026-11-18T01:22:59.434498+00:00",
+  "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft",
+  "training": {
+    "status": "completed",
+    "stage": "sft",
+    "finished_at_utc": "2026-11-17T17:25:22.081557+00:00",
+    "train_metrics": {
+      "train_runtime": 2461.8334,
+      "train_samples_per_second": 141.471,
+      "train_steps_per_second": 2.211,
+      "total_flos": 1.948406520123228e+17,
+      "train_loss": 0.9153876849030887
+    },
+    "final_eval_metrics": {
+      "eval_loss": 1.5192137956619263,
+      "eval_runtime": 3.5607,
+      "eval_samples_per_second": 1272.778,
+      "eval_steps_per_second": 39.88,
+      "epoch": 3.0
+    },
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/checkpoint-5187",
+    "best_metric": 1.5192137956619263,
+    "selection_metric": "eval_loss",
+    "final_checkpoint_contains_best_model": true,
+    "final_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint",
+    "epoch": 3.0,
+    "global_step": 5442,
+    "planned_max_steps": 5442,
+    "stop_reason": "max_epochs"
+  },
+  "validation": {
+    "rows": 4532,
+    "generation_loss": 1.5192137956619263,
+    "retrieval_metrics": {
+      "Recall@10": 0.12334510150044131,
+      "HR@10": 0.12334510150044131,
+      "NDCG@10": 0.0886173485745718,
+      "Recall@20": 0.1533539276257723,
+      "HR@20": 0.1533539276257723,
+      "NDCG@20": 0.09609763041620052,
+      "Recall@50": 0.20807590467784642,
+      "HR@50": 0.20807590467784642,
+      "NDCG@50": 0.10675244221543576,
+      "Recall@200": 0.3590026478375993,
+      "HR@200": 0.3590026478375993,
+      "NDCG@200": 0.1289667119050747
+    },
+    "rerank_metrics": {
+      "Recall@10": 0.12422771403353927,
+      "HR@10": 0.12422771403353927,
+      "NDCG@10": 0.0872994140867361,
+      "Recall@20": 0.1586496028243601,
+      "HR@20": 0.1586496028243601,
+      "NDCG@20": 0.09595695404660323,
+      "Recall@50": 0.21513680494263018,
+      "HR@50": 0.21513680494263018,
+      "NDCG@50": 0.1071344790301931
+    }
+  },
+  "test": {
+    "rows": 4533,
+    "comparison": [
+      {
+        "method": "历史最佳SFT beam50",
+        "Recall@10": 0.12949481579527908,
+        "Recall@20": 0.16479152878888154,
+        "Recall@50": 0.22104566512243548,
+        "NDCG@10": 0.08300085599636473
+      },
+      {
+        "method": "联合模型 beam50",
+        "Recall@10": 0.1184645929847783,
+        "Recall@20": 0.15398191043459078,
+        "Recall@50": 0.21641297154202516,
+        "NDCG@10": 0.07959722880571762
+      },
+      {
+        "method": "纯向量检索",
+        "Recall@10": 0.11559673505404809,
+        "Recall@20": 0.15574674608427092,
+        "Recall@50": 0.21222148687403486,
+        "NDCG@10": 0.07991795621518193
+      },
+      {
+        "method": "向量Top200→GR重排",
+        "Recall@10": 0.12045003309066843,
+        "Recall@20": 0.1528788881535407,
+        "Recall@50": 0.20472093536289432,
+        "NDCG@10": 0.08250075767701191
+      }
+    ],
+    "retrieval_recall_at_200": 0.3498786675490845,
+    "groups": {
+      "overall": {
+        "rows": 4533,
+        "retrieval_metrics": {
+          "Recall@10": 0.11559673505404809,
+          "HR@10": 0.11559673505404809,
+          "NDCG@10": 0.07991795621518193,
+          "Recall@20": 0.15574674608427092,
+          "HR@20": 0.15574674608427092,
+          "NDCG@20": 0.08994386217659169,
+          "Recall@50": 0.21222148687403486,
+          "HR@50": 0.21222148687403486,
+          "NDCG@50": 0.10110957724837982,
+          "Recall@200": 0.3498786675490845,
+          "HR@200": 0.3498786675490845,
+          "NDCG@200": 0.1214191581056534
+        },
+        "rerank_metrics": {
+          "Recall@10": 0.12045003309066843,
+          "HR@10": 0.12045003309066843,
+          "NDCG@10": 0.08250075767701191,
+          "Recall@20": 0.1528788881535407,
+          "HR@20": 0.1528788881535407,
+          "NDCG@20": 0.09071577479170502,
+          "Recall@50": 0.20472093536289432,
+          "HR@50": 0.20472093536289432,
+          "NDCG@50": 0.10102388628101806
+        }
+      },
+      "behavior_warm": {
+        "rows": 4386,
+        "retrieval_metrics": {
+          "Recall@10": 0.11650706794345646,
+          "HR@10": 0.11650706794345646,
+          "NDCG@10": 0.08117572714960658,
+          "Recall@20": 0.1570907432740538,
+          "HR@20": 0.1570907432740538,
+          "NDCG@20": 0.09130660397786307,
+          "Recall@50": 0.2131782945736434,
+          "HR@50": 0.2131782945736434,
+          "NDCG@50": 0.10239663105142902,
+          "Recall@200": 0.3506611947104423,
+          "HR@200": 0.3506611947104423,
+          "NDCG@200": 0.12268893445841182
+        },
+        "rerank_metrics": {
+          "Recall@10": 0.12448700410396717,
+          "HR@10": 0.12448700410396717,
+          "NDCG@10": 0.08526583095072846,
+          "Recall@20": 0.15800273597811218,
+          "HR@20": 0.15800273597811218,
+          "NDCG@20": 0.09375618037637913,
+          "Recall@50": 0.21158230734154126,
+          "HR@50": 0.21158230734154126,
+          "NDCG@50": 0.10440977576649678
+        }
+      },
+      "behavior_cold": {
+        "rows": 147,
+        "retrieval_metrics": {
+          "Recall@10": 0.08843537414965986,
+          "HR@10": 0.08843537414965986,
+          "NDCG@10": 0.04239017853908343,
+          "Recall@20": 0.11564625850340136,
+          "HR@20": 0.11564625850340136,
+          "NDCG@20": 0.049284096595801026,
+          "Recall@50": 0.1836734693877551,
+          "HR@50": 0.1836734693877551,
+          "NDCG@50": 0.06270809439005497,
+          "Recall@200": 0.32653061224489793,
+          "HR@200": 0.32653061224489793,
+          "NDCG@200": 0.08353317794784154
+        },
+        "rerank_metrics": {
+          "Recall@10": 0.0,
+          "HR@10": 0.0,
+          "NDCG@10": 0.0,
+          "Recall@20": 0.0,
+          "HR@20": 0.0,
+          "NDCG@20": 0.0,
+          "Recall@50": 0.0,
+          "HR@50": 0.0,
+          "NDCG@50": 0.0
+        }
+      },
+      "collision_free": {
+        "rows": 4216,
+        "retrieval_metrics": {
+          "Recall@10": 0.08135673624288425,
+          "HR@10": 0.08135673624288425,
+          "NDCG@10": 0.04681065001357763,
+          "Recall@20": 0.12286527514231499,
+          "HR@20": 0.12286527514231499,
+          "NDCG@20": 0.05716694990633847,
+          "Recall@50": 0.18287476280834913,
+          "HR@50": 0.18287476280834913,
+          "NDCG@50": 0.06903071387486188,
+          "Recall@200": 0.3280360531309298,
+          "HR@200": 0.3280360531309298,
+          "NDCG@200": 0.09045445496588622
+        },
+        "rerank_metrics": {
+          "Recall@10": 0.08657495256166983,
+          "HR@10": 0.08657495256166983,
+          "NDCG@10": 0.05034597854580902,
+          "Recall@20": 0.11907020872865275,
+          "HR@20": 0.11907020872865275,
+          "NDCG@20": 0.05855700471935883,
+          "Recall@50": 0.17386148007590133,
+          "HR@50": 0.17386148007590133,
+          "NDCG@50": 0.06944806828207364
+        }
+      },
+      "collision_affected": {
+        "rows": 317,
+        "retrieval_metrics": {
+          "Recall@10": 0.5709779179810726,
+          "HR@10": 0.5709779179810726,
+          "NDCG@10": 0.5202346847513463,
+          "Recall@20": 0.5930599369085173,
+          "HR@20": 0.5930599369085173,
+          "NDCG@20": 0.525866455651001,
+          "Recall@50": 0.6025236593059937,
+          "HR@50": 0.6025236593059937,
+          "NDCG@50": 0.5277483406009108,
+          "Recall@200": 0.6403785488958991,
+          "HR@200": 0.6403785488958991,
+          "NDCG@200": 0.5332399418194059
+        },
+        "rerank_metrics": {
+          "Recall@10": 0.5709779179810726,
+          "HR@10": 0.5709779179810726,
+          "NDCG@10": 0.5101491766585594,
+          "Recall@20": 0.6025236593059937,
+          "HR@20": 0.6025236593059937,
+          "NDCG@20": 0.5184172720314855,
+          "Recall@50": 0.6151419558359621,
+          "HR@50": 0.6151419558359621,
+          "NDCG@50": 0.5209723048411099
+        }
+      }
+    }
+  },
+  "timing": {
+    "historical_beam_seconds": 80.92059584098752,
+    "joint_beam_seconds": 81.22838650800986,
+    "retrieval_plus_rerank_seconds": 147.45886134900502,
+    "query_and_vector_search_components_seconds": 4.306638008099981
+  },
+  "strict_supervisor_status": "failed",
+  "strict_supervisor_error": "Old worktree isolation check failed after experiment",
+  "strict_isolation_check_passed": false,
+  "supplemental_audit": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/supplemental_isolation_review.json",
+  "recommendation": "保留原最佳SFT作为当前默认；本组未提升整体测试排名，且GR重排压低了已召回的交互冷启动目标。",
+  "interpretation": [
+    "验证生成loss更低不等于排名指标更高。",
+    "新实验包含DeepSpeed梯度累积兼容修复，且没有匹配运行环境的纯生成重训对照，不能将历史差异全部归因于检索loss。",
+    "原始failed状态及HEAD变化记录保持原样；训练、索引和四项评估均完成，补充审计单独保存。"
+  ],
+  "supplemental_audit_sha256": "ac5fe42b96f54657a220f08087e178b3c61f02c8179d11c8a4e2e1b5992abf92",
+  "experiment_artifacts_intact": true,
+  "supplemental_disposition": "completed_with_external_revision_notice"
+}

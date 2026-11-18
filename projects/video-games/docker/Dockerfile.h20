@@ -1,0 +1,50 @@
+ARG BASE_IMAGE=pytorch/pytorch:2.6.0-cuda12.4-cudnn9-devel
+FROM ${BASE_IMAGE}
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# Keep the original training-library versions, with one CUDA 12.4 stack.
+# The devel image supplies nvcc for DeepSpeed's runtime CUDA extensions.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential git libaio-dev ninja-build \
+    && rm -rf /var/lib/apt/lists/*
+RUN python -m pip uninstall -y torchvision torchaudio librosa \
+    && python -m pip install --no-cache-dir setuptools==80.9.0 wheel==0.45.1 packaging==24.1 ninja==1.11.1.3
+
+COPY requirements-h20.txt /tmp/requirements-h20.txt
+# Torch must be visible while building DeepSpeed's source distribution.
+# GPU operators compile on first use, after the H20 devices are attached.
+RUN printf 'torch==2.6.0\n' > /tmp/torch-constraint.txt \
+    && DS_BUILD_OPS=0 DS_ACCELERATOR=cuda python -m pip install \
+        --no-cache-dir --no-build-isolation -c /tmp/torch-constraint.txt -r /tmp/requirements-h20.txt \
+    && python -m pip check
+
+COPY requirements-report.txt /tmp/requirements-report.txt
+RUN apt-get update && apt-get install -y --no-install-recommends fonts-noto-cjk \
+    && rm -rf /var/lib/apt/lists/* \
+    && python -m pip install --no-cache-dir -r /tmp/requirements-report.txt && python -m pip check
+
+ENV ZIWEIZHAO_WORKDIR=/mnt/ossdata/ziweizhao \
+    HF_HOME=/mnt/ossdata/ziweizhao/weights/huggingface \
+    HF_HUB_CACHE=/mnt/ossdata/ziweizhao/weights/huggingface/hub \
+    TORCH_HOME=/mnt/ossdata/ziweizhao/weights/torch \
+    MODELSCOPE_CACHE=/mnt/ossdata/ziweizhao/weights/modelscope \
+    XDG_CACHE_HOME=/mnt/ossdata/ziweizhao/.cache \
+    PIP_CACHE_DIR=/mnt/ossdata/ziweizhao/.cache/pip \
+    TORCH_EXTENSIONS_DIR=/mnt/ossdata/ziweizhao/.cache/torch_extensions \
+    TRITON_CACHE_DIR=/mnt/ossdata/ziweizhao/.cache/triton \
+    H20_OUTPUT_ROOT=/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900 \
+    BASE_MODEL=/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B \
+    DS_ACCELERATOR=cuda \
+    TOKENIZERS_PARALLELISM=false \
+    WANDB_MODE=disabled \
+    PYTHONUNBUFFERED=1 \
+    OMP_NUM_THREADS=4
+
+WORKDIR /opt/minionerec
+COPY . .
+RUN install -m 0755 docker/entrypoint.sh /usr/local/bin/minionerec \
+    && python docker/check_env.py
+
+ENTRYPOINT ["/usr/local/bin/minionerec"]
+CMD ["dry-run", "sft"]

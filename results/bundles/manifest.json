@@ -1,0 +1,266 @@
+[
+  {
+    "path": "results/bundles/Industrial_and_Scientific_05b_cosine_ep10_20261117.zip",
+    "sha256": "d153d6c037b56d14d2ed4bbe99652e5732da53b29c502b70967cb01166696376",
+    "compressed_bytes": 6237319,
+    "uncompressed_bytes": 37360804,
+    "file_count": 49,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117.zip",
+    "sha256": "56693cf0085098559192a1ef6fd7f538ed981f8af5d38111d63278ff836393f4",
+    "compressed_bytes": 12119855,
+    "uncompressed_bytes": 86763398,
+    "file_count": 90,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1.zip",
+    "sha256": "c7c35325d7018dc3426623263c567eeafa7e6bde9ecfb8215ad964e65f937bcc",
+    "compressed_bytes": 7117965,
+    "uncompressed_bytes": 45441473,
+    "file_count": 60,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220.zip",
+    "sha256": "db2a9396ef7db1270f0712964ce17685117c6589d6914044062ecf554d9b19c3",
+    "compressed_bytes": 63746680,
+    "uncompressed_bytes": 230335003,
+    "file_count": 63,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_05b_rl_beta0p01_20261118.zip",
+    "sha256": "0db8f44938ddd5bd717a496efaa857a7e94df4e8695beee099f6288229f6bc19",
+    "compressed_bytes": 14635638,
+    "uncompressed_bytes": 91677083,
+    "file_count": 85,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1.zip",
+    "sha256": "cabbba6087235a49a41918200c10a83151236273faa4ddb8e6442b1de5cbd7e8",
+    "compressed_bytes": 13637024,
+    "uncompressed_bytes": 85004716,
+    "file_count": 75,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_RQVAE_2K_20261118.zip",
+    "sha256": "1d3702298e824018feb740b99fc442924c0a9a6ccb2b10d5928c9becb148b64c",
+    "compressed_bytes": 42237193,
+    "uncompressed_bytes": 163149619,
+    "file_count": 157,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_SASRec_Baseline_20261118.zip",
+    "sha256": "0556c8527cd762d4aa6384f954d7c3fc99925247888eee26d5698e42f077d399",
+    "compressed_bytes": 962831,
+    "uncompressed_bytes": 2792519,
+    "file_count": 23,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_enddonkey.zip",
+    "sha256": "9ccbf2abfa8bd152d4eb3cac9b819e81baf86e5df34f8658da4f9d0689979753",
+    "compressed_bytes": 2609824,
+    "uncompressed_bytes": 15228114,
+    "file_count": 22,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_and_Scientific_enddonkey_05b_linear.zip",
+    "sha256": "e90716773fda4b4d461ebab8df0c43bca4b9f16aea03fffc4a09cb465ca6a270",
+    "compressed_bytes": 2612150,
+    "uncompressed_bytes": 15468926,
+    "file_count": 23,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_hybrid_beta001_inference_20261118-metadata.zip",
+    "sha256": "10b4a91206057e15875839cefe3481dc8bc04dc47672c2fa386d9e0099210615",
+    "compressed_bytes": 2285508,
+    "uncompressed_bytes": 15898240,
+    "file_count": 117,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_hybrid_beta001_inference_20261118-test.zip",
+    "sha256": "5783e56447a16af454780f96cce41e00d44a275af31e057e88c8de087ede5c60",
+    "compressed_bytes": 50261033,
+    "uncompressed_bytes": 169864976,
+    "file_count": 4,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_hybrid_beta001_inference_20261118-valid.zip",
+    "sha256": "f50b6be5c54b2cb8b04d86da48a6709183840470c20c41200cbec1134ee69a98",
+    "compressed_bytes": 50933465,
+    "uncompressed_bytes": 169346241,
+    "file_count": 4,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_inference_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Industrial_hybrid_beta001_unisrec_k_vs_2k_20261118.zip",
+    "sha256": "5abb385aea52fdafb40ac8c85afbfff7c92044b930e2405cbfcf0aa6591ad52e",
+    "compressed_bytes": 36157677,
+    "uncompressed_bytes": 128454002,
+    "file_count": 165,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Industrial_hybrid_beta001_unisrec_k_vs_2k_20261118"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712.zip",
+    "sha256": "5349c2576adb2c7c910ec4c8d2ef99aa10a1cf3e9d098b129b44babfe95dd839",
+    "compressed_bytes": 873771,
+    "uncompressed_bytes": 5378035,
+    "file_count": 23,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_20261117_173712"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158.zip",
+    "sha256": "e1df6a170b8bc3619d67aed5deb8ec8e3cfb2c709488e6417904c0ff65c63c45",
+    "compressed_bytes": 840729,
+    "uncompressed_bytes": 5218959,
+    "file_count": 22,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep15_20261117_182158"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242.zip",
+    "sha256": "638c5753407a79b1ae479060adb005c50891fe9a6f01415e9ad36641bd4a5fc0",
+    "compressed_bytes": 861865,
+    "uncompressed_bytes": 5318997,
+    "file_count": 22,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943.zip",
+    "sha256": "bf4b3311fb09fe738d6fd5f0f996152a853a73706adf47234a814c983b76089c",
+    "compressed_bytes": 890367,
+    "uncompressed_bytes": 5451335,
+    "file_count": 25,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep25_20261117_182943"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_20261117_180305.zip",
+    "sha256": "65fcc6034b2c7853763d9deb124b10fe9848b92b02336b942cab7b76632e19de",
+    "compressed_bytes": 23320,
+    "uncompressed_bytes": 101578,
+    "file_count": 13,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_20261117_180305"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455.zip",
+    "sha256": "d486c0e41b1737661cdfb8dcddb19ecb164e19de480b515d4fd5df4d06c7b2ee",
+    "compressed_bytes": 836620,
+    "uncompressed_bytes": 5200508,
+    "file_count": 19,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep50_retry1_20261117_180455"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/UniSRec-industrial_hybrid_inference_ep20_export_v1.zip",
+    "sha256": "3c5b26f50f973c239a482435662898a793b944465fbce86962624943812006b4",
+    "compressed_bytes": 9265,
+    "uncompressed_bytes": 22386,
+    "file_count": 1,
+    "original_result_roots": [
+      "results/checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Video_Games-RQVAE-2026-11-14T15-04-02-357Z.zip",
+    "sha256": "f8c777bf755b8ba26fd7411b58bba48cfc0ca81456d79c8d4e4f01d5119c2b66",
+    "compressed_bytes": 2065174,
+    "uncompressed_bytes": 11336506,
+    "file_count": 25,
+    "original_result_roots": [
+      "results/checkpoints/rqvae/Video_Games/2026-11-14T15-04-02-357Z"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Video_Games-RQVAE-compare_10000_2026-11-14T15-37-03-631Z.zip",
+    "sha256": "634567d2b03f76ab0444ce46f12432fd0fe2157eebe12070246726229ca74c2d",
+    "compressed_bytes": 2790104,
+    "uncompressed_bytes": 16839865,
+    "file_count": 30,
+    "original_result_roots": [
+      "results/checkpoints/rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z"
+    ],
+    "crc_verified": true
+  },
+  {
+    "path": "results/bundles/Video_Games_sid2900.zip",
+    "sha256": "53c059fa0c718bae0182cbce7bc398044f465a922f662930e58d067ac784bf51",
+    "compressed_bytes": 17787806,
+    "uncompressed_bytes": 134292692,
+    "file_count": 28,
+    "original_result_roots": [
+      "results/checkpoints/MiniOneRec/Video_Games_sid2900"
+    ],
+    "crc_verified": true
+  }
+]

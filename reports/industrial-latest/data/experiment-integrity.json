@@ -1,0 +1,28 @@
+{
+  "数据集": "Amazon Reviews 2018 · Industrial and Scientific",
+  "商品数": 3686,
+  "唯一 SID 数": 3686,
+  "各切分样本数": {
+    "train": 36259,
+    "valid": 4532,
+    "test": 4533
+  },
+  "冷目标请求数": 147,
+  "RQ-VAE 选中轮次": 1100,
+  "SFT 选中步数": 5187,
+  "GRPO 选中步数": 621,
+  "UniSRec 选中轮次": 20,
+  "已核验 SHA-256": {
+    "RQ-VAE 选中权重": "95a536bb1126dc478a213ca104536818abca7346b6e1dddb4cf4eef07753a703",
+    "商品 SID 目录": "515790e69f7691748dd8dd27d5ff230a7769b6fcd8f748b1ccc341351101c31c",
+    "SFT 归档权重": "8243b065f145d8cc202b50717a0742e2d1f08bef035b26408ce46d410e5d2f2e",
+    "GRPO 归档权重": "ccf3021cedcf18dda61677950b64204a0a1071bd16112963aad599c6da501146",
+    "UniSRec 选中权重": "e39e9e1ce9a59486d0a62ff9b7461636af3ba0bcf96e48cb969f63b1907c54a7",
+    "UniSRec 商品向量": "078a6aebcd40d44b70bfb84cba7362b6013644e11b30dc9cab6c667cc3919ea1",
+    "质量对照数据": "da8c085fee1a7730724796e718528b9f5829e24de93cc4787c59c5d05b9c2f57",
+    "性能对照数据": "8b2a8a4a847dc3401885b65d2933f1c99a5bf2c044ce0ee3b33d7471e06e4baa",
+    "训练数据": "f51b368d7efee662932850a6961ebf1c9054121860ef3f388069d905c285dfba",
+    "验证数据": "77255611a28db09394c0f03cf3165450ac67c39855284d74e3e9abbf010965e3",
+    "测试数据": "1325225f05b4e109d2c919281b4fdf41e5f6e81c86fa1069f73429a3694222ba"
+  }
+}

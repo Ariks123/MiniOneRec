@@ -1,0 +1,9 @@
+key,setting,actual,paper,assessment,note
+dataset,数据集,Video_Games,"Industrial, Office",different,
+backbone,生成底模,/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B,Qwen2.5-Instruct,different,
+stage,训练阶段,SFT only; RL not started,SFT + GRPO RL (2 epochs),different,
+history_max,最大历史长度,20,10,different,
+sid_selection,SID checkpoint / 训练预算,2900,10000,different,selected quantizer epoch vs paper quantizer training budget
+lr_scheduler_type,SFT 学习率调度,linear,cosine,different,
+max_epochs,SFT 最大 epoch,10,10,matched,
+learning_rate,SFT 学习率,0.0003,0.0003,matched,

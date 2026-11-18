@@ -1,0 +1,306 @@
+{
+  "dataset": "Video_Games",
+  "validation": "passed",
+  "script": "data/amazon18_video_games_process.sh",
+  "time_window_local": {
+    "start": "1996-10-01T00:00:00+08:00",
+    "end_inclusive": "2018-10-01T00:00:00+08:00"
+  },
+  "users": 51862,
+  "items": 16572,
+  "interactions": 471097,
+  "examples": 419235,
+  "split_examples": {
+    "train": 335388,
+    "valid": 41923,
+    "test": 41924
+  },
+  "split_boundaries": {
+    "train": {
+      "first_target_utc": "1999-11-10T00:00:00+00:00",
+      "last_target_utc": "2016-04-19T00:00:00+00:00"
+    },
+    "valid": {
+      "first_target_utc": "2016-04-19T00:00:00+00:00",
+      "last_target_utc": "2017-01-05T00:00:00+00:00"
+    },
+    "test": {
+      "first_target_utc": "2017-01-05T00:00:00+00:00",
+      "last_target_utc": "2018-09-30T00:00:00+00:00"
+    }
+  },
+  "min_user_interactions": 5,
+  "min_item_interactions": 5,
+  "history_length_range": [
+    1,
+    20
+  ],
+  "missing_metadata_asins_removed": 19,
+  "missing_metadata_asins_in_outputs": 0,
+  "items_with_nonempty_categories": 16427,
+  "review_text_records": 448490,
+  "same_user_item_timestamp_collisions": 22607,
+  "retained_rating_counts": {
+    "5.0": 283449,
+    "4.0": 89097,
+    "3.0": 46749,
+    "2.0": 22803,
+    "1.0": 28999
+  },
+  "files": [
+    {
+      "name": "Video_Games.train.inter",
+      "records": 335388,
+      "bytes": 15083497
+    },
+    {
+      "name": "Video_Games.valid.inter",
+      "records": 41923,
+      "bytes": 2024162
+    },
+    {
+      "name": "Video_Games.test.inter",
+      "records": 41924,
+      "bytes": 2075013
+    },
+    {
+      "name": "Video_Games.inter.json",
+      "records": 51862,
+      "bytes": 6139298
+    },
+    {
+      "name": "Video_Games.item.json",
+      "records": 16572,
+      "bytes": 24389540
+    },
+    {
+      "name": "Video_Games.review.json",
+      "records": 448490,
+      "bytes": 346995305
+    },
+    {
+      "name": "Video_Games.user2id",
+      "records": 51862,
+      "bytes": 1116329
+    },
+    {
+      "name": "Video_Games.item2id",
+      "records": 16572,
+      "bytes": 287186
+    }
+  ],
+  "execution": {
+    "command": "PYTHON=/c/ProgramData/anaconda3/python.exe bash data/amazon18_video_games_process.sh",
+    "exit_code": 0,
+    "started_at_utc": "2026-11-14T13:07:33.640Z",
+    "finished_at_utc": "2026-11-14T13:08:03.383Z",
+    "log_file": "C:/Users/Administrator/Desktop/MiniOneRec/data/Amazon18/logs/Video_Games_history20_2026-11-14T13-07-33-640Z.log"
+  },
+  "filter_stages": [
+    {
+      "stage": "raw",
+      "interactions": 497577,
+      "users": 55223,
+      "items": 17408,
+      "removed_interactions": 0
+    },
+    {
+      "stage": "metadata_present",
+      "interactions": 496315,
+      "users": 55223,
+      "items": 17389,
+      "removed_interactions": 1262
+    },
+    {
+      "stage": "valid_title",
+      "interactions": 484744,
+      "users": 55221,
+      "items": 16930,
+      "removed_interactions": 11571
+    },
+    {
+      "stage": "time_window",
+      "interactions": 484740,
+      "users": 55221,
+      "items": 16930,
+      "removed_interactions": 4
+    },
+    {
+      "stage": "iterative_5_core",
+      "interactions": 471097,
+      "users": 51862,
+      "items": 16572,
+      "removed_interactions": 13643
+    }
+  ],
+  "preprocessing_notes": [
+    "All ratings retained; repeated user-item interactions are retained.",
+    "Metadata categories uses categories with fallback to Amazon 2018 category.",
+    "review.json keys combine user, item, and timestamp; duplicate keys overwrite review text only.",
+    "Global target-time ordering with an 80/10/10 split; samples sharing a timestamp can cross adjacent split boundaries."
+  ],
+  "total_data_file_bytes": 398110330,
+  "configured_max_history_len": 20,
+  "history_stats": {
+    "min": 1,
+    "max": 20,
+    "mean": 6.921125383138335,
+    "samples": 419235,
+    "total_history_items": 2901578,
+    "samples_over_10": 92039,
+    "histogram": {
+      "1": 51862,
+      "2": 51862,
+      "3": 51862,
+      "4": 51862,
+      "5": 35764,
+      "6": 26053,
+      "7": 19794,
+      "8": 15457,
+      "9": 12451,
+      "10": 10229,
+      "11": 8545,
+      "12": 7190,
+      "13": 6182,
+      "14": 5363,
+      "15": 4606,
+      "16": 4082,
+      "17": 3628,
+      "18": 3241,
+      "19": 2922,
+      "20": 46280
+    },
+    "by_split": {
+      "train": {
+        "min": 1,
+        "max": 20,
+        "mean": 6.784855152837907,
+        "samples": 335388,
+        "total_history_items": 2275559,
+        "samples_over_10": 72369,
+        "histogram": {
+          "1": 45884,
+          "2": 44374,
+          "3": 42399,
+          "4": 39242,
+          "5": 27053,
+          "6": 19793,
+          "7": 15066,
+          "8": 11799,
+          "9": 9515,
+          "10": 7894,
+          "11": 6606,
+          "12": 5588,
+          "13": 4798,
+          "14": 4138,
+          "15": 3577,
+          "16": 3181,
+          "17": 2840,
+          "18": 2543,
+          "19": 2283,
+          "20": 36815
+        }
+      },
+      "valid": {
+        "min": 1,
+        "max": 20,
+        "mean": 7.364143787419794,
+        "samples": 41923,
+        "total_history_items": 308727,
+        "samples_over_10": 9742,
+        "histogram": {
+          "1": 3387,
+          "2": 4152,
+          "3": 5045,
+          "4": 5926,
+          "5": 4146,
+          "6": 3015,
+          "7": 2222,
+          "8": 1745,
+          "9": 1411,
+          "10": 1132,
+          "11": 933,
+          "12": 740,
+          "13": 660,
+          "14": 603,
+          "15": 509,
+          "16": 440,
+          "17": 380,
+          "18": 340,
+          "19": 316,
+          "20": 4821
+        }
+      },
+      "test": {
+        "min": 1,
+        "max": 20,
+        "mean": 7.568266386795153,
+        "samples": 41924,
+        "total_history_items": 317292,
+        "samples_over_10": 9928,
+        "histogram": {
+          "1": 2591,
+          "2": 3336,
+          "3": 4418,
+          "4": 6694,
+          "5": 4565,
+          "6": 3245,
+          "7": 2506,
+          "8": 1913,
+          "9": 1525,
+          "10": 1203,
+          "11": 1006,
+          "12": 862,
+          "13": 724,
+          "14": 622,
+          "15": 520,
+          "16": 461,
+          "17": 408,
+          "18": 358,
+          "19": 323,
+          "20": 4644
+        }
+      }
+    }
+  },
+  "history_comparison": {
+    "previous_max": 10,
+    "current_max": 20,
+    "previous_mean": 5.368614261690937,
+    "current_mean": 6.921125383138335,
+    "samples_with_longer_history": 92039,
+    "previous_split_file_bytes": 15982921,
+    "current_split_file_bytes": 19182672,
+    "examples_unchanged": true,
+    "users_unchanged": true,
+    "items_unchanged": true,
+    "interactions_unchanged": true,
+    "targets_and_splits_unchanged": true,
+    "previous_histogram": {
+      "1": 51862,
+      "2": 51862,
+      "3": 51862,
+      "4": 51862,
+      "5": 35764,
+      "6": 26053,
+      "7": 19794,
+      "8": 15457,
+      "9": 12451,
+      "10": 102268
+    }
+  },
+  "history_validation": {
+    "all_rows_checked": 419235,
+    "checked_against_full_user_sequences": true,
+    "checked_against_previous_split_rows": true,
+    "unchanged_non_sample_sha256": {
+      "Video_Games.inter.json": "ceb5ac31b355554bf119294b86b5235b9f925fdf62db9af82a2614ed65fec434",
+      "Video_Games.item.json": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7",
+      "Video_Games.review.json": "3a3351b22bb78e03bc61cb1731a05a705ea84b6b648c563842c1761b19b9d628",
+      "Video_Games.user2id": "466565e43672c78badbbcd8564b10e09d7c4727e30233215096333af76894ad6",
+      "Video_Games.item2id": "8fd9a32ef638be7c11fc2269e68afb8a7c3f3b871782bb4b10619788dd6c5858"
+    },
+    "baseline_directory": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\data\\Amazon18\\backups\\Video_Games_history10_2026-11-14T13-07-33-377Z",
+    "verifier": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\data\\Amazon18\\verify_history_window.py"
+  }
+}

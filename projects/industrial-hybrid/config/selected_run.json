@@ -1,0 +1,185 @@
+{
+  "format_version": 1,
+  "project": {
+    "dataset": "Amazon Reviews 2018",
+    "category": "Industrial_and_Scientific",
+    "branch": "amazon2018industrialandscientific-cosine",
+    "worktree": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine"
+  },
+  "selection": {
+    "model": "Qwen2.5-1.5B Base",
+    "lr_scheduler_type": "cosine",
+    "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft",
+    "status": "completed",
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/checkpoint-3572",
+    "final_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint",
+    "final_checkpoint_contains_best_model": true,
+    "selection_metric": "eval_loss",
+    "best_metric": 1.595940113067627,
+    "global_step": 3744,
+    "epoch": 3.0,
+    "rl_started": false
+  },
+  "hyperparameters": {
+    "world_size": 4,
+    "micro_batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "global_batch_size": 64,
+    "max_epochs": 3,
+    "learning_rate": 0.0003,
+    "warmup_steps": 20,
+    "lr_scheduler_type": "cosine",
+    "cutoff_len": 512,
+    "max_grad_norm": 1.0,
+    "bf16": true,
+    "gradient_checkpointing": true,
+    "attn_implementation": "sdpa",
+    "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+    "seed": 42,
+    "early_stopping_patience": 3,
+    "eval_save_fraction": 0.05,
+    "monitor_window": 100,
+    "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+  },
+  "evaluation": {
+    "status": "passed",
+    "scope": "complete_original_test_split",
+    "metric_semantics": "original SID-level; colliding item IDs indistinguishable",
+    "num_beams": 50,
+    "prompt_style": "original-eval",
+    "validation_prompt_style": "training",
+    "expected_rows": 4533,
+    "completed_rows": 4533,
+    "coverage": {
+      "expected_rows": 4533,
+      "completed_rows": 4533,
+      "missing_rows": 0,
+      "duplicate_rows": 0
+    },
+    "metrics": {
+      "HR@1": 0.05404809177145378,
+      "NDCG@1": 0.05404809177145378,
+      "HR@3": 0.08162364879770571,
+      "NDCG@3": 0.06982884469367544,
+      "HR@5": 0.09463931171409662,
+      "NDCG@5": 0.0752216958756467,
+      "HR@10": 0.12618574895212883,
+      "NDCG@10": 0.08536859997506724,
+      "HR@20": 0.1656739466137216,
+      "NDCG@20": 0.09534342342914562,
+      "HR@50": 0.21950143392896537,
+      "NDCG@50": 0.10597144041917358
+    },
+    "validity_rate": 1.0,
+    "unique_rate": 1.0
+  },
+  "artifacts": {
+    "archived_run_directory": "results/cosine",
+    "report_directory": "reports",
+    "original_run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft",
+    "original_report_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey",
+    "input_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey",
+    "posttraining_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey",
+    "run_config": "results/cosine/run_config.json",
+    "supervisor_config": "results/cosine/supervisor_config.json",
+    "run_status": "results/cosine/run_status.json",
+    "training_summary": "results/cosine/training_summary.json",
+    "evaluation_metrics": "results/cosine/evaluation_metrics.json",
+    "reporter_revision": "results/cosine/reporter_revision.json",
+    "monitor_metrics": "results/cosine/monitor_metrics.jsonl"
+  },
+  "provenance": {
+    "historical_run_created_at_utc": "2026-11-16T07:43:45.356854+00:00",
+    "historical_run_finished_at_utc": "2026-11-16T08:25:33.792561+00:00",
+    "source_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+    "source_model_identity_sha256": "f4da6a998630e344cbf1877dd65907ba35a9b01c20bbf314bdc47d542a61168b",
+    "data_sha256": {
+      "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+      "eval_file": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+      "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "item_meta_path": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+      "test_file": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46"
+    },
+    "checkpoint_provenance": {
+      "format_version": 1,
+      "stage": "sft",
+      "sid_index_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "item_meta_sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496",
+      "source_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "category": "Industrial_and_Scientific"
+    },
+    "runtime_source_sha256": {
+      "sft.py": "579e3d6efa9bc6888ac7cc637b2e16de767e68d995a47eae1fa7c7339d10b227",
+      "data.py": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "sft_monitor.py": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "LogitProcessor.py": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "npu_support.py": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "scripts/evaluate_sft.py": "5d50d9da245b43df71ba9f45b24d5fb2c1bdbd818cc93d2a8f746f2a41f8ba83",
+      "scripts/sft_eval_utils.py": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "scripts/report_industrial_sft.py": "c67bb1a9eec1c795f3d7dc06594d989a106e69ffc251d6ab373725f6363f4922",
+      "config/h20_zero2.json": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "reporter_revision": {
+      "recorded_at_utc": "2026-11-16T07:45:54.259925+00:00",
+      "scope": "Final reporting scripts updated after supervisor launch; separate provenance record leaves initial launch source hashes unchanged.",
+      "sources": {
+        "scripts/report_industrial_sft.py": {
+          "host_path": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/report_industrial_sft.py",
+          "sha256": "125a64351683f7748f542343d089065cbdf046d1957fefb64b26bdab4b710d72"
+        },
+        "tests/test_industrial_reports.py": {
+          "host_path": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_industrial_reports.py",
+          "sha256": "4dc14237b05ae841541e1e6e08f63b4624faedec4ca8e525fd2be82d1d9deeca"
+        }
+      },
+      "verification": {
+        "container": "minionerec-h20-sft",
+        "workdir": "/tmp/industrial_preflight",
+        "command": "python -m unittest discover -s tests -p test_industrial_reports.py -q",
+        "tests_run": 7,
+        "result": "passed",
+        "skipped": 0,
+        "rendering": "PNG and PDF outputs tested"
+      },
+      "acceptance_guards": {
+        "num_beams": 50,
+        "prompt_style": "original-eval",
+        "validation_prompt_style": "training"
+      },
+      "reference": {
+        "repository": "Enddonkey/MiniOneRec-Reproduction",
+        "readme_blob_sha": "369fa5824ca3bef5e2cf3d7c8ca233bd34a4d5a8",
+        "reported_run": "SFT Only, Qwen2.5-0.5B, README section 6.2",
+        "evidence_status": "Self-reported; not independently verified"
+      }
+    },
+    "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+    "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+    "notes": [
+      "Historical metrics use the completed cosine run; creating this branch did not rerun training or evaluation.",
+      "Checkpoint chosen by validation loss; final_checkpoint contains checkpoint-3572 best weights.",
+      "Runtime code retained from the historical container is minimally adapted for this branch paths and cosine defaults.",
+      "Reporter revision is recorded separately from initial launch source hashes.",
+      "This manifest describes the archived 1.5B cosine run and initial branch snapshot; the current branch also implements a new paired 0.5B maximum-ten-epoch experiment whose plan and results are stored separately."
+    ],
+    "branch_adaptations": [
+      "Adjust shared-workspace paths for the dedicated code/ worktree; vendor the exact historical data.py.",
+      "Pin the project training entrypoint to Qwen2.5-1.5B, cosine, ZeRO-2, gradient checkpointing and baseline evaluation; remove options specific to the other run.",
+      "Set SFT defaults to the selected global/micro batch, epoch count, cosine and Industrial category; reject other schedulers/categories.",
+      "Set standalone evaluation defaults to the original Industrial prompt and approved SID; preserve the metric implementation.",
+      "Historical runtime source hashes describe the archived execution; current file hashes below describe this branch."
+    ],
+    "branch_source_sha256": {
+      "sft.py": "7632f6ce37c4711e9d716d6f218ffd87ddbb936504dfdfa7b68fac7d0c6bee45",
+      "data.py": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "sft_monitor.py": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "LogitProcessor.py": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "npu_support.py": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "scripts/evaluate_sft.py": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+      "scripts/sft_eval_utils.py": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "scripts/report_industrial_sft.py": "125a64351683f7748f542343d089065cbdf046d1957fefb64b26bdab4b710d72",
+      "config/h20_zero2.json": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "branch_source_snapshot_commit": "1a5746d"
+  }
+}

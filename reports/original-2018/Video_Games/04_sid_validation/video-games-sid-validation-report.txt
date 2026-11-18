@@ -1,0 +1,588 @@
+SID 唯一性与语义质量验证
+16,572 件商品        |   2,560 维向量        |   2026-11-14 23:12 北京时间
+
+
+
+最终完整 SID                                        原始三层碰撞率                                诊断结论
+
+
+16,572                                          9.74%                                  定义内诊断支持
+四个 token；含身份后缀                                  最近码字，不含后缀                              结构检查通过；0 条质量告警
+
+
+
+01    编码阶段的唯一性
+
+
+                          阶段                                唯一编码数             多余商品数        碰撞组内商品       碰撞率
+
+
+             原始最近码字 / 3 语义 token                              14,958           1,614          2,821     9.74%
+
+
+
+             Sinkhorn 调整 / 3 语义 token                         16,508            64            123       0.39%
+
+
+
+       最终完整 SID / 3 语义 + 1 身份 token                           16,572            0              0        0.00%
+
+
+
+
+碰撞率 = (商品数 - 唯一编码数) / 商品数。身份后缀保证完整 SID 可区分商品，但前三层语义码仍可能相同；后缀不参与本
+报告的语义相似度、重构或邻域指标。
+
+
+
+
+02    碰撞调整的重构代价
+
+  项目                                         记录
+
+
+  编码改变的商品数                                   2,834
+
+
+  被改变商品的原始 MSE                               0.259654
+
+  被改变商品的 SK                                  0.472694
+  MSE
+
+  被改变商品 MSE                                  0.213040
+  变化均值
+
+  MSE 变化第 5 /                                0.020084 / 0.149045 / 0.613778
+  50 / 95 百分位
+
+
+
+质量状态：定义内诊断支持。结构检查仅确认产物有效；语义质量另由重构、邻域与前缀诊断评估，不代表推荐准确率。详细
+判据见报告末尾。
+
+
+
+
+本报告验证量化与商品语义结构，没有运行用户推荐 SFT 或 RL 效果评测。
+
+
+
+MiniOneRec   |   Video Games   |   SID Validation                                                               1 / 9
+重构质量与训练均值基线
+初始化、原始码与碰撞调整后的比较                              |   验证商品未参与梯度训练
+
+
+
+初始化后验证 NMSE                                          原始码验证 NMSE                 调整码验证 NMSE
+
+
+3.2590                                               0.4652                     0.4856
+梯度训练前的模型                                             已训练，最近码字                   同一模型，SK 调整编码
+
+
+
+03          验证集的相对重构误差
+
+                            3.2590
+                                                                                             训练均值基线 NMSE=1
+          3.0
+
+          2.5
+验证 NMSE
+
+
+
+
+          2.0
+
+          1.5
+
+          1.0
+
+          0.5                                                      0.4652                     0.4856
+
+
+          0.0
+                          初始化后                                    原始三层码                      SK 调整码
+
+NMSE = 模型 MSE / 训练均值基线 MSE；小于 1 表示优于该常量预测器。
+
+
+
+04          各数据范围的完整重构统计
+
+            编码 / 权重                     范围         商品数          重构 MSE       NMSE      重构 cos 均值        零重构
+
+                初始化后                    训练         14,919       3.846678    3.2475       0.0013          0
+
+                初始化后                    验证         1,653        3.846006    3.2590       0.0018          0
+
+                初始化后                    全部         16,572       3.846611    3.2487       0.0013          0
+
+                原始三层码                   训练         14,919       0.376570    0.3179       0.9493          0
+
+                原始三层码                   验证         1,653        0.549025    0.4652       0.9251          0
+
+                原始三层码                   全部         16,572       0.393772    0.3326       0.9469          0
+
+                SK 调整码                  训练         14,919       0.414374    0.3498       0.9442          0
+
+                SK 调整码                  验证         1,653        0.573076    0.4856       0.9218          0
+
+                SK 调整码                  全部         16,572       0.430204    0.3633       0.9420          0
+
+
+
+
+MSE 按原始 2560 维向量逐元素计算；原向量及训练均值基线均未额外归一化。
+
+
+
+
+MiniOneRec        |   Video Games   |   SID Validation                                                       2 / 9
+        量化前后的邻域保持
+        重构参照原始 2560 维；潜空间参照编码器 32 维；两者不直接比较优劣
+
+
+
+        05           各自量化前 TopK 邻居集合的保留份额
+                                     重构：参照原始 2560 维向量                                                                      潜空间：参照编码器 32 维表示
+
+                  100%           初始化后重构                                                                    100%          原始量化潜空间
+                                 原始码重构                                                                                   SK 量化潜空间
+                                 SK 码重构                                                                                  随机期望
+                                 随机期望
+                   80%                                                                                      80%
+各自参照邻域的交集数量 / K
+
+
+
+
+                                                                                         各自参照邻域的交集数量 / K
+                   60%                                                                                      60%
+
+
+
+                   40%                                                                                      40%
+
+
+
+                   20%                                                                                      20%
+
+
+
+                    0%                                                                                       0%
+                         Top5            Top10                          Top20                                     Top5            Top10                 Top20
+
+        两图合并 3,701 个查询、候选 16,572 件；下表为 1,653 个验证查询。参照空间不同，不能直接比较左右数值高低。
+
+
+
+                                 验证查询                                参照邻域                                  Top5 保留                Top10 保留   Top20 保留
+
+                                初始化后重构                              原始 2560 维                               4.73%                   4.25%       4.23%
+
+                                原始码重构                               原始 2560 维                               28.13%                 33.82%      39.08%
+
+                                 SK 码重构                             原始 2560 维                               22.93%                 29.21%      35.08%
+
+                            原始量化潜空间                                 编码器 32 维                                41.85%                 49.77%      55.79%
+
+                                SK 量化潜空间                            编码器 32 维                                35.87%                 43.71%      50.44%
+
+
+        SK 调整后，验证 Top10 邻域保持率从 33.82% 变为 29.21%（-4.60 个百分点）；碰撞减少伴随原空间邻域损失。
+
+
+
+
+        06           四类硬件子集内的同标签份额
+
+                                    四类等权宏平均                                      Top1                                      Top5              Top10
+
+                                     原始商品向量                                     97.69%                                    95.04%             94.64%
+
+                                       原始码重构                                    95.24%                                    94.04%             93.42%
+
+                                       SK 码重构                                   93.04%                                    93.11%             92.33%
+
+
+        弱标签候选仅 1,159 件（6.99%），按四类等权平均；同标题及近重复商品可能提高份额。
+
+
+
+
+        MiniOneRec          |    Video Games   |   SID Validation                                                                                       3 / 9
+共享语义前缀的商品是否相似？
+按最长公共前缀 LCP 分组                        |   商品对排除相同清洗文本
+
+
+
+07             不同 LCP 长度的原向量余弦相似度
+
+                                      原始最近码字                                                SK 调整码
+             1.0                                                         1.0
+
+
+
+             0.8                                                         0.8
+原始商品向量 cos
+
+
+
+
+             0.6                                                         0.6
+
+
+
+             0.4                                                         0.4
+
+
+
+             0.2                                                         0.2
+
+
+
+             0.0                                                         0.0
+                        0             1           2         3                      0        1      2            3
+                                最长公共前缀层数 LCP                                              最长公共前缀层数 LCP
+箱体为 25-75 百分位、须为 1.5 IQR；为清晰起见未画离群散点。
+
+
+
+
+              LCP            原始码抽样对数                       原始码 cos 均值          SK 码抽样对数          SK 码 cos 均值
+
+
+               0                  5,000                         0.6919           5,000                 0.6919
+
+
+               1                  5,000                         0.8164           5,000                 0.8164
+
+
+               2                  5,000                         0.9109           5,000                 0.9161
+
+
+               3                  2,314                         0.9631            49                   0.9379
+
+
+
+
+08             如何解读前缀分组
+LCP 是从第一层开始连续相同的码字层数，范围 0-3；码字数字只是类别标识，没有“编号差越小越相近”的含义。LCP=3 代表
+完整三层语义码相同；身份后缀被排除。
+
+
+
+
+两组编码分别抽样，不能当作同一组配对数据。若 LCP=3 没有不同清洗文本的商品对，则显示无样本；样本不足时不补造数据
+。下一页用保持码本占用的置换对照检验近邻共享前缀的份额。
+
+
+
+
+MiniOneRec          |   Video Games   |   SID Validation                                                            4 / 9
+          前缀邻域共享率与码本占用
+          置换对照保持每个码字的占用量                                     |   参照原向量余弦 Top10 邻域
+
+
+
+          09             验证查询的邻居共享前缀份额
+
+                      100%                                                                    原始码：观察值                    SK 码：观察值
+                                                                                              原始码：置换区间/均值                SK 码：置换区间/均值
+原向量 Top10 邻居共享前缀的份额
+
+
+
+
+                       80%
+
+
+                       60%
+
+
+                       40%
+
+
+                       20%
+
+
+                        0%
+                                         前 1 层                                        前 2 层                                  前 3 层
+
+          区间为 100 次置换的经验 2.5-97.5 百分位，不是观察值的置信区间。
+
+
+
+                        前缀层数                    原始观察                  null 97.5%   超过 null?    SK 观察           null 97.5%      超过 null?
+
+
+                             1                   63.27%                 1.15%         是         63.27%           1.15%            是
+
+
+                             2                   13.17%                 0.04%         是         13.17%           0.04%            是
+
+
+                             3                    1.90%                 0.01%         是         0.05%            0.00%            是
+
+
+
+
+          10             每个码字被多少商品使用？
+
+                 原始 1层                                                                                                                    6
+
+                 原始 2层                                                                                                                    5
+                                                                                                                                              log(1+商品数)
+
+
+
+
+                 原始 3层                                                                                                                    4
+
+                      SK 1层                                                                                                               3
+                      SK 2层                                                                                                               2
+                      SK 3层                                                                                                               1
+                                 0                               64                   128                192                     255
+                                                                         码字编号（0-255，仅标识，无连续数值距离）
+
+
+          SK 第1层使用 142/256 码字、114 个未使用；后两层使用 256/256、256/256。白色为未使用。
+
+
+
+
+          MiniOneRec                 |   Video Games   |   SID Validation                                                               5 / 9
+     输入扰动稳定性与编码示例
+     稳定性测试使用原始最近码字三层语义码；排除身份后缀
+
+
+
+     11            轻微输入变化后，语义前缀是否保持？
+
+             100%
+
+
+              80%
+验证商品前缀保持份额
+
+
+
+
+              60%
+
+
+              40%
+
+
+              20%
+
+                           前 1 层保持                 前 2 层保持               前 3 层保持
+               0%
+                     0.5%                                    1.0%                                                  2.0%
+                                                                       噪声 L2 / 原向量 L2
+     使用 1,653 件验证商品；独立高斯方向被缩放到指定相对 L2 幅度。每个幅度仅 1 次随机实现，seed=2024；没有估计置信区
+     间。SK 调整码依赖目录级碰撞处理，此处没有将其作为扰动稳定性基线。
+
+
+
+
+     12            预定义锚点的三层语义编码
+
+             商品 ID                                  完整商品标题                                 原始三层码           SK 调整三层码
+
+
+               3                       Logitech Dual Action Game Pad USB                  [97, 98, 123]    [97, 98, 123]
+
+
+               217        Turtle Beach Call of Duty: Ghosts Ear Force Shadow Limited
+                                  Edition Gaming Headset -Microsoft Xbox 360              [214, 205, 2]    [214, 205, 2]
+
+
+               271       Logitech G602 Lag-Free Wireless Gaming Mouse - 11 Programmable
+                                            Buttons, Up to 2500 DPI                       [12, 19, 222]     [12, 19, 0]
+
+
+               72            Razer Lycosa Mirror Gaming Keyboard - Special Edition        [12, 226, 206]   [12, 226, 206]
+
+
+               7                                 Super Mario Galaxy                       [117, 76, 1]     [117, 76, 1]
+
+
+               89                          Call of Duty: Ghosts - Xbox One                [30, 100, 250]   [30, 100, 4]
+
+
+
+
+     表中只展示前三层语义码，最终完整 SID 另加 <d_...> 身份后缀。同前缀只是类别化的编码一致；码字编号的大小差不构成商
+     品距离。
+
+
+
+
+     MiniOneRec      |   Video Games   |    SID Validation                                                                  6 / 9
+原始与重构近邻对照
+元数据预定义锚点；逐列完整 Top5，保留同标题和近重复版本
+
+
+
+商品 ID 3          | Logitech Dual Action Game Pad USB
+
+#        原始商品向量                                        原始三层码重构                                       SK 调整码重构
+
+1        ID 9712 | 原始 cos 0.912                        ID 15917 | 原始 cos 0.905                       ID 15917 | 原始 cos 0.905
+         SQDeal USB Dual Shock Joystick Gamepad        SQDeal 2 Pack USB GamePad Joypad Double       SQDeal 2 Pack USB GamePad Joypad Double
+         Gaming Controller [Double Vibration           Dual Shock Gaming Controller Joystick for     Dual Shock Gaming Controller Joystick for
+         Feedback Motors] for PC Computer Laptop       PC Computer Laptop Windows [Video Game]       PC Computer Laptop Windows [Video Game]
+         Window (Black)
+
+2        ID 15917 | 原始 cos 0.905                       ID 13690 | 原始 cos 0.883                       ID 13690 | 原始 cos 0.883
+         SQDeal 2 Pack USB GamePad Joypad Double       Donop(R) USB Pc Computer Vibration Shock      Donop(R) USB Pc Computer Vibration Shock
+         Dual Shock Gaming Controller Joystick for     Wired Gamepad Game Controller Joystick Game   Wired Gamepad Game Controller Joystick Game
+         PC Computer Laptop Windows [Video Game]       Pad Includes Donop Black Wrist Band           Pad Includes Donop Black Wrist Band
+
+3        ID 9989 | 原始 cos 0.885                        ID 9712 | 原始 cos 0.912                        ID 9712 | 原始 cos 0.912
+         Logitech Precision Gamepad                    SQDeal USB Dual Shock Joystick Gamepad        SQDeal USB Dual Shock Joystick Gamepad
+                                                       Gaming Controller [Double Vibration           Gaming Controller [Double Vibration
+                                                       Feedback Motors] for PC Computer Laptop       Feedback Motors] for PC Computer Laptop
+                                                       Window (Black)                                Window (Black)
+
+4        ID 13690 | 原始 cos 0.883                       ID 12981 | 原始 cos 0.865                       ID 12981 | 原始 cos 0.865
+         Donop(R) USB Pc Computer Vibration Shock      Cyber Snipa Game Pad V2 Black                 Cyber Snipa Game Pad V2 Black
+         Wired Gamepad Game Controller Joystick Game
+         Pad Includes Donop Black Wrist Band
+
+5        ID 13484 | 原始 cos 0.882                       ID 13293 | 原始 cos 0.876                       ID 11748 | 原始 cos 0.819
+         SlickBlue Wireless Bluetooth Game Pad         Third Party Made Red Wired USB Pad Joypad     Tronsmart Mars G01 2.4G Wireless Game
+         Controller For Sony Playstation 3 -           Game Controller For MICROSOFT Xbox 360 PC     Controller Gamepad for Android Cell
+         Black-Orange                                  Windows                                       Phone/PS3/Android Tablet PC/MINI PC/Android
+                                                                                                     TV BOX
+
+
+
+
+商品 ID 7          | Super Mario Galaxy
+
+#        原始商品向量                                        原始三层码重构                                       SK 调整码重构
+
+1        ID 4161 | 原始 cos 0.959                        ID 4161 | 原始 cos 0.959                        ID 4161 | 原始 cos 0.959
+         Nintendo Selects: Super Mario Galaxy 2        Nintendo Selects: Super Mario Galaxy 2        Nintendo Selects: Super Mario Galaxy 2
+
+2        ID 940 | 原始 cos 0.957                         ID 1268 | 原始 cos 0.890                        ID 1268 | 原始 cos 0.890
+         Super Mario Galaxy (Nintendo Selects)         Super Princess Peach                          Super Princess Peach
+
+3        ID 1332 | 原始 cos 0.924                        ID 1817 | 原始 cos 0.920                        ID 7086 | 原始 cos 0.890
+         Super Paper Mario                             Super Paper Mario (Nintendo Selects)          Mario Pinball Land
+
+4        ID 1817 | 原始 cos 0.920                        ID 1332 | 原始 cos 0.924                        ID 5404 | 原始 cos 0.873
+         Super Paper Mario (Nintendo Selects)          Super Paper Mario                             Wario Land: Super Mario Land 3
+
+5        ID 1192 | 原始 cos 0.917                        ID 7086 | 原始 cos 0.890                        ID 940 | 原始 cos 0.957
+         Super Mario Bros.                             Mario Pinball Land                            Super Mario Galaxy (Nintendo Selects)
+
+
+
+
+各列按各自空间的 cos 排名；单元格 cos 是近邻与锚点在原始商品向量空间的相似度。
+
+
+
+MiniOneRec   |   Video Games   |   SID Validation                                                                                              7 / 9
+方法、质量边界与复现文件
+完整 JSON 和 CSV 保留所有查询、分组与阶段统计
+
+
+
+13    质量诊断
+没有触发预定义质量告警。该结论只适用于已计算的诊断；量化仍有损，碰撞调整后的邻域保持率也可能下降，不表示每项指
+标都改善。
+
+14    训练与留出边界
+14,919 件训练商品、1,653 件验证商品；相同清洗后标题和描述归为同组，两集相同文本重叠为 0。初始化只用训练商品，验
+证集不参与梯度训练。完整 SID 的去重后缀只用于身份区分。
+
+
+15    邻域与前缀口径
+全库余弦近邻排除自身。重构邻域参照原始 2560 维向量；量化潜空间邻域参照编码器 32 维连续表示。各自计算 TopK 交集
+数量 / K，两种参照不能直接比较优劣。前缀置换保持码字占用，复用固定原向量近邻；经验区间不是观察值的置信区间。
+
+
+16    解释限制
+相同标题和近重复商品可能提高近邻指标。类别弱标签只覆盖四类商品子集，包含类别噪声。三层前缀全唯一时，共享率恒为
+零、没有鉴别力；不据此宣称语义好或坏。轻微噪声可能跨越量化边界；单次噪声测试不提供总体置信区间。
+
+
+17    结构通过不等于下游效果
+结构检查覆盖输入形状/数值、数据划分、ID 与编码对齐、码字范围、从 checkpoint 复现原始编码以及最终四 token 唯一性
+。重构、近邻和前缀诊断没有使用用户推荐准确率，不替代 SFT/RL 或人工相关性评测。
+
+
+18    来源 SHA-256
+选中 RQ-VAE 权重
+5962275fc0da6ac77aafc577d267f24edbeae6153a97d4ff675b4a96f5a6324d
+
+
+商品向量
+5db0987422bb66f5d8c4aca8a0014a8294feaeb1d4574b272e401995a070374a
+
+
+最终完整 SID
+ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f
+
+
+全部统计与原始表格：sid_validation.json 和同目录 CSV；来源路径见报告 manifest。
+
+
+
+
+MiniOneRec   |   Video Games   |   SID Validation                     8 / 9
+诊断设计参考文献
+参考初始化、前缀语义和多维诊断；不是对所有论文算法的完整复现
+
+
+
+TIGER - NeurIPS 2023
+https://arxiv.org/html/2305.05065v3#S3.SS1
+
+
+KMeans 初始化、语义前缀及追加区分 token 的思路。本文检查三层语义码与身份后缀的不同作用。
+
+
+
+
+MiniOneRec
+https://arxiv.org/html/2510.24431v1#S3.SS2
+
+
+RQ-VAE 构建商品语义 ID 的项目流程。本文沿用原结构，并记录训练、碰撞和语义质量诊断。
+
+
+
+
+Purely Semantic Indexing
+https://arxiv.org/html/2509.16446v1
+
+
+帮助理解身份后缀的非语义属性及其取舍；本文没有完整复现该文算法。
+
+
+
+
+DRQ diagnostics
+https://arxiv.org/html/2606.01844v1
+
+
+借鉴几何结构、码本占用和扰动鲁棒性的多维诊断视角；本文不是该算法或通用标准的完整复现。
+
+
+
+
+这些参考资料支持诊断设计的背景解释。本文报告的具体阈值、抽样和置换次数由本次脚本定义；不据此宣称符合某个统一质
+量标准，也不以商品内容诊断替代用户推荐评测。
+
+
+
+
+MiniOneRec   |   Video Games   |   SID Validation         9 / 9
+

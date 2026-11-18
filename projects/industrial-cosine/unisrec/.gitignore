@@ -1,0 +1,6 @@
+__pycache__/
+log/
+log_tensorboard/
+prepared/
+.pytest_cache/
+*.pyc

@@ -1,0 +1,1781 @@
+{
+  "format_version": 1,
+  "status": "passed",
+  "generated_at_utc": "2026-11-17T09:25:22.820355+00:00",
+  "dataset": "Industrial_and_Scientific",
+  "model": "Qwen2.5-0.5B Base",
+  "source_model_identity_sha256": "ff170b0115ab6b9c2d872ad7e3a234fbd1efbefa2a5a8aa8dc7131cee40ee79a",
+  "task_counts": {
+    "sid_sequence_recommendation": 36259,
+    "history_to_title": 36259,
+    "sid2title": 3670,
+    "title2sid": 3646,
+    "title_history_to_sid": 36259
+  },
+  "train_samples": 116093,
+  "shared_hyperparameters": {
+    "world_size": 4,
+    "micro_batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "global_batch_size": 64,
+    "learning_rate": 0.0003,
+    "warmup_steps": 20,
+    "lr_scheduler_type": "linear",
+    "cutoff_len": 512,
+    "max_grad_norm": 1.0,
+    "bf16": true,
+    "gradient_checkpointing": true,
+    "attn_implementation": "sdpa",
+    "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+    "seed": 42,
+    "early_stopping_patience": 3,
+    "eval_save_fraction": 0.05,
+    "generative_validation": false,
+    "generation_batch_size": 4,
+    "generation_num_beams": 50,
+    "model_selection_metric": "eval_loss",
+    "monitor_window": 100,
+    "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+  },
+  "epochs3": {
+    "label": "3 epoch 计划：验证 loss 最佳模型",
+    "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft",
+    "model_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint",
+    "evaluation_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/evaluation",
+    "maximum_epochs": 3,
+    "achieved_epoch": 3.0,
+    "global_step": 5442,
+    "stop_reason": "max_epochs",
+    "selected_epoch": 2.8594266813671445,
+    "selected_step": 5187,
+    "selection": "best_validation_loss",
+    "best_validation_loss": 1.560733675956726,
+    "test_metrics": {
+      "HR@1": 0.0485329803662034,
+      "NDCG@1": 0.0485329803662034,
+      "HR@3": 0.07544672402382528,
+      "NDCG@3": 0.06389617554284496,
+      "HR@5": 0.09419810280167659,
+      "NDCG@5": 0.07164325251344235,
+      "HR@10": 0.12949481579527908,
+      "NDCG@10": 0.08300085599636473,
+      "HR@20": 0.16479152878888154,
+      "NDCG@20": 0.09190191960470526,
+      "HR@50": 0.22104566512243548,
+      "NDCG@50": 0.10308449676418517
+    },
+    "prediction_sha256": "e5ce1b6f4d0dbfe6429b8d475ffad5445b18b4a55d96c51eee78c4142520920f"
+  },
+  "epochs5": {
+    "label": "5 epoch 计划：验证 loss 最佳模型",
+    "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft",
+    "model_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint",
+    "evaluation_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/evaluation",
+    "maximum_epochs": 5,
+    "achieved_epoch": 5.0,
+    "global_step": 9070,
+    "stop_reason": "max_epochs",
+    "selected_epoch": 4.755237045203969,
+    "selected_step": 8626,
+    "selection": "best_validation_loss",
+    "best_validation_loss": 1.5791301727294922,
+    "test_metrics": {
+      "HR@1": 0.03242885506287227,
+      "NDCG@1": 0.03242885506287227,
+      "HR@3": 0.05537171850871388,
+      "NDCG@3": 0.045488889575651864,
+      "HR@5": 0.07015221707478492,
+      "NDCG@5": 0.051535469238840746,
+      "HR@10": 0.0986101919258769,
+      "NDCG@10": 0.06073099208262272,
+      "HR@20": 0.12949481579527908,
+      "NDCG@20": 0.06850061173909633,
+      "HR@50": 0.19192587690271343,
+      "NDCG@50": 0.08078479164609302
+    },
+    "prediction_sha256": "13f7a7b37b028d04f12cb2cf9534816f06d5f03fb8bf7869772c2708c84b2524"
+  },
+  "epoch3_snapshot": {
+    "label": "5 epoch 计划：第 3 epoch 即时权重",
+    "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft",
+    "model_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint",
+    "evaluation_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/evaluation_epoch3",
+    "maximum_epochs": 5,
+    "achieved_epoch": 5.0,
+    "global_step": 9070,
+    "stop_reason": "max_epochs",
+    "selected_epoch": 3.0,
+    "selected_step": 5442,
+    "selection": "actual_epoch_end_training_weights",
+    "best_validation_loss": null,
+    "test_metrics": {
+      "HR@1": 0.04015001103022281,
+      "NDCG@1": 0.04015001103022281,
+      "HR@3": 0.06618133686300463,
+      "NDCG@3": 0.05510088098153261,
+      "HR@5": 0.07897639532318552,
+      "NDCG@5": 0.06036005213671615,
+      "HR@10": 0.10522832561217736,
+      "NDCG@10": 0.06884939016460621,
+      "HR@20": 0.14162806088682992,
+      "NDCG@20": 0.0779494616440079,
+      "HR@50": 0.20339730862563424,
+      "NDCG@50": 0.09012265551698147
+    },
+    "prediction_sha256": "773777b023c41cfe0d3fb2ec3a1fa4a124b3c2e0e508d7cad97a87675e5c24f9",
+    "snapshot_metadata": {
+      "format_version": 1,
+      "snapshot_type": "epoch_end_training_weights",
+      "capture_event": "on_epoch_end",
+      "requested_epoch": 3,
+      "epoch": 3.0,
+      "global_step": 5442,
+      "steps_per_epoch": 1814.0,
+      "checkpoint_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint",
+      "best_model_reloaded": false,
+      "created_at_utc": "2026-11-17T08:56:52.039505+00:00"
+    }
+  },
+  "protocol": {
+    "scope": "complete_original_test_split",
+    "test_rows": 4533,
+    "catalog_items": 3686,
+    "unique_sids": 3670,
+    "num_beams": 50,
+    "prompt_style": "original-eval",
+    "validation_prompt_style": "training",
+    "model_selection": "Validation loss only; ranking metrics are computed after training",
+    "metric_semantics": "Original SID-level matching. Item IDs sharing a SID are indistinguishable; coldness is based on item IDs, not SID strings."
+  },
+  "metrics": [
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.0485329803662034,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.07544672402382528,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.09419810280167659,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.12949481579527908,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.16479152878888154,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.22104566512243548,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.0485329803662034,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.06389617554284496,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.07164325251344235,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.08300085599636473,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.09190191960470526,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.10308449676418517,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.050159598723210214,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.07797537619699042,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.09735522115823074,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.13383492932056543,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.17031463748290013,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.22822617419060648,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.050159598723210214,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.06603770263012225,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.07404442855527454,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.0857826904312634,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.0949820797008958,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.106497431600297,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.006802721088435374,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.0012536655316238514,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.031058716844253004,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.05486284289276808,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.07322602584447971,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.10768533212423487,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.14327816821582406,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.20086148265699388,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.031058716844253004,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.04450427276937553,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.05207507160760358,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.06318641457089709,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.07216135692311028,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.08360902485374481,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.020635673624288427,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.04032258064516129,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.05763757115749526,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.08918406072106262,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.12167931688804554,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.17647058823529413,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.020635673624288427,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.03175240035494061,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.038908116665431806,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.04903762779673792,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.05722735106823277,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs3",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.06811907713435635,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.03242885506287227,
+      "difference_percentage_points_vs_epochs3": -1.6104125303331127
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.05537171850871388,
+      "difference_percentage_points_vs_epochs3": -2.0075005515111406
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.07015221707478492,
+      "difference_percentage_points_vs_epochs3": -2.4045885726891676
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.0986101919258769,
+      "difference_percentage_points_vs_epochs3": -3.0884623869402175
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.12949481579527908,
+      "difference_percentage_points_vs_epochs3": -3.529671299360246
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.19192587690271343,
+      "difference_percentage_points_vs_epochs3": -2.9119788219722054
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.03242885506287227,
+      "difference_percentage_points_vs_epochs3": -1.6104125303331127
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.045488889575651864,
+      "difference_percentage_points_vs_epochs3": -1.8407285967193099
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.051535469238840746,
+      "difference_percentage_points_vs_epochs3": -2.01077832746016
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.06073099208262272,
+      "difference_percentage_points_vs_epochs3": -2.2269863913742007
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.06850061173909633,
+      "difference_percentage_points_vs_epochs3": -2.3401307865608927
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.08078479164609302,
+      "difference_percentage_points_vs_epochs3": -2.2299705118092152
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.033515731874145006,
+      "difference_percentage_points_vs_epochs3": -1.6643866849065208
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.05722754217966256,
+      "difference_percentage_points_vs_epochs3": -2.074783401732786
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.07250341997264022,
+      "difference_percentage_points_vs_epochs3": -2.485180118559052
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.10191518467852258,
+      "difference_percentage_points_vs_epochs3": -3.191974464204285
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.13383492932056543,
+      "difference_percentage_points_vs_epochs3": -3.64797081623347
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.19790241678066575,
+      "difference_percentage_points_vs_epochs3": -3.032375740994073
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.033515731874145006,
+      "difference_percentage_points_vs_epochs3": -1.6643866849065208
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.047013483001922,
+      "difference_percentage_points_vs_epochs3": -1.902421962820025
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.05326271820785798,
+      "difference_percentage_points_vs_epochs3": -2.0781710347416564
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.06276643572971473,
+      "difference_percentage_points_vs_epochs3": -2.3016254701548666
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.07079645987535879,
+      "difference_percentage_points_vs_epochs3": -2.4185619825537006
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.0833993970488583,
+      "difference_percentage_points_vs_epochs3": -2.309803455143869
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.013605442176870748,
+      "difference_percentage_points_vs_epochs3": 0.6802721088435374
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.0027735039146064592,
+      "difference_percentage_points_vs_epochs3": 0.1519838382982608
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.022670596236681023,
+      "difference_percentage_points_vs_epochs3": -0.8388120607571982
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.041713897075493084,
+      "difference_percentage_points_vs_epochs3": -1.3148945817274993
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.05486284289276808,
+      "difference_percentage_points_vs_epochs3": -1.8363182951711632
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.08138744048968488,
+      "difference_percentage_points_vs_epochs3": -2.6297891634549986
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.11131262752210383,
+      "difference_percentage_points_vs_epochs3": -3.1965540693720236
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.17320335524824304,
+      "difference_percentage_points_vs_epochs3": -2.7658127408750843
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.022670596236681023,
+      "difference_percentage_points_vs_epochs3": -0.8388120607571982
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.033409231443307555,
+      "difference_percentage_points_vs_epochs3": -1.1095041326067978
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.03877412100193172,
+      "difference_percentage_points_vs_epochs3": -1.330095060567186
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.04738138147678124,
+      "difference_percentage_points_vs_epochs3": -1.580503309411585
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.05492995045676034,
+      "difference_percentage_points_vs_epochs3": -1.7231406466349934
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.06710540873624604,
+      "difference_percentage_points_vs_epochs3": -1.6503616117498774
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.015891840607210626,
+      "difference_percentage_points_vs_epochs3": -0.47438330170778004
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.033681214421252374,
+      "difference_percentage_points_vs_epochs3": -0.6641366223908916
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.04601518026565465,
+      "difference_percentage_points_vs_epochs3": -1.162239089184061
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.07210626185958255,
+      "difference_percentage_points_vs_epochs3": -1.7077798861480074
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.10128083491461101,
+      "difference_percentage_points_vs_epochs3": -2.0398481973434524
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.16105313092979126,
+      "difference_percentage_points_vs_epochs3": -1.5417457305502869
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.015891840607210626,
+      "difference_percentage_points_vs_epochs3": -0.47438330170778004
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.02593557895686523,
+      "difference_percentage_points_vs_epochs3": -0.5816821398075381
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.03097726859111719,
+      "difference_percentage_points_vs_epochs3": -0.7930848074314618
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.03942197392431798,
+      "difference_percentage_points_vs_epochs3": -0.9615653872419937
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.04675650095153702,
+      "difference_percentage_points_vs_epochs3": -1.0470850116695747
+    },
+    {
+      "arm": "epochs5",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.05849760472942936,
+      "difference_percentage_points_vs_epochs3": -0.9621472404926987
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.04015001103022281,
+      "difference_percentage_points_vs_epochs3": -0.8382969335980588
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.06618133686300463,
+      "difference_percentage_points_vs_epochs3": -0.9265387160820648
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.07897639532318552,
+      "difference_percentage_points_vs_epochs3": -1.5221707478491067
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.10522832561217736,
+      "difference_percentage_points_vs_epochs3": -2.4266490183101714
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.14162806088682992,
+      "difference_percentage_points_vs_epochs3": -2.316346790205162
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.20339730862563424,
+      "difference_percentage_points_vs_epochs3": -1.7648356496801243
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.04015001103022281,
+      "difference_percentage_points_vs_epochs3": -0.8382969335980588
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.05510088098153261,
+      "difference_percentage_points_vs_epochs3": -0.8795294561312352
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.06036005213671615,
+      "difference_percentage_points_vs_epochs3": -1.12832003767262
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.06884939016460621,
+      "difference_percentage_points_vs_epochs3": -1.4151465831758512
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.0779494616440079,
+      "difference_percentage_points_vs_epochs3": -1.3952457960697355
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "overall",
+      "rows": 4533,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.09012265551698147,
+      "difference_percentage_points_vs_epochs3": -1.2961841247203703
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.04149566803465572,
+      "difference_percentage_points_vs_epochs3": -0.8663930688554491
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.06839945280437756,
+      "difference_percentage_points_vs_epochs3": -0.957592339261286
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.0816233470132239,
+      "difference_percentage_points_vs_epochs3": -1.5731874145006848
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.10875512995896033,
+      "difference_percentage_points_vs_epochs3": -2.5079799361605093
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.146374829001368,
+      "difference_percentage_points_vs_epochs3": -2.3939808481532125
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.21021431828545373,
+      "difference_percentage_points_vs_epochs3": -1.8011855905152752
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.04149566803465572,
+      "difference_percentage_points_vs_epochs3": -0.8663930688554491
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.05694762733453883,
+      "difference_percentage_points_vs_epochs3": -0.9090075295583422
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.06238306346003974,
+      "difference_percentage_points_vs_epochs3": -1.1661365095234806
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.07115692786506154,
+      "difference_percentage_points_vs_epochs3": -1.462576256620185
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.08056199490020241,
+      "difference_percentage_points_vs_epochs3": -1.4420084800693387
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_warm",
+      "rows": 4386,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.09314318227507455,
+      "difference_percentage_points_vs_epochs3": -1.3354249325222445
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": -0.6802721088435374
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": 0.0
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "behavior_cold",
+      "rows": 147,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.0,
+      "difference_percentage_points_vs_epochs3": -0.12536655316238515
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.02629789163454999,
+      "difference_percentage_points_vs_epochs3": -0.4760825209703015
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.049648605758331445,
+      "difference_percentage_points_vs_epochs3": -0.5214237134436632
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.060983903876671956,
+      "difference_percentage_points_vs_epochs3": -1.2242121967807753
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.08705508954885513,
+      "difference_percentage_points_vs_epochs3": -2.0630242575379736
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.12242121967807754,
+      "difference_percentage_points_vs_epochs3": -2.085694853774653
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.18476535932895036,
+      "difference_percentage_points_vs_epochs3": -1.6096123328043528
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.02629789163454999,
+      "difference_percentage_points_vs_epochs3": -0.4760825209703015
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.03966515437623506,
+      "difference_percentage_points_vs_epochs3": -0.48391183931404746
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.04430855901997506,
+      "difference_percentage_points_vs_epochs3": -0.7766512587628518
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.05274664616451151,
+      "difference_percentage_points_vs_epochs3": -1.0439768406385581
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.0615754650914071,
+      "difference_percentage_points_vs_epochs3": -1.0585891831703178
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "not_repeat_last",
+      "rows": 4411,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.07386313753220225,
+      "difference_percentage_points_vs_epochs3": -0.9745887321542566
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 1,
+      "value": 0.014705882352941176,
+      "difference_percentage_points_vs_epochs3": -0.592979127134725
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 3,
+      "value": 0.03178368121442125,
+      "difference_percentage_points_vs_epochs3": -0.8538899430740037
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 5,
+      "value": 0.04198292220113852,
+      "difference_percentage_points_vs_epochs3": -1.5654648956356736
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 10,
+      "value": 0.06688804554079697,
+      "difference_percentage_points_vs_epochs3": -2.2296015180265654
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 20,
+      "value": 0.09962049335863378,
+      "difference_percentage_points_vs_epochs3": -2.2058823529411757
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "Recall",
+      "k": 50,
+      "value": 0.16152751423149905,
+      "difference_percentage_points_vs_epochs3": -1.4943074003795076
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 1,
+      "value": 0.014705882352941176,
+      "difference_percentage_points_vs_epochs3": -0.592979127134725
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 3,
+      "value": 0.024393833226314946,
+      "difference_percentage_points_vs_epochs3": -0.7358567128625666
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 5,
+      "value": 0.028557725417657723,
+      "difference_percentage_points_vs_epochs3": -1.0350391247774082
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 10,
+      "value": 0.03660759054258073,
+      "difference_percentage_points_vs_epochs3": -1.2430037254157187
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 20,
+      "value": 0.044792134891007335,
+      "difference_percentage_points_vs_epochs3": -1.2435216177225434
+    },
+    {
+      "arm": "epoch3_snapshot",
+      "stratum": "collision_free",
+      "rows": 4216,
+      "metric": "NDCG",
+      "k": 50,
+      "value": 0.05701360920646598,
+      "difference_percentage_points_vs_epochs3": -1.1105467927890362
+    }
+  ],
+  "interpretation": [
+    "Both runs start fresh from identical 0.5B Base weights and retain the complete title-history task mixture.",
+    "Three- and five-epoch linear plans have different decay trajectories; their epoch-3 weights are not interchangeable.",
+    "The epoch-3 snapshot contains live weights captured before validation-best model reload, not the five-epoch loss-best weights.",
+    "The shared evaluation fraction .05 yields approximately .15-epoch versus .25-epoch loss-validation intervals.",
+    "Maximum epochs, minimum epochs and the requested snapshot differ; all other recorded training hyperparameters match.",
+    "Final model selection uses validation loss only. The three post-training test evaluations do not select or alter models.",
+    "Positive differences are percentage-point improvements over the three-epoch run's loss-best model; one seed is descriptive."
+  ]
+}

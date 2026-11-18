@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-16T09:41:10.145771+00:00",
+  "source_paths": {
+    "metadata": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item.json",
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "train_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "test_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+    "run_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/run_config.json",
+    "accepted_evaluation": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/evaluation/metrics.json",
+    "previous_recognition_summary": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_summary.json",
+    "checkpoint_weights": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/model.safetensors",
+    "checkpoint_config": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/config.json",
+    "checkpoint_tokenizer": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer.json",
+    "dataset_implementation": "/mnt/ossdata/ziweizhao/MiniOneRec/data.py",
+    "constraint_implementation": "/mnt/ossdata/ziweizhao/MiniOneRec/LogitProcessor.py",
+    "diagnostic_script": "/mnt/ossdata/ziweizhao/MiniOneRec/tmp/cold_diagnostics_20261116/recognition_hot_full.py"
+  },
+  "source_sha256": {
+    "metadata": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7",
+    "sid_index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+    "train_interactions": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "test_interactions": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+    "run_config": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8",
+    "accepted_evaluation": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e",
+    "previous_recognition_summary": "cb22c9a40eb65c5812968cf68324bcd169d7e163c6683717d0cb119b91a9a701",
+    "checkpoint_weights": "b823c2cb400f83209a0801e64ca2c65b0729bfc52b64196936ee8fbdaed4f1b3",
+    "checkpoint_config": "a617fc4a26f3b0f0b8c28cf018cf49ab9dde80fa5f8be204a727a4654cfd97a8",
+    "checkpoint_tokenizer": "c00708d331f0a3efee070f4bc11a9ce699eea0a1cd69c7669070093436953c83",
+    "dataset_implementation": "fffd7e7e5bb5555693be0332795717bec1eaf037a01d8291af6335a14baa579d",
+    "constraint_implementation": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+    "diagnostic_script": "6491a44632a604514a2d84d77379578afd431cd4e702b4a5eca4066156da25de"
+  },
+  "model_dimensions": {
+    "atomic_sid_tokens": 657,
+    "tokenizer_size": 152322,
+    "model_vocabulary_size": 152322
+  },
+  "methodology": {
+    "task": "Known title -> complete SID identification.",
+    "selection": "All unique original test-target items whose original train-target frequency exceeds 100.",
+    "population": "522 distinct high-frequency test-target items; not all catalog items and not behavior-row-weighted.",
+    "prompt": "Original SidItemFeatDataset.pre(test=True) via previously validated make_datasets.",
+    "decoding": "Full 16572-item catalog, constrained beam10, full-vocabulary logsoftmax before mask, length_penalty0, complete SID+newline+EOS.",
+    "batch_size": 16,
+    "model_dtype": "bfloat16",
+    "training_performed": false,
+    "source_data_modified": false,
+    "accuracy_units": "fraction; multiply by 100 for percent"
+  },
+  "metrics": {
+    "items": 522,
+    "exact_top1_count": 120,
+    "exact_top1": 0.22988505747126436,
+    "exact_top10_count": 303,
+    "exact_top10": 0.5804597701149425,
+    "semantic_prefix3_top1_count": 120,
+    "semantic_prefix3_top1": 0.22988505747126436,
+    "semantic_prefix3_top10_count": 304,
+    "semantic_prefix3_top10": 0.5823754789272031,
+    "title_compatible_top1_count": 122,
+    "title_compatible_top1": 0.23371647509578544,
+    "title_compatible_top10_count": 308,
+    "title_compatible_top10": 0.5900383141762452
+  },
+  "canonical_only": {
+    "items": 488,
+    "exact_top1_count": 118,
+    "exact_top10_count": 295,
+    "exact_top1": 0.24180327868852458,
+    "exact_top10": 0.6045081967213115
+  },
+  "counts": {
+    "selected_items": 522,
+    "test_unique_target_items": 9174,
+    "noncanonical_titles": 34,
+    "ambiguous_title_items": 46,
+    "top1_behavior_cold_predictions": 1
+  },
+  "checks": {
+    "source_hashes_match_original_diagnostics": true,
+    "all_selected_train_frequency_gt100": true,
+    "all_predictions_valid_unique_catalog_SIDs": true,
+    "source_hashes_stable": true
+  },
+  "elapsed_seconds": 24.017530540004373
+}

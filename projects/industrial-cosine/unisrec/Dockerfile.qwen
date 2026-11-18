@@ -1,0 +1,7 @@
+FROM pytorch/pytorch:2.6.0-cuda12.4-cudnn9-devel
+WORKDIR /opt/unisrec
+COPY requirements-qwen.txt ./
+RUN python -m pip install --no-cache-dir -r requirements-qwen.txt
+COPY . .
+# Data is supplied separately; the default command only checks forward behavior.
+CMD ["python", "qwen_preflight.py"]

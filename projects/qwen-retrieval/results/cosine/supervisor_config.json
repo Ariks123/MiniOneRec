@@ -1,0 +1,29 @@
+{
+  "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft",
+  "report_root": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey",
+  "container": "minionerec-h20-industrial-enddonkey",
+  "image": "minionerec:h20-sft-monitor",
+  "category": "Industrial_and_Scientific",
+  "base_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+  "expected_sid_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+  "world_size": 4,
+  "num_epochs": 3,
+  "learning_rate": 0.0003,
+  "global_batch_size": 64,
+  "micro_batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "lr_scheduler_type": "cosine",
+  "history_max": 10,
+  "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+  "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+  "reference_sft_sha256": "205979dcf7e18ed0f93b6cda28548c58068d8bebeb9209f39f1b2ca5b976fc43",
+  "reference_readme_sha256": "97ce7d1d8a664c590772b964f45fd0b6f4b60f3baec43f9cfff7dc70489eca02",
+  "runtime_data_source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data.py",
+  "adaptation_notes": [
+    "README reported 0.5B Base is replaced by the user-authorized 1.5B Base.",
+    "Global batch 64 and three epochs follow the reported reproduction; four GPUs use micro batch 8 and accumulation 2.",
+    "Cosine is explicitly selected to follow README; checked-in source leaves the scheduler at Transformers default linear.",
+    "Original data tasks and original evaluation prompt are retained; DDP/ZeRO-2, monitoring, provenance, complete coverage and explicit constrained-decoding boundaries are compatibility adapters."
+  ],
+  "rl_enabled": false
+}

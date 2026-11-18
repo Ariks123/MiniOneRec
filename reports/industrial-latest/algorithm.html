@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>算法报告 · Amazon Reviews 2018 · Industrial and Scientific</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="top" aria-label="报告导航">
+<div class="frame">
+<a href="index.html">报告总览</a>
+<a href="algorithm.html" aria-current="page">算法报告</a>
+<a href="training.html">训练报告</a>
+<a href="validation.html">验证报告</a>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="frame">
+<p class="dataset">Amazon Reviews 2018 · <span>Industrial and Scientific</span></p>
+<h1>算法报告</h1>
+<p class="summary">UniSRec 根据历史草拟商品，Qwen 验证候选的完整语义 ID，并在席位不足时生成商品补位。</p>
+</div>
+</header>
+<main class="frame">
+<nav class="toc" aria-label="章节目录">
+  <p class="toc-title">目录</p>
+  <ol>
+    <li><a href="#algorithm-overview">总体架构与训练阶段</a></li>
+    <li><a href="#algorithm-data">数据切分与商品目录</a></li>
+    <li><a href="#algorithm-rqvae">RQ-VAE 与商品语义 ID</a></li>
+    <li><a href="#algorithm-sft">Qwen 模型与 SFT、GRPO 训练</a></li>
+    <li><a href="#algorithm-unisrec">UniSRec 检索模型</a></li>
+    <li><a href="#algorithm-inference">联合投机推理流程</a></li>
+  </ol>
+</nav>
+<section>
+<h2 id="algorithm-overview">总体架构与训练阶段</h2>
+<p>给定按时间排列的商品历史，系统要输出最多 K 件下一步可能交互的商品。UniSRec 在全目录中快速找到候选，Qwen 根据历史对每个候选的完整语义 ID（SID）打分。两条模型链路使用同一份商品目录，将检索到的商品 ID、生成的 SID 和最终排序对应起来。</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th scope="col">训练路径</th><th scope="col">离线产物</th><th scope="col">推理时的用途</th></tr></thead>
+  <tbody>
+    <tr><td>RQ-VAE 商品编码</td><td>商品 ID 与三位 SID 的一一映射</td><td>把用户历史和候选商品转换为 Qwen 能读取的 token。</td></tr>
+    <tr><td>Qwen 监督微调与 GRPO</td><td>从 SFT 权重继续训练的策略模型</td><td>验证候选的完整 SID，必要时按目录约束生成商品补位。</td></tr>
+    <tr><td>UniSRec 检索训练</td><td>历史编码器与全目录商品向量</td><td>按用户历史向量和商品向量的内积草拟候选。</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+
+<section>
+<h2 id="algorithm-data">数据切分与商品目录</h2>
+<p>工业品目录含 3,686 件商品。每条请求以最近 1–10 件历史商品预测下一件商品。固定切分包含 36,259 条训练请求、4,532 条验证请求和 4,533 条测试请求。</p>
+<p>训练历史或训练目标中出现过的 3,647 件商品归为暖商品，其余 39 件为冷商品。测试集的 147 条请求以冷商品为目标。冷暖分组按交互可见性确定，冷商品仍可凭文本向量进入推理目录。</p>
+</section>
+
+<section>
+<h2 id="algorithm-rqvae">RQ-VAE 与商品语义 ID</h2>
+<p>RQ-VAE 将每件商品的 2,560 维文本向量压缩为三个离散码。3,280 件暖商品用于计算中心化均值并训练量化器，另用 367 件暖商品的重建均方误差（MSE）选择权重。模型冻结后为全目录编码，包括 39 件冷商品。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th scope="col">组件</th><th scope="col">模型架构</th></tr></thead>
+<tbody>
+<tr><td>编码器</td><td>对中心化特征做 MLP 投影，维度 2,560 → 2,048 → 1,024 → 512 → 256 → 128 → 64 → 32。隐藏层使用 ReLU。</td></tr>
+<tr><td>残差量化器</td><td>三层依次量化残差。每层 256 个 32 维码向量，逐层做 K-means 初始化。</td></tr>
+<tr><td>解码器</td><td>输入是三层码向量之和，镜像 MLP 维度 32 → 64 → 128 → 256 → 512 → 1,024 → 2,048 → 2,560，最后加回均值。</td></tr>
+</tbody>
+</table></div>
+<h3>从残差到唯一 SID</h3>
+<p>编码器将中心化后的商品向量映射到 32 维。第一级选择距输入最近的码向量，扣除它之后，把剩余的误差向量交给下一级。三个码的下标依次构成 SID。下式中，<var>r</var> 是残差，<var>e</var> 是码向量，<var>j</var> 是选中的码下标。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="中心化编码，逐层寻找与残差最近的码">
+<mrow>
+  <msub><mi>r</mi><mn>0</mn></msub><mo>=</mo><mi>E</mi><mo>(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><mo>)</mo>
+  <mo>,</mo><mspace width="1em"/>
+  <msub><mi>j</mi><mi>ℓ</mi></msub><mo>=</mo><munder><mi mathvariant="normal">arg min</mi><mi>j</mi></munder>
+  <msup><mrow><mo>‖</mo><msub><mi>r</mi><mrow><mi>ℓ</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>e</mi><mrow><mi>ℓ</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>‖</mo></mrow><mn>2</mn></msup>
+</mrow></math></div>
+<p>第 1,100 轮的暖商品重建误差最低。导出时固定前两位，在同一前缀内保留已唯一的第三位编码，再将冲突商品与剩余第三位码一一匹配，使分配后的残差平方距离之和最小。三层分别使用 64、227、256 个码，最终 3,686 件商品各有一个唯一的三位 SID。</p>
+</section>
+
+<section>
+<h2 id="algorithm-sft">Qwen 模型与 SFT、GRPO 训练</h2>
+<h3>生成与验证共用的解码器</h3>
+<p>Qwen2.5-0.5B 使用 24 层因果 Transformer，隐藏宽度为 896。每层采用 14 个查询头、2 个键值头的分组查询注意力，配合 RoPE 位置编码、RMSNorm 和中间宽度为 4,864 的 SwiGLU 前馈网络。输入词嵌入与输出投影共享权重，扩充 SID 后的词表含 152,212 个 token。</p>
+<h3>多任务监督微调</h3>
+<p>SFT 联合学习下一商品预测与标题、SID 之间的转换。模型根据提示 <var>x</var> 和已有答案前缀预测下一个答案 token。掩码 <var>m</var> 选出有效答案位置，损失在这些位置取平均。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="SFT 损失等于有效答案 token 的平均条件负对数概率">
+<mrow>
+  <msub><mi>ℒ</mi><mtext>SFT</mtext></msub><mo>=</mo><mo>−</mo>
+  <mfrac>
+    <mrow><munder><mo>∑</mo><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></munder>
+      <msub><mi>m</mi><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></msub>
+      <mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>θ</mi></msub>
+      <mo>(</mo><msub><mi>y</mi><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>∣</mo>
+      <msub><mi>x</mi><mi>b</mi></msub><mo>,</mo><msub><mi>y</mi><mrow><mi>b</mi><mo>,</mo><mo>&lt;</mo><mi>t</mi></mrow></msub><mo>)</mo>
+    </mrow>
+    <mrow><munder><mo>∑</mo><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></munder>
+      <msub><mi>m</mi><mrow><mi>b</mi><mo>,</mo><mi>t</mi></mrow></msub></mrow>
+  </mfrac>
+</mrow></math></div>
+<div class="table-wrap"><table>
+<thead>
+<tr><th scope="col">输入</th><th scope="col">监督目标</th><th scope="col">训练样本</th></tr></thead>
+<tbody>
+<tr><td>历史 SID</td><td>下一商品 SID</td><td>36,259</td></tr>
+<tr><td>历史 SID</td><td>下一商品标题</td><td>36,259</td></tr>
+<tr><td>商品 SID</td><td>商品标题</td><td>3,686</td></tr>
+<tr><td>商品标题</td><td>商品 SID</td><td>3,646</td></tr>
+<tr><td>历史商品标题</td><td>下一商品 SID</td><td>36,259</td></tr>
+</tbody>
+</table></div>
+<h3 id="algorithm-grpo">基于候选组奖励的 GRPO</h3>
+<p>策略模型和参考模型都由 SFT 验证损失最低的第 5,187 步权重初始化。对每个提示，策略模型用受约束的 beam search 生成 16 个合法 SID。完整命中目标的候选得 1 分。若组内有命中，错误候选按名次得到归一化的负奖励，越靠前的错误惩罚越大。若全组未命中，则奖励全为零。</p>
+<p>同组奖励 <var>R</var> 的均值和标准差决定每个候选的相对优势。参考模型为相同 token 提供对数概率，减去策略模型对数概率得到 <var>Δ</var>，据此计算逐 token 的 KL 估计。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="组内归一化优势，及逐 token KL 估计">
+<mrow>
+  <msub><mover><mi>A</mi><mo>^</mo></mover><mi>i</mi></msub><mo>=</mo>
+  <mfrac><mrow><msub><mi>R</mi><mi>i</mi></msub><mo>−</mo><mover><mi>R</mi><mo>¯</mo></mover></mrow>
+  <mrow><mi mathvariant="normal">std</mi><mo>(</mo><mi>R</mi><mo>)</mo><mo>+</mo>
+  <msup><mn>10</mn><mrow><mo>−</mo><mn>4</mn></mrow></msup></mrow></mfrac>
+  <mo>,</mo><mspace width="1em"/>
+  <mi>κ</mi><mo>=</mo><msup><mi mathvariant="normal">e</mi><mi>Δ</mi></msup><mo>−</mo><mi>Δ</mi><mo>−</mo><mn>1</mn>
+</mrow></math></div>
+<p>目标把序列优势传给有效生成 token，并按 0.001 的权重加入 KL 惩罚。<var>ℓ</var> 是策略模型的 token 对数概率，sg 表示停止梯度。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="GRPO 的逐 token 目标为负策略优势与 KL 惩罚之和">
+<mrow>
+  <msub><mi>ℒ</mi><mrow><mi mathvariant="normal">token</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>=</mo>
+  <mo>−</mo><msup><mi mathvariant="normal">e</mi><mrow><mi>ℓ</mi><mo>−</mo><mi mathvariant="normal">sg</mi><mo>(</mo><mi>ℓ</mi><mo>)</mo></mrow></msup>
+  <msub><mover><mi>A</mi><mo>^</mo></mover><mi>i</mi></msub><mo>+</mo><mi>β</mi><mi>κ</mi>
+</mrow></math></div>
+<p>训练先在每个候选的有效生成 token 上求均值，再对候选求均值。每 512 个优化步将策略权重混入参考模型。第 621 步的验证 SID NDCG@10 最高，对应的策略模型用于在线 SID 验证和受约束生成。</p>
+</section>
+
+<section>
+<h2 id="algorithm-unisrec">UniSRec 检索模型</h2>
+<p>商品分支和历史分支共享一个含 8 个专家的门控适配器，将冻结的 2,560 维文本向量投影到 300 维。商品分支对适配后的向量做 L2 归一化，得到检索索引中的商品表示。</p>
+<p>历史分支先给各商品向量加上位置嵌入，再通过 2 层因果 Transformer。每层有 2 个注意力头，前馈宽度为 256。最后一个有效位置的输出经过 L2 归一化，得到当前请求的历史向量。</p>
+<p>训练以真实下一商品为正类，在 3,647 件训练可见商品上计算交叉熵，内积得分的温度为 0.07。推理使用第 20 轮的历史编码器和全目录的归一化商品向量。每条请求只需编码一次历史，各轮草拟可复用该向量。</p>
+</section>
+
+<section>
+<h2 id="algorithm-inference">联合投机推理流程</h2>
+<p>当请求需要 K 件商品时，本实验优先为检索分配全部 K 个席位，每轮最多草拟 2K 件。以 10 个推荐位为例，首轮可提交 20 件商品给 Qwen 验证。图 1 展示席位填满、仍可草拟和停止草拟后的三种路径。</p>
+<figure class="inference-flow">
+  <div class="flow-scroll" tabindex="0" role="region" aria-label="联合投机推理流程图，窄屏可横向滚动">
+    <svg viewBox="0 0 900 524" role="img" aria-labelledby="rq-flow-title rq-flow-desc">
+      <title id="rq-flow-title">联合投机推理流程</title>
+      <desc id="rq-flow-desc">对同一份历史，UniSRec 检索商品，Qwen 预填充历史并批量验证候选 SID。若席位不足，可推进前缀再次草拟，达到停止条件后用受约束 beam 补位。最后输出至多 K 件商品。</desc>
+      <defs>
+        <marker id="rq-infer-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+          <path d="M0 0 L7 3.5 L0 7 Z" fill="#60727a"/>
+        </marker>
+      </defs>
+      <g fill="none" stroke="#60727a" stroke-width="1.6" stroke-linejoin="round">
+        <path d="M450 71 V91 H208 V108" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M450 91 H692 V108" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M208 170 V191 H692 V170"/>
+        <path d="M450 191 V214" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M450 276 V306" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M334 340 H243" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M566 340 H657" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M119 309 V171" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M450 371 V441" marker-end="url(#rq-infer-arrow)"/>
+        <path d="M777 371 V418 H568 V441" marker-end="url(#rq-infer-arrow)"/>
+      </g>
+      <g fill="#f7f9f9" stroke="#8b9ba1" stroke-width="1.4">
+        <rect x="309" y="10" width="282" height="61" rx="6"/>
+        <rect x="52" y="109" width="312" height="61" rx="6"/>
+        <rect x="536" y="109" width="312" height="61" rx="6"/>
+        <rect x="294" y="215" width="312" height="61" rx="6"/>
+        <rect x="334" y="309" width="232" height="62" rx="6"/>
+        <rect x="10" y="309" width="230" height="62" rx="6"/>
+        <rect x="660" y="309" width="230" height="62" rx="6"/>
+        <rect x="294" y="442" width="312" height="62" rx="6"/>
+      </g>
+      <g text-anchor="middle" fill="#25343c" font-size="19" font-weight="600">
+        <text x="450" y="36">用户的商品历史</text>
+        <text x="208" y="135">UniSRec 检索候选</text>
+        <text x="692" y="135">Qwen 预填充历史</text>
+        <text x="450" y="241">批量验证候选 SID</text>
+        <text x="450" y="338">检索席位是否已满？</text>
+        <text x="125" y="335">推进 SID 前缀</text>
+        <text x="775" y="335">受约束 beam 补位</text>
+        <text x="450" y="468">合并入选商品并排序</text>
+      </g>
+      <g text-anchor="middle" fill="#465961" font-size="15">
+        <text x="450" y="56">按交互顺序读取商品 ID</text>
+        <text x="208" y="155">首轮检索全库，跨轮去重</text>
+        <text x="692" y="155">计算并缓存历史 KV</text>
+        <text x="450" y="261">计算三位 SID 的条件对数概率</text>
+        <text x="450" y="358">检查轮次与停止条件</text>
+        <text x="125" y="355">缩小下一轮的候选范围</text>
+        <text x="775" y="355">按生成顺序去重并填补空缺</text>
+        <text x="450" y="488">输出至多 K 件商品</text>
+        <text x="288" y="329">不足，可继续</text>
+        <text x="612" y="329">不足，已停止</text>
+        <text x="89" y="254">下一轮</text>
+        <text x="482" y="404">已满</text>
+      </g>
+    </svg>
+  </div>
+  <img class="flow-mobile" src="figures/algorithm-flow-mobile.svg" width="344" height="584" alt="检索与预填充后，Qwen 批量验证候选 SID。席位已满时直接排序。若仍有空缺，可推进前缀重新检索，或停止草拟并用受约束 beam 补位。">
+  <figcaption>图 1 · 联合投机推理中，候选商品从检索、验证到补位和排序的路径。</figcaption>
+</figure>
+<h3>完整 SID 的并行评分</h3>
+<p>Qwen 对历史提示 <var>H</var> 做一次预填充，将键值缓存（KV）供候选复用。历史末位的 logits 给出首个 SID token 的概率。再把每个候选的前两位作为独立分支输入，一次前向计算即可得到第二、第三位的条件概率。</p>
+<div class="formula"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="联合投机推理的商品分数是三位 SID 的条件对数概率均值">
+<mrow>
+  <mi>v</mi><mo>(</mo><mi>i</mi><mo>,</mo><mi>H</mi><mo>)</mo><mo>=</mo>
+  <mfrac><mn>1</mn><mn>3</mn></mfrac><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover>
+  <mi mathvariant="normal">log</mi><msub><mi>p</mi><mi>θ</mi></msub>
+  <mo>(</mo><msub><mi>c</mi><mi>t</mi></msub><mo>∣</mo><mi>H</mi><mo>,</mo>
+  <msub><mi>c</mi><mrow><mo>&lt;</mo><mi>t</mi></mrow></msub><mo>)</mo>
+</mrow></math></div>
+<p>商品 <var>i</var> 的分数取三位 SID token 在全词表上的条件对数概率均值。计算只覆盖这三个 token，历史、换行和 EOS 均从评分范围剔除。同一请求内，多个商品共享的前缀还可复用中间计算。</p>
+<h3>候选草拟、补位与排序</h3>
+<p>首轮在全库检索，通过接受条件的候选进入排序池，按验证分数保留至检索配额。席位不足且允许继续时，系统将合法 SID 前缀延长一位，UniSRec 在对应商品范围内重新草拟，并排除已经草拟过的商品 ID。</p>
+<p>停止草拟后，空缺席位由受约束的 beam search 按生成顺序去重补齐。检索与生成均有商品入选时，再按统一分数排列合并后的名单。纯 beam 路径沿用生成顺序。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th scope="col">推理参数</th><th scope="col">采用值</th></tr></thead>
+<tbody>
+<tr><td>输出上限 K</td><td>1、5、10、20、50</td></tr>
+<tr><td>每轮草拟上限</td><td>2K</td></tr>
+<tr><td>检索份额 α</td><td>1</td></tr>
+<tr><td>最大草拟轮数</td><td>3</td></tr>
+<tr><td>引导前缀 beam 宽度</td><td>1</td></tr>
+<tr><td>完整生成 beam 宽度</td><td>50</td></tr>
+</tbody>
+</table></div>
+</section>
+<footer><a href="#top">返回页首</a> · <a href="index.html">报告总览</a></footer>
+</main>
+</body>
+</html>

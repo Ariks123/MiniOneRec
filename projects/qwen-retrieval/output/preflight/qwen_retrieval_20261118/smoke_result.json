@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "cpu": {
+    "rng_unchanged": true,
+    "legacy_token_loss_and_accumulated_gradients": true,
+    "left_padding_boundary": true,
+    "answer_invariant_queries": true,
+    "mixed_and_zero_seq": true,
+    "head_checkpoint_reload": true
+  },
+  "production_training": false,
+  "world_size": 4,
+  "distributed": {
+    "unequal_zero_duplicate": {
+      "passed": true,
+      "queries": 6,
+      "unique_items": 4
+    },
+    "all_zero": {
+      "passed": true,
+      "queries": 0,
+      "unique_items": 0
+    },
+    "one_unique": {
+      "passed": true,
+      "queries": 2,
+      "unique_items": 1
+    }
+  },
+  "zero2": {
+    "passed": true,
+    "steps": 2,
+    "gradient_accumulation_steps": 2,
+    "earlier_best_checkpoint_reload": "checkpoint-1",
+    "cpu_and_cuda_rng_unchanged": true,
+    "zero_stage": 2,
+    "gradient_checkpointing": true,
+    "nonzero_first_micro_zero_seq_last_micro": true,
+    "joint_head_save_reload": true,
+    "optimizer_scheduler_resume": true,
+    "runtime_compatibility": {
+      "applied": true,
+      "version": "0.18.0",
+      "already_applied": false,
+      "original_source_sha256": "8aab6ad622662a54879f409636e8fef248b6ab42d51cf69ab2131f5caa99d542",
+      "patched_source_sha256": "4555f9e0a1b19fb531b6d01b91e17bcea1f02d541811f4bf8403e70b8decbb70",
+      "method": "deepspeed.runtime.zero.stage_1_and_2.DeepSpeedZeroOptimizer.independent_gradient_partition_epilogue",
+      "scope": "current_rl_process_only",
+      "installed_package_modified": false,
+      "reason": "Retain prior microbatch gradients in all_grad_tensors before the accumulation boundary"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-16T09:37:38.199712+00:00",
+  "source_paths": {
+    "saved_identification_predictions": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_items.jsonl",
+    "accepted_identification_summary": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_summary.json",
+    "train_interactions": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "sid_index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json"
+  },
+  "source_sha256": {
+    "saved_identification_predictions": "04cf1f3e58504abcb8aab8fac070b5a1dbafe48c84cbfaae067b1711e23a0007",
+    "accepted_identification_summary": "cb22c9a40eb65c5812968cf68324bcd169d7e163c6683717d0cb119b91a9a701",
+    "train_interactions": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "sid_index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f"
+  },
+  "training_rows": 335388,
+  "methodology": {
+    "inference_performed": false,
+    "training_performed": false,
+    "task": "Known title -> complete SID identification, original training prompt, catalog-constrained beam10; measures direct recognition rather than next-item recommendation.",
+    "frequency": "Original training-interaction target count per item, excluding repeated historical positions.",
+    "warm_sample": "666 unique behavior-seen test target items, originally matched to cold items by title word count with seeded tie order. Not the entire warm catalog or a popularity-weighted test sample.",
+    "cold_sample": "All 666 unique behavior-cold test target items.",
+    "subgroup_scope": "Frequency subgroups partition the saved matched warm sample; their rates are descriptive sample rates and not full-catalog population estimates.",
+    "accuracy_units": "Fraction, multiply by 100 for percent."
+  },
+  "groups": [
+    {
+      "key": "cold_all",
+      "items": 666,
+      "top1_correct": 4,
+      "top10_correct": 35,
+      "top1_accuracy": 0.006006006006006006,
+      "top10_accuracy": 0.052552552552552555,
+      "canonical_title_items": 663,
+      "train_target_frequency_sum": 0
+    },
+    {
+      "key": "warm_all",
+      "items": 666,
+      "top1_correct": 63,
+      "top10_correct": 172,
+      "top1_accuracy": 0.0945945945945946,
+      "top10_accuracy": 0.25825825825825827,
+      "canonical_title_items": 649,
+      "train_target_frequency_sum": 15605
+    },
+    {
+      "key": "warm_target_frequency_0",
+      "items": 0,
+      "top1_correct": 0,
+      "top10_correct": 0,
+      "top1_accuracy": null,
+      "top10_accuracy": null,
+      "canonical_title_items": 0,
+      "train_target_frequency_sum": 0
+    },
+    {
+      "key": "warm_target_frequency_1_5",
+      "items": 161,
+      "top1_correct": 6,
+      "top10_correct": 16,
+      "top1_accuracy": 0.037267080745341616,
+      "top10_accuracy": 0.09937888198757763,
+      "canonical_title_items": 158,
+      "train_target_frequency_sum": 505
+    },
+    {
+      "key": "warm_target_frequency_6_20",
+      "items": 280,
+      "top1_correct": 19,
+      "top10_correct": 61,
+      "top1_accuracy": 0.06785714285714285,
+      "top10_accuracy": 0.21785714285714286,
+      "canonical_title_items": 278,
+      "train_target_frequency_sum": 3212
+    },
+    {
+      "key": "warm_target_frequency_21_100",
+      "items": 202,
+      "top1_correct": 34,
+      "top10_correct": 80,
+      "top1_accuracy": 0.16831683168316833,
+      "top10_accuracy": 0.39603960396039606,
+      "canonical_title_items": 191,
+      "train_target_frequency_sum": 7864
+    },
+    {
+      "key": "warm_target_frequency_gt100",
+      "items": 23,
+      "top1_correct": 4,
+      "top10_correct": 15,
+      "top1_accuracy": 0.17391304347826086,
+      "top10_accuracy": 0.6521739130434783,
+      "canonical_title_items": 22,
+      "train_target_frequency_sum": 4024
+    }
+  ],
+  "canonical_only": [
+    {
+      "key": "cold_canonical_title_only",
+      "items": 663,
+      "top1_correct": 4,
+      "top10_correct": 35,
+      "top1_accuracy": 0.006033182503770739,
+      "top10_accuracy": 0.05279034690799397,
+      "canonical_title_items": 663,
+      "train_target_frequency_sum": 0
+    },
+    {
+      "key": "warm_canonical_title_only",
+      "items": 649,
+      "top1_correct": 62,
+      "top10_correct": 168,
+      "top1_accuracy": 0.09553158705701079,
+      "top10_accuracy": 0.2588597842835131,
+      "canonical_title_items": 649,
+      "train_target_frequency_sum": 14896
+    }
+  ],
+  "checks": {
+    "saved_predictions_metrics_recomputed": true,
+    "counts_match_original_summary": true,
+    "warm_frequency_bins_partition_666": true,
+    "source_hashes_stable": true
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "stage": "sft_validation",
+  "status": "passed",
+  "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft",
+  "created_at_utc": "2026-11-16T06:41:57.312583+00:00",
+  "pages": 9,
+  "sources": [
+    {
+      "path": "run_status.json",
+      "bytes": 10322,
+      "sha256": "d9a5c61ecfd3502081c5e92898b7e8d945d3743f383e6f734e22540cc73bc785"
+    },
+    {
+      "path": "run_config.json",
+      "bytes": 3447,
+      "sha256": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8"
+    },
+    {
+      "path": "baseline_validation.json",
+      "bytes": 422,
+      "sha256": "51a6a24b0c20750aa0bd37e9d8b5e3e80a328a3785dd9c44dd93abe971c60097"
+    },
+    {
+      "path": "training_summary.json",
+      "bytes": 950,
+      "sha256": "86ce25582826802c00a83d02a69b6666a3a2c379ffc1ef72354754847680ad91"
+    },
+    {
+      "path": "monitor/metrics.jsonl",
+      "bytes": 3988325,
+      "sha256": "d4088886146f699e0f1f303ca51fd33c0c7440b89845edb8b60b74ec4345d4b3"
+    },
+    {
+      "path": "monitor/summary.json",
+      "bytes": 8934,
+      "sha256": "083f958b1414cc44f98f42ff670b019cd486071f97691c58ad138d2d2b568141"
+    },
+    {
+      "path": "monitor/events.jsonl",
+      "bytes": 7167,
+      "sha256": "faf34b072332007d4a964c7a9f23080dd00327fe2b62fbe9d10991b8a26b708c"
+    },
+    {
+      "path": "gpu_metrics.jsonl",
+      "bytes": 1273954,
+      "sha256": "186b432349033e67a38b5e51bbc3fe170c2ad4e0ef7aa1807174ce4af994e57f"
+    },
+    {
+      "path": "evaluation/metrics.json",
+      "bytes": 24102,
+      "sha256": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e"
+    },
+    {
+      "path": "comparison_baselines.json",
+      "bytes": 4552,
+      "sha256": "a7e0afbfed36b7f5256786aec5f0a38c0cbee6b787125e9d22bb12351da6c5e9"
+    },
+    {
+      "path": "behavior_shift_analysis.json",
+      "bytes": 19911,
+      "sha256": "20452e40274f58aba9963ec43daf8dc92dd6342a9fc1a27a2e5f244132090e6c"
+    },
+    {
+      "path": "/opt/minionerec/config/minionerec_paper_reference.json",
+      "bytes": 3026,
+      "sha256": "e5a7a83118712a17f0804bbdd2dccc1df01f4046bceacf0a509924df458f312f"
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/preparation_manifest.json",
+      "bytes": 2240,
+      "sha256": "bf1f7eb925850ae2b23051b85d1e01edc6628db5e730c9ef8d8c1ebd70909116"
+    }
+  ],
+  "files": [
+    {
+      "path": "baseline_metrics.csv",
+      "bytes": 742,
+      "sha256": "df2ba2d94ac85bd588ea6ff5542abc0ab779ddb546848a0dd4c9da30007c48eb"
+    },
+    {
+      "path": "behavior_shift_analysis.json",
+      "bytes": 20384,
+      "sha256": "c80045a9539e969c8e2f66218cccdbb38bd5185e5221b2a1ab7659e2f3aa5faf"
+    },
+    {
+      "path": "behavior_shift_metrics.csv",
+      "bytes": 7996,
+      "sha256": "523ff9cbc1d85523b07377c287cd5f5759cb07434b3eeb65b635f1d5e0964394"
+    },
+    {
+      "path": "comparability.csv",
+      "bytes": 616,
+      "sha256": "ca1f9d6e1343c1ca89acabc0772cbf5bca2c32e361e30e6f2301e2cea37660e3"
+    },
+    {
+      "path": "comparison.json",
+      "bytes": 7316,
+      "sha256": "01e60ac182faaa74cf2e59a50cb54564f624807c6d1c3229e96849f12d783ed4"
+    },
+    {
+      "path": "expectation_analysis.json",
+      "bytes": 2145,
+      "sha256": "f1e6b00f4798c0183f8c0d5c27f9a44d09acb491205584b771fb7581bbc2714e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 23785,
+      "sha256": "63fc11cb216ee875391ec95a323336a1b5654c98fc60780720fb378267ae66ef"
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 272,
+      "sha256": "d4aeba6b2e07d12d735844f8852f469a09af215b1a0ff90d873705bc5c9f2da3"
+    },
+    {
+      "path": "paper-reference.png",
+      "bytes": 120482,
+      "sha256": "06457e543a1ba29605e1616c42d9e7269573b9fe93a2f12cfc0702b44626027f"
+    },
+    {
+      "path": "paper_comparison.csv",
+      "bytes": 1116,
+      "sha256": "f16de1559cbc3b4bf6919d872a8d6da7d7b546d76a5565f787a2bce9b8fc2df7"
+    },
+    {
+      "path": "ranking.png",
+      "bytes": 112831,
+      "sha256": "7e28f8841730ced31dea4610bd998ec811e97ed8c5a78127468dbcf138d69bec"
+    },
+    {
+      "path": "validation-comparison.png",
+      "bytes": 79937,
+      "sha256": "d5166f95bf9c23f68acee33bb83bcb1ace248031c12355ce42921a42aedaaefa"
+    },
+    {
+      "path": "validation-report.pdf",
+      "bytes": 54069,
+      "sha256": "d8f500bdba26885c9e13e54561e158f19b9b5274ae4fc6c711c468528238c82b"
+    },
+    {
+      "path": "validation-summary.png",
+      "bytes": 155171,
+      "sha256": "11086aa919d33335ce91706eb8e3bc5cde6f60b0283766263a5d2344882ff6eb"
+    },
+    {
+      "path": "validation_report.json",
+      "bytes": 72086,
+      "sha256": "5b6126edb0136f9b1bec8dd7106e38170caa48758bc9db0d5d9964ea3ed056b3"
+    }
+  ]
+}

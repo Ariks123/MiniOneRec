@@ -1,0 +1,56 @@
+{
+  "pdf": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\reports\\Video_Games\\05_rqvae_10000_comparison\\video-games-rqvae-10000-comparison-report.pdf",
+  "pages": 6,
+  "page_images": [
+    "video-games-rqvae-10000-comparison-report-1.png",
+    "video-games-rqvae-10000-comparison-report-2.png",
+    "video-games-rqvae-10000-comparison-report-3.png",
+    "video-games-rqvae-10000-comparison-report-4.png",
+    "video-games-rqvae-10000-comparison-report-5.png",
+    "video-games-rqvae-10000-comparison-report-6.png"
+  ],
+  "tables": [
+    "checkpoint_metric_comparison.csv",
+    "comparison_sources.csv",
+    "prefix_top10_with_permutation_null.csv",
+    "training_curve_comparison.csv",
+    "codebook_usage_comparison.csv"
+  ],
+  "source": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\rqvae\\Video_Games\\compare_10000_2026-11-14T15-37-03-631Z\\endpoint_10000\\sid_validation.json",
+  "source_sha256": "b0c64fc51752dc00ddbd2b7ab6c55804f0566b4165d3a7ce09a119f318550b69",
+  "created_at_utc": "2026-11-14T15:47:57.962400+00:00",
+  "stage": "rqvae_10000_comparison",
+  "baseline_run": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\rqvae\\Video_Games\\2026-11-14T15-04-02-357Z",
+  "endpoint_run": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\rqvae\\Video_Games\\compare_10000_2026-11-14T15-37-03-631Z\\endpoint_10000",
+  "baseline_epoch": 2900,
+  "endpoint_epoch": 10000,
+  "decision": {
+    "headline": "主指标存在取舍，不能只按轮数选",
+    "interpretation": "验证原始重构 MSE 与最终语义码邻域质量没有一致占优。当前保留原权重，将 10,000 轮权重作为候选；尚无下游推荐结果。本报告不将异质指标合成总分。",
+    "primary_metrics": [
+      "raw_val_mse",
+      "semantic_val_top10_original"
+    ],
+    "primary_preferences": {
+      "raw_val_mse": "原最佳",
+      "semantic_val_top10_original": "10,000 轮"
+    },
+    "recommendation_scope": "商品内容诊断；不是用户推荐准确率或 SFT/RL 效果"
+  },
+  "fairness_checks": {
+    "identical_embeddings_sha256": true,
+    "identical_item_metadata_sha256": true,
+    "identical_split_sha256": true,
+    "identical_initial_checkpoint_sha256": true,
+    "different_checkpoint_sha256_for_different_epochs": true,
+    "identical_split_counts": true,
+    "identical_query_ids": true,
+    "identical_knn_candidate_scope": true,
+    "identical_repair_configuration": true,
+    "endpoint_epoch_matches_request": true,
+    "training_reached_endpoint": true,
+    "identity_suffix_excluded": true,
+    "identical_model_and_optimizer_configuration": true,
+    "inherited_evaluation_history_matches": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "validation": "passed",
+  "sampled_pairs": 1666,
+  "cpu_float64_pairs_checked": 73,
+  "full_catalog_exact_top5_anchors_checked": 6,
+  "row_shape": [
+    16572,
+    2560
+  ],
+  "embedding_matches_previous_validation": true
+}

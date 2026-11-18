@@ -1,0 +1,83 @@
+{
+  "status": "complete",
+  "primary_k": 10,
+  "interpretation": "Assess signal quality on this dataset; this is not paper reproduction or a statistical significance test.",
+  "metric_consistency": {
+    "checks": {
+      "HR_nondecreasing": true,
+      "NDCG_nondecreasing": true,
+      "NDCG_not_above_HR": true,
+      "HR1_equals_NDCG1": true
+    },
+    "passed": true,
+    "observations": [
+      {
+        "k": 1,
+        "HR": 0.0153849823490125,
+        "NDCG": 0.0153849823490125
+      },
+      {
+        "k": 3,
+        "HR": 0.025379257704417516,
+        "NDCG": 0.02109417001751477
+      },
+      {
+        "k": 5,
+        "HR": 0.03339376013739147,
+        "NDCG": 0.02436917024699887
+      },
+      {
+        "k": 10,
+        "HR": 0.04927964888846484,
+        "NDCG": 0.02946377847672887
+      },
+      {
+        "k": 20,
+        "HR": 0.07196355309607862,
+        "NDCG": 0.035162649341569235
+      },
+      {
+        "k": 50,
+        "HR": 0.11327640492319435,
+        "NDCG": 0.04331764753498194
+      }
+    ]
+  },
+  "minimum_signal_checks_passed": true,
+  "signal_quality": "basic_signal_checks_pass",
+  "validation_loss": {
+    "before": 14.15386297441014,
+    "after": 1.7684946391338117,
+    "difference": -12.385368335276329,
+    "decreased": true
+  },
+  "baseline_comparison": {
+    "status": "available",
+    "k": 10,
+    "actual": {
+      "HR": 0.04927964888846484,
+      "NDCG": 0.02946377847672887
+    },
+    "popularity": {
+      "HR": 0.0034586394428012595,
+      "NDCG": 0.001662795810494312,
+      "differences": {
+        "HR": 0.04582100944566358,
+        "NDCG": 0.02780098266623456
+      },
+      "both_metrics_higher": true
+    },
+    "uniform_random": {
+      "HR": 0.0006034274680183442,
+      "NDCG": 0.00027417085071737546,
+      "differences": {
+        "HR": 0.048676221420446496,
+        "NDCG": 0.029189607626011495
+      },
+      "both_metrics_higher": true
+    }
+  },
+  "ranking_signal_checks_passed": true,
+  "behavior_shift_status": "available",
+  "conclusion_scope": "Optimization and numerical integrity only; behavior-cold recommendation quality is assessed separately using post-hoc strata"
+}

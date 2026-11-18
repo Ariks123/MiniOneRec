@@ -1,0 +1,1389 @@
+{
+  "generated_at_utc": "2026-11-17T09:25:14.227378+00:00",
+  "generated_at_shanghai": "2026-11-17T17:25:14.227378+08:00",
+  "dataset": "Industrial_and_Scientific",
+  "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft",
+  "run_status": {
+    "status": "completed",
+    "stage": "completed",
+    "started_at": "2026-11-17T08:20:41.241678+00:00",
+    "updated_at": "2026-11-17T09:25:13.010418+00:00",
+    "parameters": {
+      "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft",
+      "report_root": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/output/reports/industrial_05b_linear_ep3_ep5_title_history_retry1/epochs5",
+      "container": "minionerec-industrial05b-linear-bc9e3942-ep5",
+      "image": "sha256:0da0b47810fbd4027b860446cabe30a5cb31b48dca96a76c2ac0002143957eac",
+      "category": "Industrial_and_Scientific",
+      "base_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B",
+      "expected_sid_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "world_size": 4,
+      "num_epochs": 5,
+      "learning_rate": 0.0003,
+      "global_batch_size": 64,
+      "micro_batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "lr_scheduler_type": "linear",
+      "history_max": 10,
+      "gradient_checkpointing": true,
+      "baseline_eval": true,
+      "save_total_limit": 2,
+      "include_title_history": true,
+      "generative_validation": false,
+      "final_ranking_eval": true,
+      "save_epoch_checkpoint": 3,
+      "minimum_epochs": 3.0,
+      "generation_batch_size": 4,
+      "generation_num_beams": 50,
+      "selection_metric": "eval_loss",
+      "early_stopping_patience": 3,
+      "eval_save_fraction": 0.05,
+      "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+      "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+      "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+      "reference_sft_sha256": "205979dcf7e18ed0f93b6cda28548c58068d8bebeb9209f39f1b2ca5b976fc43",
+      "reference_readme_sha256": "97ce7d1d8a664c590772b964f45fd0b6f4b60f3baec43f9cfff7dc70489eca02",
+      "runtime_data_source": "/mnt/ossdata/ziweizhao/code/amazon2018industrialandscientific-cosine/data.py",
+      "adaptation_notes": [
+        "Base model is explicitly recorded and loaded fresh; previous fine-tuned weights are not reused.",
+        "This run starts fresh from Qwen2.5-0.5B Base, with an epoch cap of 5, global batch 64, four GPUs with micro batch 8 and accumulation 2.",
+        "The linear scheduler spans the requested epoch budget with 20 warmup steps; the recorded selection_metric governs validation model selection and early stopping.",
+        "Original data tasks and original evaluation prompt are retained; DDP placement, monitoring, provenance, complete coverage and constrained-decoding boundaries adapt the workflow to four GPUs.",
+        "DeepSpeed ZeRO-2 and gradient checkpointing retain the previous experiment's numerical training setup.",
+        "The augmented arm adds one title-history-to-next-SID sample for each original training interaction; equal epochs therefore do not imply equal optimizer steps."
+      ],
+      "rl_enabled": false
+    },
+    "rl_started": false,
+    "pid": 730052,
+    "runtime_versions": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.1",
+      "datasets": "4.2.0",
+      "accelerate": "1.10.1",
+      "cuda": "12.8",
+      "python": "3.11.11",
+      "devices": [
+        "NVIDIA H20",
+        "NVIDIA H20",
+        "NVIDIA H20",
+        "NVIDIA H20"
+      ]
+    },
+    "runtime_image_id": "sha256:0da0b47810fbd4027b860446cabe30a5cb31b48dca96a76c2ac0002143957eac",
+    "source_sha256": {
+      "sft.py": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+      "data.py": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "sft_monitor.py": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "LogitProcessor.py": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "npu_support.py": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "scripts/evaluate_sft.py": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+      "scripts/sft_eval_utils.py": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "scripts/report_industrial_sft.py": "329396d8e5698571569bd22c35d0e7ea4afe2581858ba0e0000a3e8f03d2cb18",
+      "scripts/industrial_generative_validation.py": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+      "config/h20_zero2.json": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "training_log_spool": "/tmp/industrial-log-ahh90rpk/training.log",
+    "progress": {
+      "status": "completed",
+      "updated_at_utc": "2026-11-17T09:20:44.691282+00:00",
+      "elapsed_seconds": 3521.636957142997,
+      "grad_norm_definition": "unscaled global full-model L2 norm before gradient clipping",
+      "statistics_exclude_skipped_nonfinite_missing": true,
+      "latest": {
+        "step": 9070,
+        "epoch": 5.0,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:20:32.151493+00:00",
+        "elapsed_seconds": 3509.097168532986,
+        "kind": "train",
+        "loss": 0.3475,
+        "learning_rate": 3.314917127071823e-08,
+        "grad_norm": 0.7273550033569336,
+        "grad_norm_observed": 0.7273550033569336,
+        "grad_norm_nonfinite": false,
+        "step_skipped": false,
+        "optimizer_overflow": false,
+        "rolling_grad_norm_mean": 0.9364904582500457,
+        "rolling_grad_norm_max": 1.4034919738769531,
+        "grad_norm_mean": 1.3216201127561213,
+        "grad_norm_max": 58.960811614990234,
+        "grad_norm_max_step": 1
+      },
+      "evaluations": [
+        {
+          "step": 454,
+          "epoch": 0.25027563395810365,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:24:53.287665+00:00",
+          "elapsed_seconds": 170.2333398629853,
+          "kind": "eval",
+          "eval_loss": 2.50789737701416,
+          "eval_runtime": 3.527,
+          "eval_samples_per_second": 1284.95,
+          "eval_steps_per_second": 40.261
+        },
+        {
+          "step": 908,
+          "epoch": 0.5005512679162073,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:27:48.561861+00:00",
+          "elapsed_seconds": 345.5075364809891,
+          "kind": "eval",
+          "eval_loss": 2.2077646255493164,
+          "eval_runtime": 3.5375,
+          "eval_samples_per_second": 1281.134,
+          "eval_steps_per_second": 40.141
+        },
+        {
+          "step": 1362,
+          "epoch": 0.7508269018743109,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:30:41.168084+00:00",
+          "elapsed_seconds": 518.1137583509844,
+          "kind": "eval",
+          "eval_loss": 2.036534309387207,
+          "eval_runtime": 3.4741,
+          "eval_samples_per_second": 1304.511,
+          "eval_steps_per_second": 40.874
+        },
+        {
+          "step": 1816,
+          "epoch": 1.0011025358324146,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:33:38.675299+00:00",
+          "elapsed_seconds": 695.6209813389869,
+          "kind": "eval",
+          "eval_loss": 1.95638906955719,
+          "eval_runtime": 3.465,
+          "eval_samples_per_second": 1307.936,
+          "eval_steps_per_second": 40.981
+        },
+        {
+          "step": 2270,
+          "epoch": 1.2513781697905182,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:36:33.818997+00:00",
+          "elapsed_seconds": 870.7646707219828,
+          "kind": "eval",
+          "eval_loss": 1.8758220672607422,
+          "eval_runtime": 3.5228,
+          "eval_samples_per_second": 1286.461,
+          "eval_steps_per_second": 40.308
+        },
+        {
+          "step": 2724,
+          "epoch": 1.5016538037486218,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:39:28.861260+00:00",
+          "elapsed_seconds": 1045.8069353829778,
+          "kind": "eval",
+          "eval_loss": 1.8449207544326782,
+          "eval_runtime": 3.4646,
+          "eval_samples_per_second": 1308.077,
+          "eval_steps_per_second": 40.986
+        },
+        {
+          "step": 3178,
+          "epoch": 1.7519294377067256,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:42:22.410537+00:00",
+          "elapsed_seconds": 1219.3562133239757,
+          "kind": "eval",
+          "eval_loss": 1.7658816576004028,
+          "eval_runtime": 3.4734,
+          "eval_samples_per_second": 1304.78,
+          "eval_steps_per_second": 40.882
+        },
+        {
+          "step": 3632,
+          "epoch": 2.002205071664829,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:45:18.009225+00:00",
+          "elapsed_seconds": 1394.954899481003,
+          "kind": "eval",
+          "eval_loss": 1.7405529022216797,
+          "eval_runtime": 3.4946,
+          "eval_samples_per_second": 1296.857,
+          "eval_steps_per_second": 40.634
+        },
+        {
+          "step": 4086,
+          "epoch": 2.252480705622933,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:48:12.260281+00:00",
+          "elapsed_seconds": 1569.205955256999,
+          "kind": "eval",
+          "eval_loss": 1.70341157913208,
+          "eval_runtime": 3.5163,
+          "eval_samples_per_second": 1288.843,
+          "eval_steps_per_second": 40.383
+        },
+        {
+          "step": 4540,
+          "epoch": 2.5027563395810364,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:51:08.371712+00:00",
+          "elapsed_seconds": 1745.3173870129976,
+          "kind": "eval",
+          "eval_loss": 1.687445878982544,
+          "eval_runtime": 3.4977,
+          "eval_samples_per_second": 1295.727,
+          "eval_steps_per_second": 40.599
+        },
+        {
+          "step": 4994,
+          "epoch": 2.75303197353914,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:54:01.300334+00:00",
+          "elapsed_seconds": 1918.2460089939996,
+          "kind": "eval",
+          "eval_loss": 1.6582585573196411,
+          "eval_runtime": 3.4544,
+          "eval_samples_per_second": 1311.941,
+          "eval_steps_per_second": 41.107
+        },
+        {
+          "step": 5448,
+          "epoch": 3.0033076074972436,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:56:57.734217+00:00",
+          "elapsed_seconds": 2094.6798918379936,
+          "kind": "eval",
+          "eval_loss": 1.6355254650115967,
+          "eval_runtime": 3.4764,
+          "eval_samples_per_second": 1303.647,
+          "eval_steps_per_second": 40.847
+        },
+        {
+          "step": 5902,
+          "epoch": 3.253583241455347,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T08:59:53.323798+00:00",
+          "elapsed_seconds": 2270.2694720439904,
+          "kind": "eval",
+          "eval_loss": 1.6223078966140747,
+          "eval_runtime": 3.4769,
+          "eval_samples_per_second": 1303.472,
+          "eval_steps_per_second": 40.841
+        },
+        {
+          "step": 6356,
+          "epoch": 3.503858875413451,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T09:02:51.738935+00:00",
+          "elapsed_seconds": 2448.6846099079994,
+          "kind": "eval",
+          "eval_loss": 1.6160213947296143,
+          "eval_runtime": 3.463,
+          "eval_samples_per_second": 1308.674,
+          "eval_steps_per_second": 41.004
+        },
+        {
+          "step": 6810,
+          "epoch": 3.7541345093715544,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T09:05:49.790868+00:00",
+          "elapsed_seconds": 2626.7365431819926,
+          "kind": "eval",
+          "eval_loss": 1.5992201566696167,
+          "eval_runtime": 3.4477,
+          "eval_samples_per_second": 1314.486,
+          "eval_steps_per_second": 41.186
+        },
+        {
+          "step": 7264,
+          "epoch": 4.004410143329658,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T09:08:46.898618+00:00",
+          "elapsed_seconds": 2803.844292631984,
+          "kind": "eval",
+          "eval_loss": 1.5875598192214966,
+          "eval_runtime": 3.4741,
+          "eval_samples_per_second": 1304.498,
+          "eval_steps_per_second": 40.874
+        },
+        {
+          "step": 7718,
+          "epoch": 4.2546857772877615,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T09:11:45.642653+00:00",
+          "elapsed_seconds": 2982.588327017991,
+          "kind": "eval",
+          "eval_loss": 1.6161341667175293,
+          "eval_runtime": 3.5338,
+          "eval_samples_per_second": 1282.482,
+          "eval_steps_per_second": 40.184
+        },
+        {
+          "step": 8172,
+          "epoch": 4.504961411245866,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T09:14:43.366620+00:00",
+          "elapsed_seconds": 3160.3122933229897,
+          "kind": "eval",
+          "eval_loss": 1.589674711227417,
+          "eval_runtime": 3.4623,
+          "eval_samples_per_second": 1308.95,
+          "eval_steps_per_second": 41.013
+        },
+        {
+          "step": 8626,
+          "epoch": 4.75523704520397,
+          "phase": "training",
+          "timestamp_utc": "2026-11-17T09:17:40.418217+00:00",
+          "elapsed_seconds": 3337.363891268993,
+          "kind": "eval",
+          "eval_loss": 1.5791301727294922,
+          "eval_runtime": 3.456,
+          "eval_samples_per_second": 1311.342,
+          "eval_steps_per_second": 41.088
+        },
+        {
+          "step": 9070,
+          "epoch": 5.0,
+          "phase": "final_validation",
+          "timestamp_utc": "2026-11-17T09:20:41.795927+00:00",
+          "elapsed_seconds": 3518.741600969981,
+          "kind": "eval",
+          "eval_loss": 1.5791301727294922,
+          "eval_runtime": 3.5571,
+          "eval_samples_per_second": 1274.057,
+          "eval_steps_per_second": 39.92
+        }
+      ],
+      "abort_reason": null,
+      "monitor_window": 100,
+      "update_records": 9070,
+      "grad_norm_count": 9070,
+      "grad_norm_mean": 1.3216201127561213,
+      "grad_norm_max": 58.960811614990234,
+      "grad_norm_max_step": 1,
+      "rolling_grad_norm_count": 100,
+      "rolling_grad_norm_mean": 0.9364904582500457,
+      "rolling_grad_norm_max": 1.4034919738769531,
+      "skipped_update_count": 0,
+      "missing_grad_norm_count": 0,
+      "nonfinite_grad_norm_count": 0,
+      "global_step": 9070,
+      "epoch": 5.0,
+      "max_steps": 9070,
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/checkpoint-8626",
+      "best_metric": 1.5791301727294922
+    },
+    "validating_log_spool": "/tmp/industrial-log-uinve80u/validating.log",
+    "validating_epoch_snapshot_log_spool": "/tmp/industrial-log-q_c8j6y4/validating_epoch_snapshot.log",
+    "finished_at": "2026-11-17T09:25:13.010400+00:00"
+  },
+  "base_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B",
+  "errors": [],
+  "rl_started": false,
+  "ranking_requested": true,
+  "status": "completed",
+  "config": {
+    "stage": "sft",
+    "created_at_utc": "2026-11-17T08:21:55.198677+00:00",
+    "model": {
+      "source": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B",
+      "train_from_scratch": false,
+      "original_vocab_size": 151665,
+      "tokenizer_vocab_size": 152225,
+      "added_sid_tokens": 560,
+      "identity": {
+        "format_version": 1,
+        "source_directory": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-0.5B",
+        "train_from_scratch": false,
+        "files": {
+          "config.json": {
+            "sha256": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b",
+            "size_bytes": 681
+          },
+          "generation_config.json": {
+            "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+            "size_bytes": 138
+          },
+          "merges.txt": {
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+            "size_bytes": 1671839
+          },
+          "model.safetensors": {
+            "sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+            "size_bytes": 988097824
+          },
+          "tokenizer.json": {
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+            "size_bytes": 7031645
+          },
+          "tokenizer_config.json": {
+            "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+            "size_bytes": 7228
+          },
+          "vocab.json": {
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+            "size_bytes": 2776833
+          }
+        },
+        "sha256": "ff170b0115ab6b9c2d872ad7e3a234fbd1efbefa2a5a8aa8dc7131cee40ee79a"
+      }
+    },
+    "data": {
+      "train_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+      "eval_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/valid.csv",
+      "sid_index_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+      "item_meta_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.item.json",
+      "category": "Industrial_and_Scientific",
+      "sample": -1,
+      "include_title_history": true,
+      "train_samples": 116093,
+      "validation_samples": 4532,
+      "sha256": {
+        "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "eval_file": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+        "item_meta_path": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+      }
+    },
+    "task_counts": {
+      "sid_sequence_recommendation": 36259,
+      "history_to_title": 36259,
+      "sid2title": 3670,
+      "title2sid": 3646,
+      "title_history_to_sid": 36259
+    },
+    "hyperparameters": {
+      "world_size": 4,
+      "micro_batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "global_batch_size": 64,
+      "max_epochs": 5,
+      "learning_rate": 0.0003,
+      "warmup_steps": 20,
+      "lr_scheduler_type": "linear",
+      "cutoff_len": 512,
+      "max_grad_norm": 1.0,
+      "bf16": true,
+      "gradient_checkpointing": true,
+      "attn_implementation": "sdpa",
+      "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+      "seed": 42,
+      "early_stopping_patience": 3,
+      "eval_save_fraction": 0.05,
+      "generative_validation": false,
+      "generation_batch_size": 4,
+      "generation_num_beams": 50,
+      "model_selection_metric": "eval_loss",
+      "save_epoch_checkpoint": 3,
+      "minimum_epochs": 3.0,
+      "monitor_window": 100,
+      "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "resume_from_checkpoint": null
+  },
+  "preparation": {
+    "schema_version": 1,
+    "dataset": "Industrial_and_Scientific",
+    "original_sid": true,
+    "selected_sid_epoch": null,
+    "expected_sid_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+    "items": 3686,
+    "complete_sid_tokens": 3,
+    "complete_sids_unique": false,
+    "unique_sids": 3670,
+    "sid_collisions": {
+      "groups": 15,
+      "items": 31,
+      "excess_items": 16
+    },
+    "sid_collision_groups": [
+      {
+        "sid": "<a_210><b_231><c_0>",
+        "item_ids": [
+          "7",
+          "8"
+        ],
+        "titles": [
+          "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)",
+          "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)"
+        ]
+      },
+      {
+        "sid": "<a_197><b_204><c_0>",
+        "item_ids": [
+          "139",
+          "774"
+        ],
+        "titles": [
+          "DuPont Teflon Non-Stick",
+          "DuPont Teflon Non-Stick"
+        ]
+      },
+      {
+        "sid": "<a_107><b_93><c_0>",
+        "item_ids": [
+          "181",
+          "182"
+        ],
+        "titles": [
+          "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator",
+          "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator"
+        ]
+      },
+      {
+        "sid": "<a_17><b_217><c_0>",
+        "item_ids": [
+          "216",
+          "217"
+        ],
+        "titles": [
+          "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG",
+          "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG"
+        ]
+      },
+      {
+        "sid": "<a_108><b_146><c_2>",
+        "item_ids": [
+          "322",
+          "2100"
+        ],
+        "titles": [
+          "Stainless Steel 316 Cast Pipe Fitting, Union, Class 150, 1/8\" NPT Female",
+          "Stainless Steel 316 Cast Pipe Fitting, Coupling, Class 150, 1/2\"NPT Female"
+        ]
+      },
+      {
+        "sid": "<a_15><b_118><c_0>",
+        "item_ids": [
+          "431",
+          "1006"
+        ],
+        "titles": [
+          "Industrial & Scientific\" />",
+          "Industrial & Scientific\" />"
+        ]
+      },
+      {
+        "sid": "<a_14><b_233><c_0>",
+        "item_ids": [
+          "1249",
+          "1250"
+        ],
+        "titles": [
+          "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red",
+          "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red"
+        ]
+      },
+      {
+        "sid": "<a_122><b_52><c_0>",
+        "item_ids": [
+          "1382",
+          "1788"
+        ],
+        "titles": [
+          "Shoe GOO&reg; Adhesive, 3.7 fl oz",
+          "Shoe GOO&reg; Adhesive, 3.7 fl oz"
+        ]
+      },
+      {
+        "sid": "<a_108><b_146><c_0>",
+        "item_ids": [
+          "1787",
+          "2831"
+        ],
+        "titles": [
+          "Stainless Steel 316 Cast Pipe Fitting, Hex Head Plug, Class 150, 1/4\" NPT Male",
+          "Stainless Steel 316 Pipe Fitting, Hex Countersunk Plug, Class 1000, 1/4\" NPT Male"
+        ]
+      },
+      {
+        "sid": "<a_94><b_40><c_0>",
+        "item_ids": [
+          "1955",
+          "3038"
+        ],
+        "titles": [
+          "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml",
+          "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml"
+        ]
+      },
+      {
+        "sid": "<a_223><b_80><c_0>",
+        "item_ids": [
+          "2659",
+          "3557",
+          "3631"
+        ],
+        "titles": [
+          "3D Solutech Apple Green 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG)",
+          "3D Solutech Chocolate Brown 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)",
+          "3D Solutech Skin 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)"
+        ]
+      },
+      {
+        "sid": "<a_180><b_226><c_0>",
+        "item_ids": [
+          "2956",
+          "2957"
+        ],
+        "titles": [
+          "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)",
+          "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)"
+        ]
+      },
+      {
+        "sid": "<a_223><b_80><c_3>",
+        "item_ids": [
+          "3112",
+          "3493"
+        ],
+        "titles": [
+          "3D Solutech Real Black 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG) - PLA175RBLK",
+          "3D Solutech Printer Filament, Real Blue PLA, 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 1.1 LBS (0.5KG)"
+        ]
+      },
+      {
+        "sid": "<a_67><b_199><c_0>",
+        "item_ids": [
+          "3209",
+          "3210"
+        ],
+        "titles": [
+          "Ancor Heat Shrink Ring Terminals",
+          "Ancor Heat Shrink Ring Terminals"
+        ]
+      },
+      {
+        "sid": "<a_223><b_212><c_0>",
+        "item_ids": [
+          "3302",
+          "3459"
+        ],
+        "titles": [
+          "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm",
+          "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm"
+        ]
+      }
+    ],
+    "history_length": {
+      "minimum": 1,
+      "maximum": 10
+    },
+    "rows": {
+      "train": 36259,
+      "valid": 4532,
+      "test": 4533
+    },
+    "preserve_all_interaction_rows": true,
+    "sampling_applied": false,
+    "keep_longest_only": false,
+    "input_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey",
+    "output_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey",
+    "sources": {
+      "sid_index": {
+        "filename": "Industrial_and_Scientific.index.json",
+        "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8"
+      },
+      "item_metadata": {
+        "filename": "Industrial_and_Scientific.item.json",
+        "sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+      },
+      "train": {
+        "filename": "Industrial_and_Scientific.train.inter",
+        "sha256": "4ac7991a21b83345a788bfbd810b0044723cfe93c46e01ce5d1a6e91ebbb0aec"
+      },
+      "valid": {
+        "filename": "Industrial_and_Scientific.valid.inter",
+        "sha256": "977c9c54dae0f4249d651e37ef411f049b7a00c3372bc8ad506a54989ef4a34b"
+      },
+      "test": {
+        "filename": "Industrial_and_Scientific.test.inter",
+        "sha256": "f00ef69b8ddce5073dca60405687fdcb3e1c57012aaef3f3a7b2f6682258528b"
+      }
+    },
+    "original_sources": {
+      "sid_index": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.index.json",
+        "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8"
+      },
+      "item_metadata": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.item.json",
+        "sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+      },
+      "info": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/info/Industrial_and_Scientific_5_2016-10-2018-11.txt",
+        "sha256": "bdc51fd9636e361db095c84de4e2650b3dd9606812c92e7a01f3b77c5c1a84f7"
+      },
+      "train": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/train/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c"
+      },
+      "valid": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/valid/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a"
+      },
+      "test": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/test/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46"
+      }
+    },
+    "outputs": {
+      "train.csv": {
+        "filename": "train.csv",
+        "sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "bytes": 19277597
+      },
+      "valid.csv": {
+        "filename": "valid.csv",
+        "sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "bytes": 2915875
+      },
+      "test.csv": {
+        "filename": "test.csv",
+        "sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+        "bytes": 3105687
+      },
+      "info.txt": {
+        "filename": "info.txt",
+        "sha256": "bdc51fd9636e361db095c84de4e2650b3dd9606812c92e7a01f3b77c5c1a84f7",
+        "bytes": 374118
+      }
+    },
+    "validation": "passed",
+    "check_only": false,
+    "source_audit": {
+      "catalog_items": 3686,
+      "catalog_ids_contiguous_from_zero": true,
+      "unique_sids": 3670,
+      "complete_sids_unique": false,
+      "sid_token_length_counts": {
+        "3": 3686
+      },
+      "sid_collisions": {
+        "groups": 15,
+        "items": 31,
+        "excess_items": 16
+      },
+      "sid_collision_groups": [
+        {
+          "sid": "<a_210><b_231><c_0>",
+          "item_ids": [
+            "7",
+            "8"
+          ],
+          "titles": [
+            "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)",
+            "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)"
+          ]
+        },
+        {
+          "sid": "<a_197><b_204><c_0>",
+          "item_ids": [
+            "139",
+            "774"
+          ],
+          "titles": [
+            "DuPont Teflon Non-Stick",
+            "DuPont Teflon Non-Stick"
+          ]
+        },
+        {
+          "sid": "<a_107><b_93><c_0>",
+          "item_ids": [
+            "181",
+            "182"
+          ],
+          "titles": [
+            "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator",
+            "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator"
+          ]
+        },
+        {
+          "sid": "<a_17><b_217><c_0>",
+          "item_ids": [
+            "216",
+            "217"
+          ],
+          "titles": [
+            "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG",
+            "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG"
+          ]
+        },
+        {
+          "sid": "<a_108><b_146><c_2>",
+          "item_ids": [
+            "322",
+            "2100"
+          ],
+          "titles": [
+            "Stainless Steel 316 Cast Pipe Fitting, Union, Class 150, 1/8\" NPT Female",
+            "Stainless Steel 316 Cast Pipe Fitting, Coupling, Class 150, 1/2\"NPT Female"
+          ]
+        },
+        {
+          "sid": "<a_15><b_118><c_0>",
+          "item_ids": [
+            "431",
+            "1006"
+          ],
+          "titles": [
+            "Industrial & Scientific\" />",
+            "Industrial & Scientific\" />"
+          ]
+        },
+        {
+          "sid": "<a_14><b_233><c_0>",
+          "item_ids": [
+            "1249",
+            "1250"
+          ],
+          "titles": [
+            "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red",
+            "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red"
+          ]
+        },
+        {
+          "sid": "<a_122><b_52><c_0>",
+          "item_ids": [
+            "1382",
+            "1788"
+          ],
+          "titles": [
+            "Shoe GOO&reg; Adhesive, 3.7 fl oz",
+            "Shoe GOO&reg; Adhesive, 3.7 fl oz"
+          ]
+        },
+        {
+          "sid": "<a_108><b_146><c_0>",
+          "item_ids": [
+            "1787",
+            "2831"
+          ],
+          "titles": [
+            "Stainless Steel 316 Cast Pipe Fitting, Hex Head Plug, Class 150, 1/4\" NPT Male",
+            "Stainless Steel 316 Pipe Fitting, Hex Countersunk Plug, Class 1000, 1/4\" NPT Male"
+          ]
+        },
+        {
+          "sid": "<a_94><b_40><c_0>",
+          "item_ids": [
+            "1955",
+            "3038"
+          ],
+          "titles": [
+            "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml",
+            "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml"
+          ]
+        },
+        {
+          "sid": "<a_223><b_80><c_0>",
+          "item_ids": [
+            "2659",
+            "3557",
+            "3631"
+          ],
+          "titles": [
+            "3D Solutech Apple Green 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG)",
+            "3D Solutech Chocolate Brown 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)",
+            "3D Solutech Skin 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)"
+          ]
+        },
+        {
+          "sid": "<a_180><b_226><c_0>",
+          "item_ids": [
+            "2956",
+            "2957"
+          ],
+          "titles": [
+            "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)",
+            "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)"
+          ]
+        },
+        {
+          "sid": "<a_223><b_80><c_3>",
+          "item_ids": [
+            "3112",
+            "3493"
+          ],
+          "titles": [
+            "3D Solutech Real Black 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG) - PLA175RBLK",
+            "3D Solutech Printer Filament, Real Blue PLA, 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 1.1 LBS (0.5KG)"
+          ]
+        },
+        {
+          "sid": "<a_67><b_199><c_0>",
+          "item_ids": [
+            "3209",
+            "3210"
+          ],
+          "titles": [
+            "Ancor Heat Shrink Ring Terminals",
+            "Ancor Heat Shrink Ring Terminals"
+          ]
+        },
+        {
+          "sid": "<a_223><b_212><c_0>",
+          "item_ids": [
+            "3302",
+            "3459"
+          ],
+          "titles": [
+            "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm",
+            "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm"
+          ]
+        }
+      ],
+      "splits": {
+        "train": {
+          "rows": 36259,
+          "users": 7034,
+          "target_unique_items": 3636,
+          "behavior_unique_items": 3647,
+          "history_min": 1,
+          "history_max": 10,
+          "history_length_counts": {
+            "1": 7034,
+            "2": 6751,
+            "3": 6325,
+            "4": 5643,
+            "5": 3226,
+            "6": 1963,
+            "7": 1332,
+            "8": 903,
+            "9": 663,
+            "10": 2419
+          },
+          "repeat_last_rows": 2731,
+          "repeat_last_rate": 0.07531923108745416,
+          "repeat_any_rows": 3279,
+          "repeat_any_rate": 0.09043272015223806,
+          "duplicate_full_rows": 3,
+          "collided_target_rows": 1455
+        },
+        "valid": {
+          "rows": 4532,
+          "users": 2011,
+          "target_unique_items": 1848,
+          "behavior_unique_items": 3221,
+          "history_min": 1,
+          "history_max": 10,
+          "history_length_counts": {
+            "1": 393,
+            "4": 947,
+            "5": 553,
+            "2": 531,
+            "3": 763,
+            "8": 171,
+            "9": 110,
+            "6": 392,
+            "7": 229,
+            "10": 443
+          },
+          "repeat_last_rows": 205,
+          "repeat_last_rate": 0.04523389232127096,
+          "repeat_any_rows": 236,
+          "repeat_any_rate": 0.05207413945278023,
+          "duplicate_full_rows": 0,
+          "collided_target_rows": 238
+        },
+        "test": {
+          "rows": 4533,
+          "users": 1987,
+          "target_unique_items": 1745,
+          "behavior_unique_items": 3217,
+          "history_min": 1,
+          "history_max": 10,
+          "history_length_counts": {
+            "10": 477,
+            "1": 267,
+            "2": 412,
+            "3": 606,
+            "7": 265,
+            "9": 130,
+            "4": 1104,
+            "5": 672,
+            "8": 194,
+            "6": 406
+          },
+          "repeat_last_rows": 122,
+          "repeat_last_rate": 0.026913743657621884,
+          "repeat_any_rows": 128,
+          "repeat_any_rate": 0.028237370394881976,
+          "duplicate_full_rows": 0,
+          "collided_target_rows": 317
+        }
+      },
+      "users_across_all_splits": 7694,
+      "training_behavior_items": 3647,
+      "training_target_items": 3636,
+      "catalog_behavior_cold_items": 39,
+      "catalog_items_absent_from_all_behavior": 0,
+      "test_target_unique_items": 1745,
+      "cold_test_unique_items": 37,
+      "cold_test_rows": 147,
+      "cold_test_rate": 0.03242885506287227,
+      "cold_test_targets_in_collided_groups": [],
+      "cold_test_targets_with_warm_sid": [],
+      "cold_test_rows_with_warm_sid": 0,
+      "validation": "passed",
+      "mismatches": 0
+    },
+    "evaluation_identity": "Original SID sequence equivalence; collided item IDs cannot be distinguished by SID-only scoring.",
+    "created_at_utc": "2026-11-16T07:39:15.219159+00:00"
+  },
+  "training_summary": {
+    "status": "completed",
+    "stage": "sft",
+    "finished_at_utc": "2026-11-17T09:20:44.689568+00:00",
+    "train_metrics": {
+      "train_runtime": 3515.178,
+      "train_samples_per_second": 165.131,
+      "train_steps_per_second": 2.58,
+      "total_flos": 3.2454828397428736e+17,
+      "train_loss": 0.8275304939150153,
+      "epoch": 5.0
+    },
+    "final_eval_metrics": {
+      "eval_loss": 1.5791301727294922,
+      "eval_runtime": 3.5571,
+      "eval_samples_per_second": 1274.057,
+      "eval_steps_per_second": 39.92,
+      "epoch": 5.0
+    },
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/checkpoint-8626",
+    "best_metric": 1.5791301727294922,
+    "selection_metric": "eval_loss",
+    "validation_loss_at_selected_checkpoint": 1.5791301727294922,
+    "minimum_observed_validation_loss": 1.5791301727294922,
+    "best_ndcg_checkpoint": null,
+    "best_recall_checkpoint": null,
+    "selected_validation_metrics": null,
+    "best_recall_validation_metrics": null,
+    "epoch_snapshot_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint",
+    "epoch_snapshot_metadata": {
+      "format_version": 1,
+      "snapshot_type": "epoch_end_training_weights",
+      "capture_event": "on_epoch_end",
+      "requested_epoch": 3,
+      "epoch": 3.0,
+      "global_step": 5442,
+      "steps_per_epoch": 1814.0,
+      "checkpoint_path": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint",
+      "best_model_reloaded": false,
+      "created_at_utc": "2026-11-17T08:56:52.039505+00:00"
+    },
+    "final_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint",
+    "global_step": 9070,
+    "epoch": 5.0,
+    "planned_max_steps": 9070,
+    "stop_reason": "max_epochs",
+    "final_checkpoint_contains_best_model": true
+  },
+  "monitor_summary": {
+    "status": "completed",
+    "updated_at_utc": "2026-11-17T09:20:44.691282+00:00",
+    "elapsed_seconds": 3521.636957142997,
+    "grad_norm_definition": "unscaled global full-model L2 norm before gradient clipping",
+    "statistics_exclude_skipped_nonfinite_missing": true,
+    "latest": {
+      "step": 9070,
+      "epoch": 5.0,
+      "phase": "training",
+      "timestamp_utc": "2026-11-17T09:20:32.151493+00:00",
+      "elapsed_seconds": 3509.097168532986,
+      "kind": "train",
+      "loss": 0.3475,
+      "learning_rate": 3.314917127071823e-08,
+      "grad_norm": 0.7273550033569336,
+      "grad_norm_observed": 0.7273550033569336,
+      "grad_norm_nonfinite": false,
+      "step_skipped": false,
+      "optimizer_overflow": false,
+      "rolling_grad_norm_mean": 0.9364904582500457,
+      "rolling_grad_norm_max": 1.4034919738769531,
+      "grad_norm_mean": 1.3216201127561213,
+      "grad_norm_max": 58.960811614990234,
+      "grad_norm_max_step": 1
+    },
+    "evaluations": [
+      {
+        "step": 454,
+        "epoch": 0.25027563395810365,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:24:53.287665+00:00",
+        "elapsed_seconds": 170.2333398629853,
+        "kind": "eval",
+        "eval_loss": 2.50789737701416,
+        "eval_runtime": 3.527,
+        "eval_samples_per_second": 1284.95,
+        "eval_steps_per_second": 40.261
+      },
+      {
+        "step": 908,
+        "epoch": 0.5005512679162073,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:27:48.561861+00:00",
+        "elapsed_seconds": 345.5075364809891,
+        "kind": "eval",
+        "eval_loss": 2.2077646255493164,
+        "eval_runtime": 3.5375,
+        "eval_samples_per_second": 1281.134,
+        "eval_steps_per_second": 40.141
+      },
+      {
+        "step": 1362,
+        "epoch": 0.7508269018743109,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:30:41.168084+00:00",
+        "elapsed_seconds": 518.1137583509844,
+        "kind": "eval",
+        "eval_loss": 2.036534309387207,
+        "eval_runtime": 3.4741,
+        "eval_samples_per_second": 1304.511,
+        "eval_steps_per_second": 40.874
+      },
+      {
+        "step": 1816,
+        "epoch": 1.0011025358324146,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:33:38.675299+00:00",
+        "elapsed_seconds": 695.6209813389869,
+        "kind": "eval",
+        "eval_loss": 1.95638906955719,
+        "eval_runtime": 3.465,
+        "eval_samples_per_second": 1307.936,
+        "eval_steps_per_second": 40.981
+      },
+      {
+        "step": 2270,
+        "epoch": 1.2513781697905182,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:36:33.818997+00:00",
+        "elapsed_seconds": 870.7646707219828,
+        "kind": "eval",
+        "eval_loss": 1.8758220672607422,
+        "eval_runtime": 3.5228,
+        "eval_samples_per_second": 1286.461,
+        "eval_steps_per_second": 40.308
+      },
+      {
+        "step": 2724,
+        "epoch": 1.5016538037486218,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:39:28.861260+00:00",
+        "elapsed_seconds": 1045.8069353829778,
+        "kind": "eval",
+        "eval_loss": 1.8449207544326782,
+        "eval_runtime": 3.4646,
+        "eval_samples_per_second": 1308.077,
+        "eval_steps_per_second": 40.986
+      },
+      {
+        "step": 3178,
+        "epoch": 1.7519294377067256,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:42:22.410537+00:00",
+        "elapsed_seconds": 1219.3562133239757,
+        "kind": "eval",
+        "eval_loss": 1.7658816576004028,
+        "eval_runtime": 3.4734,
+        "eval_samples_per_second": 1304.78,
+        "eval_steps_per_second": 40.882
+      },
+      {
+        "step": 3632,
+        "epoch": 2.002205071664829,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:45:18.009225+00:00",
+        "elapsed_seconds": 1394.954899481003,
+        "kind": "eval",
+        "eval_loss": 1.7405529022216797,
+        "eval_runtime": 3.4946,
+        "eval_samples_per_second": 1296.857,
+        "eval_steps_per_second": 40.634
+      },
+      {
+        "step": 4086,
+        "epoch": 2.252480705622933,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:48:12.260281+00:00",
+        "elapsed_seconds": 1569.205955256999,
+        "kind": "eval",
+        "eval_loss": 1.70341157913208,
+        "eval_runtime": 3.5163,
+        "eval_samples_per_second": 1288.843,
+        "eval_steps_per_second": 40.383
+      },
+      {
+        "step": 4540,
+        "epoch": 2.5027563395810364,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:51:08.371712+00:00",
+        "elapsed_seconds": 1745.3173870129976,
+        "kind": "eval",
+        "eval_loss": 1.687445878982544,
+        "eval_runtime": 3.4977,
+        "eval_samples_per_second": 1295.727,
+        "eval_steps_per_second": 40.599
+      },
+      {
+        "step": 4994,
+        "epoch": 2.75303197353914,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:54:01.300334+00:00",
+        "elapsed_seconds": 1918.2460089939996,
+        "kind": "eval",
+        "eval_loss": 1.6582585573196411,
+        "eval_runtime": 3.4544,
+        "eval_samples_per_second": 1311.941,
+        "eval_steps_per_second": 41.107
+      },
+      {
+        "step": 5448,
+        "epoch": 3.0033076074972436,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:56:57.734217+00:00",
+        "elapsed_seconds": 2094.6798918379936,
+        "kind": "eval",
+        "eval_loss": 1.6355254650115967,
+        "eval_runtime": 3.4764,
+        "eval_samples_per_second": 1303.647,
+        "eval_steps_per_second": 40.847
+      },
+      {
+        "step": 5902,
+        "epoch": 3.253583241455347,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T08:59:53.323798+00:00",
+        "elapsed_seconds": 2270.2694720439904,
+        "kind": "eval",
+        "eval_loss": 1.6223078966140747,
+        "eval_runtime": 3.4769,
+        "eval_samples_per_second": 1303.472,
+        "eval_steps_per_second": 40.841
+      },
+      {
+        "step": 6356,
+        "epoch": 3.503858875413451,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:02:51.738935+00:00",
+        "elapsed_seconds": 2448.6846099079994,
+        "kind": "eval",
+        "eval_loss": 1.6160213947296143,
+        "eval_runtime": 3.463,
+        "eval_samples_per_second": 1308.674,
+        "eval_steps_per_second": 41.004
+      },
+      {
+        "step": 6810,
+        "epoch": 3.7541345093715544,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:05:49.790868+00:00",
+        "elapsed_seconds": 2626.7365431819926,
+        "kind": "eval",
+        "eval_loss": 1.5992201566696167,
+        "eval_runtime": 3.4477,
+        "eval_samples_per_second": 1314.486,
+        "eval_steps_per_second": 41.186
+      },
+      {
+        "step": 7264,
+        "epoch": 4.004410143329658,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:08:46.898618+00:00",
+        "elapsed_seconds": 2803.844292631984,
+        "kind": "eval",
+        "eval_loss": 1.5875598192214966,
+        "eval_runtime": 3.4741,
+        "eval_samples_per_second": 1304.498,
+        "eval_steps_per_second": 40.874
+      },
+      {
+        "step": 7718,
+        "epoch": 4.2546857772877615,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:11:45.642653+00:00",
+        "elapsed_seconds": 2982.588327017991,
+        "kind": "eval",
+        "eval_loss": 1.6161341667175293,
+        "eval_runtime": 3.5338,
+        "eval_samples_per_second": 1282.482,
+        "eval_steps_per_second": 40.184
+      },
+      {
+        "step": 8172,
+        "epoch": 4.504961411245866,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:14:43.366620+00:00",
+        "elapsed_seconds": 3160.3122933229897,
+        "kind": "eval",
+        "eval_loss": 1.589674711227417,
+        "eval_runtime": 3.4623,
+        "eval_samples_per_second": 1308.95,
+        "eval_steps_per_second": 41.013
+      },
+      {
+        "step": 8626,
+        "epoch": 4.75523704520397,
+        "phase": "training",
+        "timestamp_utc": "2026-11-17T09:17:40.418217+00:00",
+        "elapsed_seconds": 3337.363891268993,
+        "kind": "eval",
+        "eval_loss": 1.5791301727294922,
+        "eval_runtime": 3.456,
+        "eval_samples_per_second": 1311.342,
+        "eval_steps_per_second": 41.088
+      },
+      {
+        "step": 9070,
+        "epoch": 5.0,
+        "phase": "final_validation",
+        "timestamp_utc": "2026-11-17T09:20:41.795927+00:00",
+        "elapsed_seconds": 3518.741600969981,
+        "kind": "eval",
+        "eval_loss": 1.5791301727294922,
+        "eval_runtime": 3.5571,
+        "eval_samples_per_second": 1274.057,
+        "eval_steps_per_second": 39.92
+      }
+    ],
+    "abort_reason": null,
+    "monitor_window": 100,
+    "update_records": 9070,
+    "grad_norm_count": 9070,
+    "grad_norm_mean": 1.3216201127561213,
+    "grad_norm_max": 58.960811614990234,
+    "grad_norm_max_step": 1,
+    "rolling_grad_norm_count": 100,
+    "rolling_grad_norm_mean": 0.9364904582500457,
+    "rolling_grad_norm_max": 1.4034919738769531,
+    "skipped_update_count": 0,
+    "missing_grad_norm_count": 0,
+    "nonfinite_grad_norm_count": 0,
+    "global_step": 9070,
+    "epoch": 5.0,
+    "max_steps": 9070,
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/checkpoint-8626",
+    "best_metric": 1.5791301727294922
+  },
+  "grad_norm": {
+    "count": 9070,
+    "mean": 1.3216201127561213,
+    "max": 58.960811614990234,
+    "last100_mean": 0.9364904582500457
+  },
+  "baseline_validation": {
+    "status": "passed",
+    "loss": 14.4962911835205,
+    "masked_perplexity": 1975419.1932067294,
+    "perplexity_overflow": false,
+    "loss_sum": 328485.9582185745,
+    "answer_token_count": 22660,
+    "sample_count": 4532,
+    "world_size": 4,
+    "definition": "token-weighted causal cross entropy on nonmasked answer labels only",
+    "elapsed_seconds": 3.5745678360108286,
+    "created_at_utc": "2026-11-17T08:21:59.888934+00:00"
+  },
+  "ranking_selection": {},
+  "recall_evaluation": {},
+  "rendered_pdf": true,
+  "pdf_pages": 4
+}

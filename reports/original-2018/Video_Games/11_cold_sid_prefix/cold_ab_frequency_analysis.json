@@ -1,0 +1,357 @@
+{
+  "status": "passed",
+  "generated_at_utc": "2026-11-17T09:09:43.158112+00:00",
+  "scope": "666 unique strictly behavior-cold TEST target items, 10602 test rows. ab is the exact consecutive first-two-token SID prefix, not two independently matched token values.",
+  "definitions": {
+    "other_catalog_items": "All catalog items sharing ab, excluding the cold target itself. May include other cold items.",
+    "training_behavior_seen_items": "Sharing catalog items present in train history union targets.",
+    "training_target_occurrences": "Sum of recommendation target counts of other items with this exact ab in train.inter. Excludes history positions and auxiliary title/SID tasks.",
+    "weighting": "Unique-item weighting gives each of 666 cold targets equal weight; test-row weighting weights by its test occurrence count."
+  },
+  "source_paths": {
+    "index": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+    "train": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.train.inter",
+    "test": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.test.inter",
+    "cold_rows": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/11_cold_sid_prefix/cold_prefix_rows.csv"
+  },
+  "source_sha256": {
+    "index": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+    "train": "5dd84a62a93460140c5da4c1c61e1eb81e5f15afcae106a9461017113e99633a",
+    "test": "d295cba45613d39200592c097a747378c6f7f0534698b2671f825354dbe4f70d",
+    "cold_rows": "4a198b334ed8907e06801fc5711f869e8dfb90216b507f414d0de898832ace4e"
+  },
+  "counts": {
+    "catalog_items": 16572,
+    "catalog_behavior_cold_items": 679,
+    "cold_test_items": 666,
+    "cold_test_rows": 10602,
+    "distinct_cold_target_ab": 503,
+    "cold_items_a_unseen_in_training_targets": 0,
+    "cold_items_b_unseen_in_training_targets": 0
+  },
+  "summary": {
+    "other_catalog_items_sharing_ab": {
+      "unique_cold_item_weighted": {
+        "n": 666,
+        "min": 0,
+        "median": 2.0,
+        "mean": 3.4474474474474475,
+        "max": 32
+      },
+      "cold_test_row_weighted": {
+        "n": 10602,
+        "min": 0,
+        "median": 2.0,
+        "mean": 3.1047915487643842,
+        "max": 32
+      }
+    },
+    "other_behavior_seen_items_sharing_ab": {
+      "unique_cold_item_weighted": {
+        "n": 666,
+        "min": 0,
+        "median": 1.0,
+        "mean": 2.5705705705705704,
+        "max": 30
+      },
+      "cold_test_row_weighted": {
+        "n": 10602,
+        "min": 0,
+        "median": 1.0,
+        "mean": 2.218826636483682,
+        "max": 30
+      }
+    },
+    "other_training_target_items_sharing_ab": {
+      "unique_cold_item_weighted": {
+        "n": 666,
+        "min": 0,
+        "median": 1.0,
+        "mean": 2.566066066066066,
+        "max": 30
+      },
+      "cold_test_row_weighted": {
+        "n": 10602,
+        "min": 0,
+        "median": 1.0,
+        "mean": 2.2175061309186948,
+        "max": 30
+      }
+    },
+    "training_target_ab_occurrences": {
+      "unique_cold_item_weighted": {
+        "n": 666,
+        "min": 0,
+        "median": 14.5,
+        "mean": 72.33933933933933,
+        "max": 809
+      },
+      "cold_test_row_weighted": {
+        "n": 10602,
+        "min": 0,
+        "median": 15.0,
+        "mean": 97.57489152990001,
+        "max": 809
+      }
+    }
+  },
+  "training_target_ab_frequency_bins": {
+    "0": {
+      "unique_cold_items": 247,
+      "cold_test_rows": 4490,
+      "prefix2_hit_top10_rows": 0,
+      "prefix2_hit_top50_rows": 0,
+      "unique_item_share": 0.3708708708708709,
+      "test_row_share": 0.42350499905678174,
+      "prefix2_top10_coverage": 0.0,
+      "prefix2_top50_coverage": 0.0
+    },
+    "1": {
+      "unique_cold_items": 5,
+      "cold_test_rows": 32,
+      "prefix2_hit_top10_rows": 0,
+      "prefix2_hit_top50_rows": 0,
+      "unique_item_share": 0.0075075075075075074,
+      "test_row_share": 0.003018298434257687,
+      "prefix2_top10_coverage": 0.0,
+      "prefix2_top50_coverage": 0.0
+    },
+    "2-5": {
+      "unique_cold_items": 20,
+      "cold_test_rows": 343,
+      "prefix2_hit_top10_rows": 0,
+      "prefix2_hit_top50_rows": 0,
+      "unique_item_share": 0.03003003003003003,
+      "test_row_share": 0.032352386342199585,
+      "prefix2_top10_coverage": 0.0,
+      "prefix2_top50_coverage": 0.0
+    },
+    "6-20": {
+      "unique_cold_items": 91,
+      "cold_test_rows": 698,
+      "prefix2_hit_top10_rows": 4,
+      "prefix2_hit_top50_rows": 18,
+      "unique_item_share": 0.13663663663663664,
+      "test_row_share": 0.0658366345972458,
+      "prefix2_top10_coverage": 0.0057306590257879654,
+      "prefix2_top50_coverage": 0.025787965616045846
+    },
+    "21-100": {
+      "unique_cold_items": 168,
+      "cold_test_rows": 3025,
+      "prefix2_hit_top10_rows": 38,
+      "prefix2_hit_top50_rows": 159,
+      "unique_item_share": 0.25225225225225223,
+      "test_row_share": 0.28532352386342197,
+      "prefix2_top10_coverage": 0.01256198347107438,
+      "prefix2_top50_coverage": 0.05256198347107438
+    },
+    ">100": {
+      "unique_cold_items": 135,
+      "cold_test_rows": 2014,
+      "prefix2_hit_top10_rows": 357,
+      "prefix2_hit_top50_rows": 802,
+      "unique_item_share": 0.20270270270270271,
+      "test_row_share": 0.18996415770609318,
+      "prefix2_top10_coverage": 0.1772591857000993,
+      "prefix2_top50_coverage": 0.39821251241310823
+    }
+  },
+  "other_catalog_item_count_bins": {
+    "0": {
+      "unique_cold_items": 166,
+      "cold_test_rows": 3095,
+      "prefix2_hit_top10_rows": 0,
+      "prefix2_hit_top50_rows": 0,
+      "unique_item_share": 0.24924924924924924,
+      "test_row_share": 0.29192605168836067,
+      "prefix2_top10_coverage": 0.0,
+      "prefix2_top50_coverage": 0.0
+    },
+    "1": {
+      "unique_cold_items": 110,
+      "cold_test_rows": 1849,
+      "prefix2_hit_top10_rows": 9,
+      "prefix2_hit_top50_rows": 26,
+      "unique_item_share": 0.16516516516516516,
+      "test_row_share": 0.174401056404452,
+      "prefix2_top10_coverage": 0.0048674959437533805,
+      "prefix2_top50_coverage": 0.014061654948620876
+    },
+    "2-5": {
+      "unique_cold_items": 260,
+      "cold_test_rows": 3802,
+      "prefix2_hit_top10_rows": 71,
+      "prefix2_hit_top50_rows": 271,
+      "unique_item_share": 0.39039039039039036,
+      "test_row_share": 0.35861158272024146,
+      "prefix2_top10_coverage": 0.018674381904260916,
+      "prefix2_top50_coverage": 0.07127827459231983
+    },
+    "6-20": {
+      "unique_cold_items": 126,
+      "cold_test_rows": 1778,
+      "prefix2_hit_top10_rows": 308,
+      "prefix2_hit_top50_rows": 665,
+      "unique_item_share": 0.1891891891891892,
+      "test_row_share": 0.16770420675344275,
+      "prefix2_top10_coverage": 0.1732283464566929,
+      "prefix2_top50_coverage": 0.37401574803149606
+    },
+    ">20": {
+      "unique_cold_items": 4,
+      "cold_test_rows": 78,
+      "prefix2_hit_top10_rows": 11,
+      "prefix2_hit_top50_rows": 17,
+      "unique_item_share": 0.006006006006006006,
+      "test_row_share": 0.007357102433503113,
+      "prefix2_top10_coverage": 0.14102564102564102,
+      "prefix2_top50_coverage": 0.21794871794871795
+    }
+  },
+  "other_behavior_seen_item_count_bins": {
+    "0": {
+      "unique_cold_items": 247,
+      "cold_test_rows": 4490,
+      "prefix2_hit_top10_rows": 0,
+      "prefix2_hit_top50_rows": 0,
+      "unique_item_share": 0.3708708708708709,
+      "test_row_share": 0.42350499905678174,
+      "prefix2_top10_coverage": 0.0,
+      "prefix2_top50_coverage": 0.0
+    },
+    "1": {
+      "unique_cold_items": 123,
+      "cold_test_rows": 2022,
+      "prefix2_hit_top10_rows": 16,
+      "prefix2_hit_top50_rows": 64,
+      "unique_item_share": 0.18468468468468469,
+      "test_row_share": 0.1907187323146576,
+      "prefix2_top10_coverage": 0.00791295746785361,
+      "prefix2_top50_coverage": 0.03165182987141444
+    },
+    "2-5": {
+      "unique_cold_items": 195,
+      "cold_test_rows": 2674,
+      "prefix2_hit_top10_rows": 94,
+      "prefix2_hit_top50_rows": 344,
+      "unique_item_share": 0.2927927927927928,
+      "test_row_share": 0.252216562912658,
+      "prefix2_top10_coverage": 0.035153328347045626,
+      "prefix2_top50_coverage": 0.1286462228870606
+    },
+    "6-20": {
+      "unique_cold_items": 97,
+      "cold_test_rows": 1338,
+      "prefix2_hit_top10_rows": 278,
+      "prefix2_hit_top50_rows": 554,
+      "unique_item_share": 0.14564564564564564,
+      "test_row_share": 0.12620260328239954,
+      "prefix2_top10_coverage": 0.2077727952167414,
+      "prefix2_top50_coverage": 0.414050822122571
+    },
+    ">20": {
+      "unique_cold_items": 4,
+      "cold_test_rows": 78,
+      "prefix2_hit_top10_rows": 11,
+      "prefix2_hit_top50_rows": 17,
+      "unique_item_share": 0.006006006006006006,
+      "test_row_share": 0.007357102433503113,
+      "prefix2_top10_coverage": 0.14102564102564102,
+      "prefix2_top50_coverage": 0.21794871794871795
+    }
+  },
+  "examples": {
+    "6466": {
+      "item": "6466",
+      "title": "Pok&eacute;mon Sun - Nintendo 3DS",
+      "sid": "<a_171><b_186><c_115><d_0>",
+      "ab": "<a_171><b_186>",
+      "cold_test_rows": 155,
+      "other_catalog_items_sharing_ab": 8,
+      "other_behavior_seen_items_sharing_ab": 7,
+      "other_behavior_cold_items_sharing_ab": 1,
+      "other_training_target_items_sharing_ab": 7,
+      "training_target_ab_occurrences": 714,
+      "training_target_a_occurrences": 2332,
+      "training_target_b_occurrences_any_a": 1868
+    },
+    "16556": {
+      "item": "16556",
+      "title": "Skylanders SuperChargers: Vehicle Sun Runner Character Pack",
+      "sid": "<a_207><b_165><c_7><d_0>",
+      "ab": "<a_207><b_165>",
+      "cold_test_rows": 5,
+      "other_catalog_items_sharing_ab": 32,
+      "other_behavior_seen_items_sharing_ab": 30,
+      "other_behavior_cold_items_sharing_ab": 2,
+      "other_training_target_items_sharing_ab": 30,
+      "training_target_ab_occurrences": 358,
+      "training_target_a_occurrences": 4687,
+      "training_target_b_occurrences_any_a": 1398
+    },
+    "most_shared": {
+      "item": "16394",
+      "title": "Skylanders SuperChargers: Drivers Bone Bash Roller Brawl Character Pack",
+      "sid": "<a_207><b_165><c_122><d_0>",
+      "ab": "<a_207><b_165>",
+      "cold_test_rows": 4,
+      "other_catalog_items_sharing_ab": 32,
+      "other_behavior_seen_items_sharing_ab": 30,
+      "other_behavior_cold_items_sharing_ab": 2,
+      "other_training_target_items_sharing_ab": 30,
+      "training_target_ab_occurrences": 358,
+      "training_target_a_occurrences": 4687,
+      "training_target_b_occurrences_any_a": 1398
+    },
+    "most_training_support": {
+      "item": "6252",
+      "title": "Wireless Controller Double Vibration Gamepad for Sony PS2 Playstation 2",
+      "sid": "<a_73><b_200><c_2><d_0>",
+      "ab": "<a_73><b_200>",
+      "cold_test_rows": 18,
+      "other_catalog_items_sharing_ab": 13,
+      "other_behavior_seen_items_sharing_ab": 11,
+      "other_behavior_cold_items_sharing_ab": 2,
+      "other_training_target_items_sharing_ab": 11,
+      "training_target_ab_occurrences": 809,
+      "training_target_a_occurrences": 6661,
+      "training_target_b_occurrences_any_a": 2663
+    },
+    "no_shared_prefix": {
+      "item": "295",
+      "title": "Horizon Zero Dawn - PlayStation 4",
+      "sid": "<a_109><b_43><c_52><d_0>",
+      "ab": "<a_109><b_43>",
+      "cold_test_rows": 481,
+      "other_catalog_items_sharing_ab": 0,
+      "other_behavior_seen_items_sharing_ab": 0,
+      "other_behavior_cold_items_sharing_ab": 0,
+      "other_training_target_items_sharing_ab": 0,
+      "training_target_ab_occurrences": 0,
+      "training_target_a_occurrences": 2109,
+      "training_target_b_occurrences_any_a": 1283
+    }
+  },
+  "checks": {
+    "all_cold_targets_absent_train_history_and_targets": true,
+    "training_ab_frequency_matches_previous_analysis": true,
+    "no_training_or_new_inference_performed": true
+  },
+  "standalone_token_summary_unique_item_weighted": {
+    "a": {
+      "other_catalog_item_count_median": 151.0,
+      "other_catalog_item_count_mean": 173.31231231231232,
+      "training_target_occurrences_median": 3198.0,
+      "training_target_occurrences_min": 116,
+      "training_target_occurrences_max": 13071
+    },
+    "b": {
+      "other_catalog_item_count_median": 76.0,
+      "other_catalog_item_count_mean": 74.36936936936937,
+      "training_target_occurrences_median": 1489.0,
+      "training_target_occurrences_min": 245,
+      "training_target_occurrences_max": 3559
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "all_generated_input_tokens_and_labels_identical": true,
+  "train_samples": 116093,
+  "validation_samples": 4532,
+  "task_counts": {
+    "sid_sequence_recommendation": 36259,
+    "history_to_title": 36259,
+    "sid2title": 3670,
+    "title2sid": 3646,
+    "title_history_to_sid": 36259
+  },
+  "added_sid_tokens": 560,
+  "mixed_task_collator": true,
+  "production_training": false
+}

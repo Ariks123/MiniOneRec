@@ -1,0 +1,1339 @@
+{
+  "created_at": "2026-11-18T13:57:33.479330+00:00",
+  "file_count": 222,
+  "bytes": 24120829866,
+  "files": [
+    {
+      "path": "assets/Industrial_and_Scientific/Industrial_and_Scientific.emb-qwen-td.npy",
+      "size": 18872448,
+      "sha256": "91a1c875e4b009f3a07b5febf00c2ef62a3813a55cfe873b825e18e32df1dd0b",
+      "git_blob_sha1": "18fca6c847c0ec45a0daa29b8542ebd84e22b6be"
+    },
+    {
+      "path": "assets/Industrial_and_Scientific/Industrial_and_Scientific.index.json",
+      "size": 152189,
+      "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "git_blob_sha1": "58d4cfc25fec4b8d362600675b576927ed982747"
+    },
+    {
+      "path": "assets/Video_Games/Video_Games.emb-qwen-td.npy",
+      "size": 169697408,
+      "sha256": "5db0987422bb66f5d8c4aca8a0014a8294feaeb1d4574b272e401995a070374a",
+      "git_blob_sha1": "42dccc15e1e55d01da63a550540958d291391d3b"
+    },
+    {
+      "path": "assets/Video_Games/Video_Games.emb-qwen-td.npy.ids.json",
+      "size": 104894,
+      "sha256": "cea235116b1760d4c0dfa7e812debf9151f84d646785131f19b460016bdf631f",
+      "git_blob_sha1": "c6127211cd9724b187bf0df324fb8e16d5c5486c"
+    },
+    {
+      "path": "assets/Video_Games/Video_Games.emb-qwen-td.npy.manifest.json",
+      "size": 633,
+      "sha256": "cb2fee6dd1b9021608ca508ff4819bd8fa966183e5b51c0fbafa999696954457",
+      "git_blob_sha1": "312557f36b1b2491ad046bb6067dffa62cf68c77"
+    },
+    {
+      "path": "assets/Video_Games/Video_Games.index.json",
+      "size": 1205786,
+      "sha256": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+      "git_blob_sha1": "b759fdef65584517d9287cca538788226f51c7ef"
+    },
+    {
+      "path": "assets/Video_Games/Video_Games.raw.index.json",
+      "size": 993456,
+      "sha256": "69762266170c7aee2e48f2a8ca1e87b05966800a0b5e5b40b644bbbbf01f782a",
+      "git_blob_sha1": "89b3a054eeb2c6cf08440cf6ecd6a13cb734be01"
+    },
+    {
+      "path": "assets/Video_Games/Video_Games.semantic.index.json",
+      "size": 990350,
+      "sha256": "8fc4e1ee08546ffe34fbb9ada08f688a5ba6603052f603cdbeb2b17910ead763",
+      "git_blob_sha1": "47b40352107216af0800dfec06fa863ba1c9b32a"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+      "git_blob_sha1": "5a3d36d4def8e7fb607b2f02c1b7f6bb40dfb206"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "c297ba4af4715a2553c9427d4b856ec148c68ba9ad2836d6cdf1f00e67571106",
+      "git_blob_sha1": "4baf9e699d6288a22ac59244d834be00a6f48eab"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/training_args.bin",
+      "size": 7505,
+      "sha256": "0a26d998ff4b81db304421b29465e120756ff38e7462a69069e21bc2b32482fb",
+      "git_blob_sha1": "85820ff2b256dafc56511710262d7cba97900c76"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/baseline/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+      "git_blob_sha1": "5a3d36d4def8e7fb607b2f02c1b7f6bb40dfb206"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "131421e00baf83fcdb928369f27d1c0851615d3e1d70127b8f30a62bad86cd2a",
+      "git_blob_sha1": "bb3a5b17aa19f8d12224ab814ff0b15b0111b033"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/training_args.bin",
+      "size": 7505,
+      "sha256": "d67c04998055edd64d81e2fa74fb72053704e17d158fbd89c19115f38f3dd624",
+      "git_blob_sha1": "419625a866f5bdf00207fc3f5bb7ff52b994d7a1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep10_20261117/title_history/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "4d58a3270b56fcdd0267a33eb2c13763ddbadc3a101d07367bf9fddc311e39d1",
+      "git_blob_sha1": "29db8e97fac95e293c2ffad1ad589ea881c5bd23"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/generation_config.json",
+      "size": 127,
+      "sha256": "0df5ef3f9cf1a666936f222ec08786a3788f5529d6d5e17efe57e23f6ad27d9e",
+      "git_blob_sha1": "54041e05b029199eaeb63e4c2040918a77483e57"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "f12cf46f21684b77bc2402af986565e4965f30dfb28f3f6902f1371baa985973",
+      "git_blob_sha1": "32c1b679289e43bc0672a4e11008456f564804f9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/training_args.bin",
+      "size": 7505,
+      "sha256": "0f0881d2976c07631225cf10a356c88944db84b9e3fc5335e2c7f4ac8db4679d",
+      "git_blob_sha1": "aae9ffd76c9ade96c89b1c017cf47b09148a77a2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_cosine_ep5_title_history_rank50_20261117/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+      "git_blob_sha1": "5a3d36d4def8e7fb607b2f02c1b7f6bb40dfb206"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "e688140bbfe9aac2981324471dd79ff9da1ad0b329acfa9c18c63f4dca4f597c",
+      "git_blob_sha1": "f1aceae6c6ace5a83b9ab486cd0f8fb00e5f981f"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/training_args.bin",
+      "size": 7505,
+      "sha256": "204a300f93786731c511ff49ba6383afc2c58912b14e70417d7cf58f0a75b2de",
+      "git_blob_sha1": "ced958956bf7b4231578ad59b3d9adf73e5a3971"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs3/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+      "git_blob_sha1": "5a3d36d4def8e7fb607b2f02c1b7f6bb40dfb206"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "d00f751633ede153ea75eaa25e417bf9bf33485511f3edff54bff0c6fbf1e48b",
+      "git_blob_sha1": "e0a7079ffdcfd6d0c9b7a21957bcaf729bbe8f24"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/snapshot_metadata.json",
+      "size": 474,
+      "sha256": "d054b496e1129e9525c8ae2b8f2b9f69f22e3726e0691d1e97065d1dc74e42ca",
+      "git_blob_sha1": "45d2f6db47b2253931bb13e2684f77a2f3c02f1e"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/training_args.bin",
+      "size": 7505,
+      "sha256": "51876e1711bcdf2895b2a141d7bc8a9c1a5a4c9aeff0fe1ea4fbc21b988cf641",
+      "git_blob_sha1": "6d889a705342100912296ea929693247b6c392fa"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/epoch_3_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+      "git_blob_sha1": "5a3d36d4def8e7fb607b2f02c1b7f6bb40dfb206"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "efeeef40feeb0ef0be7f7925006150644c08aa203d4015ca49b3c9b50b621af7",
+      "git_blob_sha1": "79e786153cc5786ec0cc1780b41476a9d495e1da"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/training_args.bin",
+      "size": 7505,
+      "sha256": "51876e1711bcdf2895b2a141d7bc8a9c1a5a4c9aeff0fe1ea4fbc21b988cf641",
+      "git_blob_sha1": "6d889a705342100912296ea929693247b6c392fa"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_linear_ep3_ep5_title_history_20261117_retry1/epochs5/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/config.json",
+      "size": 1439,
+      "sha256": "4af4a94c40545f2f5698058af04349ddb8194c02af2866820fd1a017a142f3a7",
+      "git_blob_sha1": "3df7e513b83bfa4930bd0fd2c89e455dee18ab78"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/generation_config.json",
+      "size": 127,
+      "sha256": "0df5ef3f9cf1a666936f222ec08786a3788f5529d6d5e17efe57e23f6ad27d9e",
+      "git_blob_sha1": "54041e05b029199eaeb63e4c2040918a77483e57"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/model.safetensors",
+      "size": 1261862072,
+      "sha256": "b6c87e1105bfeb5b98439074acabfc7c2da4142316ea177aa99a63ce14af5a17",
+      "git_blob_sha1": "3090fac70f6173abfe987e106f44f2ffb68a207a"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/training_args.bin",
+      "size": 7441,
+      "sha256": "5ee1a24f6d0fbfc0775dca73fd92c4562b30627e5b2d6432085be3e3599071ad",
+      "git_blob_sha1": "d52776d59fc5e3681b43fd313c318a1ff95c8941"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index/item_vectors.npy",
+      "size": 3758208,
+      "sha256": "8e79048dccab5c6bab07cf373dda10777d1b95fe4ec9ef77549553702682b25a",
+      "git_blob_sha1": "dc177358de84650989427670c537b8d6e3f2cb24"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index/manifest.json",
+      "size": 2323,
+      "sha256": "9f7957d04ed349b50a3cd09fc986100a4ff486b4cceae21e035dd543338c238f",
+      "git_blob_sha1": "a81a150976c147abfb55b34838db0c2fec995d9f"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index/row_to_items.json",
+      "size": 294901,
+      "sha256": "02711ab0b9b8501b65d7d72547bc4831c1d5bfa520148d52f378d9254b898b9c",
+      "git_blob_sha1": "1c5e043ad6dbc5fb9626ef943ad02959934b84c6"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_qwen_retrieval_20261118_004220/sft/item_index/status.json",
+      "size": 81,
+      "sha256": "c70debc6b143305760098ae4117e79877f3ef1c2bb765672c6f2fbb7ffc7cf46",
+      "git_blob_sha1": "a07e06019f62e651bae2531e457fda8341e16dc0"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "4d58a3270b56fcdd0267a33eb2c13763ddbadc3a101d07367bf9fddc311e39d1",
+      "git_blob_sha1": "29db8e97fac95e293c2ffad1ad589ea881c5bd23"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/generation_config.json",
+      "size": 127,
+      "sha256": "0df5ef3f9cf1a666936f222ec08786a3788f5529d6d5e17efe57e23f6ad27d9e",
+      "git_blob_sha1": "54041e05b029199eaeb63e4c2040918a77483e57"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "442144926c3801d215d285dcc906cbcd3c490af1d0cc60a22d113c5f9a9c2850",
+      "git_blob_sha1": "fc48e110d254798520c1a620a41166e3caec842f"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/tokenizer.json",
+      "size": 11524863,
+      "sha256": "7bdc2e627f1a55b703c7f3a95bc14a050aa0e4495e0866a986b4ef49b31d6da3",
+      "git_blob_sha1": "d9f73783d7d03a60884053c4b6ddaa13a09fca55"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/tokenizer_config.json",
+      "size": 101915,
+      "sha256": "62b5402afe4b3f9aea82ce4298462ceeead65554fdf6e25a289f12060d74de51",
+      "git_blob_sha1": "7d964bfeaa2dd60e4944e3454531f980e87aeae2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/training_args.bin",
+      "size": 9169,
+      "sha256": "f8451787686f2c416a7cabef18f7a146eb11ae2bfbc888fc6a70fdca2efb0ab6",
+      "git_blob_sha1": "5f4030f5448fd82268be0642125a2542ca4ff0d3"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_beta0p01_20261118/rl/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "4d58a3270b56fcdd0267a33eb2c13763ddbadc3a101d07367bf9fddc311e39d1",
+      "git_blob_sha1": "29db8e97fac95e293c2ffad1ad589ea881c5bd23"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/generation_config.json",
+      "size": 127,
+      "sha256": "0df5ef3f9cf1a666936f222ec08786a3788f5529d6d5e17efe57e23f6ad27d9e",
+      "git_blob_sha1": "54041e05b029199eaeb63e4c2040918a77483e57"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/model.safetensors",
+      "size": 1261403224,
+      "sha256": "580c46ddcf508b2af8680928994f9dda4809f573b07ca28655281594d52c925b",
+      "git_blob_sha1": "4b34f48148d1e4dd4dd3056c69fc459d6ff51cb4"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/tokenizer.json",
+      "size": 11524863,
+      "sha256": "7bdc2e627f1a55b703c7f3a95bc14a050aa0e4495e0866a986b4ef49b31d6da3",
+      "git_blob_sha1": "d9f73783d7d03a60884053c4b6ddaa13a09fca55"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/tokenizer_config.json",
+      "size": 101915,
+      "sha256": "62b5402afe4b3f9aea82ce4298462ceeead65554fdf6e25a289f12060d74de51",
+      "git_blob_sha1": "7d964bfeaa2dd60e4944e3454531f980e87aeae2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/training_args.bin",
+      "size": 9233,
+      "sha256": "87e18386be91a9b3db77138551e6f5cbfc9372744ca2dc1330884395d74a8105",
+      "git_blob_sha1": "514ade4f4437be12ad959ea5b7903ae3e62b173d"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_05b_rl_from_linear_ep3_20261117_retry1/rl/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/catalog/Industrial_and_Scientific.index.json",
+      "size": 219355,
+      "sha256": "515790e69f7691748dd8dd27d5ff230a7769b6fcd8f748b1ccc341351101c31c",
+      "git_blob_sha1": "b5caccc37a1da213ee3600b01be307d5f01bb0ad"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/added_tokens.json",
+      "size": 11862,
+      "sha256": "3becd48831d50e3a2d734a9c4ff4a895ad91c7479676d11ecb8734fe8bceac3c",
+      "git_blob_sha1": "38ff06ff4fcb79617eceba611bc48c0635e9e84d"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "148e2a358d52deb880adaf9f2b656f6e01dc9644a4cd65523de73aab5ea379e5",
+      "git_blob_sha1": "8d011b9308b3f4bc440f5ef89c6c7eb07d773a38"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/model.safetensors",
+      "size": 1261356632,
+      "sha256": "8243b065f145d8cc202b50717a0742e2d1f08bef035b26408ce46d410e5d2f2e",
+      "git_blob_sha1": "c09e781a21e6a6811032543762525056606b10bc"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "2baea9a24885392fc93f231e8bff251b454858472d8061512443923553a68df4",
+      "git_blob_sha1": "3337bb0ccdafac4bdfa0f8f6afeed52e54980ba8"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/tokenizer.json",
+      "size": 11522314,
+      "sha256": "05677444db30ee44f7667352b9a8934d0d17d293734d87d9e64b48fdbae4e602",
+      "git_blob_sha1": "597ad08ca16875acdabf4c6b44a5e3d8f4f899d8"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/tokenizer_config.json",
+      "size": 99637,
+      "sha256": "ec713b06d0bf3aa3e4ffebdb45e96af3179f09d9d66e621818b50e9f0c54d821",
+      "git_blob_sha1": "186e467829770e54e90b58426d57e84fae12880b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/training_args.bin",
+      "size": 7441,
+      "sha256": "43c29ed371f3b4b2b45052574a13e57d81f80b62d98ccdc45a4649ce61103192",
+      "git_blob_sha1": "af2e609c96b1fd83d712aff985736abbde670c0f"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/epochs3/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/added_tokens.json",
+      "size": 11862,
+      "sha256": "3becd48831d50e3a2d734a9c4ff4a895ad91c7479676d11ecb8734fe8bceac3c",
+      "git_blob_sha1": "38ff06ff4fcb79617eceba611bc48c0635e9e84d"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "1ab433717bc65f0b6a98cc630344dda8ce866700f3beda190227292f6a0354f9",
+      "git_blob_sha1": "77a6004bf1f233562e6cc71b952e9d11276acd77"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/generation_config.json",
+      "size": 127,
+      "sha256": "0df5ef3f9cf1a666936f222ec08786a3788f5529d6d5e17efe57e23f6ad27d9e",
+      "git_blob_sha1": "54041e05b029199eaeb63e4c2040918a77483e57"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/model.safetensors",
+      "size": 1261356632,
+      "sha256": "ccf3021cedcf18dda61677950b64204a0a1071bd16112963aad599c6da501146",
+      "git_blob_sha1": "e3013a53405fc5de3cf05b171928328bd8e395dc"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "2baea9a24885392fc93f231e8bff251b454858472d8061512443923553a68df4",
+      "git_blob_sha1": "3337bb0ccdafac4bdfa0f8f6afeed52e54980ba8"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/tokenizer.json",
+      "size": 11522481,
+      "sha256": "a76ddc19c3b652235074e52836c70624596a1f219bcacc38de8999e7c31cd47a",
+      "git_blob_sha1": "1fc9c930a8c440ab6b162de2d6aa654f129ae8ab"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/tokenizer_config.json",
+      "size": 99663,
+      "sha256": "bf3fee795d741673a8ccb8289fb08e4465d92cbc1802b061cfebce7c6e182551",
+      "git_blob_sha1": "4496d7267bce8d8f6bc2ff3512241a13c06eb2b9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/training_args.bin",
+      "size": 9169,
+      "sha256": "da793b07ce18d58b3885c751131d2b01ecbca2cb59dff8129c24c1699af3694b",
+      "git_blob_sha1": "475267d280e65a074043fc2460d68f0dddef761b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rl/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/best_val_model.pth",
+      "size": 64473033,
+      "sha256": "95a536bb1126dc478a213ca104536818abca7346b6e1dddb4cf4eef07753a703",
+      "git_blob_sha1": "7592cb37f3b1b21e6a65fe0e3f02a21f865657ab"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes.npy",
+      "size": 88592,
+      "sha256": "18c27437d31def947c3ae1e7366b75b61a68c4b8429dd61449b5da171d855c82",
+      "git_blob_sha1": "b6022e1f2becdce1e520befd6455911d8458c9a1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes_prefix_matching.npy",
+      "size": 88592,
+      "sha256": "10733af3f2b3b4322a861ce22092459411cb427a1ed7eb5d3c8ef7f174d18ce3",
+      "git_blob_sha1": "12727b59426fa3f6edcba67a834ea6d5f011f4f6"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/catalog_codes_sinkhorn.npy",
+      "size": 88592,
+      "sha256": "bae5323f0d11c7d31060a7327cfec4266e91c9073aed62bf1c1070660fbf5544",
+      "git_blob_sha1": "246cc4094f22bb3059d1043979da80ffd86f0946"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae/embedding_center.npy",
+      "size": 10368,
+      "sha256": "318f8bc9f1800ff920ce7abdae3077e8a4c2347292d68c86b7b69cd027ffedb0",
+      "git_blob_sha1": "413f17620c492a1c005be8b80a0fcfca6e19ed09"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae_reference/best_val_model.pth",
+      "size": 64473033,
+      "sha256": "1afeb6a3f9800a5887c6ee3398b26534849c08dbc9088b04dc348b344c56cda6",
+      "git_blob_sha1": "8e60049240aa3aeb5923a13adef5480033341fee"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/rqvae_reference/catalog_codes.npy",
+      "size": 88592,
+      "sha256": "042255b336c45662b2dbec8277e5ee2ae32ed66ec040087b96b43a29181ef6ac",
+      "git_blob_sha1": "1dbd18f51d7082f7b38088cbcdd69e9487e71a2a"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/checkpoints/QwenUniSRec-Nov-18-2026_07-18-57.pth",
+      "size": 124741021,
+      "sha256": "e39e9e1ce9a59486d0a62ff9b7461636af3ba0bcf96e48cb969f63b1907c54a7",
+      "git_blob_sha1": "22ce861649b08c02da47588fdf3f8c594167ac0f"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/config.yaml",
+      "size": 1058,
+      "sha256": "55b3b2c19610e5ecc5b4a42763531e7729228c158c1cd7a4082e3589f5d44d7b",
+      "git_blob_sha1": "91aaaada6ea51c221cafc2d8b8e6ff6e36ef415f"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/export/encoder.pt",
+      "size": 66820034,
+      "sha256": "4487f3d0578eb053204f4b5250bddbdfb1b9285ef9460abf731d33030cc8cd7f",
+      "git_blob_sha1": "6e7a34b6cf13f4ebaad7687afacf09d5f21acde2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/export/item_vectors.npy",
+      "size": 4423328,
+      "sha256": "078a6aebcd40d44b70bfb84cba7362b6013644e11b30dc9cab6c667cc3919ea1",
+      "git_blob_sha1": "603c0751257f5df3a5030285217b9bffe853bf57"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/export/metadata.json",
+      "size": 22386,
+      "sha256": "3b4202ac589d484d7115bff22d6bb4b48de6b78894a9057f785aa41fa4ffe0de",
+      "git_blob_sha1": "bb32cc2654e03f4d3857a2cffadb3cdde05c0f61"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_RQVAE_2K_20261118/unisrec/export/parity.npz",
+      "size": 5924,
+      "sha256": "6cc64b5dc048c7c6c6c796ea3be7e0265a07ba1e398a59743007f096e6539619",
+      "git_blob_sha1": "d07013340d83995a6f591748f5c08b0f4f63da88"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h300-lr0p001/weights.pt",
+      "size": 8535650,
+      "sha256": "68b2fd6688880b8932c81cc767a0912fb86b9a52ba30f9e451589b959ec2308d",
+      "git_blob_sha1": "4d3dbf65c8087183e0c325a6266f156989a205a2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h300-lr0p002/weights.pt",
+      "size": 8535650,
+      "sha256": "02f5271019765183ea67dc6c57e2de6f14148cf914f3b708f31b4e0acb96a373",
+      "git_blob_sha1": "e021563ce584132ee5349b80d122f7a30bf307b3"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h64-lr0p001/weights.pt",
+      "size": 1348898,
+      "sha256": "ebc5462a566232d7432891c15ee22590e46099d95290ce780dc9ad5d1a31d688",
+      "git_blob_sha1": "c7c3bb8507db0ea345f16299c4ded992596b07a5"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/cases/h64-lr0p002/weights.pt",
+      "size": 1348898,
+      "sha256": "3f95bb3fec8ec0dd936d9860246b40361b27c63c93a66a13b167d94073379a79",
+      "git_blob_sha1": "2475ae66d93a31ef67e472193d28ac0b1bab1d63"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_SASRec_Baseline_20261118/model.ts",
+      "size": 8589296,
+      "sha256": "7a03b698d3ed9338a6a490a8240b97210b88b3aaf54f894befc29a85ababc85f",
+      "git_blob_sha1": "8d01b2efc78ee8a1aca4147f8faa8cc94c5bf15b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/config.json",
+      "size": 1340,
+      "sha256": "a6b0a9a017b2b9a96904a56cff56f382fc3da38d68c72f3f5c0cce4285ecadb1",
+      "git_blob_sha1": "94f2a58602a8cbba957d0d3bc79a3ff02380d9be"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/model.safetensors",
+      "size": 3555990368,
+      "sha256": "f7320964204ab9b3c41ad4040826a01fb8cca3d743ab009fdde538f0aac5cd9e",
+      "git_blob_sha1": "971eae443255e4ba259a96959bc953211c27cbbf"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "03c354febd615d460119cd43ed7a576cadfeda205287d3663f9b0004f59c85be",
+      "git_blob_sha1": "eb63ba365a7ee5242b3a17e16c539afc70e761eb"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/training_args.bin",
+      "size": 7032,
+      "sha256": "bc0610ba30dda3bae459a4c05bf0c2026d4063f74908760bf6cbcc6c6e0170e0",
+      "git_blob_sha1": "beb4bc40867f7986ac95876a2566b326c1377aad"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/added_tokens.json",
+      "size": 12125,
+      "sha256": "59a9a82f2ad1ccb671b931ca7ba11da5a8a67c96bcd442bf2c261615ef8de0a5",
+      "git_blob_sha1": "50864e7430b8d091a0c33c6fc580bc1a7975fe1b"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/config.json",
+      "size": 1250,
+      "sha256": "aabe135798a8ba5ab98520a45dbce3b00ea6d4c71fa3210ef17ed2851cb6da95",
+      "git_blob_sha1": "5a3d36d4def8e7fb607b2f02c1b7f6bb40dfb206"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/model.safetensors",
+      "size": 988615712,
+      "sha256": "3c47cf70a092ecd1898d7c2252355219ed82b43e8b69b29560b1d3e29249600c",
+      "git_blob_sha1": "5e2c2f5b1c5e4d60802d5e21901941e5a7cb3a31"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 332,
+      "sha256": "93e2cbe6df28f69c41b7116258760489856599ca74813a20310af01f20f93ce3",
+      "git_blob_sha1": "9834155e732377f5eca687cf5f03143e425f1205"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/tokenizer.json",
+      "size": 11524696,
+      "sha256": "05a639b8776fe798aa7906a77028c39d17e19e693d00e8af11e2db2afb9838ea",
+      "git_blob_sha1": "8d76c9c04058f68e084d46b6c93481c8cb445bf9"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/tokenizer_config.json",
+      "size": 101889,
+      "sha256": "114b188fe9a9b0d01dd4f85f622605c89fb2490580b45d3e5b0a406f18338de5",
+      "git_blob_sha1": "97e3bc5f35f1ef6968de364433577b5853b4ecf2"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/training_args.bin",
+      "size": 6033,
+      "sha256": "ed0ae91c9d7f7200ace0568fc4d5d7e5c076b868d05bc3ab8bd083d43d087393",
+      "git_blob_sha1": "89696e8ae7dde065fec70b3c84128e9a98cf00ec"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey_05b_linear/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/added_tokens.json",
+      "size": 14108,
+      "sha256": "7466317299c7bd40703a68dcefb21e22e72a6ef9678f6d08fa98ad3a670593ef",
+      "git_blob_sha1": "4ea2263807ab1d93d1ac727975426810c8443ef0"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/chat_template.jinja",
+      "size": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob_sha1": "28028c056af412405debd878cdda0171e35fa5d1"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/config.json",
+      "size": 1340,
+      "sha256": "a617fc4a26f3b0f0b8c28cf018cf49ab9dde80fa5f8be204a727a4654cfd97a8",
+      "git_blob_sha1": "74bae834cbc3e7ce7598e9d8a12382d3388cfe28"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/generation_config.json",
+      "size": 117,
+      "sha256": "ce8f331663b06a8432e8531185822a55f95cc92cde3ff9518e05e0c73d6918d3",
+      "git_blob_sha1": "8734133c897e5003b5ac4755aec98e3e813fdb36"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/merges.txt",
+      "size": 1671853,
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "git_blob_sha1": "31349551d90c7606f325fe0f11bbb8bd5fa0d7c7"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/model.safetensors",
+      "size": 3556586336,
+      "sha256": "b823c2cb400f83209a0801e64ca2c65b0729bfc52b64196936ee8fbdaed4f1b3",
+      "git_blob_sha1": "860e026fb3331b37d9ce3a7f90306548adbed2bb"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/posttraining_provenance.json",
+      "size": 318,
+      "sha256": "abe91813e68c0a16c64efbc0baec0cc4c1954fc1ee95b73c74d31bea48e7d60c",
+      "git_blob_sha1": "1ad4bc6bb56e368018eb9d96b7be324d942610e5"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/special_tokens_map.json",
+      "size": 502,
+      "sha256": "a6c4ad853ac58fffa339d4d4cdb6020d282b9a8067f6c0c889c69a63dbe8daf0",
+      "git_blob_sha1": "f58f102a0598f3497fe6c92b5d702808cd7b0768"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer.json",
+      "size": 11542490,
+      "sha256": "c00708d331f0a3efee070f4bc11a9ce699eea0a1cd69c7669070093436953c83",
+      "git_blob_sha1": "da77922713007e7e10be45f12c30bba127400b22"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/tokenizer_config.json",
+      "size": 118713,
+      "sha256": "47a94f0cc850c34fafc9a5092d9030a76f5d4ffb407cfc5d68ba6caf561b0d4e",
+      "git_blob_sha1": "f80003e5f543ae8d22afef11609df963c9dbeb89"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/training_args.bin",
+      "size": 6968,
+      "sha256": "c79ce2c926254189f4a736b522cd172793bff0f6d2108a811a5e77ec91fe5a0b",
+      "git_blob_sha1": "88dc87a136279d0d563ac7cbc3651c187d28a529"
+    },
+    {
+      "path": "checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint/vocab.json",
+      "size": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "git_blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569"
+    },
+    {
+      "path": "checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/checkpoints/QwenUniSRec-Nov-17-2026_10-13-24.pth",
+      "size": 124741085,
+      "sha256": "50f8bd01b5bdb5251ee1019ba0a3a003a6fd8ecfc987179cd3f16d13c36a64cb",
+      "git_blob_sha1": "f44a20ef0f3949346cc7068fe4afd5bb57035992"
+    },
+    {
+      "path": "checkpoints/UniSRec/Industrial_and_Scientific_Qwen_4gpu_bs512_lr2e-3_ep20_20261117_181242/config.yaml",
+      "size": 1159,
+      "sha256": "ed41ab97ff6386ed8890d81500a669b8b98bdf60a392ed5cdc39839a004140fe",
+      "git_blob_sha1": "dd1d69492f93a209f13085cb6cf821ddb0b08946"
+    },
+    {
+      "path": "checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1/encoder.pt",
+      "size": 66819458,
+      "sha256": "de3da3f8059a6626f206c639c8a867788150202f3dd795c87185a736be9cf059",
+      "git_blob_sha1": "3a45da665d038bef048d701f2b396010fbf9be77"
+    },
+    {
+      "path": "checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1/item_vectors.npy",
+      "size": 4423328,
+      "sha256": "078a6aebcd40d44b70bfb84cba7362b6013644e11b30dc9cab6c667cc3919ea1",
+      "git_blob_sha1": "603c0751257f5df3a5030285217b9bffe853bf57"
+    },
+    {
+      "path": "checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1/metadata.json",
+      "size": 22386,
+      "sha256": "d36833fc1a9c8dd3b64ff2641bc1dbeffd5eb94c5bc32119f965dc57ce0e28ed",
+      "git_blob_sha1": "9cac187509627028717ace4dc63af6df98d159be"
+    },
+    {
+      "path": "checkpoints/UniSRec/industrial_hybrid_inference_ep20_export_v1/parity.npz",
+      "size": 5924,
+      "sha256": "6cc64b5dc048c7c6c6c796ea3be7e0265a07ba1e398a59743007f096e6539619",
+      "git_blob_sha1": "d07013340d83995a6f591748f5c08b0f4f63da88"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.index.json",
+      "size": 1205786,
+      "sha256": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+      "git_blob_sha1": "b759fdef65584517d9287cca538788226f51c7ef"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.raw.index.json",
+      "size": 993456,
+      "sha256": "69762266170c7aee2e48f2a8ca1e87b05966800a0b5e5b40b644bbbbf01f782a",
+      "git_blob_sha1": "89b3a054eeb2c6cf08440cf6ecd6a13cb734be01"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/Video_Games.semantic.index.json",
+      "size": 990350,
+      "sha256": "8fc4e1ee08546ffe34fbb9ada08f688a5ba6603052f603cdbeb2b17910ead763",
+      "git_blob_sha1": "47b40352107216af0800dfec06fa863ba1c9b32a"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_collision_model.pth",
+      "size": 193892888,
+      "sha256": "899469cc4c685791988af8f99fb339e34951c5d9d514d32763280847eacd0b8a",
+      "git_blob_sha1": "93d0626da51bd0ca7caa5a57c03c795f9a808cae"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/best_val_model.pth",
+      "size": 193789196,
+      "sha256": "5962275fc0da6ac77aafc577d267f24edbeae6153a97d4ff675b4a96f5a6324d",
+      "git_blob_sha1": "240c32bfaadbbf67b12871f729ea56426d367bff"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/last_model.pth",
+      "size": 193925764,
+      "sha256": "d44dd00fd7f879b1395fbd34e0f3708c1f7b149cc25d67848bd08695a6e4866b",
+      "git_blob_sha1": "5b44cd279e0a0c3b05c29fd1e4f297950af906db"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/raw_codes.npy",
+      "size": 397856,
+      "sha256": "0a7055a1015c94cd3f6953838fba1643f73f8ea327b0dfc569bdf5e5bbaec2f8",
+      "git_blob_sha1": "1112cfc9e6490a6d8194483f4747397a17460dd3"
+    },
+    {
+      "path": "rqvae/Video_Games/2026-11-14T15-04-02-357Z/semantic_codes.npy",
+      "size": 397856,
+      "sha256": "d4e13102af79080de390d7cbfc9756ca4db4d58cec404c2a319e6c9253110b68",
+      "git_blob_sha1": "e0edc184d55d004035662c8f7063e52b1e6fd07d"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/best_collision_model.pth",
+      "size": 194453144,
+      "sha256": "5391e04e8824cbc3af708f2da592f8ca2f169b7f653ab3e7b936ff4c284f9754",
+      "git_blob_sha1": "acfd19d7384d6a1d2724ad4e6afea24c34052d6a"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/best_val_model.pth",
+      "size": 193789196,
+      "sha256": "5962275fc0da6ac77aafc577d267f24edbeae6153a97d4ff675b4a96f5a6324d",
+      "git_blob_sha1": "240c32bfaadbbf67b12871f729ea56426d367bff"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.index.json",
+      "size": 1206969,
+      "sha256": "9ebb61cfffbb9bc758c429f5d4aed45c67fd0681e36c95a63fba5b82fd70c40c",
+      "git_blob_sha1": "e080ee270fe7ca3e594caf4d367b1c95b92278dd"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.raw.index.json",
+      "size": 994050,
+      "sha256": "ef0ec1859e1fab48d36e7e197ec70ead57281db23f3fc9e539bff24cf4c2dfbc",
+      "git_blob_sha1": "7fac23334e8d9416a65141c08b2574cec51dcbfc"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/Video_Games.semantic.index.json",
+      "size": 991533,
+      "sha256": "5a65c514f86be2552f17d19845453ae37b9651235ff61dd9509f8d6793ba9ab2",
+      "git_blob_sha1": "6fc677b48e5a0e37e6517e1c01bd7839a1254c03"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/raw_codes.npy",
+      "size": 397856,
+      "sha256": "c8402a06755d50020c2747774bf736586eb32d767728958f8cf4e4f60d179b58",
+      "git_blob_sha1": "106a7e871cfccaacba29bf09e7d1630e4c29b1c4"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/endpoint_10000/semantic_codes.npy",
+      "size": 397856,
+      "sha256": "6d9e357a53dcb774cc89cdb34a0dc199642d06a985d838e5316876c9ec46f7ab",
+      "git_blob_sha1": "45e38534c1a493d232caa56a1852e87123044bc3"
+    },
+    {
+      "path": "rqvae/Video_Games/compare_10000_2026-11-14T15-37-03-631Z/last_model.pth",
+      "size": 194600132,
+      "sha256": "0eab453884b326b922e6480f1fe006349d19b007d1f39ec10c21c3079ad35ecd",
+      "git_blob_sha1": "52d55516493e79345691a08d5af605585383ea5c"
+    }
+  ]
+}

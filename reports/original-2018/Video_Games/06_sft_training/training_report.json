@@ -1,0 +1,991 @@
+{
+  "generated_at_utc": "2026-11-16T06:41:57.312583+00:00",
+  "generated_at_shanghai": "2026-11-16T14:41:57.312583+08:00",
+  "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft",
+  "sources": [
+    {
+      "path": "run_status.json",
+      "bytes": 10322,
+      "sha256": "d9a5c61ecfd3502081c5e92898b7e8d945d3743f383e6f734e22540cc73bc785"
+    },
+    {
+      "path": "run_config.json",
+      "bytes": 3447,
+      "sha256": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8"
+    },
+    {
+      "path": "baseline_validation.json",
+      "bytes": 422,
+      "sha256": "51a6a24b0c20750aa0bd37e9d8b5e3e80a328a3785dd9c44dd93abe971c60097"
+    },
+    {
+      "path": "training_summary.json",
+      "bytes": 950,
+      "sha256": "86ce25582826802c00a83d02a69b6666a3a2c379ffc1ef72354754847680ad91"
+    },
+    {
+      "path": "monitor/metrics.jsonl",
+      "bytes": 3988325,
+      "sha256": "d4088886146f699e0f1f303ca51fd33c0c7440b89845edb8b60b74ec4345d4b3"
+    },
+    {
+      "path": "monitor/summary.json",
+      "bytes": 8934,
+      "sha256": "083f958b1414cc44f98f42ff670b019cd486071f97691c58ad138d2d2b568141"
+    },
+    {
+      "path": "monitor/events.jsonl",
+      "bytes": 7167,
+      "sha256": "faf34b072332007d4a964c7a9f23080dd00327fe2b62fbe9d10991b8a26b708c"
+    },
+    {
+      "path": "gpu_metrics.jsonl",
+      "bytes": 1273954,
+      "sha256": "186b432349033e67a38b5e51bbc3fe170c2ad4e0ef7aa1807174ce4af994e57f"
+    },
+    {
+      "path": "evaluation/metrics.json",
+      "bytes": 24102,
+      "sha256": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e"
+    },
+    {
+      "path": "comparison_baselines.json",
+      "bytes": 4552,
+      "sha256": "a7e0afbfed36b7f5256786aec5f0a38c0cbee6b787125e9d22bb12351da6c5e9"
+    },
+    {
+      "path": "behavior_shift_analysis.json",
+      "bytes": 19911,
+      "sha256": "20452e40274f58aba9963ec43daf8dc92dd6342a9fc1a27a2e5f244132090e6c"
+    },
+    {
+      "path": "/opt/minionerec/config/minionerec_paper_reference.json",
+      "bytes": 3026,
+      "sha256": "e5a7a83118712a17f0804bbdd2dccc1df01f4046bceacf0a509924df458f312f"
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/preparation_manifest.json",
+      "bytes": 2240,
+      "sha256": "bf1f7eb925850ae2b23051b85d1e01edc6628db5e730c9ef8d8c1ebd70909116"
+    }
+  ],
+  "ingestion_issues": [],
+  "run_status": {
+    "status": "completed",
+    "stage": "completed",
+    "started_at": "2026-11-15T13:29:51.645685+00:00",
+    "updated_at": "2026-11-16T04:58:05.117298+00:00",
+    "parameters": {
+      "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft",
+      "report_root": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games",
+      "image": "minionerec:h20-sft-monitor",
+      "container": "minionerec-h20-sft",
+      "num_epochs": 10,
+      "learning_rate": 0.0003,
+      "sft_batch_size": 1024,
+      "sft_micro_batch_size": 16,
+      "gradient_accumulation_steps": 16,
+      "monitor_window": 100,
+      "resume_from_checkpoint": "",
+      "model": "Qwen/Qwen2.5-1.5B",
+      "rl_enabled": false
+    },
+    "rl_started": false,
+    "pid": 69722,
+    "progress": {
+      "status": "completed",
+      "updated_at_utc": "2026-11-16T04:09:38.774536+00:00",
+      "elapsed_seconds": 52253.532456955,
+      "grad_norm_definition": "unscaled global full-model L2 norm before gradient clipping",
+      "statistics_exclude_skipped_nonfinite_missing": true,
+      "latest": {
+        "step": 6870,
+        "epoch": 10.0,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T04:07:57.842506+00:00",
+        "elapsed_seconds": 52152.600422142,
+        "kind": "train",
+        "loss": 0.8718,
+        "learning_rate": 4.3795620437956203e-08,
+        "grad_norm": 0.08686777204275131,
+        "grad_norm_observed": 0.08686777204275131,
+        "grad_norm_nonfinite": false,
+        "step_skipped": false,
+        "optimizer_overflow": false,
+        "rolling_grad_norm_mean": 0.08856773748993874,
+        "rolling_grad_norm_max": 0.1074955016374588,
+        "grad_norm_mean": 0.11985471500232925,
+        "grad_norm_max": 17.671913146972656,
+        "grad_norm_max_step": 3
+      },
+      "evaluations": [
+        {
+          "step": 344,
+          "epoch": 0.5007278020378457,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T14:22:00.398737+00:00",
+          "elapsed_seconds": 2595.1566521700006,
+          "kind": "eval",
+          "eval_loss": 2.661903142929077,
+          "eval_runtime": 74.6067,
+          "eval_samples_per_second": 561.92,
+          "eval_steps_per_second": 8.793
+        },
+        {
+          "step": 688,
+          "epoch": 1.0014556040756915,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T15:05:35.217446+00:00",
+          "elapsed_seconds": 5209.9753618959985,
+          "kind": "eval",
+          "eval_loss": 2.618082284927368,
+          "eval_runtime": 74.6821,
+          "eval_samples_per_second": 561.353,
+          "eval_steps_per_second": 8.784
+        },
+        {
+          "step": 1032,
+          "epoch": 1.502183406113537,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T15:49:05.644983+00:00",
+          "elapsed_seconds": 7820.402898402001,
+          "kind": "eval",
+          "eval_loss": 2.4704084396362305,
+          "eval_runtime": 74.6574,
+          "eval_samples_per_second": 561.539,
+          "eval_steps_per_second": 8.787
+        },
+        {
+          "step": 1376,
+          "epoch": 2.002911208151383,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T16:32:37.883926+00:00",
+          "elapsed_seconds": 10432.641841524997,
+          "kind": "eval",
+          "eval_loss": 2.2824432849884033,
+          "eval_runtime": 74.577,
+          "eval_samples_per_second": 562.144,
+          "eval_steps_per_second": 8.796
+        },
+        {
+          "step": 1720,
+          "epoch": 2.5036390101892287,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T17:16:12.834564+00:00",
+          "elapsed_seconds": 13047.592479194998,
+          "kind": "eval",
+          "eval_loss": 2.1970913410186768,
+          "eval_runtime": 74.6086,
+          "eval_samples_per_second": 561.906,
+          "eval_steps_per_second": 8.793
+        },
+        {
+          "step": 2064,
+          "epoch": 3.004366812227074,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T17:59:44.601996+00:00",
+          "elapsed_seconds": 15659.359911393996,
+          "kind": "eval",
+          "eval_loss": 2.117537498474121,
+          "eval_runtime": 74.6447,
+          "eval_samples_per_second": 561.634,
+          "eval_steps_per_second": 8.788
+        },
+        {
+          "step": 2408,
+          "epoch": 3.50509461426492,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T18:43:18.095845+00:00",
+          "elapsed_seconds": 18272.853760099,
+          "kind": "eval",
+          "eval_loss": 2.0859150886535645,
+          "eval_runtime": 74.6372,
+          "eval_samples_per_second": 561.69,
+          "eval_steps_per_second": 8.789
+        },
+        {
+          "step": 2752,
+          "epoch": 4.005822416302766,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T19:26:44.089793+00:00",
+          "elapsed_seconds": 20878.847708928002,
+          "kind": "eval",
+          "eval_loss": 2.0285849571228027,
+          "eval_runtime": 74.5708,
+          "eval_samples_per_second": 562.19,
+          "eval_steps_per_second": 8.797
+        },
+        {
+          "step": 3096,
+          "epoch": 4.506550218340611,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T20:10:56.385115+00:00",
+          "elapsed_seconds": 23531.143029739,
+          "kind": "eval",
+          "eval_loss": 1.9854230880737305,
+          "eval_runtime": 74.6089,
+          "eval_samples_per_second": 561.903,
+          "eval_steps_per_second": 8.793
+        },
+        {
+          "step": 3440,
+          "epoch": 5.0072780203784575,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T20:55:05.809470+00:00",
+          "elapsed_seconds": 26180.567386619,
+          "kind": "eval",
+          "eval_loss": 1.9691883325576782,
+          "eval_runtime": 74.6774,
+          "eval_samples_per_second": 561.388,
+          "eval_steps_per_second": 8.784
+        },
+        {
+          "step": 3784,
+          "epoch": 5.508005822416303,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T21:38:44.945899+00:00",
+          "elapsed_seconds": 28799.703814614997,
+          "kind": "eval",
+          "eval_loss": 1.9298949241638184,
+          "eval_runtime": 74.5659,
+          "eval_samples_per_second": 562.228,
+          "eval_steps_per_second": 8.798
+        },
+        {
+          "step": 4128,
+          "epoch": 6.008733624454148,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T22:22:14.669685+00:00",
+          "elapsed_seconds": 31409.427600382,
+          "kind": "eval",
+          "eval_loss": 1.9061506986618042,
+          "eval_runtime": 74.5566,
+          "eval_samples_per_second": 562.298,
+          "eval_steps_per_second": 8.799
+        },
+        {
+          "step": 4472,
+          "epoch": 6.5094614264919946,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T23:05:44.989068+00:00",
+          "elapsed_seconds": 34019.74698339999,
+          "kind": "eval",
+          "eval_loss": 1.8698042631149292,
+          "eval_runtime": 74.6023,
+          "eval_samples_per_second": 561.953,
+          "eval_steps_per_second": 8.793
+        },
+        {
+          "step": 4816,
+          "epoch": 7.01018922852984,
+          "phase": "training",
+          "timestamp_utc": "2026-11-15T23:49:18.024672+00:00",
+          "elapsed_seconds": 36632.78258696399,
+          "kind": "eval",
+          "eval_loss": 1.839874267578125,
+          "eval_runtime": 74.5629,
+          "eval_samples_per_second": 562.25,
+          "eval_steps_per_second": 8.798
+        },
+        {
+          "step": 5160,
+          "epoch": 7.510917030567685,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T00:32:49.058408+00:00",
+          "elapsed_seconds": 39243.81632381999,
+          "kind": "eval",
+          "eval_loss": 1.8281991481781006,
+          "eval_runtime": 74.622,
+          "eval_samples_per_second": 561.805,
+          "eval_steps_per_second": 8.791
+        },
+        {
+          "step": 5504,
+          "epoch": 8.011644832605532,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T01:16:22.936432+00:00",
+          "elapsed_seconds": 41857.694346947,
+          "kind": "eval",
+          "eval_loss": 1.8241322040557861,
+          "eval_runtime": 74.5409,
+          "eval_samples_per_second": 562.416,
+          "eval_steps_per_second": 8.801
+        },
+        {
+          "step": 5848,
+          "epoch": 8.512372634643377,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T01:59:51.720990+00:00",
+          "elapsed_seconds": 44466.478905241995,
+          "kind": "eval",
+          "eval_loss": 1.806064486503601,
+          "eval_runtime": 74.5687,
+          "eval_samples_per_second": 562.207,
+          "eval_steps_per_second": 8.797
+        },
+        {
+          "step": 6192,
+          "epoch": 9.013100436681222,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T02:43:24.495538+00:00",
+          "elapsed_seconds": 47079.25345407199,
+          "kind": "eval",
+          "eval_loss": 1.7795073986053467,
+          "eval_runtime": 74.5856,
+          "eval_samples_per_second": 562.079,
+          "eval_steps_per_second": 8.795
+        },
+        {
+          "step": 6536,
+          "epoch": 9.513828238719068,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T03:26:53.520259+00:00",
+          "elapsed_seconds": 49688.278174941996,
+          "kind": "eval",
+          "eval_loss": 1.768393635749817,
+          "eval_runtime": 74.6226,
+          "eval_samples_per_second": 561.801,
+          "eval_steps_per_second": 8.791
+        },
+        {
+          "step": 6870,
+          "epoch": 10.0,
+          "phase": "final_validation",
+          "timestamp_utc": "2026-11-16T04:09:30.918146+00:00",
+          "elapsed_seconds": 52245.676061283,
+          "kind": "eval",
+          "eval_loss": 1.768393635749817,
+          "eval_runtime": 74.6593,
+          "eval_samples_per_second": 561.524,
+          "eval_steps_per_second": 8.787
+        }
+      ],
+      "abort_reason": null,
+      "monitor_window": 100,
+      "update_records": 6870,
+      "grad_norm_count": 6870,
+      "grad_norm_mean": 0.11985471500232925,
+      "grad_norm_max": 17.671913146972656,
+      "grad_norm_max_step": 3,
+      "rolling_grad_norm_count": 100,
+      "rolling_grad_norm_mean": 0.08856773748993874,
+      "rolling_grad_norm_max": 0.1074955016374588,
+      "skipped_update_count": 0,
+      "missing_grad_norm_count": 0,
+      "nonfinite_grad_norm_count": 0,
+      "global_step": 6870,
+      "epoch": 10.0,
+      "max_steps": 6870,
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+      "best_metric": 1.768393635749817
+    },
+    "finished_at": "2026-11-16T04:58:05.117278+00:00"
+  },
+  "rl_training_started": false,
+  "report": "sft_training",
+  "status": "completed",
+  "config": {
+    "stage": "sft",
+    "created_at_utc": "2026-11-15T13:37:16.557328+00:00",
+    "model": {
+      "source": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "train_from_scratch": false,
+      "original_vocab_size": 151665,
+      "tokenizer_vocab_size": 152322,
+      "added_sid_tokens": 657,
+      "identity": {
+        "format_version": 1,
+        "source_directory": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+        "train_from_scratch": false,
+        "files": {
+          "config.json": {
+            "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+            "size_bytes": 684
+          },
+          "generation_config.json": {
+            "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+            "size_bytes": 138
+          },
+          "merges.txt": {
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+            "size_bytes": 1671839
+          },
+          "model.safetensors": {
+            "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+            "size_bytes": 3087467144
+          },
+          "tokenizer.json": {
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+            "size_bytes": 7031645
+          },
+          "tokenizer_config.json": {
+            "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+            "size_bytes": 7228
+          },
+          "vocab.json": {
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+            "size_bytes": 2776833
+          }
+        },
+        "sha256": "f4da6a998630e344cbf1877dd65907ba35a9b01c20bbf314bdc47d542a61168b"
+      }
+    },
+    "data": {
+      "train_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/train.csv",
+      "eval_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/valid.csv",
+      "sid_index_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+      "item_meta_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.item.json",
+      "category": "Video_Games",
+      "sample": -1,
+      "train_samples": 703463,
+      "validation_samples": 41923,
+      "sha256": {
+        "train_file": "298ab91e2e8b98a7f816b1f27c23166b2c28916ad67b93e8347c2c710e1da6ab",
+        "eval_file": "bbe4174774c0994deaa5bae6ab40c2f349c79e83f977ab03f8ffc9be92064d29",
+        "sid_index_path": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+        "item_meta_path": "e230098a423a8897bb1930e0b8bbd2e64a8730740492a2386c877a7f25318cf7"
+      }
+    },
+    "task_counts": {
+      "sid_sequence_recommendation": 335388,
+      "history_to_title": 335388,
+      "sid2title": 16572,
+      "title2sid": 16115
+    },
+    "hyperparameters": {
+      "world_size": 4,
+      "micro_batch_size": 16,
+      "gradient_accumulation_steps": 16,
+      "global_batch_size": 1024,
+      "max_epochs": 10,
+      "learning_rate": 0.0003,
+      "warmup_steps": 20,
+      "lr_scheduler_type": "linear",
+      "cutoff_len": 512,
+      "max_grad_norm": 1.0,
+      "bf16": true,
+      "gradient_checkpointing": true,
+      "attn_implementation": "sdpa",
+      "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+      "seed": 42,
+      "early_stopping_patience": 3,
+      "eval_save_fraction": 0.05,
+      "monitor_window": 100,
+      "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "resume_from_checkpoint": null
+  },
+  "training_summary": {
+    "status": "completed",
+    "stage": "sft",
+    "finished_at_utc": "2026-11-16T04:09:38.651683+00:00",
+    "train_metrics": {
+      "train_runtime": 52171.0123,
+      "train_samples_per_second": 134.838,
+      "train_steps_per_second": 0.132,
+      "total_flos": 1.1418210288353149e+19,
+      "train_loss": 1.3271109391334623,
+      "epoch": 10.0
+    },
+    "final_eval_metrics": {
+      "eval_loss": 1.768393635749817,
+      "eval_runtime": 74.6593,
+      "eval_samples_per_second": 561.524,
+      "eval_steps_per_second": 8.787,
+      "epoch": 10.0
+    },
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+    "best_metric": 1.768393635749817,
+    "final_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/final_checkpoint",
+    "global_step": 6870,
+    "epoch": 10.0,
+    "planned_max_steps": 6870,
+    "stop_reason": "max_epochs",
+    "final_checkpoint_contains_best_model": true
+  },
+  "monitor_summary": {
+    "status": "completed",
+    "updated_at_utc": "2026-11-16T04:09:38.774536+00:00",
+    "elapsed_seconds": 52253.532456955,
+    "grad_norm_definition": "unscaled global full-model L2 norm before gradient clipping",
+    "statistics_exclude_skipped_nonfinite_missing": true,
+    "latest": {
+      "step": 6870,
+      "epoch": 10.0,
+      "phase": "training",
+      "timestamp_utc": "2026-11-16T04:07:57.842506+00:00",
+      "elapsed_seconds": 52152.600422142,
+      "kind": "train",
+      "loss": 0.8718,
+      "learning_rate": 4.3795620437956203e-08,
+      "grad_norm": 0.08686777204275131,
+      "grad_norm_observed": 0.08686777204275131,
+      "grad_norm_nonfinite": false,
+      "step_skipped": false,
+      "optimizer_overflow": false,
+      "rolling_grad_norm_mean": 0.08856773748993874,
+      "rolling_grad_norm_max": 0.1074955016374588,
+      "grad_norm_mean": 0.11985471500232925,
+      "grad_norm_max": 17.671913146972656,
+      "grad_norm_max_step": 3
+    },
+    "evaluations": [
+      {
+        "step": 344,
+        "epoch": 0.5007278020378457,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T14:22:00.398737+00:00",
+        "elapsed_seconds": 2595.1566521700006,
+        "kind": "eval",
+        "eval_loss": 2.661903142929077,
+        "eval_runtime": 74.6067,
+        "eval_samples_per_second": 561.92,
+        "eval_steps_per_second": 8.793
+      },
+      {
+        "step": 688,
+        "epoch": 1.0014556040756915,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T15:05:35.217446+00:00",
+        "elapsed_seconds": 5209.9753618959985,
+        "kind": "eval",
+        "eval_loss": 2.618082284927368,
+        "eval_runtime": 74.6821,
+        "eval_samples_per_second": 561.353,
+        "eval_steps_per_second": 8.784
+      },
+      {
+        "step": 1032,
+        "epoch": 1.502183406113537,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T15:49:05.644983+00:00",
+        "elapsed_seconds": 7820.402898402001,
+        "kind": "eval",
+        "eval_loss": 2.4704084396362305,
+        "eval_runtime": 74.6574,
+        "eval_samples_per_second": 561.539,
+        "eval_steps_per_second": 8.787
+      },
+      {
+        "step": 1376,
+        "epoch": 2.002911208151383,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T16:32:37.883926+00:00",
+        "elapsed_seconds": 10432.641841524997,
+        "kind": "eval",
+        "eval_loss": 2.2824432849884033,
+        "eval_runtime": 74.577,
+        "eval_samples_per_second": 562.144,
+        "eval_steps_per_second": 8.796
+      },
+      {
+        "step": 1720,
+        "epoch": 2.5036390101892287,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T17:16:12.834564+00:00",
+        "elapsed_seconds": 13047.592479194998,
+        "kind": "eval",
+        "eval_loss": 2.1970913410186768,
+        "eval_runtime": 74.6086,
+        "eval_samples_per_second": 561.906,
+        "eval_steps_per_second": 8.793
+      },
+      {
+        "step": 2064,
+        "epoch": 3.004366812227074,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T17:59:44.601996+00:00",
+        "elapsed_seconds": 15659.359911393996,
+        "kind": "eval",
+        "eval_loss": 2.117537498474121,
+        "eval_runtime": 74.6447,
+        "eval_samples_per_second": 561.634,
+        "eval_steps_per_second": 8.788
+      },
+      {
+        "step": 2408,
+        "epoch": 3.50509461426492,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T18:43:18.095845+00:00",
+        "elapsed_seconds": 18272.853760099,
+        "kind": "eval",
+        "eval_loss": 2.0859150886535645,
+        "eval_runtime": 74.6372,
+        "eval_samples_per_second": 561.69,
+        "eval_steps_per_second": 8.789
+      },
+      {
+        "step": 2752,
+        "epoch": 4.005822416302766,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T19:26:44.089793+00:00",
+        "elapsed_seconds": 20878.847708928002,
+        "kind": "eval",
+        "eval_loss": 2.0285849571228027,
+        "eval_runtime": 74.5708,
+        "eval_samples_per_second": 562.19,
+        "eval_steps_per_second": 8.797
+      },
+      {
+        "step": 3096,
+        "epoch": 4.506550218340611,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T20:10:56.385115+00:00",
+        "elapsed_seconds": 23531.143029739,
+        "kind": "eval",
+        "eval_loss": 1.9854230880737305,
+        "eval_runtime": 74.6089,
+        "eval_samples_per_second": 561.903,
+        "eval_steps_per_second": 8.793
+      },
+      {
+        "step": 3440,
+        "epoch": 5.0072780203784575,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T20:55:05.809470+00:00",
+        "elapsed_seconds": 26180.567386619,
+        "kind": "eval",
+        "eval_loss": 1.9691883325576782,
+        "eval_runtime": 74.6774,
+        "eval_samples_per_second": 561.388,
+        "eval_steps_per_second": 8.784
+      },
+      {
+        "step": 3784,
+        "epoch": 5.508005822416303,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T21:38:44.945899+00:00",
+        "elapsed_seconds": 28799.703814614997,
+        "kind": "eval",
+        "eval_loss": 1.9298949241638184,
+        "eval_runtime": 74.5659,
+        "eval_samples_per_second": 562.228,
+        "eval_steps_per_second": 8.798
+      },
+      {
+        "step": 4128,
+        "epoch": 6.008733624454148,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T22:22:14.669685+00:00",
+        "elapsed_seconds": 31409.427600382,
+        "kind": "eval",
+        "eval_loss": 1.9061506986618042,
+        "eval_runtime": 74.5566,
+        "eval_samples_per_second": 562.298,
+        "eval_steps_per_second": 8.799
+      },
+      {
+        "step": 4472,
+        "epoch": 6.5094614264919946,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T23:05:44.989068+00:00",
+        "elapsed_seconds": 34019.74698339999,
+        "kind": "eval",
+        "eval_loss": 1.8698042631149292,
+        "eval_runtime": 74.6023,
+        "eval_samples_per_second": 561.953,
+        "eval_steps_per_second": 8.793
+      },
+      {
+        "step": 4816,
+        "epoch": 7.01018922852984,
+        "phase": "training",
+        "timestamp_utc": "2026-11-15T23:49:18.024672+00:00",
+        "elapsed_seconds": 36632.78258696399,
+        "kind": "eval",
+        "eval_loss": 1.839874267578125,
+        "eval_runtime": 74.5629,
+        "eval_samples_per_second": 562.25,
+        "eval_steps_per_second": 8.798
+      },
+      {
+        "step": 5160,
+        "epoch": 7.510917030567685,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T00:32:49.058408+00:00",
+        "elapsed_seconds": 39243.81632381999,
+        "kind": "eval",
+        "eval_loss": 1.8281991481781006,
+        "eval_runtime": 74.622,
+        "eval_samples_per_second": 561.805,
+        "eval_steps_per_second": 8.791
+      },
+      {
+        "step": 5504,
+        "epoch": 8.011644832605532,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T01:16:22.936432+00:00",
+        "elapsed_seconds": 41857.694346947,
+        "kind": "eval",
+        "eval_loss": 1.8241322040557861,
+        "eval_runtime": 74.5409,
+        "eval_samples_per_second": 562.416,
+        "eval_steps_per_second": 8.801
+      },
+      {
+        "step": 5848,
+        "epoch": 8.512372634643377,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T01:59:51.720990+00:00",
+        "elapsed_seconds": 44466.478905241995,
+        "kind": "eval",
+        "eval_loss": 1.806064486503601,
+        "eval_runtime": 74.5687,
+        "eval_samples_per_second": 562.207,
+        "eval_steps_per_second": 8.797
+      },
+      {
+        "step": 6192,
+        "epoch": 9.013100436681222,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T02:43:24.495538+00:00",
+        "elapsed_seconds": 47079.25345407199,
+        "kind": "eval",
+        "eval_loss": 1.7795073986053467,
+        "eval_runtime": 74.5856,
+        "eval_samples_per_second": 562.079,
+        "eval_steps_per_second": 8.795
+      },
+      {
+        "step": 6536,
+        "epoch": 9.513828238719068,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T03:26:53.520259+00:00",
+        "elapsed_seconds": 49688.278174941996,
+        "kind": "eval",
+        "eval_loss": 1.768393635749817,
+        "eval_runtime": 74.6226,
+        "eval_samples_per_second": 561.801,
+        "eval_steps_per_second": 8.791
+      },
+      {
+        "step": 6870,
+        "epoch": 10.0,
+        "phase": "final_validation",
+        "timestamp_utc": "2026-11-16T04:09:30.918146+00:00",
+        "elapsed_seconds": 52245.676061283,
+        "kind": "eval",
+        "eval_loss": 1.768393635749817,
+        "eval_runtime": 74.6593,
+        "eval_samples_per_second": 561.524,
+        "eval_steps_per_second": 8.787
+      }
+    ],
+    "abort_reason": null,
+    "monitor_window": 100,
+    "update_records": 6870,
+    "grad_norm_count": 6870,
+    "grad_norm_mean": 0.11985471500232925,
+    "grad_norm_max": 17.671913146972656,
+    "grad_norm_max_step": 3,
+    "rolling_grad_norm_count": 100,
+    "rolling_grad_norm_mean": 0.08856773748993874,
+    "rolling_grad_norm_max": 0.1074955016374588,
+    "skipped_update_count": 0,
+    "missing_grad_norm_count": 0,
+    "nonfinite_grad_norm_count": 0,
+    "global_step": 6870,
+    "epoch": 10.0,
+    "max_steps": 6870,
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+    "best_metric": 1.768393635749817
+  },
+  "grad_norm": {
+    "definition": "pre-clip, unscaled, full-model global gradient L2 norm",
+    "window_size": 100,
+    "valid_count": 6870,
+    "missing_count": 0,
+    "nonfinite_or_invalid_count": 0,
+    "skipped_update_count": 0,
+    "mean": 0.11985471500232925,
+    "max": 17.671913146972656,
+    "max_step": 3,
+    "rolling_mean": 0.08856773748993874,
+    "rolling_max": 0.1074955016374588
+  },
+  "optimizer_log_rows": 6870,
+  "timing": {
+    "seconds_per_step": 7.321758890602018,
+    "estimated_remaining_training_seconds": 0.0,
+    "estimation_scope": "remaining optimizer steps; excludes evaluation and early stopping"
+  },
+  "baseline_validation": {
+    "status": "passed",
+    "loss": 14.15386297441014,
+    "masked_perplexity": 1402634.7278594333,
+    "perplexity_overflow": false,
+    "loss_sum": 3560234.3848571777,
+    "answer_token_count": 251538,
+    "sample_count": 41923,
+    "world_size": 4,
+    "definition": "token-weighted causal cross entropy on nonmasked answer labels only",
+    "elapsed_seconds": 72.91079808899667,
+    "created_at_utc": "2026-11-15T13:38:33.375391+00:00"
+  },
+  "events": [
+    {
+      "event": "checkpoint_saved",
+      "step": 344,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-344",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-344",
+      "best_metric": 2.661903142929077,
+      "timestamp_utc": "2026-11-15T14:22:13.559119+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 688,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-688",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-688",
+      "best_metric": 2.618082284927368,
+      "timestamp_utc": "2026-11-15T15:05:49.203012+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 1032,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-1032",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-1032",
+      "best_metric": 2.4704084396362305,
+      "timestamp_utc": "2026-11-15T15:49:21.406602+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 1376,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-1376",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-1376",
+      "best_metric": 2.2824432849884033,
+      "timestamp_utc": "2026-11-15T16:32:53.070847+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 1720,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-1720",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-1720",
+      "best_metric": 2.1970913410186768,
+      "timestamp_utc": "2026-11-15T17:16:26.717866+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 2064,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2064",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2064",
+      "best_metric": 2.117537498474121,
+      "timestamp_utc": "2026-11-15T17:59:58.542239+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 2408,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2408",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2408",
+      "best_metric": 2.0859150886535645,
+      "timestamp_utc": "2026-11-15T18:43:32.815828+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 2752,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2752",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-2752",
+      "best_metric": 2.0285849571228027,
+      "timestamp_utc": "2026-11-15T19:26:58.344730+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 3096,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-3096",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-3096",
+      "best_metric": 1.9854230880737305,
+      "timestamp_utc": "2026-11-15T20:11:10.462434+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 3440,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-3440",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-3440",
+      "best_metric": 1.9691883325576782,
+      "timestamp_utc": "2026-11-15T20:55:19.831306+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 3784,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-3784",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-3784",
+      "best_metric": 1.9298949241638184,
+      "timestamp_utc": "2026-11-15T21:38:59.066963+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 4128,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-4128",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-4128",
+      "best_metric": 1.9061506986618042,
+      "timestamp_utc": "2026-11-15T22:22:28.554031+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 4472,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-4472",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-4472",
+      "best_metric": 1.8698042631149292,
+      "timestamp_utc": "2026-11-15T23:05:59.193198+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 4816,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-4816",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-4816",
+      "best_metric": 1.839874267578125,
+      "timestamp_utc": "2026-11-15T23:49:33.081251+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 5160,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-5160",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-5160",
+      "best_metric": 1.8281991481781006,
+      "timestamp_utc": "2026-11-16T00:33:03.425588+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 5504,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-5504",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-5504",
+      "best_metric": 1.8241322040557861,
+      "timestamp_utc": "2026-11-16T01:16:37.027198+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 5848,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-5848",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-5848",
+      "best_metric": 1.806064486503601,
+      "timestamp_utc": "2026-11-16T02:00:05.925725+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 6192,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6192",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6192",
+      "best_metric": 1.7795073986053467,
+      "timestamp_utc": "2026-11-16T02:43:38.494842+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 6536,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+      "best_metric": 1.768393635749817,
+      "timestamp_utc": "2026-11-16T03:27:08.045014+00:00"
+    },
+    {
+      "event": "checkpoint_saved",
+      "step": 6870,
+      "checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6870",
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft/checkpoint-6536",
+      "best_metric": 1.768393635749817,
+      "timestamp_utc": "2026-11-16T04:08:12.227150+00:00"
+    }
+  ],
+  "gpu_samples": 7120,
+  "gpu_peak_memory_mib": 60237.0,
+  "gpu_mean_utilization_percent": 93.54761235955056,
+  "rendered_pdf": true
+}

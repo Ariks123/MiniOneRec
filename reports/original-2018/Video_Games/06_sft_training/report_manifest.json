@@ -1,0 +1,121 @@
+{
+  "stage": "sft_training",
+  "status": "completed",
+  "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Video_Games_sid2900/sft",
+  "created_at_utc": "2026-11-16T06:41:57.312583+00:00",
+  "pages": 5,
+  "sources": [
+    {
+      "path": "run_status.json",
+      "bytes": 10322,
+      "sha256": "d9a5c61ecfd3502081c5e92898b7e8d945d3743f383e6f734e22540cc73bc785"
+    },
+    {
+      "path": "run_config.json",
+      "bytes": 3447,
+      "sha256": "2e2d728e1c05741476c6acf837654a6183f6d377e6e71d7ce1240dd9168e41e8"
+    },
+    {
+      "path": "baseline_validation.json",
+      "bytes": 422,
+      "sha256": "51a6a24b0c20750aa0bd37e9d8b5e3e80a328a3785dd9c44dd93abe971c60097"
+    },
+    {
+      "path": "training_summary.json",
+      "bytes": 950,
+      "sha256": "86ce25582826802c00a83d02a69b6666a3a2c379ffc1ef72354754847680ad91"
+    },
+    {
+      "path": "monitor/metrics.jsonl",
+      "bytes": 3988325,
+      "sha256": "d4088886146f699e0f1f303ca51fd33c0c7440b89845edb8b60b74ec4345d4b3"
+    },
+    {
+      "path": "monitor/summary.json",
+      "bytes": 8934,
+      "sha256": "083f958b1414cc44f98f42ff670b019cd486071f97691c58ad138d2d2b568141"
+    },
+    {
+      "path": "monitor/events.jsonl",
+      "bytes": 7167,
+      "sha256": "faf34b072332007d4a964c7a9f23080dd00327fe2b62fbe9d10991b8a26b708c"
+    },
+    {
+      "path": "gpu_metrics.jsonl",
+      "bytes": 1273954,
+      "sha256": "186b432349033e67a38b5e51bbc3fe170c2ad4e0ef7aa1807174ce4af994e57f"
+    },
+    {
+      "path": "evaluation/metrics.json",
+      "bytes": 24102,
+      "sha256": "dc0561306b10d9347e2ecb9749b60583c5278e3131feadce52a511d11544293e"
+    },
+    {
+      "path": "comparison_baselines.json",
+      "bytes": 4552,
+      "sha256": "a7e0afbfed36b7f5256786aec5f0a38c0cbee6b787125e9d22bb12351da6c5e9"
+    },
+    {
+      "path": "behavior_shift_analysis.json",
+      "bytes": 19911,
+      "sha256": "20452e40274f58aba9963ec43daf8dc92dd6342a9fc1a27a2e5f244132090e6c"
+    },
+    {
+      "path": "/opt/minionerec/config/minionerec_paper_reference.json",
+      "bytes": 3026,
+      "sha256": "e5a7a83118712a17f0804bbdd2dccc1df01f4046bceacf0a509924df458f312f"
+    },
+    {
+      "path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Video_Games_sid2900/preparation_manifest.json",
+      "bytes": 2240,
+      "sha256": "bf1f7eb925850ae2b23051b85d1e01edc6628db5e730c9ef8d8c1ebd70909116"
+    }
+  ],
+  "files": [
+    {
+      "path": "gpu_metrics.csv",
+      "bytes": 356293,
+      "sha256": "5030c694028bd441c821e7909a41c3a9a669630d39e56ce67b38c81f54017b53"
+    },
+    {
+      "path": "gpu_resources.png",
+      "bytes": 236335,
+      "sha256": "74a15ca18f17fbc65c5c5e62ff5daec951b995693c5687334af280f60d09a054"
+    },
+    {
+      "path": "grad_norm.png",
+      "bytes": 72379,
+      "sha256": "1f556d2913b703ccb647d82552c8d282adf6cf8028a1920f0027f555b6a01e22"
+    },
+    {
+      "path": "index.html",
+      "bytes": 20035,
+      "sha256": "fad6850ebdc09dd6d7e0fcc9b8486d87f9da5cb94acc78ad50e3d5a647ad9b59"
+    },
+    {
+      "path": "learning_rate.png",
+      "bytes": 79068,
+      "sha256": "c8dca5b71aeb58960676a838ea5e2edc7bce53a9a38827c3cb365d091b9554b0"
+    },
+    {
+      "path": "loss.png",
+      "bytes": 69790,
+      "sha256": "167a50c753eff01977aa838f5280b51521fc524ea5cefcad97e9c548be46b807"
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 1208690,
+      "sha256": "d1d30099de29e107712c2f8ce4db055b5b379402d2b692e85000a716142b079d"
+    },
+    {
+      "path": "training-report.pdf",
+      "bytes": 165113,
+      "sha256": "4dd71e6fb8e5223c2a6f05bc93d35b3b002211045e69c741a442e94737f3d3cd"
+    },
+    {
+      "path": "training_report.json",
+      "bytes": 37024,
+      "sha256": "5003d25e96ece5f545c72af88160360b14cfbe0eab13fbf92096a3cf96c0d8c1"
+    }
+  ]
+}

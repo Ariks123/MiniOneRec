@@ -1,0 +1,19 @@
+# Isolated compatibility image; the existing cu124 image is retained.
+ARG BASE_IMAGE=minionerec:h20-sft-monitor
+FROM ${BASE_IMAGE}
+
+COPY docker/check_original_torch28.py /opt/minionerec/docker/check_original_torch28.py
+# Freeze every existing non-Torch dependency. Triton and SymPy are Torch's
+# required Python dependencies; all NVIDIA wheels follow the official cu128
+# wheel requirements. DeepSpeed, Transformers, datasets and the app stay pinned.
+RUN python docker/check_original_torch28.py --snapshot \
+    && python -m pip install --no-cache-dir --upgrade \
+        --index-url https://download.pytorch.org/whl/cu128 \
+        --constraint /opt/original-torch28/preserved-constraints.txt \
+        torch==2.8.0+cu128 sympy==1.13.3 \
+    && python -m pip check \
+    && python docker/check_original_torch28.py
+
+LABEL org.minionerec.torch-profile="original-reproduction-torch2.8.0-cu128" \
+      org.minionerec.python-note="Inherited Python 3.11; reference archive used Python 3.12.3" \
+      org.minionerec.cuda-toolkit-note="Inherited nvcc 12.4; PyTorch wheel CUDA runtime 12.8"

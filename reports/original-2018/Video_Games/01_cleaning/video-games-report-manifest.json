@@ -1,0 +1,8 @@
+{
+  "pdf": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\pdf\\video-games-cleaning-report.pdf",
+  "source": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\data\\Amazon18\\Video_Games\\cleaning_report.json",
+  "pages": 3,
+  "retained_interactions": 471097,
+  "retention": 0.9467821060860933,
+  "removed": 26480
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工业品 RQ-VAE 推荐实验报告 · Amazon Reviews 2018</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="top" aria-label="报告导航"><div class="frame">
+  <a href="index.html" aria-current="page">报告总览</a>
+  <a href="algorithm.html">算法报告</a>
+  <a href="training.html">训练报告</a>
+  <a href="validation.html">验证报告</a>
+</div></nav>
+<header class="hero" id="top"><div class="frame">
+  <p class="dataset">Amazon Reviews 2018 · <span>Industrial and Scientific</span></p>
+  <h1><span>工业品 RQ-VAE</span> <span>推荐实验报告</span></h1>
+  <p class="summary">商品语义 ID 的构建、推荐模型的训练，以及联合投机推理的离线评估。</p>
+</div></header>
+<main class="frame">
+  <nav class="toc overview-toc" aria-label="章节目录">
+    <p class="toc-title">目录</p>
+    <ol>
+      <li><a href="#reports">报告目录</a></li>
+      <li><a href="#protocol">推理方案与评估范围</a></li>
+      <li><a href="#checkpoints">模型检查点</a></li>
+    </ol>
+  </nav>
+  <section>
+    <h2 id="reports">报告目录</h2>
+    <div class="report-list">
+      <article><h3><a href="algorithm.html">算法报告</a></h3><p>商品 SID 的编码方法，以及从 UniSRec 草拟候选到 Qwen 验证、补位与排序的流程。</p></article>
+      <article><h3><a href="training.html">训练报告</a></h3><p>RQ-VAE、SFT、GRPO 和 UniSRec 四个阶段的训练曲线、验证指标与检查点。</p></article>
+      <article><h3><a href="validation.html">验证报告</a></h3><p>对比直接生成、向量检索与联合推理的推荐质量，查看单请求时延与批量吞吐。</p></article>
+    </div>
+  </section>
+  <section id="experiment">
+    <h2 id="protocol">推理方案与评估范围</h2>
+    <p>RQ-VAE 为 3,686 件工业品分别分配唯一的三位语义 ID（SID）。推理时，UniSRec 按用户历史检索候选，Qwen 为候选的完整 SID 打分。检索席位仍有空缺时，系统用受约束的 beam search 补位。</p>
+    <p>训练、验证和测试集分别包含 36,259、4,532 和 4,533 条请求，测试集中有 147 条冷目标请求。推荐列表长度取 1、5、10、20 和 50，按精确商品 ID 计算命中率（HR）和排序质量（NDCG）。</p>
+    <p id="summary">联合方案的 HR@1 为 5.118%。返回 50 件商品时，HR 为 25.039%，NDCG 为 11.496%，冷目标命中 2 条。同一配置在 H20 单卡、每批 1 条请求下的中位时延为 29.62 ms。</p>
+    <p class="data-links"><a href="validation.html#selected">查看各推荐位数的质量与性能</a></p>
+  </section>
+  <section>
+    <h2 id="checkpoints">模型检查点</h2>
+    <p>RQ-VAE 采用第 1,100 轮权重导出商品 SID。Qwen2.5-0.5B 从三轮线性学习率 SFT 的第 5,187 步继续进行 GRPO，推理采用 GRPO 第 621 步。检索使用 UniSRec 第 20 轮的历史编码器和商品向量。</p>
+    <p class="data-links"><a href="training.html#training-checkpoints">查看训练选点依据</a><a href="data/experiment-integrity.json">数据与权重校验摘要（JSON）</a></p>
+  </section>
+  <footer><a href="#top">返回页首</a></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "pdf": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\reports\\Video_Games\\03_rqvae_training\\video-games-rqvae-training-report.pdf",
+  "pages": 4,
+  "page_images": [
+    "video-games-rqvae-training-report-1.png",
+    "video-games-rqvae-training-report-2.png",
+    "video-games-rqvae-training-report-3.png",
+    "video-games-rqvae-training-report-4.png"
+  ],
+  "tables": [
+    "epoch_metrics.csv",
+    "evaluation_metrics.csv",
+    "selected_codebook_usage.csv"
+  ],
+  "source": "C:\\Users\\Administrator\\Desktop\\MiniOneRec\\output\\rqvae\\Video_Games\\2026-11-14T15-04-02-357Z\\training_summary.json",
+  "source_sha256": "47df880034dcb9d35bdd5c70febf697b25098a468bf2ea92b1b06515616dd0f1",
+  "created_at_utc": "2026-11-15T05:01:03.059692+00:00",
+  "stage": "rqvae_training",
+  "epochs_completed": 4100,
+  "best_epoch": 2900,
+  "selected_epoch": 2900,
+  "best_val_mse": 0.5490253567695618,
+  "validation_nmse": 0.4652326477144139,
+  "stop_reason": "validation_plateau"
+}

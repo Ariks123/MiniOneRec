@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "reference_repository": "Enddonkey/MiniOneRec-Reproduction",
+  "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+  "overall_hr10": 0.12618574895212883,
+  "overall_ndcg10": 0.08536859997506724,
+  "reference_hr10": 0.1127,
+  "reference_ndcg10": 0.0792,
+  "hr10_delta_percentage_points": 1.348574895212884,
+  "ndcg10_delta_percentage_points": 0.6168599975067233,
+  "cold_rows": 147,
+  "cold_target_items": 37,
+  "cold_top10_hits": 0,
+  "cold_top50_hits": 3,
+  "cold_top50_hit_unique_items": 1,
+  "cold_top50_hit_item_ids": [
+    "2076"
+  ],
+  "conclusions": [
+    "整体六个K的HR/NDCG点估计均高于指定仓库README自报SFT-only结果；本次1.5B/四卡属于模型规模与硬件变体。",
+    "冷组Top10为0/147；Top50仅3/147，且仅涉及37个冷目标中的同一件商品，行为冷商品泛化仍弱。",
+    "37个冷目标均完整参加SID与标题双向辅助训练；辅助曝光未充分转化为历史条件下的推荐能力。",
+    "原始SID保留15组冲突、涉及31商品。主指标按SID匹配；无冲突子集不能直接与全体参考值比较。",
+    "核对原仓库实际3744条学习率日志后确认原运行使用linear；本次按README使用cosine。该训练过程差异已实证，不应把结果差异单独归因于模型规模。"
+  ],
+  "collision_free_hr10": 0.07993358633776092,
+  "collision_free_ndcg10": 0.04682614097496262,
+  "training_schedule_audit": "original_training_schedule_audit.json",
+  "comparison_scope": "Same source dataset, SID and active task objectives; not a strict model-size-only comparison: archived original uses linear learning-rate decay while this run uses README-stated cosine, plus 0.5B vs1.5B and1vs4GPUs."
+}

@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+/.venv-sid/
+/outputs/sid/
+
+# Local dependencies, data, model weights, and generated experiment artifacts.
+/.runtime/
+/.vscode/
+/.pytest_cache/
+/tmp/
+/models/
+/weights/
+/output/
+/data/Amazon18/raw/
+/data/Amazon18/Video_Games
+/data/Amazon18/posttraining/
+/data/Amazon18/backups/
+/data/Amazon18/logs/
+
+# This branch maintains the Amazon Reviews 2018 workflow.
+/data/Amazon23/
+*amazon23*
+*amazon2023*
+*industrial23*
+*video_games_2023*

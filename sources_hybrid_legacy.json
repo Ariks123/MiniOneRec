@@ -1,0 +1,3919 @@
+{
+  "description": "Copied source files and offline reports for Amazon Reviews 2018 publication; original repositories remain unchanged.",
+  "source_revisions": {
+    "industrial-hybrid": "736c848be34a4cf8154addcbbe6dc6f421e1ebd1",
+    "legacy-2018-base": "0cbd94de9ea58c59a6b05d4d1dbda7edf8d5b3b1"
+  },
+  "groups": {
+    "industrial-hybrid": {
+      "files": 142,
+      "bytes": 4512482
+    },
+    "industrial-latest": {
+      "files": 42,
+      "bytes": 2656887
+    },
+    "legacy-2018": {
+      "files": 151,
+      "bytes": 5105464
+    },
+    "original-2018": {
+      "files": 195,
+      "bytes": 28781277
+    },
+    "report-bundles": {
+      "files": 5,
+      "bytes": 26227184
+    }
+  },
+  "excluded_legacy_source_paths": [
+    "scripts/__pycache__/amazon23_sft_data.cpython-314.pyc",
+    "scripts/__pycache__/analyze_sft_behavior_shift.cpython-312.pyc",
+    "scripts/__pycache__/analyze_sft_behavior_shift.cpython-314.pyc",
+    "scripts/__pycache__/audit_amazon23_cold_sid.cpython-314.pyc",
+    "scripts/__pycache__/build_sft_baselines.cpython-314.pyc",
+    "scripts/__pycache__/compare_amazon23_rqvae.cpython-314.pyc",
+    "scripts/__pycache__/compare_industrial_reproductions.cpython-314.pyc",
+    "scripts/__pycache__/diagnose_constraint_tokens.cpython-312.pyc",
+    "scripts/__pycache__/diagnose_constraint_tokens.cpython-314.pyc",
+    "scripts/__pycache__/evaluate_sft.cpython-314.pyc",
+    "scripts/__pycache__/evaluate_sft_content_baseline.cpython-314.pyc",
+    "scripts/__pycache__/launch_h20.cpython-314.pyc",
+    "scripts/__pycache__/package_amazon23_category_reports.cpython-314.pyc",
+    "scripts/__pycache__/package_amazon23_reports.cpython-314.pyc",
+    "scripts/__pycache__/prepare_amazon23_sid_samples.cpython-314.pyc",
+    "scripts/__pycache__/prepare_original_industrial.cpython-314.pyc",
+    "scripts/__pycache__/prepare_video_games_posttraining.cpython-311.pyc",
+    "scripts/__pycache__/prepare_video_games_posttraining.cpython-314.pyc",
+    "scripts/__pycache__/render_amazon23_rqvae_bundle.cpython-314.pyc",
+    "scripts/__pycache__/report_amazon23_rqvae.cpython-314.pyc",
+    "scripts/__pycache__/report_amazon23_sft.cpython-314.pyc",
+    "scripts/__pycache__/report_industrial_sft.cpython-314.pyc",
+    "scripts/__pycache__/report_sft.cpython-314.pyc",
+    "scripts/__pycache__/sft_eval_utils.cpython-314.pyc",
+    "scripts/__pycache__/sft_generative_selection.cpython-314.pyc",
+    "scripts/__pycache__/sft_wsd_schedule.cpython-314.pyc",
+    "scripts/__pycache__/validate_amazon23_embeddings.cpython-314.pyc",
+    "scripts/amazon23_sft_data.py",
+    "scripts/audit_amazon23_cold_sid.py",
+    "scripts/compare_amazon23_rqvae.py",
+    "scripts/package_amazon23_category_reports.py",
+    "scripts/package_amazon23_reports.py",
+    "scripts/prepare_amazon23_sid_samples.py",
+    "scripts/render_amazon23_rqvae_bundle.py",
+    "scripts/report_amazon23_rqvae.py",
+    "scripts/report_amazon23_sft.py",
+    "scripts/validate_amazon23_embeddings.py",
+    "docker/__pycache__/__init__.cpython-314.pyc",
+    "docker/__pycache__/amazon23_preparation.cpython-314.pyc",
+    "docker/__pycache__/amazon23_rqvae_comparison.cpython-314.pyc",
+    "docker/__pycache__/amazon23_sft_experiment.cpython-314.pyc",
+    "docker/__pycache__/check_env.cpython-314.pyc",
+    "docker/__pycache__/check_original_torch28.cpython-314.pyc",
+    "docker/__pycache__/download_model.cpython-314.pyc",
+    "docker/__pycache__/industrial23_full_experiment.cpython-314.pyc",
+    "docker/__pycache__/industrial_experiment.cpython-314.pyc",
+    "docker/__pycache__/run_copy.cpython-314.pyc",
+    "docker/__pycache__/sft_experiment.cpython-314.pyc",
+    "docker/__pycache__/smoke_distributed.cpython-314.pyc",
+    "docker/__pycache__/smoke_sft_monitor.cpython-314.pyc",
+    "docker/__pycache__/smoke_training.cpython-314.pyc",
+    "docker/amazon23_preparation.py",
+    "docker/amazon23_rqvae_comparison.py",
+    "docker/amazon23_sft_experiment.py",
+    "docker/industrial23_full_experiment.py",
+    "tests/__pycache__/__init__.cpython-311.pyc",
+    "tests/__pycache__/__init__.cpython-312.pyc",
+    "tests/__pycache__/__init__.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_category_dispatch.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_cold_sid.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_embeddings.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_history50.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_industrial_category.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_preparation.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_rqvae.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_sft_data.cpython-314.pyc",
+    "tests/__pycache__/test_amazon23_sft_reports.cpython-314.pyc",
+    "tests/__pycache__/test_calc_metrics.cpython-312-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_calc_metrics.cpython-314.pyc",
+    "tests/__pycache__/test_compare_amazon23_rqvae.cpython-314.pyc",
+    "tests/__pycache__/test_constrained_decoding.cpython-312-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_constrained_decoding.cpython-314.pyc",
+    "tests/__pycache__/test_h20_docker.cpython-314.pyc",
+    "tests/__pycache__/test_h20_docker_copy.cpython-314.pyc",
+    "tests/__pycache__/test_h20_launch.cpython-314.pyc",
+    "tests/__pycache__/test_industrial23_epoch_eta.cpython-314.pyc",
+    "tests/__pycache__/test_industrial23_rq_comparison_flow.cpython-314.pyc",
+    "tests/__pycache__/test_industrial_experiment.cpython-314.pyc",
+    "tests/__pycache__/test_industrial_reports.cpython-314.pyc",
+    "tests/__pycache__/test_prepare_original_industrial.cpython-314.pyc",
+    "tests/__pycache__/test_prepare_video_games_2023.cpython-314.pyc",
+    "tests/__pycache__/test_prepare_video_games_posttraining.cpython-311.pyc",
+    "tests/__pycache__/test_prepare_video_games_posttraining.cpython-314.pyc",
+    "tests/__pycache__/test_rl_distributed.cpython-311.pyc",
+    "tests/__pycache__/test_rl_distributed.cpython-312-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_rl_distributed.cpython-314.pyc",
+    "tests/__pycache__/test_sft_baselines.cpython-314.pyc",
+    "tests/__pycache__/test_sft_behavior_shift.cpython-314.pyc",
+    "tests/__pycache__/test_sft_content_baseline.cpython-314.pyc",
+    "tests/__pycache__/test_sft_distributed.cpython-312-pytest-9.1.1.pyc",
+    "tests/__pycache__/test_sft_distributed.cpython-314.pyc",
+    "tests/__pycache__/test_sft_evaluation.cpython-314.pyc",
+    "tests/__pycache__/test_sft_generative_selection.cpython-314.pyc",
+    "tests/__pycache__/test_sft_monitor.cpython-314.pyc",
+    "tests/__pycache__/test_sft_reports.cpython-314.pyc",
+    "tests/__pycache__/test_sft_supervisor.cpython-314.pyc",
+    "tests/__pycache__/test_sft_wsd_schedule.cpython-314.pyc",
+    "tests/test_amazon23_category_dispatch.py",
+    "tests/test_amazon23_cold_sid.py",
+    "tests/test_amazon23_embeddings.py",
+    "tests/test_amazon23_history50.py",
+    "tests/test_amazon23_industrial_category.py",
+    "tests/test_amazon23_preparation.py",
+    "tests/test_amazon23_rqvae.py",
+    "tests/test_amazon23_sft_data.py",
+    "tests/test_amazon23_sft_reports.py",
+    "tests/test_compare_amazon23_rqvae.py",
+    "tests/test_industrial23_epoch_eta.py",
+    "tests/test_industrial23_rq_comparison_flow.py",
+    "tests/test_minimax_provider.py",
+    "tests/test_prepare_video_games_2023.py",
+    "rq/__pycache__/datasets.cpython-311.pyc",
+    "rq/__pycache__/export_video_games_sid.cpython-311.pyc",
+    "rq/__pycache__/export_video_games_sid.cpython-314.pyc",
+    "rq/__pycache__/generate_indices.cpython-311.pyc",
+    "rq/__pycache__/train_amazon23_rqvae.cpython-314.pyc",
+    "rq/__pycache__/trainer.cpython-311.pyc",
+    "rq/__pycache__/utils.cpython-311.pyc",
+    "rq/models/__pycache__/generate_indices.cpython-314.pyc",
+    "rq/models/__pycache__/layers.cpython-311.pyc",
+    "rq/models/__pycache__/layers.cpython-314.pyc",
+    "rq/models/__pycache__/rq.cpython-311.pyc",
+    "rq/models/__pycache__/rq.cpython-314.pyc",
+    "rq/models/__pycache__/rqvae.cpython-311.pyc",
+    "rq/models/__pycache__/rqvae.cpython-314.pyc",
+    "rq/models/__pycache__/vq.cpython-311.pyc",
+    "rq/models/__pycache__/vq.cpython-314.pyc",
+    "rq/text2emb/__pycache__/amazon_text2emb.cpython-311.pyc",
+    "rq/text2emb/__pycache__/amazon_text2emb.cpython-314.pyc",
+    "rq/text2emb/__pycache__/utils.cpython-311.pyc",
+    "rq/text2emb/__pycache__/utils.cpython-314.pyc",
+    "rq/train_amazon23_rqvae.py",
+    "sid_generation/__pycache__/__init__.cpython-312.pyc",
+    "sid_generation/__pycache__/prq_kmeans.cpython-312.pyc",
+    "sid_generation/__pycache__/rq_opq.cpython-312.pyc",
+    "sid_generation/__pycache__/sid_common.cpython-312.pyc",
+    "sid_generation/tests/__pycache__/test_minionerec_integration.cpython-312-pytest-9.1.1.pyc"
+  ],
+  "files": [
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/.gitignore",
+      "target": "projects/industrial-hybrid/.gitignore",
+      "size": 98,
+      "sha256": "04de1804172f8ddf56cdb3c0e6038cd38ca6e1dbc312cc3daa465eaf24986b86",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/LICENSE",
+      "target": "projects/industrial-hybrid/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/LogitProcessor.py",
+      "target": "projects/industrial-hybrid/LogitProcessor.py",
+      "size": 4435,
+      "sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/README.md",
+      "target": "projects/industrial-hybrid/README.md",
+      "size": 6982,
+      "sha256": "5b6c9cd5a905de4daca886aeb096b006b4cc2842eb8614a184c1c7ee91042e83",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/config/h20_zero2.json",
+      "target": "projects/industrial-hybrid/config/h20_zero2.json",
+      "size": 493,
+      "sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/config/selected_run.json",
+      "target": "projects/industrial-hybrid/config/selected_run.json",
+      "size": 9735,
+      "sha256": "c2d22b6ea706233bce28595c088d5e4cf5ae5138c1ce1d6d5461a29c86898c28",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/data.py",
+      "target": "projects/industrial-hybrid/data.py",
+      "size": 75157,
+      "sha256": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/__init__.py",
+      "target": "projects/industrial-hybrid/docker/__init__.py",
+      "size": 63,
+      "sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/industrial_experiment.py",
+      "target": "projects/industrial-hybrid/docker/industrial_experiment.py",
+      "size": 27367,
+      "sha256": "35c926f0d9937dc53da051f3f9f24cd3e8017193b802bad38f6ebd8fb86d52ff",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/industrial_linear_epoch_experiment.py",
+      "target": "projects/industrial-hybrid/docker/industrial_linear_epoch_experiment.py",
+      "size": 4717,
+      "sha256": "575dd6be8cfef5afe558c931fc7a93c02946b32a136c5fd7032a7f13dc3f2f7b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/industrial_rl_experiment.py",
+      "target": "projects/industrial-hybrid/docker/industrial_rl_experiment.py",
+      "size": 28108,
+      "sha256": "8d5b1959059c47ec3849addedfc46d8d49d2666f6558b4ff092e3f85e019158f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/industrial_rqvae_posttraining.py",
+      "target": "projects/industrial-hybrid/docker/industrial_rqvae_posttraining.py",
+      "size": 21419,
+      "sha256": "784b39c71d3c0b889aba3f5ca77d7c95111a4079b6ddce962956c7d4846b05f6",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/industrial_title_history_experiment.py",
+      "target": "projects/industrial-hybrid/docker/industrial_title_history_experiment.py",
+      "size": 7475,
+      "sha256": "762f33eb664e1ed3ce47b3921b5c2a7d7eb93a83ddd4a28f5d52a6f12ccc1e17",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/queue_industrial_rl_beta.py",
+      "target": "projects/industrial-hybrid/docker/queue_industrial_rl_beta.py",
+      "size": 17790,
+      "sha256": "30413764b5d852f01fa416955daad69d7a6d415f2f84ac340152a67f4ddd44a9",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/smoke_industrial_linear_snapshot.py",
+      "target": "projects/industrial-hybrid/docker/smoke_industrial_linear_snapshot.py",
+      "size": 11876,
+      "sha256": "177a5434c1d5eb5b484feb3384ec6f8e197dbf983dcaa66f9d117d832099981f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/smoke_industrial_rank_selection.py",
+      "target": "projects/industrial-hybrid/docker/smoke_industrial_rank_selection.py",
+      "size": 13281,
+      "sha256": "a1e895b69c4d734526eb791f09040cedca67f81aa31adf8fd2c030d3fe3bbc3f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/smoke_industrial_rl.py",
+      "target": "projects/industrial-hybrid/docker/smoke_industrial_rl.py",
+      "size": 11728,
+      "sha256": "829448ce67a6ca0884fce3f826a6043bb488068ac4a102f13c4006cf9f46ae24",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docker/smoke_industrial_rl_accumulation.py",
+      "target": "projects/industrial-hybrid/docker/smoke_industrial_rl_accumulation.py",
+      "size": 6606,
+      "sha256": "87cb68e6eb039ab0bbe7f33584e91fd61ef2eea524d7b937549603bb225e5a0f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/docs/INDUSTRIAL_RL.md",
+      "target": "projects/industrial-hybrid/docs/INDUSTRIAL_RL.md",
+      "size": 6193,
+      "sha256": "fb978430031adee42dc97f021d263df265071a9acd33c1b6b8125506fb4eb48c",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/README.md",
+      "target": "projects/industrial-hybrid/hybrid/README.md",
+      "size": 21736,
+      "sha256": "3b9e5a7a5e550ac4057d7381ef83ea3b229a21efe26669261f085c1ca5dfe6f0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/audit.py",
+      "target": "projects/industrial-hybrid/hybrid/audit.py",
+      "size": 2744,
+      "sha256": "1605215646eb9c0a9d66bd6ed9c35b527e889deb052b55d3b7bf51617f065514",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/batch_audit.py",
+      "target": "projects/industrial-hybrid/hybrid/batch_audit.py",
+      "size": 12527,
+      "sha256": "937e8d065502e9bf60415d4711ad958da7a9d794fa05eb1b581faaaac6fab487",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/benchmark.py",
+      "target": "projects/industrial-hybrid/hybrid/benchmark.py",
+      "size": 12428,
+      "sha256": "84b8ae5ec6e26a7a1a954a1b9d61d78124d11393de3736eaaf840a9db9de442d",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/diagnostics.py",
+      "target": "projects/industrial-hybrid/hybrid/diagnostics.py",
+      "size": 9099,
+      "sha256": "fd9b3271cc7d4855c788c42f30bb6d07a745ea19f210bee1dd597f07337f0084",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/drafter_audit.py",
+      "target": "projects/industrial-hybrid/hybrid/drafter_audit.py",
+      "size": 7390,
+      "sha256": "7b5b13ddbf1f2eec01b1e0b69af8d35b1408f1bc4f2567c1b38f90c3c5dc8db0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/drafter_export.py",
+      "target": "projects/industrial-hybrid/hybrid/drafter_export.py",
+      "size": 4448,
+      "sha256": "ffcbf7019436616f0e58762fb8b28ca7d9b350586759a8c4cf95940ca7820b85",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/drafters.py",
+      "target": "projects/industrial-hybrid/hybrid/drafters.py",
+      "size": 12192,
+      "sha256": "4fe2e9131db1ac4f979c11704829c64799da898b5380d9ad331e136c1b88a8e7",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/experiment.py",
+      "target": "projects/industrial-hybrid/hybrid/experiment.py",
+      "size": 12822,
+      "sha256": "06acc7d631d7a6ffe96ff798a8f631308413d1e7131ee1ae75009c1c9e0d54fe",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/finish_run.sh",
+      "target": "projects/industrial-hybrid/hybrid/finish_run.sh",
+      "size": 1070,
+      "sha256": "0cee7e139e1fa1ee0ab17761db7a76e1f1ecfadd821d496aa3d94525b59efa9e",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/infer.py",
+      "target": "projects/industrial-hybrid/hybrid/infer.py",
+      "size": 7679,
+      "sha256": "19460e4d389c633208305e8c47e7f8515f100cb3a7efa0e0d290831faf83dcf0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/manifest.py",
+      "target": "projects/industrial-hybrid/hybrid/manifest.py",
+      "size": 4575,
+      "sha256": "f68565f108e117879e41102aee075cbfcc4098fcbe238034ecb3e12522024b9b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/paired.py",
+      "target": "projects/industrial-hybrid/hybrid/paired.py",
+      "size": 5041,
+      "sha256": "55353acb61e4b14100ab40a6158d9b53094064e9ee450041e7543e4cef03715e",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/report.py",
+      "target": "projects/industrial-hybrid/hybrid/report.py",
+      "size": 34837,
+      "sha256": "e80c0e98e9de4988f03f88f9126004ca02e99ad04563cb312e0472d78aa3c075",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rho_attribution.py",
+      "target": "projects/industrial-hybrid/hybrid/rho_attribution.py",
+      "size": 5837,
+      "sha256": "db1ff1f987ad83122579ba13ff720e886c2a826bedffa1dccd207121e986e3c0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rho_bundle.py",
+      "target": "projects/industrial-hybrid/hybrid/rho_bundle.py",
+      "size": 4864,
+      "sha256": "8f29cfec1e670aed3480a1acbc3cef1923691648af006a3b7c0f7bc8e78f6ced",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rho_generate.py",
+      "target": "projects/industrial-hybrid/hybrid/rho_generate.py",
+      "size": 7171,
+      "sha256": "5c99fcb17632f0d1317028449bc15a358e40be321fcdaf589cccd7a182363568",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rho_quality.py",
+      "target": "projects/industrial-hybrid/hybrid/rho_quality.py",
+      "size": 20974,
+      "sha256": "68e7c9b70de168de86e6a02c71f48fa12d2448cf5f705708f13c4eb9d946bcd2",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rho_report.py",
+      "target": "projects/industrial-hybrid/hybrid/rho_report.py",
+      "size": 44672,
+      "sha256": "1ce55f2198264bedf9443d2e1cbaf3e50b05de5547a228400de9cccd9fca1695",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rho_smoke.py",
+      "target": "projects/industrial-hybrid/hybrid/rho_smoke.py",
+      "size": 4770,
+      "sha256": "0b741aedc16c8b4bd031f36b583639a6ce24068cc902145facee545293eca0bd",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rqvae_assets.py",
+      "target": "projects/industrial-hybrid/hybrid/rqvae_assets.py",
+      "size": 8630,
+      "sha256": "8e0d19643b0dbaf3a4bc92907414b1e2200c4bc03ee0f568dc4a92f18fa16878",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rqvae_quality.py",
+      "target": "projects/industrial-hybrid/hybrid/rqvae_quality.py",
+      "size": 17350,
+      "sha256": "8b325a7c9112c16a59f1225d756cf70a57df8284fdf219fb2aafe9de119678ad",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rqvae_report.py",
+      "target": "projects/industrial-hybrid/hybrid/rqvae_report.py",
+      "size": 17621,
+      "sha256": "6d01f012b7357caa030039f7fea85186404b9718d3feb2acf4ea5c4258840692",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/rqvae_tpot.py",
+      "target": "projects/industrial-hybrid/hybrid/rqvae_tpot.py",
+      "size": 8715,
+      "sha256": "6de845f46832613bb4da35c12c8d3ebaa1336cd6532ab130c259e9c6550bbb0b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/sweep.py",
+      "target": "projects/industrial-hybrid/hybrid/sweep.py",
+      "size": 23798,
+      "sha256": "eb57fdac928aa7e3b1935c1006f3a3a205147d0cd557ea717e4364f70335c131",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/trace.py",
+      "target": "projects/industrial-hybrid/hybrid/trace.py",
+      "size": 11897,
+      "sha256": "dea934f38d19909142cf2941aa19a8cf2a3b4d417eb707ce17bdb348dfe49083",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/hybrid/verifier.py",
+      "target": "projects/industrial-hybrid/hybrid/verifier.py",
+      "size": 15878,
+      "sha256": "6d9257ef21c0d7f09e5f4b40e31b0d46a0a692a938d321c5f9e2c08eb63b953f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/minionerec_trainer.py",
+      "target": "projects/industrial-hybrid/minionerec_trainer.py",
+      "size": 16161,
+      "sha256": "1b35fb204ce8f8186a4736ec5412d672f6d9384483a355c98089cc9198451936",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/npu_support.py",
+      "target": "projects/industrial-hybrid/npu_support.py",
+      "size": 1497,
+      "sha256": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/__init__.py",
+      "target": "projects/industrial-hybrid/project_report/__init__.py",
+      "size": 77,
+      "sha256": "698ebab07c4debd2d2b3d460e03faab208b19195f025eb49e0a4b30ae49ee857",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/__main__.py",
+      "target": "projects/industrial-hybrid/project_report/__main__.py",
+      "size": 9405,
+      "sha256": "99e9b2626a61ae50806c592ba6a8f01dc647be3717f185e9aac220b62723aa30",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/algorithm.py",
+      "target": "projects/industrial-hybrid/project_report/algorithm.py",
+      "size": 19851,
+      "sha256": "2a26080fb68fe8d29537733d08009627db6c4cef9acbda6e78cfacbf0b0e8785",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/provenance.py",
+      "target": "projects/industrial-hybrid/project_report/provenance.py",
+      "size": 6050,
+      "sha256": "85de820a54650d50dc1271cc5bb420a67d90e415cb697000f265d86f52485333",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/report.css",
+      "target": "projects/industrial-hybrid/project_report/report.css",
+      "size": 4959,
+      "sha256": "0f03f7e5203c4da00406bbd4a1ce14a1a1e59a03e1a616240afb591541ad2bf3",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/training.py",
+      "target": "projects/industrial-hybrid/project_report/training.py",
+      "size": 28439,
+      "sha256": "d324bdf38db5160beaaea242c074a3a42dfbb1667454a08a4ed086847b0ad51a",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/project_report/validation.py",
+      "target": "projects/industrial-hybrid/project_report/validation.py",
+      "size": 37747,
+      "sha256": "ff619acf0e6ba6b07d19a7963a0a02972657197fcd9803ca5909da58426038e8",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/comparison_values.csv",
+      "target": "projects/industrial-hybrid/reports/comparison_values.csv",
+      "size": 663,
+      "sha256": "a0e2e9f1afba1c416b632d177880fd8514fea2178c050aa0e7ecfb202f040ab3",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/comparison_vs_reference.png",
+      "target": "projects/industrial-hybrid/reports/comparison_vs_reference.png",
+      "size": 220260,
+      "sha256": "bd06b186ede69ae1b276e2c170d150d9c87ddbe3fbcf9343b6d701647a754944",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/conditional_metrics.csv",
+      "target": "projects/industrial-hybrid/reports/conditional_metrics.csv",
+      "size": 4112,
+      "sha256": "5647f82fc09a5e5f5a9423bb43876accf63ac236b0423d92267b5c7bf99963f9",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/data_diagnostics.json",
+      "target": "projects/industrial-hybrid/reports/data_diagnostics.json",
+      "size": 14128,
+      "sha256": "047e44efe4c437363f565320475072dc50ca60bb1bc02e1e015f017921cb30c2",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/grad_norm.png",
+      "target": "projects/industrial-hybrid/reports/grad_norm.png",
+      "size": 59491,
+      "sha256": "2f215d92d478e5d72a1b6e89811b191d05734dc222ecd575a3ffe702c9a9c944",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/index.html",
+      "target": "projects/industrial-hybrid/reports/index.html",
+      "size": 8428,
+      "sha256": "eff763980491fbc6e75ca51e97a880e29f313ca907e8490f0f38ecaad72667a5",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/learning_rate.png",
+      "target": "projects/industrial-hybrid/reports/learning_rate.png",
+      "size": 68319,
+      "sha256": "d09da32016e3af14aba1ebbb039e635002bb6f23a942e1906f864c487fa585d5",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/loss.png",
+      "target": "projects/industrial-hybrid/reports/loss.png",
+      "size": 82953,
+      "sha256": "01c9a47a55f286396ace6b7c697fba14b0c1dd743e8eac7979ceec936fde1bf2",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/original_repository_cold_recomputed.csv",
+      "target": "projects/industrial-hybrid/reports/original_repository_cold_recomputed.csv",
+      "size": 2258,
+      "sha256": "6e1330cae149f6f5edd85b2a1d5d15ce4a962455e3f6201f96ba3975ab4d7c30",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/original_repository_cold_recomputed.json",
+      "target": "projects/industrial-hybrid/reports/original_repository_cold_recomputed.json",
+      "size": 14125,
+      "sha256": "9df7acae380c6bdb3dee68ad80545d0be5a58ceff30e76ef32560d069b744652",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/original_training_schedule_audit.json",
+      "target": "projects/industrial-hybrid/reports/original_training_schedule_audit.json",
+      "size": 1666,
+      "sha256": "4eecc4b819337d39e62f269ea8df9591eb4c19baf5c17d11770a2991654a3859",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/ranking.png",
+      "target": "projects/industrial-hybrid/reports/ranking.png",
+      "size": 112550,
+      "sha256": "a520688675240dc1de41a3ffefaf8858dcc78b35b900f84aa8c1fae86ca1df11",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/result_analysis.json",
+      "target": "projects/industrial-hybrid/reports/result_analysis.json",
+      "size": 1742,
+      "sha256": "aec013784034191b7ae2b525a18cd97c58dfd17500eed7447097ad762d947af3",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/training-report.pdf",
+      "target": "projects/industrial-hybrid/reports/training-report.pdf",
+      "size": 98122,
+      "sha256": "e0844475498c7ac3cd8c5ead08c367201e68bb7b3bb812366b55e20485106638",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/training_report.json",
+      "target": "projects/industrial-hybrid/reports/training_report.json",
+      "size": 46073,
+      "sha256": "48a3f9e50824a333a42f239e9896e236404252292f3ce8dc06922e4199e30e4d",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/validation-report.pdf",
+      "target": "projects/industrial-hybrid/reports/validation-report.pdf",
+      "size": 40614,
+      "sha256": "965e2aaf604402acbcded91052c6989fee3eead4e931a7a0eb0451093870d732",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/reports/validation_report.json",
+      "target": "projects/industrial-hybrid/reports/validation_report.json",
+      "size": 46094,
+      "sha256": "bec2b8ced9d532583c9e601abc8235627006d728942489edaf6b5a8189507b67",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/requirements-h20.txt",
+      "target": "projects/industrial-hybrid/requirements-h20.txt",
+      "size": 1555,
+      "sha256": "e1c00c252e8ee865018e887c3715e44e82c966b65a15129c9496902e95007339",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/requirements-report.txt",
+      "target": "projects/industrial-hybrid/requirements-report.txt",
+      "size": 90,
+      "sha256": "c899536b0afac63d3da6535de49f4f4bf922ae4713730be8449a69243cebebcc",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/data_preparation_manifest.json",
+      "target": "projects/industrial-hybrid/results/cosine/data_preparation_manifest.json",
+      "size": 16412,
+      "sha256": "406ee387be4daa6e93a71abcfaa6116b0ac3a4dd32e25ef377ede26a98a6a8ca",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/evaluation_metrics.json",
+      "target": "projects/industrial-hybrid/results/cosine/evaluation_metrics.json",
+      "size": 22420,
+      "sha256": "b05f0f65f1ece5f617401d906120e8977e2df6cce8bafd9080bc3595027e0072",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/monitor_metrics.jsonl",
+      "target": "projects/industrial-hybrid/results/cosine/monitor_metrics.jsonl",
+      "size": 2160025,
+      "sha256": "9a730ac951dbb76db14a7025978ba940e18f804cd0ce6044aa79d28de47e6433",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/reporter_revision.json",
+      "target": "projects/industrial-hybrid/results/cosine/reporter_revision.json",
+      "size": 1377,
+      "sha256": "975722dd49990e73f09e9ed3b9523385f49f3c2e879fd15b969058722d6f6c08",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/run_config.json",
+      "target": "projects/industrial-hybrid/results/cosine/run_config.json",
+      "size": 3558,
+      "sha256": "f547fec5ac09be85a9bc62fa4c6ca3cd6c3e8d6f0240e6965e0d4c50f1071959",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/run_status.json",
+      "target": "projects/industrial-hybrid/results/cosine/run_status.json",
+      "size": 12450,
+      "sha256": "1e05eb93fda469cfe67937b4c45c02ffee1953cbe08529efd016b513d64a3d69",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/supervisor_config.json",
+      "target": "projects/industrial-hybrid/results/cosine/supervisor_config.json",
+      "size": 1723,
+      "sha256": "491d1669690a3532592a4a7a6e51447480d8208cf19fb8e159ff6101f6c0df6d",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/results/cosine/training_summary.json",
+      "target": "projects/industrial-hybrid/results/cosine/training_summary.json",
+      "size": 975,
+      "sha256": "c477d83e8cfb2767dfb6824923937f8547c91ce82ac1a440b4f3736ef0a57de4",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rl.py",
+      "target": "projects/industrial-hybrid/rl.py",
+      "size": 13881,
+      "sha256": "ad453d4b606159425f01338c56bc9eaf1fb992a0a771836fc598b3067f4a790f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rqvae_project_report/__init__.py",
+      "target": "projects/industrial-hybrid/rqvae_project_report/__init__.py",
+      "size": 70,
+      "sha256": "860e9507da36789bc3ed301e233bbe8632355eacdc3f5c69d69a0ba2dc078d83",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rqvae_project_report/__main__.py",
+      "target": "projects/industrial-hybrid/rqvae_project_report/__main__.py",
+      "size": 15465,
+      "sha256": "0bfb74f7a4a5d3f0e76b589d0ba07e7328cc4965ad7cdcf68eb4cda5883e43cf",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rqvae_project_report/algorithm.py",
+      "target": "projects/industrial-hybrid/rqvae_project_report/algorithm.py",
+      "size": 17223,
+      "sha256": "f917f44b8c91a985d21d6ef8db31d83b198a6615dffbb4c4eb6476dfbedf3ad9",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rqvae_project_report/style.css",
+      "target": "projects/industrial-hybrid/rqvae_project_report/style.css",
+      "size": 926,
+      "sha256": "f4009b6e0b214ca071e12fa8d8a994e5d446df632155a1f5a4ad7775cebc69d7",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rqvae_project_report/training.py",
+      "target": "projects/industrial-hybrid/rqvae_project_report/training.py",
+      "size": 26961,
+      "sha256": "44ed48ef0a7a0c8726739b1cba0f7f8ed6655a73e924071d97d36bf3a0ee7b36",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/rqvae_project_report/validation.py",
+      "target": "projects/industrial-hybrid/rqvae_project_report/validation.py",
+      "size": 29847,
+      "sha256": "8fa344d230be9b0337e09d4d1e4d2f8d4a72763e7a36e2c8919d8cf53a035af0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sasrec_baseline/__init__.py",
+      "target": "projects/industrial-hybrid/sasrec_baseline/__init__.py",
+      "size": 75,
+      "sha256": "e79ddde4fc22f1637048e406909cb11a4e48d8aa4ba04bc00613acb2e5a6a047",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sasrec_baseline/benchmark.py",
+      "target": "projects/industrial-hybrid/sasrec_baseline/benchmark.py",
+      "size": 11829,
+      "sha256": "323c65dac312e05b97b4526aff9d2d52963f33d5709db9a9a321ab0d5f8dee52",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sasrec_baseline/compare.py",
+      "target": "projects/industrial-hybrid/sasrec_baseline/compare.py",
+      "size": 7344,
+      "sha256": "794873657eccabc62ce26cf4c48479b1a0cc3c2455d67c9cfdd3ab504867977b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sasrec_baseline/data.py",
+      "target": "projects/industrial-hybrid/sasrec_baseline/data.py",
+      "size": 4301,
+      "sha256": "0728936481fdca7d79f6fc3f87a7df25715be4784137f834169076135d23766f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sasrec_baseline/report.py",
+      "target": "projects/industrial-hybrid/sasrec_baseline/report.py",
+      "size": 19973,
+      "sha256": "ad74aa3cd99b8e080d3ac4e6ae35cfd1b50473497207777d85d1802f946e076f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sasrec_baseline/train.py",
+      "target": "projects/industrial-hybrid/sasrec_baseline/train.py",
+      "size": 16157,
+      "sha256": "1dbb9cfee31287c91babc06844550bc4fbd0334e7f71e40ac2ce17b9cb647c8b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/compare_industrial_linear_epochs.py",
+      "target": "projects/industrial-hybrid/scripts/compare_industrial_linear_epochs.py",
+      "size": 19638,
+      "sha256": "11382fab266c553d5c73f10d98a9fcb2cb535e78ac1c1ddc4ee0a3bdac73b388",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/compare_industrial_rl_beta.py",
+      "target": "projects/industrial-hybrid/scripts/compare_industrial_rl_beta.py",
+      "size": 24038,
+      "sha256": "97cd9c4b4298139f25417cf56abcb24ccd6ef930d88d56fcb530f9ad6d518487",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/compare_industrial_title_history.py",
+      "target": "projects/industrial-hybrid/scripts/compare_industrial_title_history.py",
+      "size": 15896,
+      "sha256": "ae195d808738614376f7e1910fb3e54270d70005fcb2e0b4031e61e4a1118bd6",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/deepspeed_zero2_compat.py",
+      "target": "projects/industrial-hybrid/scripts/deepspeed_zero2_compat.py",
+      "size": 3341,
+      "sha256": "d3e1a0ea3e1cf3c644b150e6fe6ef837d29b358d8dff15e939e7d8c0a15f895e",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/evaluate_sft.py",
+      "target": "projects/industrial-hybrid/scripts/evaluate_sft.py",
+      "size": 17285,
+      "sha256": "1403636e64f66aa66a571be3022349311e47827ba6d579445f2161071317f037",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/export_industrial_rqvae.py",
+      "target": "projects/industrial-hybrid/scripts/export_industrial_rqvae.py",
+      "size": 15857,
+      "sha256": "a5309fd11ed0a6f96aecc5a1cc5b8dcdad9113ad0f7bf6bd716d86203f2f24ff",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/industrial_generative_validation.py",
+      "target": "projects/industrial-hybrid/scripts/industrial_generative_validation.py",
+      "size": 17719,
+      "sha256": "95ccd1849e235c869fe24f56490d347a7561faa4f9f3073244573d19f1ec5903",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/industrial_rl_data.py",
+      "target": "projects/industrial-hybrid/scripts/industrial_rl_data.py",
+      "size": 11541,
+      "sha256": "25276e5cc9aaea4af94f71d38a010094ed32a13a2d36d90f7a2fc51d7d41eb24",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/industrial_rl_validation.py",
+      "target": "projects/industrial-hybrid/scripts/industrial_rl_validation.py",
+      "size": 8446,
+      "sha256": "464dd4b8ee310a9b60ddc935ef19f0ab68f84aca4b103d41881b13493017b6c7",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/industrial_rqvae_grpo.py",
+      "target": "projects/industrial-hybrid/scripts/industrial_rqvae_grpo.py",
+      "size": 4704,
+      "sha256": "98788ec9ca54def31cf2dbfbd9cf13618304d3aa9e1d51f682390aa773d06fdc",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/launch_industrial_rqvae_inference.sh",
+      "target": "projects/industrial-hybrid/scripts/launch_industrial_rqvae_inference.sh",
+      "size": 7238,
+      "sha256": "5838354cc951e8d175dec78a689b2ba302aaaf83ae30cbe710a45792146f44a0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/launch_industrial_rqvae_tpot.sh",
+      "target": "projects/industrial-hybrid/scripts/launch_industrial_rqvae_tpot.sh",
+      "size": 2575,
+      "sha256": "5e508bf49db5c4075482986f9254d24941323a562e4b7318bff8447ed077dd83",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/launch_industrial_rqvae_unisrec.sh",
+      "target": "projects/industrial-hybrid/scripts/launch_industrial_rqvae_unisrec.sh",
+      "size": 2672,
+      "sha256": "6a3412543ffed79edfea1f2e9e8573c9736dbfc92c4e68f7ba0ea332ec28449b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/launch_industrial_sasrec_benchmark.sh",
+      "target": "projects/industrial-hybrid/scripts/launch_industrial_sasrec_benchmark.sh",
+      "size": 3092,
+      "sha256": "c799761c1bcc85d6abba59ab7e5f47c0fda55231b80da553e2fa6826afb04fb1",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/launch_industrial_sasrec_training.sh",
+      "target": "projects/industrial-hybrid/scripts/launch_industrial_sasrec_training.sh",
+      "size": 1729,
+      "sha256": "d8410ea846b2f4e715b726a97a658d5d9ef72ed77e622e131b29b2c7f77889d0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/prepare_original_industrial.py",
+      "target": "projects/industrial-hybrid/scripts/prepare_original_industrial.py",
+      "size": 16353,
+      "sha256": "466c118a53d1064a4c8fea9b2eff337624d9e4cea077e6d632ecfaf5bb4fc5dc",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/repair_industrial_rqvae.py",
+      "target": "projects/industrial-hybrid/scripts/repair_industrial_rqvae.py",
+      "size": 5974,
+      "sha256": "58e3cd70f73496e52314fa04299495fab8a9fdba4930525b7d431de1ed6f074f",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/report_industrial_rl.py",
+      "target": "projects/industrial-hybrid/scripts/report_industrial_rl.py",
+      "size": 41114,
+      "sha256": "7b951eb39076bbee6ccf644c8584ad044cb5d7e7340a380736e7b92373ab6a8d",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/report_industrial_rqvae_rerun.py",
+      "target": "projects/industrial-hybrid/scripts/report_industrial_rqvae_rerun.py",
+      "size": 32690,
+      "sha256": "4d2274f98fa86673b514b587ec0d28483d19af30926289cac961861b02ebcc99",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/report_industrial_sft.py",
+      "target": "projects/industrial-hybrid/scripts/report_industrial_sft.py",
+      "size": 33782,
+      "sha256": "329396d8e5698571569bd22c35d0e7ea4afe2581858ba0e0000a3e8f03d2cb18",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/retrain_industrial_unisrec.py",
+      "target": "projects/industrial-hybrid/scripts/retrain_industrial_unisrec.py",
+      "size": 5134,
+      "sha256": "9adbd7b2421aef56153d56ecdf4c982839c9c7e449704f04cd262b9f802a34f2",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/sft_eval_utils.py",
+      "target": "projects/industrial-hybrid/scripts/sft_eval_utils.py",
+      "size": 14835,
+      "sha256": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/scripts/train_industrial_rqvae.py",
+      "target": "projects/industrial-hybrid/scripts/train_industrial_rqvae.py",
+      "size": 13018,
+      "sha256": "d0ee4d64eed007972acf9c3bcfef7a06d994b1ab5d9f2f3d571fc2c5e1bb6882",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sft.py",
+      "target": "projects/industrial-hybrid/sft.py",
+      "size": 42614,
+      "sha256": "a9170d6b6e6395a2b1611f5e585523e34de9f7fcfb3ccd35c5bae9903ac1d7e7",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/sft_monitor.py",
+      "target": "projects/industrial-hybrid/sft_monitor.py",
+      "size": 23877,
+      "sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_deepspeed_zero2_compat.py",
+      "target": "projects/industrial-hybrid/tests/test_deepspeed_zero2_compat.py",
+      "size": 3966,
+      "sha256": "8b57d1721c32d84993449e354f56643cc4d81351c4951c3ee43515b19462eff0",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_hybrid_sweep.py",
+      "target": "projects/industrial-hybrid/tests/test_hybrid_sweep.py",
+      "size": 3685,
+      "sha256": "27fd22cc5c42a58e62d41f9038827519bea21da58c039c7656bd906e8a80d110",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_hybrid_verifier.py",
+      "target": "projects/industrial-hybrid/tests/test_hybrid_verifier.py",
+      "size": 4395,
+      "sha256": "f518b07f455cbf266b6b8ee87ee97053f4e006f7c96d18bf2ec1b38557203054",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_experiment.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_experiment.py",
+      "size": 7253,
+      "sha256": "a7977883bdb1bd8968b1ba23d0e8635733fb12d41299e93245392c249dccd025",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_generative_validation.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_generative_validation.py",
+      "size": 8982,
+      "sha256": "3c3b68f7fdb518f746a54b70ac4f7a281f3b36e80a16d7668e62dcdc2527cc4a",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_reports.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_reports.py",
+      "size": 9040,
+      "sha256": "36f2329423df15a07621a05f653ce760627b5df76c00206491d3e81637d78157",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_rl_beta_comparison.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_rl_beta_comparison.py",
+      "size": 10059,
+      "sha256": "a11f0f30f0cb82774e6dc89fde108672add3df4ba10656a74cf52456e7969078",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_rl_beta_queue.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_rl_beta_queue.py",
+      "size": 6366,
+      "sha256": "c8b5afc898a587ead276737213461cf62402ee412e40e87a542425597b246b59",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_rl_core.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_rl_core.py",
+      "size": 9864,
+      "sha256": "79f32b374b13972a2b77d9c5f25c87c127d8544e786c89d9de2a08187b64c7b8",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_rl_experiment.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_rl_experiment.py",
+      "size": 17013,
+      "sha256": "4ed57118dd11b483ac4e7110f1329c1c055c92afb6bb2f811b95e75e75459015",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_rl_reports.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_rl_reports.py",
+      "size": 26953,
+      "sha256": "69e71de107358ef0f3b4587a3ad09e3db2ffbafda0ea0d790d425d319566ebf3",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_industrial_rl_validation.py",
+      "target": "projects/industrial-hybrid/tests/test_industrial_rl_validation.py",
+      "size": 5860,
+      "sha256": "94331fbdc181a908c8dda94f68db8694bfc38fb27dcb35e4fcce6b36b17ed334",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_linear_epoch_comparison.py",
+      "target": "projects/industrial-hybrid/tests/test_linear_epoch_comparison.py",
+      "size": 12488,
+      "sha256": "0b2f63a191c0a9c6eedafce56ae2b0801d3e4a90d090fb5c5fef5110e6e80566",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_loss_only_reports.py",
+      "target": "projects/industrial-hybrid/tests/test_loss_only_reports.py",
+      "size": 5925,
+      "sha256": "5f8748289851f66b090b9c3fafd38c0bcaef94911dc7836423219b876bda44bc",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_prepare_original_industrial.py",
+      "target": "projects/industrial-hybrid/tests/test_prepare_original_industrial.py",
+      "size": 5722,
+      "sha256": "d786e1fd4b3aa1acbe57145fbbc1078e63c611856d7807bb87b5f568861e3a6b",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_selected_run.py",
+      "target": "projects/industrial-hybrid/tests/test_selected_run.py",
+      "size": 4253,
+      "sha256": "5cd267bac4b539a67163ef5904f8bfdc95731d54d2d36b25cf92be341159cd3e",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_sft_epoch_snapshot.py",
+      "target": "projects/industrial-hybrid/tests/test_sft_epoch_snapshot.py",
+      "size": 9116,
+      "sha256": "ecb9f5ec9427e44e09037542ee05919068173d15b4944c105ec6b098947748ec",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_sft_linear_loss.py",
+      "target": "projects/industrial-hybrid/tests/test_sft_linear_loss.py",
+      "size": 5390,
+      "sha256": "740ea373724aad33dfe30d0310cf28a9595b539e9774724ddd09d74edb5842b4",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_sft_rank_selection.py",
+      "target": "projects/industrial-hybrid/tests/test_sft_rank_selection.py",
+      "size": 7015,
+      "sha256": "cc64335df46bd3086076bfd0975ac84514e5a83544414075372bc7acd354bba4",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_title_history_comparison.py",
+      "target": "projects/industrial-hybrid/tests/test_title_history_comparison.py",
+      "size": 10975,
+      "sha256": "eb83f92054e5a577ecd8e1ad5b06855b7459487b9ac12401ce8f6e33e345c13e",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_title_history_supervisor.py",
+      "target": "projects/industrial-hybrid/tests/test_title_history_supervisor.py",
+      "size": 7727,
+      "sha256": "ffc81d14728b562b3c3181ae9cf791108aa1512b5fac1ee612e403b50f4407ed",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/code/industrial-hybrid-inference/tests/test_title_history_task.py",
+      "target": "projects/industrial-hybrid/tests/test_title_history_task.py",
+      "size": 9207,
+      "sha256": "f3b0a6663bede6dcad16f05195fbf32c454f5e0fb4590d3828753654d9321860",
+      "group": "industrial-hybrid"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/report/Industrial-2018-Algorithm-Training-Validation-2K.zip",
+      "target": "reports/bundles/Industrial-2018-Algorithm-Training-Validation-2K.zip",
+      "size": 2087309,
+      "sha256": "42d3cab41f845b17b42c4f95cba17caa599941defb48cf92d60e0c681d632b44",
+      "group": "report-bundles"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/report/Industrial-2018-RQVAE-Speculative-Recommendation-Report.zip",
+      "target": "reports/bundles/Industrial-2018-RQVAE-Speculative-Recommendation-Report.zip",
+      "size": 1160734,
+      "sha256": "ef706a905897167e0ad1a3a44ba6acbdcc9ade19e422a476ffea40b363c387ca",
+      "group": "report-bundles"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/report/Industrial-2018-RQVAE-Speculative-Recommendation-SASRec-Report.zip",
+      "target": "reports/bundles/Industrial-2018-RQVAE-Speculative-Recommendation-SASRec-Report.zip",
+      "size": 1393431,
+      "sha256": "23e4094aa29010ac963e1f33a3e234e2386fae89749595f41d5e2508abfe0698",
+      "group": "report-bundles"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/report/Industrial-2018-RQVAE-vs-RQKMeans-2K.zip",
+      "target": "reports/bundles/Industrial-2018-RQVAE-vs-RQKMeans-2K.zip",
+      "size": 1372932,
+      "sha256": "31ef1d164252682c3e45efb48a4022d578ff1ee006be2d0221c007de0f2cc544",
+      "group": "report-bundles"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/report/Industrial-Hybrid-Validation-Report.zip",
+      "target": "reports/bundles/Industrial-Hybrid-Validation-Report.zip",
+      "size": 20212778,
+      "sha256": "6b249209ea43ceb24bd028224397c9dd074fc365dc066f920a261cab632d1c17",
+      "group": "report-bundles"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/algorithm.html",
+      "target": "reports/industrial-latest/algorithm.html",
+      "size": 17287,
+      "sha256": "069c223b88342c7f8be428ffc0c6950d7c6fbb3ae2f17b9ddb3bbf9499013e82",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/base.css",
+      "target": "reports/industrial-latest/base.css",
+      "size": 5690,
+      "sha256": "0af405da7a8313345ffa9eabe2f5444948d6a07b55abc9a6128c794c8062a0d2",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/experiment-integrity.json",
+      "target": "reports/industrial-latest/data/experiment-integrity.json",
+      "size": 1396,
+      "sha256": "9c730522bbc0c4813ff9c42fc75f35f81395591d30a4134186aff3a1a7fea907",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-checkpoints.csv",
+      "target": "reports/industrial-latest/data/training-checkpoints.csv",
+      "size": 278,
+      "sha256": "8ef1dcd29d5401dbd54e1794890eb0a7869bc9d5e9a48c313b3607c270c5959b",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-grpo-steps.csv",
+      "target": "reports/industrial-latest/data/training-grpo-steps.csv",
+      "size": 137003,
+      "sha256": "271680e6e07a09e7ce788e90b6f93bee208989e86d6dbec4e35a51c2c7ce642e",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-grpo-validation.csv",
+      "target": "reports/industrial-latest/data/training-grpo-validation.csv",
+      "size": 246,
+      "sha256": "0cb9ced977c599f654adfba8401ad59e321d2250fc922fce8b1a3ea8489f2de4",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-history.csv",
+      "target": "reports/industrial-latest/data/training-history.csv",
+      "size": 1032,
+      "sha256": "f7dbadab05602ad85ae3697d8f638de2ced549fd2aa06c811adcc8996730bccf",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-rqvae-codes.csv",
+      "target": "reports/industrial-latest/data/training-rqvae-codes.csv",
+      "size": 493,
+      "sha256": "fe620332491a32694f58134eb89b12d7d9c731295afb5bc14c820d7cc6f10305",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-rqvae-epochs.csv",
+      "target": "reports/industrial-latest/data/training-rqvae-epochs.csv",
+      "size": 209932,
+      "sha256": "66f59043e6109d260222c8eeb4ab2dbbb399bbabaaa9ac41a4f1bf2aaf7f2f85",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-rqvae-validation.csv",
+      "target": "reports/industrial-latest/data/training-rqvae-validation.csv",
+      "size": 4298,
+      "sha256": "ce9b43d2f333083532dc030c733a38533a916033cfe5c1ac2a6e275bcf8e0e15",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-sft.csv",
+      "target": "reports/industrial-latest/data/training-sft.csv",
+      "size": 451632,
+      "sha256": "942227970057705a718dbce473014fc83030f886e90338657c100fa917eb1b0e",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/training-unisrec.csv",
+      "target": "reports/industrial-latest/data/training-unisrec.csv",
+      "size": 698,
+      "sha256": "d3677adbc0b13e4b9bab139a2e463a8b0d1e8089316e73853132d684621ba8b5",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-batch-audit.json",
+      "target": "reports/industrial-latest/data/validation-batch-audit.json",
+      "size": 16084,
+      "sha256": "45bd4f8fd35e53d0b00dc315e8059a1baa45bd63c613cb80cb1abf317d3afb04",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-beam-token-latency.json",
+      "target": "reports/industrial-latest/data/validation-beam-token-latency.json",
+      "size": 167299,
+      "sha256": "dadf4d985a1b05d5f9174c69c58b40a9dab119b03b7f81861ddf13577dbd60d3",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-generation.csv",
+      "target": "reports/industrial-latest/data/validation-generation.csv",
+      "size": 597,
+      "sha256": "74a80a8747b1856adaca925e47a09d56e67d58566630cae96be957da5ab0f044",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-performance-details.json",
+      "target": "reports/industrial-latest/data/validation-performance-details.json",
+      "size": 9063,
+      "sha256": "aaaacc5e1a8a72c454e398c74ad92b5e96f86fcfa242884d9f9b98646b5b7db8",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-performance.csv",
+      "target": "reports/industrial-latest/data/validation-performance.csv",
+      "size": 3015,
+      "sha256": "cf7e7705f9074187c5fad6c6e9c720002b1411e445428a02d4129cdee1ebf4d3",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-prefix-sample.csv",
+      "target": "reports/industrial-latest/data/validation-prefix-sample.csv",
+      "size": 2269,
+      "sha256": "25db20a17af09ea9967b074670c3e057cf7fc75654b99438dae0bbc6665d0a4c",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-quality.csv",
+      "target": "reports/industrial-latest/data/validation-quality.csv",
+      "size": 3069,
+      "sha256": "0bfc6ab82b8f0dda95c6f608c846d67a892c5f662cc56d92751fadc57e625497",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-selected-metrics.csv",
+      "target": "reports/industrial-latest/data/validation-selected-metrics.csv",
+      "size": 1995,
+      "sha256": "3e6702d3b14593ada3d2b1f970a6957e8ec3cabf791e2bc8a815ce5b304b0246",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/data/validation-sid-audit.json",
+      "target": "reports/industrial-latest/data/validation-sid-audit.json",
+      "size": 985,
+      "sha256": "a2ec8c4516a953369b52a5cdea61d7b324847d1521b1d22ce36a45f9c82de295",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/algorithm-flow-mobile.svg",
+      "target": "reports/industrial-latest/figures/algorithm-flow-mobile.svg",
+      "size": 3237,
+      "sha256": "c7d475f0c6c7c7945b57422fcd09d0797d754fbd0f3e1ff3120eb84714bd3d1d",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-grpo-mobile.png",
+      "target": "reports/industrial-latest/figures/training-grpo-mobile.png",
+      "size": 255391,
+      "sha256": "01fc1c95c57186853ba189b43c633807a73cab5d15e0d60b6e464273eb132c28",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-grpo.png",
+      "target": "reports/industrial-latest/figures/training-grpo.png",
+      "size": 218187,
+      "sha256": "6907b9812af4b45160dee8237753b001bfefe92e3e4e24767501deba1c1bee19",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-history-mobile.png",
+      "target": "reports/industrial-latest/figures/training-history-mobile.png",
+      "size": 56902,
+      "sha256": "114f9fd9ad6a567f5d2d64b8e23f1ce10b41b7710203f4da99d1df411a43c9d4",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-history.png",
+      "target": "reports/industrial-latest/figures/training-history.png",
+      "size": 79594,
+      "sha256": "9ead4add24c06443ba1a57d21ec284f3a3c76b4b8072b6a96d80ef933e353b59",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-rqvae-mobile.png",
+      "target": "reports/industrial-latest/figures/training-rqvae-mobile.png",
+      "size": 76811,
+      "sha256": "fc81ad6ac6c4cfcc047bbfcf4ab9a6506081ed726444b23d7d173e0d61e9285e",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-rqvae.png",
+      "target": "reports/industrial-latest/figures/training-rqvae.png",
+      "size": 82194,
+      "sha256": "8a174c311c80331eeac0cde1a4688f17f49acb9843287653a53e107d33d660d9",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-sft-mobile.png",
+      "target": "reports/industrial-latest/figures/training-sft-mobile.png",
+      "size": 87001,
+      "sha256": "46dd80e01708870a42cdd2ecbe6c0f6b042ad13e8fa26d7eb1f387d00b813e0e",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-sft.png",
+      "target": "reports/industrial-latest/figures/training-sft.png",
+      "size": 77808,
+      "sha256": "38f88b027e4dbaa83469696c962da580a18c3a4db46d3f0bfa2b699820233ac6",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-unisrec-mobile.png",
+      "target": "reports/industrial-latest/figures/training-unisrec-mobile.png",
+      "size": 68484,
+      "sha256": "a204ffb8cd3ec0a62493f37bc58fa9518b65cff425ad6c186332a62e71e44d4c",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/training-unisrec.png",
+      "target": "reports/industrial-latest/figures/training-unisrec.png",
+      "size": 74073,
+      "sha256": "f0743086193b3d14fd419646936a0e23d91e7c161485adcf95e09d3dc1956d66",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/validation-latency-mobile.png",
+      "target": "reports/industrial-latest/figures/validation-latency-mobile.png",
+      "size": 81720,
+      "sha256": "310473e12a2cb08466a5346ad91df4734f1ceb55584009f9582466ecff23f200",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/validation-latency.png",
+      "target": "reports/industrial-latest/figures/validation-latency.png",
+      "size": 82810,
+      "sha256": "49624a8645f9fc947588f33fd94df3abd121fac4bafeb0b480ce97cc4765b62d",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/validation-quality-mobile.png",
+      "target": "reports/industrial-latest/figures/validation-quality-mobile.png",
+      "size": 109878,
+      "sha256": "bbc4a05be9982ac20be781d6cce33db811f8fe0bb1886808020bd968e5e748dc",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/validation-quality.png",
+      "target": "reports/industrial-latest/figures/validation-quality.png",
+      "size": 110044,
+      "sha256": "eb15c07bb7daf0da3d220ea0b8d2186e73c99e5f33ffcbec635bd4ce066eb89c",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/validation-sid-mobile.png",
+      "target": "reports/industrial-latest/figures/validation-sid-mobile.png",
+      "size": 55486,
+      "sha256": "b279f34219e5568824c83f0d662508ceea2c4e0d5a56d5f5e4819626afd31d96",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/figures/validation-sid.png",
+      "target": "reports/industrial-latest/figures/validation-sid.png",
+      "size": 53389,
+      "sha256": "afa1e5327465cb624e22212c427d52db82d5caf9ff95a13ebc119da42d71e617",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/index.html",
+      "target": "reports/industrial-latest/index.html",
+      "size": 3356,
+      "sha256": "e6d8bbe1aaab919c09405261596a6c5f9268a8b4fa208c15bbd0844d55010303",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/style.css",
+      "target": "reports/industrial-latest/style.css",
+      "size": 2161,
+      "sha256": "08e9041df711e2d527c3239e40f00bbc22d2f8f57f2687a0fd495d96023b3dcb",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/training.html",
+      "target": "reports/industrial-latest/training.html",
+      "size": 17160,
+      "sha256": "37909f5f23879edc3ee66c90bdee1276861d73f3f7f7da702e0b8be2760b30b3",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/Industrial-2018-RQVAE-Speculative-Recommendation-Report/validation.html",
+      "target": "reports/industrial-latest/validation.html",
+      "size": 26840,
+      "sha256": "b9f152c1884e6334aad937ca95b0a41bb143e843ef18ea96e26a19760a7c676f",
+      "group": "industrial-latest"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/.dockerignore",
+      "target": "projects/legacy-2018/.dockerignore",
+      "size": 279,
+      "sha256": "1aa3b29a07ff6acf0e6f6da38255507bb0407e003dd90557ad1b3edd2239c570",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/.gitattributes",
+      "target": "projects/legacy-2018/.gitattributes",
+      "size": 37,
+      "sha256": "271ce0c3ed8f15953f4f111f3cd3e77f8da21d49f4f736ca68c887c713039eb2",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/LICENSE",
+      "target": "projects/legacy-2018/LICENSE",
+      "size": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/LogitProcessor.py",
+      "target": "projects/legacy-2018/LogitProcessor.py",
+      "size": 4435,
+      "sha256": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/README.md",
+      "target": "projects/legacy-2018/README.md",
+      "size": 21152,
+      "sha256": "1be4c329227c1123906e5aba308194519bf7d09724956c803a4586af47cb45dd",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/SASRecModules_ori.py",
+      "target": "projects/legacy-2018/SASRecModules_ori.py",
+      "size": 3925,
+      "sha256": "1e88d9eb535f81106fbc592213385c1f4f0b9325116c988d0983e7025ab03c14",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/calc.py",
+      "target": "projects/legacy-2018/calc.py",
+      "size": 2790,
+      "sha256": "761e0b6e0d4deeb25c2b6eb57fae9034d65e0cb6febd3bfbdd4234f481922a76",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/convert_dataset.py",
+      "target": "projects/legacy-2018/convert_dataset.py",
+      "size": 11393,
+      "sha256": "ef96b0692c80ba049a80c4ae7a8a405c63be077b133ea58af46649668dd351f1",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/convert_dataset.sh",
+      "target": "projects/legacy-2018/convert_dataset.sh",
+      "size": 467,
+      "sha256": "c743cca419c44f9657492dc8b7187c1a19369c08e389db5200decbe99195644b",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/convert_dataset_gpr.py",
+      "target": "projects/legacy-2018/convert_dataset_gpr.py",
+      "size": 11695,
+      "sha256": "a7a4437d259b89504c648d0f0f620c39692745d4944239dcd68df7bfc69a4387",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data.py",
+      "target": "projects/legacy-2018/data.py",
+      "size": 76760,
+      "sha256": "fffd7e7e5bb5555693be0332795717bec1eaf037a01d8291af6335a14baa579d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data_test.py",
+      "target": "projects/legacy-2018/data_test.py",
+      "size": 10554,
+      "sha256": "a244985949662819ae1bd4ba953263a36fef6012ea5b6e1e52898b410f3ca2fe",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/evaluate.py",
+      "target": "projects/legacy-2018/evaluate.py",
+      "size": 8060,
+      "sha256": "820e93c0639a589b851fed95e145a82e1faec10e787f3dd0c2294ea4d4fee1e5",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/evaluate.sh",
+      "target": "projects/legacy-2018/evaluate.sh",
+      "size": 3565,
+      "sha256": "e624a8ec0bb7ce543dd4e8481db494d1fb5b4feb474e836a3fb7968ca88d843b",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/merge.py",
+      "target": "projects/legacy-2018/merge.py",
+      "size": 488,
+      "sha256": "fc0b5e1751912f99c0bd046ff583a8ca3562b058a08bd6e212db8f9f3b2155ac",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/minionerec_trainer.py",
+      "target": "projects/legacy-2018/minionerec_trainer.py",
+      "size": 62411,
+      "sha256": "ede9db2f42a24b3a60d5a6a3e13b9b01f5b2e13b300fdc9d3d8ab7e46b548bce",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/npu_support.py",
+      "target": "projects/legacy-2018/npu_support.py",
+      "size": 1497,
+      "sha256": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/requirements-h20.txt",
+      "target": "projects/legacy-2018/requirements-h20.txt",
+      "size": 1555,
+      "sha256": "e1c00c252e8ee865018e887c3715e44e82c966b65a15129c9496902e95007339",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/requirements-npu.txt",
+      "target": "projects/legacy-2018/requirements-npu.txt",
+      "size": 2722,
+      "sha256": "7863587416495dcee033d37af6e1b2a1c955913fe84c78b3cd67705e51ebb578",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/requirements-report.txt",
+      "target": "projects/legacy-2018/requirements-report.txt",
+      "size": 90,
+      "sha256": "c899536b0afac63d3da6535de49f4f4bf922ae4713730be8449a69243cebebcc",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/requirements-windows.txt",
+      "target": "projects/legacy-2018/requirements-windows.txt",
+      "size": 2390,
+      "sha256": "ff92ec068fb1174626db6d30f2c938da392a6277d12b4e83fdabf40f2a3a228c",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/requirements.txt",
+      "target": "projects/legacy-2018/requirements.txt",
+      "size": 2933,
+      "sha256": "72cfe05f4e6f60cb5b5ea59b8e22951e54d05400d05dc7a4b714f790057696e7",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rl.py",
+      "target": "projects/legacy-2018/rl.py",
+      "size": 14473,
+      "sha256": "a752cc6d9ce1e0c3fe1985a18c4b7d977ccecf1296a8127ba07a68bbcb3836f6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rl.sh",
+      "target": "projects/legacy-2018/rl.sh",
+      "size": 168,
+      "sha256": "79c2af824677524e2ef2b550285f6528928c37d4120c10fdf548a25604a56da0",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rl_gpr.py",
+      "target": "projects/legacy-2018/rl_gpr.py",
+      "size": 14530,
+      "sha256": "ac15e5b66a2898931f4fa12dbb03579a00195a074414f79e95c30c67b6bd71fb",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sasrec.py",
+      "target": "projects/legacy-2018/sasrec.py",
+      "size": 28246,
+      "sha256": "6c1d206f74a0fa6f8c0f102aa9e8c13b5912e9c0774074a73c8b0c2ccf5cdb52",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sft.py",
+      "target": "projects/legacy-2018/sft.py",
+      "size": 21669,
+      "sha256": "ed6349b3570d1c4ea200914a9c8c1353a79f50c0c41874282bd40cbb3297a12d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sft.sh",
+      "target": "projects/legacy-2018/sft.sh",
+      "size": 169,
+      "sha256": "b9217d1670b548a16685404ef1210d238ab906b06309b1dea1dfd4241f97c6b5",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sft_gpr.py",
+      "target": "projects/legacy-2018/sft_gpr.py",
+      "size": 14775,
+      "sha256": "d384f2c5840b26d9b8398c950d9479fa03a6c9647de6bec14bb04b49990658ca",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sft_monitor.py",
+      "target": "projects/legacy-2018/sft_monitor.py",
+      "size": 23877,
+      "sha256": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/split.py",
+      "target": "projects/legacy-2018/split.py",
+      "size": 660,
+      "sha256": "e7a771e58256bb396933fb35401e9e9f7c9fc73c6aad6d5b5ce8d2acd496284a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/ts_rec_data.py",
+      "target": "projects/legacy-2018/ts_rec_data.py",
+      "size": 24381,
+      "sha256": "61d054dda8c29d7528e5f46137161f51e63fea261127dffc98dd8ac37df3b83d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/ts_rec_sft.py",
+      "target": "projects/legacy-2018/ts_rec_sft.py",
+      "size": 12633,
+      "sha256": "d9f5bf09872b8f2d772c409f0791f6e46c81c03247f1843079dbbdd4c98436ad",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/ts_rec_sft.sh",
+      "target": "projects/legacy-2018/ts_rec_sft.sh",
+      "size": 1385,
+      "sha256": "4cb36647b05068b9e91dad620efe7b98ed2d9c8027c37bc92590668b24392cca",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/utility.py",
+      "target": "projects/legacy-2018/utility.py",
+      "size": 6385,
+      "sha256": "72a8218e2f2ef22ae581f337870b4581df8715783f1d2221897fe7db17831c85",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/analyze_sft_behavior_shift.py",
+      "target": "projects/legacy-2018/scripts/analyze_sft_behavior_shift.py",
+      "size": 21064,
+      "sha256": "9dcbe12f3956d63025f8eabe8054d29eacdfd542cfe07a505ee2f1a4ed94f7aa",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/build_sft_baselines.py",
+      "target": "projects/legacy-2018/scripts/build_sft_baselines.py",
+      "size": 8575,
+      "sha256": "b3cd387c7b3e08634366aae8d144619853335cd9db7aa4e3b8e854ddc254623a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/compare_industrial_reproductions.py",
+      "target": "projects/legacy-2018/scripts/compare_industrial_reproductions.py",
+      "size": 20651,
+      "sha256": "a775da2982e59e453658d8c7e371ca2382d7c86020c72ae3f47ca10a1f50de5a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/diagnose_constraint_tokens.py",
+      "target": "projects/legacy-2018/scripts/diagnose_constraint_tokens.py",
+      "size": 5448,
+      "sha256": "5104a9b2dbbc0ba15fb41afb5b7feea805111c6197d6be49ee0f5e6130722b97",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/evaluate_sft.py",
+      "target": "projects/legacy-2018/scripts/evaluate_sft.py",
+      "size": 17623,
+      "sha256": "f99ed5c52c0965e007ca34de688a780e16e5b51f1ccf4077184b78018b8b222a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/evaluate_sft_content_baseline.py",
+      "target": "projects/legacy-2018/scripts/evaluate_sft_content_baseline.py",
+      "size": 18599,
+      "sha256": "8e9a2e0f7725f30903f74c68e305172412ad0a5c5292d870ff4d74de443ef3ff",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/launch_h20.py",
+      "target": "projects/legacy-2018/scripts/launch_h20.py",
+      "size": 16327,
+      "sha256": "e557f4988060f3204ba5ee0cb6c0976c4e6df04103fe6d317111505c8907c708",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/prepare_original_industrial.py",
+      "target": "projects/legacy-2018/scripts/prepare_original_industrial.py",
+      "size": 16253,
+      "sha256": "9fb825d01622c45dbf3efc26db1b7daf2ff5d1b211e7c903dbe47f9dde84667f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/prepare_video_games_posttraining.py",
+      "target": "projects/legacy-2018/scripts/prepare_video_games_posttraining.py",
+      "size": 10595,
+      "sha256": "bc810711539d53dbfeac0f7fc40c795e3fc971dc090c6213929ba0ffe3e276d7",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/report_industrial_sft.py",
+      "target": "projects/legacy-2018/scripts/report_industrial_sft.py",
+      "size": 29930,
+      "sha256": "92e1df84f2a1e22c9ae4a745339733a2f0e7f1d83022250d80777a12a6f186ab",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/report_sft.py",
+      "target": "projects/legacy-2018/scripts/report_sft.py",
+      "size": 85281,
+      "sha256": "e1a5453add12ffbf5eb8264c8b043274a6ec64d3c4c8fe3cdf530c27ea145929",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/sft_eval_utils.py",
+      "target": "projects/legacy-2018/scripts/sft_eval_utils.py",
+      "size": 17690,
+      "sha256": "112783d63d0bdeccb4e66aa8e21ebe3b1a23bbb9c7b31ed3181cc2fb4dea18fb",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/sft_generative_selection.py",
+      "target": "projects/legacy-2018/scripts/sft_generative_selection.py",
+      "size": 27815,
+      "sha256": "60959eff55f3991604650b8385a6a8f435cae020b66280562dbd1a7319cc7a42",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/scripts/sft_wsd_schedule.py",
+      "target": "projects/legacy-2018/scripts/sft_wsd_schedule.py",
+      "size": 6311,
+      "sha256": "3056f89be318404d9be3d0691d71ea6d1f2cecb54e9ad7e59ae89bdbba23a4fc",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/Dockerfile.h20",
+      "target": "projects/legacy-2018/docker/Dockerfile.h20",
+      "size": 2351,
+      "sha256": "ffb6dfd278d7cc33958caae062d67cd6714dcbf46d4cf2679b8c89b022c87743",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/Dockerfile.original-torch28",
+      "target": "projects/legacy-2018/docker/Dockerfile.original-torch28",
+      "size": 1085,
+      "sha256": "5b53650bddb575a682852b7ea79e2fe67ab3fe141b36ee73602ca5ebc6f3f510",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/__init__.py",
+      "target": "projects/legacy-2018/docker/__init__.py",
+      "size": 63,
+      "sha256": "dbfdea256821fa8dde2ab77f30f5dd7d4db960b1b92022f21d9551f3e10dbc41",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/check_env.py",
+      "target": "projects/legacy-2018/docker/check_env.py",
+      "size": 1242,
+      "sha256": "29a0f2001fb7696b2cd9bebdee76efb3177c9bb477f0b4c0d20c8519201acd17",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/check_original_torch28.py",
+      "target": "projects/legacy-2018/docker/check_original_torch28.py",
+      "size": 5152,
+      "sha256": "a5f403773bae26d4bbd47297048dcc3f740fbcdfead3d3bc20b83894fe26d001",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/download_model.py",
+      "target": "projects/legacy-2018/docker/download_model.py",
+      "size": 846,
+      "sha256": "01797a87340ed72985eaf48abd83dff42a39aa025324b8edffbdbb22fb184c3f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/entrypoint.sh",
+      "target": "projects/legacy-2018/docker/entrypoint.sh",
+      "size": 1826,
+      "sha256": "38439b2d9e66dc457adc4b3ac0ee69e143fec3b4da321fa0b9536a2769033f12",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/industrial_experiment.py",
+      "target": "projects/legacy-2018/docker/industrial_experiment.py",
+      "size": 21517,
+      "sha256": "b61e137e4b2bfae8389287aef387660326e7b59d9d5fe0f707d3bb6d6b6f3a7d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/run_copy.py",
+      "target": "projects/legacy-2018/docker/run_copy.py",
+      "size": 12234,
+      "sha256": "0f6a3c9d99f380a7edea8c7679299175c799c1b1dd2a162cc8c7fe47385d0097",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/run_h20.sh",
+      "target": "projects/legacy-2018/docker/run_h20.sh",
+      "size": 2001,
+      "sha256": "08c25597f0b433f2923441b363ffc1f6b9147ade7e2003acc966b8128e65f20a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/sft_experiment.py",
+      "target": "projects/legacy-2018/docker/sft_experiment.py",
+      "size": 18515,
+      "sha256": "36587dff645e95d9c2434f1810bfca07b16f3d89a0d9661555b899eee87b197b",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/smoke_distributed.py",
+      "target": "projects/legacy-2018/docker/smoke_distributed.py",
+      "size": 10848,
+      "sha256": "f72b78d4bc8e853c7e7d56882d2e59fa9c1cb3507d2a8e3c88c61334e7f300c7",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/smoke_sft_monitor.py",
+      "target": "projects/legacy-2018/docker/smoke_sft_monitor.py",
+      "size": 7530,
+      "sha256": "9d89dc436b605e92a41b73bbbef542c4275783fd0f4b5e4d2813b6a8489c0d52",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docker/smoke_training.py",
+      "target": "projects/legacy-2018/docker/smoke_training.py",
+      "size": 9738,
+      "sha256": "9e2aee78365fe38480a8e14cc4f83f723c1e53bfcf73f17b394227b797ed31d1",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/config/h20_4gpu.yaml",
+      "target": "projects/legacy-2018/config/h20_4gpu.yaml",
+      "size": 270,
+      "sha256": "c0236350c012a14cf6d6a31ddc1cd7c3455e405ba16f63877aa4d18e02beb72c",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/config/h20_zero2.json",
+      "target": "projects/legacy-2018/config/h20_zero2.json",
+      "size": 493,
+      "sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/config/minionerec_paper_reference.json",
+      "target": "projects/legacy-2018/config/minionerec_paper_reference.json",
+      "size": 3026,
+      "sha256": "e5a7a83118712a17f0804bbdd2dccc1df01f4046bceacf0a509924df458f312f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/config/zero2_opt.yaml",
+      "target": "projects/legacy-2018/config/zero2_opt.yaml",
+      "size": 502,
+      "sha256": "ba7d09b3d70738646d78482c4c535171c6ec2dfa6e6d4b60854ab149bed0e87f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/docs/H20_POSTTRAINING.md",
+      "target": "projects/legacy-2018/docs/H20_POSTTRAINING.md",
+      "size": 16240,
+      "sha256": "0e7f8011760a2167eaf74191c1f722a89d9e9b694ae334202e360861509704b4",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/__init__.py",
+      "target": "projects/legacy-2018/tests/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_calc_metrics.py",
+      "target": "projects/legacy-2018/tests/test_calc_metrics.py",
+      "size": 3450,
+      "sha256": "a63e7c4a1d838027f21bfa54701ebee01f17454eb450f64c2ea6ca780014f8f9",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_constrained_decoding.py",
+      "target": "projects/legacy-2018/tests/test_constrained_decoding.py",
+      "size": 11216,
+      "sha256": "1b9409f631b9ad6f75792904c72bd9e2b79f11bc8b054021bec124fd96b28063",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_flash_sid_export.py",
+      "target": "projects/legacy-2018/tests/test_flash_sid_export.py",
+      "size": 5744,
+      "sha256": "39c26fe3296590c1025de1c0d626c4fefa6bf772c87d182391ebbbb92ef5c63d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_flash_sid_integration.py",
+      "target": "projects/legacy-2018/tests/test_flash_sid_integration.py",
+      "size": 2823,
+      "sha256": "66d591b1b08e85c73019eabc3192d1c2aa6e8fa40806ee0f97c004973531f1a3",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_flash_sid_simhash.py",
+      "target": "projects/legacy-2018/tests/test_flash_sid_simhash.py",
+      "size": 10728,
+      "sha256": "377d487fc5a6b7598639818502895a0a14f6d01a6608ee69079e9527c51d7f90",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_h20_docker.py",
+      "target": "projects/legacy-2018/tests/test_h20_docker.py",
+      "size": 10475,
+      "sha256": "db0bd042763db505259c0817d03f06f89604a7219f0e385d0e7bb740bc124cdd",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_h20_docker_copy.py",
+      "target": "projects/legacy-2018/tests/test_h20_docker_copy.py",
+      "size": 10243,
+      "sha256": "35a2eaaefd4de951a4173ad708ba44d87b8d2cc214daa40abe3e0e6fed6c24b1",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_h20_launch.py",
+      "target": "projects/legacy-2018/tests/test_h20_launch.py",
+      "size": 9614,
+      "sha256": "aa3177f957d2621143344290ab2a185b02ca296343e6c337bee4bcb6356a3e69",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_industrial_experiment.py",
+      "target": "projects/legacy-2018/tests/test_industrial_experiment.py",
+      "size": 4860,
+      "sha256": "3f0a23bb5df55e1406ab922d8b094e1a07db7eb7ccd5230754a487f2e6f65178",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_industrial_reports.py",
+      "target": "projects/legacy-2018/tests/test_industrial_reports.py",
+      "size": 15419,
+      "sha256": "14243126d75eb555b04de1716bc7b70732040fd470e46603766b3240743c54f3",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_prepare_original_industrial.py",
+      "target": "projects/legacy-2018/tests/test_prepare_original_industrial.py",
+      "size": 5722,
+      "sha256": "d786e1fd4b3aa1acbe57145fbbc1078e63c611856d7807bb87b5f568861e3a6b",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_prepare_video_games_posttraining.py",
+      "target": "projects/legacy-2018/tests/test_prepare_video_games_posttraining.py",
+      "size": 6581,
+      "sha256": "132ea64d065be13536e775d8832a8c80b1df312b243e6a1ed64d62ddeccbf445",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_rl_distributed.py",
+      "target": "projects/legacy-2018/tests/test_rl_distributed.py",
+      "size": 11484,
+      "sha256": "09716bbbc9713734b1c6e5f32c42b13df2c10e05666a4cd656d7786a3de9bc37",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_baselines.py",
+      "target": "projects/legacy-2018/tests/test_sft_baselines.py",
+      "size": 4983,
+      "sha256": "190035c6e7336d6369b18c315614f06ba3d6655d236d789625175cf14b450ebd",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_behavior_shift.py",
+      "target": "projects/legacy-2018/tests/test_sft_behavior_shift.py",
+      "size": 12295,
+      "sha256": "39149e191f2b83a01f8d854aeac9f5918e8d6f5c16c27e51536950957a5cc6f6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_content_baseline.py",
+      "target": "projects/legacy-2018/tests/test_sft_content_baseline.py",
+      "size": 7368,
+      "sha256": "a85882debb7d12e70fe2fb2791f5a8524e1eae465b1993dda4e000f3b6fb8f9e",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_distributed.py",
+      "target": "projects/legacy-2018/tests/test_sft_distributed.py",
+      "size": 15475,
+      "sha256": "e23c206d526a7965021e73ac09e75382e086179bb9d210cb04d9290a67f99be8",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_evaluation.py",
+      "target": "projects/legacy-2018/tests/test_sft_evaluation.py",
+      "size": 24263,
+      "sha256": "ead7e39cd3bb4e4d5817c784fff89a83ef33538c5365af3d199b1ab5da2eadf6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_generative_selection.py",
+      "target": "projects/legacy-2018/tests/test_sft_generative_selection.py",
+      "size": 14190,
+      "sha256": "113ff65498180efc253eaaced276a10565a9b9469c7349ad5ef79c67a3fc7fe2",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_monitor.py",
+      "target": "projects/legacy-2018/tests/test_sft_monitor.py",
+      "size": 17646,
+      "sha256": "7aed921231b9e6820e122ced3b31b06ae8faf3a7b8537c24599ef2af2787009a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_reports.py",
+      "target": "projects/legacy-2018/tests/test_sft_reports.py",
+      "size": 28803,
+      "sha256": "cb219daf359a6a53efddba50d78d29079e9dbd6c3d7cf0752f7d0b3c1abdeab8",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_supervisor.py",
+      "target": "projects/legacy-2018/tests/test_sft_supervisor.py",
+      "size": 9156,
+      "sha256": "ca2917fb8d30c3359dcf405586b6b06a3a1b3e8d7dd6a5f64840876f3a7dea5a",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/tests/test_sft_wsd_schedule.py",
+      "target": "projects/legacy-2018/tests/test_sft_wsd_schedule.py",
+      "size": 7960,
+      "sha256": "23a60114948eac7c795bd0d64e714a80724fd3526d0bdea31d514e67b4b26a03",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/FLASH_SID.md",
+      "target": "projects/legacy-2018/rq/FLASH_SID.md",
+      "size": 6607,
+      "sha256": "93f672a6f7e93d19220a949a1359abd0ac4d7dc38b67b49b20bc32daefab457e",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/datasets.py",
+      "target": "projects/legacy-2018/rq/datasets.py",
+      "size": 1391,
+      "sha256": "a0b321b7fed21afcc43f425aa69771929c000fa109ed653b2c8ca0b5e5a7c228",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/export_video_games_sid.py",
+      "target": "projects/legacy-2018/rq/export_video_games_sid.py",
+      "size": 20544,
+      "sha256": "ce26c7392cfea974b0ba3525989cde871f1f7cbb25592d0f71b42b067d38723f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/flash_sid/__init__.py",
+      "target": "projects/legacy-2018/rq/flash_sid/__init__.py",
+      "size": 135,
+      "sha256": "56cfbdcdb9cdd173f93bd38cd6db963da5cab863aeaabd4858d4877afcc5dfd0",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/flash_sid/__main__.py",
+      "target": "projects/legacy-2018/rq/flash_sid/__main__.py",
+      "size": 51,
+      "sha256": "482b8693e2fe6dbd732e3d7961e03827d3efa187bad11d29da188be580ebbeea",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/flash_sid/cli.py",
+      "target": "projects/legacy-2018/rq/flash_sid/cli.py",
+      "size": 7721,
+      "sha256": "178b3f33dadc846ddb18ee7c3cb16ef815b5d11ca0907df87d6ab33070c836bd",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/flash_sid/export.py",
+      "target": "projects/legacy-2018/rq/flash_sid/export.py",
+      "size": 5158,
+      "sha256": "ca04caef93e5271c4b0d8339066740aff2f2e46a9e884f1ba54383ccbd523a34",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/flash_sid/simhash.py",
+      "target": "projects/legacy-2018/rq/flash_sid/simhash.py",
+      "size": 9053,
+      "sha256": "73e1a59fe44bd84d30106754d0e488749f45d6fb1c49db15a6e2678f88dc4f0b",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/generate_indices.py",
+      "target": "projects/legacy-2018/rq/generate_indices.py",
+      "size": 10334,
+      "sha256": "89586ac11d55a5f98e52910c14eaac66eddd57958cc7da7173eb7f3d7626f66c",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/generate_indices_flash.py",
+      "target": "projects/legacy-2018/rq/generate_indices_flash.py",
+      "size": 236,
+      "sha256": "37a91d88ffab5d9a88f1dca8dfa54936b4b0a0f938b793e0afe297cc7503b213",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/generate_indices_plus.py",
+      "target": "projects/legacy-2018/rq/generate_indices_plus.py",
+      "size": 6254,
+      "sha256": "bf0ec517c58c858f89989bd09fa971d4e40be75e76e9cea9fcdba9f135a88543",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/generate_indices_plus.sh",
+      "target": "projects/legacy-2018/rq/generate_indices_plus.sh",
+      "size": 289,
+      "sha256": "c3c4cf38569c821d305ea02089d6a9d5cee4cfe735c0b5d528d249cbe18f7305",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/models/generate_indices.py",
+      "target": "projects/legacy-2018/rq/models/generate_indices.py",
+      "size": 4318,
+      "sha256": "97c1fd2b425daec988faef8e163aae8dfed65b2c97c500ee667b4eafa3f2987f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/models/layers.py",
+      "target": "projects/legacy-2018/rq/models/layers.py",
+      "size": 3583,
+      "sha256": "aebb741c24d5d9f86f4aafe8239df3b781a29f95df87de3d5f1c757b684d2eb5",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/models/rq.py",
+      "target": "projects/legacy-2018/rq/models/rq.py",
+      "size": 2073,
+      "sha256": "09aa3e4f8e2a56e3c7139c388c08e3f6b4ac3729e7e79df9de1e8ae0eb896499",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/models/rqvae.py",
+      "target": "projects/legacy-2018/rq/models/rqvae.py",
+      "size": 2986,
+      "sha256": "7f6c9fc94f00f1b329108e0eb703f502a63ba47523c01662c9e4309e1ac72b1e",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/models/vq.py",
+      "target": "projects/legacy-2018/rq/models/vq.py",
+      "size": 3197,
+      "sha256": "f3b51df17a552fba612e64736159dbe6d2d0cf5a4496c2d52b8106d446ee2683",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqkmeans_constrained.py",
+      "target": "projects/legacy-2018/rq/rqkmeans_constrained.py",
+      "size": 10109,
+      "sha256": "db749ca2f5f07827f3d56841b85d7dfe0ba439dbc3bce14c9a8c45c8c0a62222",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqkmeans_constrained.sh",
+      "target": "projects/legacy-2018/rq/rqkmeans_constrained.sh",
+      "size": 779,
+      "sha256": "a3683c517db610e2ba397c9b5b35fa799d0da9f66984352eec30983821d98673",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqkmeans_faiss.py",
+      "target": "projects/legacy-2018/rq/rqkmeans_faiss.py",
+      "size": 10184,
+      "sha256": "1da21cd4566693a6ecf79cc9ebad88cb531d53564c7b7911869ca7ed6867dabf",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqkmeans_plus.py",
+      "target": "projects/legacy-2018/rq/rqkmeans_plus.py",
+      "size": 7387,
+      "sha256": "ef17db956c5ffc0d7b4743afa125e8771e335fa886185258b3fc9746ff098298",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqkmeans_plus.sh",
+      "target": "projects/legacy-2018/rq/rqkmeans_plus.sh",
+      "size": 362,
+      "sha256": "07ef5e09550080ad7277a94754b4c32506acfab3b3e8d5ecac55220c8fb19634",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqvae.py",
+      "target": "projects/legacy-2018/rq/rqvae.py",
+      "size": 4458,
+      "sha256": "58d44977a47ece1f7e0c1be3422a8474fab9512e6fb903e92964b5ff8eaafad6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/rqvae.sh",
+      "target": "projects/legacy-2018/rq/rqvae.sh",
+      "size": 227,
+      "sha256": "ecbcffbf151e39e2efcdfc1429fd5add79c41a7c6ee5175422319df59ed9d991",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/text2emb/amazon_text2emb.py",
+      "target": "projects/legacy-2018/rq/text2emb/amazon_text2emb.py",
+      "size": 9148,
+      "sha256": "bc4a9ebb535b93e86cf75c3eb6bff3682f2d328a2f875330566b4ea0f79e9221",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/text2emb/amazon_text2emb.sh",
+      "target": "projects/legacy-2018/rq/text2emb/amazon_text2emb.sh",
+      "size": 203,
+      "sha256": "4a33c07790a3aad58125ccd12a6fd79c5b894182c03a95ffa301c9594c877120",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/text2emb/amazon_text2emb_gpr.py",
+      "target": "projects/legacy-2018/rq/text2emb/amazon_text2emb_gpr.py",
+      "size": 7154,
+      "sha256": "e1a5e1d916939fc0e5058159e017a63f87a481c151f0945de41c05a11e9caf96",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/text2emb/utils.py",
+      "target": "projects/legacy-2018/rq/text2emb/utils.py",
+      "size": 15331,
+      "sha256": "ba58187335f60e53fda55230b2896fb9f582ea22e34f8920ae01e81a6209d577",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/text2emb/video_games_text2emb.sh",
+      "target": "projects/legacy-2018/rq/text2emb/video_games_text2emb.sh",
+      "size": 988,
+      "sha256": "001760bb1b8c8a3888d3265c93035ba0b676d87d5b02dd59c79f2b5f085afb16",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/train_video_games_rqvae.py",
+      "target": "projects/legacy-2018/rq/train_video_games_rqvae.py",
+      "size": 16640,
+      "sha256": "5c304286ec765ac4db5b92da80a01f820597c06be9accd94a1b5c27694caecfd",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/trainer.py",
+      "target": "projects/legacy-2018/rq/trainer.py",
+      "size": 9658,
+      "sha256": "5fdef6310eea12ea70d952d70ca14fb0415d800ab8a92a0fa78e6332041a55db",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/rq/utils.py",
+      "target": "projects/legacy-2018/rq/utils.py",
+      "size": 811,
+      "sha256": "25636ae709f1c07a57f560a883bf85067afbf20697acf317e0d16b3293480f4f",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/README.md",
+      "target": "projects/legacy-2018/sid_generation/README.md",
+      "size": 12105,
+      "sha256": "4bd5dfc6aa7ba049c4c8b0948242c50c521f9fac250e41e2bc92da21055b20b1",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/VALIDATION.md",
+      "target": "projects/legacy-2018/sid_generation/VALIDATION.md",
+      "size": 4635,
+      "sha256": "3a6d51f97d607d1afd7ab0d4475af89d28bab3f24242b4ad6cdcc7d54d1e0875",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/__init__.py",
+      "target": "projects/legacy-2018/sid_generation/__init__.py",
+      "size": 169,
+      "sha256": "f727602536787642470f28f9cf3053c62d3d57df91d2d554571f3b3def99e36b",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/prq_kmeans.py",
+      "target": "projects/legacy-2018/sid_generation/prq_kmeans.py",
+      "size": 8559,
+      "sha256": "8769536393ade02c1fec6248f21d54ffb22cffae0cebcbff6300fabd56c06f2c",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/prq_kmeans.sh",
+      "target": "projects/legacy-2018/sid_generation/prq_kmeans.sh",
+      "size": 170,
+      "sha256": "21ae2245232c49399df93774000b9dae9c2f03e725769eba53083603e6ed9cdb",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/requirements-faiss.txt",
+      "target": "projects/legacy-2018/sid_generation/requirements-faiss.txt",
+      "size": 40,
+      "sha256": "9eff14ffca1631a9548b07c69623f355794c4ce297d0b65901bf0efb1c0515bb",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/requirements-test.txt",
+      "target": "projects/legacy-2018/sid_generation/requirements-test.txt",
+      "size": 43,
+      "sha256": "3c0bf2ed7e0e3615a6e6165a63bc8850cfc3edc5a04ef0a737e849d8f831afda",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/requirements.txt",
+      "target": "projects/legacy-2018/sid_generation/requirements.txt",
+      "size": 16,
+      "sha256": "bf7b26c4da979ceddfab749091066030cb412bbb91c8d45e458d7c0000dbf872",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/rq_opq.py",
+      "target": "projects/legacy-2018/sid_generation/rq_opq.py",
+      "size": 17316,
+      "sha256": "892a119a113e341f86183fb4d98dbc96c74b8de2487934cb8f017c8d323ede43",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/rq_opq.sh",
+      "target": "projects/legacy-2018/sid_generation/rq_opq.sh",
+      "size": 166,
+      "sha256": "09d5fe7a5cf4928a1a92b8617e8a22363910e9a46cef58d44573f5762542bb9d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/sid_cli.py",
+      "target": "projects/legacy-2018/sid_generation/sid_cli.py",
+      "size": 10780,
+      "sha256": "6f9968eeb9ad7b2664421834686da20f588798ea62b22d9e8772f5fbfdd59d4c",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/sid_common.py",
+      "target": "projects/legacy-2018/sid_generation/sid_common.py",
+      "size": 8104,
+      "sha256": "715c4678f6b963ffaa9000895e4dd4d58757c66f334e2bbc7b8b0da2b746cf28",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/sid_publish.py",
+      "target": "projects/legacy-2018/sid_generation/sid_publish.py",
+      "size": 7834,
+      "sha256": "223cd94f5078d94c2b86a79a98b4c07c894efb67f322d5ab49f8e1ff153b46bc",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/tests/smoke_catalog.py",
+      "target": "projects/legacy-2018/sid_generation/tests/smoke_catalog.py",
+      "size": 5710,
+      "sha256": "66f736d767482b5bfdd4ceac4d447c4c0a33e088b4eedf1f9885289caef2c2a8",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/tests/test_minionerec_integration.py",
+      "target": "projects/legacy-2018/sid_generation/tests/test_minionerec_integration.py",
+      "size": 10372,
+      "sha256": "47c399d81cb465aa04d896b3d0aed57b41ef473b46d5e66ac0a9e5b650221a50",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/tests/test_prq_regressions.py",
+      "target": "projects/legacy-2018/sid_generation/tests/test_prq_regressions.py",
+      "size": 4194,
+      "sha256": "a236a289585f79c5f4daba328dd8544bc063e5b25e41c34260d3c0ac1f8fd256",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/tests/test_publication.py",
+      "target": "projects/legacy-2018/sid_generation/tests/test_publication.py",
+      "size": 8498,
+      "sha256": "197b1833762721d1efcd78e4535af2c88f6045470d85a12cf29509c2ea8e0dda",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/tests/test_rq_regressions.py",
+      "target": "projects/legacy-2018/sid_generation/tests/test_rq_regressions.py",
+      "size": 12636,
+      "sha256": "39e005d7b025e7e4916194c5fadea8fcf98764e8b721034d0506afc95e63adb6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/sid_generation/tests/test_sid_generation.py",
+      "target": "projects/legacy-2018/sid_generation/tests/test_sid_generation.py",
+      "size": 16223,
+      "sha256": "ffd9fbfc804a9fd2b2ad2fe5ad3067bc28f27e3baba635019b40a009d51f6f4d",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/alphalab.jpg",
+      "target": "projects/legacy-2018/assets/alphalab.jpg",
+      "size": 15153,
+      "sha256": "a3835be0372844af99b352d9d1512584b8c11889c75a87dcd5db4ef10b181a44",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/lds.png",
+      "target": "projects/legacy-2018/assets/lds.png",
+      "size": 33782,
+      "sha256": "5f3d461dba5cfc4fbbb111fff1b498b292205e915108face86ba1877f1ba08f3",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/llmmatter_big.png",
+      "target": "projects/legacy-2018/assets/llmmatter_big.png",
+      "size": 53923,
+      "sha256": "cb4e43f7b50cb865bef935775cb2e090737d1355ce50d45ba599bfaa432da475",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/logo.png",
+      "target": "projects/legacy-2018/assets/logo.png",
+      "size": 43797,
+      "sha256": "f3dfeaf7e08a682d76edf02bd64bd80836dba57cf0aa0b4bf0df7c57dbc287f5",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/minionerec_framework.png",
+      "target": "projects/legacy-2018/assets/minionerec_framework.png",
+      "size": 2328960,
+      "sha256": "b91a2695e3233eeaeaa038044fe11d6b8676df8fef7fd74d0250b70e3fb3acf6",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/minionerec_main_result.png",
+      "target": "projects/legacy-2018/assets/minionerec_main_result.png",
+      "size": 1190389,
+      "sha256": "4b5c7fd73ea93eea55429c0e15cbc014376f0c3f629dd0772a0625de486fece7",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/next.jpg",
+      "target": "projects/legacy-2018/assets/next.jpg",
+      "size": 8593,
+      "sha256": "48a9324eeb1121335862ab4dc7805593cb2689486316000e34c3ffc5302263ea",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/assets/scaling_big.png",
+      "target": "projects/legacy-2018/assets/scaling_big.png",
+      "size": 53682,
+      "sha256": "f381e8d9f1bc3d8cb7f2076d63215d95f925944ace18157923f2ebce0e60c3cd",
+      "group": "legacy-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/comparison_values.csv",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/comparison_values.csv",
+      "size": 663,
+      "sha256": "a0e2e9f1afba1c416b632d177880fd8514fea2178c050aa0e7ecfb202f040ab3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/comparison_vs_reference.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/comparison_vs_reference.png",
+      "size": 220260,
+      "sha256": "bd06b186ede69ae1b276e2c170d150d9c87ddbe3fbcf9343b6d701647a754944",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/conditional_metrics.csv",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/conditional_metrics.csv",
+      "size": 4112,
+      "sha256": "5647f82fc09a5e5f5a9423bb43876accf63ac236b0423d92267b5c7bf99963f9",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/data_diagnostics.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/data_diagnostics.json",
+      "size": 14128,
+      "sha256": "047e44efe4c437363f565320475072dc50ca60bb1bc02e1e015f017921cb30c2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/grad_norm.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/grad_norm.png",
+      "size": 59491,
+      "sha256": "2f215d92d478e5d72a1b6e89811b191d05734dc222ecd575a3ffe702c9a9c944",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/index.html",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/index.html",
+      "size": 8428,
+      "sha256": "eff763980491fbc6e75ca51e97a880e29f313ca907e8490f0f38ecaad72667a5",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/learning_rate.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/learning_rate.png",
+      "size": 68319,
+      "sha256": "d09da32016e3af14aba1ebbb039e635002bb6f23a942e1906f864c487fa585d5",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/loss.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/loss.png",
+      "size": 82953,
+      "sha256": "01c9a47a55f286396ace6b7c697fba14b0c1dd743e8eac7979ceec936fde1bf2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/original_repository_cold_recomputed.csv",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/original_repository_cold_recomputed.csv",
+      "size": 2258,
+      "sha256": "6e1330cae149f6f5edd85b2a1d5d15ce4a962455e3f6201f96ba3975ab4d7c30",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/original_repository_cold_recomputed.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/original_repository_cold_recomputed.json",
+      "size": 14125,
+      "sha256": "9df7acae380c6bdb3dee68ad80545d0be5a58ceff30e76ef32560d069b744652",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/original_training_schedule_audit.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/original_training_schedule_audit.json",
+      "size": 1666,
+      "sha256": "4eecc4b819337d39e62f269ea8df9591eb4c19baf5c17d11770a2991654a3859",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/ranking.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/ranking.png",
+      "size": 112550,
+      "sha256": "a520688675240dc1de41a3ffefaf8858dcc78b35b900f84aa8c1fae86ca1df11",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/result_analysis.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/result_analysis.json",
+      "size": 1742,
+      "sha256": "aec013784034191b7ae2b525a18cd97c58dfd17500eed7447097ad762d947af3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/training-report.pdf",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/training-report.pdf",
+      "size": 98122,
+      "sha256": "e0844475498c7ac3cd8c5ead08c367201e68bb7b3bb812366b55e20485106638",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/training_report.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/training_report.json",
+      "size": 46073,
+      "sha256": "48a3f9e50824a333a42f239e9896e236404252292f3ce8dc06922e4199e30e4d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/validation-report.pdf",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/validation-report.pdf",
+      "size": 40614,
+      "sha256": "965e2aaf604402acbcded91052c6989fee3eead4e931a7a0eb0451093870d732",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey/validation_report.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey/validation_report.json",
+      "size": 46094,
+      "sha256": "bec2b8ced9d532583c9e601abc8235627006d728942489edaf6b5a8189507b67",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/comparison_protocol_audit.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/comparison_protocol_audit.json",
+      "size": 2947,
+      "sha256": "50000a344056af8c01907fb96ba82b61697f8c640bea210597f6a12a13f91600",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/conditional_metrics.csv",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/conditional_metrics.csv",
+      "size": 3965,
+      "sha256": "48454de185b8711493af70217e96b59f88124638fe97f217a413f7a43de8979b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/grad_norm.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/grad_norm.png",
+      "size": 64566,
+      "sha256": "ef8c7e6b073dc9ad16b1d1acd01248f1c5b5bdbbc9182995e5f992421589c0e5",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/index.html",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/index.html",
+      "size": 6771,
+      "sha256": "9dbe588a32819a5a1492584ad21a62e9a9c86309eda8b80e32b19646b7a0c679",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_comparison.csv",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_comparison.csv",
+      "size": 7126,
+      "sha256": "b00fdebf6144c077eab4127317970ed430b76e5e9e9c91bbc8d286a4c609b727",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_comparison.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_comparison.json",
+      "size": 37622,
+      "sha256": "a0d9612bbb4002af58ea97c58ffc31e07f2e5100cc185cf6788d55e1a108dd7b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_comparison.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_comparison.png",
+      "size": 364697,
+      "sha256": "28d1523d9b6c57cb438f8de50fdcfe7bff77f013cab45dc3870e54c901b05d83",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_deltas.csv",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/industrial_reproduction_deltas.csv",
+      "size": 5938,
+      "sha256": "bce2b442293ec0ac159bf3809bfa3bbf9915111cae7cc9e6dd8bca4672aec646",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/learning_rate.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/learning_rate.png",
+      "size": 79923,
+      "sha256": "c7b5b4f91f7a5bb6fe6f2c3152c1c5ce551728ec83fdb9ca9054007f5ee85f08",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/loss.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/loss.png",
+      "size": 84048,
+      "sha256": "7d7798bc40d26a418ed12a57b830d07cfba462fb1160ab8e7f9a976454e012bd",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/original_evaluator_cold_parity.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/original_evaluator_cold_parity.json",
+      "size": 3766,
+      "sha256": "4fc7668776d16788886da6b9bf332bfa670d5489c0d2e14701bd6eb3731a1137",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/original_evaluator_tokenizer_trie_audit.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/original_evaluator_tokenizer_trie_audit.json",
+      "size": 3798,
+      "sha256": "2dde874076ea3c7d7168916881eaddac1f8250a2493d9077585a4b5df9b4ceca",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/ranking.png",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/ranking.png",
+      "size": 107825,
+      "sha256": "c2b09cc8c49f5ef37eba740673dd9c6dfa1582d51df39806b42bd8881d037c54",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/result_analysis.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/result_analysis.json",
+      "size": 2848,
+      "sha256": "19c0825ec24e96d048732b5b9ed7eb172462877e7bffb67afa0cc085c9f7d494",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/training-report.pdf",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/training-report.pdf",
+      "size": 90257,
+      "sha256": "f92578667b06035c613c8fd2dba49450550b6435846aab4600c6cfa60124e361",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/training_process_audit.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/training_process_audit.json",
+      "size": 40021,
+      "sha256": "256b61d2dd9f1d9787fa003e913c5f4387d03f5bbb08a5e3c9a3d24a97216565",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/training_report.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/training_report.json",
+      "size": 46764,
+      "sha256": "d64e42936621b6a489362759ba81b2b94933498521b2506101780f2d5fe19cc5",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/validation-report.pdf",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/validation-report.pdf",
+      "size": 41162,
+      "sha256": "354886ad9565c01cba5bb7bdf770500ca12d7dfed0f5704e58ab5adf5d16f9b8",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey_05b_linear/validation_report.json",
+      "target": "reports/original-2018/Industrial_and_Scientific_enddonkey_05b_linear/validation_report.json",
+      "size": 47249,
+      "sha256": "9a012823fcb464cf47f1f7552ef6a07224c8d73663a012872bd0c5fc16d0172b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/cleaning_report.json",
+      "target": "reports/original-2018/Video_Games/01_cleaning/cleaning_report.json",
+      "size": 8201,
+      "sha256": "ebd18a7790d5f5ca98f65283a1e71ee5c07147283de022bfa072973b49ba0927",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/history_window_analysis.json",
+      "target": "reports/original-2018/Video_Games/01_cleaning/history_window_analysis.json",
+      "size": 4058,
+      "sha256": "d88c3768fd455f48e7f95b1b4f14e49a6cc71fea10550cbb3e65be9fba509777",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/video-games-cleaning-report-1.png",
+      "target": "reports/original-2018/Video_Games/01_cleaning/video-games-cleaning-report-1.png",
+      "size": 180852,
+      "sha256": "c4164f9e0badc0f7aed41d827717241cf33379796bb17b44ba28143d4f2edce2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/video-games-cleaning-report-2.png",
+      "target": "reports/original-2018/Video_Games/01_cleaning/video-games-cleaning-report-2.png",
+      "size": 276818,
+      "sha256": "a76f38a7e88477a7f572826155e9c2af49cf680e0b7fc3362165c328fb902831",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/video-games-cleaning-report-3.png",
+      "target": "reports/original-2018/Video_Games/01_cleaning/video-games-cleaning-report-3.png",
+      "size": 204115,
+      "sha256": "351511004d0799b727137d40e99e08fca61fee3f4f8f3d1203657a34ccfd185e",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/video-games-cleaning-report.pdf",
+      "target": "reports/original-2018/Video_Games/01_cleaning/video-games-cleaning-report.pdf",
+      "size": 55827,
+      "sha256": "7dd77d939780c2c7311411b8adbb3eec9707d86f43d3a509ceef781c90d16b92",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/video-games-cleaning-report.txt",
+      "target": "reports/original-2018/Video_Games/01_cleaning/video-games-cleaning-report.txt",
+      "size": 13111,
+      "sha256": "953c9ec34cf068dfbb563e69f4161ac2326e16a445fe4dcc99723c234cf0f3e3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/01_cleaning/video-games-report-manifest.json",
+      "target": "reports/original-2018/Video_Games/01_cleaning/video-games-report-manifest.json",
+      "size": 331,
+      "sha256": "fecc2db72e127bd9bf5fe70a753ec7ee5c4212942e08b175dbc378668da8fa2b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/analysis.json",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/analysis.json",
+      "size": 719259,
+      "sha256": "a839d6df731c7feaba9dd58f6d0e7ca395900508ae336b85359d30e4e5172e83",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/analysis_validation.json",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/analysis_validation.json",
+      "size": 239,
+      "sha256": "c1602cd70511d000d78742104019787321ca3c38f4d73af38cea741612a3e133",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/brand_controls.csv",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/brand_controls.csv",
+      "size": 417,
+      "sha256": "75c072d4386312106824954c92ae3154f7ec3007bfce71c92313c4ba23dffb66",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/labeled_retrieval.csv",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/labeled_retrieval.csv",
+      "size": 1591,
+      "sha256": "bd21750d9d15cee6227f396247386c2b8569271d95ba66e7f026a003afe049d2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/nearest_neighbors.csv",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/nearest_neighbors.csv",
+      "size": 6507,
+      "sha256": "67e85cd9724c49f00113bc33810f24f3796eb646d594808b3a97d5ade891dc29",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/report_manifest.json",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/report_manifest.json",
+      "size": 855,
+      "sha256": "7d785bbca08389d2cd4a68b54feaefa4d22717a0c803346e6d0a1f3d2180377e",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/sampled_pairs.csv",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/sampled_pairs.csv",
+      "size": 384691,
+      "sha256": "10aa10632cb8cbeb992f6114437160bfd5c19f5a2ce0fda75485d6f6757802c1",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-1.png",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-1.png",
+      "size": 184684,
+      "sha256": "0d7df59a73dc697a8bd04af61e7a1b82ea2f7a1f9998f33de652aaded1373fce",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-2.png",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-2.png",
+      "size": 168301,
+      "sha256": "ec3d95cdc2c366183c4ffff07c08ccbfeb089080435572ba78ef385e99a69c88",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-3.png",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-3.png",
+      "size": 244242,
+      "sha256": "44a3cf6c5f56e0a651d0160790a42f8fa10a2a83ba46904e4d770ea442da89e4",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-4.png",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-4.png",
+      "size": 287141,
+      "sha256": "fde7ec76b0eb6d78a5fcee4a3f7538eaf716939face6c7dead05063114d5b754",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-5.png",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-5.png",
+      "size": 239073,
+      "sha256": "3fdab412d91e7f0f588f62860af3425be43393652f3ed65653f358fed635c3e8",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-6.png",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report-6.png",
+      "size": 274572,
+      "sha256": "b607ba40be93a50a9444ad32dedd4864167313b37241fd5e9c22f644c8ab8aa0",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report.pdf",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report.pdf",
+      "size": 103908,
+      "sha256": "bb03b9f59be7f3136df34687948148b43c1d03eed7b7c3231ef39045d294718d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report.txt",
+      "target": "reports/original-2018/Video_Games/02_embedding_similarity/video-games-embedding-similarity-report.txt",
+      "size": 17457,
+      "sha256": "237833a9775290551fb2e963c72359124bd2d2ccbb0fd6569d46a2898a532950",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/epoch_metrics.csv",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/epoch_metrics.csv",
+      "size": 443215,
+      "sha256": "c4e140f0179dac1cf6a98434e4dca898af3111951d7f9379fe5d58645ccf9d62",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/evaluation_metrics.csv",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/evaluation_metrics.csv",
+      "size": 27941,
+      "sha256": "40ec9009cd0bf5ed2cef2902999b11f8331ebecd3c889d5cd73c551fd49ec171",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/report_manifest.json",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/report_manifest.json",
+      "size": 1011,
+      "sha256": "89ddbfd1792e27213e26271d69dfb5f7e4761ede2a74f360f7c021a4798d5085",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/selected_codebook_usage.csv",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/selected_codebook_usage.csv",
+      "size": 7375,
+      "sha256": "9b758677d08864cac3cb07eddf713bd4438246772848caa1aedb826ae15025c6",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report-1.png",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/video-games-rqvae-training-report-1.png",
+      "size": 276083,
+      "sha256": "53052e9d6cccd194bda40aa51f3804cea06d71590fc2355ece15282167f8985b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report-2.png",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/video-games-rqvae-training-report-2.png",
+      "size": 241022,
+      "sha256": "2918b60c637b9f14dac80e6cdc3c0a57eb1345c0209aea750afd1f938f696ed8",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report-3.png",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/video-games-rqvae-training-report-3.png",
+      "size": 196414,
+      "sha256": "dd168f0e8d2544f3260c21e26464d60644e04e9df6ec22e33110b642b41f5d22",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report-4.png",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/video-games-rqvae-training-report-4.png",
+      "size": 281161,
+      "sha256": "22b2b5ebb8b4451ead7eecc4ae59ed4d54248daa7fa5bcbb3de372f2370e8117",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report.pdf",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/video-games-rqvae-training-report.pdf",
+      "size": 167301,
+      "sha256": "0149253ae3bb41de206b73baf0717d7d06169348b22931b219a99556e35c6cf7",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/03_rqvae_training/video-games-rqvae-training-report.txt",
+      "target": "reports/original-2018/Video_Games/03_rqvae_training/video-games-rqvae-training-report.txt",
+      "size": 9494,
+      "sha256": "780afa9fc94957a6ca0085f5ed4f1665717c73906b69af81a9a3068dda00ddb2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/codebook_usage.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/codebook_usage.csv",
+      "size": 180383,
+      "sha256": "b260c606d14002c3ea8ac8033430f7f2322007be953cf15cc12a1b68febe14e9",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/comparison_checkpoint_metrics.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/comparison_checkpoint_metrics.csv",
+      "size": 9782,
+      "sha256": "8b01ef63f72b11fa83007caeccf1a2384e70aa4d6a6121db053950dbe2847541",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/comparison_lcp_exactly_two.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/comparison_lcp_exactly_two.csv",
+      "size": 264,
+      "sha256": "1fbf66b8fe0a69f2838996ae30e4ebf4dbaacc1e160023aba4069081cd7fa13f",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/comparison_selection.json",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/comparison_selection.json",
+      "size": 5296,
+      "sha256": "ea5893321647c47a74a41cb71d7d4fdc996510f1c7638dfc19d37899bf8d5232",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/comparison_sources.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/comparison_sources.csv",
+      "size": 1946,
+      "sha256": "29f4f27e3185b5f0b4811c290f6d69b5329026e3bd8f51c75d56b25da67dc887",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/knn_overlap.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/knn_overlap.csv",
+      "size": 3834,
+      "sha256": "ef7091866675ff1e69ef200c3f01df72c1da687204fd8b6768086baec3745bc3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/neighbor_examples.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/neighbor_examples.csv",
+      "size": 11501,
+      "sha256": "0c85516279df3e76699067ca484a14e6b461b0739f7ea48af75705cc26e99bcf",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/noise_stability.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/noise_stability.csv",
+      "size": 87606,
+      "sha256": "59474168363f72ac6b943be959d3496dd8f041567ee1e586e6e3757c2ca13282",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/prefix_neighbor_retention.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/prefix_neighbor_retention.csv",
+      "size": 5958,
+      "sha256": "e8f9c1dd5e1c73c1bc7c663fbc27f75800c491e9b08fadd5093f561524885745",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/prefix_pairs_raw.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/prefix_pairs_raw.csv",
+      "size": 633693,
+      "sha256": "42394a9cca40e09b4e9dc5aae38da42eda1b94bcf447a8f984090f642f99a657",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/prefix_pairs_semantic.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/prefix_pairs_semantic.csv",
+      "size": 625883,
+      "sha256": "ccef1710572c27af65da99bb577b25d8675076b2dfcbc725640808539bb6b4b9",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/reconstruction_metrics.csv",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/reconstruction_metrics.csv",
+      "size": 1084,
+      "sha256": "383cede9fe87ba7efee70ded9d97496144585378aef44fcb78cb64e728be2978",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/report_manifest.json",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/report_manifest.json",
+      "size": 6763,
+      "sha256": "96fa3ef526698ffe05a46b1578188321288b4b1261ddd30946f36272e6231419",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/selected_sid_report_validation.json",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/selected_sid_report_validation.json",
+      "size": 5072,
+      "sha256": "59b4eeb96b19bc2bb31b152f154af2724da638104d5abf1c503bb2749a895048",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/sid_validation.json",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/sid_validation.json",
+      "size": 1219815,
+      "sha256": "621dba6926047b7329d5958a4c781fcb12883d7eb87014ec5d4d18ac85d200fb",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-1.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-1.png",
+      "size": 281951,
+      "sha256": "151704a349b1d01de4fa22a75ac3364f2c1a99229c1964a4157d299223ca7d2f",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-10.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-10.png",
+      "size": 300191,
+      "sha256": "e0f60270f4fbd0203ffe7c89e30a0fb6dbe934dc54ba763f2b71b42c155f463b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-11.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-11.png",
+      "size": 289235,
+      "sha256": "f56e390f2654ca777be27d80f37342b5f015d434db0c1c78e452dbffe99b2130",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-12.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-12.png",
+      "size": 302093,
+      "sha256": "8ddaf4b7b9c28a833b7ba3fe10c0a87d11b221f4cddfba69d8fa81356cf359f2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-13.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-13.png",
+      "size": 229703,
+      "sha256": "8c385495fa07d1a7b1857f7ad086b7704fcfd9046692fffd035b41427b3bdff3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-2.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-2.png",
+      "size": 265820,
+      "sha256": "77f9ad1890256ed97d0aaf08a0c9da484906766201af6ed1634ef7f1ed0d95ca",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-3.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-3.png",
+      "size": 296570,
+      "sha256": "4f6d31213f26abe24f77fe07766f7656dabbc0d39672d31349549d72cc516527",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-4.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-4.png",
+      "size": 222446,
+      "sha256": "51a56a643d92b081cb2080dd127daae19bd84657a3d9f4bc8edac1802847acd7",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-5.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-5.png",
+      "size": 201572,
+      "sha256": "845437a70613ccdab75d219f21aab2af0d1da5170ba6eb71662000ca8c628e03",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-6.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-6.png",
+      "size": 249931,
+      "sha256": "7f4c523d8b73f608b5aafe1ee3f5ef14deec335e046c219f9962a164eb3e322a",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-7.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-7.png",
+      "size": 301845,
+      "sha256": "916e72480d5a8d724b8ba24d0523794c662ec2e27031baddfb522e83d218543c",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-8.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-8.png",
+      "size": 359374,
+      "sha256": "e48f0d9d7e2a2c1917246d245cb1cf33486f83c2e75e7b36c5d24748a7b69c9b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report-9.png",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report-9.png",
+      "size": 324913,
+      "sha256": "43e07947094a19bf880e30b33de71c2688adcdd3ec58d9573df77cac91013dea",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report.pdf",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report.pdf",
+      "size": 145888,
+      "sha256": "8ffab672ff46c20254ca8189e1326a916d17be7de9115c6b13b944b904c1e596",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/04_sid_validation/video-games-sid-validation-report.txt",
+      "target": "reports/original-2018/Video_Games/04_sid_validation/video-games-sid-validation-report.txt",
+      "size": 25648,
+      "sha256": "cec5f0e3eb3697bed3a919129642efbda0069025be54232ae88cde616da176be",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/checkpoint_metric_comparison.csv",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/checkpoint_metric_comparison.csv",
+      "size": 9782,
+      "sha256": "8b01ef63f72b11fa83007caeccf1a2384e70aa4d6a6121db053950dbe2847541",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/codebook_usage_comparison.csv",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/codebook_usage_comparison.csv",
+      "size": 670994,
+      "sha256": "a5cbd0ed10a4af0a0da149ae27156d96f823ccd86cb08179ec919df6c2dc7c54",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/comparison.json",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/comparison.json",
+      "size": 26359,
+      "sha256": "76d3dc13aadd2f51f4de2efdda3ea9f0acec9ce38706222cb32a195f870f5d79",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/comparison_sources.csv",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/comparison_sources.csv",
+      "size": 1747,
+      "sha256": "aab69a58ef5f55b5f4ef7c3aace52fedbf26f23ccfe2c81288acf75c9fe31910",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/comparison_validation.json",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/comparison_validation.json",
+      "size": 1069,
+      "sha256": "7d79bb2b995d8e9814478462a991201d14783f8777e0e175c3da660412fda565",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/prefix_top10_with_permutation_null.csv",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/prefix_top10_with_permutation_null.csv",
+      "size": 1525,
+      "sha256": "11f3943596aa27919fa0ff25a3d2eb9b145d8e81f011e9e3d46c934572c356b0",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/report_manifest.json",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/report_manifest.json",
+      "size": 2729,
+      "sha256": "a05b31993f3b0b28847890897c082a371d240c18450d0972e4da86f4b6ba3f5f",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/training_curve_comparison.csv",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/training_curve_comparison.csv",
+      "size": 25914,
+      "sha256": "abb6efc16c35e2c3cbd4b143cdad8ddce0b5256550182b3d31d549715bc44f78",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-1.png",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-1.png",
+      "size": 306345,
+      "sha256": "bda2157fb393cfa8ac3cc1074dc284894450acf7c5d6d579bbb4b0550a58d07b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-2.png",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-2.png",
+      "size": 246208,
+      "sha256": "ff71df0c5b7ebc9f80f9cca242f824988116ce2af92ab5f97b35312e9c277741",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-3.png",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-3.png",
+      "size": 247236,
+      "sha256": "67c59289365c8f6487b5d1f5300b1a97257da3560d3c963fde1ce0562f6c4d2b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-4.png",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-4.png",
+      "size": 200210,
+      "sha256": "910b7800324fbf74563b24e6c01996656aeb4cc9b6da0ed789b82b384faf48d2",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-5.png",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-5.png",
+      "size": 271693,
+      "sha256": "b130913f67a49a7bbf78499b7d2e4988df514e3558b9fdc3a2699ba6f9faeca9",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-6.png",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report-6.png",
+      "size": 354648,
+      "sha256": "b500c71a8fb9a8677402b182a606d7eb4ea0d2b245c9bceea85ce3e0aac183be",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report.pdf",
+      "target": "reports/original-2018/Video_Games/05_rqvae_10000_comparison/video-games-rqvae-10000-comparison-report.pdf",
+      "size": 95409,
+      "sha256": "62fd1b691dde0eb3e803b29551ca8c723cccd4512a65bc58848614d6a52fa2c4",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/gpu_metrics.csv",
+      "target": "reports/original-2018/Video_Games/06_sft_training/gpu_metrics.csv",
+      "size": 356293,
+      "sha256": "5030c694028bd441c821e7909a41c3a9a669630d39e56ce67b38c81f54017b53",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/gpu_resources.png",
+      "target": "reports/original-2018/Video_Games/06_sft_training/gpu_resources.png",
+      "size": 236335,
+      "sha256": "74a15ca18f17fbc65c5c5e62ff5daec951b995693c5687334af280f60d09a054",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/grad_norm.png",
+      "target": "reports/original-2018/Video_Games/06_sft_training/grad_norm.png",
+      "size": 72379,
+      "sha256": "1f556d2913b703ccb647d82552c8d282adf6cf8028a1920f0027f555b6a01e22",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/index.html",
+      "target": "reports/original-2018/Video_Games/06_sft_training/index.html",
+      "size": 20035,
+      "sha256": "fad6850ebdc09dd6d7e0fcc9b8486d87f9da5cb94acc78ad50e3d5a647ad9b59",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/learning_rate.png",
+      "target": "reports/original-2018/Video_Games/06_sft_training/learning_rate.png",
+      "size": 79068,
+      "sha256": "c8dca5b71aeb58960676a838ea5e2edc7bce53a9a38827c3cb365d091b9554b0",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/loss.png",
+      "target": "reports/original-2018/Video_Games/06_sft_training/loss.png",
+      "size": 69790,
+      "sha256": "167a50c753eff01977aa838f5280b51521fc524ea5cefcad97e9c548be46b807",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/metrics.csv",
+      "target": "reports/original-2018/Video_Games/06_sft_training/metrics.csv",
+      "size": 1208690,
+      "sha256": "d1d30099de29e107712c2f8ce4db055b5b379402d2b692e85000a716142b079d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/report_manifest.json",
+      "target": "reports/original-2018/Video_Games/06_sft_training/report_manifest.json",
+      "size": 3771,
+      "sha256": "071c74b8133e2db651e5455529577ad45ce450b775e8fc92b842836217c2fee4",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/training-report.pdf",
+      "target": "reports/original-2018/Video_Games/06_sft_training/training-report.pdf",
+      "size": 165113,
+      "sha256": "4dd71e6fb8e5223c2a6f05bc93d35b3b002211045e69c741a442e94737f3d3cd",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/06_sft_training/training_report.json",
+      "target": "reports/original-2018/Video_Games/06_sft_training/training_report.json",
+      "size": 37024,
+      "sha256": "5003d25e96ece5f545c72af88160360b14cfbe0eab13fbf92096a3cf96c0d8c1",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/baseline_metrics.csv",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/baseline_metrics.csv",
+      "size": 742,
+      "sha256": "df2ba2d94ac85bd588ea6ff5542abc0ab779ddb546848a0dd4c9da30007c48eb",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/behavior_shift_analysis.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/behavior_shift_analysis.json",
+      "size": 20384,
+      "sha256": "c80045a9539e969c8e2f66218cccdbb38bd5185e5221b2a1ab7659e2f3aa5faf",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/behavior_shift_metrics.csv",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/behavior_shift_metrics.csv",
+      "size": 7996,
+      "sha256": "523ff9cbc1d85523b07377c287cd5f5759cb07434b3eeb65b635f1d5e0964394",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/cold_hot_diagnostics.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/cold_hot_diagnostics.json",
+      "size": 22112,
+      "sha256": "12627b03f12f4938545abac725945a0f8b3ed0cf9199ec884d25882e65e4cbbc",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/cold_hot_metrics.csv",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/cold_hot_metrics.csv",
+      "size": 4466,
+      "sha256": "51cf79459977c81e382ff47941c10b506bf4d61dbea583e359eff44e1b29f927",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/comparability.csv",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/comparability.csv",
+      "size": 616,
+      "sha256": "ca1f9d6e1343c1ca89acabc0772cbf5bca2c32e361e30e6f2301e2cea37660e3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/comparison.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/comparison.json",
+      "size": 7316,
+      "sha256": "01e60ac182faaa74cf2e59a50cb54564f624807c6d1c3229e96849f12d783ed4",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/expectation_analysis.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/expectation_analysis.json",
+      "size": 2145,
+      "sha256": "f1e6b00f4798c0183f8c0d5c27f9a44d09acb491205584b771fb7581bbc2714e",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/index.html",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/index.html",
+      "size": 23785,
+      "sha256": "63fc11cb216ee875391ec95a323336a1b5654c98fc60780720fb378267ae66ef",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/metrics.csv",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/metrics.csv",
+      "size": 272,
+      "sha256": "d4aeba6b2e07d12d735844f8852f469a09af215b1a0ff90d873705bc5c9f2da3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/paper-reference.png",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/paper-reference.png",
+      "size": 120482,
+      "sha256": "06457e543a1ba29605e1616c42d9e7269573b9fe93a2f12cfc0702b44626027f",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/paper_comparison.csv",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/paper_comparison.csv",
+      "size": 1116,
+      "sha256": "f16de1559cbc3b4bf6919d872a8d6da7d7b546d76a5565f787a2bce9b8fc2df7",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/ranking.png",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/ranking.png",
+      "size": 112831,
+      "sha256": "7e28f8841730ced31dea4610bd998ec811e97ed8c5a78127468dbcf138d69bec",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/repeat_event_audit.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/repeat_event_audit.json",
+      "size": 5888,
+      "sha256": "a0d682a70b43c2af687181ce547b30399527df6b025f94428b8340e6c0d09389",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/report_manifest.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/report_manifest.json",
+      "size": 4736,
+      "sha256": "53e153c96ab4ad1ddc8f426af255e70d882d067d907259150268c01dd238679c",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/validation-comparison.png",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/validation-comparison.png",
+      "size": 79937,
+      "sha256": "d5166f95bf9c23f68acee33bb83bcb1ace248031c12355ce42921a42aedaaefa",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/validation-report.pdf",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/validation-report.pdf",
+      "size": 54069,
+      "sha256": "d8f500bdba26885c9e13e54561e158f19b9b5274ae4fc6c711c468528238c82b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/validation-summary.png",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/validation-summary.png",
+      "size": 155171,
+      "sha256": "11086aa919d33335ce91706eb8e3bc5cde6f60b0283766263a5d2344882ff6eb",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/07_sft_validation/validation_report.json",
+      "target": "reports/original-2018/Video_Games/07_sft_validation/validation_report.json",
+      "size": 72086,
+      "sha256": "5b6126edb0136f9b1bec8dd7106e38170caa48758bc9db0d5d9964ea3ed056b3",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/cold_diagnostics_overview.pdf",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/cold_diagnostics_overview.pdf",
+      "size": 27446,
+      "sha256": "05d4beb5543e2161d23df2fd80570bfea36f14c72d71610bca216255aa198430",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/cold_diagnostics_overview.png",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/cold_diagnostics_overview.png",
+      "size": 232511,
+      "sha256": "6ee0a2275c5b66f3bc7f1e060868d7a0aab163531f6dae91c2caae25f347c836",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/cold_path_audit.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/cold_path_audit.json",
+      "size": 12411,
+      "sha256": "a458c5e0e8fe0af58937dde936d9274b0f2e421bdc020766c20c0c103fc0090e",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/cold_path_audit_symbolic.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/cold_path_audit_symbolic.json",
+      "size": 12438,
+      "sha256": "ff205d0a58a6ee70de7ce8d1db53f0e486249e6ec22d28e608e30930d282f283",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/diagnostics_summary.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/diagnostics_summary.json",
+      "size": 231590,
+      "sha256": "5a464eb19cf3a6eb97f4df6acf605a3fc2db4de2542bcf1b40202252cdd7aa42",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/exact_cases.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/exact_cases.json",
+      "size": 146441,
+      "sha256": "c0e729e48acfe8425e5fb46ac72e34ac901e07ea3ad87afee60f57c6d17fcd75",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/exact_catalog_scores.npz",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/exact_catalog_scores.npz",
+      "size": 1833491,
+      "sha256": "5858e5e9ff76ceefcacd6ad1c5e463975adc0687d6b6f3b95a733c898a94c3e5",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/exact_progress.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/exact_progress.json",
+      "size": 4647,
+      "sha256": "7d9e73c51a2e25c820ca46e54a7cc87def9a217867b0472d81117fd76229c503",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/exact_ranking_cases.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/exact_ranking_cases.csv",
+      "size": 6377,
+      "sha256": "ceac475b2f0b3c811bc2501b837d380b18a43d78f5318183a95953c6948a8a3e",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/exact_ranking_summary.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/exact_ranking_summary.json",
+      "size": 175935,
+      "sha256": "58c313f15037fa9a8c1b7135cb072154d6759f996d798e469eaefd4f7e764bde",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/exact_selection.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/exact_selection.json",
+      "size": 7511,
+      "sha256": "3d804b5472fc2e49b6b2af4e3b1336cd655950ee1810c1cff6633f69eafaf789",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/failed_recall_patterns.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/failed_recall_patterns.csv",
+      "size": 2582,
+      "sha256": "5816b56563084960fd759bb18c11f825d7cb2cebeb401c731b09799536887d1d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/failed_recall_patterns.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/failed_recall_patterns.json",
+      "size": 21317,
+      "sha256": "ad65c269aa8eb5e9be6fa425e223178b32d1d107e35e4ca1642aa5c5a1921441",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/failed_recall_prediction_composition.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/failed_recall_prediction_composition.csv",
+      "size": 1848,
+      "sha256": "8426c810da8c019a40ccb9d8bd738887f42a7dc743696c9af05e8ac499634bfd",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/failed_recall_prediction_composition.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/failed_recall_prediction_composition.json",
+      "size": 8823,
+      "sha256": "830e7531d784b356bbe3077324886e0f1038efb1dbee78e2a2f67b4b2fef5236",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/failed_recall_prediction_popularity.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/failed_recall_prediction_popularity.csv",
+      "size": 828,
+      "sha256": "6b731eac4bd4077c786b35833820d0026a8c23fad8e69c300db985924e55bc59",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_exact_cases.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_exact_cases.json",
+      "size": 33147,
+      "sha256": "7bd0be299cb54415b390fbddffd36daed1236a49de609f066c1fef773ce50714",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_exact_progress.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_exact_progress.json",
+      "size": 2189,
+      "sha256": "3c2bc60a321173e9b2a66eecc6d0e25fa0c17e85b086b2d10917082922c02688",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_exact_scores.npz",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_exact_scores.npz",
+      "size": 927280,
+      "sha256": "3e1d75931984a7f7d0ee7d4635c26ded0103869e888d6cc3d7f698ede871c90d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_exact_selection.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_exact_selection.json",
+      "size": 464,
+      "sha256": "e2fb79d9e2fc4c9513d0f86d7233f30cee4f4af5bfcc60f7a6b02f263d494ecb",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_exact_summary.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_exact_summary.json",
+      "size": 40444,
+      "sha256": "16580b6f52140a8aa480d3513b6776e73f5faa90672e32eefb83ef1cc2af631d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_extended.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_extended.json",
+      "size": 9149,
+      "sha256": "1510c414a413214086045bf57db83b00937116c35b69b4c7734a81bf7304c820",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_frequency_accuracy.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_frequency_accuracy.csv",
+      "size": 808,
+      "sha256": "9f212e39c05b265ebdc2c8a6e1f3b2bb3e5e63e03a48094416969d8e9eddb3d5",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_frequency_accuracy.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_frequency_accuracy.json",
+      "size": 4765,
+      "sha256": "25082529eb3db7c83c24f2cb338562b075cb0e94de5fe17889d40a38f4a55c47",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_history_titles.jsonl",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_history_titles.jsonl",
+      "size": 77080,
+      "sha256": "ec7525ef13f500d66b46e346d10386b618453cd50c2ea0e6ea217a70aa8d5e9d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_hot_full_identity_checks.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_hot_full_identity_checks.json",
+      "size": 4606,
+      "sha256": "983acca72b23209096ca7514a2fac2a9ae484232a3480e7f73a105eca632584d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_hot_full_items.jsonl",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_hot_full_items.jsonl",
+      "size": 379837,
+      "sha256": "50de03d66469706deb30eecb36e74e584a95cb65e8fd888987d5e4d56aeeee74",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_hot_full_summary.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_hot_full_summary.json",
+      "size": 4888,
+      "sha256": "02b2079f51dff5113b410bdf6fa5576906f92c5c0d4c6a7f691b8fb98465a54b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_identity_checks.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_identity_checks.json",
+      "size": 486,
+      "sha256": "0579755e2e36050bae8457b07011460e6e098444e097b8895a98f5742728fd88",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_items.jsonl",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_items.jsonl",
+      "size": 1078781,
+      "sha256": "04cf1f3e58504abcb8aab8fac070b5a1dbafe48c84cbfaae067b1711e23a0007",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_progress.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_progress.json",
+      "size": 67,
+      "sha256": "1c89b1349d906f9a1c0d573a84dd50d6bf38d9e96ce5373c69abc077a8c2342d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_summary.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_summary.json",
+      "size": 92458,
+      "sha256": "cb22c9a40eb65c5812968cf68324bcd169d7e163c6683717d0cb119b91a9a701",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/recognition_title_vector_summary.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/recognition_title_vector_summary.json",
+      "size": 153261,
+      "sha256": "796de6c7fefe4be8f8adc079e8976b1f5cdeffc5b03308a62318e619c36c9d5b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/rq_cold_diagnostics.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/rq_cold_diagnostics.json",
+      "size": 36510,
+      "sha256": "cf0027b2d7644271860a46abc0eae9752383788502db62a6d5e7d22f887f32dd",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/rq_retrieval_metrics.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/rq_retrieval_metrics.csv",
+      "size": 5260,
+      "sha256": "d8c91efdf74d32bae84af3a87476efcfb179525e907650a7c39f621b77b0d321",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/sid_prefix_training_support.csv",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/sid_prefix_training_support.csv",
+      "size": 2414961,
+      "sha256": "df6c9018565a4d28100b1bf557f198946eec8829adc4f11132f69005744f4c27",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/08_cold_diagnostics/source_integrity_checks.json",
+      "target": "reports/original-2018/Video_Games/08_cold_diagnostics/source_integrity_checks.json",
+      "size": 10883,
+      "sha256": "8b624feb4df67e1583cd26c4ca22b2f1d0c6513a9b4098442fc4afede0a9c92d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/09_epoch3_comparison/epoch3_replay_plan.json",
+      "target": "reports/original-2018/Video_Games/09_epoch3_comparison/epoch3_replay_plan.json",
+      "size": 5132,
+      "sha256": "cd2a773a5a6568aeff58c6b629926a78ff361014519b1a1aad77283bf99e7491",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/09_epoch3_comparison/loss_curve.csv",
+      "target": "reports/original-2018/Video_Games/09_epoch3_comparison/loss_curve.csv",
+      "size": 3591,
+      "sha256": "96070e2503b763b9c7494d738059d68b640c01ae1e0ca779c29d65e740468d55",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/09_epoch3_comparison/overfit_curve_audit.json",
+      "target": "reports/original-2018/Video_Games/09_epoch3_comparison/overfit_curve_audit.json",
+      "size": 13808,
+      "sha256": "2a06c09ac4fefe7265064f622da4fdacc1128b2e12e151c09356ef41942589d1",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/10_training_literature/paper_matrix.csv",
+      "target": "reports/original-2018/Video_Games/10_training_literature/paper_matrix.csv",
+      "size": 3888,
+      "sha256": "7dce7afa11f7f663d3a6c970d6fc86699d158e375d1e01ab1d523809d8c2d8bc",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/10_training_literature/paper_matrix.json",
+      "target": "reports/original-2018/Video_Games/10_training_literature/paper_matrix.json",
+      "size": 5823,
+      "sha256": "bdcff39516db77590bb403facfb07d54bc4ba2bdef85be9ad8fa907b7e752a09",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/11_cold_sid_prefix/cold_ab_frequency_analysis.json",
+      "target": "reports/original-2018/Video_Games/11_cold_sid_prefix/cold_ab_frequency_analysis.json",
+      "size": 12565,
+      "sha256": "043acf357f016b3bff10f4415db7e2dfc55462f63cfd8f1ccb267bb49713cc25",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/11_cold_sid_prefix/cold_ab_item_frequency.csv",
+      "target": "reports/original-2018/Video_Games/11_cold_sid_prefix/cold_ab_item_frequency.csv",
+      "size": 84269,
+      "sha256": "1932e2376a49d524b2d220196b2c74909e6bea5bf037b27522190f78ead7799d",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/11_cold_sid_prefix/cold_ab_prefix_frequency.csv",
+      "target": "reports/original-2018/Video_Games/11_cold_sid_prefix/cold_ab_prefix_frequency.csv",
+      "size": 14410,
+      "sha256": "461b523e3a6b4eb30d2d47e52d8e459f213f9d7442c91453c0eafc577ea4f737",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/11_cold_sid_prefix/cold_prefix_rows.csv",
+      "target": "reports/original-2018/Video_Games/11_cold_sid_prefix/cold_prefix_rows.csv",
+      "size": 477126,
+      "sha256": "4a198b334ed8907e06801fc5711f869e8dfb90216b507f414d0de898832ace4e",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/11_cold_sid_prefix/prefix_analysis.json",
+      "target": "reports/original-2018/Video_Games/11_cold_sid_prefix/prefix_analysis.json",
+      "size": 8093,
+      "sha256": "6a95acf866f1e88df6ae0ef128dd90af4e05d3ccda07802ca348d7c74d3a0599",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/README.txt",
+      "target": "reports/original-2018/Video_Games/README.txt",
+      "size": 1236,
+      "sha256": "eb9ce30c6fc3c0cac8e74a37b48e540f7ec7b0113fe9ac1bc0c157a265ab245b",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/index.html",
+      "target": "reports/original-2018/Video_Games/index.html",
+      "size": 23776,
+      "sha256": "af3112886aab6ba1e6922b68ceffaa2f9c3d3480d8e7c8b22661b88d08705bb9",
+      "group": "original-2018",
+      "source_sha256": "256ed98b3a2afc1cc4fb6c014876727c0f9bf25a048e1662699684a9942af71d",
+      "transformation": "Repoint two external relative SID JSON links to bundled assets/ copies."
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Video_Games/reports_manifest.json",
+      "target": "reports/original-2018/Video_Games/reports_manifest.json",
+      "size": 21752,
+      "sha256": "ce4fa369f3fba902f54311331115023bb13f3f55d7ccdc70b0710a0632161c61",
+      "group": "original-2018"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Video_Games/Video_Games.index.json",
+      "target": "reports/original-2018/Video_Games/assets/Video_Games.index.json",
+      "size": 1205786,
+      "sha256": "ca9d730905a67cc36cd77c665a3165de823f2689660b19741df9ee884993085f",
+      "group": "original-2018",
+      "purpose": "SID mapping or selected-quantizer metadata linked by the original report"
+    },
+    {
+      "source": "/mnt/ossdata/ziweizhao/MiniOneRec/output/rqvae/Video_Games/selected_sid.json",
+      "target": "reports/original-2018/Video_Games/assets/selected_sid.json",
+      "size": 3768,
+      "sha256": "4c78e8d195a7f30fd1b9cb4117edfb849ebfe263156ebd995fbbe8a8ff9ea7f6",
+      "group": "original-2018",
+      "purpose": "SID mapping or selected-quantizer metadata linked by the original report"
+    }
+  ]
+}

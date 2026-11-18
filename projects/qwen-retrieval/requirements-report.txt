@@ -1,0 +1,2 @@
+# Offline CPU-only charts and PDF reports; no training-stack upgrades.
+matplotlib==3.10.7

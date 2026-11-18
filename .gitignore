@@ -1,4 +1,6 @@
+/.runtime/
 __pycache__/
 *.py[cod]
-/.venv-sid/
-/outputs/sid/
+.pytest_cache/
+.env
+.env.*

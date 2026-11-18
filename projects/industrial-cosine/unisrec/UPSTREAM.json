@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/RUCAIBox/UniSRec",
+  "branch": "master",
+  "commit": "05aa5cba2809112c32808f70d16abc61c05c6538",
+  "license": "MIT",
+  "original_readme": "README.upstream.md",
+  "integration_branch": "amazon2018industrialandscientific-cosine",
+  "adaptation": "Frozen 2560-dimensional Qwen features, inductive_ft, original Industrial benchmark splits and SID mapping. Original UniSRec source files retained."
+}

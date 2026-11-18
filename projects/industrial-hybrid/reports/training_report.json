@@ -1,0 +1,1323 @@
+{
+  "generated_at_utc": "2026-11-16T08:31:11.232619+00:00",
+  "generated_at_shanghai": "2026-11-16T16:31:11.232619+08:00",
+  "dataset": "Industrial_and_Scientific",
+  "run_directory": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft",
+  "run_status": {
+    "status": "completed",
+    "stage": "completed",
+    "started_at": "2026-11-16T07:42:47.798368+00:00",
+    "updated_at": "2026-11-16T08:31:10.085150+00:00",
+    "parameters": {
+      "run_dir": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft",
+      "report_root": "/mnt/ossdata/ziweizhao/MiniOneRec/output/reports/Industrial_and_Scientific_enddonkey",
+      "container": "minionerec-h20-industrial-enddonkey",
+      "image": "minionerec:h20-sft-monitor",
+      "category": "Industrial_and_Scientific",
+      "base_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "expected_sid_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+      "world_size": 4,
+      "num_epochs": 3,
+      "learning_rate": 0.0003,
+      "global_batch_size": 64,
+      "micro_batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "lr_scheduler_type": "cosine",
+      "history_max": 10,
+      "reference_repository": "https://github.com/Enddonkey/MiniOneRec-Reproduction",
+      "reference_commit": "dc60a84e7ceb790410b8f2f8553acdc07438b585",
+      "reference_sft_sha256": "205979dcf7e18ed0f93b6cda28548c58068d8bebeb9209f39f1b2ca5b976fc43",
+      "reference_readme_sha256": "97ce7d1d8a664c590772b964f45fd0b6f4b60f3baec43f9cfff7dc70489eca02",
+      "runtime_data_source": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data.py",
+      "adaptation_notes": [
+        "README reported 0.5B Base is replaced by the user-authorized 1.5B Base.",
+        "Global batch 64 and three epochs follow the reported reproduction; four GPUs use micro batch 8 and accumulation 2.",
+        "Cosine is explicitly selected to follow README; checked-in source leaves the scheduler at Transformers default linear.",
+        "Original data tasks and original evaluation prompt are retained; DDP/ZeRO-2, monitoring, provenance, complete coverage and explicit constrained-decoding boundaries are compatibility adapters."
+      ],
+      "rl_enabled": false
+    },
+    "rl_started": false,
+    "pid": 334373,
+    "source_sha256": {
+      "sft.py": "579e3d6efa9bc6888ac7cc637b2e16de767e68d995a47eae1fa7c7339d10b227",
+      "data.py": "58af8773f0a33ea79312cbb229c6f9b27db065019443992277a495c0c8d60869",
+      "sft_monitor.py": "15de28097301b9745ecc970e178b2f91b6690a4dd5ea5c25fbfe195db76c8e6e",
+      "LogitProcessor.py": "467cde6838f8533cc1f1985e35b8c51ad35b1f7da18b36574927b4250c73b090",
+      "npu_support.py": "7ffe1170e1bd291ef3cb85d22c654718e0ec9d49984f69b5b79ec1ab69d3dfc0",
+      "scripts/evaluate_sft.py": "5d50d9da245b43df71ba9f45b24d5fb2c1bdbd818cc93d2a8f746f2a41f8ba83",
+      "scripts/sft_eval_utils.py": "5555d47d08d133a709756e179d49e6cab025d5131ff79b34e0588d844dfa3cce",
+      "scripts/report_industrial_sft.py": "c67bb1a9eec1c795f3d7dc06594d989a106e69ffc251d6ab373725f6363f4922",
+      "config/h20_zero2.json": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "progress": {
+      "status": "completed",
+      "updated_at_utc": "2026-11-16T08:25:33.794107+00:00",
+      "elapsed_seconds": 2492.944466642002,
+      "grad_norm_definition": "unscaled global full-model L2 norm before gradient clipping",
+      "statistics_exclude_skipped_nonfinite_missing": true,
+      "latest": {
+        "step": 3744,
+        "epoch": 3.0,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:25:01.879658+00:00",
+        "elapsed_seconds": 2461.030018190999,
+        "kind": "train",
+        "loss": 0.3641,
+        "learning_rate": 5.337546091777056e-11,
+        "grad_norm": 0.9281434416770935,
+        "grad_norm_observed": 0.9281434416770935,
+        "grad_norm_nonfinite": false,
+        "step_skipped": false,
+        "optimizer_overflow": false,
+        "rolling_grad_norm_mean": 0.5236487570405006,
+        "rolling_grad_norm_max": 0.9281434416770935,
+        "grad_norm_mean": 0.8711953739770967,
+        "grad_norm_max": 33.29885482788086,
+        "grad_norm_max_step": 1
+      },
+      "evaluations": [
+        {
+          "step": 188,
+          "epoch": 0.15070140280561123,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:45:40.339854+00:00",
+          "elapsed_seconds": 99.49021202800213,
+          "kind": "eval",
+          "eval_loss": 2.920941114425659,
+          "eval_runtime": 7.4766,
+          "eval_samples_per_second": 606.16,
+          "eval_steps_per_second": 18.993
+        },
+        {
+          "step": 376,
+          "epoch": 0.30140280561122246,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:47:31.449102+00:00",
+          "elapsed_seconds": 210.59946079501242,
+          "kind": "eval",
+          "eval_loss": 2.656339406967163,
+          "eval_runtime": 7.484,
+          "eval_samples_per_second": 605.559,
+          "eval_steps_per_second": 18.974
+        },
+        {
+          "step": 564,
+          "epoch": 0.4521042084168337,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:49:23.651333+00:00",
+          "elapsed_seconds": 322.8016916040069,
+          "kind": "eval",
+          "eval_loss": 2.493835926055908,
+          "eval_runtime": 7.4868,
+          "eval_samples_per_second": 605.335,
+          "eval_steps_per_second": 18.967
+        },
+        {
+          "step": 752,
+          "epoch": 0.6028056112224449,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:51:18.011515+00:00",
+          "elapsed_seconds": 437.161880123007,
+          "kind": "eval",
+          "eval_loss": 2.352008581161499,
+          "eval_runtime": 7.4673,
+          "eval_samples_per_second": 606.911,
+          "eval_steps_per_second": 19.016
+        },
+        {
+          "step": 940,
+          "epoch": 0.7535070140280561,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:53:11.119935+00:00",
+          "elapsed_seconds": 550.2702935050038,
+          "kind": "eval",
+          "eval_loss": 2.237531900405884,
+          "eval_runtime": 7.4746,
+          "eval_samples_per_second": 606.319,
+          "eval_steps_per_second": 18.998
+        },
+        {
+          "step": 1128,
+          "epoch": 0.9042084168336674,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:55:04.634807+00:00",
+          "elapsed_seconds": 663.7851660690067,
+          "kind": "eval",
+          "eval_loss": 2.196632146835327,
+          "eval_runtime": 7.4771,
+          "eval_samples_per_second": 606.119,
+          "eval_steps_per_second": 18.991
+        },
+        {
+          "step": 1316,
+          "epoch": 1.054509018036072,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:56:58.003941+00:00",
+          "elapsed_seconds": 777.1543008070003,
+          "kind": "eval",
+          "eval_loss": 2.085381031036377,
+          "eval_runtime": 7.487,
+          "eval_samples_per_second": 605.319,
+          "eval_steps_per_second": 18.966
+        },
+        {
+          "step": 1504,
+          "epoch": 1.2052104208416834,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T07:58:50.840593+00:00",
+          "elapsed_seconds": 889.9909516900079,
+          "kind": "eval",
+          "eval_loss": 2.0063064098358154,
+          "eval_runtime": 7.4708,
+          "eval_samples_per_second": 606.627,
+          "eval_steps_per_second": 19.007
+        },
+        {
+          "step": 1692,
+          "epoch": 1.3559118236472947,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:00:44.157805+00:00",
+          "elapsed_seconds": 1003.3081645630009,
+          "kind": "eval",
+          "eval_loss": 1.9672067165374756,
+          "eval_runtime": 7.489,
+          "eval_samples_per_second": 605.153,
+          "eval_steps_per_second": 18.961
+        },
+        {
+          "step": 1880,
+          "epoch": 1.506613226452906,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:02:36.643837+00:00",
+          "elapsed_seconds": 1115.794194814007,
+          "kind": "eval",
+          "eval_loss": 1.9159910678863525,
+          "eval_runtime": 7.5092,
+          "eval_samples_per_second": 603.53,
+          "eval_steps_per_second": 18.91
+        },
+        {
+          "step": 2068,
+          "epoch": 1.657314629258517,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:04:31.143756+00:00",
+          "elapsed_seconds": 1230.294115867,
+          "kind": "eval",
+          "eval_loss": 1.833246111869812,
+          "eval_runtime": 7.5319,
+          "eval_samples_per_second": 601.708,
+          "eval_steps_per_second": 18.853
+        },
+        {
+          "step": 2256,
+          "epoch": 1.8080160320641283,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:07:03.624039+00:00",
+          "elapsed_seconds": 1382.774397294008,
+          "kind": "eval",
+          "eval_loss": 1.7751513719558716,
+          "eval_runtime": 11.5606,
+          "eval_samples_per_second": 392.02,
+          "eval_steps_per_second": 12.283
+        },
+        {
+          "step": 2444,
+          "epoch": 1.9587174348697394,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:10:01.073266+00:00",
+          "elapsed_seconds": 1560.2236249240086,
+          "kind": "eval",
+          "eval_loss": 1.7276792526245117,
+          "eval_runtime": 15.33,
+          "eval_samples_per_second": 295.63,
+          "eval_steps_per_second": 9.263
+        },
+        {
+          "step": 2632,
+          "epoch": 2.109018036072144,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:13:49.134440+00:00",
+          "elapsed_seconds": 1788.2847977000056,
+          "kind": "eval",
+          "eval_loss": 1.7005133628845215,
+          "eval_runtime": 16.5939,
+          "eval_samples_per_second": 273.112,
+          "eval_steps_per_second": 8.557
+        },
+        {
+          "step": 2820,
+          "epoch": 2.2597194388777555,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:15:53.505647+00:00",
+          "elapsed_seconds": 1912.6560061330092,
+          "kind": "eval",
+          "eval_loss": 1.6712615489959717,
+          "eval_runtime": 7.5111,
+          "eval_samples_per_second": 603.374,
+          "eval_steps_per_second": 18.905
+        },
+        {
+          "step": 3008,
+          "epoch": 2.410420841683367,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:17:46.682711+00:00",
+          "elapsed_seconds": 2025.8330694430042,
+          "kind": "eval",
+          "eval_loss": 1.6443324089050293,
+          "eval_runtime": 7.8695,
+          "eval_samples_per_second": 575.896,
+          "eval_steps_per_second": 18.044
+        },
+        {
+          "step": 3196,
+          "epoch": 2.561122244488978,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:19:39.191104+00:00",
+          "elapsed_seconds": 2138.3414633240027,
+          "kind": "eval",
+          "eval_loss": 1.6229009628295898,
+          "eval_runtime": 7.4842,
+          "eval_samples_per_second": 605.545,
+          "eval_steps_per_second": 18.973
+        },
+        {
+          "step": 3384,
+          "epoch": 2.7118236472945894,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:21:31.666043+00:00",
+          "elapsed_seconds": 2250.8164013060014,
+          "kind": "eval",
+          "eval_loss": 1.6029752492904663,
+          "eval_runtime": 7.4884,
+          "eval_samples_per_second": 605.199,
+          "eval_steps_per_second": 18.963
+        },
+        {
+          "step": 3572,
+          "epoch": 2.8625250501002,
+          "phase": "training",
+          "timestamp_utc": "2026-11-16T08:23:24.863334+00:00",
+          "elapsed_seconds": 2364.0136927490094,
+          "kind": "eval",
+          "eval_loss": 1.595940113067627,
+          "eval_runtime": 7.4689,
+          "eval_samples_per_second": 606.783,
+          "eval_steps_per_second": 19.012
+        },
+        {
+          "step": 3744,
+          "epoch": 3.0,
+          "phase": "final_validation",
+          "timestamp_utc": "2026-11-16T08:25:27.017049+00:00",
+          "elapsed_seconds": 2486.167407247005,
+          "kind": "eval",
+          "eval_loss": 1.595940113067627,
+          "eval_runtime": 7.4485,
+          "eval_samples_per_second": 608.442,
+          "eval_steps_per_second": 19.064
+        }
+      ],
+      "abort_reason": null,
+      "monitor_window": 100,
+      "update_records": 3744,
+      "grad_norm_count": 3744,
+      "grad_norm_mean": 0.8711953739770967,
+      "grad_norm_max": 33.29885482788086,
+      "grad_norm_max_step": 1,
+      "rolling_grad_norm_count": 100,
+      "rolling_grad_norm_mean": 0.5236487570405006,
+      "rolling_grad_norm_max": 0.9281434416770935,
+      "skipped_update_count": 0,
+      "missing_grad_norm_count": 0,
+      "nonfinite_grad_norm_count": 0,
+      "global_step": 3744,
+      "epoch": 3.0,
+      "max_steps": 3744,
+      "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/checkpoint-3572",
+      "best_metric": 1.595940113067627
+    },
+    "finished_at": "2026-11-16T08:31:10.085134+00:00"
+  },
+  "base_model": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+  "errors": [],
+  "rl_started": false,
+  "status": "completed",
+  "config": {
+    "stage": "sft",
+    "created_at_utc": "2026-11-16T07:43:45.356854+00:00",
+    "model": {
+      "source": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+      "train_from_scratch": false,
+      "original_vocab_size": 151665,
+      "tokenizer_vocab_size": 152225,
+      "added_sid_tokens": 560,
+      "identity": {
+        "format_version": 1,
+        "source_directory": "/mnt/ossdata/ziweizhao/weights/Qwen2.5-1.5B",
+        "train_from_scratch": false,
+        "files": {
+          "config.json": {
+            "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+            "size_bytes": 684
+          },
+          "generation_config.json": {
+            "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+            "size_bytes": 138
+          },
+          "merges.txt": {
+            "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+            "size_bytes": 1671839
+          },
+          "model.safetensors": {
+            "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+            "size_bytes": 3087467144
+          },
+          "tokenizer.json": {
+            "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+            "size_bytes": 7031645
+          },
+          "tokenizer_config.json": {
+            "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+            "size_bytes": 7228
+          },
+          "vocab.json": {
+            "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+            "size_bytes": 2776833
+          }
+        },
+        "sha256": "f4da6a998630e344cbf1877dd65907ba35a9b01c20bbf314bdc47d542a61168b"
+      }
+    },
+    "data": {
+      "train_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/train.csv",
+      "eval_file": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey/valid.csv",
+      "sid_index_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.index.json",
+      "item_meta_path": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey/Industrial_and_Scientific.item.json",
+      "category": "Industrial_and_Scientific",
+      "sample": -1,
+      "train_samples": 79834,
+      "validation_samples": 4532,
+      "sha256": {
+        "train_file": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "eval_file": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "sid_index_path": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+        "item_meta_path": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+      }
+    },
+    "task_counts": {
+      "sid_sequence_recommendation": 36259,
+      "history_to_title": 36259,
+      "sid2title": 3670,
+      "title2sid": 3646
+    },
+    "hyperparameters": {
+      "world_size": 4,
+      "micro_batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "global_batch_size": 64,
+      "max_epochs": 3,
+      "learning_rate": 0.0003,
+      "warmup_steps": 20,
+      "lr_scheduler_type": "cosine",
+      "cutoff_len": 512,
+      "max_grad_norm": 1.0,
+      "bf16": true,
+      "gradient_checkpointing": true,
+      "attn_implementation": "sdpa",
+      "deepspeed": "/opt/minionerec/config/h20_zero2.json",
+      "seed": 42,
+      "early_stopping_patience": 3,
+      "eval_save_fraction": 0.05,
+      "monitor_window": 100,
+      "deepspeed_sha256": "e819baf9fad8b68f71afbb1bbaecc0d62f8eb18ea06ef1a548f80ac113f3b241"
+    },
+    "resume_from_checkpoint": null
+  },
+  "preparation": {
+    "schema_version": 1,
+    "dataset": "Industrial_and_Scientific",
+    "original_sid": true,
+    "selected_sid_epoch": null,
+    "expected_sid_sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8",
+    "items": 3686,
+    "complete_sid_tokens": 3,
+    "complete_sids_unique": false,
+    "unique_sids": 3670,
+    "sid_collisions": {
+      "groups": 15,
+      "items": 31,
+      "excess_items": 16
+    },
+    "sid_collision_groups": [
+      {
+        "sid": "<a_210><b_231><c_0>",
+        "item_ids": [
+          "7",
+          "8"
+        ],
+        "titles": [
+          "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)",
+          "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)"
+        ]
+      },
+      {
+        "sid": "<a_197><b_204><c_0>",
+        "item_ids": [
+          "139",
+          "774"
+        ],
+        "titles": [
+          "DuPont Teflon Non-Stick",
+          "DuPont Teflon Non-Stick"
+        ]
+      },
+      {
+        "sid": "<a_107><b_93><c_0>",
+        "item_ids": [
+          "181",
+          "182"
+        ],
+        "titles": [
+          "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator",
+          "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator"
+        ]
+      },
+      {
+        "sid": "<a_17><b_217><c_0>",
+        "item_ids": [
+          "216",
+          "217"
+        ],
+        "titles": [
+          "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG",
+          "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG"
+        ]
+      },
+      {
+        "sid": "<a_108><b_146><c_2>",
+        "item_ids": [
+          "322",
+          "2100"
+        ],
+        "titles": [
+          "Stainless Steel 316 Cast Pipe Fitting, Union, Class 150, 1/8\" NPT Female",
+          "Stainless Steel 316 Cast Pipe Fitting, Coupling, Class 150, 1/2\"NPT Female"
+        ]
+      },
+      {
+        "sid": "<a_15><b_118><c_0>",
+        "item_ids": [
+          "431",
+          "1006"
+        ],
+        "titles": [
+          "Industrial & Scientific\" />",
+          "Industrial & Scientific\" />"
+        ]
+      },
+      {
+        "sid": "<a_14><b_233><c_0>",
+        "item_ids": [
+          "1249",
+          "1250"
+        ],
+        "titles": [
+          "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red",
+          "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red"
+        ]
+      },
+      {
+        "sid": "<a_122><b_52><c_0>",
+        "item_ids": [
+          "1382",
+          "1788"
+        ],
+        "titles": [
+          "Shoe GOO&reg; Adhesive, 3.7 fl oz",
+          "Shoe GOO&reg; Adhesive, 3.7 fl oz"
+        ]
+      },
+      {
+        "sid": "<a_108><b_146><c_0>",
+        "item_ids": [
+          "1787",
+          "2831"
+        ],
+        "titles": [
+          "Stainless Steel 316 Cast Pipe Fitting, Hex Head Plug, Class 150, 1/4\" NPT Male",
+          "Stainless Steel 316 Pipe Fitting, Hex Countersunk Plug, Class 1000, 1/4\" NPT Male"
+        ]
+      },
+      {
+        "sid": "<a_94><b_40><c_0>",
+        "item_ids": [
+          "1955",
+          "3038"
+        ],
+        "titles": [
+          "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml",
+          "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml"
+        ]
+      },
+      {
+        "sid": "<a_223><b_80><c_0>",
+        "item_ids": [
+          "2659",
+          "3557",
+          "3631"
+        ],
+        "titles": [
+          "3D Solutech Apple Green 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG)",
+          "3D Solutech Chocolate Brown 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)",
+          "3D Solutech Skin 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)"
+        ]
+      },
+      {
+        "sid": "<a_180><b_226><c_0>",
+        "item_ids": [
+          "2956",
+          "2957"
+        ],
+        "titles": [
+          "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)",
+          "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)"
+        ]
+      },
+      {
+        "sid": "<a_223><b_80><c_3>",
+        "item_ids": [
+          "3112",
+          "3493"
+        ],
+        "titles": [
+          "3D Solutech Real Black 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG) - PLA175RBLK",
+          "3D Solutech Printer Filament, Real Blue PLA, 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 1.1 LBS (0.5KG)"
+        ]
+      },
+      {
+        "sid": "<a_67><b_199><c_0>",
+        "item_ids": [
+          "3209",
+          "3210"
+        ],
+        "titles": [
+          "Ancor Heat Shrink Ring Terminals",
+          "Ancor Heat Shrink Ring Terminals"
+        ]
+      },
+      {
+        "sid": "<a_223><b_212><c_0>",
+        "item_ids": [
+          "3302",
+          "3459"
+        ],
+        "titles": [
+          "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm",
+          "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm"
+        ]
+      }
+    ],
+    "history_length": {
+      "minimum": 1,
+      "maximum": 10
+    },
+    "rows": {
+      "train": 36259,
+      "valid": 4532,
+      "test": 4533
+    },
+    "preserve_all_interaction_rows": true,
+    "sampling_applied": false,
+    "keep_longest_only": false,
+    "input_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/Industrial_and_Scientific_enddonkey",
+    "output_directory": "/mnt/ossdata/ziweizhao/MiniOneRec/data/Amazon18/posttraining/Industrial_and_Scientific_enddonkey",
+    "sources": {
+      "sid_index": {
+        "filename": "Industrial_and_Scientific.index.json",
+        "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8"
+      },
+      "item_metadata": {
+        "filename": "Industrial_and_Scientific.item.json",
+        "sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+      },
+      "train": {
+        "filename": "Industrial_and_Scientific.train.inter",
+        "sha256": "4ac7991a21b83345a788bfbd810b0044723cfe93c46e01ce5d1a6e91ebbb0aec"
+      },
+      "valid": {
+        "filename": "Industrial_and_Scientific.valid.inter",
+        "sha256": "977c9c54dae0f4249d651e37ef411f049b7a00c3372bc8ad506a54989ef4a34b"
+      },
+      "test": {
+        "filename": "Industrial_and_Scientific.test.inter",
+        "sha256": "f00ef69b8ddce5073dca60405687fdcb3e1c57012aaef3f3a7b2f6682258528b"
+      }
+    },
+    "original_sources": {
+      "sid_index": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.index.json",
+        "sha256": "53f1aefbe8b8aa774326c122606c6525300c5a325e7b78817739d465aeb335f8"
+      },
+      "item_metadata": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/index/Industrial_and_Scientific.item.json",
+        "sha256": "937600c7a03652f55864a1d12d6e9fe8ca3e24ecc4e255a88216b25c5f949496"
+      },
+      "info": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/info/Industrial_and_Scientific_5_2016-10-2018-11.txt",
+        "sha256": "bdc51fd9636e361db095c84de4e2650b3dd9606812c92e7a01f3b77c5c1a84f7"
+      },
+      "train": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/train/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c"
+      },
+      "valid": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/valid/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a"
+      },
+      "test": {
+        "path": "/mnt/ossdata/ziweizhao/code/MiniOneRec-Reproduction/data/Amazon/test/Industrial_and_Scientific_5_2016-10-2018-11.csv",
+        "sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46"
+      }
+    },
+    "outputs": {
+      "train.csv": {
+        "filename": "train.csv",
+        "sha256": "da5f2af4f5047e18023dd4792f65a48bd7c8eab90447dd682fb48ca255d25f8c",
+        "bytes": 19277597
+      },
+      "valid.csv": {
+        "filename": "valid.csv",
+        "sha256": "12bbb02bced0bd754a8b4e0f9ca4086416e30d12b0b73a2c95e7b195dd67385a",
+        "bytes": 2915875
+      },
+      "test.csv": {
+        "filename": "test.csv",
+        "sha256": "973dd1db4fd549f3f2b40a0f039dbae157ebb92c716197cc246401e4e82c3a46",
+        "bytes": 3105687
+      },
+      "info.txt": {
+        "filename": "info.txt",
+        "sha256": "bdc51fd9636e361db095c84de4e2650b3dd9606812c92e7a01f3b77c5c1a84f7",
+        "bytes": 374118
+      }
+    },
+    "validation": "passed",
+    "check_only": false,
+    "source_audit": {
+      "catalog_items": 3686,
+      "catalog_ids_contiguous_from_zero": true,
+      "unique_sids": 3670,
+      "complete_sids_unique": false,
+      "sid_token_length_counts": {
+        "3": 3686
+      },
+      "sid_collisions": {
+        "groups": 15,
+        "items": 31,
+        "excess_items": 16
+      },
+      "sid_collision_groups": [
+        {
+          "sid": "<a_210><b_231><c_0>",
+          "item_ids": [
+            "7",
+            "8"
+          ],
+          "titles": [
+            "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)",
+            "UltraSource 192033 Hamburger Patty Paper, 5.5\" x 5.5\" (Pack of 1000)"
+          ]
+        },
+        {
+          "sid": "<a_197><b_204><c_0>",
+          "item_ids": [
+            "139",
+            "774"
+          ],
+          "titles": [
+            "DuPont Teflon Non-Stick",
+            "DuPont Teflon Non-Stick"
+          ]
+        },
+        {
+          "sid": "<a_107><b_93><c_0>",
+          "item_ids": [
+            "181",
+            "182"
+          ],
+          "titles": [
+            "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator",
+            "AcuRite 00613 Humidity Monitor with Indoor Thermometer, Digital Hygrometer and Humidity Gauge Indicator"
+          ]
+        },
+        {
+          "sid": "<a_17><b_217><c_0>",
+          "item_ids": [
+            "216",
+            "217"
+          ],
+          "titles": [
+            "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG",
+            "Ancor Tinned Copper Lugs 8 AWG - 4/0 AWG"
+          ]
+        },
+        {
+          "sid": "<a_108><b_146><c_2>",
+          "item_ids": [
+            "322",
+            "2100"
+          ],
+          "titles": [
+            "Stainless Steel 316 Cast Pipe Fitting, Union, Class 150, 1/8\" NPT Female",
+            "Stainless Steel 316 Cast Pipe Fitting, Coupling, Class 150, 1/2\"NPT Female"
+          ]
+        },
+        {
+          "sid": "<a_15><b_118><c_0>",
+          "item_ids": [
+            "431",
+            "1006"
+          ],
+          "titles": [
+            "Industrial & Scientific\" />",
+            "Industrial & Scientific\" />"
+          ]
+        },
+        {
+          "sid": "<a_14><b_233><c_0>",
+          "item_ids": [
+            "1249",
+            "1250"
+          ],
+          "titles": [
+            "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red",
+            "T-fal C51402 Excite Nonstick Thermo-Spot Dishwasher Safe Oven Safe PFOA Free Fry Pan Cookware, 8-Inch, Red"
+          ]
+        },
+        {
+          "sid": "<a_122><b_52><c_0>",
+          "item_ids": [
+            "1382",
+            "1788"
+          ],
+          "titles": [
+            "Shoe GOO&reg; Adhesive, 3.7 fl oz",
+            "Shoe GOO&reg; Adhesive, 3.7 fl oz"
+          ]
+        },
+        {
+          "sid": "<a_108><b_146><c_0>",
+          "item_ids": [
+            "1787",
+            "2831"
+          ],
+          "titles": [
+            "Stainless Steel 316 Cast Pipe Fitting, Hex Head Plug, Class 150, 1/4\" NPT Male",
+            "Stainless Steel 316 Pipe Fitting, Hex Countersunk Plug, Class 1000, 1/4\" NPT Male"
+          ]
+        },
+        {
+          "sid": "<a_94><b_40><c_0>",
+          "item_ids": [
+            "1955",
+            "3038"
+          ],
+          "titles": [
+            "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml",
+            "SEOH 5 Pack Glass Borosilicate Graduated Beakers 50 100 250 600 and 1000ml"
+          ]
+        },
+        {
+          "sid": "<a_223><b_80><c_0>",
+          "item_ids": [
+            "2659",
+            "3557",
+            "3631"
+          ],
+          "titles": [
+            "3D Solutech Apple Green 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG)",
+            "3D Solutech Chocolate Brown 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)",
+            "3D Solutech Skin 3D Printer PLA Filament 1.75MM Filament 2.2 LBS (1.0KG)"
+          ]
+        },
+        {
+          "sid": "<a_180><b_226><c_0>",
+          "item_ids": [
+            "2956",
+            "2957"
+          ],
+          "titles": [
+            "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)",
+            "DBPOWER 2 MP 15M Tube USB Waterproof Hd 6-led Borescope Endoscope Inspection Camera(Silver Head)"
+          ]
+        },
+        {
+          "sid": "<a_223><b_80><c_3>",
+          "item_ids": [
+            "3112",
+            "3493"
+          ],
+          "titles": [
+            "3D Solutech Real Black 3D Printer PLA Filament 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 2.2 LBS (1.0KG) - PLA175RBLK",
+            "3D Solutech Printer Filament, Real Blue PLA, 1.75MM Filament, Dimensional Accuracy +/- 0.03 mm, 1.1 LBS (0.5KG)"
+          ]
+        },
+        {
+          "sid": "<a_67><b_199><c_0>",
+          "item_ids": [
+            "3209",
+            "3210"
+          ],
+          "titles": [
+            "Ancor Heat Shrink Ring Terminals",
+            "Ancor Heat Shrink Ring Terminals"
+          ]
+        },
+        {
+          "sid": "<a_223><b_212><c_0>",
+          "item_ids": [
+            "3302",
+            "3459"
+          ],
+          "titles": [
+            "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm",
+            "PLA Glow in the Dark Cosmic Blue 3D Printing Filament, 1.75 mm"
+          ]
+        }
+      ],
+      "splits": {
+        "train": {
+          "rows": 36259,
+          "users": 7034,
+          "target_unique_items": 3636,
+          "behavior_unique_items": 3647,
+          "history_min": 1,
+          "history_max": 10,
+          "history_length_counts": {
+            "1": 7034,
+            "2": 6751,
+            "3": 6325,
+            "4": 5643,
+            "5": 3226,
+            "6": 1963,
+            "7": 1332,
+            "8": 903,
+            "9": 663,
+            "10": 2419
+          },
+          "repeat_last_rows": 2731,
+          "repeat_last_rate": 0.07531923108745416,
+          "repeat_any_rows": 3279,
+          "repeat_any_rate": 0.09043272015223806,
+          "duplicate_full_rows": 3,
+          "collided_target_rows": 1455
+        },
+        "valid": {
+          "rows": 4532,
+          "users": 2011,
+          "target_unique_items": 1848,
+          "behavior_unique_items": 3221,
+          "history_min": 1,
+          "history_max": 10,
+          "history_length_counts": {
+            "1": 393,
+            "4": 947,
+            "5": 553,
+            "2": 531,
+            "3": 763,
+            "8": 171,
+            "9": 110,
+            "6": 392,
+            "7": 229,
+            "10": 443
+          },
+          "repeat_last_rows": 205,
+          "repeat_last_rate": 0.04523389232127096,
+          "repeat_any_rows": 236,
+          "repeat_any_rate": 0.05207413945278023,
+          "duplicate_full_rows": 0,
+          "collided_target_rows": 238
+        },
+        "test": {
+          "rows": 4533,
+          "users": 1987,
+          "target_unique_items": 1745,
+          "behavior_unique_items": 3217,
+          "history_min": 1,
+          "history_max": 10,
+          "history_length_counts": {
+            "10": 477,
+            "1": 267,
+            "2": 412,
+            "3": 606,
+            "7": 265,
+            "9": 130,
+            "4": 1104,
+            "5": 672,
+            "8": 194,
+            "6": 406
+          },
+          "repeat_last_rows": 122,
+          "repeat_last_rate": 0.026913743657621884,
+          "repeat_any_rows": 128,
+          "repeat_any_rate": 0.028237370394881976,
+          "duplicate_full_rows": 0,
+          "collided_target_rows": 317
+        }
+      },
+      "users_across_all_splits": 7694,
+      "training_behavior_items": 3647,
+      "training_target_items": 3636,
+      "catalog_behavior_cold_items": 39,
+      "catalog_items_absent_from_all_behavior": 0,
+      "test_target_unique_items": 1745,
+      "cold_test_unique_items": 37,
+      "cold_test_rows": 147,
+      "cold_test_rate": 0.03242885506287227,
+      "cold_test_targets_in_collided_groups": [],
+      "cold_test_targets_with_warm_sid": [],
+      "cold_test_rows_with_warm_sid": 0,
+      "validation": "passed",
+      "mismatches": 0
+    },
+    "evaluation_identity": "Original SID sequence equivalence; collided item IDs cannot be distinguished by SID-only scoring.",
+    "created_at_utc": "2026-11-16T07:39:15.219159+00:00"
+  },
+  "training_summary": {
+    "status": "completed",
+    "stage": "sft",
+    "finished_at_utc": "2026-11-16T08:25:33.792561+00:00",
+    "train_metrics": {
+      "train_runtime": 2478.7147,
+      "train_samples_per_second": 96.623,
+      "train_steps_per_second": 1.51,
+      "total_flos": 2.7794249063019315e+17,
+      "train_loss": 0.865786848263417,
+      "epoch": 3.0
+    },
+    "final_eval_metrics": {
+      "eval_loss": 1.595940113067627,
+      "eval_runtime": 7.4485,
+      "eval_samples_per_second": 608.442,
+      "eval_steps_per_second": 19.064,
+      "epoch": 3.0
+    },
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/checkpoint-3572",
+    "best_metric": 1.595940113067627,
+    "final_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/final_checkpoint",
+    "global_step": 3744,
+    "epoch": 3.0,
+    "planned_max_steps": 3744,
+    "stop_reason": "max_epochs",
+    "final_checkpoint_contains_best_model": true
+  },
+  "monitor_summary": {
+    "status": "completed",
+    "updated_at_utc": "2026-11-16T08:25:33.794107+00:00",
+    "elapsed_seconds": 2492.944466642002,
+    "grad_norm_definition": "unscaled global full-model L2 norm before gradient clipping",
+    "statistics_exclude_skipped_nonfinite_missing": true,
+    "latest": {
+      "step": 3744,
+      "epoch": 3.0,
+      "phase": "training",
+      "timestamp_utc": "2026-11-16T08:25:01.879658+00:00",
+      "elapsed_seconds": 2461.030018190999,
+      "kind": "train",
+      "loss": 0.3641,
+      "learning_rate": 5.337546091777056e-11,
+      "grad_norm": 0.9281434416770935,
+      "grad_norm_observed": 0.9281434416770935,
+      "grad_norm_nonfinite": false,
+      "step_skipped": false,
+      "optimizer_overflow": false,
+      "rolling_grad_norm_mean": 0.5236487570405006,
+      "rolling_grad_norm_max": 0.9281434416770935,
+      "grad_norm_mean": 0.8711953739770967,
+      "grad_norm_max": 33.29885482788086,
+      "grad_norm_max_step": 1
+    },
+    "evaluations": [
+      {
+        "step": 188,
+        "epoch": 0.15070140280561123,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:45:40.339854+00:00",
+        "elapsed_seconds": 99.49021202800213,
+        "kind": "eval",
+        "eval_loss": 2.920941114425659,
+        "eval_runtime": 7.4766,
+        "eval_samples_per_second": 606.16,
+        "eval_steps_per_second": 18.993
+      },
+      {
+        "step": 376,
+        "epoch": 0.30140280561122246,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:47:31.449102+00:00",
+        "elapsed_seconds": 210.59946079501242,
+        "kind": "eval",
+        "eval_loss": 2.656339406967163,
+        "eval_runtime": 7.484,
+        "eval_samples_per_second": 605.559,
+        "eval_steps_per_second": 18.974
+      },
+      {
+        "step": 564,
+        "epoch": 0.4521042084168337,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:49:23.651333+00:00",
+        "elapsed_seconds": 322.8016916040069,
+        "kind": "eval",
+        "eval_loss": 2.493835926055908,
+        "eval_runtime": 7.4868,
+        "eval_samples_per_second": 605.335,
+        "eval_steps_per_second": 18.967
+      },
+      {
+        "step": 752,
+        "epoch": 0.6028056112224449,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:51:18.011515+00:00",
+        "elapsed_seconds": 437.161880123007,
+        "kind": "eval",
+        "eval_loss": 2.352008581161499,
+        "eval_runtime": 7.4673,
+        "eval_samples_per_second": 606.911,
+        "eval_steps_per_second": 19.016
+      },
+      {
+        "step": 940,
+        "epoch": 0.7535070140280561,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:53:11.119935+00:00",
+        "elapsed_seconds": 550.2702935050038,
+        "kind": "eval",
+        "eval_loss": 2.237531900405884,
+        "eval_runtime": 7.4746,
+        "eval_samples_per_second": 606.319,
+        "eval_steps_per_second": 18.998
+      },
+      {
+        "step": 1128,
+        "epoch": 0.9042084168336674,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:55:04.634807+00:00",
+        "elapsed_seconds": 663.7851660690067,
+        "kind": "eval",
+        "eval_loss": 2.196632146835327,
+        "eval_runtime": 7.4771,
+        "eval_samples_per_second": 606.119,
+        "eval_steps_per_second": 18.991
+      },
+      {
+        "step": 1316,
+        "epoch": 1.054509018036072,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:56:58.003941+00:00",
+        "elapsed_seconds": 777.1543008070003,
+        "kind": "eval",
+        "eval_loss": 2.085381031036377,
+        "eval_runtime": 7.487,
+        "eval_samples_per_second": 605.319,
+        "eval_steps_per_second": 18.966
+      },
+      {
+        "step": 1504,
+        "epoch": 1.2052104208416834,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T07:58:50.840593+00:00",
+        "elapsed_seconds": 889.9909516900079,
+        "kind": "eval",
+        "eval_loss": 2.0063064098358154,
+        "eval_runtime": 7.4708,
+        "eval_samples_per_second": 606.627,
+        "eval_steps_per_second": 19.007
+      },
+      {
+        "step": 1692,
+        "epoch": 1.3559118236472947,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:00:44.157805+00:00",
+        "elapsed_seconds": 1003.3081645630009,
+        "kind": "eval",
+        "eval_loss": 1.9672067165374756,
+        "eval_runtime": 7.489,
+        "eval_samples_per_second": 605.153,
+        "eval_steps_per_second": 18.961
+      },
+      {
+        "step": 1880,
+        "epoch": 1.506613226452906,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:02:36.643837+00:00",
+        "elapsed_seconds": 1115.794194814007,
+        "kind": "eval",
+        "eval_loss": 1.9159910678863525,
+        "eval_runtime": 7.5092,
+        "eval_samples_per_second": 603.53,
+        "eval_steps_per_second": 18.91
+      },
+      {
+        "step": 2068,
+        "epoch": 1.657314629258517,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:04:31.143756+00:00",
+        "elapsed_seconds": 1230.294115867,
+        "kind": "eval",
+        "eval_loss": 1.833246111869812,
+        "eval_runtime": 7.5319,
+        "eval_samples_per_second": 601.708,
+        "eval_steps_per_second": 18.853
+      },
+      {
+        "step": 2256,
+        "epoch": 1.8080160320641283,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:07:03.624039+00:00",
+        "elapsed_seconds": 1382.774397294008,
+        "kind": "eval",
+        "eval_loss": 1.7751513719558716,
+        "eval_runtime": 11.5606,
+        "eval_samples_per_second": 392.02,
+        "eval_steps_per_second": 12.283
+      },
+      {
+        "step": 2444,
+        "epoch": 1.9587174348697394,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:10:01.073266+00:00",
+        "elapsed_seconds": 1560.2236249240086,
+        "kind": "eval",
+        "eval_loss": 1.7276792526245117,
+        "eval_runtime": 15.33,
+        "eval_samples_per_second": 295.63,
+        "eval_steps_per_second": 9.263
+      },
+      {
+        "step": 2632,
+        "epoch": 2.109018036072144,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:13:49.134440+00:00",
+        "elapsed_seconds": 1788.2847977000056,
+        "kind": "eval",
+        "eval_loss": 1.7005133628845215,
+        "eval_runtime": 16.5939,
+        "eval_samples_per_second": 273.112,
+        "eval_steps_per_second": 8.557
+      },
+      {
+        "step": 2820,
+        "epoch": 2.2597194388777555,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:15:53.505647+00:00",
+        "elapsed_seconds": 1912.6560061330092,
+        "kind": "eval",
+        "eval_loss": 1.6712615489959717,
+        "eval_runtime": 7.5111,
+        "eval_samples_per_second": 603.374,
+        "eval_steps_per_second": 18.905
+      },
+      {
+        "step": 3008,
+        "epoch": 2.410420841683367,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:17:46.682711+00:00",
+        "elapsed_seconds": 2025.8330694430042,
+        "kind": "eval",
+        "eval_loss": 1.6443324089050293,
+        "eval_runtime": 7.8695,
+        "eval_samples_per_second": 575.896,
+        "eval_steps_per_second": 18.044
+      },
+      {
+        "step": 3196,
+        "epoch": 2.561122244488978,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:19:39.191104+00:00",
+        "elapsed_seconds": 2138.3414633240027,
+        "kind": "eval",
+        "eval_loss": 1.6229009628295898,
+        "eval_runtime": 7.4842,
+        "eval_samples_per_second": 605.545,
+        "eval_steps_per_second": 18.973
+      },
+      {
+        "step": 3384,
+        "epoch": 2.7118236472945894,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:21:31.666043+00:00",
+        "elapsed_seconds": 2250.8164013060014,
+        "kind": "eval",
+        "eval_loss": 1.6029752492904663,
+        "eval_runtime": 7.4884,
+        "eval_samples_per_second": 605.199,
+        "eval_steps_per_second": 18.963
+      },
+      {
+        "step": 3572,
+        "epoch": 2.8625250501002,
+        "phase": "training",
+        "timestamp_utc": "2026-11-16T08:23:24.863334+00:00",
+        "elapsed_seconds": 2364.0136927490094,
+        "kind": "eval",
+        "eval_loss": 1.595940113067627,
+        "eval_runtime": 7.4689,
+        "eval_samples_per_second": 606.783,
+        "eval_steps_per_second": 19.012
+      },
+      {
+        "step": 3744,
+        "epoch": 3.0,
+        "phase": "final_validation",
+        "timestamp_utc": "2026-11-16T08:25:27.017049+00:00",
+        "elapsed_seconds": 2486.167407247005,
+        "kind": "eval",
+        "eval_loss": 1.595940113067627,
+        "eval_runtime": 7.4485,
+        "eval_samples_per_second": 608.442,
+        "eval_steps_per_second": 19.064
+      }
+    ],
+    "abort_reason": null,
+    "monitor_window": 100,
+    "update_records": 3744,
+    "grad_norm_count": 3744,
+    "grad_norm_mean": 0.8711953739770967,
+    "grad_norm_max": 33.29885482788086,
+    "grad_norm_max_step": 1,
+    "rolling_grad_norm_count": 100,
+    "rolling_grad_norm_mean": 0.5236487570405006,
+    "rolling_grad_norm_max": 0.9281434416770935,
+    "skipped_update_count": 0,
+    "missing_grad_norm_count": 0,
+    "nonfinite_grad_norm_count": 0,
+    "global_step": 3744,
+    "epoch": 3.0,
+    "max_steps": 3744,
+    "best_checkpoint": "/mnt/ossdata/ziweizhao/weights/checkpoints/MiniOneRec/Industrial_and_Scientific_enddonkey/sft/checkpoint-3572",
+    "best_metric": 1.595940113067627
+  },
+  "grad_norm": {
+    "count": 3744,
+    "mean": 0.8711953739770967,
+    "max": 33.29885482788086,
+    "last100_mean": 0.5236487570405006
+  },
+  "baseline_validation": {
+    "status": "passed",
+    "loss": 13.012182521272948,
+    "masked_perplexity": 447836.06642523437,
+    "perplexity_overflow": false,
+    "loss_sum": 294856.055932045,
+    "answer_token_count": 22660,
+    "sample_count": 4532,
+    "world_size": 4,
+    "definition": "token-weighted causal cross entropy on nonmasked answer labels only",
+    "elapsed_seconds": 7.24363796999387,
+    "created_at_utc": "2026-11-16T07:43:56.940767+00:00"
+  },
+  "rendered_pdf": true,
+  "pdf_pages": 4
+}
